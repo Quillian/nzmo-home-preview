@@ -1,0 +1,10 @@
+:root{
+--radius-0:0px;--radius-xs:2px;--radius-sm:3px;--radius-md:4px;--radius-pill:999px;
+--radius-control:var(--radius-xs);--radius-card:var(--radius-xs);--radius-badge:var(--radius-xs);--radius-image:var(--radius-0);
+--bw-hair:1px;--bw-1:1px;--bw-2:2px;--bw-3:3px;
+--rule-hair:var(--bw-hair) solid var(--border-hair);
+--rule-strong:var(--bw-1) solid var(--border-strong);
+--rule-ink:var(--bw-2) solid var(--border-ink);
+--rule-accent:var(--bw-3) solid var(--border-accent);
+--rule-on-deep:var(--bw-hair) solid var(--border-on-deep);
+}

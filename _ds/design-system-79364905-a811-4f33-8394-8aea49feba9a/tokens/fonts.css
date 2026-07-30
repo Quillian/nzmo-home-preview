@@ -1,0 +1,12 @@
+/* НЗМО webfonts. Bounded — фирменный дисплейный гротеск бренда.
+   Bicubik файлами не передавался — подстановка Jura. Golos Text — текстовый гротеск. */
+@font-face{font-family:"Bounded";src:url("../assets/fonts/Bounded-Variable.ttf") format("truetype-variations");font-weight:200 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Bounded Static";src:url("../assets/fonts/Bounded-ExtraLight.otf") format("opentype");font-weight:200;font-style:normal;font-display:swap}
+@font-face{font-family:"Bounded Static";src:url("../assets/fonts/Bounded-Light.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Bounded Static";src:url("../assets/fonts/Bounded-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Bounded Static";src:url("../assets/fonts/Bounded-Medium.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Bounded Static";src:url("../assets/fonts/Bounded-SemiBold.otf") format("opentype");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Bounded Static";src:url("../assets/fonts/Bounded-Bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Bounded Static";src:url("../assets/fonts/Bounded-ExtraBold.otf") format("opentype");font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:"Bounded Static";src:url("../assets/fonts/Bounded-Black.otf") format("opentype");font-weight:900;font-style:normal;font-display:swap}
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&family=Jura:wght@400;500;600;700&display=swap");

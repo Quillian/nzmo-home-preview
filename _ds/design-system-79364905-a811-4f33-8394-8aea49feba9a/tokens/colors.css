@@ -1,0 +1,18 @@
+:root{
+/* Петроль — основной цвет бренда · RAL 240 30 25 */
+--petrol-950:#022330;--petrol-900:#032D3E;--petrol-800:#05445E;--petrol-700:#0A5876;--petrol-600:#146F94;--petrol-500:#2A8CB4;--petrol-300:#7FB0C4;--petrol-200:#B4D0DC;--petrol-100:#D6E5EB;--petrol-050:#EDF3F6;
+/* Тёмный нэви · RAL 250 20 20 */
+--navy-950:#0B1420;--navy-900:#101C2A;--navy-800:#1B2D42;--navy-700:#2A3F58;--navy-600:#3B5271;
+/* Охра — акцент, ДОЗИРОВАННО · RAL 070 70 50 */
+--ochre-800:#8C6526;--ochre-700:#A87B33;--ochre-600:#BC8D3F;--ochre-500:#D1A250;--ochre-400:#DDB673;--ochre-300:#E4C68F;--ochre-200:#EFDCBB;--ochre-100:#F7EFDF;
+/* Сталь · RAL 260 50 05 */
+--steel-900:#292B30;--steel-800:#3D3F45;--steel-700:#4C4E55;--steel-600:#5E6067;--steel-500:#70727A;--steel-400:#9A9CA3;--steel-300:#BFC1C6;--steel-200:#DCDDE0;--steel-150:#E6E6E8;--steel-100:#EEEEEF;--steel-050:#F4F3F1;
+--white:#FFFFFF;
+--surface-page:var(--steel-050);--surface-card:var(--white);--surface-sunken:var(--steel-100);--surface-steel:var(--steel-500);--surface-deep:var(--petrol-800);--surface-deepest:var(--navy-900);--surface-navy:var(--navy-800);--surface-accent:var(--ochre-500);--surface-accent-soft:var(--ochre-100);--surface-tint:var(--petrol-050);
+--text-strong:var(--navy-800);--text-body:var(--steel-800);--text-muted:var(--steel-500);--text-faint:var(--steel-400);--text-link:var(--petrol-700);--text-link-hover:var(--petrol-600);--text-accent:var(--ochre-700);--text-on-deep:var(--white);--text-on-deep-muted:rgba(255,255,255,.68);--text-on-deep-faint:rgba(255,255,255,.44);--text-on-accent:var(--navy-900);
+--border-hair:rgba(27,45,66,.14);--border-soft:rgba(27,45,66,.09);--border-strong:rgba(27,45,66,.30);--border-ink:var(--navy-800);--border-accent:var(--ochre-500);--border-on-deep:rgba(255,255,255,.18);--border-on-deep-strong:rgba(255,255,255,.34);--focus-ring:var(--petrol-600);
+--status-produce-bg:var(--petrol-800);--status-produce-fg:var(--white);--status-produce-line:var(--petrol-800);--status-supply-bg:transparent;--status-supply-fg:var(--steel-600);--status-supply-line:var(--steel-400);
+--ok-fg:#1E6B4F;--ok-bg:#E6F1EC;--ok-line:#9BC4B3;
+--warn-fg:var(--ochre-800);--warn-bg:var(--ochre-100);--warn-line:var(--ochre-400);
+--err-fg:#9A3324;--err-bg:#F6E8E5;--err-line:#D3A79E;
+}

@@ -1,0 +1,6 @@
+:root{
+--sp-0:0;--sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:20px;--sp-6:24px;--sp-7:28px;--sp-8:32px;--sp-10:40px;--sp-12:48px;--sp-14:56px;--sp-16:64px;--sp-20:80px;--sp-24:96px;--sp-28:112px;--sp-32:128px;--sp-40:160px;
+--gap-inline:var(--sp-2);--gap-control:var(--sp-3);--gap-card:var(--sp-4);--gap-grid:var(--sp-6);
+--pad-card:var(--sp-6);--pad-card-lg:var(--sp-8);--pad-section:var(--sp-24);--pad-section-sm:var(--sp-16);
+--stack-tight:var(--sp-2);--stack:var(--sp-4);--stack-loose:var(--sp-8);
+}

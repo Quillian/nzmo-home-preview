@@ -1,0 +1,16 @@
+:root{
+--font-display:"Bounded","Bounded Static","Arial Black",Impact,sans-serif;
+--font-text:"Golos Text","Helvetica Neue",system-ui,sans-serif;
+--font-tech:"Jura","Golos Text",sans-serif;
+--fw-light:300;--fw-regular:400;--fw-medium:500;--fw-semibold:600;--fw-bold:700;--fw-black:800;
+--fs-hero:clamp(40px,5.4vw,84px);
+--fs-display-1:64px;--fs-display-2:48px;--fs-display-3:36px;
+--fs-h1:32px;--fs-h2:26px;--fs-h3:21px;--fs-h4:18px;
+--fs-lead:20px;--fs-body:16px;--fs-body-sm:14px;--fs-caption:13px;--fs-micro:11px;
+--fs-print-h1:26pt;--fs-print-h2:18pt;--fs-print-h3:13pt;--fs-print-body:10.5pt;--fs-print-caption:8.5pt;
+--lh-tight:1.02;--lh-display:1.08;--lh-heading:1.18;--lh-snug:1.34;--lh-body:1.5;--lh-loose:1.62;
+--tr-display:-0.03em;--tr-heading:-0.015em;--tr-body:0;--tr-label:0.14em;--tr-lockup:0.30em;
+--text-display-font:var(--font-display);--text-display-weight:var(--fw-semibold);
+--text-heading-font:var(--font-display);--text-heading-weight:var(--fw-medium);
+--text-body-font:var(--font-text);--text-spec-font:var(--font-tech);--text-label-font:var(--font-tech);
+}

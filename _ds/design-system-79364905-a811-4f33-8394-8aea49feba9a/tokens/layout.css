@@ -1,0 +1,8 @@
+:root{
+--container-max:1320px;--container-narrow:840px;--container-wide:1560px;
+--gutter:32px;--gutter-sm:20px;--grid-cols:12;
+--header-h:76px;--header-h-compact:60px;
+--page-a4-w:210mm;--page-a4-h:297mm;--page-margin:16mm;--page-margin-narrow:12mm;
+--page-header-h:22mm;--page-footer-h:14mm;
+--slide-w:1280px;--slide-h:720px;--slide-pad:72px;
+}

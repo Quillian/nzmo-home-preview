@@ -1,0 +1,12 @@
+:root{
+--shadow-none:none;
+--shadow-hair:0 1px 0 rgba(27,45,66,.06);
+--shadow-card:0 1px 0 rgba(27,45,66,.05),0 14px 30px -22px rgba(27,45,66,.40);
+--shadow-raised:0 1px 0 rgba(27,45,66,.06),0 22px 44px -24px rgba(27,45,66,.42);
+--shadow-overlay:0 30px 70px -28px rgba(11,20,32,.55);
+--shadow-inset-hair:inset 0 0 0 1px var(--border-hair);
+--shadow-focus:0 0 0 2px var(--white),0 0 0 4px var(--focus-ring);
+--shadow-focus-on-deep:0 0 0 2px var(--navy-900),0 0 0 4px var(--ochre-500);
+--scrim-bottom:linear-gradient(to top,rgba(11,20,32,.86) 0%,rgba(11,20,32,.52) 42%,rgba(11,20,32,0) 100%);
+--scrim-top:linear-gradient(to bottom,rgba(11,20,32,.70) 0%,rgba(11,20,32,0) 100%);
+}

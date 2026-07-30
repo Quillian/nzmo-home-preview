@@ -1,0 +1,9 @@
+:root{
+--pattern-zigzag:url("../assets/patterns/zigzag-outline-tile.svg");
+--pattern-zigzag-size:162px 92px;
+--pattern-rail:repeating-linear-gradient(115deg,var(--navy-900) 0 6px,transparent 6px 14px);
+--pattern-rail-fine:repeating-linear-gradient(115deg,currentColor 0 2px,transparent 2px 7px);
+--pattern-perforation:radial-gradient(circle at 4px 4px,currentColor 1.4px,transparent 1.5px);
+--pattern-perforation-size:14px 14px;
+--pattern-opacity-light:.22;--pattern-opacity-deep:.16;
+}
