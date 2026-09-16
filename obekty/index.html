@@ -6,26 +6,20 @@
 <title>Объекты НЗМО — реализованные проекты: аэропорты, технопарки</title>
 <meta name="description" content="Реализованные объекты завода НЗМО по всей России — аэропорты Толмачёво и Байкал, технопарк Кванториум, клиника Евромед, жилые комплексы, скверы и бульвары.">
 <link rel="canonical" href="https://nzmo-home.vercel.app/obekty/">
-<link rel="icon" href="/img/logo/01_znak_solid_gold.svg" type="image/svg+xml">
+<link rel="icon" href="/img/logo/logo-mark-ochre.svg" type="image/svg+xml">
 <meta property="og:title" content="Объекты НЗМО — реализованные проекты: аэропорты, технопарки">
 <meta property="og:description" content="Реализованные объекты завода НЗМО по всей России — аэропорты Толмачёво и Байкал, технопарк Кванториум, клиника Евромед, жилые комплексы, скверы и бульвары.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nzmo-home.vercel.app/obekty/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="/css/template_styles.css">
 <link rel="stylesheet" href="/css/styles.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"\u0413\u043b\u0430\u0432\u043d\u0430\u044f","item":"https://nzmo-home.vercel.app/"},{"@type":"ListItem","position":2,"name":"\u041e\u0431\u044a\u0435\u043a\u0442\u044b","item":"https://nzmo-home.vercel.app/obekty/"}]}</script>
 </head>
 <body>
-<div class="topbar">
-  <div class="container">
-    <span>г. Новосибирск, ул. Челюскинцев, 30/2, офис 410 · Пн–Пт 9:00–18:00 (Новосибирск, UTC+7)</span>
-    <span><a href="tel:+73832349152">+7 (383) 234-91-52</a> · <a href="mailto:zakaz@nzmo.ru">zakaz@nzmo.ru</a></span>
-  </div>
-</div>
 <header class="header">
-  <div class="container">
-    <a class="logo" href="/" aria-label="НЗМО — на главную"><img src="/img/logo/04_gorizont_gold-navy.svg" alt="НЗМО" width="160" height="38"></a>
-    <button class="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="header__in">
+    <a class="lockup" href="/" aria-label="НЗМО — на главную"><img src="/img/logo/logo-mark-ochre.svg" alt="" width="34" height="22"><span><span class="w">НЗМО</span><span class="d">Новосибирский завод<br>металлообработки</span></span></a>
     <ul class="nav">      <li class="has-mega">
         <button aria-expanded="false" aria-haspopup="true">Продукция</button>
         <div class="mega">
@@ -62,7 +56,7 @@
           <div>
             <div class="mega-title"><a href="/nestandart/">Нестандарт и спецзаказ — изделия из металла по чертежу</a></div>
           </div>
-          <div><div class="mega-title"><a href="/produktsiya/">Вся продукция →</a></div><div class="mega-title"><a href="/potolki/sravnenie/">Сравнить потолочные системы</a></div><div class="mega-title"><a href="/dokumenty/katalogi/">Скачать каталог</a></div></div>
+          <div class="col--links"><div class="mega-title"><a href="/produktsiya/">Вся продукция →</a></div><ul><li><a href="/potolki/sravnenie/">Сравнить потолочные системы</a></li><li><a href="/resheniya/">Решения по типу объекта</a></li><li><a href="/dokumenty/katalogi/">Скачать каталог</a></li><li><a href="/proektirovshchikam/ral-i-perforatsiya/">RAL, текстуры, перфорация</a></li></ul></div>
         </div>
       </li>
       <li><a href="/resheniya/">Решения</a></li>
@@ -73,437 +67,377 @@
       <li><a href="/o-zavode/">О заводе</a></li>
       <li><a href="/kontakty/">Контакты</a></li>
     </ul>
-    <div class="header-actions">
-      <a class="header-phone" href="tel:+73832349152">+7 (383) 234-91-52</a>
-      <a class="btn btn--accent btn--sm" href="/servis/raschet-proekta/"><span class="cta-full">Посчитать проект</span><span class="cta-short">Расчёт</span></a>
-    </div>
+    <a class="header__phone" href="tel:+73832349152">+7 (383) 234-91-52</a>
+    <a class="btn btn--navy btn--xs header__cta" href="/servis/raschet-proekta/"><span class="cta-full">Посчитать проект</span><span class="cta-short">Расчёт</span></a>
+    <button class="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
-</header><main id="work-area"><nav class="crumbs" aria-label="Вы здесь"><div class="container"><ol>
-<li><a href="/">Главная</a></li><li><span aria-current="page">Объекты</span></li></ol></div></nav>
-<section class="hero"><div class="container"><h1>Объекты</h1><p class="lead">Нашу работу видно по всей России: 37 объектов из каталога — аэропорты, технопарки, клиники, жилые комплексы, скверы. Фильтруйте по отрасли или продукту.</p></div></section>
-<section class="section section--tight"><div class="container">
-  <h2 class="visually-hidden">Все объекты</h2>
-  <div class="filters" data-filters>
-    <button class="is-active" data-key="sector" data-val="">Все</button>
-<button data-key="sector" data-val="offices">Офисы и бизнес-центры</button><button data-key="sector" data-val="retail">Торговля и общественные пространства</button><button data-key="sector" data-val="transport">Транспорт и инфраструктура</button><button data-key="sector" data-val="medicine">Медицина и чистые помещения</button><button data-key="sector" data-val="education">Образование и спорт</button><button data-key="sector" data-val="industrial">Промышленные объекты</button><button data-key="sector" data-val="residential">Жилые комплексы</button><button data-key="sector" data-val="urban">Городская среда</button><button data-key="sector" data-val="horeca">HoReCa</button>  </div>
-<div class="grid cols-3">
+</header><main id="work-area"><section class="page-head">
+  <div class="container">
+<nav class="crumbs" aria-label="Вы здесь"><ol style="padding:0 0 28px"><li><a href="/">Главная</a></li><li><span>Объекты</span></li></ol></nav><div class="kicker kicker--ochre" style="margin-bottom:0"><span class="l">Нашу работу видно по всей России</span></div>    <h1 class="t-1" style="margin-top:18px">Объекты</h1>
+<p class="lead">Нашу работу видно по всей России: 37 объектов из каталога — аэропорты, технопарки, клиники, жилые комплексы, скверы. Фильтруйте по отрасли.</p><div class="btn-row"><a class="btn btn--navy" href="#cta">Посчитать похожий проект</a></div>  </div>
+</section><section class="section section--white">
+  <div class="container">
+    <div class="kicker"><span class="n">01</span><span class="l">Все объекты</span></div>
+    <h2 class="visually-hidden">Все объекты</h2>
+    <div class="filters" data-filters>
+      <button class="is-active" data-key="sector" data-val="">Все</button>
+<button data-key="sector" data-val="offices">Офисы и бизнес-центры</button><button data-key="sector" data-val="retail">Торговля и общественные пространства</button><button data-key="sector" data-val="transport">Транспорт и инфраструктура</button><button data-key="sector" data-val="medicine">Медицина и чистые помещения</button><button data-key="sector" data-val="education">Образование и спорт</button><button data-key="sector" data-val="industrial">Промышленные объекты</button><button data-key="sector" data-val="residential">Жилые комплексы</button><button data-key="sector" data-val="urban">Городская среда</button><button data-key="sector" data-val="horeca">HoReCa</button>    </div>
+<div class="grid g3">
   <article class="card" data-case data-sector="education" data-products="kuboobraznye hook-on lineynye dizaynerskie-svetilniki nerzhaveyushchie" data-city="Ноябрьск">
-    <a class="card-photo" href="/obekty/kvantorium/">
-<img src="/img/ph_rail_kvant-800.jpg" alt="Технопарк «Кванториум», Ноябрьск" loading="lazy" width="800" height="500">    </a>
-    <div class="card-body">
-      <div class="meta">Ноябрьск · Образование и спорт</div>
-      <h3><a href="/obekty/kvantorium/">Технопарк «Кванториум»</a></h3>
+    <a class="card__photo" href="/obekty/kvantorium/"><img src="/img/ph_rail_kvant-800.jpg" alt="Технопарк «Кванториум», Ноябрьск" loading="lazy"></a>
+    <div class="card__body">
+      <div class="tech">Ноябрьск · Образование и спорт</div>
+      <div class="card__title"><a href="/obekty/kvantorium/">Технопарк «Кванториум»</a></div>
       <p>кубообразная рейка AIRWOOD · Hook-on синий и графит · перфорация · линейный свет в зазорах · панели R8 750×1180</p>
-      <a class="more" href="/obekty/kvantorium/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="residential" data-products="kuboobraznye lineynye liftovye-portaly" data-city="Новосибирск">
-    <a class="card-photo" href="/obekty/maki/">
-<img src="/img/ph_rail_maki-800.jpg" alt="ЖК «Маки», Новосибирск" loading="lazy" width="800" height="500">    </a>
-    <div class="card-body">
-      <div class="meta">Новосибирск · Жилые комплексы</div>
-      <h3><a href="/obekty/maki/">ЖК «Маки»</a></h3>
+    <a class="card__photo" href="/obekty/maki/"><img src="/img/ph_rail_maki-800.jpg" alt="ЖК «Маки», Новосибирск" loading="lazy"></a>
+    <div class="card__body">
+      <div class="tech">Новосибирск · Жилые комплексы</div>
+      <div class="card__title"><a href="/obekty/maki/">ЖК «Маки»</a></div>
       <p>AIRWOOD · рейка белая · точечный свет между рейками · лифтовой холл</p>
-      <a class="more" href="/obekty/maki/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="retail" data-products="kuboobraznye lineynye" data-city="Новосибирск">
-    <a class="card-photo" href="/obekty/fastar/">
-<img src="/img/ph_fastar_hall-800.jpg" alt="Автосалон «Фастар», Новосибирск" loading="lazy" width="800" height="500">    </a>
-    <div class="card-body">
-      <div class="meta">Новосибирск · Торговля и общественные пространства</div>
-      <h3><a href="/obekty/fastar/">Автосалон «Фастар»</a></h3>
+    <a class="card__photo" href="/obekty/fastar/"><img src="/img/ph_fastar_hall-800.jpg" alt="Автосалон «Фастар», Новосибирск" loading="lazy"></a>
+    <div class="card__body">
+      <div class="tech">Новосибирск · Торговля и общественные пространства</div>
+      <div class="card__title"><a href="/obekty/fastar/">Автосалон «Фастар»</a></div>
       <p>AIRWOOD · рейка RAL 7004 · линейные светильники по шагу реек · камеры в поле рейки</p>
-      <a class="more" href="/obekty/fastar/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="retail" data-products="volnoobraznye kuboobraznye" data-city="Ижевск">
-    <a class="card-photo" href="/obekty/moy-port/">
-<img src="/img/ph_port_wave-800.jpg" alt="ТЦ «Мой Порт», Ижевск" loading="lazy" width="800" height="500">    </a>
-    <div class="card-body">
-      <div class="meta">Ижевск · Торговля и общественные пространства</div>
-      <h3><a href="/obekty/moy-port/">ТЦ «Мой Порт»</a></h3>
+    <a class="card__photo" href="/obekty/moy-port/"><img src="/img/ph_port_wave-800.jpg" alt="ТЦ «Мой Порт», Ижевск" loading="lazy"></a>
+    <div class="card__body">
+      <div class="tech">Ижевск · Торговля и общественные пространства</div>
+      <div class="card__title"><a href="/obekty/moy-port/">ТЦ «Мой Порт»</a></div>
       <p>AIRWOOD · волнообразный потолок RAL 9003 над атриумом · рейка под дерево над эскалаторами</p>
-      <a class="more" href="/obekty/moy-port/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="residential" data-products="kuboobraznye" data-city="Новосибирск">
-    <a class="card-photo" href="/obekty/nasledie/">
-<img src="/img/ph_rail_nasledie-800.jpg" alt="ЖК «Наследие», Новосибирск" loading="lazy" width="800" height="500">    </a>
-    <div class="card-body">
-      <div class="meta">Новосибирск · Жилые комплексы</div>
-      <h3><a href="/obekty/nasledie/">ЖК «Наследие»</a></h3>
+    <a class="card__photo" href="/obekty/nasledie/"><img src="/img/ph_rail_nasledie-800.jpg" alt="ЖК «Наследие», Новосибирск" loading="lazy"></a>
+    <div class="card__body">
+      <div class="tech">Новосибирск · Жилые комплексы</div>
+      <div class="card__title"><a href="/obekty/nasledie/">ЖК «Наследие»</a></div>
       <p>AIRWOOD · кубообразная рейка · холл</p>
-      <a class="more" href="/obekty/nasledie/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="residential" data-products="kuboobraznye" data-city="Новосибирск">
-    <a class="card-photo" href="/obekty/novatory/">
-<img src="/img/ph_rail_novatory-800.jpg" alt="ЖК «Новаторы», Новосибирск" loading="lazy" width="800" height="500">    </a>
-    <div class="card-body">
-      <div class="meta">Новосибирск · Жилые комплексы</div>
-      <h3><a href="/obekty/novatory/">ЖК «Новаторы»</a></h3>
+    <a class="card__photo" href="/obekty/novatory/"><img src="/img/ph_rail_novatory-800.jpg" alt="ЖК «Новаторы», Новосибирск" loading="lazy"></a>
+    <div class="card__body">
+      <div class="tech">Новосибирск · Жилые комплексы</div>
+      <div class="card__title"><a href="/obekty/novatory/">ЖК «Новаторы»</a></div>
       <p>AIRWOOD · рейка · лифтовой холл</p>
-      <a class="more" href="/obekty/novatory/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="residential" data-products="kuboobraznye airwood" data-city="Новосибирск">
-    <a class="card-photo" href="/obekty/taiga/">
-<img src="/img/ph_rail_taiga-800.jpg" alt="Тайгинский парк, Новосибирск" loading="lazy" width="800" height="500">    </a>
-    <div class="card-body">
-      <div class="meta">Новосибирск · Жилые комплексы</div>
-      <h3><a href="/obekty/taiga/">Тайгинский парк</a></h3>
+    <a class="card__photo" href="/obekty/taiga/"><img src="/img/ph_rail_taiga-800.jpg" alt="Тайгинский парк, Новосибирск" loading="lazy"></a>
+    <div class="card__body">
+      <div class="tech">Новосибирск · Жилые комплексы</div>
+      <div class="card__title"><a href="/obekty/taiga/">Тайгинский парк</a></div>
       <p>AIRWOOD PREMIUM · кубообразная рейка под дерево</p>
-      <a class="more" href="/obekty/taiga/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="offices" data-products="hook-on perforirovannye" data-city="Кемерово">
-    <a class="card-photo" href="/obekty/dominant/">
-<img src="/img/ph_hookon_dominant-800.jpg" alt="БЦ «Доминант», Кемерово" loading="lazy" width="800" height="500">    </a>
-    <div class="card-body">
-      <div class="meta">Кемерово · Офисы и бизнес-центры</div>
-      <h3><a href="/obekty/dominant/">БЦ «Доминант»</a></h3>
+    <a class="card__photo" href="/obekty/dominant/"><img src="/img/ph_hookon_dominant-800.jpg" alt="БЦ «Доминант», Кемерово" loading="lazy"></a>
+    <div class="card__body">
+      <div class="tech">Кемерово · Офисы и бизнес-центры</div>
+      <div class="card__title"><a href="/obekty/dominant/">БЦ «Доминант»</a></div>
       <p>Hook-on · чёрная кассета · индивидуальная перфорация отверстиями разного диаметра · точечный свет в кассете</p>
-      <a class="more" href="/obekty/dominant/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="education" data-products="hook-on perforirovannye dizaynerskie" data-city="Новосибирск">
-    <a class="card-photo" href="/obekty/edge/">
-<img src="/img/ph_hookon_edge-800.jpg" alt="Фитнес-клуб EDGE, Новосибирск" loading="lazy" width="800" height="500">    </a>
-    <div class="card-body">
-      <div class="meta">Новосибирск · Образование и спорт</div>
-      <h3><a href="/obekty/edge/">Фитнес-клуб EDGE</a></h3>
+    <a class="card__photo" href="/obekty/edge/"><img src="/img/ph_hookon_edge-800.jpg" alt="Фитнес-клуб EDGE, Новосибирск" loading="lazy"></a>
+    <div class="card__body">
+      <div class="tech">Новосибирск · Образование и спорт</div>
+      <div class="card__title"><a href="/obekty/edge/">Фитнес-клуб EDGE</a></div>
       <p>Hook-on · индивидуальная перфорация · скрытая подсветка за полотном · перфорированные стены</p>
-      <a class="more" href="/obekty/edge/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="retail" data-products="nerzhaveyushchie nerzhaveyushchaya-stal dizaynerskie" data-city="Новосибирск">
-    <a class="card-photo" href="/obekty/pronails/">
-<img src="/img/ph_pronails-800.jpg" alt="Студия PRONAILS, Новосибирск" loading="lazy" width="800" height="500">    </a>
-    <div class="card-body">
-      <div class="meta">Новосибирск · Торговля и общественные пространства</div>
-      <h3><a href="/obekty/pronails/">Студия PRONAILS</a></h3>
+    <a class="card__photo" href="/obekty/pronails/"><img src="/img/ph_pronails-800.jpg" alt="Студия PRONAILS, Новосибирск" loading="lazy"></a>
+    <div class="card__body">
+      <div class="tech">Новосибирск · Торговля и общественные пространства</div>
+      <div class="card__title"><a href="/obekty/pronails/">Студия PRONAILS</a></div>
       <p>декоративная нержавеющая сталь · текстура R8 · потолок и стены</p>
-      <a class="more" href="/obekty/pronails/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="education" data-products="lineynye airwood hook-on" data-city="Новосибирск">
-    <a class="card-photo" href="/obekty/ngu/">
-<img src="/img/ph_light_ngu-800.jpg" alt="Новосибирский государственный университет, Новосибирск" loading="lazy" width="800" height="500">    </a>
-    <div class="card-body">
-      <div class="meta">Новосибирск · Образование и спорт</div>
-      <h3><a href="/obekty/ngu/">Новосибирский государственный университет</a></h3>
+    <a class="card__photo" href="/obekty/ngu/"><img src="/img/ph_light_ngu-800.jpg" alt="Новосибирский государственный университет, Новосибирск" loading="lazy"></a>
+    <div class="card__body">
+      <div class="tech">Новосибирск · Образование и спорт</div>
+      <div class="card__title"><a href="/obekty/ngu/">Новосибирский государственный университет</a></div>
       <p>потолок под дерево · линейный свет по ярусам аудитории и вдоль балкона · светильники по размеру пролётов</p>
-      <a class="more" href="/obekty/ngu/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="transport" data-products="kuboobraznye lineynye" data-city="Улан-Удэ">
-    <a class="card-photo" href="/obekty/baikal/">
-<img src="/img/ph_light_baikal-800.jpg" alt="Аэропорт «Байкал», Улан-Удэ" loading="lazy" width="800" height="500">    </a>
-    <div class="card-body">
-      <div class="meta">Улан-Удэ · Транспорт и инфраструктура</div>
-      <h3><a href="/obekty/baikal/">Аэропорт «Байкал»</a></h3>
+    <a class="card__photo" href="/obekty/baikal/"><img src="/img/ph_light_baikal-800.jpg" alt="Аэропорт «Байкал», Улан-Удэ" loading="lazy"></a>
+    <div class="card__body">
+      <div class="tech">Улан-Удэ · Транспорт и инфраструктура</div>
+      <div class="card__title"><a href="/obekty/baikal/">Аэропорт «Байкал»</a></div>
       <p>терминал внутренних линий 6 600 м², 2024 · белая рейка · линейный свет по шагу потолка · световые петли в зоне ожидания</p>
-      <a class="more" href="/obekty/baikal/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="transport" data-products="oblicovka-kolonn lineynye kuboobraznye nerzhaveyushchaya-stal resepshn" data-city="Новосибирск">
-    <a class="card-photo" href="/obekty/tolmachevo/">
-<img src="/img/ph_airport_hall-800.jpg" alt="Аэропорт «Толмачёво», Новосибирск" loading="lazy" width="800" height="500">    </a>
-    <div class="card-body">
-      <div class="meta">Новосибирск · Транспорт и инфраструктура</div>
-      <h3><a href="/obekty/tolmachevo/">Аэропорт «Толмачёво»</a></h3>
+    <a class="card__photo" href="/obekty/tolmachevo/"><img src="/img/ph_airport_hall-800.jpg" alt="Аэропорт «Толмачёво», Новосибирск" loading="lazy"></a>
+    <div class="card__body">
+      <div class="tech">Новосибирск · Транспорт и инфраструктура</div>
+      <div class="card__title"><a href="/obekty/tolmachevo/">Аэропорт «Толмачёво»</a></div>
       <p>4 колонны H 30 м, D ≈ 5 м · структурные рёбра с подсветкой · световые диски · реечное поле · бизнес-зал S7 — зеркальная нержавейка · конференц-стол, шпон и массив</p>
-      <a class="more" href="/obekty/tolmachevo/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="medicine" data-products="clip-in gml-paneli dlya-chistyh-pomeshcheniy" data-city="Новосибирск">
-    <a class="card-photo" href="/obekty/evromed/">
-<img src="/img/ph_clean-800.jpg" alt="Клиника «Евромед», Новосибирск" loading="lazy" width="800" height="500">    </a>
-    <div class="card-body">
-      <div class="meta">Новосибирск · Медицина и чистые помещения</div>
-      <h3><a href="/obekty/evromed/">Клиника «Евромед»</a></h3>
+    <a class="card__photo" href="/obekty/evromed/"><img src="/img/ph_clean-800.jpg" alt="Клиника «Евромед», Новосибирск" loading="lazy"></a>
+    <div class="card__body">
+      <div class="tech">Новосибирск · Медицина и чистые помещения</div>
+      <div class="card__title"><a href="/obekty/evromed/">Клиника «Евромед»</a></div>
       <p>Clip-in 600×600 · герметичное поле · RAL 9003 · палатный блок</p>
-      <a class="more" href="/obekty/evromed/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="medicine" data-products="clip-in dlya-chistyh-pomeshcheniy chistye-pomeshcheniya" data-city="Кудымкар">
-    <a class="card-photo" href="/obekty/kudymkar/">
-<div class="ph">фото добавим</div>    </a>
-    <div class="card-body">
-      <div class="meta">Кудымкар · Медицина и чистые помещения</div>
-      <h3><a href="/obekty/kudymkar/">Хирургический корпус областной больницы</a></h3>
+    <a class="card__photo" href="/obekty/kudymkar/"><div class="ph">фото добавим</div></a>
+    <div class="card__body">
+      <div class="tech">Кудымкар · Медицина и чистые помещения</div>
+      <div class="card__title"><a href="/obekty/kudymkar/">Хирургический корпус областной больницы</a></div>
       <p>Clip-in · светильники заподлицо с потолком · хирургический корпус</p>
-      <a class="more" href="/obekty/kudymkar/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="transport" data-products="kamen resepshn horeca zony-ozhidaniya grilyato" data-city="Новокузнецк">
-    <a class="card-photo" href="/obekty/novokuznetsk/">
-<img src="/img/ph_stone_nk1-800.jpg" alt="Аэропорт Новокузнецка, Новокузнецк" loading="lazy" width="800" height="500">    </a>
-    <div class="card-body">
-      <div class="meta">Новокузнецк · Транспорт и инфраструктура</div>
-      <h3><a href="/obekty/novokuznetsk/">Аэропорт Новокузнецка</a></h3>
+    <a class="card__photo" href="/obekty/novokuznetsk/"><img src="/img/ph_stone_nk1-800.jpg" alt="Аэропорт Новокузнецка, Новокузнецк" loading="lazy"></a>
+    <div class="card__body">
+      <div class="tech">Новокузнецк · Транспорт и инфраструктура</div>
+      <div class="card__title"><a href="/obekty/novokuznetsk/">Аэропорт Новокузнецка</a></div>
       <p>стойка ресепшн из камня в двух фактурах · барная стойка из натурального камня с подсветкой · мягкие группы и переговорные зоны · комната матери и ребёнка · Грильято с круглыми островами</p>
-      <a class="more" href="/obekty/novokuznetsk/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="education" data-products="kamen oblicovka-kolonn" data-city="Свободный">
-    <a class="card-photo" href="/obekty/svobodny/">
-<img src="/img/ph_stone_stairs-800.jpg" alt="Центр культуры и досуга, Свободный" loading="lazy" width="800" height="500">    </a>
-    <div class="card-body">
-      <div class="meta">Свободный · Образование и спорт</div>
-      <h3><a href="/obekty/svobodny/">Центр культуры и досуга</a></h3>
+    <a class="card__photo" href="/obekty/svobodny/"><img src="/img/ph_stone_stairs-800.jpg" alt="Центр культуры и досуга, Свободный" loading="lazy"></a>
+    <div class="card__body">
+      <div class="tech">Свободный · Образование и спорт</div>
+      <div class="card__title"><a href="/obekty/svobodny/">Центр культуры и досуга</a></div>
       <p>парадная лестница из акрилового камня — марш, площадка, ограждение · облицовка колонн Zn 1,2, RAL 9003</p>
-      <a class="more" href="/obekty/svobodny/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="horeca" data-products="kamen nerzhaveyushchaya-stal" data-city="Омск">
-    <a class="card-photo" href="/obekty/fedya-dich/">
-<img src="/img/ph_stone_fedya-800.jpg" alt="Ресторан «Федя, дичь!», Омск" loading="lazy" width="800" height="500">    </a>
-    <div class="card-body">
-      <div class="meta">Омск · HoReCa</div>
-      <h3><a href="/obekty/fedya-dich/">Ресторан «Федя, дичь!»</a></h3>
+    <a class="card__photo" href="/obekty/fedya-dich/"><img src="/img/ph_stone_fedya-800.jpg" alt="Ресторан «Федя, дичь!», Омск" loading="lazy"></a>
+    <div class="card__body">
+      <div class="tech">Омск · HoReCa</div>
+      <div class="card__title"><a href="/obekty/fedya-dich/">Ресторан «Федя, дичь!»</a></div>
       <p>рельефная стена под скальный скол во всю высоту зала · подсветка у пола · панели из нержавейки R8</p>
-      <a class="more" href="/obekty/fedya-dich/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="urban" data-products="skulptury maf" data-city="Новосибирск">
-    <a class="card-photo" href="/obekty/krylya-sibiri/">
-<img src="/img/ph_maf_krylya-800.jpg" alt="Сквер «Крылья Сибири», Новосибирск" loading="lazy" width="800" height="500">    </a>
-    <div class="card-body">
-      <div class="meta">Новосибирск · Городская среда</div>
-      <h3><a href="/obekty/krylya-sibiri/">Сквер «Крылья Сибири»</a></h3>
+    <a class="card__photo" href="/obekty/krylya-sibiri/"><img src="/img/ph_maf_krylya-800.jpg" alt="Сквер «Крылья Сибири», Новосибирск" loading="lazy"></a>
+    <div class="card__body">
+      <div class="tech">Новосибирск · Городская среда</div>
+      <div class="card__title"><a href="/obekty/krylya-sibiri/">Сквер «Крылья Сибири»</a></div>
       <p>«Геометка» на чаше фонтана · зеркальные сферы — хабы авиакомпании · световые линии в форме следов самолётов · фотозоны</p>
-      <a class="more" href="/obekty/krylya-sibiri/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="urban" data-products="skulptury maf" data-city="Магнитогорск">
-    <a class="card-photo" href="/obekty/ogni-magnitki/">
-<div class="ph">фото добавим</div>    </a>
-    <div class="card-body">
-      <div class="meta">Магнитогорск · Городская среда</div>
-      <h3><a href="/obekty/ogni-magnitki/">Бульвар «Огни Магнитки»</a></h3>
+    <a class="card__photo" href="/obekty/ogni-magnitki/"><div class="ph">фото добавим</div></a>
+    <div class="card__body">
+      <div class="tech">Магнитогорск · Городская среда</div>
+      <div class="card__title"><a href="/obekty/ogni-magnitki/">Бульвар «Огни Магнитки»</a></div>
       <p>«Кольца» 2 и 1,5 м · «Матрёшка» 2,5 м · «Кольцо с голубями», шесть птиц · нержавеющая сталь</p>
-      <a class="more" href="/obekty/ogni-magnitki/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="urban" data-products="skulptury maf" data-city="Ханты-Мансийск">
-    <a class="card-photo" href="/obekty/hanty-mansiysk/">
-<div class="ph">фото добавим</div>    </a>
-    <div class="card-body">
-      <div class="meta">Ханты-Мансийск · Городская среда</div>
-      <h3><a href="/obekty/hanty-mansiysk/">Центр зимних видов спорта</a></h3>
+    <a class="card__photo" href="/obekty/hanty-mansiysk/"><div class="ph">фото добавим</div></a>
+    <div class="card__body">
+      <div class="tech">Ханты-Мансийск · Городская среда</div>
+      <div class="card__title"><a href="/obekty/hanty-mansiysk/">Центр зимних видов спорта</a></div>
       <p>«Югорский биатлонист» · нержавеющая сталь · высота 5 м</p>
-      <a class="more" href="/obekty/hanty-mansiysk/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="transport" data-products="skulptury maf zony-ozhidaniya" data-city="Томск">
-    <a class="card-photo" href="/obekty/tomsk-airport/">
-<div class="ph">фото добавим</div>    </a>
-    <div class="card-body">
-      <div class="meta">Томск · Транспорт и инфраструктура</div>
-      <h3><a href="/obekty/tomsk-airport/">Аэропорт имени Камова</a></h3>
+    <a class="card__photo" href="/obekty/tomsk-airport/"><div class="ph">фото добавим</div></a>
+    <div class="card__body">
+      <div class="tech">Томск · Транспорт и инфраструктура</div>
+      <div class="card__title"><a href="/obekty/tomsk-airport/">Аэропорт имени Камова</a></div>
       <p>5 композиций лопастей диаметром 5,5 м по индивидуальному проекту · мягкая мебель залов</p>
-      <a class="more" href="/obekty/tomsk-airport/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="residential" data-products="grilyato" data-city="Новосибирск">
-    <a class="card-photo" href="/obekty/normandiya-neman/">
-<div class="ph">фото добавим</div>    </a>
-    <div class="card-body">
-      <div class="meta">Новосибирск · Жилые комплексы</div>
-      <h3><a href="/obekty/normandiya-neman/">ЖК «Нормандия — Неман»</a></h3>
+    <a class="card__photo" href="/obekty/normandiya-neman/"><div class="ph">фото добавим</div></a>
+    <div class="card__body">
+      <div class="tech">Новосибирск · Жилые комплексы</div>
+      <div class="card__title"><a href="/obekty/normandiya-neman/">ЖК «Нормандия — Неман»</a></div>
       <p>Грильято · чёрная ячейка · лифтовой холл · свет в поле решётки</p>
-      <a class="more" href="/obekty/normandiya-neman/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="offices" data-products="nerzhaveyushchaya-stal nerzhaveyushchie dizaynerskie-svetilniki" data-city="Красноярск">
-    <a class="card-photo" href="/obekty/admiral/">
-<div class="ph">фото добавим</div>    </a>
-    <div class="card-body">
-      <div class="meta">Красноярск · Офисы и бизнес-центры</div>
-      <h3><a href="/obekty/admiral/">Бизнес-центр «Адмирал»</a></h3>
+    <a class="card__photo" href="/obekty/admiral/"><div class="ph">фото добавим</div></a>
+    <div class="card__body">
+      <div class="tech">Красноярск · Офисы и бизнес-центры</div>
+      <div class="card__title"><a href="/obekty/admiral/">Бизнес-центр «Адмирал»</a></div>
       <p>стеновые и потолочные панели из нержавейки R8 · перфорированные световые диски по индивидуальному проекту</p>
-      <a class="more" href="/obekty/admiral/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="retail" data-products="stenovye-paneli airwood kuboobraznye" data-city="Новосибирск">
-    <a class="card-photo" href="/obekty/ecco/">
-<img src="/img/ph_rail_ecco-800.jpg" alt="Магазин ECCO, Новосибирск" loading="lazy" width="800" height="500">    </a>
-    <div class="card-body">
-      <div class="meta">Новосибирск · Торговля и общественные пространства</div>
-      <h3><a href="/obekty/ecco/">Магазин ECCO</a></h3>
+    <a class="card__photo" href="/obekty/ecco/"><img src="/img/ph_rail_ecco-800.jpg" alt="Магазин ECCO, Новосибирск" loading="lazy"></a>
+    <div class="card__body">
+      <div class="tech">Новосибирск · Торговля и общественные пространства</div>
+      <div class="card__title"><a href="/obekty/ecco/">Магазин ECCO</a></div>
       <p>AIRWOOD PREMIUM · рейка под дерево на стене и потолке торгового зала</p>
-      <a class="more" href="/obekty/ecco/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="retail" data-products="lineynye kuboobraznye" data-city="Томск">
-    <a class="card-photo" href="/obekty/dns/">
-<img src="/img/ph_light_dns-800.jpg" alt="Магазин ДНС, Томск" loading="lazy" width="800" height="500">    </a>
-    <div class="card-body">
-      <div class="meta">Томск · Торговля и общественные пространства</div>
-      <h3><a href="/obekty/dns/">Магазин ДНС</a></h3>
+    <a class="card__photo" href="/obekty/dns/"><img src="/img/ph_light_dns-800.jpg" alt="Магазин ДНС, Томск" loading="lazy"></a>
+    <div class="card__body">
+      <div class="tech">Томск · Торговля и общественные пространства</div>
+      <div class="card__title"><a href="/obekty/dns/">Магазин ДНС</a></div>
       <p>реечный потолок · линейный свет</p>
-      <a class="more" href="/obekty/dns/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="residential" data-products="kassety fasady" data-city="Новосибирск">
-    <a class="card-photo" href="/obekty/freedom/">
-<img src="/img/ph_fasad_zk1-800.jpg" alt="ЖК Freedom, Новосибирск" loading="lazy" width="800" height="500"><span class="viz">Визуализация</span>    </a>
-    <div class="card-body">
-      <div class="meta">Новосибирск · Жилые комплексы</div>
-      <h3><a href="/obekty/freedom/">ЖК Freedom</a></h3>
+    <a class="card__photo" href="/obekty/freedom/"><img src="/img/ph_fasad_zk1-800.jpg" alt="ЖК Freedom, Новосибирск" loading="lazy"><span class="viz">визуализация</span></a>
+    <div class="card__body">
+      <div class="tech">Новосибирск · Жилые комплексы</div>
+      <div class="card__title"><a href="/obekty/freedom/">ЖК Freedom</a></div>
       <p>фасадные кассеты скрытого крепления · два цвета на одной подсистеме · ламели на башнях</p>
-      <a class="more" href="/obekty/freedom/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="medicine" data-products="oblicovka-kolonn" data-city="Оренбург">
-    <a class="card-photo" href="/obekty/orenburg/">
-<div class="ph">фото добавим</div>    </a>
-    <div class="card-body">
-      <div class="meta">Оренбург · Медицина и чистые помещения</div>
-      <h3><a href="/obekty/orenburg/">Областная детская больница</a></h3>
+    <a class="card__photo" href="/obekty/orenburg/"><div class="ph">фото добавим</div></a>
+    <div class="card__body">
+      <div class="tech">Оренбург · Медицина и чистые помещения</div>
+      <div class="card__title"><a href="/obekty/orenburg/">Областная детская больница</a></div>
       <p>круглые колонны · оцинковка Zn 1,2, RAL 1011 · цоколь из нержавеющей стали</p>
-      <a class="more" href="/obekty/orenburg/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="residential" data-products="hook-on" data-city="Владивосток">
-    <a class="card-photo" href="/obekty/bering/">
-<div class="ph">фото добавим</div>    </a>
-    <div class="card-body">
-      <div class="meta">Владивосток · Жилые комплексы</div>
-      <h3><a href="/obekty/bering/">ЖК «Беринг»</a></h3>
+    <a class="card__photo" href="/obekty/bering/"><div class="ph">фото добавим</div></a>
+    <div class="card__body">
+      <div class="tech">Владивосток · Жилые комплексы</div>
+      <div class="card__title"><a href="/obekty/bering/">ЖК «Беринг»</a></div>
       <p>Hook-on · кассеты 1500×600 и 2000×600</p>
-      <a class="more" href="/obekty/bering/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="retail" data-products="kuboobraznye" data-city="Горно-Алтайск">
-    <a class="card-photo" href="/obekty/lukoil/">
-<div class="ph">фото добавим</div>    </a>
-    <div class="card-body">
-      <div class="meta">Горно-Алтайск · Торговля и общественные пространства</div>
-      <h3><a href="/obekty/lukoil/">АЗС «Лукойл»</a></h3>
+    <a class="card__photo" href="/obekty/lukoil/"><div class="ph">фото добавим</div></a>
+    <div class="card__body">
+      <div class="tech">Горно-Алтайск · Торговля и общественные пространства</div>
+      <div class="card__title"><a href="/obekty/lukoil/">АЗС «Лукойл»</a></div>
       <p>AIRWOOD · реечный потолок</p>
-      <a class="more" href="/obekty/lukoil/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="residential" data-products="kuboobraznye" data-city="Барнаул">
-    <a class="card-photo" href="/obekty/laplandiya/">
-<div class="ph">фото добавим</div>    </a>
-    <div class="card-body">
-      <div class="meta">Барнаул · Жилые комплексы</div>
-      <h3><a href="/obekty/laplandiya/">ЖК «Лапландия»</a></h3>
+    <a class="card__photo" href="/obekty/laplandiya/"><div class="ph">фото добавим</div></a>
+    <div class="card__body">
+      <div class="tech">Барнаул · Жилые комплексы</div>
+      <div class="card__title"><a href="/obekty/laplandiya/">ЖК «Лапландия»</a></div>
       <p>AIRWOOD · рейка по RAL</p>
-      <a class="more" href="/obekty/laplandiya/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="industrial" data-products="hook-on clip-in nerzhaveyushchie" data-city="Красноярск">
-    <a class="card-photo" href="/obekty/kramz/">
-<div class="ph">фото добавим</div>    </a>
-    <div class="card-body">
-      <div class="meta">Красноярск · Промышленные объекты</div>
-      <h3><a href="/obekty/kramz/">КРАМЗ — Красноярский металлургический завод</a></h3>
+    <a class="card__photo" href="/obekty/kramz/"><div class="ph">фото добавим</div></a>
+    <div class="card__body">
+      <div class="tech">Красноярск · Промышленные объекты</div>
+      <div class="card__title"><a href="/obekty/kramz/">КРАМЗ — Красноярский металлургический завод</a></div>
       <p>Hook-on · многослойный потолок из нержавейки по системе Clip-in</p>
-      <a class="more" href="/obekty/kramz/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="education" data-products="hook-on perforirovannye" data-city="Новосибирск">
-    <a class="card-photo" href="/obekty/montazhny-kolledzh/">
-<div class="ph">фото добавим</div>    </a>
-    <div class="card-body">
-      <div class="meta">Новосибирск · Образование и спорт</div>
-      <h3><a href="/obekty/montazhny-kolledzh/">Монтажный колледж</a></h3>
+    <a class="card__photo" href="/obekty/montazhny-kolledzh/"><div class="ph">фото добавим</div></a>
+    <div class="card__body">
+      <div class="tech">Новосибирск · Образование и спорт</div>
+      <div class="card__title"><a href="/obekty/montazhny-kolledzh/">Монтажный колледж</a></div>
       <p>Hook-on · перфорация по индивидуальному рисунку</p>
-      <a class="more" href="/obekty/montazhny-kolledzh/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="industrial" data-products="chistye-pomeshcheniya clip-in gml-paneli" data-city="Кольцово">
-    <a class="card-photo" href="/obekty/angiofarm/">
-<div class="ph">фото добавим</div>    </a>
-    <div class="card-body">
-      <div class="meta">Кольцово · Промышленные объекты</div>
-      <h3><a href="/obekty/angiofarm/">«Ангиофарм»</a></h3>
+    <a class="card__photo" href="/obekty/angiofarm/"><div class="ph">фото добавим</div></a>
+    <div class="card__body">
+      <div class="tech">Кольцово · Промышленные объекты</div>
+      <div class="card__title"><a href="/obekty/angiofarm/">«Ангиофарм»</a></div>
       <p>чистые помещения · фармпроизводство</p>
-      <a class="more" href="/obekty/angiofarm/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="medicine" data-products="chistye-pomeshcheniya gml-paneli clip-in" data-city="Новосибирск">
-    <a class="card-photo" href="/obekty/ave-vita/">
-<div class="ph">фото добавим</div>    </a>
-    <div class="card-body">
-      <div class="meta">Новосибирск · Медицина и чистые помещения</div>
-      <h3><a href="/obekty/ave-vita/">Медицинский центр AVE VITA</a></h3>
+    <a class="card__photo" href="/obekty/ave-vita/"><div class="ph">фото добавим</div></a>
+    <div class="card__body">
+      <div class="tech">Новосибирск · Медицина и чистые помещения</div>
+      <div class="card__title"><a href="/obekty/ave-vita/">Медицинский центр AVE VITA</a></div>
       <p>чистые помещения · ГМЛ-панели · Clip-in</p>
-      <a class="more" href="/obekty/ave-vita/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="urban" data-products="skulptury maf" data-city="Сызрань">
-    <a class="card-photo" href="/obekty/syzran/">
-<div class="ph">фото добавим</div>    </a>
-    <div class="card-body">
-      <div class="meta">Сызрань · Городская среда</div>
-      <h3><a href="/obekty/syzran/">Набережная Крымзы</a></h3>
+    <a class="card__photo" href="/obekty/syzran/"><div class="ph">фото добавим</div></a>
+    <div class="card__body">
+      <div class="tech">Сызрань · Городская среда</div>
+      <div class="card__title"><a href="/obekty/syzran/">Набережная Крымзы</a></div>
       <p>«Томат» · нержавеющая сталь · 150 кг</p>
-      <a class="more" href="/obekty/syzran/">Смотреть объект →</a>
     </div>
   </article>
   <article class="card" data-case data-sector="urban" data-products="skulptury maf nestandart" data-city="Химки">
-    <a class="card-photo" href="/obekty/himki/">
-<div class="ph">фото добавим</div>    </a>
-    <div class="card-body">
-      <div class="meta">Химки · Городская среда</div>
-      <h3><a href="/obekty/himki/">Парк имени Льва Толстого</a></h3>
+    <a class="card__photo" href="/obekty/himki/"><div class="ph">фото добавим</div></a>
+    <div class="card__body">
+      <div class="tech">Химки · Городская среда</div>
+      <div class="card__title"><a href="/obekty/himki/">Парк имени Льва Толстого</a></div>
       <p>портрет лазерной резкой в листовой стали · входная группа</p>
-      <a class="more" href="/obekty/himki/">Смотреть объект →</a>
     </div>
   </article>
-</div></div></section>
-<section class="section"><div class="container"><div class="cta" id="cta">
-  <div>
-    <h2>Посчитать похожий проект</h2>
-    <p>Пришлите план — посчитаем комплектом. Порядок цифр назовём в течение рабочего дня, точный расчёт — после исходных данных.</p>
-    <p class="small muted">Или позвоните: <a href="tel:+73832349152" style="color:#fff;font-weight:600">+7 (383) 234-91-52</a> · отвечаем в течение рабочего дня</p>
-  </div>
-  <form class="form" data-lead="quote" action="/spasibo/" method="get" novalidate>
-    <input type="hidden" name="page" value="/obekty/">
-    <label>Имя <input type="text" name="name" required autocomplete="name" placeholder="Как к вам обращаться"></label>
-    <label>Телефон <input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+7"></label>
-    <div class="captcha" aria-hidden="true"></div>
-    <button type="submit" class="btn btn--accent">Отправить</button>
-    <div class="consent">Нажимая кнопку, вы соглашаетесь с <a href="/politika-konfidentsialnosti/">политикой конфиденциальности</a> и даёте <a href="/soglasie-na-obrabotku-dannyh/">согласие на обработку данных</a>.</div>
-  </form>
-</div></div></section>
-</main>
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <a class="logo" href="/"><img src="/img/logo/04_gorizont_gold-white.svg" alt="НЗМО" width="170" height="40"></a>
-        <div class="slogan">Держим планку</div>
-        <p>Новосибирский завод металлообработки. Нашу работу видно по всей России.</p>
-        <p><a href="tel:+73832349152">+7 (383) 234-91-52</a><br><a href="mailto:zakaz@nzmo.ru">zakaz@nzmo.ru</a></p>
-        <p class="small">Офис: г. Новосибирск, ул. Челюскинцев, 30/2, офис 410<br>Производство: г. Новосибирск, ул. Станционная, 38, корпус 138Г</p>
-      </div>
-      <div>
-        <div class="ft-title">Продукция</div>
-        <ul><li><a href="/potolki/">Подвесные потолки</a></li><li><a href="/osveshchenie/">Освещение</a></li><li><a href="/steny-i-kolonny/">Стены и колонны</a></li><li><a href="/fasady/">Фасады</a></li><li><a href="/chistye-pomeshcheniya/">Чистые помещения</a></li><li><a href="/kamen/">Изделия из камня</a></li><li><a href="/mebel/">Мебель</a></li><li><a href="/maf/">МАФ и арт-объекты</a></li><li><a href="/ograzhdeniya/">Ограждения и ворота</a></li><li><a href="/dveri/">Двери</a></li><li><a href="/nestandart/">Нестандарт</a></li></ul>
-      </div>
-      <div>
-        <div class="ft-title">Клиентам</div>
-        <ul><li><a href="/resheniya/">Решения по типу объекта</a></li><li><a href="/obekty/">Объекты</a></li><li><a href="/proektirovshchikam/">Проектировщикам</a></li><li><a href="/partneram/">Дилерам и партнёрам</a></li><li><a href="/stati/">Статьи</a></li><li><a href="/servis/faq/">Вопросы и ответы</a></li></ul>
-      </div>
-      <div>
-        <div class="ft-title">Сервис</div>
-        <ul><li><a href="/servis/kak-my-rabotaem/">Как мы работаем</a></li><li><a href="/servis/raschet-proekta/">Расчёт проекта</a></li><li><a href="/servis/dostavka-i-oplata/">Доставка и оплата</a></li><li><a href="/servis/garantiya-i-kachestvo/">Гарантия и качество</a></li><li><a href="/servis/montazh/">Монтаж</a></li><li><a href="/servis/obraztsy/">Образцы</a></li><li><a href="/dokumenty/">Документы и сертификаты</a></li></ul>
-      </div>
-      <div>
-        <div class="ft-title">Завод</div>
-        <ul><li><a href="/o-zavode/">О заводе</a></li><li><a href="/o-zavode/proizvodstvo/">Производство</a></li><li><a href="/o-zavode/konstruktorskiy-otdel/">Конструкторский отдел</a></li><li><a href="/o-zavode/novosti/">Новости</a></li><li><a href="/o-zavode/vakansii/">Вакансии</a></li><li><a href="/o-zavode/rekvizity/">Реквизиты</a></li><li><a href="/kontakty/">Контакты</a></li></ul>
-      </div>
+</div>  </div>
+</section>
+<section class="section section--white" id="cta">
+  <div class="container split">
+    <div>
+      <div class="kicker"><span class="n"></span><span class="l">Заявка</span></div>
+      <h2 class="t-2">Посчитать похожий проект</h2>
+      <p class="lead" style="margin:14px 0 32px;max-width:520px">Пришлите план или площадь — вернёмся со спецификацией комплекта и сроком. Порядок цифр назовём в течение рабочего дня.</p>
+      <form class="form" data-lead="quote" action="/spasibo/" method="get" novalidate>
+        <input type="hidden" name="page" value="/obekty/">
+        <div class="f2">
+          <label><span>Имя</span><input type="text" name="name" required autocomplete="name" placeholder="Как к вам обращаться"></label>
+          <label><span>Телефон</span><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+7"></label>
+        </div>
+        <div class="captcha" aria-hidden="true"></div>
+        <div class="btn-row" style="margin-top:8px">
+          <button type="submit" class="btn btn--navy">Посчитать проект</button>
+<a class="btn btn--outline" href="/files/nzmo-katalog-2026.pdf">Скачать каталог</a>        </div>
+        <div class="consent">Нажимая кнопку, вы соглашаетесь с <a href="/politika-konfidentsialnosti/">политикой конфиденциальности</a> и даёте <a href="/soglasie-na-obrabotku-dannyh/">согласие на обработку данных</a>.</div>
+      </form>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 ООО «НЗМО» · ИНН 5406813782 · ОГРН 1215400027776</span>
-      <span><a href="/politika-konfidentsialnosti/">Политика конфиденциальности</a> · <a href="/soglasie-na-obrabotku-dannyh/">Согласие на обработку данных</a> · <a href="/ispolzovanie-cookie/">Cookie</a> · <a href="/poisk/">Поиск</a> · <a href="/o-zavode/rekvizity/">Реквизиты</a></span>
+    <div class="aside" style="margin-top:64px">
+      <div class="k">Что будет после заявки</div>
+      <div class="nlist">
+        <div><span class="n">01</span><div class="x"><b>Свяжемся в течение рабочего дня</b> — уточним данные по объекту.</div></div>
+        <div><span class="n">02</span><div class="x">Посчитаем комплект: система, подсистема, подвесы, доборы, расход на 1 м².</div></div>
+        <div><span class="n">03</span><div class="x">Пришлём КП: спецификация по позициям, срок изготовления 20 рабочих дней, условия доставки.</div></div>
+      </div>
+      <div class="small muted" style="margin-top:20px">Удобнее почтой — отправьте план сразу на <a href="mailto:zakaz@nzmo.ru">zakaz@nzmo.ru</a>. Телефон: <a href="tel:+73832349152">+7 (383) 234-91-52</a>.</div>
+    </div>
+  </div>
+</section></main>
+<footer class="footer">
+  <span class="pattern-perf" aria-hidden="true"></span>
+  <div class="footer__top">
+    <div class="container">
+      <div><div class="k">Телефон</div><a class="footer__phone" href="tel:+73832349152">+7 (383) 234-91-52</a></div>
+      <div><div class="k">Почта</div><a class="footer__mail" href="mailto:zakaz@nzmo.ru">zakaz@nzmo.ru</a></div>
+      <div class="btn-row">
+        <a class="btn btn--ochre btn--md" href="/servis/raschet-proekta/">Посчитать проект</a>
+<a class="btn btn--outline btn--md" href="/files/nzmo-katalog-2026.pdf">Скачать каталог (PDF)</a>      </div>
+    </div>
+  </div>
+  <div class="container footer__grid">
+    <div><div class="k">Продукция</div><ul><li><a href="/potolki/">Подвесные потолки</a></li><li><a href="/osveshchenie/">Освещение</a></li><li><a href="/steny-i-kolonny/">Стены и колонны</a></li><li><a href="/fasady/">Фасады</a></li><li><a href="/chistye-pomeshcheniya/">Чистые помещения</a></li><li><a href="/kamen/">Изделия из камня</a></li><li><a href="/mebel/">Мебель</a></li><li><a href="/maf/">МАФ и арт-объекты</a></li><li><a href="/ograzhdeniya/">Ограждения и ворота</a></li><li><a href="/dveri/">Двери</a></li><li><a href="/nestandart/">Нестандарт</a></li></ul></div>
+    <div><div class="k">Клиентам</div><ul><li><a href="/resheniya/">Решения по типу объекта</a></li><li><a href="/obekty/">Объекты</a></li><li><a href="/proektirovshchikam/">Проектировщикам</a></li><li><a href="/partneram/">Дилерам и партнёрам</a></li><li><a href="/stati/">Статьи</a></li><li><a href="/servis/faq/">Вопросы и ответы</a></li></ul></div>
+    <div><div class="k">Сервис</div><ul><li><a href="/servis/kak-my-rabotaem/">Как мы работаем</a></li><li><a href="/servis/raschet-proekta/">Расчёт проекта</a></li><li><a href="/servis/dostavka-i-oplata/">Доставка и оплата</a></li><li><a href="/servis/garantiya-i-kachestvo/">Гарантия и качество</a></li><li><a href="/servis/montazh/">Монтаж</a></li><li><a href="/servis/obraztsy/">Образцы</a></li><li><a href="/dokumenty/">Документы и сертификаты</a></li></ul></div>
+    <div><div class="k">Завод</div><ul><li><a href="/o-zavode/">О заводе</a></li><li><a href="/o-zavode/proizvodstvo/">Производство</a></li><li><a href="/o-zavode/konstruktorskiy-otdel/">Конструкторский отдел</a></li><li><a href="/o-zavode/novosti/">Новости</a></li><li><a href="/o-zavode/vakansii/">Вакансии</a></li><li><a href="/o-zavode/rekvizity/">Реквизиты</a></li><li><a href="/kontakty/">Контакты</a></li></ul></div>
+    <div class="footer__addr">
+      <div class="k" style="margin:0">Адреса</div>
+      <div>Завод — г. Новосибирск, ул. Станционная, 38, корпус 138Г</div>
+      <div>Офис — г. Новосибирск, ул. Челюскинцев, 30/2, офис 410</div>
+      <div>ООО «НЗМО» · ИНН 5406813782 · ОГРН 1215400027776</div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <div class="footer__legal"><span>© ООО «НЗМО», 2026</span><a href="/politika-konfidentsialnosti/">Политика конфиденциальности</a><a href="/soglasie-na-obrabotku-dannyh/">Согласие на обработку данных</a><a href="/ispolzovanie-cookie/">Cookies</a><a href="/poisk/">Поиск</a></div>
+      <div class="footer__slogan"><img src="/img/logo/logo-mark-white.svg" alt="" width="31" height="20"><span>Держим планку</span></div>
     </div>
   </div>
 </footer><script src="/js/main.js" defer></script>

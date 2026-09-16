@@ -6,26 +6,20 @@
 <title>Заглушки и чек-лист перед релизом — служебная страница — НЗМО</title>
 <meta name="description" content="Служебная страница MVP: реестр заглушек по страницам и чек-лист того, что нужно уточнить и подключить перед релизом сайта.">
 <meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://nzmo-home.vercel.app/_todo/">
-<link rel="icon" href="/img/logo/01_znak_solid_gold.svg" type="image/svg+xml">
+<link rel="icon" href="/img/logo/logo-mark-ochre.svg" type="image/svg+xml">
 <meta property="og:title" content="Заглушки и чек-лист перед релизом — служебная страница">
 <meta property="og:description" content="Служебная страница MVP: реестр заглушек по страницам и чек-лист того, что нужно уточнить и подключить перед релизом сайта.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nzmo-home.vercel.app/_todo/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="/css/template_styles.css">
 <link rel="stylesheet" href="/css/styles.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"\u0413\u043b\u0430\u0432\u043d\u0430\u044f","item":"https://nzmo-home.vercel.app/"}]}</script>
 </head>
 <body>
-<div class="topbar">
-  <div class="container">
-    <span>г. Новосибирск, ул. Челюскинцев, 30/2, офис 410 · Пн–Пт 9:00–18:00 (Новосибирск, UTC+7)</span>
-    <span><a href="tel:+73832349152">+7 (383) 234-91-52</a> · <a href="mailto:zakaz@nzmo.ru">zakaz@nzmo.ru</a></span>
-  </div>
-</div>
 <header class="header">
-  <div class="container">
-    <a class="logo" href="/" aria-label="НЗМО — на главную"><img src="/img/logo/04_gorizont_gold-navy.svg" alt="НЗМО" width="160" height="38"></a>
-    <button class="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="header__in">
+    <a class="lockup" href="/" aria-label="НЗМО — на главную"><img src="/img/logo/logo-mark-ochre.svg" alt="" width="34" height="22"><span><span class="w">НЗМО</span><span class="d">Новосибирский завод<br>металлообработки</span></span></a>
     <ul class="nav">      <li class="has-mega">
         <button aria-expanded="false" aria-haspopup="true">Продукция</button>
         <div class="mega">
@@ -62,7 +56,7 @@
           <div>
             <div class="mega-title"><a href="/nestandart/">Нестандарт и спецзаказ — изделия из металла по чертежу</a></div>
           </div>
-          <div><div class="mega-title"><a href="/produktsiya/">Вся продукция →</a></div><div class="mega-title"><a href="/potolki/sravnenie/">Сравнить потолочные системы</a></div><div class="mega-title"><a href="/dokumenty/katalogi/">Скачать каталог</a></div></div>
+          <div class="col--links"><div class="mega-title"><a href="/produktsiya/">Вся продукция →</a></div><ul><li><a href="/potolki/sravnenie/">Сравнить потолочные системы</a></li><li><a href="/resheniya/">Решения по типу объекта</a></li><li><a href="/dokumenty/katalogi/">Скачать каталог</a></li><li><a href="/proektirovshchikam/ral-i-perforatsiya/">RAL, текстуры, перфорация</a></li></ul></div>
         </div>
       </li>
       <li><a href="/resheniya/">Решения</a></li>
@@ -73,63 +67,62 @@
       <li><a href="/o-zavode/">О заводе</a></li>
       <li><a href="/kontakty/">Контакты</a></li>
     </ul>
-    <div class="header-actions">
-      <a class="header-phone" href="tel:+73832349152">+7 (383) 234-91-52</a>
-      <a class="btn btn--accent btn--sm" href="/servis/raschet-proekta/"><span class="cta-full">Посчитать проект</span><span class="cta-short">Расчёт</span></a>
+    <a class="header__phone" href="tel:+73832349152">+7 (383) 234-91-52</a>
+    <a class="btn btn--navy btn--xs header__cta" href="/servis/raschet-proekta/"><span class="cta-full">Посчитать проект</span><span class="cta-short">Расчёт</span></a>
+    <button class="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header><main id="work-area"><section class="page-head"><div class="container"><nav class="crumbs" aria-label="Вы здесь"><ol style="padding:0 0 28px"><li><span>Главная</span></li></ol></nav>  <div class="kicker kicker--ochre" style="margin-bottom:0"><span class="l">Служебная страница · noindex</span></div>
+  <h1 class="t-1" style="margin-top:18px">Заглушки и что уточнить перед релизом</h1>
+  <p class="lead">Страниц собрано: 155. Заглушек «<mark class="todo" title="Заглушка: уточнить у компании">___</mark>»: 46 на 30 страницах.</p>
+</div></section>
+<section class="section section--white"><div class="container split">
+  <div class="content">
+    <h2>Где стоят заглушки</h2>
+    <ul><li><a href="/chistye-pomeshcheniya/gml-paneli/">/chistye-pomeshcheniya/gml-paneli/</a> — 1</li><li><a href="/dokumenty/instruktsii/">/dokumenty/instruktsii/</a> — 1</li><li><a href="/dokumenty/katalogi/">/dokumenty/katalogi/</a> — 1</li><li><a href="/dokumenty/sertifikaty/">/dokumenty/sertifikaty/</a> — 11</li><li><a href="/dokumenty/tipovye-formy/">/dokumenty/tipovye-formy/</a> — 1</li><li><a href="/dveri/protivopozharnye/">/dveri/protivopozharnye/</a> — 1</li><li><a href="/dveri/tehnicheskie/">/dveri/tehnicheskie/</a> — 1</li><li><a href="/ispolzovanie-cookie/">/ispolzovanie-cookie/</a> — 1</li><li><a href="/kontakty/">/kontakty/</a> — 2</li><li><a href="/o-zavode/komanda/">/o-zavode/komanda/</a> — 1</li><li><a href="/o-zavode/rekvizity/">/o-zavode/rekvizity/</a> — 1</li><li><a href="/o-zavode/vakansii/">/o-zavode/vakansii/</a> — 1</li><li><a href="/ograzhdeniya/sektsionnye-vorota/">/ograzhdeniya/sektsionnye-vorota/</a> — 2</li><li><a href="/partneram/dileram/">/partneram/dileram/</a> — 1</li><li><a href="/politika-konfidentsialnosti/">/politika-konfidentsialnosti/</a> — 1</li><li><a href="/potolki/kassetnye/clip-in/">/potolki/kassetnye/clip-in/</a> — 1</li><li><a href="/proektirovshchikam/bim-cad/">/proektirovshchikam/bim-cad/</a> — 1</li><li><a href="/proektirovshchikam/uzly-i-albomy/">/proektirovshchikam/uzly-i-albomy/</a> — 5</li><li><a href="/servis/garantiya-i-kachestvo/">/servis/garantiya-i-kachestvo/</a> — 1</li><li><a href="/servis/kak-my-rabotaem/">/servis/kak-my-rabotaem/</a> — 1</li><li><a href="/servis/montazh/">/servis/montazh/</a> — 1</li><li><a href="/servis/obraztsy/">/servis/obraztsy/</a> — 1</li><li><a href="/soglasie-na-obrabotku-dannyh/">/soglasie-na-obrabotku-dannyh/</a> — 1</li><li><a href="/stati/chto-nuzhno-chtoby-poschitat-potolok/">/stati/chto-nuzhno-chtoby-poschitat-potolok/</a> — 1</li><li><a href="/stati/iz-chego-skladyvaetsya-stoimost-reechnogo-potolka/">/stati/iz-chego-skladyvaetsya-stoimost-reechnogo-potolka/</a> — 1</li><li><a href="/stati/kak-chitat-pozharnye-sertifikaty/">/stati/kak-chitat-pozharnye-sertifikaty/</a> — 1</li><li><a href="/stati/kakoy-potolok-v-ofis/">/stati/kakoy-potolok-v-ofis/</a> — 1</li><li><a href="/stati/kuboobraznyy-reechnyy-potolok-gid/">/stati/kuboobraznyy-reechnyy-potolok-gid/</a> — 1</li><li><a href="/stati/podvesnoy-ili-natyazhnoy/">/stati/podvesnoy-ili-natyazhnoy/</a> — 1</li><li><a href="/stati/potolki-dlya-meditsiny/">/stati/potolki-dlya-meditsiny/</a> — 1</li></ul>
+  </div>
+  <div class="aside"><div class="k">Чек-лист перед релизом</div>
+    <div class="nlist">
+      <div><span class="n">01</span><div class="x">Сроки: ответ на запрос, КП, гарантия — <code>site.yaml → terms</code>.</div></div>
+      <div><span class="n">02</span><div class="x">Реквизиты банка, единый адрес и телефон — <code>site.yaml → legal, contacts</code>.</div></div>
+      <div><span class="n">03</span><div class="x">Сканы сертификатов, класс по 00622/24 сверить по скану, ISO 9001 истёк 18.07.2025.</div></div>
+      <div><span class="n">04</span><div class="x">Изделия толще 5 мм (фасадные кассеты, МАФ) действующим ПБ-сертификатом не покрыты.</div></div>
+      <div><span class="n">05</span><div class="x">Фото: кейсы без кадра, съёмка цеха и команды, оригиналы для страниц фасадов.</div></div>
+      <div><span class="n">06</span><div class="x">Юр-тексты: политика, согласие, cookie — согласовать с юристом.</div></div>
+      <div><span class="n">07</span><div class="x">Ворота, двери, ограждения, кронштейны: спецификации и фото.</div></div>
+      <div><span class="n">08</span><div class="x">Формы → Битрикс24, капча, события Метрики.</div></div>
+      <div><span class="n">09</span><div class="x">Карты: Яндекс.Бизнес и 2ГИС, виджет на контактах.</div></div>
+      <div><span class="n">10</span><div class="x">SEO: 301 с Tilda и доменов-дублей, Search Console и Вебмастер после переезда.</div></div>
     </div>
   </div>
-</header><main id="work-area"><nav class="crumbs" aria-label="Вы здесь"><div class="container"><ol>
-<li><span aria-current="page">Главная</span></li></ol></div></nav>
-<section class="hero"><div class="container"><div class="content content--wide">
-  <h1>Заглушки и что уточнить перед релизом</h1>
-  <p class="lead">Служебная страница MVP (noindex). Страниц собрано: 155. Заглушек «<mark class="todo" title="Заглушка: уточнить у компании">___</mark>»: 46 на 30 страницах.</p>
-  <h2>Где стоят заглушки</h2>
-  <ul class="todo-list"><li><a href="/chistye-pomeshcheniya/gml-paneli/">/chistye-pomeshcheniya/gml-paneli/</a> — 1</li><li><a href="/dokumenty/instruktsii/">/dokumenty/instruktsii/</a> — 1</li><li><a href="/dokumenty/katalogi/">/dokumenty/katalogi/</a> — 1</li><li><a href="/dokumenty/sertifikaty/">/dokumenty/sertifikaty/</a> — 11</li><li><a href="/dokumenty/tipovye-formy/">/dokumenty/tipovye-formy/</a> — 1</li><li><a href="/dveri/protivopozharnye/">/dveri/protivopozharnye/</a> — 1</li><li><a href="/dveri/tehnicheskie/">/dveri/tehnicheskie/</a> — 1</li><li><a href="/ispolzovanie-cookie/">/ispolzovanie-cookie/</a> — 1</li><li><a href="/kontakty/">/kontakty/</a> — 2</li><li><a href="/o-zavode/komanda/">/o-zavode/komanda/</a> — 1</li><li><a href="/o-zavode/rekvizity/">/o-zavode/rekvizity/</a> — 1</li><li><a href="/o-zavode/vakansii/">/o-zavode/vakansii/</a> — 1</li><li><a href="/ograzhdeniya/sektsionnye-vorota/">/ograzhdeniya/sektsionnye-vorota/</a> — 2</li><li><a href="/partneram/dileram/">/partneram/dileram/</a> — 1</li><li><a href="/politika-konfidentsialnosti/">/politika-konfidentsialnosti/</a> — 1</li><li><a href="/potolki/kassetnye/clip-in/">/potolki/kassetnye/clip-in/</a> — 1</li><li><a href="/proektirovshchikam/bim-cad/">/proektirovshchikam/bim-cad/</a> — 1</li><li><a href="/proektirovshchikam/uzly-i-albomy/">/proektirovshchikam/uzly-i-albomy/</a> — 5</li><li><a href="/servis/garantiya-i-kachestvo/">/servis/garantiya-i-kachestvo/</a> — 1</li><li><a href="/servis/kak-my-rabotaem/">/servis/kak-my-rabotaem/</a> — 1</li><li><a href="/servis/montazh/">/servis/montazh/</a> — 1</li><li><a href="/servis/obraztsy/">/servis/obraztsy/</a> — 1</li><li><a href="/soglasie-na-obrabotku-dannyh/">/soglasie-na-obrabotku-dannyh/</a> — 1</li><li><a href="/stati/chto-nuzhno-chtoby-poschitat-potolok/">/stati/chto-nuzhno-chtoby-poschitat-potolok/</a> — 1</li><li><a href="/stati/iz-chego-skladyvaetsya-stoimost-reechnogo-potolka/">/stati/iz-chego-skladyvaetsya-stoimost-reechnogo-potolka/</a> — 1</li><li><a href="/stati/kak-chitat-pozharnye-sertifikaty/">/stati/kak-chitat-pozharnye-sertifikaty/</a> — 1</li><li><a href="/stati/kakoy-potolok-v-ofis/">/stati/kakoy-potolok-v-ofis/</a> — 1</li><li><a href="/stati/kuboobraznyy-reechnyy-potolok-gid/">/stati/kuboobraznyy-reechnyy-potolok-gid/</a> — 1</li><li><a href="/stati/podvesnoy-ili-natyazhnoy/">/stati/podvesnoy-ili-natyazhnoy/</a> — 1</li><li><a href="/stati/potolki-dlya-meditsiny/">/stati/potolki-dlya-meditsiny/</a> — 1</li></ul>
-  <h2>Чек-лист перед релизом</h2>
-  <ol>
-    <li>Сроки: ответ на запрос, КП, гарантия на потолочные системы — заполнить в <code>content/site.yaml → terms</code>.</li>
-    <li>Реквизиты банка, единый адрес и телефон — <code>site.yaml → legal, contacts</code>.</li>
-    <li>Сертификаты: сканы всех документов, класс горючести по 00622/24 сверить по скану, ISO 9001 (истёк 18.07.2025) — обновить или убрать упоминания.</li>
-    <li>Изделия толще 5 мм (фасадные кассеты, МАФ) действующим ПБ-сертификатом не покрыты — проверить формулировки.</li>
-    <li>Фото: кейсы без кадра (плашка «фото добавим»), съёмка цеха и команды, оригиналы для страниц фасадов (сейчас визуализации).</li>
-    <li>Юр-тексты: политика, согласие, cookie — согласовать с юристом.</li>
-    <li>Ворота, двери, ограждения, кронштейны: спецификации и фото — сейчас минимум фактов.</li>
-    <li>Формы: подключить к Битрикс24 (CRM-форма или веб-форма Битрикса), капча, события Метрики.</li>
-    <li>Карты: ссылки на Яндекс.Бизнес и 2ГИС, виджет карты на контактах.</li>
-    <li>SEO: 301-карта со старых URL Tilda и доменов air-wood.ru / nzmo-kg.ru / nzmo-nk.ru; Search Console и Вебмастер после переезда.</li>
-  </ol>
-</div></div></section>
+</div></section>
 </main>
 <footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <a class="logo" href="/"><img src="/img/logo/04_gorizont_gold-white.svg" alt="НЗМО" width="170" height="40"></a>
-        <div class="slogan">Держим планку</div>
-        <p>Новосибирский завод металлообработки. Нашу работу видно по всей России.</p>
-        <p><a href="tel:+73832349152">+7 (383) 234-91-52</a><br><a href="mailto:zakaz@nzmo.ru">zakaz@nzmo.ru</a></p>
-        <p class="small">Офис: г. Новосибирск, ул. Челюскинцев, 30/2, офис 410<br>Производство: г. Новосибирск, ул. Станционная, 38, корпус 138Г</p>
-      </div>
-      <div>
-        <div class="ft-title">Продукция</div>
-        <ul><li><a href="/potolki/">Подвесные потолки</a></li><li><a href="/osveshchenie/">Освещение</a></li><li><a href="/steny-i-kolonny/">Стены и колонны</a></li><li><a href="/fasady/">Фасады</a></li><li><a href="/chistye-pomeshcheniya/">Чистые помещения</a></li><li><a href="/kamen/">Изделия из камня</a></li><li><a href="/mebel/">Мебель</a></li><li><a href="/maf/">МАФ и арт-объекты</a></li><li><a href="/ograzhdeniya/">Ограждения и ворота</a></li><li><a href="/dveri/">Двери</a></li><li><a href="/nestandart/">Нестандарт</a></li></ul>
-      </div>
-      <div>
-        <div class="ft-title">Клиентам</div>
-        <ul><li><a href="/resheniya/">Решения по типу объекта</a></li><li><a href="/obekty/">Объекты</a></li><li><a href="/proektirovshchikam/">Проектировщикам</a></li><li><a href="/partneram/">Дилерам и партнёрам</a></li><li><a href="/stati/">Статьи</a></li><li><a href="/servis/faq/">Вопросы и ответы</a></li></ul>
-      </div>
-      <div>
-        <div class="ft-title">Сервис</div>
-        <ul><li><a href="/servis/kak-my-rabotaem/">Как мы работаем</a></li><li><a href="/servis/raschet-proekta/">Расчёт проекта</a></li><li><a href="/servis/dostavka-i-oplata/">Доставка и оплата</a></li><li><a href="/servis/garantiya-i-kachestvo/">Гарантия и качество</a></li><li><a href="/servis/montazh/">Монтаж</a></li><li><a href="/servis/obraztsy/">Образцы</a></li><li><a href="/dokumenty/">Документы и сертификаты</a></li></ul>
-      </div>
-      <div>
-        <div class="ft-title">Завод</div>
-        <ul><li><a href="/o-zavode/">О заводе</a></li><li><a href="/o-zavode/proizvodstvo/">Производство</a></li><li><a href="/o-zavode/konstruktorskiy-otdel/">Конструкторский отдел</a></li><li><a href="/o-zavode/novosti/">Новости</a></li><li><a href="/o-zavode/vakansii/">Вакансии</a></li><li><a href="/o-zavode/rekvizity/">Реквизиты</a></li><li><a href="/kontakty/">Контакты</a></li></ul>
-      </div>
+  <span class="pattern-perf" aria-hidden="true"></span>
+  <div class="footer__top">
+    <div class="container">
+      <div><div class="k">Телефон</div><a class="footer__phone" href="tel:+73832349152">+7 (383) 234-91-52</a></div>
+      <div><div class="k">Почта</div><a class="footer__mail" href="mailto:zakaz@nzmo.ru">zakaz@nzmo.ru</a></div>
+      <div class="btn-row">
+        <a class="btn btn--ochre btn--md" href="/servis/raschet-proekta/">Посчитать проект</a>
+<a class="btn btn--outline btn--md" href="/files/nzmo-katalog-2026.pdf">Скачать каталог (PDF)</a>      </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 ООО «НЗМО» · ИНН 5406813782 · ОГРН 1215400027776</span>
-      <span><a href="/politika-konfidentsialnosti/">Политика конфиденциальности</a> · <a href="/soglasie-na-obrabotku-dannyh/">Согласие на обработку данных</a> · <a href="/ispolzovanie-cookie/">Cookie</a> · <a href="/poisk/">Поиск</a> · <a href="/o-zavode/rekvizity/">Реквизиты</a></span>
+  </div>
+  <div class="container footer__grid">
+    <div><div class="k">Продукция</div><ul><li><a href="/potolki/">Подвесные потолки</a></li><li><a href="/osveshchenie/">Освещение</a></li><li><a href="/steny-i-kolonny/">Стены и колонны</a></li><li><a href="/fasady/">Фасады</a></li><li><a href="/chistye-pomeshcheniya/">Чистые помещения</a></li><li><a href="/kamen/">Изделия из камня</a></li><li><a href="/mebel/">Мебель</a></li><li><a href="/maf/">МАФ и арт-объекты</a></li><li><a href="/ograzhdeniya/">Ограждения и ворота</a></li><li><a href="/dveri/">Двери</a></li><li><a href="/nestandart/">Нестандарт</a></li></ul></div>
+    <div><div class="k">Клиентам</div><ul><li><a href="/resheniya/">Решения по типу объекта</a></li><li><a href="/obekty/">Объекты</a></li><li><a href="/proektirovshchikam/">Проектировщикам</a></li><li><a href="/partneram/">Дилерам и партнёрам</a></li><li><a href="/stati/">Статьи</a></li><li><a href="/servis/faq/">Вопросы и ответы</a></li></ul></div>
+    <div><div class="k">Сервис</div><ul><li><a href="/servis/kak-my-rabotaem/">Как мы работаем</a></li><li><a href="/servis/raschet-proekta/">Расчёт проекта</a></li><li><a href="/servis/dostavka-i-oplata/">Доставка и оплата</a></li><li><a href="/servis/garantiya-i-kachestvo/">Гарантия и качество</a></li><li><a href="/servis/montazh/">Монтаж</a></li><li><a href="/servis/obraztsy/">Образцы</a></li><li><a href="/dokumenty/">Документы и сертификаты</a></li></ul></div>
+    <div><div class="k">Завод</div><ul><li><a href="/o-zavode/">О заводе</a></li><li><a href="/o-zavode/proizvodstvo/">Производство</a></li><li><a href="/o-zavode/konstruktorskiy-otdel/">Конструкторский отдел</a></li><li><a href="/o-zavode/novosti/">Новости</a></li><li><a href="/o-zavode/vakansii/">Вакансии</a></li><li><a href="/o-zavode/rekvizity/">Реквизиты</a></li><li><a href="/kontakty/">Контакты</a></li></ul></div>
+    <div class="footer__addr">
+      <div class="k" style="margin:0">Адреса</div>
+      <div>Завод — г. Новосибирск, ул. Станционная, 38, корпус 138Г</div>
+      <div>Офис — г. Новосибирск, ул. Челюскинцев, 30/2, офис 410</div>
+      <div>ООО «НЗМО» · ИНН 5406813782 · ОГРН 1215400027776</div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <div class="footer__legal"><span>© ООО «НЗМО», 2026</span><a href="/politika-konfidentsialnosti/">Политика конфиденциальности</a><a href="/soglasie-na-obrabotku-dannyh/">Согласие на обработку данных</a><a href="/ispolzovanie-cookie/">Cookies</a><a href="/poisk/">Поиск</a></div>
+      <div class="footer__slogan"><img src="/img/logo/logo-mark-white.svg" alt="" width="31" height="20"><span>Держим планку</span></div>
     </div>
   </div>
 </footer><script src="/js/main.js" defer></script>

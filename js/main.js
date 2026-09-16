@@ -74,6 +74,26 @@
     var qs = new URLSearchParams(location.search).get("q"); if (qs) { input.value = qs; }
   }
 
+
+  // Сцена объектов на главной: переключение слайдов, лента, стрелки
+  var stage = document.querySelector("[data-stage]");
+  if (stage) {
+    var slides = stage.querySelectorAll("[data-slide]"), thumbs = document.querySelectorAll("[data-stage-thumb]"), cur = 0;
+    var tEl = stage.querySelector("[data-stage-title]"), fEl = stage.querySelector("[data-stage-family]"), sEl = stage.querySelector("[data-stage-spec]"), cEl = stage.querySelector("[data-stage-count]");
+    function pad(n) { return (n < 10 ? "0" : "") + n; }
+    function go(i) {
+      cur = (i + slides.length) % slides.length;
+      slides.forEach(function (im, k) { im.hidden = k !== cur; if (k === cur) im.removeAttribute("loading"); });
+      thumbs.forEach(function (t, k) { t.classList.toggle("is-active", k === cur); });
+      var t = thumbs[cur];
+      if (t) { tEl.textContent = t.dataset.title; tEl.href = t.getAttribute("href"); fEl.textContent = t.dataset.family; sEl.textContent = t.dataset.spec; }
+      cEl.textContent = pad(cur + 1) + " / " + pad(slides.length);
+    }
+    stage.querySelector("[data-stage-prev]").addEventListener("click", function () { go(cur - 1); });
+    stage.querySelector("[data-stage-next]").addEventListener("click", function () { go(cur + 1); });
+    thumbs.forEach(function (t, k) { t.addEventListener("click", function (e) { e.preventDefault(); go(k); }); });
+  }
+
   // Спасибо: показать, откуда пришла заявка
   var thanks = document.querySelector("[data-thanks]");
   if (thanks) {
