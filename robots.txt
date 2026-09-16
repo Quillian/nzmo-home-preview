@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /poisk/
+Disallow: /spasibo/
+Disallow: /_todo/
+Sitemap: https://nzmo-home.vercel.app/sitemap.xml
