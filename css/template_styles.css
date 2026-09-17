@@ -246,11 +246,12 @@ mark.todo{background:var(--ochre-100);color:var(--ochre-800);border-bottom:2px d
 .card--link{padding:24px;gap:10px}
 .card--link .card__title{margin-top:0}
 .ph{display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-family:var(--font-tech);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);background:var(--navy-900) url("/img/patterns/zigzag-outline-tile.svg") center/162px 92px;background-blend-mode:soft-light}
-.dcard{display:flex;flex-direction:column;gap:12px;padding:22px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);color:var(--white);transition:background var(--transition),border-color var(--transition)}
-.dcard:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.28);color:var(--white)}
-.dcard .t{font-size:18px;font-weight:600;line-height:1.3;color:var(--white)}
-.dcard p{font-size:14px;line-height:1.5;color:var(--on-deep-muted)}
-.dcard .s{margin-top:auto;padding-top:12px;border-top:1px solid rgba(255,255,255,.14);font-family:var(--font-tech);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--on-deep-faint)}
+.dcards{gap:64px 48px}
+.dcard{display:flex;flex-direction:column;gap:14px;color:var(--white)}
+.dcard__icon{width:40px;height:40px;color:var(--ochre-500);margin-bottom:8px;transition:transform var(--transition)}
+.dcard:hover{color:var(--white)}.dcard:hover .t{color:var(--ochre-400)}.dcard:hover .dcard__icon{transform:translateY(-2px)}
+.dcard .t{font-family:var(--font-display);font-size:20px;font-weight:500;letter-spacing:-.01em;line-height:1.25;color:var(--white);transition:color var(--transition)}
+.dcard p{font-size:14px;line-height:1.55;color:var(--on-deep-muted);max-width:300px}
 .tag{display:inline-flex;align-items:center;gap:7px;height:26px;padding:0 10px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);border-radius:var(--radius);font-family:var(--font-tech);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--white);align-self:flex-start}
 .tag::before{content:"";width:5px;height:5px;background:var(--ochre-500)}
 
