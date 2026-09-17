@@ -404,7 +404,7 @@ table.t a:hover{color:var(--ochre-700)}
 .quote{font-family:var(--font-display);font-size:24px;font-weight:400;line-height:1.4;letter-spacing:-.01em;color:var(--text-strong)}
 .quote footer{margin-top:16px;font-family:var(--font-tech);font-size:13px;letter-spacing:.06em;color:var(--text-muted)}
 .bleed{display:block;width:100%;max-height:min(72vh,780px);object-fit:cover}
-.bleed--fit{width:auto;max-width:100%;max-height:min(64vh,700px);object-fit:contain;margin:0 auto;padding:0 var(--gutter);box-sizing:border-box}
+.bleed--fit{width:auto;max-width:calc(100% - 2 * var(--gutter));max-height:min(64vh,700px);object-fit:contain;margin:0 auto;border:1px solid rgba(255,255,255,.14);border-radius:var(--radius)}
 .map{aspect-ratio:16/9;background:var(--steel-100);border:1px solid var(--border-hair);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-family:var(--font-tech);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted)}
 
 /* ---------- подвал (footer.php) */
