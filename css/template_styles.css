@@ -194,12 +194,15 @@ mark.todo{background:var(--ochre-100);color:var(--ochre-800);border-bottom:2px d
 /* ---------- сцена объектов и лента: блок целиком в высоту окна */
 .objects{min-height:calc(100vh - var(--header-h));display:flex;flex-direction:column;padding:40px 0 28px}
 .objects .section-head{margin-bottom:24px}
-.objects .stage{flex:1 1 auto;height:auto;min-height:360px}
+.objects .stage{flex:1 1 auto;height:auto;min-height:clamp(420px,60vh,720px)}
 .objects .filmstrip{margin-top:16px}
-@media (max-width:800px){.objects{min-height:0;padding:56px 0}.objects .stage{height:60vh;min-height:360px}}
+@media (max-width:800px){.objects{min-height:0;padding:56px 0}.objects .stage{height:60vh;min-height:360px}.stage .stage__img{object-fit:cover}}
 .stage{position:relative;height:calc(100vh - var(--header-h));min-height:640px;overflow:hidden;background:var(--navy-950)}
+.stage__slide{position:absolute;inset:0;margin:0}
+.stage__slide[hidden]{display:none}
 .stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.stage img[hidden]{display:none}
+.stage .stage__bg{filter:blur(40px) brightness(.55) saturate(.9);transform:scale(1.15)}
+.stage .stage__img{object-fit:contain}
 .stage__scrim{position:absolute;inset:0;background:var(--scrim-bottom)}
 .stage__bar{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:flex-end;justify-content:space-between;gap:48px;padding:clamp(24px,3vw,56px) var(--gutter)}
 .stage__text{display:flex;flex-direction:column;gap:14px;max-width:720px;color:var(--white)}

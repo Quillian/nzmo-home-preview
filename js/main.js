@@ -83,7 +83,7 @@
     function pad(n) { return (n < 10 ? "0" : "") + n; }
     function go(i) {
       cur = (i + slides.length) % slides.length;
-      slides.forEach(function (im, k) { im.hidden = k !== cur; if (k === cur) im.removeAttribute("loading"); });
+      slides.forEach(function (sl, k) { sl.hidden = k !== cur; if (k === cur) sl.querySelectorAll("img").forEach(function (im) { im.removeAttribute("loading"); }); });
       thumbs.forEach(function (t, k) { t.classList.toggle("is-active", k === cur); });
       var t = thumbs[cur];
       if (t) { tEl.textContent = t.dataset.title; tEl.href = t.getAttribute("href"); fEl.textContent = t.dataset.family; sEl.textContent = t.dataset.spec; }
