@@ -166,8 +166,8 @@ mark.todo{background:var(--ochre-100);color:var(--ochre-800);border-bottom:2px d
 .crumbs--deep ol{color:var(--on-deep-faint)}.crumbs--deep a{color:var(--on-deep-muted)}
 
 /* ---------- первый экран */
-.cover{position:relative;min-height:660px;display:flex;align-items:flex-end;background:var(--navy-950);overflow:hidden;color:var(--white)}
-.cover--page{min-height:520px}
+.cover{position:relative;min-height:calc(100vh - var(--header-h));display:flex;align-items:flex-end;background:var(--navy-950);overflow:hidden;color:var(--white)}
+.cover--page{min-height:calc(82vh - var(--header-h))}
 .cover--short{min-height:420px}
 .cover__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.86}
 .cover__scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,20,32,.94) 0%,rgba(11,20,32,.6) 48%,rgba(11,20,32,.26) 100%)}
@@ -188,7 +188,7 @@ mark.todo{background:var(--ochre-100);color:var(--ochre-800);border-bottom:2px d
 .page-head--white{background:var(--white)}
 
 /* ---------- сцена объектов и лента */
-.stage{position:relative;height:640px;overflow:hidden;background:var(--navy-950)}
+.stage{position:relative;height:calc(100vh - var(--header-h));min-height:640px;overflow:hidden;background:var(--navy-950)}
 .stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .stage img[hidden]{display:none}
 .stage__scrim{position:absolute;inset:0;background:var(--scrim-bottom)}
@@ -429,14 +429,14 @@ table.t a:hover{color:var(--ochre-700)}
   :root{--gutter:20px}
   .section{padding:56px 0}
   .t-display{font-size:38px}.t-1{font-size:32px}.t-2{font-size:27px}.t-3{font-size:23px}
-  .cover{min-height:520px}.cover__in{padding-top:40px;padding-bottom:32px}.cover .lead{font-size:17px}
+  .cover,.cover--page{min-height:560px}.cover__in{padding-top:40px;padding-bottom:32px}.cover .lead{font-size:17px}
   .g2,.g3,.g4,.g5,.g6,.photos,.photos--2,.figs,.specs,.f2{grid-template-columns:1fr}
   .photos .photo:first-child{grid-column:auto}.photos .photo:first-child img{aspect-ratio:3/2}
   .figs .fig--wide{grid-column:auto}
   .steps{grid-template-columns:1fr}
   .steps>li{border-right:0;padding-left:0!important;padding-right:0}
   .steps>li+li{border-top:1px solid var(--border-hair)}
-  .stage{height:440px}.stage__bar{padding:24px 20px;flex-direction:column;align-items:flex-start;gap:16px}.stage__title{font-size:24px}
+  .stage{height:70vh;min-height:440px}.stage__bar{padding:24px 20px;flex-direction:column;align-items:flex-start;gap:16px}.stage__title{font-size:24px}
   .filmstrip{grid-template-columns:repeat(2,minmax(0,1fr))}
   .patterns{grid-template-columns:repeat(2,minmax(0,1fr))}
   .section-head{flex-direction:column;align-items:flex-start;gap:16px}
