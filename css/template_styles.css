@@ -403,6 +403,23 @@ table.t a:hover{color:var(--ochre-700)}
 .results b{display:block;margin-top:4px;font-size:17px;color:var(--text-strong)}
 .quote{font-family:var(--font-display);font-size:24px;font-weight:400;line-height:1.4;letter-spacing:-.01em;color:var(--text-strong)}
 .quote footer{margin-top:16px;font-family:var(--font-tech);font-size:13px;letter-spacing:.06em;color:var(--text-muted)}
+.geo-wrap{margin:8px calc(-1 * var(--gutter)) 0}
+.geo{display:block;width:100%;height:auto;max-height:min(70vh,760px)}
+.geo-other{fill:rgba(255,255,255,.035);stroke:var(--navy-800);stroke-width:1}
+.geo-russia{fill:var(--navy-700);stroke:var(--navy-600);stroke-width:1}
+.geo-dot{fill:var(--ochre-500);fill-opacity:.88;stroke:var(--navy-800);stroke-width:1.5}
+.geo-home{fill:var(--white);stroke:var(--ochre-500);stroke-width:3}.geo-home-halo{fill:var(--ochre-500);fill-opacity:.18}
+.geo-label{fill:rgba(255,255,255,.82);font-family:var(--font-text);font-size:15px}.geo-label--home{fill:var(--white);font-weight:600;font-size:18px}
+.geo-legend{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center;margin-top:20px;font-family:var(--font-tech);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--on-deep-faint)}
+.geo-legend span{display:inline-flex;align-items:center;gap:10px}
+.geo-legend__dot{width:12px;height:12px;border-radius:50%;background:var(--ochre-500)}
+.geo-legend__home{width:12px;height:12px;border-radius:50%;background:var(--white);box-shadow:0 0 0 2px var(--ochre-500)}
+.geo-legend__note{text-transform:none;letter-spacing:.02em;font-family:var(--font-text);font-size:13px}
+.team .section-head{margin-bottom:0}.team h2{color:var(--white)}
+.team__photo{position:relative;margin-top:40px}
+.team__photo img{display:block;width:100%;max-height:min(78vh,860px);object-fit:cover;object-position:center 30%}
+.team__photo::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(to bottom,rgba(16,28,42,0),var(--navy-900))}
+.team__photo::before{content:"";position:absolute;left:0;right:0;top:0;height:90px;background:linear-gradient(to top,rgba(16,28,42,0),var(--navy-900));z-index:1}
 .bleed{display:block;width:100%;max-height:min(72vh,780px);object-fit:cover}
 .bleed--fit{width:auto;max-width:calc(100% - 2 * var(--gutter));max-height:min(64vh,700px);object-fit:contain;margin:0 auto;border:1px solid rgba(255,255,255,.14);border-radius:var(--radius)}
 .map{aspect-ratio:16/9;background:var(--steel-100);border:1px solid var(--border-hair);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-family:var(--font-tech);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted)}
