@@ -407,6 +407,9 @@ table.t a:hover{color:var(--ochre-700)}
 .geo{display:block;width:100%;height:auto;max-height:min(70vh,760px)}
 .geo-other{fill:rgba(255,255,255,.035);stroke:var(--navy-800);stroke-width:1}
 .geo-russia{fill:var(--navy-700);stroke:var(--navy-600);stroke-width:1}
+.geo-country{fill:var(--ochre-500);fill-opacity:.16;stroke:var(--ochre-500);stroke-opacity:.45;stroke-width:1}
+.geo-cdot{fill:none;stroke:var(--ochre-500);stroke-width:2}
+.geo-clabel{fill:var(--ochre-300);font-family:var(--font-tech);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
 .geo-dot{fill:var(--ochre-500);fill-opacity:.88;stroke:var(--navy-800);stroke-width:1.5}
 .geo-home{fill:var(--white);stroke:var(--ochre-500);stroke-width:3}.geo-home-halo{fill:var(--ochre-500);fill-opacity:.18}
 .geo-label{fill:rgba(255,255,255,.82);font-family:var(--font-text);font-size:15px}.geo-label--home{fill:var(--white);font-weight:600;font-size:18px}
@@ -414,6 +417,7 @@ table.t a:hover{color:var(--ochre-700)}
 .geo-legend span{display:inline-flex;align-items:center;gap:10px}
 .geo-legend__dot{width:12px;height:12px;border-radius:50%;background:var(--ochre-500)}
 .geo-legend__home{width:12px;height:12px;border-radius:50%;background:var(--white);box-shadow:0 0 0 2px var(--ochre-500)}
+.geo-legend__country{width:14px;height:10px;background:rgba(209,162,80,.2);border:1px solid rgba(209,162,80,.6)}
 .geo-legend__note{text-transform:none;letter-spacing:.02em;font-family:var(--font-text);font-size:13px}
 .team .section-head{margin-bottom:0}.team h2{color:var(--white)}
 .team__photo{position:relative;margin-top:40px}
