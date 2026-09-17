@@ -135,15 +135,18 @@ mark.todo{background:var(--ochre-100);color:var(--ochre-800);border-bottom:2px d
 .header__cta{flex:0 0 auto}
 .burger{display:none;width:44px;height:44px;border:0;background:none;cursor:pointer;padding:8px;margin-left:auto}
 .burger span{display:block;height:2px;background:var(--navy-800);margin:6px 0}
-.mega{display:none;position:absolute;left:var(--gutter);right:var(--gutter);top:100%;background:var(--white);border:1px solid var(--border-hair);border-top:0;box-shadow:var(--shadow-card);padding:28px 32px 32px;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 32px;z-index:60}
+.mega{display:none;position:absolute;left:var(--gutter);right:var(--gutter);top:100%;background:var(--white);border:1px solid var(--border-hair);border-top:0;box-shadow:var(--shadow-card);padding:0;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--steel-200);counter-reset:mega;z-index:60}
+.mega>div{background:var(--white);padding:18px 24px 22px;min-width:0}
+.mega>div::before{content:counter(mega,decimal-leading-zero);counter-increment:mega;display:block;font-family:var(--font-tech);font-size:11px;letter-spacing:.14em;color:var(--ochre-700);margin-bottom:8px}
+.mega .col--links::before{content:none}
 .nav>li.is-open .mega{display:grid}
-.mega-title{font-size:14px;font-weight:600;line-height:1.3;margin-bottom:8px}
+.mega-title{font-size:14px;font-weight:600;line-height:1.3;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border-soft)}
 .mega a,.mega .mega-title a{white-space:normal;line-height:1.35}
 .mega-title a{border:0;padding:0;color:var(--text-strong)}
 .mega ul{list-style:none}
 .mega li a{display:block;padding:3px 0;font-size:13px;font-weight:400;color:var(--steel-700);border:0;white-space:normal}
 .mega li a:hover{color:var(--ochre-700)}
-.mega .col--links{border-left:1px solid var(--border-hair);padding-left:24px}
+.mega .col--links{background:var(--surface-page)}
 .cta-short{display:none}
 @media (max-width:1560px){.header__phone{display:none}.nav{gap:clamp(12px,1.2vw,22px)}.nav a,.nav button{font-size:13.5px}}
 @media (max-width:1279px){
@@ -157,8 +160,9 @@ mark.todo{background:var(--ochre-100);color:var(--ochre-800);border-bottom:2px d
   .nav a,.nav button{display:block;width:100%;text-align:left;padding:12px 0;border-bottom:1px solid var(--border-soft);font-size:16px}
   .nav>li.is-current>a,.nav>li.is-current>button{border-bottom-color:var(--border-soft);color:var(--ochre-700)}
   .nav>li{display:block;height:auto}
-  .mega{position:static;width:auto;grid-template-columns:1fr;border:0;box-shadow:none;padding:8px 0 16px 16px;gap:12px}
-  .mega .col--links{border:0;padding:0}
+  .mega{position:static;width:auto;grid-template-columns:1fr;border:0;box-shadow:none;padding:8px 0 16px 16px;gap:12px;background:none}
+  .mega>div{padding:0;background:none}.mega>div::before{display:none}.mega-title{border:0;padding:0;margin-bottom:4px}
+  .mega .col--links{border:0;padding:0;background:none}
 }
 
 /* ---------- крошки (в шаблоне, один H1 на странице) */
@@ -194,9 +198,11 @@ mark.todo{background:var(--ochre-100);color:var(--ochre-800);border-bottom:2px d
 /* ---------- сцена объектов и лента: блок целиком в высоту окна */
 .objects{min-height:calc(100vh - var(--header-h));display:flex;flex-direction:column;padding:40px 0 28px}
 .objects .section-head{margin-bottom:24px}
-.objects .stage{flex:1 1 auto;height:auto;min-height:clamp(420px,80vh,960px)}
+.objects .stage{flex:none;height:auto;min-height:0;aspect-ratio:3/2}
+.objects .stage__bg{display:none}
+.objects .stage .stage__img{object-fit:cover}
 .objects .filmstrip{margin-top:16px}
-@media (max-width:800px){.objects{min-height:0;padding:56px 0}.objects .stage{height:60vh;min-height:360px}.stage .stage__img{object-fit:cover}}
+@media (max-width:800px){.objects{min-height:0;padding:56px 0}.objects .stage{aspect-ratio:auto;height:60vh;min-height:360px}}
 .stage{position:relative;height:calc(100vh - var(--header-h));min-height:640px;overflow:hidden;background:var(--navy-950)}
 .stage__slide{position:absolute;inset:0;margin:0}
 .stage__slide[hidden]{display:none}
