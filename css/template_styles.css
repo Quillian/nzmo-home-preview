@@ -121,10 +121,8 @@ mark.todo{background:var(--ochre-100);color:var(--ochre-800);border-bottom:2px d
 /* ---------- шапка (header.php) */
 .header{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:1px solid var(--border-hair)}
 .header__in{position:relative;display:flex;align-items:center;gap:clamp(16px,2vw,40px);height:var(--header-h);max-width:none;margin:0 auto;padding:0 var(--gutter)}
-.lockup{display:inline-flex;align-items:center;gap:14px;flex:0 0 auto;color:inherit}
-.lockup img{height:22px;width:auto}
-.lockup .w{display:block;font-family:var(--font-display);font-size:22px;line-height:1;letter-spacing:.01em;color:var(--navy-800)}
-.lockup .d{display:block;margin-top:4px;font-family:var(--font-tech);font-size:7px;letter-spacing:.17em;text-transform:uppercase;color:var(--text-muted);line-height:1.25}
+.lockup{display:inline-flex;align-items:center;flex:0 0 auto}
+.lockup img{height:34px;width:auto;display:block}
 .nav{display:flex;align-items:center;gap:clamp(14px,1.6vw,28px);margin-left:auto;list-style:none}
 .nav>li{display:flex;align-items:center;height:var(--header-h)}
 .nav>li.has-mega{position:static}
@@ -149,6 +147,7 @@ mark.todo{background:var(--ochre-100);color:var(--ochre-800);border-bottom:2px d
 @media (max-width:1560px){.header__phone{display:none}.nav{gap:clamp(12px,1.2vw,22px)}.nav a,.nav button{font-size:13.5px}}
 @media (max-width:1279px){
   .header__in{gap:16px}
+  .lockup img{height:28px}
   .header__phone{display:none}
   .burger{display:block;order:3}
   .header__cta{order:2;margin-left:auto}
@@ -423,8 +422,9 @@ table.t a:hover{color:var(--ochre-700)}
 .footer__bottom .container{padding-top:24px;padding-bottom:24px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
 .footer__legal{display:flex;align-items:center;gap:20px;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.72)}
 .footer__legal a{color:rgba(255,255,255,.72)}
-.footer__slogan{display:flex;align-items:center;gap:12px;font-family:var(--font-display);font-size:18px;letter-spacing:-.01em;color:var(--white)}
-.footer__slogan img{height:20px}
+.footer__slogan{display:flex;align-items:center;gap:28px}
+.footer__slogan img{height:24px;width:auto;display:block}
+.footer__slogan .footer__slogan-img{height:16px;opacity:.85}
 
 /* ---------- адаптив */
 @media (max-width:1100px){
