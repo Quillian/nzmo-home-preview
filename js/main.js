@@ -40,6 +40,17 @@
     if (ph) ph.addEventListener("input", function () { ph.setCustomValidity(""); });
   });
 
+  // Cookie-баннер: показываем до согласия, согласие держим в localStorage (152-ФЗ, Метрика)
+  var ck = document.querySelector("[data-cookie]");
+  if (ck) {
+    var okd = false; try { okd = localStorage.getItem("nzmo-cookie") === "1"; } catch (e) {}
+    if (!okd) ck.hidden = false;
+    ck.querySelector("[data-cookie-ok]").addEventListener("click", function () {
+      try { localStorage.setItem("nzmo-cookie", "1"); } catch (e) {}
+      ck.hidden = true;
+    });
+  }
+
   // Фильтр объектов (по отрасли / продукту / городу)
   var filters = document.querySelector("[data-filters]");
   if (filters) {

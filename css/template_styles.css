@@ -430,6 +430,9 @@ table.t a:hover{color:var(--ochre-700)}
 .map{aspect-ratio:16/9;background:var(--steel-100);border:1px solid var(--border-hair);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-family:var(--font-tech);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted)}
 
 /* ---------- подвал (footer.php) */
+.cookie{position:fixed;left:16px;bottom:16px;z-index:60;max-width:440px;display:flex;gap:16px;align-items:center;padding:14px 16px;background:var(--navy-900);color:rgba(255,255,255,.85);border-top:2px solid var(--ochre-500);box-shadow:0 12px 32px rgba(11,20,32,.35)}
+.cookie[hidden]{display:none}.cookie p{margin:0;font-size:13.5px;line-height:1.45}.cookie a{color:var(--ochre-300);text-decoration:underline}
+@media (max-width:800px){.cookie{left:0;right:0;bottom:0;max-width:none;flex-wrap:wrap}}
 .footer{position:relative;overflow:hidden;background:var(--navy-900);color:rgba(255,255,255,.8)}
 .footer a{color:rgba(255,255,255,.8)}
 .footer a:hover{color:var(--ochre-400)}
