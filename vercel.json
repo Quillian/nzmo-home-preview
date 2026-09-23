@@ -3,5 +3,25 @@
   "framework": null,
   "outputDirectory": ".",
   "trailingSlash": true,
-  "cleanUrls": false
+  "cleanUrls": false,
+  "headers": [
+    {
+      "source": "/(img|fonts|files)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(css|js)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
+    }
+  ]
 }

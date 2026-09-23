@@ -3,8 +3,7 @@
    контейнер 1320/32, шапка 76, Bounded для дисплея, Golos Text для текста, Jura для техподписей,
    нумерованные кикеры с линейкой, секции по 88 px, радиусы 2 px. Основной цвет — navy, акцент — охра. */
 
-@import url("/fonts/fonts.css");
-@font-face{font-family:"Bounded";src:url("/fonts/Bounded-Variable.ttf") format("truetype-variations");font-weight:200 900;font-style:normal;font-display:swap}
+/* шрифты подключаются в <head> отдельным файлом /fonts/fonts.css (без @import — на один запрос короче) */
 
 :root{
   --navy-950:#0B1420;--navy-900:#101C2A;--navy-800:#1B2D42;--navy-700:#2A3F58;--navy-600:#3B5271;
