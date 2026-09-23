@@ -33,11 +33,32 @@
       if (digits.length < 10) { phone.setCustomValidity("Введите номер телефона"); phone.reportValidity(); return; }
       phone.setCustomValidity("");
       var q = new URLSearchParams({ k: form.dataset.lead, p: location.pathname });
-      try { sessionStorage.setItem("nzmo_lead", JSON.stringify({ kind: form.dataset.lead, page: location.pathname, name: form.name.value })); } catch (err) {}
+      try { sessionStorage.setItem("nzmo_lead", JSON.stringify({ kind: form.dataset.lead, page: location.pathname, name: form.name.value, config: (form.querySelector("[name=config]") || {}).value || "" })); } catch (err) {}
       location.href = "/spasibo/?" + q.toString();
     });
     var ph = form.querySelector("[name=phone]");
     if (ph) ph.addEventListener("input", function () { ph.setCustomValidity(""); });
+  });
+
+  // Конфигуратор запроса: параметры собираются в скрытое поле config той же формы
+  document.querySelectorAll("[data-config]").forEach(function (box) {
+    var form = box.parentNode.querySelector("form[data-lead]"), out = box.querySelector("[data-config-out]"), base = out.textContent;
+    function upd() {
+      var parts = [];
+      box.querySelectorAll("select,input").forEach(function (f) { if (f.value) parts.push(f.dataset.label.replace(/,.*$/, "").toLowerCase() + ": " + f.value); });
+      var s = parts.join(" · ");
+      if (form) form.querySelector("[name=config]").value = s;
+      out.textContent = s ? "Ваш запрос: " + s + ". Итоговую стоимость назовём в КП." : base;
+    }
+    box.addEventListener("change", upd); box.addEventListener("input", upd);
+  });
+
+  // Видео с Rutube — iframe создаётся по клику, чтобы не грузить плеер заранее
+  document.querySelectorAll("[data-video]").forEach(function (v) {
+    v.querySelector("[data-video-play]").addEventListener("click", function () {
+      var f = document.createElement("iframe"); f.src = v.dataset.video + "?autoplay=1"; f.allow = "autoplay; fullscreen; encrypted-media"; f.setAttribute("allowfullscreen", "");
+      v.innerHTML = ""; v.appendChild(f);
+    });
   });
 
   // Cookie-баннер: показываем до согласия, согласие держим в localStorage (152-ФЗ, Метрика)
