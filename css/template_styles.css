@@ -109,6 +109,8 @@ mark.todo{background:var(--ochre-100);color:var(--ochre-800);border-bottom:2px d
 .cover .btn--outline,.section--deep .btn--outline,.section--navy .btn--outline,.on-deep .btn--outline,.footer .btn--outline{border-color:var(--on-deep-strong);color:var(--white)}
 .cover .btn--outline:hover,.section--deep .btn--outline:hover,.section--navy .btn--outline:hover,.footer .btn--outline:hover{border-color:var(--white);color:var(--white)}
 .btn--md{height:48px;padding:0 22px;font-size:15px}
+.btn--icon{width:48px;padding:0;font-family:var(--font-tech);font-size:13px;letter-spacing:.06em}
+.btn--icon svg{display:block}
 .btn--sm{height:44px;padding:0 18px;font-size:14px}
 .btn--xs{height:36px;padding:0 16px;font-size:13px}
 .btn .arr{font-family:var(--font-tech)}
