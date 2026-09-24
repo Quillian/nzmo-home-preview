@@ -53,6 +53,29 @@
     box.addEventListener("change", upd); box.addEventListener("input", upd);
   });
 
+  // Параметры из ссылки «Посчитать похожий объект» → скрытое поле config и строка над кнопкой
+  try {
+    var cfg = new URLSearchParams(location.search).get("config");
+    if (cfg) document.querySelectorAll("form[data-lead]").forEach(function (f) {
+      var i = f.querySelector("[name=config]"), e = f.querySelector("[data-config-echo]");
+      if (i) i.value = cfg; if (e) { e.textContent = "Считаем " + cfg + "."; e.hidden = false; }
+    });
+  } catch (err) {}
+
+  // Спасибо: ссылки по типу заявки — первыми в списке «Пока ждёте»
+  var tr = document.querySelector("[data-thanks-reco]");
+  if (tr) {
+    var kind = new URLSearchParams(location.search).get("k") || "quote";
+    var map = { quote: [["/servis/montazh/", "Как проходит монтаж"], ["/servis/dostavka-i-oplata/", "Доставка и упаковка"]],
+                engineer: [["/proektirovshchikam/uzly-i-albomy/", "Альбомы технических решений"], ["/proektirovshchikam/bim-cad/", "BIM и CAD-модели"]],
+                sample: [["/proektirovshchikam/ral-i-perforatsiya/", "Цвета RAL и перфорация"]],
+                album: [["/proektirovshchikam/bim-cad/", "BIM и CAD-модели"]],
+                partner: [["/partneram/", "Условия для партнёров"]] };
+    (map[kind] || []).reverse().forEach(function (l) {
+      var a = document.createElement("a"); a.href = l[0]; a.setAttribute("data-reco-link", "thanks"); a.innerHTML = "<span class=\"t\">" + l[1] + "</span>"; tr.insertBefore(a, tr.firstChild);
+    });
+  }
+
   // Прозрачность реечного потолка: радиус видимости перекрытия = (H − уровень глаз) × зазор / высота рейки
   document.querySelectorAll("[data-transp]").forEach(function (box) {
     var out = box.querySelector("[data-transp-out]"), note = box.querySelector("[data-transp-note]");
