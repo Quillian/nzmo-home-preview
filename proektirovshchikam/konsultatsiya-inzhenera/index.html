@@ -77,30 +77,43 @@
   </div>
 </header><main id="work-area"><section class="page-head">
   <div class="container">
-<nav class="crumbs" aria-label="Вы здесь"><ol style="padding:0 0 28px"><li><a href="/">Главная</a></li><li><a href="/proektirovshchikam/">Проектировщикам и архитекторам</a></li><li><span>Консультация инженера</span></li></ol></nav>    <div class="split" style="align-items:start">
-      <div>
-        <div class="kicker kicker--ochre" style="margin-bottom:0"><span class="l">Конструкторский отдел</span></div>
-        <h1 class="t-1" style="margin-top:18px">Консультация инженера</h1>
-        <p class="lead">Проектировщики, ПТО и конструкторы в штате. Оставьте телефон — инженер перезвонит и разберёт узел вместе с вами.</p>
-        <div class="cover__meta" style="border-color:var(--border-hair);color:var(--text-muted);margin-top:32px"><span>Ответ в течение рабочего дня</span><span>Расчёт комплектом, не только за м²</span><span>КП без «уточняется»</span></div>
-      </div>
-      <div class="aside aside--white">
-        <div class="k">Позвать инженера</div>
-        <h2 class="visually-hidden">Форма заявки</h2>
-        <form class="form" style="margin-top:20px" data-lead="engineer" action="/spasibo/" method="get" novalidate>
-          <input type="hidden" name="page" value="/proektirovshchikam/konsultatsiya-inzhenera/">
-          <label><span>Имя</span><input type="text" name="name" required autocomplete="name" placeholder="Как к вам обращаться"></label>
-          <label><span>Телефон</span><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+7"></label>
-          <div class="captcha" aria-hidden="true"></div>
-          <button type="submit" class="btn btn--navy" style="width:100%">Позвать инженера</button>
-          <div class="consent">Нажимая кнопку, вы соглашаетесь с <a href="/politika-konfidentsialnosti/">политикой конфиденциальности</a> и даёте <a href="/soglasie-na-obrabotku-dannyh/">согласие на обработку данных</a>.</div>
-        </form>
-        <p class="small muted" style="margin:16px 0 0">Удобнее почтой — <a href="mailto:zakaz@nzmo.ru">zakaz@nzmo.ru</a>, прикрепите планировку DWG или PDF. Телефон: <a href="tel:+73832349152">+7 (383) 234-91-52</a>.</p>
-      </div>
-    </div>
+<nav class="crumbs" aria-label="Вы здесь"><ol style="padding:0 0 28px"><li><a href="/">Главная</a></li><li><a href="/proektirovshchikam/">Проектировщикам и архитекторам</a></li><li><span>Консультация инженера</span></li></ol></nav>    <div class="kicker kicker--ochre" style="margin-bottom:0"><span class="l">Конструкторский отдел</span></div>
+    <h1 class="t-1" style="margin-top:18px">Консультация инженера</h1>
+    <p class="lead">Проектировщики, ПТО и конструкторы в штате. Оставьте телефон — инженер перезвонит и разберёт узел вместе с вами.</p>
+    <div class="cover__meta" style="border-color:var(--border-hair);color:var(--text-muted);margin-top:32px"><span>Ответ в течение рабочего дня</span><span>Расчёт комплектом, не только за м²</span><span>КП без «уточняется»</span></div>
   </div>
 </section>
-<section class="section section--white"><div class="container"><div class="kicker"><span class="n"></span><span class="l">После заявки</span></div><div class="section-head"><h2 class="t-2">Что будет после заявки</h2><p class="lead" style="margin:0;max-width:420px">Типовой срок изготовления — 20 рабочих дней; оплата — 100 % предоплата; срок действия КП — 3 рабочих дня.</p></div>
+<section class="section section--white" id="cta">
+  <div class="container split">
+    <div>
+      <div class="kicker"><span class="n"></span><span class="l">Заявка</span></div>
+      <h2 class="t-2">Позвать инженера</h2>
+      <p class="lead" style="margin:14px 0 32px;max-width:520px">Имя и телефон — остальное уточним по ходу. Удобнее почтой: планировку DWG или PDF пришлите на zakaz@nzmo.ru.</p>
+      <form class="form" data-lead="engineer" action="/spasibo/" method="get" novalidate>
+        <input type="hidden" name="page" value="/proektirovshchikam/konsultatsiya-inzhenera/">
+        <input type="hidden" name="config" value="">
+        <div class="f2">
+          <label><span>Имя</span><input type="text" name="name" required autocomplete="name" placeholder="Как к вам обращаться"></label>
+          <label><span>Телефон</span><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+7"></label>
+        </div>
+        <div class="captcha" aria-hidden="true"></div>
+        <div class="btn-row" style="margin-top:8px">
+          <button type="submit" class="btn btn--navy">Позвать инженера</button>
+<a class="btn btn--outline" href="/files/nzmo-katalog-2026.pdf">Скачать каталог</a>        </div>
+        <div class="consent">Нажимая кнопку, вы соглашаетесь с <a href="/politika-konfidentsialnosti/">политикой конфиденциальности</a> и даёте <a href="/soglasie-na-obrabotku-dannyh/">согласие на обработку данных</a>.</div>
+      </form>
+    </div>
+    <div class="aside" style="margin-top:64px">
+      <div class="k">Что будет после заявки</div>
+      <div class="nlist">
+        <div><span class="n">01</span><div class="x"><b>Свяжемся в течение рабочего дня</b> — уточним данные по объекту.</div></div>
+        <div><span class="n">02</span><div class="x">Посчитаем комплект: система, подсистема, подвесы, доборы, расход на 1 м².</div></div>
+        <div><span class="n">03</span><div class="x">Пришлём КП: спецификация по позициям, срок изготовления 20 рабочих дней, условия доставки.</div></div>
+      </div>
+      <div class="small muted" style="margin-top:20px">Удобнее почтой — отправьте план сразу на <a href="mailto:zakaz@nzmo.ru">zakaz@nzmo.ru</a>. Телефон: <a href="tel:+73832349152">+7 (383) 234-91-52</a>.</div>
+    </div>
+  </div>
+</section><section class="section section--page"><div class="container"><div class="kicker"><span class="n"></span><span class="l">После заявки</span></div><div class="section-head"><h2 class="t-2">Путь проекта</h2><p class="lead" style="margin:0;max-width:420px">Типовой срок изготовления — 20 рабочих дней; оплата — 100 % предоплата; срок действия КП — 3 рабочих дня.</p></div>
 <ol class="steps"><li><div class="h"><span class="n">01</span><span class="l">Менеджер</span></div><div class="t">Запрос и расчёт</div><p>Присылайте чертёж, планировку или ТЗ. Посчитаем комплектом, а не только за м².</p></li><li><div class="h"><span class="n">02</span><span class="l">Менеджер</span></div><div class="t">КП и согласование</div><p>Раскладка, комплект, срок и цена — по позициям. Без «уточняется».</p></li><li><div class="h"><span class="n">03</span><span class="l">Конструкторский отдел</span></div><div class="t">Конструктив</div><p>Чертежи, раскладки и узлы. Образец и выкраска — до запуска в производство.</p></li><li><div class="h"><span class="n">04</span><span class="l">Производство</span></div><div class="t">Производство</div><p>Раскрой, гибка, сварка, покраска. Каждую операцию контролируем до перехода к следующей.</p></li><li><div class="h"><span class="n">05</span><span class="l">ОТК</span></div><div class="t">ОТК и упаковка</div><p>Проверяем геометрию и покрытие. Маркируем по объекту, формируем упаковочный лист.</p></li><li><div class="h"><span class="n">06</span><span class="l">Логистика</span></div><div class="t">Доставка</div><p>Доставляем силами завода или транспортной компании. Инструкция входит в комплект.</p></li></ol></div></section>
 </main>
 <footer class="footer">
