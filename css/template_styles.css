@@ -199,6 +199,7 @@ mark.todo{background:var(--ochre-100);color:var(--ochre-800);border-bottom:2px d
 .objects .stage{flex:none;height:auto;min-height:0;aspect-ratio:3/2}
 .objects .stage__bg{display:none}
 .objects .stage .stage__img{object-fit:cover}
+.objects .stage__scrim{background:linear-gradient(to top,rgba(0,0,0,.5) 0%,rgba(0,0,0,.18) 16%,rgba(0,0,0,0) 30%)} /* без синего фильтра: нейтральная тень только под подписью */
 .objects .filmstrip{margin-top:16px}
 @media (max-width:800px){.objects{min-height:0;padding:56px 0}.objects .stage{aspect-ratio:auto;height:60vh;min-height:360px}}
 .stage{position:relative;height:calc(100vh - var(--header-h));min-height:640px;overflow:hidden;background:var(--navy-950)}
