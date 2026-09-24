@@ -355,6 +355,17 @@ table.t a:hover{color:var(--ochre-700)}
 .coating-fig{background:var(--white);border:1px solid var(--border-hair);border-radius:var(--radius);padding:24px 0 8px 16px;overflow:hidden}
 .coating-fig svg{display:block;width:112%;max-width:none;height:auto}.coating-side{display:grid;gap:28px}
 @media (max-width:1100px){.coating-wrap{grid-template-columns:1fr}}
+.transp{margin:20px 0 24px;padding:20px 22px;background:var(--surface-page);border:1px solid var(--border-hair);border-radius:var(--radius)}
+.transp__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.transp__grid label{display:flex;flex-direction:column;gap:6px}
+.transp__grid label>span{font-size:12px;color:var(--text-muted)}.transp__grid input{height:42px;padding:0 12px;border:1px solid var(--border-strong);border-radius:var(--radius);font:14px var(--font-text);color:var(--text-strong);background:var(--white);width:100%}
+.transp__out{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin-top:16px}.transp__out b{font-family:var(--font-display,var(--font-text));font-size:28px;font-weight:600;color:var(--navy-800)}
+.transp p{margin:14px 0 0}@media (max-width:800px){.transp__grid{grid-template-columns:1fr 1fr}}
+.kelvin{margin-top:36px;padding-bottom:56px}.kelvin__bar{height:18px;border-radius:9px;background:linear-gradient(90deg,#ff8a1f 0%,#ffb347 25%,#fff1c9 47%,#f4f7ff 68%,#bcd6ff 100%)}
+.kelvin__marks{position:relative;height:0}.kelvin__mark{position:absolute;top:10px;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.kelvin__mark::before{content:'';display:block;width:1px;height:10px;margin:0 auto 6px;background:var(--steel-400)}.kelvin__mark b{display:block;font-family:var(--font-tech);font-size:13px;color:var(--text-strong)}.kelvin__mark span{font-size:12px;color:var(--text-muted)}
+.kelvin__mark.is-base b{color:var(--ochre-700)}.kelvin__mark.is-base::before{background:var(--ochre-600);width:2px}
+.kelvin__mark:first-child{transform:none}.kelvin__mark:last-child{transform:translateX(-100%)}
+@media (max-width:800px){.kelvin__mark span{display:none}}
 .coat{padding-top:18px;border-top:2px solid var(--navy-800)}.coat p{margin-top:12px;font-size:14.5px;line-height:1.55}.coat .btn{margin-top:16px}
 .coat--cta{border-top-color:var(--ochre-500)}
 @media (max-width:800px){.pal-row{grid-template-columns:1fr;gap:14px}.pal-row__note{max-width:none}}

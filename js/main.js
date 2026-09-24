@@ -53,6 +53,20 @@
     box.addEventListener("change", upd); box.addEventListener("input", upd);
   });
 
+  // Прозрачность реечного потолка: радиус видимости перекрытия = (H − уровень глаз) × зазор / высота рейки
+  document.querySelectorAll("[data-transp]").forEach(function (box) {
+    var out = box.querySelector("[data-transp-out]"), note = box.querySelector("[data-transp-note]");
+    function v(n) { return parseFloat((box.querySelector("[name=" + n + "]").value || "0").replace(",", ".")) || 0; }
+    function upd() {
+      var h = v("h"), b = v("b"), s = v("s"), e = v("e");
+      if (h <= e || b <= 0 || s <= 0) { out.textContent = "—"; note.textContent = "проверьте значения"; return; }
+      var r = (h - e) * s / b;
+      out.textContent = r.toFixed(2).replace(".", ",") + " м";
+      note.textContent = r < 1 ? "перекрытие видно только почти под собой — потолок читается сплошным" : r < 3 ? "дальше потолок читается сплошным полем" : "перекрытие просматривается с большей части помещения — уменьшите зазор или возьмите рейку выше";
+    }
+    box.addEventListener("input", upd); upd();
+  });
+
   // Видео с Rutube — iframe создаётся по клику, чтобы не грузить плеер заранее
   document.querySelectorAll("[data-video]").forEach(function (v) {
     v.querySelector("[data-video-play]").addEventListener("click", function () {
