@@ -61,14 +61,17 @@
     });
   });
 
-  // Cookie-баннер: показываем до согласия, согласие держим в localStorage (152-ФЗ, Метрика)
-  var ck = document.querySelector("[data-cookie]");
+  // Файлы cookie: согласие хранится в localStorage 1 год; статистика (Метрика, Roistat) включается только после согласия.
+  // Под Битрикс: счётчики вешать на событие nzmo:consent (или проверять window.nzmoConsent при загрузке).
+  var ck = document.querySelector("[data-cookie]"), YEAR = 365 * 24 * 3600 * 1000;
+  window.nzmoConsent = false;
+  try { window.nzmoConsent = Date.now() - (+localStorage.getItem("nzmo-cookie") || 0) < YEAR; } catch (e) {}
   if (ck) {
-    var okd = false; try { okd = localStorage.getItem("nzmo-cookie") === "1"; } catch (e) {}
-    if (!okd) ck.hidden = false;
+    if (!window.nzmoConsent) ck.hidden = false;
     ck.querySelector("[data-cookie-ok]").addEventListener("click", function () {
-      try { localStorage.setItem("nzmo-cookie", "1"); } catch (e) {}
-      ck.hidden = true;
+      try { localStorage.setItem("nzmo-cookie", String(Date.now())); } catch (e) {}
+      ck.hidden = true; window.nzmoConsent = true;
+      document.dispatchEvent(new CustomEvent("nzmo:consent"));
     });
   }
 
