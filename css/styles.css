@@ -87,3 +87,25 @@
 .jnext__h{font-weight:600;font-size:15px;line-height:1.35}
 .content .jnext__c:hover .jnext__h{color:var(--ochre-700)}
 @media (max-width:720px){.jnext__g{grid-template-columns:1fr}.content .jnext__c{flex-direction:row;align-items:flex-start;gap:12px}.content .jnext__c img{width:110px;flex:none;margin:0}}
+/* из практики, термин, вопросы, норма */
+.jb-story{position:relative;margin:2em 0;padding:26px 28px 22px 28px;background:var(--ochre-100);border-radius:var(--radius)}
+.jb-story::before{content:"«";position:absolute;right:22px;top:-6px;font-family:var(--font-display);font-size:96px;line-height:1;color:var(--ochre-300)}
+.jb-story__k{font-family:var(--font-tech);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ochre-800);margin-bottom:10px}
+.content .jb-story blockquote{margin:0;padding:0;border:0;background:none;font-size:18px;line-height:1.55;color:var(--text-strong)}
+.content .jb-story blockquote p:last-child{margin-bottom:0}
+.jb-story figcaption{display:flex;align-items:center;gap:12px;margin-top:16px;font-size:13px;line-height:1.35;color:var(--text-muted)}
+.jb-story figcaption b{display:block;color:var(--text-strong);font-weight:600;font-size:14px}
+.jb-story__av{width:38px;height:38px;flex:none;border-radius:50%;background:var(--navy-800);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--font-tech);font-weight:700;font-size:13px;letter-spacing:.04em}
+.jb-term{margin:1.6em 0 1.8em;padding:18px 22px;border:1px solid var(--border-hair);border-left:3px solid var(--navy-700);display:grid;grid-template-columns:minmax(120px,190px) 1fr;gap:18px;align-items:start}
+.jb-term dt{font-family:var(--font-display);font-size:20px;line-height:1.2;color:var(--text-strong)}
+.jb-term__k{display:block;font-family:var(--font-tech);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px}
+.jb-term dd{margin:0}.content .jb-term dd p:last-child{margin-bottom:0}
+.jb-faq{padding:18px 22px 8px;border:1px solid var(--border-hair);background:var(--white)}
+.jb-faq details{border-top:1px solid var(--border-hair)}
+.jb-faq summary{cursor:pointer;list-style:none;position:relative;padding:14px 36px 14px 0;font-weight:600;color:var(--text-strong)}
+.jb-faq summary::-webkit-details-marker{display:none}
+.jb-faq summary::after{content:"+";position:absolute;right:4px;top:10px;font-size:22px;color:var(--ochre-700);transition:transform .2s}
+.jb-faq details[open] summary::after{transform:rotate(45deg)}
+.jb-faq__a{padding:0 0 12px}.content .jb-faq__a p:last-child{margin-bottom:0}
+.jb-norm{background:var(--surface-page);border-left:3px solid var(--steel-500)}.jb-norm .jb-t{color:var(--steel-700)}
+@media (max-width:720px){.jb-term{grid-template-columns:1fr;gap:8px}.jb-story{padding:22px 20px 18px}.content .jb-story blockquote{font-size:17px}}
