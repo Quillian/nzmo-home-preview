@@ -193,7 +193,7 @@
       thumbs.forEach(function (t, k) { t.classList.toggle("is-active", k === cur); });
       var t = thumbs[cur];
       if (t) { tEl.textContent = t.dataset.title; tEl.href = t.getAttribute("href"); fEl.textContent = t.dataset.family; sEl.textContent = t.dataset.spec; }
-      cEl.textContent = pad(cur + 1) + " / " + pad(slides.length);
+      cEl.textContent = (cur + 1) + " / " + slides.length;
     }
     stage.querySelector("[data-stage-prev]").addEventListener("click", function () { go(cur - 1); });
     stage.querySelector("[data-stage-next]").addEventListener("click", function () { go(cur + 1); });
