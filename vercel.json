@@ -24,16 +24,7 @@
       ]
     },
     {
-      "source": "/stati/(.*)",
-      "headers": [
-        {
-          "key": "X-Robots-Tag",
-          "value": "noindex, nofollow"
-        }
-      ]
-    },
-    {
-      "source": "/stati",
+      "source": "/(.*)",
       "headers": [
         {
           "key": "X-Robots-Tag",
