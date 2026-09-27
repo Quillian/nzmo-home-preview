@@ -69,3 +69,21 @@
 .content table td:first-child,.content table th:first-child{padding-left:12px}
 @media (max-width:720px){.jb-pair{grid-template-columns:1fr}.content .jtoc ol{columns:1}.jb{padding:16px 18px}.content .jb-steps li{padding-left:50px}}
 .jb-photo{margin:1.8em 0 2em}.content .jb-photo img{display:block;width:100%;height:auto;margin:0;aspect-ratio:3/2;object-fit:cover}.jb-photo figcaption{margin-top:10px;padding-left:12px;border-left:2px solid var(--ochre-500);font-size:14px;line-height:1.45;color:var(--text-muted)}
+/* перелинковка журнала */
+.jb-read{margin:1.6em 0 1.8em}
+.content .jb-read a{position:relative;display:grid;gap:4px;padding:16px 52px 16px 20px;border:1px solid var(--border-hair);border-left:3px solid var(--ochre-500);background:var(--white);color:var(--text-body);transition:border-color .15s,box-shadow .15s}
+.content .jb-read a:hover{border-color:var(--ochre-500);box-shadow:0 6px 18px rgba(27,45,66,.08);color:var(--text-body)}
+.jb-read__k{font-family:var(--font-tech);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ochre-700)}
+.jb-read__t{font-weight:600;font-size:17px;line-height:1.35;color:var(--text-strong)}
+.jb-read__d{font-size:14px;line-height:1.45;color:var(--text-muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.jb-read__go{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:20px;color:var(--navy-700)}
+.jnext{margin-top:40px;padding-top:28px;border-top:2px solid var(--navy-800)}
+.jnext__t{font-family:var(--font-display);font-size:22px;color:var(--text-strong);margin-bottom:16px}
+.jnext__g{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.content .jnext__c{display:flex;flex-direction:column;gap:6px;border:0;color:var(--text-strong)}
+.content .jnext__c img{margin:0 0 6px;width:100%;aspect-ratio:3/2;object-fit:cover}
+.jnext__b{display:flex;flex-direction:column;gap:6px}
+.jnext__k{font-family:var(--font-tech);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted)}
+.jnext__h{font-weight:600;font-size:15px;line-height:1.35}
+.content .jnext__c:hover .jnext__h{color:var(--ochre-700)}
+@media (max-width:720px){.jnext__g{grid-template-columns:1fr}.content .jnext__c{flex-direction:row;align-items:flex-start;gap:12px}.content .jnext__c img{width:110px;flex:none;margin:0}}
