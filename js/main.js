@@ -76,6 +76,40 @@
     });
   }
 
+  // Грильято: вкладки ячеек и высот
+  document.querySelectorAll("[data-grill]").forEach(function (g) {
+    g.querySelectorAll(".gr-tab").forEach(function (t) {
+      t.addEventListener("click", function () {
+        g.querySelectorAll(".gr-tab").forEach(function (x) { x.classList.toggle("is-active", x === t); x.setAttribute("aria-selected", x === t); });
+        g.querySelectorAll(".gr-pane").forEach(function (p) { p.classList.toggle("is-hidden", p.dataset.pane !== t.dataset.cell); });
+      });
+    });
+    g.querySelectorAll(".gr-hb").forEach(function (b) {
+      b.addEventListener("click", function () {
+        g.querySelectorAll(".gr-hb").forEach(function (x) { x.classList.toggle("is-active", x === b); });
+        g.querySelectorAll(".gr-view").forEach(function (v) { v.classList.toggle("is-hidden", v.dataset.hv !== b.dataset.h); });
+        g.querySelectorAll("[data-hlabel]").forEach(function (l) { l.textContent = b.dataset.h; });
+      });
+    });
+  });
+
+  // Грильято: калькулятор расхода по коэффициентам завода
+  document.querySelectorAll("[data-gcalc]").forEach(function (box) {
+    var R = JSON.parse(box.dataset.gcalc), rows = box.querySelector("[data-gc-rows]"), cta = box.querySelector("[data-gc-cta]");
+    function v(n) { return parseFloat((box.querySelector("[name=" + n + "]").value || "0").replace(",", ".")) || 0; }
+    function upd() {
+      var s = v("s"), p = v("p"), c = box.querySelector("[name=c]").value, h = box.querySelector("[name=h]").value, z = v("z");
+      var r = R[c], sf = s * (1 + z / 100), up = function (x) { return Math.ceil(x - 1e-9); };
+      var list = [["Профиль «мама» 0,6 м, h" + h, up(sf * r.mama)], ["Профиль «папа» 0,6 м, h" + h, up(sf * r.papa)],
+        ["Несущая 2,4 м", up(sf * r.n24)], ["Поперечная 1,2 м", up(sf * r.n12)], ["Поперечная 0,6 м", up(sf * r.n06)],
+        ["Соединитель", up(sf * r.soed)], ["Подвес", up(sf * r.podves)], ["Уголок пристенный 3 м", up(p / 3)]];
+      rows.innerHTML = list.filter(function (x) { return x[1] > 0; }).map(function (x) { return "<tr><td>" + x[0] + "</td><td>" + x[1] + " шт</td></tr>"; }).join("")
+        + "<tr><td>Модулей 600×600, ориентир</td><td>" + up(sf / 0.36) + " шт</td></tr>";
+      cta.href = "/servis/raschet-proekta/?config=" + encodeURIComponent("грильято " + c + "×" + c + ", h" + h + ", площадь " + s + " м², периметр " + p + " м");
+    }
+    box.addEventListener("input", upd); box.addEventListener("change", upd); upd();
+  });
+
   // Прозрачность реечного потолка: радиус видимости перекрытия = (H − уровень глаз) × зазор / высота рейки
   document.querySelectorAll("[data-transp]").forEach(function (box) {
     var out = box.querySelector("[data-transp-out]"), note = box.querySelector("[data-transp-note]");
