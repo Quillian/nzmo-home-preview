@@ -162,25 +162,15 @@ img.jb-story__av{width:38px;height:38px;border-radius:50%;object-fit:cover;margi
 .nav>li.is-open .nav__chev{transform:translateY(1px) rotate(-135deg)}
 @media (max-width:1279px){.nav .nav__prod{border:0;padding:12px 0;border-bottom:1px solid var(--border-soft);border-radius:0}.nav .nav__prod:hover,.nav>li.is-open .nav__prod{background:none;color:var(--navy-800)}.nav__chev{margin-left:auto}}
 
-/* Мега-меню: сегменты-колонки с цветовым акцентом (28.09.2026) */
-.mega-seg--ochre{--seg:#D1A250;--seg-ink:#A87B33}
-.mega-seg--teal{--seg:#3A8A96;--seg-ink:#2C6C76}
-.mega-seg--terra{--seg:#B8674E;--seg-ink:#96503B}
-.mega-seg--steel{--seg:#5B7394;--seg-ink:#465B78}
+/* Мега-меню: сегменты-колонки, один акцент бренда, больше воздуха (28.09.2026) */
 .mega{grid-template-columns:repeat(4,minmax(0,1fr))}
-.mega>.mega-seg{border-top:3px solid var(--seg)}
-.mega-seg__label{font-family:var(--font-tech);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--seg-ink);margin-bottom:16px}
-.mega-dir+.mega-dir{margin-top:24px}
+.mega>.mega-seg{padding:30px 32px 36px}
+.mega-seg__label{font-family:var(--font-tech);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ochre-700);margin-bottom:18px}
+.mega-dir+.mega-dir{margin-top:28px}
 .mega-seg .mega-title{font-size:16px;margin-bottom:10px;padding-bottom:10px}
-.mega-seg .mega-title a:hover,.mega-seg li a:hover{color:var(--seg-ink)}
-.mega>.mega-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px;padding:14px 24px;background:var(--surface-page)}
-.mega-foot a{font-size:13px;color:var(--steel-700);border:0;padding:0;white-space:nowrap}
-.mega-foot a:hover{color:var(--ochre-700)}
-.mega-foot .mega-foot__all{font-weight:600;color:var(--text-strong)}
 @media (max-width:1279px){
   .mega{grid-template-columns:1fr}
-  .mega>.mega-seg{border-top:0;border-left:3px solid var(--seg);padding:4px 0 4px 14px}
+  .mega>.mega-seg{padding:4px 0 8px}
   .mega-seg__label{margin-bottom:8px}.mega-dir+.mega-dir{margin-top:12px}
   .mega-seg .mega-title{font-size:15px;margin-bottom:4px;padding:0}
-  .mega>.mega-foot{padding:8px 0;background:none}
 }

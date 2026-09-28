@@ -25,7 +25,7 @@
     });
     li.addEventListener("mouseenter", function () { if (desk()) set(true); });
     li.addEventListener("mouseleave", function () {
-      if (desk() && !pinned) timer = setTimeout(function () { set(false); }, 1000);
+      if (desk() && !pinned) timer = setTimeout(function () { set(false); }, 600);
     });
     document.addEventListener("click", function (e) { if (!li.contains(e.target)) set(false); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && li.classList.contains("is-open")) { set(false); btn.focus(); } });
