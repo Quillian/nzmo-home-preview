@@ -218,16 +218,3 @@
   }
 })();
 
-// Главная: направления — при наведении или фокусе показываем фото и описание
-(function () {
-  var box = document.querySelector("[data-dirs]"); if (!box) return;
-  var links = box.querySelectorAll("[data-dir]"), views = box.querySelectorAll("[data-dir-view]");
-  function show(i) {
-    links.forEach(function (a) { a.classList.toggle("is-active", a.getAttribute("data-dir") === i); });
-    views.forEach(function (v) { v.hidden = v.getAttribute("data-dir-view") !== i; });
-  }
-  links.forEach(function (a) {
-    a.addEventListener("mouseenter", function () { show(a.getAttribute("data-dir")); });
-    a.addEventListener("focus", function () { show(a.getAttribute("data-dir")); });
-  });
-})();

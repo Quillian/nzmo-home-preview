@@ -132,26 +132,33 @@ img.jb-story__av{width:38px;height:38px;border-radius:50%;object-fit:cover;margi
 .rv-st{display:inline-block;padding:2px 8px;border-radius:10px;font-size:12px;background:var(--steel-100)}
 .rv-approved{background:#EEF5F0;color:#2F7A4E}.rv-review{background:var(--ochre-100);color:var(--ochre-800)}
 
-/* Главная: направления — список слева, фото выбранного справа (28.09.2026) */
-.dirs__grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,96px);align-items:start}
-.dirs__list{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--border-hair)}
-.dirs__list a{display:grid;grid-template-columns:44px 1fr 24px;align-items:baseline;gap:16px;padding:18px 0;border-top:1px solid var(--border-hair);color:var(--text-strong);transition:color var(--transition)}
-.dirs__list .n{font-family:var(--font-tech);font-size:13px;color:var(--text-faint)}
-.dirs__list .t{font-family:var(--font-display);font-size:clamp(18px,1.5vw,24px);font-weight:500;letter-spacing:-.01em;line-height:1.25}
-.dirs__list .s{display:none}
-.dirs__list .arr{color:var(--ochre-600);opacity:0;transform:translateX(-6px);transition:opacity var(--transition),transform var(--transition)}
-.dirs__list a:hover,.dirs__list a.is-active{color:var(--ochre-700)}
-.dirs__list a:hover .arr,.dirs__list a.is-active .arr{opacity:1;transform:none}
-.dirs__view{position:sticky;top:calc(var(--header-h) + 24px)}
-.dirs__view figure{margin:0}
-.dirs__view img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius);background:var(--steel-100)}
-.dirs__view .is-drawing img{object-fit:contain;padding:32px;background:var(--steel-050)}
-.dirs__view figcaption{margin-top:16px;font-size:15px;line-height:1.5;color:var(--text-muted);max-width:420px}
+/* Главная: направления — типографский индекс, фото проявляется в строке (28.09.2026, референсы Bieffe и Knupfer) */
+.dirx{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--border-hair)}
+.dirx__row{position:relative;display:grid;grid-template-columns:56px minmax(0,1fr) minmax(0,340px) 48px;align-items:center;gap:24px;padding:26px 24px;border-top:1px solid var(--border-hair);color:var(--text-strong);isolation:isolate}
+.dirx__row::before{content:"";position:absolute;inset:0;background:var(--navy-800);transform:scaleY(0);transform-origin:bottom;transition:transform .35s cubic-bezier(.2,.7,.2,1);z-index:-1}
+.dirx__n{font-family:var(--font-tech);font-size:14px;color:var(--text-faint);transition:color .25s}
+.dirx__t{font-family:var(--font-display);font-size:clamp(22px,2.3vw,38px);font-weight:500;letter-spacing:-.015em;line-height:1.1;transition:color .25s}
+.dirx__s{font-size:14px;line-height:1.5;color:var(--text-muted);transition:opacity .25s}
+.dirx__ph{position:absolute;right:96px;top:50%;width:300px;aspect-ratio:3/2;transform:translateY(-50%);clip-path:inset(100% 0 0 0);transition:clip-path .45s cubic-bezier(.2,.7,.2,1);z-index:2;pointer-events:none;background:var(--steel-100)}
+.dirx__ph img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.dirx__ph.is-drawing{background:var(--white)}.dirx__ph.is-drawing img{object-fit:contain;padding:14px}
+.dirx__arr{justify-self:end;font-size:22px;color:var(--ochre-500);opacity:0;transform:translateX(-10px);transition:opacity .25s,transform .35s}
+.dirx__row:hover::before,.dirx__row:focus-visible::before{transform:scaleY(1)}
+.dirx__row:hover .dirx__t,.dirx__row:focus-visible .dirx__t{color:var(--white)}
+.dirx__row:hover .dirx__n,.dirx__row:focus-visible .dirx__n{color:var(--ochre-400)}
+.dirx__row:hover .dirx__s,.dirx__row:focus-visible .dirx__s{opacity:0}
+.dirx__row:hover .dirx__ph,.dirx__row:focus-visible .dirx__ph{clip-path:inset(0 0 0 0)}
+.dirx__row:hover .dirx__ph img,.dirx__row:focus-visible .dirx__ph img{transform:scale(1)}
+.dirx__row:hover .dirx__arr,.dirx__row:focus-visible .dirx__arr{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.dirx__row::before,.dirx__ph,.dirx__ph img,.dirx__arr{transition:none}}
+@media (max-width:1100px){.dirx__row{grid-template-columns:44px minmax(0,1fr) minmax(0,260px) 32px}.dirx__ph{width:240px;right:64px}}
 @media (max-width:800px){
-  .dirs__grid{grid-template-columns:1fr}.dirs__view{display:none}
-  .dirs__list a{grid-template-columns:32px 1fr 20px;padding:16px 0}
-  .dirs__list .s{display:block;margin-top:6px;font-family:var(--font-text);font-size:14px;font-weight:400;letter-spacing:0;color:var(--text-muted)}
-  .dirs__list .arr{opacity:1;transform:none}
+  .dirx__row{grid-template-columns:28px minmax(0,1fr) 72px;grid-template-areas:"n t ph" "n s ph";gap:4px 14px;padding:18px 0;align-items:start}
+  .dirx__row::before,.dirx__arr{display:none}
+  .dirx__n{grid-area:n;padding-top:4px}.dirx__t{grid-area:t;font-size:19px}.dirx__s{grid-area:s;font-size:13px}
+  .dirx__ph{grid-area:ph;position:static;width:72px;aspect-ratio:1;transform:none;clip-path:none}
+  .dirx__ph img{transform:none}
+  .dirx__row:hover .dirx__t{color:var(--text-strong)}.dirx__row:hover .dirx__s{opacity:1}
 }
 
 /* Шапка: «Продукция» — главная кнопка меню (28.09.2026) */
@@ -174,3 +181,5 @@ img.jb-story__av{width:38px;height:38px;border-radius:50%;object-fit:cover;margi
   .mega-seg__label{margin-bottom:8px}.mega-dir+.mega-dir{margin-top:12px}
   .mega-seg .mega-title{font-size:15px;margin-bottom:4px;padding:0}
 }
+.dirx:hover .dirx__row:not(:hover) .dirx__t,.dirx:hover .dirx__row:not(:hover) .dirx__s{opacity:.35}
+@media (max-width:800px){.dirx:hover .dirx__row:not(:hover) .dirx__t,.dirx:hover .dirx__row:not(:hover) .dirx__s{opacity:1}}
