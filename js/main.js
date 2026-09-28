@@ -243,22 +243,15 @@
 })();
 
 
-// Вкладки блока «Продукция» (вариант 4): все карточки в разметке, скрипт только переключает
+// Блок «Продукция»: фильтр по группам, все карточки остаются в разметке
 (function () {
-  document.querySelectorAll("[data-tabs]").forEach(function (box) {
-    var tabs = box.querySelectorAll('[role="tab"]');
-    function pick(t) {
-      tabs.forEach(function (x) {
-        var on = x === t;
-        x.setAttribute("aria-selected", on); x.tabIndex = on ? 0 : -1;
-        document.getElementById(x.getAttribute("aria-controls")).hidden = !on;
-      });
-    }
-    tabs.forEach(function (t, i) {
-      t.addEventListener("click", function () { pick(t); });
-      t.addEventListener("keydown", function (e) {
-        var d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
-        if (d) { var n = tabs[(i + d + tabs.length) % tabs.length]; pick(n); n.focus(); }
+  document.querySelectorAll("[data-filter]").forEach(function (box) {
+    var btns = box.querySelectorAll("[data-f]"), cards = box.querySelectorAll("[data-g]");
+    btns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var f = b.getAttribute("data-f");
+        btns.forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+        cards.forEach(function (c) { c.hidden = f !== "all" && c.getAttribute("data-g") !== f; });
       });
     });
   });

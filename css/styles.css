@@ -132,58 +132,27 @@ img.jb-story__av{width:38px;height:38px;border-radius:50%;object-fit:cover;margi
 .rv-st{display:inline-block;padding:2px 8px;border-radius:10px;font-size:12px;background:var(--steel-100)}
 .rv-approved{background:#EEF5F0;color:#2F7A4E}.rv-review{background:var(--ochre-100);color:var(--ochre-800)}
 
-/* Блок «Продукция»: четыре варианта раскладки (28.09.2026, референсы в Design Atlas) */
-.dg1,.dg2,.dg3__row,.dg4__panel{--gap:24px}
-.dg1 img,.dg2 img,.dg3 img,.dg4 img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
-.dg1 img.is-drawing,.dg2 img.is-drawing,.dg3 img.is-drawing,.dg4 img.is-drawing{object-fit:contain;padding:12%;background:var(--white)}
-/* 1 */
-.dg1{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap)}
-.dg1__ph{margin:0;aspect-ratio:4/3;overflow:hidden;border-radius:var(--radius);background:var(--steel-100)}
-.dg1__label{margin:20px 0 10px;font-family:var(--font-display);font-size:20px;font-weight:500;letter-spacing:-.01em;color:var(--text-strong)}
-.dg1__list{list-style:none;margin:0;padding:0;border-top:1px solid var(--border-hair)}
-.dg1__list a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--border-hair);font-size:15px;line-height:1.35;color:var(--text-body);transition:color .2s}
-.dg1__list .arr{color:var(--ochre-600);transition:transform .2s}
-.dg1__list a:hover{color:var(--ochre-700)}.dg1__list a:hover .arr{transform:translateX(4px)}
-/* 2 */
-.dg2{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:36px var(--gap)}
-.dg2__card{display:flex;flex-direction:column;color:var(--text-strong)}
-.dg2__ph{display:block;aspect-ratio:4/3;overflow:hidden;border-radius:var(--radius);background:var(--steel-100);margin-bottom:14px}
-.dg2__g{font-family:var(--font-tech);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre-700);margin-bottom:6px}
-.dg2__t{font-family:var(--font-display);font-size:17px;font-weight:500;line-height:1.25;letter-spacing:-.01em}
-.dg2__card:hover img{transform:scale(1.04)}.dg2__card:hover .dg2__t{color:var(--ochre-700)}
-.dg2__card--cta{justify-content:space-between;padding:28px;background:var(--navy-800);border-radius:var(--radius);aspect-ratio:4/3}
-.dg2__card--cta .dg2__t{color:var(--white);font-size:20px}.dg2__more{font-size:14px;color:var(--ochre-400)}
-.dg2__card--cta:hover .dg2__t{color:var(--white)}
-/* 3 */
-.dg3{display:flex;flex-direction:column;gap:48px}
-.dg3__head{display:flex;align-items:baseline;gap:12px;padding-bottom:14px;margin-bottom:20px;border-bottom:1px solid var(--border-hair)}
-.dg3__label{font-family:var(--font-display);font-size:22px;font-weight:500;letter-spacing:-.01em;color:var(--text-strong)}
-.dg3__count{font-family:var(--font-tech);font-size:13px;color:var(--text-faint)}
-.dg3__row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
-.dg3__card{display:flex;flex-direction:column;gap:12px;color:var(--text-strong)}
-.dg3__ph{display:block;aspect-ratio:3/2;overflow:hidden;border-radius:var(--radius);background:var(--steel-100)}
-.dg3__t{font-size:16px;font-weight:500;line-height:1.35}
-.dg3__card:hover img{transform:scale(1.04)}.dg3__card:hover .dg3__t{color:var(--ochre-700)}
-/* 4 */
+/* Блок «Продукция» на главной: фильтр по группам над сеткой карточек (28.09.2026) */
 .dg4__tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
-.dg4__tabs button{padding:10px 18px;border:1px solid var(--border-strong);border-radius:var(--radius);background:none;font:inherit;font-size:15px;font-weight:500;color:var(--text-body);cursor:pointer;transition:background .2s,color .2s}
+.dg4__tabs button{padding:10px 18px;border:1px solid var(--border-strong);border-radius:var(--radius);background:none;font:inherit;font-size:15px;font-weight:500;color:var(--text-body);cursor:pointer;white-space:nowrap;transition:background .2s,color .2s,border-color .2s}
 .dg4__tabs button:hover{border-color:var(--navy-800)}
-.dg4__tabs button[aria-selected="true"]{background:var(--navy-800);border-color:var(--navy-800);color:var(--white)}
-.dg4__panel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
-.dg4__panel[hidden]{display:none}
-.dg4__card{display:flex;flex-direction:column;gap:10px;color:var(--text-strong)}
+.dg4__tabs button[aria-pressed="true"]{background:var(--navy-800);border-color:var(--navy-800);color:var(--white)}
+.dg4__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:36px 24px}
+.dg4__card{display:flex;flex-direction:column;gap:8px;color:var(--text-strong);animation:dg4in .35s ease both}
+.dg4__card[hidden]{display:none}
 .dg4__ph{display:block;aspect-ratio:4/3;overflow:hidden;border-radius:var(--radius);background:var(--steel-100);margin-bottom:6px}
-.dg4__t{font-family:var(--font-display);font-size:19px;font-weight:500;letter-spacing:-.01em;line-height:1.25}
+.dg4__ph img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.dg4__ph img.is-drawing{object-fit:contain;padding:12%;background:var(--white)}
+.dg4__t{font-family:var(--font-display);font-size:18px;font-weight:500;letter-spacing:-.01em;line-height:1.25}
 .dg4__s{font-size:14px;line-height:1.5;color:var(--text-muted)}
 .dg4__card:hover img{transform:scale(1.04)}.dg4__card:hover .dg4__t{color:var(--ochre-700)}
-@media (prefers-reduced-motion:reduce){.dg1 img,.dg2 img,.dg3 img,.dg4 img{transition:none}}
-@media (max-width:1100px){.dg1,.dg2{grid-template-columns:repeat(2,minmax(0,1fr))}.dg2{gap:28px 16px}}
+@keyframes dg4in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.dg4__card{animation:none}.dg4__ph img{transition:none}}
+@media (max-width:1100px){.dg4__grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:800px){
-  .dg1{grid-template-columns:1fr;gap:40px}.dg1__ph{aspect-ratio:16/9}
-  .dg2__t{font-size:15px}.dg2__card--cta{padding:18px}.dg2__card--cta .dg2__t{font-size:16px}
-  .dg3__row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 calc(var(--gutter) * -1);padding:0 var(--gutter)}
-  .dg3__card{flex:0 0 72%;scroll-snap-align:start}
-  .dg4__panel{grid-template-columns:1fr}
+  .dg4__tabs{flex-wrap:nowrap;overflow-x:auto;margin:0 calc(var(--gutter) * -1) 20px;padding:0 var(--gutter);scrollbar-width:none}
+  .dg4__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 14px}
+  .dg4__t{font-size:15px}.dg4__s{display:none}
 }
 
 /* Шапка: «Продукция» — главная кнопка меню (28.09.2026) */

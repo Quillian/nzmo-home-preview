@@ -25,20 +25,17 @@ Allow: /
 Disallow: /poisk/
 Disallow: /spasibo/
 Disallow: /_todo/
-Disallow: /_varianty-produktsii/
 
 User-agent: Yandex
 Disallow: /poisk/
 Disallow: /spasibo/
 Disallow: /_todo/
-Disallow: /_varianty-produktsii/
 Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&yclid&roistat
 
 User-agent: *
 Disallow: /poisk/
 Disallow: /spasibo/
 Disallow: /_todo/
-Disallow: /_varianty-produktsii/
 
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Sitemap: https://nzmo-home.vercel.app/sitemap.xml
