@@ -48,7 +48,7 @@
       box.querySelectorAll("select,input").forEach(function (f) { if (f.value) parts.push(f.dataset.label.replace(/,.*$/, "").toLowerCase() + ": " + f.value); });
       var s = parts.join(" · ");
       if (form) form.querySelector("[name=config]").value = s;
-      out.textContent = s ? "Ваш запрос: " + s + ". Итоговую стоимость назовём в КП." : base;
+      out.textContent = s ? "Ваш запрос: " + s + ". Итоговую цену назовём в КП." : base;
     }
     box.addEventListener("change", upd); box.addEventListener("input", upd);
   });
