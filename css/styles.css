@@ -131,3 +131,25 @@ img.jb-story__av{width:38px;height:38px;border-radius:50%;object-fit:cover;margi
 .rv-bad{color:#B23A2E;font-weight:600}.rv-ok{color:#2F7A4E}
 .rv-st{display:inline-block;padding:2px 8px;border-radius:10px;font-size:12px;background:var(--steel-100)}
 .rv-approved{background:#EEF5F0;color:#2F7A4E}.rv-review{background:var(--ochre-100);color:var(--ochre-800)}
+
+/* Главная: направления — список слева, фото выбранного справа (28.09.2026) */
+.dirs__grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,96px);align-items:start}
+.dirs__list{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--border-hair)}
+.dirs__list a{display:grid;grid-template-columns:44px 1fr 24px;align-items:baseline;gap:16px;padding:18px 0;border-top:1px solid var(--border-hair);color:var(--text-strong);transition:color var(--transition)}
+.dirs__list .n{font-family:var(--font-tech);font-size:13px;color:var(--text-faint)}
+.dirs__list .t{font-family:var(--font-display);font-size:clamp(18px,1.5vw,24px);font-weight:500;letter-spacing:-.01em;line-height:1.25}
+.dirs__list .s{display:none}
+.dirs__list .arr{color:var(--ochre-600);opacity:0;transform:translateX(-6px);transition:opacity var(--transition),transform var(--transition)}
+.dirs__list a:hover,.dirs__list a.is-active{color:var(--ochre-700)}
+.dirs__list a:hover .arr,.dirs__list a.is-active .arr{opacity:1;transform:none}
+.dirs__view{position:sticky;top:calc(var(--header-h) + 24px)}
+.dirs__view figure{margin:0}
+.dirs__view img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius);background:var(--steel-100)}
+.dirs__view .is-drawing img{object-fit:contain;padding:32px;background:var(--steel-050)}
+.dirs__view figcaption{margin-top:16px;font-size:15px;line-height:1.5;color:var(--text-muted);max-width:420px}
+@media (max-width:800px){
+  .dirs__grid{grid-template-columns:1fr}.dirs__view{display:none}
+  .dirs__list a{grid-template-columns:32px 1fr 20px;padding:16px 0}
+  .dirs__list .s{display:block;margin-top:6px;font-family:var(--font-text);font-size:14px;font-weight:400;letter-spacing:0;color:var(--text-muted)}
+  .dirs__list .arr{opacity:1;transform:none}
+}
