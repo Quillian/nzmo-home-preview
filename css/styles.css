@@ -153,3 +153,11 @@ img.jb-story__av{width:38px;height:38px;border-radius:50%;object-fit:cover;margi
   .dirs__list .s{display:block;margin-top:6px;font-family:var(--font-text);font-size:14px;font-weight:400;letter-spacing:0;color:var(--text-muted)}
   .dirs__list .arr{opacity:1;transform:none}
 }
+
+/* Шапка: «Продукция» — главная кнопка меню (28.09.2026) */
+.nav .nav__prod{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid var(--border-strong);border-radius:var(--radius);color:var(--navy-800);font-weight:600}
+.nav .nav__prod svg{fill:var(--ochre-500)}
+.nav .nav__prod:hover,.nav>li.is-open .nav__prod{border-color:var(--navy-800);background:var(--navy-800);color:var(--white)}
+.nav__chev{width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform var(--transition)}
+.nav>li.is-open .nav__chev{transform:translateY(1px) rotate(-135deg)}
+@media (max-width:1279px){.nav .nav__prod{border:0;padding:12px 0;border-bottom:1px solid var(--border-soft);border-radius:0}.nav .nav__prod:hover,.nav>li.is-open .nav__prod{background:none;color:var(--navy-800)}.nav__chev{margin-left:auto}}

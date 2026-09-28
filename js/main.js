@@ -10,17 +10,25 @@
     burger.setAttribute("aria-expanded", header.classList.contains("is-open"));
   });
   document.querySelectorAll(".nav > li.has-mega").forEach(function (li) {
-    var btn = li.querySelector("button");
+    var btn = li.querySelector("button"), timer = null, pinned = false;
+    var desk = function () { return window.innerWidth > 1279; };
+    function set(open) {
+      clearTimeout(timer);
+      if (!open) pinned = false;
+      li.classList.toggle("is-open", open);
+      btn.setAttribute("aria-expanded", open);
+    }
     btn.addEventListener("click", function (e) {
       e.preventDefault();
-      var open = li.classList.toggle("is-open");
-      btn.setAttribute("aria-expanded", open);
+      if (pinned) { set(false); return; }
+      pinned = true; set(true);
     });
-    li.addEventListener("mouseenter", function () { if (window.innerWidth > 1279) li.classList.add("is-open"); });
-    li.addEventListener("mouseleave", function () { if (window.innerWidth > 1279) li.classList.remove("is-open"); });
-  });
-  document.addEventListener("click", function (e) {
-    if (!e.target.closest(".nav")) document.querySelectorAll(".nav > li.is-open").forEach(function (li) { li.classList.remove("is-open"); });
+    li.addEventListener("mouseenter", function () { if (desk()) set(true); });
+    li.addEventListener("mouseleave", function () {
+      if (desk() && !pinned) timer = setTimeout(function () { set(false); }, 1000);
+    });
+    document.addEventListener("click", function (e) { if (!li.contains(e.target)) set(false); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && li.classList.contains("is-open")) { set(false); btn.focus(); } });
   });
 
   // Формы: MVP без бэкенда — валидация и переход на /spasibo/.
