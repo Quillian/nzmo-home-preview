@@ -12,11 +12,35 @@
   document.querySelectorAll(".nav > li.has-mega").forEach(function (li) {
     var btn = li.querySelector("button"), timer = null, pinned = false;
     var desk = function () { return window.innerWidth > 1279; };
+    // знак на кнопке: три рейки логотипа складываются в три линии меню и обратно
+    var REST = [[0,525,0,295,399,0,399,230],[332,525,332,295,731,0,731,230],[664,525,664,295,1063,0,1063,230]];
+    var LINE = [[60,130,60,20,1003,20,1003,130],[60,317,60,207,1003,207,1003,317],[60,504,60,394,1003,394,1003,504]];
+    var polys = li.querySelectorAll(".nav__mark polygon"), p = 0, goal = 0, raf = 0;
+    var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function paint() {
+      polys.forEach(function (pg, i) {
+        var t = Math.min(1, Math.max(0, (p - i * 0.12) / 0.76));
+        t = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        pg.setAttribute("points", REST[i].map(function (v, j) { return Math.round(v + (LINE[i][j] - v) * t); }).join(" "));
+      });
+    }
+    function tick() {
+      p += (goal > p ? 1 : -1) * 16 / 420;
+      if ((goal - p) * (goal ? 1 : -1) <= 0) p = goal;
+      paint();
+      raf = p !== goal ? requestAnimationFrame(tick) : 0;
+    }
+    function morph(on) {
+      goal = on ? 1 : 0;
+      if (still) { p = goal; paint(); return; }
+      if (!raf) raf = requestAnimationFrame(tick);
+    }
     function set(open) {
       clearTimeout(timer);
       if (!open) pinned = false;
       li.classList.toggle("is-open", open);
       btn.setAttribute("aria-expanded", open);
+      morph(open);
     }
     btn.addEventListener("click", function (e) {
       e.preventDefault();
