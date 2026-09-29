@@ -175,3 +175,6 @@ img.jb-story__av{width:38px;height:38px;border-radius:50%;object-fit:cover;margi
   .mega-seg__label{margin-bottom:8px}.mega-dir+.mega-dir{margin-top:12px}
   .mega-seg .mega-title{font-size:15px;margin-bottom:4px;padding:0}
 }
+
+/* Фото на страницах продукции: вертикальные кадры каталога режутся в 3:2 — держим верхнюю часть с потолком (29.09.2026) */
+.photos .photo img{object-position:50% 30%}
