@@ -4,6 +4,13 @@
   "outputDirectory": ".",
   "trailingSlash": true,
   "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/katalog/",
+      "destination": "/files/nzmo-katalog-2026.pdf",
+      "permanent": false
+    }
+  ],
   "headers": [
     {
       "source": "/(img|fonts|files)/(.*)",
