@@ -30,7 +30,7 @@ User-agent: Yandex
 Disallow: /poisk/
 Disallow: /spasibo/
 Disallow: /_todo/
-Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&yclid&roistat
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&utm_banner&yclid&roistat&etext
 
 User-agent: *
 Disallow: /poisk/
