@@ -125,19 +125,41 @@
     });
   });
 
-  // Грильято: калькулятор расхода по коэффициентам завода
+  // Калькуляторы комплектующих: строки [позиция, шт, кг за шт, м³ за шт] → таблица с итогом
+  function calcTable(rows, list) {
+    var f = function (x, d) { return x ? x.toFixed(d).replace(".", ",") : "—"; }, W = 0, V = 0, N = 0;
+    rows.innerHTML = list.filter(function (x) { return x[1] > 0; }).map(function (x) {
+      var w = x[1] * (x[2] || 0), v = x[1] * (x[3] || 0); W += w; V += v; N += x[1];
+      return "<tr><td>" + x[0] + "</td><td>" + x[1] + "</td><td>" + f(w, 1) + "</td><td>" + f(v, 3) + "</td></tr>";
+    }).join("") + "<tr class=\"gc-total\"><td>Итого</td><td>" + N + "</td><td>" + f(W, 1) + "</td><td>" + f(V, 3) + "</td></tr>";
+  }
+  function calcNum(box, n) { return parseFloat((box.querySelector("[name=" + n + "]").value || "0").replace(",", ".")) || 0; }
+  var up = function (x) { return Math.ceil(x - 1e-9); };
+
+  // Грильято: расход по коэффициентам завода, вес и объём деталей — как у Грильято-Сибирь
   document.querySelectorAll("[data-gcalc]").forEach(function (box) {
     var R = JSON.parse(box.dataset.gcalc), rows = box.querySelector("[data-gc-rows]"), cta = box.querySelector("[data-gc-cta]");
-    function v(n) { return parseFloat((box.querySelector("[name=" + n + "]").value || "0").replace(",", ".")) || 0; }
     function upd() {
-      var s = v("s"), p = v("p"), c = box.querySelector("[name=c]").value, h = box.querySelector("[name=h]").value, z = v("z");
-      var r = R[c], sf = s * (1 + z / 100), up = function (x) { return Math.ceil(x - 1e-9); };
-      var list = [["Профиль «мама» 0,6 м, h" + h, up(sf * r.mama)], ["Профиль «папа» 0,6 м, h" + h, up(sf * r.papa)],
-        ["Несущая 2,4 м", up(sf * r.n24)], ["Поперечная 1,2 м", up(sf * r.n12)], ["Поперечная 0,6 м", up(sf * r.n06)],
-        ["Соединитель", up(sf * r.soed)], ["Подвес", up(sf * r.podves)], ["Уголок пристенный 3 м", up(p / 3)]];
-      rows.innerHTML = list.filter(function (x) { return x[1] > 0; }).map(function (x) { return "<tr><td>" + x[0] + "</td><td>" + x[1] + " шт</td></tr>"; }).join("")
-        + "<tr><td>Модулей 600×600, ориентир</td><td>" + up(sf / 0.36) + " шт</td></tr>";
+      var s = calcNum(box, "s"), p = calcNum(box, "p"), c = box.querySelector("[name=c]").value, h = box.querySelector("[name=h]").value, z = calcNum(box, "z");
+      var r = R[c], sf = s * (1 + z / 100);
+      calcTable(rows, [["Профиль «мама» 0,6 м, h" + h, up(sf * r.mama), 0.04665, 0.00013], ["Профиль «папа» 0,6 м, h" + h, up(sf * r.papa), 0.04665, 0.00013],
+        ["Несущая 2,4 м", up(sf * r.n24), 0.23328, 0.0006], ["Поперечная 1,2 м", up(sf * r.n12), 0.11664, 0.0003], ["Поперечная 0,6 м", up(sf * r.n06), 0.04665, 0.00013],
+        ["Соединитель", up(sf * r.soed)], ["Подвес", up(sf * r.podves)], ["Уголок пристенный 3 м", up(p / 3), 0.168, 0.0005]]);
+      rows.insertAdjacentHTML("afterbegin", "<tr><td>Решёток 600×600</td><td>" + up(sf / 0.36) + "</td><td>—</td><td>—</td></tr>");
       cta.href = "/servis/raschet-proekta/?config=" + encodeURIComponent("грильято " + c + "×" + c + ", h" + h + ", площадь " + s + " м², периметр " + p + " м");
+    }
+    box.addEventListener("input", upd); box.addEventListener("change", upd); upd();
+  });
+
+  // Т24 (типа армстронг): расход на 1 м² и вес деталей — как у Грильято-Сибирь, система Т-24/30
+  document.querySelectorAll("[data-t24calc]").forEach(function (box) {
+    var rows = box.querySelector("[data-gc-rows]"), cta = box.querySelector("[data-gc-cta]");
+    function upd() {
+      var s = calcNum(box, "s"), p = calcNum(box, "p"), t = box.querySelector("[name=t]").value, sf = s * (1 + calcNum(box, "z") / 100);
+      calcTable(rows, [["Плита 600×600, " + t, up(sf * 2.78), 0, 0.0054], ["Т-профиль несущий 3,6 м", up(sf * 0.23), 0.923, 0.0026],
+        ["Т-профиль поперечный 1,2 м", up(sf * 1.4), 0.3, 0.0008], ["Т-профиль поперечный 0,6 м", up(sf * 1.4), 0.147, 0.0004],
+        ["Подвес", up(sf * 1.3)], ["Уголок пристенный 3 м", up(p / 3), 0.156, 0.00054]]);
+      cta.href = "/servis/raschet-proekta/?config=" + encodeURIComponent("потолок Т24, плита " + t + ", площадь " + s + " м², периметр " + p + " м");
     }
     box.addEventListener("input", upd); box.addEventListener("change", upd); upd();
   });

@@ -16,7 +16,7 @@
 <link rel="preload" href="/fonts/GolosText-600-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts/fonts.css?v=2e4a4992">
 <link rel="stylesheet" href="/css/template_styles.css?v=3b7c97bd">
-<link rel="stylesheet" href="/css/styles.css?v=38cb17d1">
+<link rel="stylesheet" href="/css/styles.css?v=36ea469c">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://nzmo-home.vercel.app/#org","name":"НЗМО — Новосибирский завод металлообработки","alternateName":"НЗМО","url":"https://nzmo-home.vercel.app/","logo":"https://nzmo-home.vercel.app/img/logo/04_gorizont_gold-navy.svg","telephone":"+7 (383) 234-91-52","email":"zakaz@nzmo.ru","address":{"@type":"PostalAddress","addressLocality":"Новосибирск","streetAddress":"ул. Челюскинцев, 30/2, офис 410","addressCountry":"RU"},"contactPoint":{"@type":"ContactPoint","telephone":"+7 (383) 234-91-52","contactType":"sales","areaServed":"RU","availableLanguage":"ru"},"foundingDate":"2021","taxID":"5406813782","brand":[{"@type":"Brand","name":"AIRWOOD"},{"@type":"Brand","name":"ALFAPANEL"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"\u0413\u043b\u0430\u0432\u043d\u0430\u044f","item":"https://nzmo-home.vercel.app/"},{"@type":"ListItem","position":2,"name":"\u041f\u043e\u0442\u043e\u043b\u043e\u0447\u043d\u044b\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u044f","item":"https://nzmo-home.vercel.app/potolki/"},{"@type":"ListItem","position":3,"name":"\u041f\u043e\u0442\u043e\u043b\u043a\u0438 \u0442\u0438\u043f\u0430 \u0410\u0440\u043c\u0441\u0442\u0440\u043e\u043d\u0433 (\u042224)","item":"https://nzmo-home.vercel.app/potolki/armstrong-t24/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"\u041f\u043e\u0442\u043e\u043b\u043e\u043a \u0442\u0438\u043f\u0430 \u0430\u0440\u043c\u0441\u0442\u0440\u043e\u043d\u0433 (\u042224) \u0441 \u043c\u0438\u043d\u0435\u0440\u0430\u043b\u044c\u043d\u043e\u0439 \u043f\u043b\u0438\u0442\u043e\u0439","description":"\u041f\u043e\u0442\u043e\u043b\u043e\u043a \u0442\u0438\u043f\u0430 \u0430\u0440\u043c\u0441\u0442\u0440\u043e\u043d\u0433 \u043e\u0442 \u041d\u0417\u041c\u041e: \u043a\u0430\u0440\u043a\u0430\u0441 \u042224 Premium 32 \u043c\u043c \u0434\u0435\u0440\u0436\u0438\u0442 12,5 \u043a\u0433/\u043c\u00b2 \u043f\u043e \u043f\u0440\u043e\u0442\u043e\u043a\u043e\u043b\u0443, \u043f\u043b\u0438\u0442\u044b 600\u00d7600 \u0438 600\u00d71200, 6\u201340 \u043c\u043c. \u0422\u0440\u0438 \u0442\u0438\u043f\u0430 \u043f\u043b\u0438\u0442 \u0432 \u043e\u0434\u043d\u043e\u043c \u043a\u0430\u0440\u043a\u0430\u0441\u0435.","brand":{"@type":"Brand","name":"\u041d\u0417\u041c\u041e"},"manufacturer":{"@id":"https://nzmo-home.vercel.app/#org"},"category":"\u041f\u043e\u0442\u043e\u043b\u043e\u0447\u043d\u044b\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u044f","url":"https://nzmo-home.vercel.app/potolki/armstrong-t24/","image":"https://nzmo-home.vercel.app/img/v01_hero-1600.webp"}</script>
@@ -128,13 +128,31 @@
   </div>
 </section>
 
-
+<section class="section section--page" id="kalkulyator">
+  <div class="container">
+    <div class="kicker"><span class="n">3</span><span class="l">Калькулятор</span></div>
+    <div class="section-head"><div><h2 class="t-2">Сколько комплектующих нужно</h2><p class="lead">Плиты, Т-профили, подвесы и уголок на ваш потолок, с весом и объёмом для доставки.</p></div></div>
+    <div class="gc" data-t24calc>
+      <div class="gc-in">
+        <label><span>Площадь потолка, м²</span><input type="number" name="s" min="1" step="0.1" value="100" inputmode="decimal"></label>
+        <label><span>Периметр помещения, м</span><input type="number" name="p" min="0" step="0.1" value="40" inputmode="decimal"></label>
+        <label><span>Плита</span><select name="t"><option>минераловолоконная</option><option>минераловатная</option><option>металлическая кассета</option></select></label>
+        <label><span>Запас на подрезку, %</span><input type="number" name="z" min="0" max="20" step="1" value="5" inputmode="numeric"></label>
+      </div>
+      <div class="gc-out">
+        <table class="t"><thead><tr><th>Позиция</th><th>Кол-во, шт</th><th>Вес, кг</th><th>Объём, м³</th></tr></thead><tbody data-gc-rows></tbody></table>
+        <p class="small muted" style="margin-top:12px">Вес плит зависит от типа и толщины, его назовём в спецификации. Если в помещении колонны, ниши или перепады, берите запас 5–12 %.</p>
+        <a class="btn btn--navy" data-gc-cta href="/servis/raschet-proekta/">Посчитать стоимость <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
 <section class="section section--page">
   <div class="container">
-    <div class="kicker"><span class="n">3</span><span class="l">Плиты</span></div>
+    <div class="kicker"><span class="n">4</span><span class="l">Плиты</span></div>
     <div class="section-head"><div><h2 class="t-2">Один каркас — три материала</h2><p class="lead">Подсистема, подвесы и монтаж не меняются, плиты можно сочетать в одном поле.</p></div></div>
     <div class="grid g3"><article class="card"><div class="card__photo"><img src="/img/t24_fiber-800.webp" alt="Минераловолоконная" loading="lazy"></div><div class="card__body"><div class="card__title">Минераловолоконная</div><p>Базовая плита Т24: с тиснением, лёгкая, самая недорогая из трёх.</p><div class="rows" style="margin-top:8px"><div style="padding:10px 0"><div class="tech">Поверхность</div><div class="small" style="margin-top:2px;color:var(--text-strong)">тиснение, перфорация под заказ</div></div><div style="padding:10px 0"><div class="tech">Акустика</div><div class="small" style="margin-top:2px;color:var(--text-strong)">αw 0,45, звукоизоляция 34 дБ</div></div><div style="padding:10px 0"><div class="tech">Влажность</div><div class="small" style="margin-top:2px;color:var(--text-strong)">до 90 % RH</div></div><div style="padding:10px 0"><div class="tech">Класс</div><div class="small" style="margin-top:2px;color:var(--text-strong)">КМ1 (02495/26)</div></div></div></div></article><article class="card"><div class="card__photo"><img src="/img/t24_wool-800.webp" alt="Минераловатная" loading="lazy"></div><div class="card__body"><div class="card__title">Минераловатная</div><p>Плита под акустику: поглощает звук сильнее остальных и не боится влажности.</p><div class="rows" style="margin-top:8px"><div style="padding:10px 0"><div class="tech">Поверхность</div><div class="small" style="margin-top:2px;color:var(--text-strong)">лицевая окрашенная, тыльная — вата</div></div><div style="padding:10px 0"><div class="tech">Акустика</div><div class="small" style="margin-top:2px;color:var(--text-strong)">поглощение до 100 %</div></div><div style="padding:10px 0"><div class="tech">Влажность</div><div class="small" style="margin-top:2px;color:var(--text-strong)">до 100 % RH</div></div><div style="padding:10px 0"><div class="tech">Класс</div><div class="small" style="margin-top:2px;color:var(--text-strong)">КМ1 (02495/26)</div></div></div></div></article><article class="card"><div class="card__photo"><img src="/img/t24_steel-800.webp" alt="Металлическая кассета" loading="lazy"></div><div class="card__body"><div class="card__title">Металлическая кассета</div><p>Металл в том же каркасе: кассету можно мыть и дезинфицировать, красить в любой RAL и перфорировать.</p><div class="rows" style="margin-top:8px"><div style="padding:10px 0"><div class="tech">Металл</div><div class="small" style="margin-top:2px;color:var(--text-strong)">оцинкованная сталь 0,32–1,2 мм</div></div><div style="padding:10px 0"><div class="tech">Покрытие</div><div class="small" style="margin-top:2px;color:var(--text-strong)">порошковое по RAL, перфорация по чертежу</div></div><div style="padding:10px 0"><div class="tech">Влажность</div><div class="small" style="margin-top:2px;color:var(--text-strong)">любая, моется</div></div><div style="padding:10px 0"><div class="tech">Класс</div><div class="small" style="margin-top:2px;color:var(--text-strong)">НГ / КМ0 без покрытия, КМ1 окрашенная</div></div></div></div></article></div>
   </div>
@@ -144,7 +162,7 @@
 <section class="section section--white">
   <div class="container split split--even" style="align-items:center">
 <figure style="margin:0;background:var(--surface-page);border:1px solid var(--border-hair);border-radius:2px;padding:32px"><img src="/img/t24-1000.png" alt="Потолок типа армстронг — состав системы, схема" loading="lazy"></figure>    <div>
-      <div class="kicker"><span class="n">4</span><span class="l">Состав</span></div>
+      <div class="kicker"><span class="n">5</span><span class="l">Состав</span></div>
       <h2 class="t-2">Из чего состоит потолок типа армстронг</h2>
 <div class="nlist" style="margin-top:28px"><div><span class="n">1</span><div class="x">Плита</div></div><div><span class="n">2</span><div class="x">Основной профиль Т24 3600</div></div><div><span class="n">3</span><div class="x">Поперечные профили 600 и 1200</div></div><div><span class="n">4</span><div class="x">Пристенный уголок</div></div><div><span class="n">5</span><div class="x">Подвес EUR 500 мм, 2-дырочный</div></div></div><p class="small muted" style="margin-top:20px">Узлы, разрезы и ведомость элементов — в альбоме «Подсистемы Т24». <a href="/proektirovshchikam/uzly-i-albomy/">Получить альбом →</a></p>    </div>
   </div>
@@ -153,7 +171,7 @@
 
 <section class="section section--page" id="montage">
   <div class="container">
-    <div class="kicker"><span class="n">5</span><span class="l">Монтаж</span></div>
+    <div class="kicker"><span class="n">6</span><span class="l">Монтаж</span></div>
     <div class="section-head"><div><h2 class="t-2">Монтаж потолка типа армстронг в 3 шага</h2><p class="lead">Инструкция входит в комплект поставки. Бригаду консультируем, шеф-монтаж — по запросу.</p></div></div>
     <ol class="steps steps--3"><li><img src="/img/montage_t24_1-800.png" alt="Монтаж потолка типа армстронг, шаг 1: Периметр и подвесы" loading="lazy"><div class="h"><span class="n">1</span><span class="l">Периметр и подвесы</span></div><p>Крепим пристенный уголок по периметру, европодвесы — к перекрытию с шагом по расчёту</p></li><li><img src="/img/montage_t24_2-800.png" alt="Монтаж потолка типа армстронг, шаг 2: Каркас" loading="lazy"><div class="h"><span class="n">2</span><span class="l">Каркас</span></div><p>Основные профили 3600 вешаем на подвесы, поперечные 1200 и 600 заводим в просечки. Получается сетка 600×600 или 600×1200</p></li><li><img src="/img/montage_t24_3-800.png" alt="Монтаж потолка типа армстронг, шаг 3: Плиты" loading="lazy"><div class="h"><span class="n">3</span><span class="l">Плиты</span></div><p>Плиты укладываем в ячейки каркаса. Любую плиту можно снять рукой снизу</p></li></ol>
   </div>
@@ -162,7 +180,7 @@
 
 <section class="section section--white">
   <div class="container">
-    <div class="kicker"><span class="n">6</span><span class="l">На объектах</span></div>
+    <div class="kicker"><span class="n">7</span><span class="l">На объектах</span></div>
     <div class="section-head"><h2 class="t-2">Потолки типа армстронг на объектах</h2><a class="btn btn--outline btn--sm" href="/obekty/">Все объекты <span class="arr">→</span></a></div>
     <div class="photos">
 <figure class="photo"><img src="/img/v01_gen-1600.webp" alt="Потолок типа армстронг — Плита в видимом каркасе, Т24 · минераловолоконная плита · профиль высотой 32 мм" loading="lazy"><figcaption><b>Плита в видимом каркасе</b>Минераловолоконная плита в каркасе Т24. Каркас остаётся на виду и формирует модульную сетку 600×600 мм, плиту можно снять вручную — доступ к запотолочному пространству за несколько секунд.<div class="meta">Т24 · минераловолоконная плита · профиль высотой 32 мм</div></figcaption></figure><figure class="photo"><img src="/img/v01_t1-1200.webp" alt="Потолок типа армстронг — Офисный коридор, Подвесная система Т24" loading="lazy"><figcaption><b>Офисный коридор</b>Металлическая кассета: перфорированная и гладкая в одном поле, моется, встроенные светильники<div class="meta">Подвесная система Т24</div></figcaption></figure><figure class="photo"><img src="/img/v01_t2-1200.webp" alt="Потолок типа армстронг — Лифтовый холл, Подвесная система Т24" loading="lazy"><figcaption><b>Лифтовый холл</b>Минераловатная плита, световой короб в одной плоскости с потолком<div class="meta">Подвесная система Т24</div></figcaption></figure><figure class="photo"><img src="/img/v01_t3-1200.webp" alt="Потолок типа армстронг — Аптека, Подвесная система Т24" loading="lazy"><figcaption><b>Аптека</b>Минераловолоконная плита с тиснением в торговом зале<div class="meta">Подвесная система Т24</div></figcaption></figure>    </div>
@@ -171,7 +189,7 @@
 
 <section class="section section--page">
   <div class="container">
-    <div class="kicker"><span class="n">7</span><span class="l">Цена и сроки</span></div>
+    <div class="kicker"><span class="n">8</span><span class="l">Цена и сроки</span></div>
     <h2 class="t-2" style="margin-bottom:32px">Цена потолка типа армстронг и сроки</h2>
     <div class="grid g3">
       <div class="note"><span class="k">Цена</span>Считаем под объект: система, металл, покрытие, объём и доборы. В КП цена за м² системы в сборе — отдельной строкой.<div class="rows" style="margin-top:14px"><div class="small" style="padding:8px 0">тип плиты</div><div class="small" style="padding:8px 0">серия подсистемы</div><div class="small" style="padding:8px 0">площадь и периметр</div><div class="small" style="padding:8px 0">количество подвесов по высоте</div></div></div>
@@ -185,7 +203,7 @@
 <section class="section section--white">
   <div class="container split" style="align-items:start">
     <div>
-      <div class="kicker"><span class="n">8</span><span class="l">Документы</span></div>
+      <div class="kicker"><span class="n">9</span><span class="l">Документы</span></div>
       <h2 class="t-2">Сертификаты и протоколы</h2>
       <div class="doclist" style="margin-top:28px"><a class="doc" href="/dokumenty/sertifikaty/"><span><span class="t">RU С-RU.ПБ68.В.02495/26</span><span class="d">Обязательный сертификат пожарной безопасности на подвесную систему Т24 с минеральной плитой. Класс КМ1.</span></span><span class="k">до 08.02.2031</span></a><a class="doc" href="/dokumenty/sertifikaty/"><span><span class="t">Протокол № 0341-122.01-26.БРН.04 от 13.04.2026</span><span class="d">Протокол испытаний ИЛЦ «ВЭЛМИ»: несущая способность каркаса Т24 серии Premium 12,5 кг/м² при равномерной нагрузке.</span></span><span class="k">документ</span></a></div>
     </div>
@@ -195,7 +213,7 @@
 
 <section class="section section--page" id="faq">
   <div class="container">
-    <div class="kicker"><span class="n">9</span><span class="l">Вопросы</span></div>
+    <div class="kicker"><span class="n">10</span><span class="l">Вопросы</span></div>
     <div class="section-head"><h2 class="t-2">Вопросы и ответы: потолок типа армстронг</h2></div>
     <div class="faq">
       <details open><summary><span class="n">1</span><span>Это оригинальный Armstrong?</span><span class="pm" aria-hidden="true"></span></summary><div class="a">Нет. «Армстронг» — общепринятое название потолков с видимым каркасом Т24. Мы поставляем подсистему Т24 серии Premium и плиты трёх типов комплектом на объект.</div></details>
@@ -290,6 +308,6 @@
   <p>Сайт использует файлы cookie для работы форм и статистики посещений. Нажимая «Принять», вы соглашаетесь с их использованием. <a href="/ispolzovanie-cookie/">Подробнее</a></p>
   <button type="button" class="btn btn--ochre btn--sm" data-cookie-ok>Принять</button>
 </div>
-<script src="/js/main.js?v=5db21107" defer></script>
+<script src="/js/main.js?v=403b59be" defer></script>
 </body>
 </html>
