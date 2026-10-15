@@ -471,3 +471,44 @@ img.jb-story__av{width:38px;height:38px;border-radius:50%;object-fit:cover;margi
 .header .mega2 .mega2__solotxt a.btn--navy:hover{background:var(--navy-700)}
 .header .mega2 .mega2__solotxt a.btn--outline{color:var(--text-strong)}
 .header .mega2 .mega2__solotxt a.btn--outline:hover{border-color:var(--navy-800)}
+
+/* Цена и сроки строкой под характеристиками (вместо отдельного блока, 15.10.2026) */
+.terms{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:20px;border:1px solid var(--border-hair);border-top:2px solid var(--ochre-500);border-radius:var(--radius);background:var(--surface-page)}
+.terms>div{display:flex;flex-direction:column;gap:4px;padding:16px 20px}
+.terms>div+div{border-left:1px solid var(--border-hair)}
+.terms .k{font-family:var(--font-tech);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted)}
+.terms b{font-family:var(--font-display);font-size:17px;font-weight:500;color:var(--text-strong)}
+.terms .n{font-size:13px;color:var(--text-muted)}
+@media (max-width:900px){.terms{grid-template-columns:repeat(2,minmax(0,1fr))}.terms>div:nth-child(3){border-left:0}.terms>div:nth-child(n+3){border-top:1px solid var(--border-hair)}}
+@media (max-width:480px){.terms{grid-template-columns:1fr}.terms>div+div{border-left:0;border-top:1px solid var(--border-hair)}}
+
+/* Виды системы рендерами (грильято, рейка), 15.10.2026 */
+.kinds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.kinds--3,.kinds--6{grid-template-columns:repeat(3,minmax(0,1fr))}
+.kinds__i{display:flex;flex-direction:column;gap:8px;color:var(--text-body)}
+a.kinds__i:hover{color:var(--text-body)}a.kinds__i:hover .kinds__t{color:var(--ochre-700)}
+.kinds__ph{position:relative;display:block;aspect-ratio:4/3;overflow:hidden;border-radius:8px;background:#F4F3F1}
+.kinds__ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+a.kinds__i:hover .kinds__ph img{transform:scale(1.04)}
+.kinds__tag{position:absolute;left:12px;top:12px;height:26px;display:inline-flex;align-items:center;padding:0 10px;border-radius:13px;background:rgba(255,255,255,.92);font-size:12px;font-weight:600;color:var(--text-strong)}
+.kinds__tag.is-stock{background:var(--navy-800);color:var(--white)}
+.kinds__t{margin-top:6px;font-family:var(--font-display);font-size:18px;font-weight:500;line-height:1.25;color:var(--text-strong);min-height:2.5em}
+.kinds__d{font-size:14px;line-height:1.5}
+.kinds-vs{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:40px}
+.kinds-vs__i{margin:0;display:flex;flex-direction:column;border:1px solid var(--border-hair);border-radius:10px;overflow:hidden;background:var(--white)}
+.kinds-vs__i.is-ours{border-color:var(--ochre-500);box-shadow:0 0 0 1px var(--ochre-500)}
+.kinds-vs__ph{position:relative;aspect-ratio:16/10;background:#F4F3F1}
+.kinds-vs__ph img{width:100%;height:100%;object-fit:cover}
+.kinds-vs__ph .viz,.kinds__ph .viz{position:absolute;right:12px;bottom:12px;border-color:rgba(27,45,66,.25);color:var(--text-muted);background:rgba(255,255,255,.85)}
+.kinds-vs figcaption{padding:20px 24px 24px}
+.kinds-vs figcaption b{display:block;font-family:var(--font-display);font-size:20px;font-weight:500;color:var(--text-strong);margin-bottom:10px}
+.kinds-vs ul{list-style:none;display:flex;flex-direction:column;gap:6px;font-size:14.5px}
+.kinds-vs li::before{content:"— ";color:var(--ochre-600)}
+.kinds-vs__vs{position:absolute;left:50%;top:calc(31% - 24px);z-index:2;transform:translateX(-50%);display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--navy-800);color:var(--white);font-family:var(--font-display);font-size:16px}
+@media (max-width:1100px){.kinds,.kinds--3,.kinds--6{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.kinds,.kinds--3,.kinds--6,.kinds-vs{grid-template-columns:1fr}.kinds__t{min-height:0}.kinds-vs__vs{display:none}}
+/* одиночный раздел меню: фото на всю панель, подпись поверх снизу (без блока ссылок) */
+@media (min-width:1280px){.mega2__tile--solo{flex:1;min-height:320px}}
+.mega2__tile--solo::after{background:linear-gradient(0deg,rgba(11,20,32,.78) 0%,rgba(11,20,32,.25) 38%,rgba(11,20,32,0) 60%)}
+.header .mega2 .mega2__tile--solo>.mega2__cap{position:absolute;left:24px;right:24px;bottom:22px;top:auto;z-index:1;display:flex;flex-direction:column;gap:10px;max-width:40em;font-size:16px;font-weight:500;line-height:1.45}
+.mega2__cap i{font-style:normal;font-weight:600;font-size:14px;color:var(--ochre-300)}
