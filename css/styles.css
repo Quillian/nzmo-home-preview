@@ -437,3 +437,18 @@ img.jb-story__av{width:38px;height:38px;border-radius:50%;object-fit:cover;margi
 .pt-hero--deep{background:#0E1116}
 .pt-hero--deep .pt-hero__img{left:auto;right:0;top:0;height:100%;width:auto;min-width:0;max-width:none;object-fit:contain;object-position:right bottom}
 @media (max-width:800px){.pt-hero--deep .pt-hero__img{width:100%;height:400px;object-fit:cover;object-position:92% 0}}
+/* мега-меню 15.10.2026 (2): панель заполняет высоту левого списка, сетка по числу подразделов */
+@media (min-width:1280px){
+  .mega2>.mega2__panes{display:flex;flex-direction:column}
+  .mega2__pane.is-active{display:flex;flex-direction:column;gap:12px;flex:1;min-height:0}
+  .mega2__banner{flex:none;height:128px}
+  .mega2__pane--solo .mega2__banner{flex:1;height:auto;min-height:320px}
+  .mega2__grid{flex:1;min-height:0;margin-top:0;grid-auto-rows:1fr}
+  .mega2__grid--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mega2__grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .mega2__grid--4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mega2__grid--5,.mega2__grid--6{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .mega2__tile{height:auto;min-height:150px}
+  .mega2__tile>span{font-size:15px;left:16px;right:16px;top:14px}
+}
+@media (min-width:1280px){.mega2__tile img,.mega2__banner img{position:absolute;inset:0}}
