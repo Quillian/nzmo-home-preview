@@ -270,7 +270,7 @@ img.jb-story__av{width:38px;height:38px;border-radius:50%;object-fit:cover;margi
 .rev__foot a{font-size:14px;color:#2B6CD4}
 .rev__src{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
 .rev__date{font-size:13px;color:var(--text-muted)}
-.lg{display:block;height:22px;width:auto}.lg--icon{height:40px;width:40px}
+.lg{display:block;height:20px;width:auto}.ratings__i .lg{height:26px}
 .ratings{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:40px}
 .ratings__i{display:flex;align-items:center;gap:14px;padding:14px 22px 14px 16px;background:var(--white);border-radius:14px;color:var(--text-strong);box-shadow:0 1px 0 rgba(27,45,66,.04)}
 .ratings__i:hover{color:var(--text-strong);box-shadow:var(--shadow-card)}
@@ -292,3 +292,8 @@ img.jb-story__av{width:38px;height:38px;border-radius:50%;object-fit:cover;margi
   .svc{grid-template-columns:1fr}.svc__i{min-height:240px}.revs{grid-template-columns:1fr}
   .price--hero{width:100%;justify-content:center}
 }
+
+/* Выравнивание в сетках карточек (владелец 15.10.2026): заголовки в 1 и 2 строки — текст под ними начинается на одном уровне */
+.grid .card__title,.reco__grid .reco__title,.dcards .dcard .t,.dg4__t,.usp__c:nth-child(n+4) .usp__t{min-height:2.6em}
+.svc__d{min-height:4.5em}
+@media (max-width:640px){.grid .card__title,.reco__grid .reco__title,.dcards .dcard .t,.dg4__t,.usp__c .usp__t,.svc__d{min-height:0}}
