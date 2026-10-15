@@ -239,6 +239,55 @@
     var qs = new URLSearchParams(location.search).get("q"); if (qs) { input.value = qs; }
   }
 
+  // Попапы видов (грильято, рейка): вариант × цвет × вид, ленивые картинки, расчёт с выбранной конфигурацией
+  document.querySelectorAll("[data-kdlg]").forEach(function (dlg) {
+    var st = { v: "0", c: dlg.dataset.c, w: "m", t: "ch" };
+    function on(el, key) { var x = el.dataset[key]; return x === undefined || x === "*" || x === st[key]; }
+    function sync() {
+      dlg.querySelectorAll(".kd__fig").forEach(function (f) {
+        var show = on(f, "v") && on(f, "c") && f.dataset.w === st.w;
+        f.hidden = !show;
+        if (show) { var im = f.querySelector("img[data-src]"); if (im) { im.src = im.dataset.src; im.removeAttribute("data-src"); } }
+      });
+      dlg.querySelectorAll(".kd__price").forEach(function (e) { e.hidden = e.dataset.v !== st.v; });
+      dlg.querySelectorAll(".kd__pane").forEach(function (e) { e.hidden = !(e.dataset.t === st.t && on(e, "v")); });
+      dlg.querySelectorAll(".kd__chips button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.v === st.v); });
+      dlg.querySelectorAll(".kd__sw button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.c === st.c); if (b.dataset.c === st.c) { var l = dlg.querySelector("[data-cl]"); if (l) l.textContent = b.dataset.clLabel; } });
+      dlg.querySelectorAll(".kd__views button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.w === st.w); });
+      dlg.querySelectorAll(".kd__tabs button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.t === st.t); });
+      var viz = dlg.querySelector(".kd__viz"); if (viz) viz.hidden = st.w === "plan" || st.w === "sec";
+    }
+    dlg.addEventListener("click", function (e) {
+      var b = e.target.closest("button,[data-kd-cta]");
+      if (e.target === dlg) { dlg.close(); return; }   // клик по подложке
+      if (!b) return;
+      if (b.hasAttribute("data-kd-close")) { dlg.close(); return; }
+      if (b.closest(".kd__chips")) st.v = b.dataset.v;
+      else if (b.closest(".kd__sw")) st.c = b.dataset.c;
+      else if (b.closest(".kd__views")) st.w = b.dataset.w;
+      else if (b.closest(".kd__tabs")) st.t = b.dataset.t;
+      else if (b.hasAttribute("data-kd-cta")) {
+        e.preventDefault();
+        var cfg = dlg.querySelector('[data-cfg][data-v="' + st.v + '"]').value;
+        var cl = dlg.querySelector("[data-cl]"); if (cl) cfg += ", " + cl.textContent;
+        var form = document.querySelector("#cta form[data-lead]");
+        if (form) {
+          var i = form.querySelector("[name=config]"), ec = form.querySelector("[data-config-echo]");
+          if (i) i.value = cfg; if (ec) { ec.textContent = "Считаем: " + cfg + "."; ec.hidden = false; }
+        }
+        dlg.close();
+        var c = document.getElementById("cta"); if (c) { c.scrollIntoView({ behavior: "smooth" }); var n = c.querySelector("[name=name]"); if (n) setTimeout(function () { n.focus({ preventScroll: true }); }, 500); }
+        return;
+      }
+      sync();
+    });
+    dlg.addEventListener("close", function () { if (location.hash === "#" + dlg.id) history.replaceState(null, "", location.pathname + location.search); });
+    dlg._open = function () { sync(); dlg.showModal(); };
+  });
+  function openKd(id) { var d = document.getElementById(id); if (d && d._open) { d._open(); if (location.hash !== "#" + id) history.replaceState(null, "", "#" + id); } }
+  document.querySelectorAll("[data-kd]").forEach(function (a) { a.addEventListener("click", function (e) { e.preventDefault(); openKd(a.dataset.kd); }); });
+  if (/^#kd-/.test(location.hash)) openKd(location.hash.slice(1));
+
   // Мега-меню: слева направление — справа его панель с превью
   document.querySelectorAll("[data-mega]").forEach(function (m) {
     var links = m.querySelectorAll(".mega2__nav a[data-pane]"), panes = m.querySelectorAll(".mega2__pane"), t = null;
