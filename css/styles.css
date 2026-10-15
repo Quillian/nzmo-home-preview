@@ -452,3 +452,22 @@ img.jb-story__av{width:38px;height:38px;border-radius:50%;object-fit:cover;margi
   .mega2__tile>span{font-size:15px;left:16px;right:16px;top:14px}
 }
 @media (min-width:1280px){.mega2__tile img,.mega2__banner img{position:absolute;inset:0}}
+/* мега-меню (3): вместо баннера — строка-шапка раздела с кнопкой «Смотреть все», плитки крупнее */
+.mega2__head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:2px 2px 14px;border-bottom:1px solid var(--border-soft)}
+.header .mega2 a.mega2__title{display:block;padding:0;border:0;font-family:var(--font-display);font-size:21px;font-weight:500;letter-spacing:-.01em;line-height:1.2;color:var(--text-strong);white-space:normal}
+.header .mega2 a.mega2__title:hover{color:var(--ochre-700)}
+.header .mega2 a.mega2__allbtn{display:inline-flex;align-items:center;gap:10px;flex:none;height:40px;padding:0 16px;border:1px solid var(--border-strong);border-radius:var(--radius);font-size:14px;font-weight:600;color:var(--text-strong);white-space:nowrap;transition:background var(--transition),color var(--transition),border-color var(--transition)}
+.header .mega2 a.mega2__allbtn:hover{background:var(--navy-800);border-color:var(--navy-800);color:var(--white)}
+.mega2__cnt{display:grid;place-items:center;min-width:22px;height:22px;padding:0 6px;border-radius:11px;background:var(--surface-page);font-family:var(--font-tech);font-size:12px;color:var(--text-muted)}
+.mega2__allbtn:hover .mega2__cnt{background:rgba(255,255,255,.16);color:var(--white)}
+.mega2__solo{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px;flex:1;min-height:0}
+.mega2__tile--solo{min-height:300px}
+.mega2__solotxt{display:flex;flex-direction:column;justify-content:center;gap:22px}
+.mega2__solotxt p{font-size:16px;line-height:1.55;color:var(--text-body)}
+.mega2__solotxt .btn-row{flex-direction:column;align-items:stretch}
+@media (min-width:1280px){.mega2__pane.is-active{gap:14px}}
+.header .mega2 .mega2__solotxt a.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:46px;padding:0 20px;border:1px solid var(--border-strong);border-radius:var(--radius);font-size:15px;font-weight:600;white-space:nowrap}
+.header .mega2 .mega2__solotxt a.btn--navy{background:var(--navy-800);border-color:var(--navy-800);color:var(--white)}
+.header .mega2 .mega2__solotxt a.btn--navy:hover{background:var(--navy-700)}
+.header .mega2 .mega2__solotxt a.btn--outline{color:var(--text-strong)}
+.header .mega2 .mega2__solotxt a.btn--outline:hover{border-color:var(--navy-800)}
