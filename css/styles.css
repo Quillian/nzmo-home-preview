@@ -512,3 +512,5 @@ a.kinds__i:hover .kinds__ph img{transform:scale(1.04)}
 .mega2__tile--solo::after{background:linear-gradient(0deg,rgba(11,20,32,.78) 0%,rgba(11,20,32,.25) 38%,rgba(11,20,32,0) 60%)}
 .header .mega2 .mega2__tile--solo>.mega2__cap{position:absolute;left:24px;right:24px;bottom:22px;top:auto;z-index:1;display:flex;flex-direction:column;gap:10px;max-width:40em;font-size:16px;font-weight:500;line-height:1.45}
 .mega2__cap i{font-style:normal;font-weight:600;font-size:14px;color:var(--ochre-300)}
+.mega2__ic{flex:none;width:34px;height:34px;mix-blend-mode:multiply}
+.kinds__t{min-height:0}
