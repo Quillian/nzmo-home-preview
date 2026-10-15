@@ -216,6 +216,11 @@
     });
   }
 
+  // Подписи типов в результатах поиска; служебные страницы не показываем
+  var KIND = { product: "Продукция", solution: "Решение", solutions: "Решения", "case": "Объект", cases: "Объекты", article: "Статья", articles: "Журнал", docs: "Документы", faq: "Вопросы", partners: "Партнёрам", role: "Партнёрам", materials: "Материалы", about: "О заводе", news: "Новости", contacts: "Контакты", legal: "Документы" };
+  var SKIP = { search: 1, thanks: 1, notfound: 1 };
+  var kindOf = function (r) { return KIND[r.k] || "Страница"; };
+
   // Поиск по search.json
   var sbox = document.querySelector("[data-search]");
   if (sbox) {
@@ -223,15 +228,56 @@
     function run() {
       var q = input.value.trim().toLowerCase();
       if (!idx || q.length < 2) { out.innerHTML = ""; return; }
-      var hits = idx.filter(function (r) { return ((r.t || "") + " " + (r.e || "")).toLowerCase().indexOf(q) >= 0; }).slice(0, 40);
+      var hits = idx.filter(function (r) { return !SKIP[r.k] && ((r.t || "") + " " + (r.e || "")).toLowerCase().indexOf(q) >= 0; }).slice(0, 40);
       out.innerHTML = hits.length ? hits.map(function (r) {
-        return '<li><div class="k">' + (r.k || "") + '</div><a href="' + r.u + '"><b>' + r.t + "</b></a><div class=\"small muted\">" + (r.e || "") + "</div></li>";
+        return '<li><div class="k">' + kindOf(r) + '</div><a href="' + r.u + '"><b>' + r.t + "</b></a><div class=\"small muted\">" + (r.e || "") + "</div></li>";
       }).join("") : "<li>Ничего не найдено</li>";
     }
     fetch("/search.json").then(function (r) { return r.json(); }).then(function (d) { idx = d; run(); });
     input.addEventListener("input", run);
     sbox.addEventListener("submit", function (e) { e.preventDefault(); run(); });
     var qs = new URLSearchParams(location.search).get("q"); if (qs) { input.value = qs; }
+  }
+
+  // Мега-меню: слева направление — справа его панель с превью
+  document.querySelectorAll("[data-mega]").forEach(function (m) {
+    var links = m.querySelectorAll(".mega2__nav a[data-pane]"), panes = m.querySelectorAll(".mega2__pane"), t = null;
+    function show(slug) {
+      links.forEach(function (a) { a.classList.toggle("is-active", a.dataset.pane === slug); });
+      panes.forEach(function (p) { p.classList.toggle("is-active", p.dataset.pane === slug); });
+    }
+    links.forEach(function (a) {
+      a.addEventListener("mouseenter", function () { clearTimeout(t); t = setTimeout(function () { show(a.dataset.pane); }, 80); });
+      a.addEventListener("mouseleave", function () { clearTimeout(t); });
+      a.addEventListener("focus", function () { show(a.dataset.pane); });
+    });
+  });
+
+  // Поиск в шапке: панель под шапкой, индекс search.json грузится при первом открытии
+  var hs = document.querySelector("[data-hsearch]"), hsBtn = document.querySelector("[data-search-open]");
+  if (hs && hsBtn) {
+    var hin = hs.querySelector("input"), hres = hs.querySelector("[data-hsearch-res]"), hidx = null;
+    var hrun = function () {
+      var q = hin.value.trim().toLowerCase();
+      if (!hidx || q.length < 2) { hres.innerHTML = ""; return; }
+      var hits = hidx.filter(function (r) { return !SKIP[r.k] && ((r.t || "") + " " + (r.e || "")).toLowerCase().indexOf(q) >= 0; });
+      hits.sort(function (a, b) { return ((b.t || "").toLowerCase().indexOf(q) >= 0) - ((a.t || "").toLowerCase().indexOf(q) >= 0); });
+      hres.innerHTML = hits.length ? hits.slice(0, 8).map(function (r) {
+        return '<li><a href="' + r.u + '"><span class="k">' + kindOf(r) + "</span><b>" + r.t + "</b></a></li>";
+      }).join("") + '<li class="hsearch__all"><a href="/poisk/?q=' + encodeURIComponent(q) + '">Все результаты: ' + hits.length + " →</a></li>"
+        : '<li class="hsearch__none">Ничего не нашли. Позвоните — подскажем</li>';
+    };
+    var hopen = function (on) {
+      hs.hidden = !on; hsBtn.setAttribute("aria-expanded", on);
+      if (!on) return;
+      hin.focus();
+      if (!hidx) fetch("/search.json").then(function (r) { return r.json(); }).then(function (d) { hidx = d; hrun(); });
+    };
+    hsBtn.addEventListener("click", function () { hopen(hs.hidden); });
+    hs.querySelector("[data-search-close]").addEventListener("click", function () { hopen(false); });
+    hin.addEventListener("input", hrun);
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !hs.hidden) { hopen(false); hsBtn.focus(); } });
+    document.addEventListener("click", function (e) { if (!hs.hidden && !hs.contains(e.target) && !hsBtn.contains(e.target)) hopen(false); });
   }
 
 
