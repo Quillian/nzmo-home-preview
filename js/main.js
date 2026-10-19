@@ -251,7 +251,9 @@
 
   // Попапы видов (грильято, рейка): вариант × цвет × вид, ленивые картинки, расчёт с выбранной конфигурацией
   document.querySelectorAll("[data-kdlg]").forEach(function (dlg) {
-    var st = { v: "0", c: dlg.dataset.c, w: "m", t: "ch" };
+    var ws = (dlg.dataset.ws || "m").split(","), wl = (dlg.dataset.wl || "").split("|");
+    var st = { v: "0", c: dlg.dataset.c, w: ws[0], t: "ch" };
+    function go(d) { st.w = ws[(ws.indexOf(st.w) + d + ws.length) % ws.length]; sync(); }
     function on(el, key) { var x = el.dataset[key]; return x === undefined || x === "*" || x === st[key]; }
     function sync() {
       dlg.querySelectorAll(".kd__fig").forEach(function (f) {
@@ -263,9 +265,10 @@
       dlg.querySelectorAll(".kd__pane").forEach(function (e) { e.hidden = !(e.dataset.t === st.t && on(e, "v")); });
       dlg.querySelectorAll(".kd__chips button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.v === st.v); });
       dlg.querySelectorAll(".kd__sw button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.c === st.c); if (b.dataset.c === st.c) { var l = dlg.querySelector("[data-cl]"); if (l) l.textContent = b.dataset.clLabel; } });
-      dlg.querySelectorAll(".kd__views button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.w === st.w); });
+      var wi = ws.indexOf(st.w), cap = dlg.querySelector("[data-kd-cap]"); if (cap) cap.textContent = wl[wi] || "";
+      dlg.querySelectorAll(".kd__dots i").forEach(function (d, k) { d.classList.toggle("is-on", k === wi); });
+      calc();
       dlg.querySelectorAll(".kd__tabs button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.t === st.t); });
-      var viz = dlg.querySelector(".kd__viz"); if (viz) viz.hidden = st.w === "plan" || st.w === "sec";
     }
     dlg.addEventListener("click", function (e) {
       var b = e.target.closest("button,[data-kd-cta]");
@@ -274,7 +277,8 @@
       if (b.hasAttribute("data-kd-close")) { dlg.close(); return; }
       if (b.closest(".kd__chips")) st.v = b.dataset.v;
       else if (b.closest(".kd__sw")) st.c = b.dataset.c;
-      else if (b.closest(".kd__views")) st.w = b.dataset.w;
+      else if (b.hasAttribute("data-kd-prev")) { go(-1); return; }
+      else if (b.hasAttribute("data-kd-next")) { go(1); return; }
       else if (b.closest(".kd__tabs")) st.t = b.dataset.t;
       else if (b.hasAttribute("data-kd-cta")) {
         e.preventDefault();
@@ -291,6 +295,26 @@
       }
       sync();
     });
+    // расход на площадь: «на 1 м²» × площадь, штуки округляем вверх
+    function calc() {
+      var inp = dlg.querySelector('.kd__pane:not([hidden]) [data-area]') || dlg.querySelector("[data-area]");
+      var a = Math.max(0, parseFloat(inp && inp.value) || 0);
+      dlg.querySelectorAll("[data-area]").forEach(function (i) { if (i !== inp) i.value = inp.value; });
+      dlg.querySelectorAll("[data-area-out]").forEach(function (o) { o.textContent = a.toLocaleString("ru-RU"); });
+      dlg.querySelectorAll("[data-rate]").forEach(function (td) {
+        var x = parseFloat(td.dataset.rate) * a, u = td.dataset.unit;
+        td.textContent = (u === "шт" ? Math.ceil(x) : Math.round(x * 10) / 10).toLocaleString("ru-RU") + " " + u;
+      });
+    }
+    dlg.addEventListener("input", function (e) { if (e.target.matches("[data-area]")) calc(); });
+    // листание галереи: клавиши ← → и свайп по картинке
+    dlg.addEventListener("keydown", function (e) { if (e.target.matches("input")) return; if (e.key === "ArrowLeft") go(-1); if (e.key === "ArrowRight") go(1); });
+    var stg = dlg.querySelector(".kd__stage"), sx = null;
+    if (stg) {
+      stg.addEventListener("pointerdown", function (e) { if (!e.target.closest("button")) sx = e.clientX; });
+      stg.addEventListener("pointerup", function (e) { if (sx === null) return; var dx = e.clientX - sx; sx = null; if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1); });
+      stg.addEventListener("dragstart", function (e) { e.preventDefault(); });
+    }
     dlg.addEventListener("close", function () { if (location.hash === "#" + dlg.id) history.replaceState(null, "", location.pathname + location.search); });
     // картинки с размерами, план и сечение лежат отдельным файлом — грузим при первом открытии
     var kst = dlg.querySelector("[data-kd-src]");

@@ -716,3 +716,42 @@ path.kd-sec{fill:none;stroke-width:3}
 .minst__self{font-size:15px;color:var(--on-deep-muted);text-decoration:underline;text-underline-offset:4px}
 .minst__self:hover{color:#fff}
 @media (max-width:900px){.minst__in{grid-template-columns:1fr}.minst__ph{min-height:0;aspect-ratio:16/10}}
+/* Попап видов, ред. 21.10.2026: размер окна не зависит от вкладки, преимущества — поверх картинки, галерея стрелками */
+.kd{height:min(860px,calc(100vh - 32px))}
+.kd__in{height:100%;max-height:none;grid-template-rows:minmax(0,1fr)}
+.kd__media{height:100%}
+.kd__stage{flex:1;aspect-ratio:auto;max-height:none;height:100%;overflow:hidden;touch-action:pan-y;user-select:none}
+.kd__info{height:100%;overflow-y:auto;gap:20px;padding:34px 34px 30px}
+.kd__s{margin-top:-8px}
+.kd__panes{min-height:0}
+.kd__badges{position:absolute;left:18px;top:18px;right:70px;z-index:3;list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.kd__badges li{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 12px;border-radius:15px;background:rgba(16,18,22,.55);backdrop-filter:blur(4px);color:#fff;font-size:13px}
+.kd__badges li::before{content:"";width:10px;height:6px;margin-top:-3px;border-left:2px solid var(--ochre-500);border-bottom:2px solid var(--ochre-500);transform:rotate(-45deg)}
+.kd__nav{position:absolute;top:50%;z-index:3;width:48px;height:48px;margin-top:-24px;border:0;border-radius:50%;background:rgba(255,255,255,.92);cursor:pointer;box-shadow:0 6px 18px -8px rgba(0,0,0,.5)}
+.kd__nav::before{content:"";position:absolute;left:50%;top:50%;width:10px;height:10px;border-left:2px solid var(--navy-900);border-bottom:2px solid var(--navy-900)}
+.kd__nav--prev{left:16px}.kd__nav--prev::before{transform:translate(-30%,-50%) rotate(45deg)}
+.kd__nav--next{right:16px}.kd__nav--next::before{transform:translate(-70%,-50%) rotate(-135deg)}
+.kd__nav:hover{background:#fff}
+.kd__cap{position:absolute;left:0;right:0;bottom:0;z-index:3;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 18px;background:linear-gradient(to top,rgba(0,0,0,.45),rgba(0,0,0,0));color:#fff;font-size:14px;pointer-events:none}
+.kd__dots{display:flex;gap:6px}
+.kd__dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.4)}
+.kd__dots i.is-on{background:var(--ochre-500)}
+.kd__fig--ph img{object-fit:cover}
+.kd__sw button{width:32px;height:32px}
+.kd-calc{display:flex;align-items:center;gap:10px;margin:18px 0 6px;font-size:14.5px;color:var(--text-body)}
+.kd-calc input{width:96px;height:40px;padding:0 12px;border:1px solid var(--border-strong);border-radius:var(--radius);font:inherit;font-size:16px;font-weight:600;color:var(--text-strong)}
+.kd-cons{width:100%;border-collapse:collapse;margin-top:10px;font-size:14.5px}
+.kd-cons th{padding:8px 0;text-align:right;font-family:var(--font-tech);font-size:11px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)}
+.kd-cons th:first-child,.kd-cons td:first-child{text-align:left}
+.kd-cons td{padding:11px 0;border-top:1px solid var(--border-hair);text-align:right;color:var(--text-body)}
+.kd-cons td:last-child{font-weight:600;color:var(--text-strong);padding-left:16px}
+@media (max-width:900px){
+  .kd{height:100dvh}
+  .kd__in{height:100dvh;grid-template-rows:auto;overflow-y:auto}
+  .kd__media,.kd__info{height:auto}
+  .kd__stage{flex:none;aspect-ratio:4/3;height:auto}
+  .kd__info{overflow:visible;padding:22px 18px 28px}
+  .kd__badges{left:12px;top:12px;right:60px;gap:6px}.kd__badges li{height:26px;font-size:12px;padding:0 10px}
+  .kd__nav{width:40px;height:40px;margin-top:-20px}
+}
+.kd__fig{background:#1F2226}.kd__fig--light{background:#F3F2EF}
