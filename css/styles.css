@@ -768,3 +768,16 @@ path.kd-sec{fill:none;stroke-width:3}
 .kd__cta .btn{width:100%;justify-content:center;height:54px;font-size:16px}
 .kd__call{margin:0;text-align:center;font-size:14.5px;color:var(--text-muted)}
 .kd__call a{color:var(--text-strong);font-weight:600;white-space:nowrap;text-decoration:none;border-bottom:1px solid var(--ochre-500)}
+
+.kd__call{display:flex;align-items:center;justify-content:center;gap:10px}
+.kd__msg{display:inline-flex;border:0!important;border-radius:50%;transition:transform .15s}
+.kd__msg:hover{transform:scale(1.08)}
+.kd__msg img{width:28px;height:28px;display:block}
+
+/* Мессенджеры рядом с формами (21.10.2026) */
+.msgr{display:flex;align-items:center;gap:10px;margin:0;font-size:14.5px;color:var(--text-muted)}
+.msgr__a{display:inline-flex;border-radius:50%;transition:transform .15s}
+.msgr__a:hover{transform:scale(1.08)}
+.msgr__a img{width:28px;height:28px;display:block}
+.cta2__msgr{justify-content:center}
+.cta-msgr{margin-top:14px}
