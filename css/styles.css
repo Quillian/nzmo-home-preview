@@ -647,3 +647,14 @@ path.kd-sec{fill:none;stroke-width:3}
 .cm-pro b{display:block;margin-bottom:6px;color:var(--text-strong)}
 .cm-pro p{margin:0;font-size:15px;line-height:1.55;color:var(--text-body)}
 @media (max-width:800px){.cm-pro{grid-template-columns:1fr}}
+/* Сборка по чертежу конструктора: общий вид с выносками слева, узлы A–I справа (реечные, 20.10.2026) */
+.asm{margin-top:28px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;align-items:start}
+.asm__ov{margin:0;position:sticky;top:96px}
+.asm__ov img{display:block;width:100%;height:auto}
+.asm__parts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.asm__p{margin:0}
+.asm__p img{display:block;width:100%;aspect-ratio:1/1;object-fit:contain;border:1px solid var(--border-hair);border-radius:var(--radius);background:#fff;padding:8px}
+.asm__p figcaption{margin-top:8px;display:flex;gap:8px;align-items:baseline;font-size:14px;line-height:1.35;color:var(--text-strong)}
+.asm__l{flex:none;font-family:var(--font-tech);font-weight:700;color:var(--ochre-700)}
+@media (max-width:900px){.asm{grid-template-columns:1fr}.asm__ov{position:static}}
+@media (max-width:560px){.asm__parts{grid-template-columns:1fr 1fr}}
