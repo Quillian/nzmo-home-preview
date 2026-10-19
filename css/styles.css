@@ -682,3 +682,17 @@ path.kd-sec{fill:none;stroke-width:3}
 @media (max-width:900px){.cta2__in{grid-template-columns:1fr}}
 .cta2__t{hyphens:manual;-webkit-hyphens:manual;overflow-wrap:normal}
 @media (max-width:640px){.cta2__t{font-size:30px}}
+/* Монтаж в 3 шага (21.10.2026): номер в охристом круге, крупный текст, тонкие разделители */
+.msteps{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 48px}
+.msteps li{position:relative;padding-top:28px;border-top:1px solid var(--border-hair)}
+.msteps__n{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--ochre-500);color:var(--navy-900);font-family:var(--font-display);font-size:20px;line-height:1}
+.msteps__t{display:block;margin-top:18px;font-family:var(--font-display);font-size:22px;font-weight:400;line-height:1.2;color:var(--text-strong)}
+.msteps p{margin:10px 0 0;font-size:17px;line-height:1.55;color:var(--text-body)}
+@media (max-width:900px){.msteps{grid-template-columns:1fr}}
+/* Монтаж силами завода — опция одной строкой, без плашки */
+.cm-opt{margin-top:36px;padding-top:20px;border-top:1px solid var(--border-hair);display:flex;flex-wrap:wrap;gap:12px 32px;align-items:baseline;justify-content:space-between}
+.cm-opt p{margin:0;font-size:15px;line-height:1.5;color:var(--text-muted);max-width:760px}
+.cm-opt__links{display:flex;flex-wrap:wrap;gap:8px 28px}
+.cm-opt__links a{font-size:15px;font-weight:600;color:var(--text-strong);text-decoration:underline;text-decoration-color:var(--ochre-500);text-underline-offset:4px}
+/* Узлы сборки без рамок */
+.asm__p img{border:0;padding:0;background:none}
