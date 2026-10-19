@@ -282,7 +282,16 @@
       sync();
     });
     dlg.addEventListener("close", function () { if (location.hash === "#" + dlg.id) history.replaceState(null, "", location.pathname + location.search); });
-    dlg._open = function () { sync(); dlg.showModal(); };
+    // картинки с размерами, план и сечение лежат отдельным файлом — грузим при первом открытии
+    var kst = dlg.querySelector("[data-kd-src]");
+    dlg._open = function () {
+      sync(); dlg.showModal();
+      if (!kst || !kst.dataset.kdSrc) return;
+      var url = kst.dataset.kdSrc; kst.removeAttribute("data-kd-src");
+      fetch(url).then(function (r) { return r.ok ? r.text() : Promise.reject(r.status); })
+        .then(function (html) { kst.insertAdjacentHTML("afterbegin", html); sync(); })
+        .catch(function () { kst.dataset.kdSrc = url; });   // повторим при следующем открытии
+    };
   });
   function openKd(id) { var d = document.getElementById(id); if (d && d._open) { d._open(); if (location.hash !== "#" + id) history.replaceState(null, "", "#" + id); } }
   document.querySelectorAll("[data-kd]").forEach(function (a) { a.addEventListener("click", function (e) { e.preventDefault(); openKd(a.dataset.kd); }); });

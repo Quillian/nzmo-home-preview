@@ -617,3 +617,7 @@ path.kd-sec{fill:none;stroke-width:3}
 @media (max-width:640px){.k3,.k3.kinds--4{grid-template-columns:1fr}.k3__more{opacity:1;transform:none}}
 .kd [hidden]{display:none!important}
 @media (max-width:900px){.kd__dims text{font-size:46px;stroke-width:9px}.kd__dims line{stroke-width:3.5}.kd__dims circle{r:5}}
+/* Список городов под картой поставок — текстом для людей и ИИ-ботов (19.10.2026) */
+.geo-list{margin-top:16px;font-size:14px;line-height:1.6;color:var(--on-deep-faint)}
+.geo-list summary{cursor:pointer;font-family:var(--font-tech);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre-500)}
+.geo-list p{margin-top:10px;max-width:980px}
