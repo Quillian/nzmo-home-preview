@@ -621,3 +621,11 @@ path.kd-sec{fill:none;stroke-width:3}
 .geo-list{margin-top:16px;font-size:14px;line-height:1.6;color:var(--on-deep-faint)}
 .geo-list summary{cursor:pointer;font-family:var(--font-tech);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre-500)}
 .geo-list p{margin-top:10px;max-width:980px}
+/* 152-ФЗ (19.10.2026): согласие отдельной галочкой, в баннере cookie — «Принять» и «Отклонить» */
+.form .consent{display:flex;flex-direction:row;gap:10px;align-items:flex-start;cursor:pointer;margin-top:4px}
+.form .consent>span{font:inherit;font-size:13px;line-height:1.5;letter-spacing:0;text-transform:none;color:var(--text-faint)}
+.form .consent input{flex:none;width:18px;height:18px;margin:1px 0 0;accent-color:var(--navy-800)}
+.cookie__btns{display:flex;flex-direction:column;gap:8px;flex:none}
+.cookie__no{background:transparent;color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.3)}
+.cookie__no:hover{color:#fff;border-color:rgba(255,255,255,.6)}
+@media (max-width:800px){.cookie__btns{flex-direction:row}}

@@ -64,12 +64,16 @@
       var digits = (phone.value || "").replace(/\D/g, "");
       if (digits.length < 10) { phone.setCustomValidity("Введите номер телефона"); phone.reportValidity(); return; }
       phone.setCustomValidity("");
+      var agree = form.querySelector("[name=agree]");   // согласие на обработку ПДн — отдельной галочкой (152-ФЗ ст. 9)
+      if (agree && !agree.checked) { agree.setCustomValidity("Отметьте согласие на обработку данных"); agree.reportValidity(); return; }
       var q = new URLSearchParams({ k: form.dataset.lead, p: location.pathname });
       try { sessionStorage.setItem("nzmo_lead", JSON.stringify({ kind: form.dataset.lead, page: location.pathname, name: form.name.value, config: (form.querySelector("[name=config]") || {}).value || "" })); } catch (err) {}
       location.href = "/spasibo/?" + q.toString();
     });
     var ph = form.querySelector("[name=phone]");
     if (ph) ph.addEventListener("input", function () { ph.setCustomValidity(""); });
+    var ag = form.querySelector("[name=agree]");
+    if (ag) ag.addEventListener("change", function () { ag.setCustomValidity(""); });
   });
 
   // Конфигуратор запроса: параметры собираются в скрытое поле config той же формы
@@ -192,11 +196,17 @@
   window.nzmoConsent = false;
   try { window.nzmoConsent = Date.now() - (+localStorage.getItem("nzmo-cookie") || 0) < YEAR; } catch (e) {}
   if (ck) {
-    if (!window.nzmoConsent) ck.hidden = false;
+    var declined = false; try { declined = !!sessionStorage.getItem("nzmo-cookie-no"); } catch (e) {}
+    if (!window.nzmoConsent && !declined) ck.hidden = false;
     ck.querySelector("[data-cookie-ok]").addEventListener("click", function () {
       try { localStorage.setItem("nzmo-cookie", String(Date.now())); } catch (e) {}
       ck.hidden = true; window.nzmoConsent = true;
       document.dispatchEvent(new CustomEvent("nzmo:consent"));
+    });
+    // отказ: счётчики не включаем, уведомление снова — при следующем визите после закрытия вкладки
+    ck.querySelector("[data-cookie-no]").addEventListener("click", function () {
+      try { sessionStorage.setItem("nzmo-cookie-no", "1"); } catch (e) {}
+      ck.hidden = true;
     });
   }
 

@@ -16,7 +16,7 @@
 <link rel="preload" href="/fonts/GolosText-600-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts/fonts.css?v=2e4a4992">
 <link rel="stylesheet" href="/css/template_styles.css?v=3b7c97bd">
-<link rel="stylesheet" href="/css/styles.css?v=f62eb811">
+<link rel="stylesheet" href="/css/styles.css?v=a4955384">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://nzmo-home.vercel.app/#org","name":"НЗМО — Новосибирский завод металлообработки","alternateName":"НЗМО","url":"https://nzmo-home.vercel.app/","logo":"https://nzmo-home.vercel.app/img/logo/04_gorizont_gold-navy.svg","telephone":"+7 (383) 234-91-52","email":"zakaz@nzmo.ru","address":{"@type":"PostalAddress","addressLocality":"Новосибирск","streetAddress":"ул. Челюскинцев, 30/2, офис 410","addressCountry":"RU"},"contactPoint":{"@type":"ContactPoint","telephone":"+7 (383) 234-91-52","contactType":"sales","areaServed":"RU","availableLanguage":"ru"},"foundingDate":"2021","taxID":"5406813782","brand":[{"@type":"Brand","name":"AIRWOOD"},{"@type":"Brand","name":"ALFAPANEL"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"\u0413\u043b\u0430\u0432\u043d\u0430\u044f","item":"https://nzmo-home.vercel.app/"},{"@type":"ListItem","position":2,"name":"\u041e\u0431\u044a\u0435\u043a\u0442\u044b","item":"https://nzmo-home.vercel.app/obekty/"},{"@type":"ListItem","position":3,"name":"\u0410\u044d\u0440\u043e\u043f\u043e\u0440\u0442 \u0438\u043c\u0435\u043d\u0438 \u041a\u0430\u043c\u043e\u0432\u0430","item":"https://nzmo-home.vercel.app/obekty/tomsk-airport/"}]}</script>
 </head>
@@ -220,7 +220,7 @@
       <div class="kicker"><span class="n"></span><span class="l">Заявка</span></div>
       <h2 class="t-2">Посчитать похожий проект</h2>
       <p class="lead" style="margin:14px 0 32px;max-width:520px">Пришлите план вашего объекта — подберём систему как на «Аэропорт имени Камова» и посчитаем комплектом.</p>
-      <form class="form" data-lead="quote" action="/spasibo/" method="get" novalidate>
+      <form class="form" data-lead="quote" action="/spasibo/" method="post" novalidate>
         <input type="hidden" name="page" value="/obekty/tomsk-airport/">
         <input type="hidden" name="config" value="">
         <div class="f2">
@@ -228,10 +228,10 @@
           <label><span>Телефон</span><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+7"></label>
         </div>
         <div class="captcha" aria-hidden="true"></div>
-        <div class="btn-row" style="margin-top:8px">
+        <label class="consent"><input type="checkbox" name="agree" required><span>Даю <a href="/soglasie-na-obrabotku-dannyh/">согласие на обработку персональных данных</a>, с <a href="/politika-konfidentsialnosti/">политикой</a> ознакомлен</span></label>
+        <div class="btn-row" style="margin-top:16px">
           <button type="submit" class="btn btn--navy">Посчитать проект</button>
 <a class="btn btn--outline" href="/files/nzmo-katalog-2026.pdf">Скачать каталог</a>        </div>
-        <div class="consent">Нажимая кнопку, вы соглашаетесь с <a href="/politika-konfidentsialnosti/">политикой конфиденциальности</a> и даёте <a href="/soglasie-na-obrabotku-dannyh/">согласие на обработку данных</a>.</div>
         <div class="small muted" data-config-echo hidden style="margin-top:12px"></div>
       </form>
     </div>
@@ -284,9 +284,9 @@
     </div>
   </div>
 </footer><div class="cookie" data-cookie hidden role="region" aria-label="Использование файлов cookie">
-  <p>Сайт использует файлы cookie для работы форм и статистики посещений. Нажимая «Принять», вы соглашаетесь с их использованием. <a href="/ispolzovanie-cookie/">Подробнее</a></p>
-  <button type="button" class="btn btn--ochre btn--sm" data-cookie-ok>Принять</button>
+  <p>Файлы cookie статистики и учёта обращений включим, только если вы нажмёте «Принять». <a href="/ispolzovanie-cookie/">Подробнее</a></p>
+  <div class="cookie__btns"><button type="button" class="btn btn--ochre btn--sm" data-cookie-ok>Принять</button><button type="button" class="btn btn--sm cookie__no" data-cookie-no>Отклонить</button></div>
 </div>
-<script src="/js/main.js?v=a6735446" defer></script>
+<script src="/js/main.js?v=6d860a74" defer></script>
 </body>
 </html>
