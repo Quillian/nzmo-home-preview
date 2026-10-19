@@ -635,3 +635,5 @@ path.kd-sec{fill:none;stroke-width:3}
 .cmp-list{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px}
 @media (max-width:900px){.cmp-list{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.cmp-list{grid-template-columns:1fr}}
+/* Узлы без рамок: линейные чертежи прямо на фоне секции, белое уходит через multiply */
+.nodes--bare .node img{background:none;border:0;padding:0;mix-blend-mode:multiply}
