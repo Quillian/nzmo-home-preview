@@ -427,6 +427,19 @@
     thumbs.forEach(function (t, k) { t.addEventListener("click", function (e) { e.preventDefault(); go(k); }); });
   }
 
+  // MAX без ссылки на профиль: по клику — номер для поиска в MAX и «Скопировать»
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-max-pop]");
+    document.querySelectorAll(".msgr__pop").forEach(function (p) { if (!b || p !== b.nextElementSibling) { p.hidden = true; if (p.previousElementSibling) p.previousElementSibling.setAttribute("aria-expanded", "false"); } });
+    if (b) { var p = b.nextElementSibling; p.hidden = !p.hidden; b.setAttribute("aria-expanded", String(!p.hidden)); e.preventDefault(); return; }
+    var c = e.target.closest("[data-copy]");
+    if (c) {
+      e.preventDefault();
+      var done = function () { c.textContent = "Скопировано"; setTimeout(function () { c.textContent = "Скопировать номер"; }, 1600); };
+      if (navigator.clipboard) navigator.clipboard.writeText(c.dataset.copy).then(done, done); else done();
+    }
+  });
+
   // Спасибо: показать, откуда пришла заявка
   var thanks = document.querySelector("[data-thanks]");
   if (thanks) {

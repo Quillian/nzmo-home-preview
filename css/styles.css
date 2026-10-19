@@ -781,3 +781,10 @@ path.kd-sec{fill:none;stroke-width:3}
 .msgr__a img{width:28px;height:28px;display:block}
 .cta2__msgr{justify-content:center}
 .cta-msgr{margin-top:14px}
+
+.msgr__wrap{position:relative;display:inline-flex}
+button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
+.msgr__pop{position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);z-index:20;display:flex;flex-direction:column;gap:6px;width:max-content;max-width:260px;padding:14px 16px;background:#fff;border:1px solid var(--border-hair);border-radius:10px;box-shadow:0 12px 30px -12px rgba(11,20,32,.35);font-size:13.5px;color:var(--text-body);text-align:left}
+.msgr__pop[hidden]{display:none}
+.msgr__pop b{font-size:16px;color:var(--text-strong)}
+.msgr__pop button{align-self:flex-start;padding:6px 12px;border:1px solid var(--border-strong);border-radius:6px;background:#fff;font:inherit;font-size:13px;font-weight:600;color:var(--text-strong);cursor:pointer}
