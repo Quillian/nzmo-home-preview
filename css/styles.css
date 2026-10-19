@@ -637,3 +637,13 @@ path.kd-sec{fill:none;stroke-width:3}
 @media (max-width:560px){.cmp-list{grid-template-columns:1fr}}
 /* Узлы без рамок: линейные чертежи прямо на фоне секции, белое уходит через multiply */
 .nodes--bare .node img{background:none;border:0;padding:0;mix-blend-mode:multiply}
+/* Статья журнала внутри блока страницы (20.10.2026): та же карточка, что в статьях, но вне .content */
+.sec-read{margin:36px 0 0;max-width:760px}
+.sec-read a{position:relative;display:grid;gap:4px;padding:16px 52px 16px 20px;border:1px solid var(--border-hair);border-left:3px solid var(--ochre-500);background:var(--white);color:var(--text-body);text-decoration:none;transition:border-color .15s,box-shadow .15s}
+.sec-read a:hover{border-color:var(--ochre-500);box-shadow:0 6px 18px rgba(27,45,66,.08)}
+/* Состав и монтаж одним блоком */
+.cm-sub{margin:56px 0 0;font-family:var(--font-display);font-size:24px;line-height:1.25;color:var(--text-strong)}
+.cm-pro{margin-top:32px;display:grid;grid-template-columns:1fr auto;gap:16px 32px;align-items:center;padding:24px 28px;background:var(--surface-page);border-left:3px solid var(--ochre-500)}
+.cm-pro b{display:block;margin-bottom:6px;color:var(--text-strong)}
+.cm-pro p{margin:0;font-size:15px;line-height:1.55;color:var(--text-body)}
+@media (max-width:800px){.cm-pro{grid-template-columns:1fr}}
