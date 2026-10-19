@@ -368,6 +368,42 @@
     thumbs.forEach(function (t, k) { t.addEventListener("click", function (e) { e.preventDefault(); go(k); }); });
   }
 
+  // Лента объектов: стрелки по карточке, перетаскивание мышью (тач и тачпад листают нативно)
+  document.querySelectorAll("[data-hs]").forEach(function (box) {
+    var tr = box.querySelector(".grid"), sec = box.closest("section");
+    var prev = sec.querySelector("[data-hs-prev]"), next = sec.querySelector("[data-hs-next]");
+    if (!tr) return;
+    function step() { var c = tr.children[0]; return c ? c.getBoundingClientRect().width + parseFloat(getComputedStyle(tr).columnGap || 0) : tr.clientWidth; }
+    function upd() {
+      var max = tr.scrollWidth - tr.clientWidth - 2;
+      if (prev) prev.disabled = tr.scrollLeft <= 2;
+      if (next) next.disabled = tr.scrollLeft >= max;
+      if (prev && next && max <= 0) { prev.hidden = next.hidden = true; }
+    }
+    if (prev) prev.addEventListener("click", function () { tr.scrollBy({ left: -step(), behavior: "smooth" }); });
+    if (next) next.addEventListener("click", function () { tr.scrollBy({ left: step(), behavior: "smooth" }); });
+    tr.addEventListener("scroll", upd, { passive: true }); window.addEventListener("resize", upd); upd();
+    var x0 = 0, s0 = 0, down = false, moved = false;
+    tr.addEventListener("pointerdown", function (e) { if (e.pointerType !== "mouse" || e.button !== 0) return; down = true; moved = false; x0 = e.clientX; s0 = tr.scrollLeft; });
+    window.addEventListener("pointermove", function (e) {
+      if (!down) return;
+      var dx = e.clientX - x0;
+      if (!moved && Math.abs(dx) > 5) { moved = true; tr.classList.add("is-drag"); }
+      if (moved) tr.scrollLeft = s0 - dx;
+    });
+    window.addEventListener("pointerup", function () {
+      if (!down) return; down = false;
+      if (moved) {   // доводим до ближайшей карточки и гасим клик по ссылке после перетаскивания
+        var st = step(), to = Math.round(tr.scrollLeft / st) * st;
+        tr.classList.remove("is-drag"); tr.scrollTo({ left: to, behavior: "smooth" });
+        var kill = function (ev) { ev.preventDefault(); ev.stopPropagation(); };
+        tr.addEventListener("click", kill, true);
+        setTimeout(function () { tr.removeEventListener("click", kill, true); }, 0);
+      }
+    });
+    tr.addEventListener("dragstart", function (e) { e.preventDefault(); });
+  });
+
   // Спасибо: показать, откуда пришла заявка
   var thanks = document.querySelector("[data-thanks]");
   if (thanks) {
