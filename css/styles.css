@@ -754,4 +754,11 @@ path.kd-sec{fill:none;stroke-width:3}
   .kd__badges{left:12px;top:12px;right:60px;gap:6px}.kd__badges li{height:26px;font-size:12px;padding:0 10px}
   .kd__nav{width:40px;height:40px;margin-top:-20px}
 }
-.kd__fig{background:#1F2226}.kd__fig--light{background:#F3F2EF}
+.kd__fig{background:#1F2226}.kd__fig--light,.kd__fig.kd__fig--svg{background:#F3F2EF}
+
+/* Заявка (21.10.2026): тёмный фон на всю ширину экрана, сливается с подвалом; форма начинается на уровне заголовка */
+.cta2{width:100%;max-width:none;border-radius:0;margin:0}
+.cta2__in{align-items:start;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,120px)}
+.cta2__form{margin-top:30px;align-self:start}
+.cta2__acc{margin-top:28px}
+.kd__note a{color:var(--text-strong);font-weight:600;text-decoration:underline;text-decoration-color:var(--ochre-500);text-underline-offset:3px}
