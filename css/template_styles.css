@@ -18,7 +18,7 @@
   --font-display:"Bounded","Arial Black",Impact,sans-serif;
   --font-text:"Golos Text","Helvetica Neue",system-ui,sans-serif;
   --font-tech:"Jura","Golos Text",sans-serif;
-  --container:1680px;--container-narrow:840px;--gutter:clamp(20px,3.5vw,72px);--header-h:76px;
+  --container:2080px;--container-narrow:840px;--gutter:clamp(20px,3.5vw,96px);--header-h:76px;
   --radius:2px;
   --shadow-card:0 1px 0 rgba(27,45,66,.05),0 14px 30px -22px rgba(27,45,66,.40);
   --scrim-bottom:linear-gradient(to top,rgba(11,20,32,.92) 0%,rgba(11,20,32,.42) 40%,rgba(11,20,32,0) 76%);
