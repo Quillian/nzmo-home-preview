@@ -629,3 +629,9 @@ path.kd-sec{fill:none;stroke-width:3}
 .cookie__no{background:transparent;color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.3)}
 .cookie__no:hover{color:#fff;border-color:rgba(255,255,255,.6)}
 @media (max-width:800px){.cookie__btns{flex-direction:row}}
+/* Состав по чертежу компонентов (реечные AIRWOOD, 20.10.2026) */
+.cmp-fig{margin:28px 0 0;background:#EFEFEF;border:1px solid var(--border-hair);border-radius:2px;padding:24px}
+.cmp-fig img{display:block;width:100%;height:auto}
+.cmp-list{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px}
+@media (max-width:900px){.cmp-list{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.cmp-list{grid-template-columns:1fr}}
