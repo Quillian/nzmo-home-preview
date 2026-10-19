@@ -658,26 +658,11 @@ path.kd-sec{fill:none;stroke-width:3}
 .asm__l{flex:none;font-family:var(--font-tech);font-weight:700;color:var(--ochre-700)}
 @media (max-width:900px){.asm{grid-template-columns:1fr}.asm__ov{position:static}}
 @media (max-width:560px){.asm__parts{grid-template-columns:1fr 1fr}}
-/* Лента объектов (20.10.2026): горизонтальная прокрутка с привязкой, стрелки, перетаскивание мышью */
-.hs-nav{display:flex;gap:8px;align-items:center}
-.hs-btn{width:40px;height:40px;display:inline-grid;place-items:center;border:1px solid var(--border-hair);background:var(--white);color:var(--navy-800);font-size:18px;cursor:pointer;transition:border-color .15s,opacity .15s}
-.hs-btn:hover{border-color:var(--navy-800)}
-.hs-btn:disabled{opacity:.35;cursor:default;border-color:var(--border-hair)}
-.hs .grid{display:grid;grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:calc((100% - 48px) / 3);gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px;cursor:grab;user-select:none}
-.hs .grid::-webkit-scrollbar{display:none}
-.hs .grid>*{scroll-snap-align:start}
-.hs .grid.is-drag{cursor:grabbing;scroll-snap-type:none}
-.hs .grid.is-drag a{pointer-events:none}
-.hs img{-webkit-user-drag:none}
-@media (max-width:1100px){.hs .grid{grid-auto-columns:calc((100% - 24px) / 2)}}
-@media (max-width:640px){.hs .grid{grid-auto-columns:85%}.hs-btn{display:none}}
 /* Широкие экраны (20.10.2026): контейнер до 2080 px — длинные тексты держим в 760 px */
 .cm-pro p,.gc-out .small,.photo figcaption{max-width:760px}
-/* Лента объектов выходит за правый край экрана: слева ровно по контейнеру, справа видна следующая карточка */
-.section:has(.hs){overflow-x:clip}
-.hs{--cw:calc(min(100vw, var(--container)) - 2 * var(--gutter));margin-right:calc(50% - 50vw)}
-.hs .grid{grid-auto-columns:calc((var(--cw) - 48px) / 3);padding-right:var(--gutter);scroll-padding-left:0}
-@media (max-width:1100px){.hs .grid{grid-auto-columns:calc((var(--cw) - 24px) / 2)}}
-@media (max-width:640px){.hs .grid{grid-auto-columns:85%}}
 .cm-pro__btns{display:flex;flex-direction:column;gap:10px;align-items:stretch}
 .cm-pro__btns .btn{justify-content:center;flex-wrap:wrap;gap:4px 8px}
+/* Сцена объектов на широких экранах (21.10.2026): кадр не выше экрана, миниатюры на всю ширину при любом их числе */
+.objects .stage{width:100%;max-height:min(70vh,760px)}
+@media (min-width:1101px){.filmstrip--fit{grid-template-columns:repeat(var(--n),minmax(0,1fr))}.filmstrip--fit .th{aspect-ratio:5/2}}
+@media (max-width:1100px){.filmstrip--fit{display:flex;overflow-x:auto;scrollbar-width:none}.filmstrip--fit::-webkit-scrollbar{display:none}.filmstrip--fit a{flex:0 0 38%}}
