@@ -762,3 +762,9 @@ path.kd-sec{fill:none;stroke-width:3}
 .cta2__form{margin-top:30px;align-self:start}
 .cta2__acc{margin-top:28px}
 .kd__note a{color:var(--text-strong);font-weight:600;text-decoration:underline;text-decoration-color:var(--ochre-500);text-underline-offset:3px}
+
+/* Карточка вида: одно главное действие, телефон строкой (21.10.2026) */
+.kd__cta{flex-direction:column;align-items:stretch;gap:12px}
+.kd__cta .btn{width:100%;justify-content:center;height:54px;font-size:16px}
+.kd__call{margin:0;text-align:center;font-size:14.5px;color:var(--text-muted)}
+.kd__call a{color:var(--text-strong);font-weight:600;white-space:nowrap;text-decoration:none;border-bottom:1px solid var(--ochre-500)}

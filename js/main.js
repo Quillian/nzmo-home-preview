@@ -57,12 +57,47 @@
 
   // Формы: MVP без бэкенда — валидация и переход на /spasibo/.
   // Под Битрикс: заменить на bitrix:form.result.new / CRM-форму Битрикс24, поля name, phone + скрытые page, kind.
+  // Телефон: маска +7 (XXX) XXX-XX-XX прямо при вводе. Ведущие 8 / 7 / +7 → +7, с 9 и других цифр +7 подставляется сам,
+  // вставка номера в любом виде приводится к тому же формату. В значении — 10 цифр после +7.
+  function phoneDigits(v) {
+    var d = String(v || "").replace(/\D/g, "");
+    if (d.length > 10 || (d.length && /^[78]/.test(d) && !/^\+?7\s?\(/.test(v))) d = d.replace(/^[78]/, "");
+    return d.slice(0, 10);
+  }
+  function phoneFormat(d) {
+    if (!d) return "";
+    var s = "+7 (" + d.slice(0, 3);
+    if (d.length > 3) s += ") " + d.slice(3, 6);
+    if (d.length > 6) s += "-" + d.slice(6, 8);
+    if (d.length > 8) s += "-" + d.slice(8, 10);
+    return s;
+  }
+  document.querySelectorAll("input[name=phone]").forEach(function (el) {
+    var prev = "", lead = true;   // lead — ещё не введена первая цифра: 7 или 8 в начале номера означают +7 и отбрасываются один раз
+    el.addEventListener("input", function (e) {
+      var raw = el.value, del = e.inputType && e.inputType.indexOf("delete") === 0, d;
+      if (/^\+7 \(/.test(raw)) {
+        d = raw.slice(2).replace(/\D/g, "");
+        if (d.length > 10 && /^[78]/.test(d)) d = d.slice(1);                    // вставили «8 913…» после «+7 (»
+        else if (lead && !del && /^[78]/.test(d) && d.length === 1) d = "";       // первой цифрой набрали 7 или 8
+        d = d.slice(0, 10);
+      } else d = phoneDigits(raw);
+      if (del && d === phoneDigits(prev) && d.length) d = d.slice(0, -1);         // стёрли скобку или дефис — стираем цифру
+      if (!del) lead = false;
+      if (del && !d) lead = true;
+      el.value = d ? phoneFormat(d) : (document.activeElement === el ? "+7 (" : "");
+      prev = el.value;
+    });
+    el.addEventListener("focus", function () { if (!el.value) { el.value = "+7 ("; prev = el.value; lead = true; } });
+    el.addEventListener("blur", function () { if (el.value === "+7 (") el.value = ""; });
+  });
   document.querySelectorAll("form[data-lead]").forEach(function (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var phone = form.querySelector("[name=phone]");
-      var digits = (phone.value || "").replace(/\D/g, "");
-      if (digits.length < 10) { phone.setCustomValidity("Введите номер телефона"); phone.reportValidity(); return; }
+      var digits = phoneDigits(phone.value);
+      if (digits.length < 10) { phone.setCustomValidity("Введите номер полностью: +7 и 10 цифр"); phone.reportValidity(); return; }
+      phone.value = phoneFormat(digits);
       phone.setCustomValidity("");
       var agree = form.querySelector("[name=agree]");   // согласие на обработку ПДн — отдельной галочкой (152-ФЗ ст. 9)
       if (agree && !agree.checked) { agree.setCustomValidity("Отметьте согласие на обработку данных"); agree.reportValidity(); return; }
