@@ -331,7 +331,7 @@
       dlg.querySelectorAll(".kd__fig").forEach(function (f) {
         var show = on(f, "v") && on(f, "c") && f.dataset.w === st.w;
         f.hidden = !show;
-        if (show) { var im = f.querySelector("img[data-src]"); if (im) { im.src = im.dataset.src; im.removeAttribute("data-src"); } }
+        if (show) { var im = f.querySelector("img[data-src]"); if (im) { if (im.dataset.srcset) { im.sizes = im.getAttribute("sizes") || "60vw"; im.srcset = im.dataset.srcset; } im.src = im.dataset.src; im.removeAttribute("data-src"); } }
       });
       dlg.querySelectorAll(".kd__price").forEach(function (e) { e.hidden = e.dataset.v !== st.v; });
       dlg.querySelectorAll(".kd__pane").forEach(function (e) { e.hidden = !(e.dataset.t === st.t && on(e, "v")); });
