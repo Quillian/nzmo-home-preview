@@ -841,3 +841,9 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 @media (max-width:560px){.rc__two{grid-template-columns:1fr}.rc__hero b{font-size:72px}}
 .rc__kpi div{display:flex;flex-direction:column;justify-content:space-between;gap:6px}.rc__kpi dd{white-space:nowrap}
 @media (max-width:560px){.rc__kpi div{padding:14px 12px}.rc__kpi dd{font-size:20px}.rc__kpi dt{font-size:12px}}
+
+/* лента миниатюр для галереи больше 8 фото (реечные, 37 объектов): одна строка с прокруткой */
+.filmstrip--scroll{display:flex;overflow-x:auto;scrollbar-width:thin;padding-bottom:6px;position:relative}
+.filmstrip--scroll a{flex:0 0 calc((100% - 7*12px)/8)}
+@media (max-width:1100px){.filmstrip--scroll a{flex-basis:calc((100% - 3*12px)/4)}}
+@media (max-width:640px){.filmstrip--scroll a{flex-basis:38%}}

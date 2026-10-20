@@ -9,6 +9,11 @@
       "source": "/katalog/",
       "destination": "/files/nzmo-katalog-2026.pdf",
       "permanent": false
+    },
+    {
+      "source": "/potolki/perforirovannye/",
+      "destination": "/potolki/kassetnye/hook-on/#perforatsiya",
+      "permanent": false
     }
   ],
   "headers": [

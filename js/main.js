@@ -419,7 +419,13 @@
       slides.forEach(function (sl, k) { sl.hidden = k !== cur; if (k === cur) sl.querySelectorAll("img").forEach(function (im) { im.removeAttribute("loading"); }); });
       thumbs.forEach(function (t, k) { t.classList.toggle("is-active", k === cur); });
       var t = thumbs[cur];
-      if (t) { tEl.textContent = t.dataset.title; tEl.href = t.getAttribute("href"); fEl.textContent = t.dataset.family; sEl.textContent = t.dataset.spec; }
+      if (t) {
+        var h = t.getAttribute("href");
+        tEl.textContent = t.dataset.title; if (h && h !== "#") tEl.href = h; else tEl.removeAttribute("href");   // у фото без кейса заголовок не ссылка
+        fEl.textContent = t.dataset.family; sEl.textContent = t.dataset.spec;
+        var st = t.closest("[data-stage-strip]");   // длинная лента: активная миниатюра в поле зрения, страницу не двигаем
+        if (st && st.scrollWidth > st.clientWidth) st.scrollTo({ left: t.offsetLeft - (st.clientWidth - t.offsetWidth) / 2, behavior: "smooth" });
+      }
       cEl.textContent = (cur + 1) + " / " + slides.length;
     }
     stage.querySelector("[data-stage-prev]").addEventListener("click", function () { go(cur - 1); });
