@@ -847,3 +847,4 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 .filmstrip--scroll a{flex:0 0 calc((100% - 7*12px)/8)}
 @media (max-width:1100px){.filmstrip--scroll a{flex-basis:calc((100% - 3*12px)/4)}}
 @media (max-width:640px){.filmstrip--scroll a{flex-basis:38%}}
+.objects .stage__slide.is-contain .stage__bg{display:block}.objects .stage__slide.is-contain .stage__img{object-fit:contain}

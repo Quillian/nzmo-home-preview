@@ -175,19 +175,56 @@
   function calcNum(box, n) { return parseFloat((box.querySelector("[name=" + n + "]").value || "0").replace(",", ".")) || 0; }
   var up = function (x) { return Math.ceil(x - 1e-9); };
 
-  // Грильято: расход по коэффициентам завода, вес и объём деталей — как у Грильято-Сибирь
+  // Грильято: расход по коэффициентам заводского калькулятора «Т24_грильято от 07.04.26», оформление как у калькулятора рейки
   document.querySelectorAll("[data-gcalc]").forEach(function (box) {
-    var R = JSON.parse(box.dataset.gcalc), rows = box.querySelector("[data-gc-rows]"), cta = box.querySelector("[data-gc-cta]");
-    function upd() {
-      var s = calcNum(box, "s"), p = calcNum(box, "p"), c = box.querySelector("[name=c]").value, h = box.querySelector("[name=h]").value, z = calcNum(box, "z");
-      var r = R[c], sf = s * (1 + z / 100);
-      calcTable(rows, [["Профиль «мама» 0,6 м, h" + h, up(sf * r.mama), 0.04665, 0.00013], ["Профиль «папа» 0,6 м, h" + h, up(sf * r.papa), 0.04665, 0.00013],
-        ["Несущая 2,4 м", up(sf * r.n24), 0.23328, 0.0006], ["Поперечная 1,2 м", up(sf * r.n12), 0.11664, 0.0003], ["Поперечная 0,6 м", up(sf * r.n06), 0.04665, 0.00013],
-        ["Соединитель", up(sf * r.soed)], ["Подвес", up(sf * r.podves)], ["Уголок пристенный 3 м", up(p / 3), 0.168, 0.0005]]);
-      rows.insertAdjacentHTML("afterbegin", "<tr><td>Решёток 600×600</td><td>" + up(sf / 0.36) + "</td><td>—</td><td>—</td></tr>");
-      cta.href = "/servis/raschet-proekta/?config=" + encodeURIComponent("грильято " + c + "×" + c + ", h" + h + ", площадь " + s + " м², периметр " + p + " м");
+    var R = JSON.parse(box.dataset.gcalc), cta = box.querySelector("[data-gc-cta]");
+    function q(sel) { return box.querySelector(sel); }
+    function f(x) { return Math.round(x).toLocaleString("ru-RU"); }
+    function viz(c, h) {   // план модуля 600 × 600 с ячейкой и профиль в разрезе, размеры охрой — как у рейки
+      var S = 132, x0 = 70, y0 = 14, k = S / 600, n = Math.round(600 / c), o = '<path class="rc-rl" d="M' + x0 + ' ' + y0 + 'h' + S + 'v' + S + 'h-' + S + 'z';
+      for (var i = 1; i < n; i++) o += 'M' + (x0 + i * c * k) + ' ' + y0 + 'v' + S + 'M' + x0 + ' ' + (y0 + i * c * k) + 'h' + S;
+      o += '"/>';
+      var yd = y0 + S + 16, xc = x0 + c * k;
+      o += '<g class="rc-dim"><path d="M' + x0 + ' ' + yd + 'H' + (x0 + S) + 'M' + x0 + ' ' + (yd - 5) + 'v10M' + (x0 + S) + ' ' + (yd - 5) + 'v10M' + (x0 - 14) + ' ' + y0 + 'v' + (c * k) + 'M' + (x0 - 19) + ' ' + y0 + 'h10M' + (x0 - 19) + ' ' + (y0 + c * k) + 'h10"/>' +
+        '<text x="' + (x0 + S / 2) + '" y="' + (yd + 16) + '">600</text><text x="' + (x0 - 22) + '" y="' + (y0 + c * k / 2 + 4) + '" text-anchor="end">' + c + '</text></g>';
+      var H = h * 2.6, px = 340, py = 90 - H / 2;   // профиль «мама»: полка 10 мм, высота h
+      o += '<rect class="rc-st" x="' + px + '" y="' + py + '" width="' + (10 * 2.6) + '" height="' + H + '"/>' +
+        '<g class="rc-dim"><path d="M' + (px + 44) + ' ' + py + 'v' + H + 'M' + (px + 39) + ' ' + py + 'h10M' + (px + 39) + ' ' + (py + H) + 'h10M' + px + ' ' + (py + H + 14) + 'h' + (10 * 2.6) + '"/>' +
+        '<text x="' + (px + 54) + '" y="' + (py + H / 2 + 5) + '" text-anchor="start">h ' + h + '</text><text x="' + (px + 13) + '" y="' + (py + H + 30) + '">10</text></g>';
+      q("[data-gc-viz]").innerHTML = o;
     }
-    box.addEventListener("input", upd); box.addEventListener("change", upd); upd();
+    function upd() {
+      var s = calcNum(box, "s"), p = calcNum(box, "p"), c = q("[name=c]").value, h = q("[name=h]").value, z = calcNum(box, "z");
+      var r = R[c], sf = s * (1 + z / 100);
+      q("[data-gc-area]").textContent = f(s); viz(+c, +h);
+      if (!(s > 0)) { q("[data-gc-mod]").textContent = "—"; return; }
+      var P = [["Профиль «мама» 0,6 м", up(sf * r.mama), 0.04665], ["Профиль «папа» 0,6 м", up(sf * r.papa), 0.04665], ["Несущая 2,4 м", up(sf * r.n24), 0.23328],
+               ["Поперечная 1,2 м", up(sf * r.n12), 0.11664], ["Поперечная 0,6 м", up(sf * r.n06), 0.04665], ["Соединитель несущих", up(sf * r.soed), 0],
+               ["Уголок пристенный 3 м", up(p / 3), 0.168]];
+      var kg = P.reduce(function (a, x) { return a + x[1] * x[2]; }, 0);
+      q("[data-gc-mod]").textContent = f(up(sf / 0.36));
+      q("[data-gc-mod-note]").innerHTML = "модулей 600 × 600<br>ячейка " + c + " × " + c + ", профиль h" + h;
+      q("[data-gc-prof]").innerHTML = f(P[0][1] + P[1][1]) + " <small>шт</small>";
+      q("[data-gc-hang]").innerHTML = f(up(sf * r.podves)) + " <small>шт</small>";
+      q("[data-gc-kg]").innerHTML = f(kg) + " <small>кг</small>";
+      q("[data-gc-parts]").innerHTML = P.slice(2).map(function (x) { return "<li><span>" + x[0] + "</span><b>" + (x[1] ? f(x[1]) + " шт" : "—") + "</b></li>"; }).join("");
+      cta.dataset.cfg = "грильято " + c + "×" + c + ", h" + h + ", площадь " + f(s) + " м², периметр " + f(p) + " м";
+      cta.href = "/servis/raschet-proekta/?config=" + encodeURIComponent(cta.dataset.cfg);
+    }
+    box.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-rc-set] button");
+      if (b) { var set = b.parentNode; set.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === b); }); q("[name=" + set.dataset.rcSet + "]").value = b.dataset.v; upd(); return; }
+      var st = e.target.closest("[data-rc-step]");
+      if (st) { var zz = q("[name=z]"); zz.value = Math.max(0, Math.min(20, (+zz.value || 0) + (+st.dataset.rcStep))); upd(); }
+    });
+    box.addEventListener("input", upd); upd();
+    cta.addEventListener("click", function (e) {   // как у рейки: конфигурация уходит в форму заявки внизу страницы
+      var form = document.querySelector("#cta form[data-lead]"); if (!form) return;
+      e.preventDefault();
+      var inp = form.querySelector("[name=config]"), ec = form.querySelector("[data-config-echo]");
+      if (inp) inp.value = cta.dataset.cfg; if (ec) { ec.textContent = "Считаем: " + cta.dataset.cfg + "."; ec.hidden = false; }
+      document.getElementById("cta").scrollIntoView({ behavior: "smooth" });
+    });
   });
 
   // Т24 (типа армстронг): расход на 1 м² и вес деталей — как у Грильято-Сибирь, система Т-24/30

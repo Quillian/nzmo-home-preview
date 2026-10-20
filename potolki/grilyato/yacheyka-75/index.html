@@ -16,7 +16,7 @@
 <link rel="preload" href="/fonts/GolosText-600-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts/fonts.css?v=2e4a4992">
 <link rel="stylesheet" href="/css/template_styles.css?v=a588c469">
-<link rel="stylesheet" href="/css/styles.css?v=1273f9c1">
+<link rel="stylesheet" href="/css/styles.css?v=a3311fa1">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://nzmo-home.vercel.app/#org","name":"НЗМО — Новосибирский завод металлообработки","alternateName":"НЗМО","url":"https://nzmo-home.vercel.app/","logo":"https://nzmo-home.vercel.app/img/logo/04_gorizont_gold-navy.svg","telephone":"+7 (383) 234-91-52","email":"zakaz@nzmo.ru","address":{"@type":"PostalAddress","addressLocality":"Новосибирск","streetAddress":"ул. Челюскинцев, 30/2, офис 410","addressCountry":"RU"},"contactPoint":{"@type":"ContactPoint","telephone":"+7 (383) 234-91-52","contactType":"sales","areaServed":"RU","availableLanguage":"ru"},"foundingDate":"2021","taxID":"5406813782","brand":[{"@type":"Brand","name":"AIRWOOD"},{"@type":"Brand","name":"ALFAPANEL"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"\u0413\u043b\u0430\u0432\u043d\u0430\u044f","item":"https://nzmo-home.vercel.app/"},{"@type":"ListItem","position":2,"name":"\u041f\u043e\u0442\u043e\u043b\u043e\u0447\u043d\u044b\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u044f","item":"https://nzmo-home.vercel.app/potolki/"},{"@type":"ListItem","position":3,"name":"\u041f\u043e\u0442\u043e\u043b\u043a\u0438 \u0413\u0440\u0438\u043b\u044c\u044f\u0442\u043e","item":"https://nzmo-home.vercel.app/potolki/grilyato/"},{"@type":"ListItem","position":4,"name":"\u0413\u0440\u0438\u043b\u044c\u044f\u0442\u043e 75\u00d775","item":"https://nzmo-home.vercel.app/potolki/grilyato/yacheyka-75/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"\u0413\u0440\u0438\u043b\u044c\u044f\u0442\u043e 75\u00d775","description":"\u0413\u0440\u0438\u043b\u044c\u044f\u0442\u043e \u0441 \u044f\u0447\u0435\u0439\u043a\u043e\u0439 75\u00d775 \u043c\u043c \u043e\u0442 \u0437\u0430\u0432\u043e\u0434\u0430 \u041d\u0417\u041c\u041e: \u043c\u043e\u0434\u0443\u043b\u044c 600\u00d7600, \u043f\u0440\u043e\u0444\u0438\u043b\u044c 30 \u0438\u043b\u0438 40 \u043c\u043c, \u0441\u0442\u0430\u043b\u044c \u0438 \u0430\u043b\u044e\u043c\u0438\u043d\u0438\u0439, \u0431\u0435\u043b\u044b\u0439, \u0447\u0451\u0440\u043d\u044b\u0439, \u043c\u0435\u0442\u0430\u043b\u043b\u0438\u043a \u0438 \u043b\u044e\u0431\u043e\u0439 RAL.","brand":{"@type":"Brand","name":"\u041d\u0417\u041c\u041e"},"manufacturer":{"@id":"https://nzmo-home.vercel.app/#org"},"category":"\u041f\u043e\u0442\u043e\u043b\u043a\u0438 \u0413\u0440\u0438\u043b\u044c\u044f\u0442\u043e","url":"https://nzmo-home.vercel.app/potolki/grilyato/yacheyka-75/","offers":{"@type":"AggregateOffer","lowPrice":1900,"priceCurrency":"RUB","availability":"https://schema.org/InStock","seller":{"@id":"https://nzmo-home.vercel.app/#org"}},"image":"https://nzmo-home.vercel.app/img/ph_grilyato-1600.webp"}</script>
@@ -384,7 +384,6 @@
     </div>
   </div>
 </section>
-
 <section class="section section--white" id="podsistema">
   <div class="container">
     <div class="kicker"><span class="n">3</span><span class="l">Подсистема</span></div>
@@ -419,23 +418,38 @@
     </div>
   </div>
 </section>
-
-<section class="section section--page" id="kalkulyator">
-  <div class="container">
+<section class="section section--page" id="kalkulyator">  <div class="container">
     <div class="kicker"><span class="n">4</span><span class="l">Калькулятор</span></div>
-    <div class="section-head"><div><h2 class="t-2">Сколько комплектующих нужно</h2><p class="lead">Считаем по коэффициентам завода. Штучные позиции округляем вверх, уголок — до целых профилей по 3 м.</p></div></div>
-    <div class="gc" data-gcalc='{"75": {"mama": 19.45, "n06": 1.4, "n12": 1.4, "n24": 0.35, "papa": 19.45, "podves": 1.0, "soed": 0.35}}'>
-      <div class="gc-in">
-        <label><span>Площадь потолка, м²</span><input type="number" name="s" min="1" step="0.1" value="100" inputmode="decimal"></label>
-        <label><span>Периметр помещения, м</span><input type="number" name="p" min="0" step="0.1" value="40" inputmode="decimal"></label>
-        <label><span>Ячейка</span><select name="c"><option value="75">75×75 мм</option></select></label>
-        <label><span>Высота профиля</span><select name="h"><option value="30" selected>30 мм</option><option value="40">40 мм, под заказ</option></select></label>
-        <label><span>Запас на подрезку, %</span><input type="number" name="z" min="0" max="20" step="1" value="5" inputmode="numeric"></label>
+    <div class="section-head"><div><h2 class="t-2">Сколько комплектующих нужно</h2><p class="lead">По коэффициентам заводского калькулятора Грильято — тому же, по которому менеджеры готовят КП</p></div></div>
+    <div class="rc" data-gcalc='{"75": {"mama": 19.45, "n06": 1.4, "n12": 1.4, "n24": 0.35, "papa": 19.45, "podves": 1.0, "soed": 0.35}}'>
+      <div class="rc__in">
+        <div class="rc__two">
+          <label class="rc__big"><span>Площадь потолка</span><span class="rc__num"><input type="number" name="s" min="1" step="1" value="100" inputmode="decimal"><i>м²</i></span></label>
+          <label class="rc__big"><span title="Длина всех стен помещения — по ней считаем пристенный уголок">Периметр помещения</span><span class="rc__num"><input type="number" name="p" min="0" step="1" value="40" inputmode="decimal"><i>м</i></span></label>
+        </div>
+        <div class="rc__f"><span class="rc__k">Ячейка</span>
+          <div class="rc__chips" data-rc-set="c"><button type="button" data-v="75" aria-pressed="true">75 × 75</button></div>
+          <input type="hidden" name="c" value="75"></div>
+        <figure class="rc__viz" aria-hidden="true"><svg data-gc-viz viewBox="0 0 520 190"></svg></figure>
+        <div class="rc__two">
+          <div class="rc__f"><span class="rc__k">Высота профиля, мм</span>
+            <div class="rc__chips rc__chips--sm" data-rc-set="h"><button type="button" data-v="30" aria-pressed="true">30</button><button type="button" data-v="40">40 · под заказ</button></div>
+            <input type="hidden" name="h" value="30"></div>
+          <div class="rc__f"><span class="rc__k">Запас на подрезку</span>
+            <div class="rc__step"><button type="button" data-rc-step="-1" aria-label="Меньше">−</button><input type="number" name="z" min="0" max="20" step="1" value="5" inputmode="numeric"><i>%</i><button type="button" data-rc-step="1" aria-label="Больше">+</button></div></div>
+        </div>
       </div>
-      <div class="gc-out">
-        <table class="t"><thead><tr><th>Позиция</th><th>Кол-во, шт</th><th>Вес, кг</th><th>Объём, м³</th></tr></thead><tbody data-gc-rows></tbody></table>
-        <p class="small muted" style="margin-top:12px">Вес и объём ориентировочные, для алюминиевой решётки, — пригодятся, чтобы прикинуть доставку. Если в помещении колонны, ниши или перепады, берите запас 5–12 %. Точную спецификацию с раскладкой и ценой посчитаем по вашему плану.</p>
-        <a class="btn btn--navy" data-gc-cta href="/servis/raschet-proekta/">Посчитать стоимость <span class="arr">→</span></a>
+      <div class="rc__out">
+        <span class="rc__cap">Комплект на <b data-gc-area>100</b> м²</span>
+        <div class="rc__hero"><b data-gc-mod>—</b><span data-gc-mod-note>модулей 600 × 600</span></div>
+        <dl class="rc__kpi">
+          <div><dt>«Мама» и «папа»</dt><dd data-gc-prof>—</dd></div>
+          <div><dt>Подвесы</dt><dd data-gc-hang>—</dd></div>
+          <div><dt>Вес</dt><dd data-gc-kg>—</dd></div>
+        </dl>
+        <ul class="rc__parts" data-gc-parts></ul>
+        <a class="btn btn--ochre rc__cta" data-gc-cta href="#cta">Получить точный расчёт <span class="arr">→</span></a>
+        <p class="rc__note">Штучные позиции округляем вверх, уголок — до целых профилей по 3 м. Вес ориентировочный, для алюминиевой решётки. Если в помещении колонны, ниши или перепады, берите запас 5–12 %. Точную спецификацию с раскладкой и ценой посчитаем по вашему плану</p>
       </div>
     </div>
   </div>
@@ -597,6 +611,6 @@
   <p>Файлы cookie статистики и учёта обращений включим, только если вы нажмёте «Принять». <a href="/ispolzovanie-cookie/">Подробнее</a></p>
   <div class="cookie__btns"><button type="button" class="btn btn--ochre btn--sm" data-cookie-ok>Принять</button><button type="button" class="btn btn--sm cookie__no" data-cookie-no>Отклонить</button></div>
 </div>
-<script src="/js/main.js?v=40b764c6" defer></script>
+<script src="/js/main.js?v=58aae7bd" defer></script>
 </body>
 </html>
