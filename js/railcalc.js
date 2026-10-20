@@ -43,8 +43,9 @@
     function f(x) { return Math.round(x).toLocaleString("ru-RU"); }
     function viz(h, b, g) {   // три рейки в реальных пропорциях, стрингер сверху, размеры охрой
       var sc = Math.min(96 / h, 420 / (3 * b + 2 * g)), W = b * sc, H = h * sc, G = g * sc, x0 = (520 - (3 * W + 2 * G)) / 2, y0 = 34;
-      var o = '<rect x="' + (x0 - 14) + '" y="' + (y0 - 10) + '" width="' + (3 * W + 2 * G + 28) + '" height="6" class="rc-st"/>';
-      for (var k = 0; k < 3; k++) o += '<path class="rc-rl" d="M' + (x0 + k * (W + G)) + ' ' + y0 + ' v' + H + ' h' + W + ' v-' + H + '"/>';
+      var o = '<rect x="' + (x0 - 14) + '" y="' + (y0 - 8) + '" width="' + (3 * W + 2 * G + 28) + '" height="8" class="rc-st"/>';   // стрингер лежит на рейках
+      var LP = Math.max(3, Math.min(10, b * 0.25)) * sc;   // П-профиль с кромками внутрь, как в схеме «Рейка кубообразная СБ (2)»
+      for (var k = 0; k < 3; k++) { var xr = x0 + k * (W + G); o += '<path class="rc-rl" d="M' + (xr + LP) + ' ' + y0 + ' H' + xr + ' v' + H + ' h' + W + ' V' + y0 + ' H' + (xr + W - LP) + '"/>'; }
       var yd = y0 + H + 22, x1 = x0 + W, x2 = x1 + G;
       o += '<g class="rc-dim"><path d="M' + x0 + ' ' + yd + ' H' + x1 + ' M' + x1 + ' ' + yd + ' H' + x2 + ' M' + x0 + ' ' + (yd - 5) + ' v10 M' + x1 + ' ' + (yd - 5) + ' v10 M' + x2 + ' ' + (yd - 5) + ' v10"/>' +
         '<text x="' + (x0 + W / 2) + '" y="' + (yd + 18) + '">' + b + '</text><text x="' + (x1 + G / 2) + '" y="' + (yd + 18) + '">' + g + '</text>' +
