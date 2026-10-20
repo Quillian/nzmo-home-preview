@@ -862,3 +862,12 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 .asm .asm__p figcaption{display:block;margin-top:10px;font-size:14px;line-height:1.35;color:var(--text-strong)}
 @media (max-width:900px){.asm .asm__parts{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:560px){.asm .asm__parts{grid-template-columns:1fr 1fr}}
+.kinds__stub{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:500 12px/1 var(--font-tech);letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);background:repeating-linear-gradient(135deg,#F4F3F1 0 14px,#EFEEEA 14px 28px)}
+.minst__act{flex-wrap:wrap}
+.asm--side{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:16px;align-items:start}
+.asm--side .asm__parts{grid-template-columns:1fr;margin-top:0}
+.asm--side .asm__ov img{max-height:none}
+@media (max-width:900px){.asm--side{grid-template-columns:1fr}.asm--side .asm__parts{grid-template-columns:1fr 1fr}}
+.kinds--5{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:1100px){.kinds--5{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.kinds--5{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.kinds--5 .kinds__t{font-size:16px;hyphens:auto;overflow-wrap:anywhere}}
