@@ -20,7 +20,7 @@
     var conn = ceilTo(N8, 10);                                         // соединители и замки — блоками по 10
     var caps = i.perimeter > 0 ? mround(i.perimeter / ((b + g) * 0.001), 2) : 0;
     var A69 = roundDown(3000 / (b + g)) * (b + g);                     // рабочая длина стрингера, кратна шагу
-    var base = roundUp(S / (A69 / 1000)), D69 = base + roundUp(z * base / 100);
+    var base = roundUp(S / (A69 / 1000)), D69 = base + roundUp((i.stringerScrapPct || 0) * base / 100);   // запас стрингера — отдельный, по умолчанию 0, как в заводском Excel
     var hangers = Math.ceil(S / (C.hangerStepM * C.hangerStepM) - EPS);
     // вес: рейка по развёртке, стрингер по заготовке, мелочь по площади кассет — как в calc.mjs
     var kgM2 = i.thickness * C.steelKgPerM2mm;
@@ -66,7 +66,7 @@
       q("[data-rc-hang]").innerHTML = f(r.hangers) + " <small>шт</small>";
       q("[data-rc-kg]").innerHTML = f(r.kg) + " <small>кг</small>";
       q("[data-rc-parts]").innerHTML = [["Соединитель рейки", r.conn], ["Замок рейки", r.lock], ["Торцевая заглушка", r.caps], ["Соединитель стрингера", r.stringerConn]]
-        .map(function (x) { return "<li><span>" + x[0] + "</span><b>" + (x[1] ? f(x[1]) + " шт" : "укажите периметр") + "</b></li>"; }).join("");
+        .map(function (x) { return "<li><span>" + x[0] + "</span><b>" + (x[1] ? f(x[1]) + " шт" : "—") + "</b></li>"; }).join("");
       if (cta) cta.dataset.cfg = "рейка " + h + " × " + b + ", шаг " + g + " мм, длина " + f(L) + " мм, " + f(i.area) + " м²";
     }
     box.addEventListener("click", function (e) {
