@@ -788,3 +788,9 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 .msgr__pop[hidden]{display:none}
 .msgr__pop b{font-size:16px;color:var(--text-strong)}
 .msgr__pop button{align-self:flex-start;padding:6px 12px;border:1px solid var(--border-strong);border-radius:6px;background:#fff;font:inherit;font-size:13px;font-weight:600;color:var(--text-strong);cursor:pointer}
+
+/* Калькулятор рейки (21.10.2026) */
+.rc-t td small{display:block;margin-top:2px;font-size:12.5px;font-weight:400;color:var(--text-muted)}
+.rc-t td:last-child{vertical-align:top}
+.rc-kg{margin:16px 0 8px;font-size:15px;color:var(--text-body)}
+.rc-kg b{color:var(--text-strong)}

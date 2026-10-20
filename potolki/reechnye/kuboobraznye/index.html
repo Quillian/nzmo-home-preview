@@ -16,7 +16,7 @@
 <link rel="preload" href="/fonts/GolosText-600-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts/fonts.css?v=2e4a4992">
 <link rel="stylesheet" href="/css/template_styles.css?v=a588c469">
-<link rel="stylesheet" href="/css/styles.css?v=922f7c28">
+<link rel="stylesheet" href="/css/styles.css?v=046dbdbe">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://nzmo-home.vercel.app/#org","name":"НЗМО — Новосибирский завод металлообработки","alternateName":"НЗМО","url":"https://nzmo-home.vercel.app/","logo":"https://nzmo-home.vercel.app/img/logo/04_gorizont_gold-navy.svg","telephone":"+7 (383) 234-91-52","email":"zakaz@nzmo.ru","address":{"@type":"PostalAddress","addressLocality":"Новосибирск","streetAddress":"ул. Челюскинцев, 30/2, офис 410","addressCountry":"RU"},"contactPoint":{"@type":"ContactPoint","telephone":"+7 (383) 234-91-52","contactType":"sales","areaServed":"RU","availableLanguage":"ru"},"foundingDate":"2021","taxID":"5406813782","brand":[{"@type":"Brand","name":"AIRWOOD"},{"@type":"Brand","name":"ALFAPANEL"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"\u0413\u043b\u0430\u0432\u043d\u0430\u044f","item":"https://nzmo-home.vercel.app/"},{"@type":"ListItem","position":2,"name":"\u041f\u043e\u0442\u043e\u043b\u043e\u0447\u043d\u044b\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u044f","item":"https://nzmo-home.vercel.app/potolki/"},{"@type":"ListItem","position":3,"name":"\u0420\u0435\u0435\u0447\u043d\u044b\u0435 \u043f\u043e\u0442\u043e\u043b\u043a\u0438","item":"https://nzmo-home.vercel.app/potolki/reechnye/"},{"@type":"ListItem","position":4,"name":"\u041a\u0443\u0431\u043e\u043e\u0431\u0440\u0430\u0437\u043d\u044b\u0439 \u0440\u0435\u0435\u0447\u043d\u044b\u0439 \u043f\u043e\u0442\u043e\u043b\u043e\u043a","item":"https://nzmo-home.vercel.app/potolki/reechnye/kuboobraznye/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"\u041a\u0443\u0431\u043e\u043e\u0431\u0440\u0430\u0437\u043d\u044b\u0439 \u0440\u0435\u0435\u0447\u043d\u044b\u0439 \u043f\u043e\u0442\u043e\u043b\u043e\u043a","description":"\u041a\u0443\u0431\u043e\u043e\u0431\u0440\u0430\u0437\u043d\u044b\u0439 \u0440\u0435\u0435\u0447\u043d\u044b\u0439 \u043f\u043e\u0442\u043e\u043b\u043e\u043a AIRWOOD \u043e\u0442 \u041d\u0417\u041c\u041e: \u0440\u0435\u0439\u043a\u0430 \u0437\u0430\u043c\u043a\u043d\u0443\u0442\u043e\u0433\u043e \u0441\u0435\u0447\u0435\u043d\u0438\u044f 20\u2013300 \u043c\u043c, \u0441\u0442\u0430\u043b\u044c \u0438 \u0430\u043b\u044e\u043c\u0438\u043d\u0438\u0439 0,32\u20130,5 \u043c\u043c, \u0434\u043b\u0438\u043d\u0430 \u0434\u043e 6 \u043c, \u043b\u044e\u0431\u043e\u0439 \u0448\u0430\u0433, \u0446\u0432\u0435\u0442 RAL \u0438 \u043f\u043e\u0434 \u0434\u0435\u0440\u0435\u0432\u043e.","brand":{"@type":"Brand","name":"AIRWOOD"},"manufacturer":{"@id":"https://nzmo-home.vercel.app/#org"},"category":"\u0420\u0435\u0435\u0447\u043d\u044b\u0435 \u043f\u043e\u0442\u043e\u043b\u043a\u0438","url":"https://nzmo-home.vercel.app/potolki/reechnye/kuboobraznye/","offers":{"@type":"AggregateOffer","lowPrice":225,"priceCurrency":"RUB","availability":"https://schema.org/PreOrder","seller":{"@id":"https://nzmo-home.vercel.app/#org"}},"image":"https://nzmo-home.vercel.app/img/ph_rail_kvant-1600.webp"}</script>
@@ -252,9 +252,31 @@
   </div>
 </section>
 
-<section class="section section--page" id="faq">
+<section class="section section--page" id="kalkulyator">
   <div class="container">
-    <div class="kicker"><span class="n">6</span><span class="l">Вопросы</span></div>
+    <div class="kicker"><span class="n">6</span><span class="l">Калькулятор</span></div>
+    <div class="section-head"><div><h2 class="t-2">Сколько комплектующих нужно</h2><p class="lead">Считаем по заводскому калькулятору рейки — тому же, по которому менеджеры готовят КП</p></div></div>
+    <div class="gc" data-railcalc>
+      <div class="gc-in">
+        <label><span>Площадь потолка, м²</span><input type="number" name="s" min="1" step="0.1" value="100" inputmode="decimal"></label>
+        <label><span>Периметр помещения, м</span><input type="number" name="p" min="0" step="0.1" value="40" inputmode="decimal"></label>
+        <label><span>Сечение рейки, высота × ширина</span><select name="sec"><option value="90x50" data-gap="100">90 × 50 мм</option><option value="120x70" data-gap="200">120 × 70 мм</option><option value="100x40" data-gap="40">100 × 40 мм</option><option value="200x40" data-gap="160">200 × 40 мм</option></select></label>
+        <label><span>Шаг — зазор между рейками, мм</span><input type="number" name="g" min="10" step="5" value="100" inputmode="numeric"></label>
+        <label><span>Длина рейки</span><select name="l"><option value="3000">3 000 мм</option><option value="2500">2 500 мм</option><option value="2000">2 000 мм</option><option value="1500">1 500 мм</option></select></label>
+        <label><span>Запас на подрезку, %</span><input type="number" name="z" min="0" max="20" step="1" value="3" inputmode="numeric"></label>
+      </div>
+      <div class="gc-out">
+        <table class="t rc-t"><thead><tr><th>Позиция</th><th>Количество</th></tr></thead><tbody data-rc-rows></tbody></table>
+        <p class="rc-kg">Вес комплекта при толщине 0,45 мм: <b data-rc-kg>—</b></p>
+        <p class="small muted">Рейку считаем кратно 3 — так её режут из листа. Для колонн, ниш и сложного контура берите запас 5–10 %. Точную спецификацию с раскладкой и ценой посчитаем по вашему плану.</p>
+        <a class="btn btn--navy" data-rc-cta href="#cta">Получить точный расчёт <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="/js/railcalc.js?v=c830ea2d" defer></script><section class="section section--page" id="faq">
+  <div class="container">
+    <div class="kicker"><span class="n">7</span><span class="l">Вопросы</span></div>
     <div class="section-head"><h2 class="t-2">Вопросы и ответы: кубообразный реечный потолок</h2></div>
     <div class="faq">
       <details open><summary><span class="n">1</span><span>Чем кубообразная рейка отличается от обычной реечной?</span><span class="pm" aria-hidden="true"></span></summary><div class="a">Обычная рейка — открытый профиль небольшой высоты, и потолок из неё выглядит плоским. Кубообразная рейка замкнутого сечения бывает высотой до 300 мм. У потолка появляются объём и тень между рейками, а в зазор можно встроить линейный свет.</div></details>
@@ -270,7 +292,7 @@
 
 <section class="section section--white">
   <div class="container">
-    <div class="kicker"><span class="n">7</span><span class="l">Объекты</span></div>
+    <div class="kicker"><span class="n">8</span><span class="l">Объекты</span></div>
     <div class="section-head"><h2 class="t-2">Объекты с этой системой</h2><a class="btn btn--outline btn--sm" href="/obekty/">Все объекты <span class="arr">→</span></a></div>
 <div class="grid g3">
   <article class="card" data-case data-sector="education" data-products="kuboobraznye hook-on lineynye dizaynerskie-svetilniki nerzhaveyushchie" data-city="Ноябрьск">
