@@ -794,3 +794,49 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 .rc-t td:last-child{vertical-align:top}
 .rc-kg{margin:16px 0 8px;font-size:15px;color:var(--text-body)}
 .rc-kg b{color:var(--text-strong)}
+
+/* Калькулятор рейки, ред. 2 (21.10.2026): инструмент — настройки и чертёж слева, итог на тёмной панели справа */
+.rc{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);border-radius:14px;overflow:hidden;box-shadow:0 30px 60px -40px rgba(11,20,32,.45)}
+.rc__in{display:flex;flex-direction:column;gap:26px;padding:clamp(24px,3vw,44px);background:#fff}
+.rc__two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.rc__k,.rc__big>span:first-child{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--font-tech);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted)}
+.rc__k b{font-family:var(--font-display);font-size:18px;letter-spacing:0;text-transform:none;color:var(--text-strong)}
+.rc__big{display:flex;flex-direction:column;gap:8px}
+.rc__num{display:flex;align-items:baseline;gap:8px;border-bottom:2px solid var(--navy-800);padding-bottom:4px}
+.rc__num input{width:100%;min-width:0;border:0;padding:0;background:none;font-family:var(--font-display);font-size:clamp(34px,3.4vw,48px);line-height:1.1;color:var(--text-strong);outline:none;-moz-appearance:textfield}
+.rc__num input::-webkit-inner-spin-button,.rc__step input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.rc__num i,.rc__step i{font-style:normal;font-size:18px;color:var(--text-muted)}
+.rc__f{display:flex;flex-direction:column;gap:12px}
+.rc__chips{display:flex;flex-wrap:wrap;gap:8px}
+.rc__chips button{height:44px;padding:0 16px;border:1px solid var(--border-strong);border-radius:8px;background:#fff;font:inherit;font-size:15px;font-weight:600;color:var(--text-strong);cursor:pointer;transition:background .15s,border-color .15s}
+.rc__chips button:hover{border-color:var(--navy-800)}
+.rc__chips button[aria-pressed=true]{background:var(--navy-800);border-color:var(--navy-800);color:#fff}
+.rc__chips--sm button{height:40px;padding:0 12px;font-size:14px}
+.rc__range{width:100%;accent-color:var(--ochre-500);height:28px;cursor:pointer}
+.rc__viz{margin:-6px 0 0;padding:8px 0;background:var(--surface-page);border-radius:10px}
+.rc__viz svg{display:block;width:100%;height:auto}
+.rc-st{fill:#2a2d33}.rc-rl{fill:none;stroke:var(--navy-800);stroke-width:3;stroke-linejoin:round}
+.rc-dim path{fill:none;stroke:var(--ochre-600);stroke-width:1.4}.rc-dim text{fill:var(--text-strong);font-family:var(--font-tech);font-size:14px;text-anchor:middle}
+.rc__step{display:flex;align-items:center;gap:6px;height:40px}
+.rc__step button{width:40px;height:40px;border:1px solid var(--border-strong);border-radius:8px;background:#fff;font-size:20px;color:var(--text-strong);cursor:pointer}
+.rc__step input{width:44px;border:0;text-align:center;font-family:var(--font-display);font-size:22px;color:var(--text-strong);background:none;-moz-appearance:textfield}
+.rc__out{display:flex;flex-direction:column;gap:22px;padding:clamp(24px,3vw,44px);background:var(--navy-900);color:var(--on-deep-muted)}
+.rc__cap{font-family:var(--font-tech);font-size:11px;letter-spacing:.12em;text-transform:uppercase}.rc__cap b{color:#fff}
+.rc__hero{display:flex;align-items:flex-end;gap:16px}
+.rc__hero b{font-family:var(--font-display);font-size:clamp(64px,7vw,104px);line-height:.9;color:#fff;font-weight:500}
+.rc__hero span{padding-bottom:8px;font-size:15px;line-height:1.45}
+.rc__kpi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin:0;background:rgba(255,255,255,.12);border-radius:10px;overflow:hidden}
+.rc__kpi div{padding:16px 16px 14px;background:var(--navy-900)}
+.rc__kpi dt{font-size:12.5px;color:var(--on-deep-faint)}
+.rc__kpi dd{margin:6px 0 0;font-family:var(--font-display);font-size:26px;color:#fff}
+.rc__kpi small{font-family:var(--font-text);font-size:12.5px;color:var(--on-deep-muted)}
+.rc__parts{list-style:none;margin:0;padding:0}
+.rc__parts li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-top:1px solid rgba(255,255,255,.1);font-size:14.5px}
+.rc__parts b{color:#fff;font-weight:600;white-space:nowrap}
+.rc__cta{justify-content:center;height:54px;font-size:16px;margin-top:4px}
+.rc__note{margin:0;font-size:13px;line-height:1.5;color:var(--on-deep-faint)}
+@media (max-width:900px){.rc{grid-template-columns:1fr}.rc__kpi dd{font-size:21px}}
+.rc__kpi dt span{display:block}
+@media (max-width:560px){.rc__two{grid-template-columns:1fr}.rc__hero b{font-size:72px}}
+.rc__kpi div{display:flex;flex-direction:column;justify-content:space-between;gap:6px}.rc__kpi dd{white-space:nowrap}
+@media (max-width:560px){.rc__kpi div{padding:14px 12px}.rc__kpi dd{font-size:20px}.rc__kpi dt{font-size:12px}}

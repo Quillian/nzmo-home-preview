@@ -38,30 +38,50 @@
 
   if (typeof document === "undefined") return;
   document.querySelectorAll("[data-railcalc]").forEach(function (box) {
-    var rows = box.querySelector("[data-rc-rows]"), kgOut = box.querySelector("[data-rc-kg]"), cta = box.querySelector("[data-rc-cta]");
-    function n(k) { var e = box.querySelector("[name=" + k + "]"); return parseFloat(String(e.value || "0").replace(",", ".")) || 0; }
+    var q = function (sel) { return box.querySelector(sel); }, cta = q("[data-rc-cta]");
+    function n(k) { return parseFloat(String(q("[name=" + k + "]").value || "0").replace(",", ".")) || 0; }
     function f(x) { return Math.round(x).toLocaleString("ru-RU"); }
-    function upd() {
-      var sec = box.querySelector("[name=sec]").value.split("x"), h = +sec[0], b = +sec[1];
-      var i = { area: n("s"), perimeter: n("p"), h: h, b: b, gap: n("g"), length: n("l"), scrapPct: n("z"), thickness: 0.45 };
-      if (!(i.area > 0) || !(i.gap > 0)) { rows.innerHTML = '<tr><td colspan="2">Введите площадь и шаг</td></tr>'; return; }
-      var r = calc(i), L = i.length;
-      var list = [
-        ["Рейка " + h + " × " + b + " мм, длина " + f(L) + " мм", f(r.rails) + " шт", r.railsScrap ? "≈ " + f(r.railM) + " п. м, в том числе запас " + f(r.railsScrap) + " шт" : "≈ " + f(r.railM) + " п. м"],
-        ["Стрингер, длина " + f(r.stringerLen) + " мм", f(r.stringers) + " шт", ""],
-        ["Соединитель стрингера", f(r.stringerConn) + " шт", "блоками по 10"],
-        ["Соединитель рейки", f(r.conn) + " шт", "блоками по 10"],
-        ["Замок рейки", f(r.lock) + " шт", "блоками по 10"],
-        ["Торцевая заглушка", r.caps ? f(r.caps) + " шт" : "—", r.caps ? "по периметру" : "укажите периметр"],
-        ["Подвес (европодвес или шпилька)", f(r.hangers) + " шт", "шаг 1 200 × 1 200 мм"]
-      ];
-      rows.innerHTML = list.map(function (x) { return "<tr><td>" + x[0] + (x[2] ? "<small>" + x[2] + "</small>" : "") + "</td><td>" + x[1] + "</td></tr>"; }).join("");
-      kgOut.textContent = f(r.kg) + " кг";
-      if (cta) cta.dataset.cfg = "рейка " + h + " × " + b + ", шаг " + n("g") + " мм, " + f(i.area) + " м²";
+    function viz(h, b, g) {   // три рейки в реальных пропорциях, стрингер сверху, размеры охрой
+      var sc = Math.min(96 / h, 420 / (3 * b + 2 * g)), W = b * sc, H = h * sc, G = g * sc, x0 = (520 - (3 * W + 2 * G)) / 2, y0 = 34;
+      var o = '<rect x="' + (x0 - 14) + '" y="' + (y0 - 10) + '" width="' + (3 * W + 2 * G + 28) + '" height="6" class="rc-st"/>';
+      for (var k = 0; k < 3; k++) o += '<path class="rc-rl" d="M' + (x0 + k * (W + G)) + ' ' + y0 + ' v' + H + ' h' + W + ' v-' + H + '"/>';
+      var yd = y0 + H + 22, x1 = x0 + W, x2 = x1 + G;
+      o += '<g class="rc-dim"><path d="M' + x0 + ' ' + yd + ' H' + x1 + ' M' + x1 + ' ' + yd + ' H' + x2 + ' M' + x0 + ' ' + (yd - 5) + ' v10 M' + x1 + ' ' + (yd - 5) + ' v10 M' + x2 + ' ' + (yd - 5) + ' v10"/>' +
+        '<text x="' + (x0 + W / 2) + '" y="' + (yd + 18) + '">' + b + '</text><text x="' + (x1 + G / 2) + '" y="' + (yd + 18) + '">' + g + '</text>' +
+        '<path d="M' + (x0 + 3 * W + 2 * G + 16) + ' ' + y0 + ' v' + H + ' M' + (x0 + 3 * W + 2 * G + 11) + ' ' + y0 + ' h10 M' + (x0 + 3 * W + 2 * G + 11) + ' ' + (y0 + H) + ' h10"/>' +
+        '<text x="' + (x0 + 3 * W + 2 * G + 26) + '" y="' + (y0 + H / 2 + 5) + '" text-anchor="start">' + h + '</text></g>';
+      q("[data-rc-viz]").innerHTML = o;
     }
-    var sel = box.querySelector("[name=sec]");   // сечение меняет шаг на ходовой для него — дальше его можно поправить
-    if (sel) sel.addEventListener("change", function () { var o = sel.options[sel.selectedIndex]; if (o && o.dataset.gap) box.querySelector("[name=g]").value = o.dataset.gap; });
-    box.addEventListener("input", upd); box.addEventListener("change", upd); upd();
+    function upd() {
+      var sec = q("[name=sec]").value.split("x"), h = +sec[0], b = +sec[1], g = n("g"), L = n("l");
+      q("[data-rc-gap-out]").textContent = g + " мм";
+      viz(h, b, g);
+      var i = { area: n("s"), perimeter: n("p"), h: h, b: b, gap: g, length: L, scrapPct: n("z"), thickness: 0.45 };
+      q("[data-rc-area]").textContent = f(i.area);
+      if (!(i.area > 0)) { q("[data-rc-rails]").textContent = "—"; return; }
+      var r = calc(i);
+      q("[data-rc-rails]").textContent = f(r.rails);
+      q("[data-rc-rails-note]").innerHTML = "реек " + h + " × " + b + " по " + f(L) + " мм<br>≈ " + f(r.railM) + " п. м" + (r.railsScrap ? ", запас " + f(r.railsScrap) + " шт" : "");
+      q("[data-rc-st]").innerHTML = f(r.stringers) + " <small>шт</small>"; q("[data-rc-st-l]").textContent = "по " + f(r.stringerLen) + " мм";
+      q("[data-rc-hang]").innerHTML = f(r.hangers) + " <small>шт</small>";
+      q("[data-rc-kg]").innerHTML = f(r.kg) + " <small>кг</small>";
+      q("[data-rc-parts]").innerHTML = [["Соединитель рейки", r.conn], ["Замок рейки", r.lock], ["Торцевая заглушка", r.caps], ["Соединитель стрингера", r.stringerConn]]
+        .map(function (x) { return "<li><span>" + x[0] + "</span><b>" + (x[1] ? f(x[1]) + " шт" : "укажите периметр") + "</b></li>"; }).join("");
+      if (cta) cta.dataset.cfg = "рейка " + h + " × " + b + ", шаг " + g + " мм, длина " + f(L) + " мм, " + f(i.area) + " м²";
+    }
+    box.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-rc-set] button");
+      if (b) {
+        var set = b.parentNode, k = set.dataset.rcSet;
+        set.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+        q("[name=" + k + "]").value = b.dataset.v;
+        if (k === "sec" && b.dataset.gap) q("[name=g]").value = b.dataset.gap;   // у сечения свой ходовой шаг — дальше его можно поправить
+        upd(); return;
+      }
+      var st = e.target.closest("[data-rc-step]");
+      if (st) { var z = q("[name=z]"); z.value = Math.max(0, Math.min(20, (+z.value || 0) + (+st.dataset.rcStep))); upd(); }
+    });
+    box.addEventListener("input", upd); upd();
     if (cta) cta.addEventListener("click", function (e) {
       var form = document.querySelector("#cta form[data-lead]"); if (!form) return;
       e.preventDefault();
