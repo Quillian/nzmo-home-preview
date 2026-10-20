@@ -849,3 +849,16 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 @media (max-width:640px){.filmstrip--scroll a{flex-basis:38%}}
 .objects .stage__slide.is-contain .stage__bg{display:block}.objects .stage__slide.is-contain .stage__img{object-fit:contain}
 .kd-rail{fill:none;stroke:var(--navy-800);stroke-width:2.6;stroke-linejoin:miter}.kd-strg-ch{fill:var(--steel-300);stroke:var(--steel-700);stroke-width:1.5}.kd-hook{fill:none;stroke:var(--steel-700);stroke-width:2.2}
+
+/* «Из чего состоит», ред. 2 (20.10.2026): общий вид — главный чертёж на всю ширину, узлы — ровные карточки одного масштаба */
+.asm{display:block;margin-top:32px}
+.asm .asm__ov{position:static;margin:0;padding:clamp(16px,3vw,40px);background:#fff;border:1px solid var(--border-hair);border-radius:var(--radius)}
+.asm .asm__ov img{display:block;width:100%;height:auto;max-height:540px;object-fit:contain}
+.asm .asm__parts{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:16px;margin-top:16px}
+.asm .asm__p{margin:0}
+.asm .asm__ph{position:relative;display:block;aspect-ratio:1/1;background:#fff;border:1px solid var(--border-hair);border-radius:var(--radius);overflow:hidden}
+.asm .asm__ph img{display:block;width:100%;height:100%;object-fit:contain;padding:8%;border:0;background:none}
+.asm .asm__l{position:absolute;left:12px;top:12px;width:28px;height:28px;border-radius:50%;background:var(--ochre-600,#D1A250);color:#fff;font:700 13px/28px var(--font-tech);text-align:center}
+.asm .asm__p figcaption{display:block;margin-top:10px;font-size:14px;line-height:1.35;color:var(--text-strong)}
+@media (max-width:900px){.asm .asm__parts{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.asm .asm__parts{grid-template-columns:1fr 1fr}}
