@@ -221,7 +221,7 @@ a.lp-doc:hover{background:rgba(255,255,255,.09);border-color:var(--ochre-500);co
 .lp-foot .k{font-family:var(--font-tech);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ochre-500);margin-bottom:4px}
 .lp-foot a{color:rgba(255,255,255,.86)}
 .lp-foot a:hover{color:var(--ochre-400)}
-.lp-foot__brand img{height:28px;width:auto}
+.lp-foot__brand img{height:28px;width:auto;align-self:flex-start}
 .lp-foot__brand p{margin-top:10px;color:rgba(255,255,255,.6)}
 @media (max-width:900px){.lp-foot__in{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.lp-foot__in{grid-template-columns:minmax(0,1fr)}}
@@ -317,3 +317,7 @@ a.lp-doc:hover{background:rgba(255,255,255,.09);border-color:var(--ochre-500);co
 .lp-zoom__nav--prev{left:-8px}.lp-zoom__nav--next{right:-8px}
 .lp-zoom button.lp-zoom__nav{top:50%;right:auto}
 .lp-zoom button.lp-zoom__nav--next{right:-8px;left:auto}
+
+/* ---------- география на первом экране */
+.lp-hero__geo{display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:8px 14px;border:1px solid rgba(255,255,255,.28);border-radius:var(--radius);font-weight:600;font-size:15px;color:var(--white);background:rgba(255,255,255,.06)}
+.lp-hero__geo svg{color:var(--ochre-400);flex:none}
