@@ -617,7 +617,7 @@ path.kd-sec{fill:none;stroke-width:3}
 }
 @media (max-width:640px){.k3,.k3.kinds--4{grid-template-columns:1fr}.k3__more{opacity:1;transform:none}}
 .kd [hidden]{display:none!important}
-@media (max-width:900px){.kd__dims text{font-size:46px;stroke-width:9px}.kd__dims line{stroke-width:3.5}.kd__dims circle{r:5}}
+@media (max-width:900px){.kd__dims text{font-size:38px;stroke-width:8px}.kd__dims line{stroke-width:3.5}.kd__dims circle{r:5}}
 /* Список городов под картой поставок — текстом для людей и ИИ-ботов (19.10.2026) */
 .geo-list{margin-top:16px;font-size:14px;line-height:1.6;color:var(--on-deep-faint)}
 .geo-list summary{cursor:pointer;font-family:var(--font-tech);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre-500)}
@@ -871,3 +871,18 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 .kinds--5{grid-template-columns:repeat(5,minmax(0,1fr))}
 @media (max-width:1100px){.kinds--5{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:640px){.kinds--5{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.kinds--5 .kinds__t{font-size:16px;hyphens:auto;overflow-wrap:anywhere}}
+/* «Из чего состоит», ред. 3 (21.10.2026): узлы — круглые «линзы», как выноски-кружки на общем виде; без квадратных рамок */
+.asm .asm__ov{padding:0;border:0;background:none}
+.asm .asm__parts{gap:28px 20px}
+.asm .asm__p{display:flex;flex-direction:column;align-items:center;text-align:center}
+.asm .asm__ph{width:100%;max-width:260px;border:0;border-radius:50%;background:#fff;box-shadow:0 0 0 1px var(--border-hair),0 18px 36px -22px rgba(20,30,45,.45);overflow:visible}
+.asm .asm__ph img{padding:3%;border-radius:50%}
+.asm .asm__l{left:6%;top:6%;width:32px;height:32px;font-size:14px;line-height:32px;box-shadow:0 0 0 4px #fff}
+.asm .asm__p figcaption{margin-top:14px;max-width:240px}
+.asm--side .asm__parts{gap:28px;align-content:start;justify-items:center}
+.asm--side .asm__ph{max-width:300px}
+@media (max-width:560px){.asm .asm__ph{max-width:none}.asm .asm__l{width:28px;height:28px;line-height:28px;font-size:13px}}
+.asm:not(.asm--side) .asm__parts{display:flex;flex-wrap:wrap;justify-content:center}
+.asm:not(.asm--side) .asm__p{flex:0 0 calc((100% - 4 * 20px) / 5)}
+@media (max-width:900px){.asm:not(.asm--side) .asm__p{flex-basis:calc((100% - 2 * 20px) / 3)}}
+@media (max-width:560px){.asm:not(.asm--side) .asm__p{flex-basis:calc((100% - 20px) / 2)}}
