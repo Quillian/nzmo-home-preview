@@ -39,20 +39,33 @@
     if (a) goal(a.dataset.goal);
   });
 
-  // Портфолио: кадр на весь экран по клику
-  document.addEventListener("click", function (e) {
-    var z = e.target.closest("[data-zoom]");
-    if (!z || !z.dataset.zoom) return;
-    var d = document.createElement("dialog");
+  // Галерея: кадр на весь экран по клику, листание стрелками, свайпом и клавишами
+  var zooms = [].slice.call(document.querySelectorAll("[data-zoom]")).filter(function (z) { return z.dataset.zoom; });
+  function openZoom(k) {
+    var d = document.createElement("dialog"), img, cap;
     d.className = "lp-zoom";
-    d.innerHTML = '<img alt=""><p></p><button type="button" aria-label="Закрыть">×</button>';
-    d.querySelector("img").src = z.dataset.zoom;
-    d.querySelector("img").alt = z.dataset.cap || "";
-    d.querySelector("p").textContent = z.dataset.cap || "";
-    d.addEventListener("click", function (ev) { if (ev.target === d || ev.target.tagName === "BUTTON") d.close(); });
+    d.innerHTML = '<img alt=""><p></p><button type="button" class="lp-zoom__x" aria-label="Закрыть">×</button>' +
+      '<button type="button" class="lp-zoom__nav lp-zoom__nav--prev" aria-label="Предыдущий кадр">←</button>' +
+      '<button type="button" class="lp-zoom__nav lp-zoom__nav--next" aria-label="Следующий кадр">→</button>';
+    img = d.querySelector("img"); cap = d.querySelector("p");
+    function show(n) { k = (n + zooms.length) % zooms.length; img.src = zooms[k].dataset.zoom; img.alt = cap.textContent = zooms[k].dataset.cap || ""; }
+    d.addEventListener("click", function (ev) {
+      if (ev.target === d || ev.target.classList.contains("lp-zoom__x")) d.close();
+      else if (ev.target.classList.contains("lp-zoom__nav--prev")) show(k - 1);
+      else if (ev.target.classList.contains("lp-zoom__nav--next")) show(k + 1);
+    });
+    d.addEventListener("keydown", function (ev) { if (ev.key === "ArrowLeft") show(k - 1); if (ev.key === "ArrowRight") show(k + 1); });
+    var x0 = null;
+    d.addEventListener("touchstart", function (ev) { x0 = ev.touches[0].clientX; }, { passive: true });
+    d.addEventListener("touchend", function (ev) { if (x0 === null) return; var dx = ev.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) show(k + (dx < 0 ? 1 : -1)); x0 = null; });
     d.addEventListener("close", function () { d.remove(); });
     document.body.appendChild(d);
+    show(k);
     d.showModal();
+  }
+  document.addEventListener("click", function (e) {
+    var z = e.target.closest("[data-zoom]");
+    if (z && z.dataset.zoom) openZoom(zooms.indexOf(z));
   });
 
   // 3. Квиз: один клик по ответу — следующий вопрос. Ответы собираем в скрытое поле config
