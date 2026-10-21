@@ -342,3 +342,9 @@ a.lp-doc:hover{background:rgba(255,255,255,.09);border-color:var(--ochre-500);co
 @media (max-width:820px){.lp-dlv{grid-template-columns:minmax(0,1fr)}.lp-dlv__i,.lp-dlv__i+.lp-dlv__i{padding:16px 0 14px;border-left:0}.lp-dlv__i+.lp-dlv__i{border-top:1px solid var(--border-hair)}}
 @media (max-width:620px){.lp-pack{grid-template-columns:minmax(0,1fr)}.lp-pack__t,.lp-pack__d{min-height:0}}
 
+
+/* переход по пунктам меню: раздел встаёт ниже липкой шапки, а не прячется под ней */
+.lp section[id]{scroll-margin-top:var(--header-h)}
+
+/* строки карточек изделий — по общей сетке ряда: фото, заголовок, описание и характеристики на одном уровне при любой длине текста */
+.lp-prod__i{display:grid;grid-row:span 4;grid-template-rows:subgrid;row-gap:0}
