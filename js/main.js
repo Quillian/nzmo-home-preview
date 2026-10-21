@@ -103,7 +103,7 @@
       if (agree && !agree.checked) { agree.setCustomValidity("Отметьте согласие на обработку заявки, пожалуйста"); agree.reportValidity(); return; }
       var q = new URLSearchParams({ k: form.dataset.lead, p: location.pathname });
       try { sessionStorage.setItem("nzmo_lead", JSON.stringify({ kind: form.dataset.lead, page: location.pathname, name: form.name.value, config: (form.querySelector("[name=config]") || {}).value || "" })); } catch (err) {}
-      location.href = "/spasibo/?" + q.toString();
+      location.href = (form.dataset.thanksUrl || "/spasibo/") + "?" + q.toString();   // data-thanks-url — своя страница «Спасибо» у лендингов
     });
     var ph = form.querySelector("[name=phone]");
     if (ph) ph.addEventListener("input", function () { ph.setCustomValidity(""); });

@@ -273,3 +273,27 @@ a.lp-doc:hover{background:rgba(255,255,255,.09);border-color:var(--ochre-500);co
 /* ---------- прямой номер руководителя проекта рядом с мессенджерами */
 .lp-ask__tel{margin-left:14px;font-weight:600;color:var(--text-strong);white-space:nowrap}
 .lp-ask__tel:hover{color:var(--ochre-700)}
+
+/* ---------- каталог в шапке и на первом экране */
+.lp-head__cat{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px;border:1px solid var(--border-strong);border-radius:var(--radius);font-weight:600;font-size:14px;color:var(--text-strong);white-space:nowrap}
+.lp-head__cat:hover{border-color:var(--navy-800);color:var(--navy-800)}
+.lp-head__cat svg{color:var(--ochre-700)}
+.lp-head__phone{margin-left:auto}
+.lp-hero__btns{margin-top:28px}
+.lp-hero__cat svg{color:var(--ochre-400)}
+.lp-hero .btn--outline{border-color:rgba(255,255,255,.4);color:var(--white)}
+.lp-hero .btn--outline:hover{border-color:var(--white);color:var(--white)}
+@media (min-width:1101px){.lp-hero__btns [data-hero-quiz]{display:none}}
+@media (max-width:820px){.lp-head__cat span{display:none}.lp-head__cat{padding:0 12px}}
+@media (max-width:420px){.lp-hero__btns .btn{width:100%}}
+.lp-head__nav a{white-space:nowrap}
+.lp-head__phone span{white-space:nowrap}
+@media (max-width:1320px){.lp-head__nav{display:none}}
+
+/* ---------- служебные страницы лендинга: «Спасибо» и документы */
+.lp-doc-page__in{max-width:860px}
+.lp-doc-page h1{margin:14px 0 16px}
+.lp-doc-page__lead{margin-bottom:28px}
+.lp-doc-page .lp-stg{margin-bottom:28px}
+.lp-doc-page__note{margin-top:18px}
+.lp-doc-page__body{margin:24px 0 32px;max-width:none}
