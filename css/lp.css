@@ -342,7 +342,3 @@ a.lp-doc:hover{background:rgba(255,255,255,.09);border-color:var(--ochre-500);co
 @media (max-width:820px){.lp-dlv{grid-template-columns:minmax(0,1fr)}.lp-dlv__i,.lp-dlv__i+.lp-dlv__i{padding:16px 0 14px;border-left:0}.lp-dlv__i+.lp-dlv__i{border-top:1px solid var(--border-hair)}}
 @media (max-width:620px){.lp-pack{grid-template-columns:minmax(0,1fr)}.lp-pack__t,.lp-pack__d{min-height:0}}
 
-/* карточка изделия без фото: плашка со списком позиций */
-.lp-prod__ph--tags{background:var(--navy-800);display:flex;align-items:flex-end;padding:22px}
-.lp-prod__ph--tags ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
-.lp-prod__ph--tags li{padding:7px 12px;border:1px solid rgba(255,255,255,.28);color:#fff;font-family:var(--font-tech);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
