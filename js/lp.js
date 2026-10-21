@@ -39,6 +39,22 @@
     if (a) goal(a.dataset.goal);
   });
 
+  // Портфолио: кадр на весь экран по клику
+  document.addEventListener("click", function (e) {
+    var z = e.target.closest("[data-zoom]");
+    if (!z || !z.dataset.zoom) return;
+    var d = document.createElement("dialog");
+    d.className = "lp-zoom";
+    d.innerHTML = '<img alt=""><p></p><button type="button" aria-label="Закрыть">×</button>';
+    d.querySelector("img").src = z.dataset.zoom;
+    d.querySelector("img").alt = z.dataset.cap || "";
+    d.querySelector("p").textContent = z.dataset.cap || "";
+    d.addEventListener("click", function (ev) { if (ev.target === d || ev.target.tagName === "BUTTON") d.close(); });
+    d.addEventListener("close", function () { d.remove(); });
+    document.body.appendChild(d);
+    d.showModal();
+  });
+
   // 3. Квиз: один клик по ответу — следующий вопрос. Ответы собираем в скрытое поле config
   var quiz = document.querySelector("[data-quiz]");
   if (!quiz) return;
