@@ -100,7 +100,7 @@
       phone.value = phoneFormat(digits);
       phone.setCustomValidity("");
       var agree = form.querySelector("[name=agree]");   // согласие на обработку ПДн — отдельной галочкой (152-ФЗ ст. 9)
-      if (agree && !agree.checked) { agree.setCustomValidity("Отметьте согласие на обработку заявки, пожалуйста"); agree.reportValidity(); return; }
+      if (agree && !agree.checked) { agree.setCustomValidity("Отметьте согласие на обработку персональных данных, пожалуйста"); agree.reportValidity(); return; }
       var q = new URLSearchParams({ k: form.dataset.lead, p: location.pathname });
       try { sessionStorage.setItem("nzmo_lead", JSON.stringify({ kind: form.dataset.lead, page: location.pathname, name: form.name.value, config: (form.querySelector("[name=config]") || {}).value || "" })); } catch (err) {}
       location.href = (form.dataset.thanksUrl || "/spasibo/") + "?" + q.toString();   // data-thanks-url — своя страница «Спасибо» у лендингов
