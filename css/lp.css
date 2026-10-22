@@ -348,3 +348,65 @@ a.lp-doc:hover{background:rgba(255,255,255,.09);border-color:var(--ochre-500);co
 
 /* строки карточек изделий — по общей сетке ряда: фото, заголовок, описание и характеристики на одном уровне при любой длине текста */
 .lp-prod__i{display:grid;grid-row:span 4;grid-template-rows:subgrid;row-gap:0}
+
+/* ---------- лендинг «Потолки и освещение» (22.10.2026): карточки систем с ценой «от», кадры света, таблица выбора, отзывы */
+.lp-prod--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.lp-prod--price .lp-prod__i{grid-row:span 5}
+.lp-price{margin:16px 0 0;padding-top:14px;border-top:1px solid var(--border-hair);display:flex;align-items:baseline;flex-wrap:wrap;gap:6px;font-size:14px;color:var(--text-muted)}
+.lp-price b{font-family:var(--font-display);font-weight:500;font-size:clamp(22px,1.6vw,26px);line-height:1.1;color:var(--text-strong);letter-spacing:-.015em;white-space:nowrap}
+.lp-price--calc a{font-weight:600;font-size:15px;color:var(--navy-700);border-bottom:1px solid rgba(209,162,80,.6)}
+.lp-price--calc a:hover{color:var(--ochre-700)}
+.lp-note{margin:20px 0 0;font-size:14.5px;line-height:1.5;color:var(--text-muted);max-width:60em}
+@media (max-width:1200px){.lp-prod--3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.lp-prod--3{grid-template-columns:minmax(0,1fr)}}
+.lp-lph{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:clamp(28px,3vw,44px)}
+.lp-lph__i{margin:0;display:flex;flex-direction:column;gap:12px}
+.lp-lph__ph{display:block;position:relative;width:100%;aspect-ratio:16/10;padding:0;border:0;overflow:hidden;background:var(--steel-100);cursor:zoom-in;border-radius:var(--radius)}
+.lp-lph__ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.lp-lph__ph:hover img{transform:scale(1.03)}
+.lp-lph__i figcaption{display:grid;gap:4px}
+.lp-lph__i figcaption b{font-family:var(--font-display);font-weight:500;font-size:17px;line-height:1.3;color:var(--text-strong)}
+.lp-lph__i figcaption span{font-size:14.5px;line-height:1.5;color:var(--text-muted);max-width:44em}
+@media (max-width:900px){.lp-lph{grid-template-columns:minmax(0,1fr)}}
+.lp-tbl--choose .lp-tbl__r{grid-template-columns:minmax(0,1fr) minmax(0,.95fr) minmax(0,1.35fr)}
+.lp-tbl--choose .lp-tbl__r span{color:var(--text-body)}
+.lp-tbl--choose .lp-tbl__h{padding:10px 0}
+.lp-tbl--choose .lp-tbl__h span{font-family:var(--font-tech);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted)}
+@media (max-width:620px){.lp-tbl--choose .lp-tbl__r{grid-template-columns:minmax(0,1fr)}.lp-tbl--choose .lp-tbl__h{display:none}}
+/* под галереей потолков: цифры завода и ссылка на портфолио */
+.lp-galf{margin-top:clamp(20px,2vw,32px);display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(24px,4vw,72px);align-items:center;padding:clamp(20px,2.2vw,32px);background:var(--steel-050);border-left:3px solid var(--ochre-500)}
+.lp-galf__st{list-style:none;display:flex;gap:clamp(24px,3vw,56px)}
+.lp-galf__st li{display:grid;gap:6px;align-content:start}
+.lp-galf__st b{font-family:var(--font-display);font-weight:500;font-size:clamp(28px,2.4vw,40px);line-height:1;color:var(--text-strong);letter-spacing:-.02em;white-space:nowrap}
+.lp-galf__st span{font-size:14px;line-height:1.4;color:var(--text-muted)}
+.lp-galf__txt{display:flex;align-items:center;justify-content:space-between;gap:16px 32px;flex-wrap:wrap}
+.lp-galf__txt p{margin:0;font-size:16px;line-height:1.5;color:var(--text-body);max-width:34em}
+.lp-galf__btns{display:flex;gap:12px;flex-wrap:wrap}
+.lp-galf__txt .btn{gap:8px}
+@media (max-width:900px){.lp-galf{grid-template-columns:minmax(0,1fr)}.lp-galf__btns,.lp-galf__txt .btn{width:100%}}
+
+/* ---------- масштаб под экран (владелец 22.10.2026): никаких колонок по центру с пустыми полями.
+   Контейнер без потолка ширины. На экранах шире 1920 px скрипт лендинга ставит zoom = ширина / 1920 и --z:
+   вёрстка увеличивается пропорционально экрану. zoom увеличивает и vw/vh, поэтому там, где они есть, делим на --z */
+.lp .container{max-width:none}
+.lp{--gutter:clamp(20px,calc(3.5vw / var(--z,1)),96px)}
+.lp-gal{grid-auto-rows:calc((100vw / var(--z,1) - 17px - 2 * var(--gutter) - (var(--cols) - 1) * var(--gap)) / var(--cols) * .667)}
+@media (min-width:1101px){.lp-hero__in{min-height:calc(100vh / var(--z,1) - 68px)}}
+.lp dialog{zoom:calc(1 / var(--z,1))}
+/* телефон (22.10.2026): зоны нажатия не меньше 44 px у звонка и ссылок, подпись «визуализация» читается */
+@media (max-width:900px){.lp-gal__cap i{font-size:10.5px}}
+@media (max-width:640px){
+  .lp-head__phone{min-height:44px;justify-content:center}
+  .lp-foot a,.rev__foot a{display:inline-flex;align-items:center;min-height:36px}
+}
+/* телефон: карточки систем, светильников, упаковки и отзывы — лентой, листаются пальцем. Край следующей карточки виден,
+   поэтому понятно, что лента листается. Заголовки и характеристики в ленте стоят на одном уровне (subgrid) */
+@media (max-width:620px){
+  .lp-prod,.lp-pack,.revs{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:84%;gap:12px;
+    overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding:0 var(--gutter);
+    margin:0 calc(var(--gutter) * -1);padding:0 var(--gutter) 10px;scrollbar-width:thin}
+  .lp-prod>*,.lp-pack>*,.revs>*{scroll-snap-align:start}
+}
+.lp-prod__f dt{flex:none}
+/* первый экран потолков без кнопки каталога (владелец 22.10.2026): ряд кнопок держит высоту кнопки, воздух под гео остаётся */
+@media (min-width:1101px){.lp-hero__btns{min-height:54px}}

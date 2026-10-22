@@ -886,3 +886,5 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 .asm:not(.asm--side) .asm__p{flex:0 0 calc((100% - 4 * 20px) / 5)}
 @media (max-width:900px){.asm:not(.asm--side) .asm__p{flex-basis:calc((100% - 2 * 20px) / 3)}}
 @media (max-width:560px){.asm:not(.asm--side) .asm__p{flex-basis:calc((100% - 20px) / 2)}}
+
+/* вид без рендера в блоке «Виды» (22.10.2026): карточка с текстом, без попапа */
