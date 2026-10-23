@@ -324,7 +324,7 @@
   // Попапы видов (грильято, рейка): вариант × цвет × вид, ленивые картинки, расчёт с выбранной конфигурацией
   document.querySelectorAll("[data-kdlg]").forEach(function (dlg) {
     var ws = (dlg.dataset.ws || "m").split(","), wl = (dlg.dataset.wl || "").split("|");
-    var st = { v: "0", c: dlg.dataset.c, w: ws[0], t: "ch" };
+    var st = { v: "0", c: dlg.dataset.c, w: ws[0], t: "ch", vo: false, co: false };   // vo, co — выбрано «Другое» сечение или цвет: кадр остаётся от последнего стандартного
     function go(d) { st.w = ws[(ws.indexOf(st.w) + d + ws.length) % ws.length]; sync(); }
     function on(el, key) { var x = el.dataset[key]; return x === undefined || x === "*" || x === st[key]; }
     function sync() {
@@ -333,10 +333,11 @@
         f.hidden = !show;
         if (show) { var im = f.querySelector("img[data-src]"); if (im) { if (im.dataset.srcset) { im.sizes = im.getAttribute("sizes") || "60vw"; im.srcset = im.dataset.srcset; } im.src = im.dataset.src; im.removeAttribute("data-src"); } }
       });
-      dlg.querySelectorAll(".kd__price").forEach(function (e) { e.hidden = e.dataset.v !== st.v; });
+      dlg.querySelectorAll(".kd__price").forEach(function (e) { e.hidden = e.dataset.v !== (st.vo ? "o" : st.v); });
       dlg.querySelectorAll(".kd__pane").forEach(function (e) { e.hidden = !(e.dataset.t === st.t && on(e, "v")); });
-      dlg.querySelectorAll(".kd__chips button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.v === st.v); });
-      dlg.querySelectorAll(".kd__sw button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.c === st.c); if (b.dataset.c === st.c) { var l = dlg.querySelector("[data-cl]"); if (l) l.textContent = b.dataset.clLabel; } });
+      dlg.querySelectorAll(".kd__chips button").forEach(function (b) { b.setAttribute("aria-pressed", b.hasAttribute("data-vo") ? st.vo : !st.vo && b.dataset.v === st.v); });
+      dlg.querySelectorAll(".kd__sw button").forEach(function (b) { var p = b.hasAttribute("data-co") ? st.co : !st.co && b.dataset.c === st.c; b.setAttribute("aria-pressed", p); if (p) { var l = dlg.querySelector("[data-cl]"); if (l) l.textContent = st.co ? "другой" : b.dataset.clLabel; } });
+      dlg.querySelectorAll("[data-other]").forEach(function (i) { i.hidden = !st[i.dataset.other + "o"]; });
       var wi = ws.indexOf(st.w), cap = dlg.querySelector("[data-kd-cap]"); if (cap) cap.textContent = wl[wi] || "";
       dlg.querySelectorAll(".kd__dots i").forEach(function (d, k) { d.classList.toggle("is-on", k === wi); });
       calc();
@@ -347,15 +348,17 @@
       if (e.target === dlg) { dlg.close(); return; }   // клик по подложке
       if (!b) return;
       if (b.hasAttribute("data-kd-close")) { dlg.close(); return; }
-      if (b.closest(".kd__chips")) st.v = b.dataset.v;
-      else if (b.closest(".kd__sw")) st.c = b.dataset.c;
+      if (b.closest(".kd__chips")) { st.vo = b.hasAttribute("data-vo"); if (!st.vo) st.v = b.dataset.v; }
+      else if (b.closest(".kd__sw")) { st.co = b.hasAttribute("data-co"); if (!st.co) st.c = b.dataset.c; }
       else if (b.hasAttribute("data-kd-prev")) { go(-1); return; }
       else if (b.hasAttribute("data-kd-next")) { go(1); return; }
       else if (b.closest(".kd__tabs")) st.t = b.dataset.t;
       else if (b.hasAttribute("data-kd-cta")) {
         e.preventDefault();
-        var cfg = dlg.querySelector('[data-cfg][data-v="' + st.v + '"]').value;
-        var cl = dlg.querySelector("[data-cl]"); if (cl) cfg += ", " + cl.textContent;
+        var vi = dlg.querySelector("[data-other=v]"), ci = dlg.querySelector("[data-other=c]");
+        var cfg = dlg.querySelector('[data-cfg][data-v="' + (st.vo ? "o" : st.v) + '"]').value;
+        if (st.vo) cfg += ": " + (vi.value.trim() || "другое");
+        var cl = dlg.querySelector("[data-cl]"); if (cl) cfg += ", " + (st.co ? "цвет: " + (ci.value.trim() || "другой") : cl.textContent);
         var form = document.querySelector("#cta form[data-lead]");
         if (form) {
           var i = form.querySelector("[name=config]"), ec = form.querySelector("[data-config-echo]");

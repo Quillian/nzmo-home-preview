@@ -888,3 +888,9 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 @media (max-width:560px){.asm:not(.asm--side) .asm__p{flex-basis:calc((100% - 20px) / 2)}}
 
 /* вид без рендера в блоке «Виды» (22.10.2026): карточка с текстом, без попапа */
+/* «Другое» сечение и цвет в попапе вида: кадр остаётся, клиент пишет свой вариант */
+.kd__sw .kd__sw-o{display:grid;place-items:center;background:var(--white);border:1px dashed var(--text-muted);box-shadow:none;color:var(--text-muted);font-size:20px;line-height:1;font-weight:400}
+.kd__sw .kd__sw-o[aria-pressed=true]{border-style:solid;box-shadow:0 0 0 2px var(--navy-800);color:var(--navy-800)}
+.kd__in{display:block;width:100%;height:44px;margin-top:10px;padding:0 14px;border:1px solid var(--border-strong);border-radius:var(--radius);background:var(--white);font:inherit;font-size:16px;color:var(--text-strong)}
+.kd__in:focus{outline:2px solid var(--navy-800);outline-offset:1px}
+.kd__in[hidden]{display:none}
