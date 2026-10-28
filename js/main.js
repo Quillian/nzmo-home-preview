@@ -198,7 +198,7 @@
       o += '"/>';
       var yd = y0 + S + 16, xc = x0 + c * k;
       o += '<g class="rc-dim"><path d="M' + x0 + ' ' + yd + 'H' + (x0 + S) + 'M' + x0 + ' ' + (yd - 5) + 'v10M' + (x0 + S) + ' ' + (yd - 5) + 'v10M' + (x0 - 14) + ' ' + y0 + 'v' + (c * k) + 'M' + (x0 - 19) + ' ' + y0 + 'h10M' + (x0 - 19) + ' ' + (y0 + c * k) + 'h10"/>' +
-        '<text x="' + (x0 + S / 2) + '" y="' + (yd + 16) + '">600</text><text x="' + (x0 - 22) + '" y="' + (y0 + c * k / 2 + 4) + '" text-anchor="end">' + c + '</text></g>';
+        '<text x="' + (x0 + S / 2) + '" y="' + (yd + 16) + '">600</text><text x="' + (x0 - 25) + '" y="' + (y0 + c * k / 2 + 4) + '" text-anchor="end">' + c + '</text></g>';
       var H = h * 2.6, px = 340, py = 90 - H / 2;   // профиль «мама»: полка 10 мм, высота h
       o += '<rect class="rc-st" x="' + px + '" y="' + py + '" width="' + (10 * 2.6) + '" height="' + H + '"/>' +
         '<g class="rc-dim"><path d="M' + (px + 44) + ' ' + py + 'v' + H + 'M' + (px + 39) + ' ' + py + 'h10M' + (px + 39) + ' ' + (py + H) + 'h10M' + px + ' ' + (py + H + 14) + 'h' + (10 * 2.6) + '"/>' +
