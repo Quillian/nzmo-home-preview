@@ -352,6 +352,19 @@ a.lp-doc:hover{background:rgba(255,255,255,.09);border-color:var(--ochre-500);co
 /* ---------- лендинг «Потолки и освещение» (22.10.2026): карточки систем с ценой «от», кадры света, таблица выбора, отзывы */
 .lp-prod--3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .lp-prod--price .lp-prod__i{grid-row:span 5}
+.lp-prod--price .lp-prod__ph{background:#24272C}   /* студийные рендеры, как в карточках видов на сайте: фон под цвет сцены, пока кадр грузится */
+/* карточка открывает попап вида (как на сайте): ссылка заголовка растянута на всю карточку, подсказка на превью видна всегда */
+.lp-prod__i--kd{position:relative;cursor:pointer}
+.lp-prod__i--kd .lp-prod__t a{color:inherit}
+.lp-prod__i--kd .lp-prod__t a::after{content:"";position:absolute;inset:0;z-index:1}
+.lp-prod__i--kd .lp-prod__t a:focus-visible{outline:none}
+.lp-prod__i--kd .lp-prod__t a:focus-visible::after{outline:2px solid var(--navy-800);outline-offset:-2px}
+.lp-prod__i--kd .lp-price--calc a{position:relative;z-index:2}
+.lp-prod__i--kd .lp-prod__ph{position:relative}
+.lp-prod__i--kd .lp-prod__ph img{transition:transform .6s ease}
+.lp-prod__i--kd:hover .lp-prod__ph img{transform:scale(1.04)}
+.lp-prod__i--kd:hover .lp-prod__t{color:var(--ochre-700)}
+.lp-prod__more{position:absolute;left:12px;bottom:12px;display:inline-flex;align-items:center;min-height:30px;padding:5px 12px;border-radius:15px;background:rgba(255,255,255,.94);font-size:12.5px;font-weight:600;line-height:1.2;color:var(--text-strong)}
 .lp-price{margin:16px 0 0;padding-top:14px;border-top:1px solid var(--border-hair);display:flex;align-items:baseline;flex-wrap:wrap;gap:6px;font-size:14px;color:var(--text-muted)}
 .lp-price b{font-family:var(--font-display);font-weight:500;font-size:clamp(22px,1.6vw,26px);line-height:1.1;color:var(--text-strong);letter-spacing:-.015em;white-space:nowrap}
 .lp-price--calc a{font-weight:600;font-size:15px;color:var(--navy-700);border-bottom:1px solid rgba(209,162,80,.6)}
@@ -393,6 +406,12 @@ a.lp-doc:hover{background:rgba(255,255,255,.09);border-color:var(--ochre-500);co
 .lp-gal{grid-auto-rows:calc((100vw / var(--z,1) - 17px - 2 * var(--gutter) - (var(--cols) - 1) * var(--gap)) / var(--cols) * .667)}
 @media (min-width:1101px){.lp-hero__in{min-height:calc(100vh / var(--z,1) - 68px)}}
 .lp dialog{zoom:calc(1 / var(--z,1))}
+/* попап вида (карточки систем) растёт вместе с лендингом: zoom как у страницы, vw и vh делим на --z */
+@media (min-width:901px){
+  .lp dialog.kd{zoom:1;width:min(1240px,calc(100vw / var(--z,1) - 32px));max-height:calc(100vh / var(--z,1) - 32px);height:min(860px,calc(100vh / var(--z,1) - 32px))}
+  .lp .kd__stage{max-height:calc(100vh / var(--z,1) - 110px)}
+  .lp .kd__t{font-size:clamp(24px,calc(2.2vw / var(--z,1)),32px)}
+}
 /* телефон (22.10.2026): зоны нажатия не меньше 44 px у звонка и ссылок, подпись «визуализация» читается */
 @media (max-width:900px){.lp-gal__cap i{font-size:10.5px}}
 @media (max-width:640px){
