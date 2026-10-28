@@ -133,6 +133,18 @@
     });
   } catch (err) {}
 
+  // Кнопка с data-cta-cfg (например, «Запросить сертификаты»): текст запроса уходит в форму заявки внизу страницы
+  document.querySelectorAll("[data-cta-cfg]").forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      var form = document.querySelector("#cta form[data-lead]"); if (!form) return;
+      e.preventDefault();
+      var i = form.querySelector("[name=config]"), ec = form.querySelector("[data-config-echo]");
+      if (i) i.value = a.dataset.ctaCfg; if (ec) { ec.textContent = "Запрос: " + a.dataset.ctaCfg.toLowerCase() + "."; ec.hidden = false; }
+      var c = document.getElementById("cta"); c.scrollIntoView({ behavior: "smooth" });
+      var n = c.querySelector("[name=name]"); if (n) setTimeout(function () { n.focus({ preventScroll: true }); }, 500);
+    });
+  });
+
   // Спасибо: ссылки по типу заявки — первыми в списке «Пока ждёте»
   var tr = document.querySelector("[data-thanks-reco]");
   if (tr) {
