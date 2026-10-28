@@ -408,7 +408,7 @@ a.lp-doc:hover{background:rgba(255,255,255,.09);border-color:var(--ochre-500);co
 .lp dialog{zoom:calc(1 / var(--z,1))}
 /* попап вида (карточки систем) растёт вместе с лендингом: zoom как у страницы, vw и vh делим на --z */
 @media (min-width:901px){
-  .lp dialog.kd{zoom:1;width:min(1240px,calc(100vw / var(--z,1) - 32px));max-height:calc(100vh / var(--z,1) - 32px);height:min(860px,calc(100vh / var(--z,1) - 32px))}
+  .lp dialog.kd{zoom:1;width:min(1560px,calc(100vw / var(--z,1) - 48px));max-height:calc(100vh / var(--z,1) - 48px);height:calc(100vh / var(--z,1) - 48px)}
   .lp .kd__stage{max-height:calc(100vh / var(--z,1) - 110px)}
   .lp .kd__t{font-size:clamp(24px,calc(2.2vw / var(--z,1)),32px)}
 }

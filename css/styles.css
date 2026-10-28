@@ -719,11 +719,20 @@ path.kd-sec{fill:none;stroke-width:3}
 @media (max-width:900px){.minst__in{grid-template-columns:1fr}.minst__ph{min-height:0;aspect-ratio:16/10}}
 /* Попап видов, ред. 21.10.2026: размер окна не зависит от вкладки, преимущества — поверх картинки, галерея стрелками */
 .kd{height:min(860px,calc(100vh - 32px))}
+@media (min-width:901px){   /* 28.10.2026: окно во весь экран, чтобы характеристики влезали без прокрутки */
+  .kd{width:min(1560px,calc(100vw - 48px));height:calc(100vh - 48px);max-height:calc(100vh - 48px)}
+  .kd__in{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
+}
+@media (min-width:1280px){.kd__dl{display:grid;grid-template-columns:1fr 1fr;column-gap:28px}.kd__dl>div{display:flex;flex-direction:column;gap:2px}.kd__dl dt{font-size:12.5px}}
+.kd__more{position:sticky;bottom:-30px;z-index:2;display:flex;align-items:flex-end;justify-content:center;gap:6px;margin:-24px -34px -30px;padding:44px 0 14px;border:0;background:linear-gradient(to bottom,rgba(255,255,255,0),#fff 55%);font:inherit;font-size:14px;font-weight:600;color:var(--navy-800);cursor:pointer}
+.kd__more .arr{display:inline-block;animation:kdMore 1.6s ease-in-out infinite}
+@keyframes kdMore{50%{transform:translateY(3px)}}
+@media (max-width:900px){.kd__more{display:none!important}}
 .kd__in{height:100%;max-height:none;grid-template-rows:minmax(0,1fr)}
 .kd__media{height:100%}
 .kd__stage{flex:1;aspect-ratio:auto;max-height:none;height:100%;overflow:hidden;touch-action:pan-y;user-select:none}
-.kd__info{height:100%;overflow-y:auto;gap:20px;padding:34px 34px 30px}
-.kd__s{margin-top:-8px}
+.kd__info{height:100%;overflow-y:auto;gap:14px;padding:30px 34px 30px}
+.kd__s{margin-top:-4px}
 .kd__panes{min-height:0}
 .kd__badges{position:absolute;left:18px;top:18px;right:70px;z-index:3;list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .kd__badges li{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 12px;border-radius:15px;background:rgba(16,18,22,.55);backdrop-filter:blur(4px);color:#fff;font-size:13px}

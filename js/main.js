@@ -342,12 +342,19 @@
       dlg.querySelectorAll(".kd__dots i").forEach(function (d, k) { d.classList.toggle("is-on", k === wi); });
       calc();
       dlg.querySelectorAll(".kd__tabs button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.t === st.t); });
+      more();
     }
+    // «Ниже ещё»: колонка с текстом не влезла в окно — подсказываем, что её листают (на телефоне листается всё окно)
+    var info = dlg.querySelector(".kd__info"), mb = dlg.querySelector("[data-kd-more]");
+    function more() { if (mb) mb.hidden = info.scrollHeight - info.scrollTop - info.clientHeight < 8; }
+    info.addEventListener("scroll", more, { passive: true });
+    window.addEventListener("resize", function () { if (dlg.open) more(); });
     dlg.addEventListener("click", function (e) {
       var b = e.target.closest("button,[data-kd-cta]");
       if (e.target === dlg) { dlg.close(); return; }   // клик по подложке
       if (!b) return;
       if (b.hasAttribute("data-kd-close")) { dlg.close(); return; }
+      if (b.hasAttribute("data-kd-more")) { info.scrollBy({ top: info.clientHeight * 0.7, behavior: "smooth" }); return; }
       if (b.closest(".kd__chips")) { st.vo = b.hasAttribute("data-vo"); if (!st.vo) st.v = b.dataset.v; }
       else if (b.hasAttribute("data-co")) {   // палитра RAL (ral.js): файл грузим при первом нажатии
         var pick = function (c) { st.co = !c; if (c) st.c = c; sync(); }, ral = function () { window.nzRal(dlg, pick); };
@@ -399,7 +406,7 @@
     // картинки с размерами, план и сечение лежат отдельным файлом — грузим при первом открытии
     var kst = dlg.querySelector("[data-kd-src]");
     dlg._open = function () {
-      sync(); dlg.showModal();
+      info.scrollTop = 0; dlg.showModal(); sync();
       if (!kst || !kst.dataset.kdSrc) return;
       var url = kst.dataset.kdSrc; kst.removeAttribute("data-kd-src");
       fetch(url).then(function (r) { return r.ok ? r.text() : Promise.reject(r.status); })
