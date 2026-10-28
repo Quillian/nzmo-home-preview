@@ -890,7 +890,28 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 /* вид без рендера в блоке «Виды» (22.10.2026): карточка с текстом, без попапа */
 /* «Другое» сечение и цвет в попапе вида: кадр остаётся, клиент пишет свой вариант */
 .kd__sw .kd__sw-o{display:grid;place-items:center;background:var(--white);border:1px dashed var(--text-muted);box-shadow:none;color:var(--text-muted);font-size:20px;line-height:1;font-weight:400}
-.kd__sw .kd__sw-o[aria-pressed=true]{border-style:solid;box-shadow:0 0 0 2px var(--navy-800);color:var(--navy-800)}
+.kd__sw .kd__sw-o[aria-expanded=true]{border-style:solid;border-color:var(--navy-800);color:var(--navy-800)}
+.kd__sw .kd__ral{width:auto;height:auto;padding:8px 0;border:0;border-radius:0;box-shadow:none;background:none;font:inherit;font-size:13px;color:var(--text-muted);text-decoration:underline dotted;text-underline-offset:4px}
+.kd__sw .kd__ral:hover,.kd__sw .kd__ral[aria-expanded=true]{color:var(--navy-800)}
+.kd__ralp{display:flex;flex-direction:column;gap:12px;margin-top:4px;padding:14px;border:1px solid var(--border-soft);border-radius:var(--radius);background:var(--steel-050)}
+.kd__ralp[hidden]{display:none}
+.kd__ralq{width:100%;height:44px;padding:0 14px;border:1px solid var(--border-strong);border-radius:var(--radius);background:var(--white);font:inherit;font-size:16px;color:var(--text-strong)}
+.kd__ralq:focus{outline:2px solid var(--navy-800);outline-offset:1px}
+.kd__ralg{display:flex;flex-wrap:wrap;gap:6px}
+.kd__ralg button{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 10px;border:1px solid var(--border-soft);border-radius:16px;background:var(--white);font:inherit;font-size:13px;color:var(--text-body);cursor:pointer}
+.kd__ralg button i{width:10px;height:10px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+.kd__ralg button[aria-pressed=true]{border-color:var(--navy-800);background:var(--navy-800);color:var(--white)}
+.kd__ralc{display:grid;grid-template-columns:repeat(auto-fill,minmax(58px,1fr));gap:8px;max-height:236px;overflow-y:auto;padding:2px;overscroll-behavior:contain}
+.kd__ralc button{display:flex;flex-direction:column;gap:4px;padding:0;border:0;background:none;cursor:pointer;font:inherit}
+.kd__ralc button i{display:block;height:36px;border-radius:4px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.1);transition:transform .15s}
+.kd__ralc button b{font-family:var(--font-tech);font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--text-body)}
+.kd__ralc button:hover i,.kd__ralc button:focus-visible i{transform:scale(1.08);box-shadow:0 0 0 2px var(--white),0 0 0 3px var(--navy-800)}
+.kd__ralc button:focus-visible{outline:0}
+.kd__ralc p{grid-column:1/-1;font-size:13.5px;color:var(--text-muted)}
+.kd__ralv{display:flex;align-items:center;gap:8px;min-height:22px;font-size:13.5px;color:var(--text-strong)}
+.kd__ralv i{width:22px;height:22px;flex:none;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+.kd__raln{font-size:12.5px;color:var(--text-muted)}
+@media (max-width:560px){.kd__ralg{contain:inline-size;flex-wrap:nowrap;overflow-x:auto;margin:0 -14px;padding:0 14px;scrollbar-width:none}.kd__ralg button{flex:none;height:44px}.kd__ralc{grid-template-columns:repeat(auto-fill,minmax(52px,1fr));max-height:280px}.kd__ralc button i{height:44px}}
 .kd__oth{display:block;width:100%;height:44px;margin-top:10px;padding:0 14px;border:1px solid var(--border-strong);border-radius:var(--radius);background:var(--white);font:inherit;font-size:16px;color:var(--text-strong)}
 .kd__oth:focus{outline:2px solid var(--navy-800);outline-offset:1px}
 .kd__oth[hidden]{display:none}

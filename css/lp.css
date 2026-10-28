@@ -431,3 +431,4 @@ a.lp-doc:hover{background:rgba(255,255,255,.09);border-color:var(--ochre-500);co
 @media (min-width:1101px){.lp-hero__btns{min-height:54px}}
 /* маркер в H1 (эксперт по потолкам, 23.10.2026): главная фраза читается с первой секунды */
 .lp-mark{background:var(--ochre-200);color:var(--navy-900);padding:0 .12em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+@media (max-width:900px){.lp .kd__chips button{height:44px}}   /* зона нажатия на телефоне — от 44 px */
