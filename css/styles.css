@@ -950,28 +950,12 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
   .packs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:84%;gap:12px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;
     scroll-padding:0 var(--gutter);margin:0 calc(var(--gutter) * -1);padding:0 var(--gutter) 10px;scrollbar-width:thin}
   .packs>*{scroll-snap-align:start}}
-/* «Продукция сертифицирована» (28.10.2026, по слайду каталога): текст и список слева, справа стопка размытых сканов и карточка с номером */
-.certs__in{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(32px,4vw,88px);align-items:center}
-.certs__txt .lead{margin-top:14px}
-.certs__list{list-style:none;margin:24px 0 28px;padding:0;border-top:1px solid var(--border-hair)}
-.certs__list li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding:14px 0;border-bottom:1px solid var(--border-hair)}
-.certs__list b{font-weight:600;font-size:15.5px;line-height:1.35;color:var(--text-strong)}
-.certs__list em{font-style:normal;font-family:var(--font-tech);font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--ochre-700);white-space:nowrap;padding-top:3px}
-.certs__list span{grid-column:1/-1;font-size:14px;line-height:1.5;color:var(--text-muted)}
-.certs__note{margin:20px 0 0;font-size:13.5px;line-height:1.5;color:var(--text-muted);max-width:52em}
-.certs__vis{position:relative;aspect-ratio:5/4;overflow:hidden;background:var(--surface-page);container-type:inline-size}
-.certs__p{position:absolute;width:44%;background:var(--white);box-shadow:0 12px 32px rgba(16,28,42,.16)}
-.certs__p--1{left:4%;top:9%;transform:rotate(-9deg)}
-.certs__p--2{left:29%;top:3%;transform:rotate(2deg)}
-.certs__p--3{left:54%;top:10%;transform:rotate(8deg)}
-.certs__card{position:absolute;left:7%;right:5%;bottom:11%;padding:4.5cqw 5cqw;background:var(--white);transform:rotate(-5deg);box-shadow:0 18px 44px rgba(16,28,42,.22);
-  font-family:"Times New Roman",Times,Georgia,serif;color:#111;text-align:center;display:grid;gap:1.2cqw}
-.certs__card b{font-size:5.2cqw;font-weight:700;text-transform:uppercase;letter-spacing:.02em;line-height:1.1}
-.certs__card span{font-size:3.6cqw}
-.certs__card u{font-size:4cqw;font-weight:700;text-underline-offset:.15em}
-.certs__card p{margin:.6cqw 0 0;font-size:3.3cqw;line-height:1.35;text-align:left}
-@media (max-width:1024px){.certs__in{grid-template-columns:minmax(0,1fr)}.certs__vis{max-width:640px;width:100%}}
 /* ответы FAQ (_faq.html, фильтр qa): абзацы и списки с маркерами охрой, как в статьях */
 .faq .a p{margin:0}.faq .a p+p,.faq .a ul+p{margin-top:.5em}.faq .a ul{margin:.3em 0 0;padding-left:20px}.faq .a li{margin-top:.2em}.faq .a li::marker{color:var(--ochre-600)}
 /* строка ссылок на дочерние страницы вместо карточек (Грильято, 28.10.2026) */
 .kids-links{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:0;font-size:15px;color:var(--text-muted)}.kids-links a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--border-hair);border-radius:22px;color:var(--text-strong)}.kids-links a:hover{border-color:var(--navy-800)}
+
+/* Рендеры и сгенерированные изображения видов не являются фотографиями изделия. */
+.k3__viz{position:absolute;left:12px;bottom:12px;z-index:1;padding:4px 8px;border-radius:3px;background:rgba(255,255,255,.9);color:#444;font-size:11px;letter-spacing:.02em}
+
+.card__photo:has(.k3__viz){position:relative}
