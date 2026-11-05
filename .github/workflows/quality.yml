@@ -26,6 +26,7 @@ jobs:
           name: static-audit
           path: .github/quality/results
   browser:
+    timeout-minutes: 20
     runs-on: ubuntu-24.04
     env:
       FULL_AUDIT: '1'
@@ -49,6 +50,8 @@ jobs:
       - run: npm ci
         working-directory: .github/quality
       - run: npx playwright install --with-deps chromium
+        if: github.event.inputs.scope != 'performance'
+        timeout-minutes: 5
         working-directory: .github/quality
       - run: ./node_modules/.bin/playwright test
         if: github.event.inputs.scope != 'performance'
