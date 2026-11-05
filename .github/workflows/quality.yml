@@ -3,32 +3,35 @@ on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
 concurrency:
-  group: quality-${{ github.ref }}
+  group: quality-${{ github.ref }}-${{ github.event_name }}
   cancel-in-progress: true
 jobs:
   static:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
       - run: python3 .github/quality/static.py
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7.0.2
         if: always()
         with:
           name: static-audit
           path: .github/quality/results
   browser:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       FULL_AUDIT: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 2
-      - run: git worktree add ../baseline "${{ github.event.pull_request.base.sha || github.event.before || 'HEAD^' }}"
+      - run: |
+          BASE="${{ github.event.pull_request.base.sha || github.event.before || 'HEAD^' }}"
+          git cat-file -e "$BASE" || git fetch --depth=1 origin "$BASE"
+          git worktree add ../baseline "$BASE"
         if: github.event.before != '0000000000000000000000000000000000000000'
       - run: git worktree add ../baseline HEAD^
         if: github.event.before == '0000000000000000000000000000000000000000'
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7.1.0
         with:
           node-version: 24.14.1
           cache: npm
@@ -41,9 +44,9 @@ jobs:
       - run: ./node_modules/.bin/playwright test
         working-directory: .github/quality
       - run: ./node_modules/.bin/lhci collect && ./node_modules/.bin/lhci upload
-        if: always()
+        if: ${{ !cancelled() }}
         working-directory: .github/quality
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7.0.2
         if: always()
         with:
           name: browser-and-lighthouse
