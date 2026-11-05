@@ -19,7 +19,7 @@ jobs:
   browser:
     runs-on: ubuntu-24.04
     env:
-      FULL_AUDIT: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
+      FULL_AUDIT: '1'
     steps:
       - uses: actions/checkout@v7.0.1
         with:

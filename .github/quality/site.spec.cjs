@@ -18,7 +18,7 @@ if(process.env.FULL_AUDIT==='1'){
       expect.soft(geometry.overflow, 'horizontal overflow').toBe(false);
       expect.soft(geometry.broken, 'broken images').toEqual([]);
       expect.soft(errors, 'JS runtime errors').toEqual([]);
-      expect.soft(axe.violations.filter(v=>['label','empty-table-header','heading-order','label-content-name-mismatch'].includes(v.id)), 'semantic accessibility').toEqual([]);
+      expect.soft(axe.violations, 'accessibility violations').toEqual([]);
     });
   }
 }
@@ -42,10 +42,6 @@ for(const width of [320,390,768,1440]) for(const route of routes) test(`${width}
   const previous=await page.screenshot({fullPage:true,animations:'disabled',mask:[page.locator('iframe')]});
   await info.attach('previous',{body:previous,contentType:'image/png'});
   const a=PNG.sync.read(current),b=PNG.sync.read(previous);
-  const oldAxe=await new AxeBuilder({page}).analyze();
-  const fingerprint=v=>v.nodes.map(n=>v.id+':'+JSON.stringify(n.target));
-  const known=new Set(oldAxe.violations.flatMap(fingerprint));
-  const newAxe=axe.violations.filter(v=>['serious','critical'].includes(v.impact)).flatMap(fingerprint).filter(x=>!known.has(x));
   if(a.width===b.width&&a.height===b.height){
     const pixelmatch=(await import('pixelmatch')).default,diff=new PNG({width:a.width,height:a.height});
     const pixels=pixelmatch(a.data,b.data,diff.data,a.width,a.height,{threshold:0.15});
@@ -54,7 +50,7 @@ for(const width of [320,390,768,1440]) for(const route of routes) test(`${width}
   expect.soft(overflow,'horizontal overflow').toBe(false);
   expect.soft(broken,'broken images').toEqual([]);
   expect.soft(errors,'JS runtime errors').toEqual([]);
-  expect.soft(newAxe,'new serious/critical accessibility issues').toEqual([]);
+  expect.soft(axe.violations,'accessibility violations').toEqual([]);
 });
 test('preview form validation and optional contact method',async({page})=>{
   await page.goto('http://127.0.0.1:8765/potolki/reechnye/');
@@ -80,4 +76,20 @@ test('factory photo opens and closes without navigation',async({page})=>{
  await page.keyboard.press('Escape');
  await expect(dialog).not.toBeVisible();
  await expect(page).toHaveURL(/\/o-zavode\/$/);
+});
+
+
+test('mobile menu remains visible and opens at 320px',async({page})=>{
+ await page.setViewportSize({width:320,height:800});
+ await page.goto('http://127.0.0.1:8765/');
+ const burger=page.locator('.burger');
+ const shape=await burger.evaluate(el=>({width:el.getBoundingClientRect().width,right:el.getBoundingClientRect().right,line:el.querySelector('span').getBoundingClientRect().width,viewport:document.documentElement.clientWidth}));
+ expect(shape.width).toBeGreaterThanOrEqual(40);
+ expect(shape.line).toBeGreaterThanOrEqual(16);
+ expect(shape.right).toBeLessThanOrEqual(shape.viewport);
+ await burger.click();
+ await expect(burger).toHaveAttribute('aria-expanded','true');
+ await expect(page.locator('.nav')).toBeVisible();
+ await burger.click();
+ await expect(page.locator('.nav')).toBeHidden();
 });

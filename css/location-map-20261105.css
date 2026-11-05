@@ -7,7 +7,7 @@
 .location-card>button{display:block;width:100%;padding:24px 24px 16px;text-align:left;border:0;background:transparent;color:inherit;cursor:pointer;font-family:var(--font-text)}
 .location-card__head{display:flex;align-items:center;gap:14px;margin-bottom:18px}.location-card svg{width:30px;height:30px;stroke:#05445e;fill:none;stroke-width:1.5;flex-shrink:0}
 .location-card__head b{font-size:20px;font-weight:500;letter-spacing:-.02em}
-.location-card__address{display:block;font-size:14px;line-height:1.6;color:#525c68}.location-card__city{display:block;font-size:12px;color:#70727a;margin-bottom:5px}
+.location-card__address{display:block;font-size:14px;line-height:1.6;color:#525c68}.location-card__city{display:block;font-size:12px;color:var(--text-muted);margin-bottom:5px}
 .location-card__show{display:block;margin-top:17px;font-size:12px;color:#05445e}.location-card__show::before{content:"";display:inline-block;width:6px;height:6px;border:1px solid #9ca6ae;border-radius:50%;margin-right:8px;vertical-align:1px}.location-card [aria-pressed=true] .location-card__show::before{background:#d1a250;border-color:#d1a250}
 .location-card>a{display:inline-block;margin:0 24px 23px;padding-bottom:3px;font-size:12px;text-decoration:none;border-bottom:1px solid #d1a250;color:#05445e}
 

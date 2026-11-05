@@ -963,3 +963,7 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 .k3__t{overflow-wrap:anywhere;hyphens:auto}
 .geo-legend{color:var(--steel-300)}
 .rc__kpi dt{color:rgba(255,255,255,.72)}
+
+/* Keep navigation controls usable on narrow phones, without flex collapse. */
+@media(max-width:480px){.header__in{gap:6px}.lockup img{width:124px}.burger{flex:0 0 44px;width:44px;padding:12px}.header__search{flex:0 0 36px}}
+@media(max-width:380px){.header__in{padding-inline:12px;gap:4px}.lockup img{width:100px}.header__search{flex-basis:32px;width:32px}}
