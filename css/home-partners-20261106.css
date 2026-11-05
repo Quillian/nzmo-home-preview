@@ -1,17 +1,12 @@
-.partner-ribbon{position:relative;padding-bottom:36px}
+ .home-partners.section{padding:48px 0}.home-partners .section-head{margin-bottom:20px}
+.partner-ribbon{position:relative;padding-bottom:0}
 .partner-ribbon__viewport{overflow:hidden;padding:12px 0;mask-image:linear-gradient(to right,transparent,#000 32px,#000 calc(100% - 32px),transparent)}
 .partner-ribbon__track{display:flex;width:max-content;animation:partner-ribbon-scroll 105s linear infinite;animation-play-state:paused}
 .partner-ribbon.is-ready .partner-ribbon__track{animation-play-state:running}
 .partner-ribbon__group{display:flex;align-items:center;flex:none;gap:48px;margin:0;padding:0 48px 0 0;list-style:none}
 .partner-ribbon__group li{display:flex;align-items:center;justify-content:center;width:160px;height:72px;flex:none}
-.partner-ribbon__group img{display:block;width:160px;height:64px;object-fit:contain;filter:grayscale(1);opacity:.8;transition:filter .2s,opacity .2s}
+.partner-ribbon__group img{display:block;width:160px;height:64px;object-fit:contain;filter:grayscale(1);opacity:1;transition:filter .2s,opacity .2s}
 .partner-ribbon__group img:hover{filter:none;opacity:1}
-.partner-ribbon__toggle{position:absolute;right:0;bottom:0;display:inline-flex;align-items:center;gap:8px;min-height:32px;padding:4px 8px;border:0;background:transparent;color:var(--text-muted);font:inherit;font-size:12px;cursor:pointer}
-.partner-ribbon__toggle[hidden]{display:none}
-.partner-ribbon__toggle:focus-visible{outline:2px solid #D1A250;outline-offset:3px}
-.partner-ribbon__pause-icon{width:9px;height:10px;border-left:3px solid currentColor;border-right:3px solid currentColor;box-sizing:border-box}
-.partner-ribbon.is-paused .partner-ribbon__track{animation-play-state:paused}
-.partner-ribbon.is-paused .partner-ribbon__pause-icon{width:0;height:0;border:5px solid transparent;border-right:0;border-left:8px solid currentColor}
 .geo-legend--center{justify-content:center;text-align:center;gap:16px 32px}
 .geo-legend--center>span{justify-content:center}
 .geo-legend--center i{flex-shrink:0}
@@ -30,5 +25,7 @@
  .partner-ribbon__viewport{overflow-x:auto;mask-image:none}
  .partner-ribbon__track{animation:none}
  .partner-ribbon__group[aria-hidden]{display:none}
- .partner-ribbon__toggle{display:none}
 }
+@media(max-width:600px){.home-partners.section{padding:36px 0}}
+
+.partner-ribbon__group img[src$="renaissance.png"]{object-fit:cover}
