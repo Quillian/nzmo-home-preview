@@ -92,6 +92,7 @@
     el.addEventListener("blur", function () { if (el.value === "+7 (") el.value = ""; });
   });
   document.querySelectorAll("form[data-lead]").forEach(function (form) {
+    if (form.hasAttribute("data-lead-v2")) return; // New lead journey owns validation and receipt state.
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var phone = form.querySelector("[name=phone]");

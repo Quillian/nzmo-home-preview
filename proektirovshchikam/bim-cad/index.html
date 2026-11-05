@@ -19,6 +19,8 @@
 <link rel="stylesheet" href="/css/styles.css?v=2faeb6fa">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://nzmo-home.vercel.app/#org","name":"НЗМО — Новосибирский завод металлообработки","alternateName":"НЗМО","url":"https://nzmo-home.vercel.app/","logo":"https://nzmo-home.vercel.app/img/logo/04_gorizont_gold-navy.svg","telephone":"+7 (383) 234-91-52","email":"zakaz@nzmo.ru","address":{"@type":"PostalAddress","addressLocality":"Новосибирск","streetAddress":"ул. Челюскинцев, 30/2, офис 410","addressCountry":"RU"},"contactPoint":{"@type":"ContactPoint","telephone":"+7 (383) 234-91-52","contactType":"sales","areaServed":"RU","availableLanguage":"ru"},"foundingDate":"2021","taxID":"5406813782","brand":[{"@type":"Brand","name":"AIRWOOD"},{"@type":"Brand","name":"ALFAPANEL"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"\u0413\u043b\u0430\u0432\u043d\u0430\u044f","item":"https://nzmo-home.vercel.app/"},{"@type":"ListItem","position":2,"name":"\u041f\u0440\u043e\u0435\u043a\u0442\u0438\u0440\u043e\u0432\u0449\u0438\u043a\u0430\u043c \u0438 \u0430\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u043e\u0440\u0430\u043c","item":"https://nzmo-home.vercel.app/proektirovshchikam/"},{"@type":"ListItem","position":3,"name":"BIM \u0438 CAD-\u043c\u043e\u0434\u0435\u043b\u0438","item":"https://nzmo-home.vercel.app/proektirovshchikam/bim-cad/"}]}</script>
+<link rel="stylesheet" href="/css/lead-journey-20261106.css?v=dfa2698e">
+<script src="/js/lead-journey-20261106.js?v=b29af6e3" defer></script>
 </head>
 <body>
 <header class="header">
@@ -174,21 +176,22 @@
       <div class="kicker"><span class="n"></span><span class="l">Заявка</span></div>
       <h2 class="t-2">Запросить модель</h2>
       <p class="lead" style="margin:14px 0 32px;max-width:520px">Пришлите план или площадь — вернёмся со спецификацией комплекта и сроком. Порядок цифр назовём в течение рабочего дня.</p>
-      <form class="form" data-lead="quote" action="/spasibo/" method="post" novalidate>
-        <input type="hidden" name="page" value="/proektirovshchikam/bim-cad/">
-        <input type="hidden" name="config" value="">
-        <div class="f2">
-          <label><span>Имя</span><input type="text" name="name" required autocomplete="name" placeholder="Как к вам обращаться"></label>
-          <label><span>Телефон</span><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+7"></label>
-        </div>
-        <div class="captcha" aria-hidden="true"></div>
-        <label class="consent"><input type="checkbox" name="agree" required><span>Даю <a href="/soglasie-na-obrabotku-dannyh/">согласие на обработку персональных данных</a>, с <a href="/politika-konfidentsialnosti/">политикой</a> ознакомлен</span></label>
-        <div class="btn-row" style="margin-top:16px">
-          <button type="submit" class="btn btn--navy">Посчитать проект</button>
-<a class="btn btn--outline" href="/files/nzmo-katalog-2026.pdf">Скачать каталог</a>        </div>
-        <p class="msgr cta-msgr">или напишите нам в<span class="msgr__wrap"><button type="button" class="msgr__a" data-max-pop aria-expanded="false" aria-label="Написать в MAX" title="MAX"><img src="/img/brands/max.svg" alt="MAX" width="28" height="28"></button><span class="msgr__pop" hidden>Найдите нас в MAX по номеру<b>+7 960 790-16-07</b><button type="button" data-copy="+7 960 790-16-07">Скопировать номер</button></span></span><a class="msgr__a" href="https://t.me/+79607901607" target="_blank" rel="noopener" aria-label="Написать в Telegram" title="Telegram"><img src="/img/brands/telegram.svg" alt="Telegram" width="28" height="28"></a></p>
-        <div class="small muted" data-config-echo hidden style="margin-top:12px"></div>
-      </form>
+      <form class="form lead-form " data-lead="quote" data-lead-v2 action="/spasibo/" method="post" novalidate>
+  <input type="hidden" name="page" value="/proektirovshchikam/bim-cad/"><input type="hidden" name="config" value="">
+<div class="lead-fields">
+  <label><span>Как к вам обращаться <small>необязательно</small></span><input name="name" type="text" autocomplete="name" maxlength="100" placeholder="Ваше имя"></label>
+  <label><span data-contact-label>Телефон или email <small>обязательно</small></span><input name="contact" data-lead-contact type="text" autocomplete="off" maxlength="160" required placeholder="+7 999 123-45-67 или mail@company.ru"></label>
+  <label><span>Как удобнее ответить <small>необязательно</small></span><select name="contact_method" data-contact-method><option value="">На ваше усмотрение</option><option value="phone">Позвонить</option><option value="telegram">Написать в Telegram</option><option value="max">Написать в MAX</option><option value="email">Написать на email</option></select></label>
+</div>  <details class="lead-optional"><summary>Добавить комментарий</summary><label><span>Коротко о задаче <small>необязательно</small></span><textarea name="message" rows="3" maxlength="3000" placeholder="Что нужно посчитать или уточнить?"></textarea></label></details>
+  <div class="lead-config" data-config-echo hidden></div>
+  <label class="consent"><input type="checkbox" name="agree" required><span>Даю <a href="/soglasie-na-obrabotku-dannyh/">согласие на обработку персональных данных</a>, с <a href="/politika-konfidentsialnosti/">политикой</a> ознакомлен</span></label>
+  <p class="lead-status" data-lead-status role="status" hidden></p>
+  <button type="submit" class="btn btn--ochre lead-submit" data-lead-submit disabled>Продолжить</button>
+  <p class="lead-footnote">План, размеры и файлы можно добавить на следующем шаге. Это необязательно.</p>
+  <p class="lead-preview" data-lead-preview>Предпросмотр: заявка не отправляется. Можно проверить форму и следующий шаг.</p>
+  <noscript><p class="lead-preview">Для формы нужен JavaScript. Свяжитесь с нами по телефону +7 (383) 234-91-52.</p></noscript>
+  <p class="msgr lead-messengers">или напишите нам напрямую<span class="msgr__wrap"><button type="button" class="msgr__a" data-max-pop aria-expanded="false" aria-label="Написать в MAX" title="MAX"><img src="/img/brands/max.svg" alt="MAX" width="28" height="28"></button><span class="msgr__pop" hidden>Найдите нас в MAX по номеру<b>+7 960 790-16-07</b><button type="button" data-copy="+7 960 790-16-07">Скопировать номер</button></span></span><a class="msgr__a" href="https://t.me/+79607901607" target="_blank" rel="noopener" aria-label="Написать в Telegram" title="Telegram"><img src="/img/brands/telegram.svg" alt="Telegram" width="28" height="28"></a></p>
+</form>
     </div>
     <div class="aside" style="margin-top:64px">
       <div class="k">Что будет после заявки</div>
@@ -242,6 +245,6 @@
   <p>Файлы cookie статистики и учёта обращений включим, только если вы нажмёте «Принять». <a href="/ispolzovanie-cookie/">Подробнее</a></p>
   <div class="cookie__btns"><button type="button" class="btn btn--ochre btn--sm" data-cookie-ok>Принять</button><button type="button" class="btn btn--sm cookie__no" data-cookie-no>Отклонить</button></div>
 </div>
-<script src="/js/main.js?v=babd73ee" defer></script>
+<script src="/js/main.js?v=7d2ca1ac" defer></script>
 </body>
 </html>
