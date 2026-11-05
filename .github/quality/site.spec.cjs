@@ -2,6 +2,23 @@ const {test,expect}=require('@playwright/test');
 const {AxeBuilder}=require('@axe-core/playwright');
 const {PNG}=require('pngjs');
 const routes=['/','/o-zavode/','/kontakty/','/potolki/reechnye/','/potolki/kassetnye/clip-in/','/spasibo/'];
+if(process.env.FULL_AUDIT==='1'){
+  const fs=require('node:fs'),path=require('node:path'),root=path.resolve(__dirname,'../..');
+  function crawl(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.name.startsWith('.')||e.name==='node_modules'?[]:e.isDirectory()?crawl(path.join(dir,e.name)):e.name==='index.html'?[path.join(dir,e.name)]:[]);}
+  for(const file of crawl(root)){
+    const url='/'+path.relative(root,path.dirname(file)).split(path.sep).filter(Boolean).join('/');
+    test('full audit '+url,async({page},info)=>{
+      await page.setViewportSize({width:390,height:844});
+      await page.route('**/*',r=>r.request().url().startsWith('http://127.0.0.1:')||r.request().url().startsWith('data:')?r.continue():r.abort());
+      const errors=[];page.on('pageerror',e=>errors.push(e.message));
+      await prepare(page,'http://127.0.0.1:8765'+url+'/');
+      const axe=await new AxeBuilder({page}).analyze();
+      const geometry=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth+1,broken:[...document.images].filter(i=>!i.naturalWidth).map(i=>i.getAttribute('src'))}));
+      await info.attach('full-audit',{body:Buffer.from(JSON.stringify({url,errors,...geometry,violations:axe.violations},null,2)),contentType:'application/json'});
+      // Inventory includes existing defects; the six-template regression suite gates new defects.
+    });
+  }
+}
 async function prepare(page,url){
   await page.goto(url,{waitUntil:'domcontentloaded'});
   await page.evaluate(async()=>{await document.fonts.ready;document.querySelectorAll('img').forEach(i=>i.loading='eager');await Promise.allSettled([...document.images].map(i=>i.decode()));});

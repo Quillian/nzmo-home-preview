@@ -18,6 +18,8 @@ jobs:
           path: .github/quality/results
   browser:
     runs-on: ubuntu-latest
+    env:
+      FULL_AUDIT: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
     steps:
       - uses: actions/checkout@v4
         with:
