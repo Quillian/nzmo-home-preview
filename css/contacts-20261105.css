@@ -1,0 +1,42 @@
+/* Contacts: brandbook 1.1, shared product enquiry form and verified addresses. */
+.contacts-page .av2-label::before{display:none}
+.contacts-intro{padding:24px 0 80px}
+.contacts-intro .crumbs ol{padding:0}
+.contacts-intro h1{font-size:clamp(42px,5.1vw,76px);line-height:1.12;letter-spacing:-.045em;margin:42px 0 48px}
+.contacts-sales{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:80px;align-items:start}
+.contacts-sales h2{font-family:var(--font-text);font-size:16px;font-weight:500;letter-spacing:0;margin:0 0 22px;color:#626b75}
+.contacts-phone{display:block;width:fit-content;font-family:var(--font-display);font-size:clamp(26px,3vw,44px);line-height:1.3;letter-spacing:-.03em;text-decoration:none;white-space:nowrap}
+.contacts-email{display:block;width:fit-content;font-size:26px;color:#05445e;text-decoration:none;margin:14px 0 22px}
+.contacts-sales p{font-size:16px;line-height:1.65;color:#626b75}
+.contacts-sales .btn{margin-top:24px}
+.contacts-hours{padding:30px 36px;background:#f3f4f4}
+.contacts-hours dl{margin:0 0 14px;display:grid;gap:12px}
+.contacts-hours dl>div{display:flex;justify-content:space-between;gap:24px;font-size:19px}
+.contacts-hours dd{margin:0;font-weight:500}
+.contacts-hours p{font-size:13px}
+.contacts-hours__visit{font-size:14px;line-height:1.6;margin:26px 0 18px;color:#626b75}
+.contacts-departments{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:64px}
+.contacts-departments article{display:flex;flex-direction:column;padding:26px 0 0;border-top:2px solid #d1a250;min-width:0}
+.contacts-departments h2{font-size:22px;line-height:1.25;letter-spacing:-.025em;min-height:56px;max-width:300px;margin:0 0 14px;text-wrap:initial}
+.contacts-departments p{font-size:15px;line-height:1.55;color:#626b75;min-height:48px}
+.contacts-dept-email{font-size:16px;text-decoration:none;margin:20px 0 22px;color:#626b75;width:fit-content}
+.contacts-departments .av2-link{align-self:flex-start;border-bottom:1px solid #d1a250;padding-bottom:5px}
+.contacts-page .cta2__t{font-size:clamp(34px,4vw,60px);line-height:1.05;margin:14px 0 0}
+.contacts-page .cta2__lead{margin:18px 0 0}
+.contacts-page .cta2 .kicker{display:none}
+.contacts-page .contact-email-hint{font-size:12px;line-height:1.5;color:#626b75}
+.contacts-page .contact-email-status{font-size:14px;line-height:1.5;padding:12px;background:#f3f4f4}
+.contacts-legal{padding:90px 0}
+.contacts-legal__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:70px}
+.contacts-legal h2{font-size:34px;margin:0 0 20px;max-width:380px}
+.contacts-legal p{font-size:20px;margin-bottom:28px}
+.contacts-legal .btn{padding:15px 20px;gap:15px;white-space:normal;text-align:left}
+.contacts-filetype{font-size:11px;opacity:.65}
+.contacts-requisites{margin:0;font-size:14px;line-height:1.6}
+.contacts-requisites>div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;padding:15px 0;border-bottom:1px solid #e3e6e8}
+.contacts-requisites>div:first-child{padding-top:0}
+.contacts-requisites dt{color:#626b75}.contacts-requisites dd{margin:0;overflow-wrap:anywhere}
+.contacts-page .cta2__in>*{min-width:0}
+@media(max-width:900px){.contacts-page .cta2__in{grid-template-columns:minmax(0,1fr);gap:32px}.contacts-page .cta2__form{width:100%;min-width:0;margin-top:0}.contacts-page .cta2__t{font-size:36px}.contacts-page .cta2__form input:not([type=checkbox]){min-width:0;width:100%}.contacts-page .cta2__lead{font-size:17px}}
+@media(max-width:1000px){.contacts-sales{gap:36px}.contacts-hours{padding:26px}.contacts-departments{gap:22px}.contacts-departments h2{font-size:19px}.contacts-legal__grid{gap:36px}.contacts-requisites>div{grid-template-columns:120px minmax(0,1fr);gap:16px}}
+@media(max-width:760px){.contacts-intro{padding:18px 0 56px}.contacts-intro h1{margin:30px 0}.contacts-sales{grid-template-columns:1fr;gap:32px}.contacts-phone{font-size:clamp(24px,6.4vw,34px)}.contacts-email{font-size:23px}.contacts-hours{padding:24px}.contacts-departments{grid-template-columns:1fr;gap:28px;margin-top:40px}.contacts-departments h2{font-size:23px;min-height:0;max-width:none}.contacts-departments p{min-height:0}.contacts-dept-email{margin:12px 0 18px}.contacts-legal{padding:56px 0}.contacts-legal__grid{grid-template-columns:1fr;gap:36px}.contacts-legal h2{font-size:30px}.contacts-requisites>div{grid-template-columns:1fr;gap:4px}.contacts-page .av2-section{padding:56px 0}}

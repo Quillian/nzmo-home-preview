@@ -13,7 +13,7 @@
       previousFocus = trigger;
       previousOverflow = document.body.style.overflow;
       dialog.querySelector('img').src = trigger.dataset.photo;
-      dialog.querySelector('img').alt = trigger.dataset.caption;
+      dialog.querySelector('img').alt = trigger.querySelector('img')?.alt || trigger.dataset.caption || '';
       dialog.querySelector('figcaption').textContent = trigger.dataset.caption;
       dialog.showModal();
       document.body.style.overflow = 'hidden';
@@ -47,6 +47,7 @@
       frame.src = frame.dataset[key];
       frame.title = '2ГИС: ' + (key === 'office' ? 'офис НЗМО' : 'производство НЗМО');
       route.href = routes[key];
+      route.textContent = key === 'office' ? 'Маршрут в офис в 2ГИС' : 'Маршрут на производство в 2ГИС';
     });
   });
 })();
