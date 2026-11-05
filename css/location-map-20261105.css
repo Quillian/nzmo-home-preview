@@ -1,0 +1,23 @@
+.location-section{padding:88px 0;background:#f4f3f1;color:#1b2d42}
+.location-heading{margin-bottom:34px}.location-heading>p{font-size:13px;line-height:1.5;color:#70727a;margin-bottom:12px}.location-heading h2{margin:0}
+.location-layout{display:grid;grid-template-columns:320px minmax(0,1fr);gap:24px;align-items:stretch}
+.location-list{display:flex;flex-direction:column;gap:16px}
+.location-card{background:#fff;border:1px solid #e2e4e4;transition:border-color .2s;position:relative}
+.location-card:has([aria-pressed=true]){border-color:#d1a250;box-shadow:inset 3px 0 #d1a250}
+.location-card>button{display:block;width:100%;padding:24px 24px 16px;text-align:left;border:0;background:transparent;color:inherit;cursor:pointer;font-family:var(--font-text)}
+.location-card__head{display:flex;align-items:center;gap:14px;margin-bottom:18px}.location-card svg{width:30px;height:30px;stroke:#05445e;fill:none;stroke-width:1.5;flex-shrink:0}
+.location-card__head b{font-size:20px;font-weight:500;letter-spacing:-.02em}
+.location-card__address{display:block;font-size:14px;line-height:1.6;color:#525c68}.location-card__city{display:block;font-size:12px;color:#70727a;margin-bottom:5px}
+.location-card__show{display:block;margin-top:17px;font-size:12px;color:#05445e}.location-card__show::before{content:"";display:inline-block;width:6px;height:6px;border:1px solid #9ca6ae;border-radius:50%;margin-right:8px;vertical-align:1px}.location-card [aria-pressed=true] .location-card__show::before{background:#d1a250;border-color:#d1a250}
+.location-card>a{display:inline-block;margin:0 24px 23px;padding-bottom:3px;font-size:12px;text-decoration:none;border-bottom:1px solid #d1a250;color:#05445e}
+.location-contact{margin-top:auto;padding:10px 0 0}.location-contact>a{display:block;font-size:22px;text-decoration:none;font-weight:500;letter-spacing:-.03em}.location-contact p{font-size:11px;line-height:1.6;color:#70727a;margin-top:9px}
+.location-stage{min-height:560px;position:relative;background:#e8ebe8;overflow:hidden;border:1px solid #e2e4e4}
+.location-stage>iframe,.location-stage noscript iframe{width:100%;height:100%;position:absolute;inset:0;border:0;background:#e8ebe8}
+.location-stage>iframe{opacity:0}.location-stage.is-loaded>iframe{opacity:1}
+.location-loading{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:#626b75;background:linear-gradient(90deg,transparent 49.8%,#cdd5d230 50%,transparent 50.2%),linear-gradient(0deg,transparent 49.8%,#cdd5d230 50%,transparent 50.2%);background-size:70px 70px}
+.location-loading b{font-family:var(--font-display);font-size:28px;color:#05445e}.location-loading span{font-size:12px}.is-loaded .location-loading{display:none}
+.location-overview{position:absolute;right:16px;top:16px;z-index:2;border:1px solid #e2e4e4;background:#fff;color:#1b2d42;box-shadow:0 3px 12px #1b2d4215;font:500 12px var(--font-text);padding:11px 16px;cursor:pointer}.location-overview[aria-pressed=true]{border-bottom:3px solid #d1a250}
+.location-fallback{display:block;margin-top:12px;font-size:12px;color:#626b75;text-align:right;text-decoration:none}.location-fallback:hover{text-decoration:underline}
+@media(max-width:1000px){.location-layout{grid-template-columns:280px minmax(0,1fr);gap:20px}.location-card>button{padding:22px 20px 16px}.location-card>a{margin-left:20px}.location-stage{min-height:560px}}
+@media(max-width:760px){.location-section{padding:56px 0}.location-heading{margin-bottom:26px}.location-layout{grid-template-columns:1fr}.location-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}.location-card>button{padding:18px 14px 12px}.location-card__head{display:block;margin-bottom:12px}.location-card svg{width:25px;height:25px;margin-bottom:8px}.location-card__head b{display:block;font-size:17px}.location-card__address{font-size:12px}.location-card__city{font-size:11px}.location-card__show{font-size:11px;margin-top:12px}.location-card>a{margin:0 14px 18px;font-size:11px}.location-contact{grid-column:1/-1;padding:12px 0}.location-contact>a{font-size:22px}.location-stage{min-height:400px}.location-overview{top:12px;right:12px;padding:10px 12px;font-size:11px}.location-fallback{text-align:left}.location-heading h2{font-size:30px}}
+@media(max-width:360px){.location-list{grid-template-columns:1fr}.location-card__head{display:flex;gap:12px}.location-card svg{margin:0}.location-card__head b{font-size:19px}.location-card__address{font-size:14px}.location-stage{min-height:350px}}
