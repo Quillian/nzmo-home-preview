@@ -1,0 +1,48 @@
+name: Website quality
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+concurrency:
+  group: quality-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 .github/quality/static.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: static-audit
+          path: .github/quality/results
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - run: git worktree add ../baseline "${{ github.event.pull_request.base.sha || github.event.before || 'HEAD^' }}"
+        if: github.event.before != '0000000000000000000000000000000000000000'
+      - run: git worktree add ../baseline HEAD^
+        if: github.event.before == '0000000000000000000000000000000000000000'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: .github/quality/package-lock.json
+      - run: npm ci
+        working-directory: .github/quality
+      - run: npx playwright install --with-deps chromium
+        working-directory: .github/quality
+      - run: npx playwright test
+        working-directory: .github/quality
+      - run: npx lhci collect && npx lhci upload
+        if: always()
+        working-directory: .github/quality
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-and-lighthouse
+          path: .github/quality/results
+          retention-days: 14

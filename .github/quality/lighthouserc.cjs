@@ -1,0 +1,1 @@
+module.exports={ci:{collect:{staticDistDir:'../..',url:['http://localhost/','http://localhost/o-zavode/','http://localhost/kontakty/','http://localhost/potolki/reechnye/'],numberOfRuns:3,settings:{chromeFlags:'--no-sandbox'}},upload:{target:'filesystem',outputDir:'results/lighthouse'}}};
