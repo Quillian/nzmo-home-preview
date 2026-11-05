@@ -13,7 +13,7 @@ if(process.env.FULL_AUDIT==='1'){
       const errors=[];page.on('pageerror',e=>errors.push(e.message));
       await prepare(page,'http://127.0.0.1:8765'+url+'/');
       const axe=await new AxeBuilder({page}).analyze();
-      const geometry=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth+1,broken:[...document.images].filter(i=>!i.naturalWidth).map(i=>i.getAttribute('src'))}));
+      const geometry=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth+1,broken:[...document.images].filter(i=>!(i.closest('dialog:not([open])')&&!i.getAttribute('src'))&&!i.naturalWidth).map(i=>i.getAttribute('src'))}));
       await info.attach('full-audit',{body:Buffer.from(JSON.stringify({url,errors,...geometry,violations:axe.violations},null,2)),contentType:'application/json'});
       // Inventory includes existing defects; the six-template regression suite gates new defects.
     });
@@ -30,7 +30,7 @@ for(const width of [320,390,768,1440]) for(const route of routes) test(`${width}
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await prepare(page,'http://127.0.0.1:8765'+route);
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);
-  const broken=await page.locator('img').evaluateAll(xs=>xs.filter(x=>!x.complete||!x.naturalWidth).map(x=>x.getAttribute('src')));
+  const broken=await page.locator('img').evaluateAll(xs=>xs.filter(x=>!(x.closest('dialog:not([open])')&&!x.getAttribute('src'))&&(!x.complete||!x.naturalWidth)).map(x=>x.getAttribute('src')));
   const current=await page.screenshot({fullPage:true,animations:'disabled',mask:[page.locator('iframe')]});
   await info.attach('current',{body:current,contentType:'image/png'});
   const axe=await new AxeBuilder({page}).analyze();
@@ -65,4 +65,16 @@ test('preview form validation and optional contact method',async({page})=>{
   await expect(form.locator('[data-lead-contact]')).toHaveAttribute('type','tel');
   expect(await form.evaluate(f=>f.checkValidity())).toBe(false);
   await expect(form.locator('input[type="checkbox"][required]')).not.toBeChecked();
+});
+
+test('factory photo opens and closes without navigation',async({page})=>{
+ await page.goto('http://127.0.0.1:8765/o-zavode/');
+ await page.locator('[data-photo]').first().click();
+ const dialog=page.locator('dialog.av2-lightbox');
+ await expect(dialog).toBeVisible();
+ await expect(dialog.locator('img')).toHaveAttribute('src',/\S+/);
+ await expect.poll(()=>dialog.locator('img').evaluate(i=>i.complete&&i.naturalWidth>0)).toBe(true);
+ await page.keyboard.press('Escape');
+ await expect(dialog).not.toBeVisible();
+ await expect(page).toHaveURL(/\/o-zavode\/$/);
 });

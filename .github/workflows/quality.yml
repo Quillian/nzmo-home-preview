@@ -44,7 +44,7 @@ jobs:
       - run: ./node_modules/.bin/playwright test
         working-directory: .github/quality
       - run: ./node_modules/.bin/lhci collect && ./node_modules/.bin/lhci upload
-        if: ${{ !cancelled() }}
+        if: ${{ !cancelled() && (github.event_name == 'workflow_dispatch' || github.event_name == 'pull_request') }}
         working-directory: .github/quality
       - uses: actions/upload-artifact@v7.0.2
         if: always()
