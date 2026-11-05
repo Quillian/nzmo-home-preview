@@ -1,5 +1,14 @@
 name: Website quality
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: Full audit or performance measurement only
+        type: choice
+        options: [full, performance]
+        default: full
 permissions:
   contents: read
 concurrency:
@@ -42,6 +51,7 @@ jobs:
       - run: npx playwright install --with-deps chromium
         working-directory: .github/quality
       - run: ./node_modules/.bin/playwright test
+        if: github.event.inputs.scope != 'performance'
         working-directory: .github/quality
       - run: ./node_modules/.bin/lhci collect && ./node_modules/.bin/lhci upload
         if: ${{ !cancelled() && (github.event_name == 'workflow_dispatch' || github.event_name == 'pull_request') }}

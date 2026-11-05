@@ -568,3 +568,8 @@ table.t a:hover{color:var(--ochre-800)}
 [tabindex="0"]:focus-visible{outline:2px solid var(--petrol-700,#05445E);outline-offset:4px}
 
 .small a:not(.btn),.tech>a{ text-decoration:underline;text-underline-offset:3px }
+
+.note>a{text-decoration:underline;text-underline-offset:3px}
+.pt-hero--deep .kicker .l{color:var(--on-deep-muted)}
+/* Anchor mobile hero content so late body fonts do not move the heading upward. */
+@media(max-width:760px){.cover--page{align-items:flex-start}}
