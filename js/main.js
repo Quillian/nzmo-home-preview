@@ -535,3 +535,14 @@
     });
   });
 })();
+
+// Allow keyboard users to reach and scroll overflowing tables and logo strips.
+(function(){
+  var targets=document.querySelectorAll('.table-wrap,.content table,.gc-out,.partner-ribbon__viewport');
+  function update(){targets.forEach(function(el){
+    var scrolls=el.scrollWidth>el.clientWidth+1;
+    if(scrolls)el.setAttribute('tabindex','0');else el.removeAttribute('tabindex');
+  });}
+  update();window.addEventListener('resize',update,{passive:true});
+  if(window.ResizeObserver){var observer=new ResizeObserver(update);targets.forEach(function(el){observer.observe(el);});}
+})();
