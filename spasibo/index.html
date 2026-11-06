@@ -21,8 +21,8 @@
 <link rel="stylesheet" href="/css/styles.css?v=cdd5e8fb">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://nzmo-home.vercel.app/#org","name":"НЗМО — Новосибирский завод металлообработки","alternateName":"НЗМО","url":"https://nzmo-home.vercel.app/","logo":"https://nzmo-home.vercel.app/img/logo/04_gorizont_gold-navy.svg","telephone":"+7 (383) 234-91-52","email":"zakaz@nzmo.ru","address":{"@type":"PostalAddress","addressLocality":"Новосибирск","streetAddress":"ул. Челюскинцев, 30/2, офис 410","addressCountry":"RU"},"contactPoint":{"@type":"ContactPoint","telephone":"+7 (383) 234-91-52","contactType":"sales","areaServed":"RU","availableLanguage":"ru"},"foundingDate":"2021","taxID":"5406813782","brand":[{"@type":"Brand","name":"AIRWOOD"},{"@type":"Brand","name":"ALFAPANEL"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"\u0413\u043b\u0430\u0432\u043d\u0430\u044f","item":"https://nzmo-home.vercel.app/"},{"@type":"ListItem","position":2,"name":"\u0421\u043f\u0430\u0441\u0438\u0431\u043e, \u0437\u0430\u044f\u0432\u043a\u0430 \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u0430","item":"https://nzmo-home.vercel.app/spasibo/"}]}</script>
-<link rel="stylesheet" href="/css/lead-journey-20261106.css?v=96b3c172">
-<script src="/js/lead-journey-20261106.js?v=34573c16" defer></script>
+<link rel="stylesheet" href="/css/lead-journey-20261106.css?v=e7965715">
+<script src="/js/lead-journey-20261106.js?v=d09e80e7" defer></script>
 </head>
 <body>
 <header class="header">
@@ -170,14 +170,15 @@
   <section class="lead-next__hero"><div class="container">
     <nav class="crumbs" aria-label="Вы здесь"><ol><li><a href="/">Главная</a></li><li><span>Ваш запрос</span></li></ol></nav>
     <div class="lead-next__status" data-receipt-status>Подготовка запроса</div>
-    <h1 data-receipt-title>Давайте уточним ваш проект</h1>
-    <p class="lead-next__intro" data-receipt-description>Город, размеры и план помогут подготовить предметный расчёт. Можно заполнить только то, что уже известно.</p>
+    <h1 data-receipt-title>Ваш запрос на расчёт</h1>
+    <p class="lead-next__intro" data-receipt-description>Если есть план или размеры — добавьте их ниже. Это поможет подготовить расчёт с меньшим числом уточнений.</p>
     <p class="lead-preview" data-receipt-notice>Приём заявок через эту версию сайта ещё не подключён. Для реального обращения позвоните или напишите нам напрямую.</p>
     <div class="lead-next__summary" data-receipt-summary hidden><span>Вы указали</span><strong data-receipt-contact></strong><span data-receipt-method></span><a href="#lead-contact-edit">Изменить контакт</a></div>
   </div></section>
   <section class="lead-next__body"><div class="container lead-next__grid">
-    <div class="lead-next__card">
-      <div class="lead-next__card-head"><span class="lead-next__optional">По желанию</span><h2>Меньше уточнений.<br>Ближе к расчёту</h2><p>Добавьте сведения об объекте — повторно оставлять контакт не нужно.</p></div>
+    <details class="lead-next__card lead-next__details" data-details-panel>
+      <summary><span><strong>Добавить план и детали проекта</strong><span>По желанию. Контакт повторно вводить не нужно.</span></span><span class="lead-next__details-mark" aria-hidden="true">+</span></summary>
+      <div class="lead-next__card-head"><p>Заполните только то, что уже известно. Можно просто прикрепить план или написать задачу своими словами.</p></div>
       <form class="form lead-details" data-lead-details novalidate>
         <div class="lead-details__grid">
           <label><span>Город объекта</span><input name="city" autocomplete="address-level2" maxlength="120" placeholder="Например, Новосибирск"></label>
@@ -204,7 +205,7 @@
         <p class="lead-footnote" data-details-hint>Это черновик. Данные не передаются менеджеру; выбранные файлы доступны только до обновления страницы.</p>
         <button class="lead-text-button" type="button" data-download-brief>Скачать текст запроса</button>
       </form>
-    </div>
+    </details>
     <aside class="lead-next__aside">
       <div class="lead-next__next-steps"><h2>От запроса к вашему объекту</h2><ol>
         <li><b>Уточним задачу</b><span>Свяжемся выбранным способом. Проверим размеры, комплектацию и сроки</span></li>

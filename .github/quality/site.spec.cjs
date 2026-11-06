@@ -58,8 +58,6 @@ test('preview form validation and optional contact method',async({page})=>{
   await expect(form).toBeVisible();
   const select=form.locator('select').first();
   await expect(select).not.toHaveAttribute('required','');
-  await expect(select).toBeHidden();
-  await form.locator('[data-reply-summary]').click();
   await expect(select).toBeVisible();
   await select.selectOption('email');
   await expect(form.locator('[data-lead-contact]')).toHaveAttribute('type','email');
@@ -67,6 +65,18 @@ test('preview form validation and optional contact method',async({page})=>{
   await expect(form.locator('[data-lead-contact]')).toHaveAttribute('type','tel');
   expect(await form.evaluate(f=>f.checkValidity())).toBe(false);
   await expect(form.locator('input[type="checkbox"][required]')).not.toBeChecked();
+  await form.locator('[data-lead-contact]').fill('+79190000000');
+  await form.locator('input[name="agree"]').check();
+  await form.getByRole('button',{name:'Получить расчёт',exact:true}).click();
+  await expect(page).toHaveURL(/\/spasibo\/$/);
+  await expect(page.locator('[data-receipt-contact]')).toHaveText('+79190000000');
+  await expect(page.locator('[data-receipt-status]')).toContainText('заявка не отправлена');
+  const details=page.locator('[data-details-panel]');
+  await expect(details).not.toHaveAttribute('open','');
+  await expect(page.locator('[name="message"]')).toBeHidden();
+  await details.locator('summary').first().click();
+  await expect(page.locator('[name="message"]')).toBeVisible();
+
 });
 
 test('factory photo opens and closes without navigation',async({page})=>{

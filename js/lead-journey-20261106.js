@@ -55,7 +55,7 @@
     setupContact(form);
     const button=form.querySelector('[data-lead-submit]'), notice=form.querySelector('[data-lead-preview]'), output=form.querySelector('[data-lead-status]');
     button.disabled=false;
-    if(transport()){button.textContent=form.dataset.lead==='callback'?'Заказать звонок':'Получить расчёт';notice.hidden=true;}
+    if(transport())notice.hidden=true;
     let busy=false, requestId=uuid(), previousPayload='';
     form.addEventListener('submit',async e=>{
       e.preventDefault();if(busy||!validate(form))return;
@@ -80,7 +80,7 @@
         location.assign('/spasibo/');
       } catch(error){
         if(error.message!=='storage')status(output,'Не удалось отправить заявку. Данные остались в форме. Попробуйте ещё раз или свяжитесь с нами напрямую.',true);
-        busy=false;button.disabled=false;button.textContent=transport()?'Повторить отправку':'Проверить форму';
+        busy=false;button.disabled=false;button.textContent=transport()?'Повторить отправку':button.dataset.leadAction;
       }
     });
   });
@@ -103,7 +103,7 @@
     root.querySelector('[data-receipt-method]').textContent=methods[value(form,'contact_method')] || 'Способ ответа — на усмотрение менеджера';
   }
   summary();
-  root.querySelector('[href="#lead-contact-edit"]').addEventListener('click',()=>{contactSection.open=true;form.elements.namedItem('contact').focus();});
+  root.querySelector('[href="#lead-contact-edit"]').addEventListener('click',e=>{e.preventDefault();const panel=form.closest('[data-details-panel]');if(panel)panel.open=true;contactSection.open=true;form.elements.namedItem('contact').focus();});
   if(accepted){
     root.classList.add('is-confirmed');root.querySelector('[data-receipt-title]').textContent='Спасибо, заявку получили';
     root.querySelector('[data-receipt-status]').textContent='Заявка принята';

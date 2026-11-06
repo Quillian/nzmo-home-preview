@@ -117,3 +117,38 @@
 .cta2 .cta2__acc li:before{width:11px;height:6px}
 @media(max-width:900px){.cta2 .cta2__in{grid-template-columns:minmax(0,1fr);gap:28px;max-width:680px}.cta2 .cta2__form.lead-form--compact{max-width:none;justify-self:stretch}.cta2 .cta2__t{font-size:32px}.cta2.section{padding:48px 0}}
 @media(max-width:480px){.cta2 .cta2__form.lead-form--compact{padding:22px 20px}.cta2 .cta2__t{font-size:28px}.lead-form--compact{gap:14px}.lead-form--compact input:not([type=checkbox]),.lead-form--compact select{font-size:16px;min-height:48px}}
+
+/* Result-led enquiry: brand typography, explicit outcome and one primary action. */
+.cta2.section{background:#f4f3f1;color:#1b2d42;padding:72px 0;border-top:1px solid #e1e4e6}
+.cta2 .cta2__in{max-width:1240px;grid-template-columns:minmax(0,1fr) 420px;gap:clamp(40px,6vw,88px)}
+.cta2 .kicker{display:none}
+.cta2 .cta2__t{color:#1b2d42;font-size:clamp(30px,3.1vw,44px);max-width:680px}
+.cta2 .cta2__lead{color:#535d67;font-size:18px;line-height:1.5;margin:22px 0 0;max-width:480px}
+.cta2 .cta2__acc{display:grid;grid-template-columns:1fr 1fr;gap:24px 28px;margin:36px 0 0;padding:0;list-style:none}
+.cta2 .cta2__acc li{padding:16px 0 0;border-top:1px solid #cdd2d6;color:#535d67;font-size:14px;line-height:1.55}
+.cta2 .cta2__acc li:before{display:none}
+.cta2 .cta2__acc b{display:block;color:#1b2d42;font-size:15px;font-weight:600;margin-bottom:6px}
+.cta2 .cta2__form.lead-form--result{padding:28px;background:#fff;border:1px solid #dce1e5;border-radius:8px;box-shadow:none}
+.lead-form--result{gap:18px}
+.lead-form--result .lead-form__intro{margin-bottom:2px}
+.lead-form--result .lead-form__intro .lead-form__title{font:600 23px/1.25 var(--font-text);letter-spacing:-.025em;color:#1b2d42;margin:0 0 9px}
+.lead-form--result .lead-form__intro p:not(.lead-form__title){font:400 14px/1.5 var(--font-text);color:#535d67;margin:0;max-width:350px}
+.lead-form--result .lead-method{grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);align-items:center;gap:12px}
+.lead-form--result .lead-method>span{font-size:12px;font-weight:400}
+.lead-form--result .lead-method small{display:block;font-size:11px;margin:2px 0 0}
+.lead-form--result .lead-method select{min-height:42px;padding:9px 12px;font-size:14px;background:#fafbfc}
+.lead-form--result .lead-submit{min-height:52px;font-weight:600;font-size:16px}
+.lead-form--result .lead-preview{font-size:11px;color:#616975}
+.lead-next__details{align-self:start;padding:24px}
+.lead-next__details>summary{display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;list-style:none;color:#1b2d42;min-height:56px}
+.lead-next__details>summary::-webkit-details-marker{display:none}
+.lead-next__details>summary strong{display:block;font:600 21px/1.3 var(--font-text);margin-bottom:8px}
+.lead-next__details>summary>span>span{display:block;font:400 13px/1.5 var(--font-text);color:#616975}
+.lead-next__details-mark{font-size:26px;line-height:1;color:#05445e}
+.lead-next__details[open] .lead-next__details-mark{transform:rotate(45deg)}
+.lead-next__details .lead-next__card-head{margin-top:24px;padding-top:24px;border-top:1px solid #e1e5e8}
+.lead-next__details:not([open])>.lead-next__card-head,.lead-next__details:not([open])>form{display:none}
+@media(max-width:900px){.cta2.section{padding:48px 0}.cta2 .cta2__in{grid-template-columns:minmax(0,1fr);gap:22px;max-width:640px}.cta2 .cta2__l{display:contents}.cta2 .cta2__t{order:1;font-size:32px}.cta2 .cta2__lead{order:2;margin:0;font-size:16px}.cta2 .cta2__form{order:3}.cta2 .cta2__acc{order:4;margin:6px 0 0;gap:20px}.cta2 .cta2__form.lead-form--result{max-width:none;width:100%}.lead-next__details{padding:22px}}
+@media(max-width:480px){.cta2 .cta2__t{font-size:28px}.cta2 .cta2__form.lead-form--result{padding:22px 20px}.lead-form--result{gap:16px}.lead-form--result .lead-method select{font-size:16px;min-height:44px}.cta2 .cta2__acc{gap:16px}.cta2 .cta2__acc li{font-size:13px}.cta2 .cta2__acc b{font-size:14px}.lead-next__details>summary strong{font-size:19px}}
+
+@media(max-width:360px){.lead-form--result .lead-method{grid-template-columns:1fr;gap:6px}.lead-form--result .lead-method small{display:inline;margin-left:4px}}
