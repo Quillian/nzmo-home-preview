@@ -149,6 +149,18 @@
 .lead-next__details .lead-next__card-head{margin-top:24px;padding-top:24px;border-top:1px solid #e1e5e8}
 .lead-next__details:not([open])>.lead-next__card-head,.lead-next__details:not([open])>form{display:none}
 @media(max-width:900px){.cta2.section{padding:48px 0}.cta2 .cta2__in{grid-template-columns:minmax(0,1fr);gap:22px;max-width:640px}.cta2 .cta2__l{display:contents}.cta2 .cta2__t{order:1;font-size:32px}.cta2 .cta2__lead{order:2;margin:0;font-size:16px}.cta2 .cta2__form{order:3}.cta2 .cta2__acc{order:4;margin:6px 0 0;gap:20px}.cta2 .cta2__form.lead-form--result{max-width:none;width:100%}.lead-next__details{padding:22px}}
-@media(max-width:480px){.cta2 .cta2__t{font-size:28px}.cta2 .cta2__form.lead-form--result{padding:22px 20px}.lead-form--result{gap:16px}.lead-form--result .lead-method select{font-size:16px;min-height:44px}.cta2 .cta2__acc{gap:16px}.cta2 .cta2__acc li{font-size:13px}.cta2 .cta2__acc b{font-size:14px}.lead-next__details>summary strong{font-size:19px}}
+@media(max-width:480px){.cta2 .cta2__t{font-size:28px}.cta2 .cta2__form.lead-form--result{padding:22px 20px}.lead-form--result{gap:16px}.lead-form--result .lead-method select{font-size:16px;min-height:44px}.cta2 .cta2__acc{gap:16px}.cta2 .cta2__acc li{font-size:14px}.cta2 .cta2__acc b{font-size:14px}.lead-next__details>summary strong{font-size:19px}}
 
 @media(max-width:360px){.lead-form--result .lead-method{grid-template-columns:1fr;gap:6px}.lead-form--result .lead-method small{display:inline;margin-left:4px}}
+
+/* Inline product enquiry stays a compact insertion, not a tall contact panel. */
+.strip .form.lead-form--result{max-width:760px;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 24px;align-items:end;margin-top:20px}
+.strip .lead-form--result .lead-form__intro{display:none}
+.strip .lead-form--result .lead-method{grid-template-columns:1fr;gap:8px}
+.strip .lead-form--result .lead-method>span{font-size:13px;font-weight:500}
+.strip .lead-form--result .lead-method small{display:inline;margin-left:4px}
+.strip .lead-form--result .lead-method select{min-height:54px;font-size:15px}
+.strip .lead-form--result .consent{grid-column:1;align-self:center}
+.strip .lead-form--result .lead-submit{grid-column:2;min-height:54px}
+.strip .lead-form--result .lead-preview,.strip .lead-form--result .lead-status,.strip .lead-form--result .lead-config{grid-column:1/-1}
+@media(max-width:600px){.strip .form.lead-form--result{grid-template-columns:1fr;gap:16px}.strip .lead-form--result .lead-submit{grid-column:1}.strip .lead-form--result .lead-method select{font-size:16px}}
