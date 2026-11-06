@@ -19,10 +19,11 @@
     if(!input || !select)return;
     function update(){
       const labels={phone:['Телефон','+7 999 123-45-67','tel','tel'],telegram:['Имя пользователя в Telegram','@username','text','off'],max:['Телефон для связи в MAX','+7 999 123-45-67','tel','tel'],email:['Email','mail@company.ru','email','email']};
-      const spec=labels[select.value] || ['Телефон или email','+7 999 123-45-67 или mail@company.ru','text','off'];
+      const spec=labels[select.value] || ['Телефон или email','+7 999 123-45-67','text','off'];
       const label=form.querySelector('[data-contact-label]');label.replaceChildren(document.createTextNode(spec[0]+' '));
-      const small=document.createElement('small');small.textContent=input.required?'обязательно':'необязательно';label.append(small);
-      input.type=spec[2];input.autocomplete=spec[3];input.placeholder=spec[1];input.inputMode=spec[2]==='tel'?'tel':spec[2]==='email'?'email':'text';input.setCustomValidity('');
+      if(!form.classList.contains('lead-form--compact')){const small=document.createElement('small');small.textContent=input.required?'обязательно':'необязательно';label.append(small);}
+      const summary=form.querySelector('[data-reply-summary]');if(summary)summary.textContent=select.value?'Ответ: '+methods[select.value].toLowerCase():'Выбрать способ ответа';
+      input.spellcheck=false;input.autocapitalize='none';input.type=spec[2];input.autocomplete=spec[3];input.placeholder=spec[1];input.inputMode=spec[2]==='tel'?'tel':spec[2]==='email'?'email':'text';input.setCustomValidity('');
     }
     select.addEventListener('change',update);input.addEventListener('input',()=>input.setCustomValidity(''));update();
     return update;
@@ -54,7 +55,7 @@
     setupContact(form);
     const button=form.querySelector('[data-lead-submit]'), notice=form.querySelector('[data-lead-preview]'), output=form.querySelector('[data-lead-status]');
     button.disabled=false;
-    if(transport()){button.textContent='Отправить заявку';notice.hidden=true;}
+    if(transport()){button.textContent=form.dataset.lead==='callback'?'Заказать звонок':'Получить расчёт';notice.hidden=true;}
     let busy=false, requestId=uuid(), previousPayload='';
     form.addEventListener('submit',async e=>{
       e.preventDefault();if(busy||!validate(form))return;
@@ -79,7 +80,7 @@
         location.assign('/spasibo/');
       } catch(error){
         if(error.message!=='storage')status(output,'Не удалось отправить заявку. Данные остались в форме. Попробуйте ещё раз или свяжитесь с нами напрямую.',true);
-        busy=false;button.disabled=false;button.textContent=transport()?'Повторить отправку':'Продолжить';
+        busy=false;button.disabled=false;button.textContent=transport()?'Повторить отправку':'Проверить форму';
       }
     });
   });

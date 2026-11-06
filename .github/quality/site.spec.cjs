@@ -58,6 +58,9 @@ test('preview form validation and optional contact method',async({page})=>{
   await expect(form).toBeVisible();
   const select=form.locator('select').first();
   await expect(select).not.toHaveAttribute('required','');
+  await expect(select).toBeHidden();
+  await form.locator('[data-reply-summary]').click();
+  await expect(select).toBeVisible();
   await select.selectOption('email');
   await expect(form.locator('[data-lead-contact]')).toHaveAttribute('type','email');
   await select.selectOption('phone');

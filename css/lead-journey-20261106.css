@@ -93,3 +93,27 @@
 .lead-details .lead-files__choose{display:flex;justify-content:center;align-items:center;min-height:44px;border:1px solid #cbd3da;border-radius:4px;background:#fff;color:#05445E;font-size:14px}
 .lead-files .lead-files__picker input[type=file]{position:absolute;bottom:0;left:0;width:100%;height:44px;min-height:44px;padding:0;opacity:0;cursor:pointer}
 .lead-files__picker:focus-within .lead-files__choose{outline:2px solid #D1A250;outline-offset:2px}
+
+/* Compact first contact, 2026-11-06: one input, optional channel, details after. */
+.lead-form--compact{width:100%;max-width:480px;gap:16px;align-content:start}
+.lead-form--compact .lead-reply{padding:0;border:0}
+.lead-form--compact .lead-reply summary{min-height:44px;justify-content:flex-start;gap:10px;font-size:13px}
+.lead-form--compact .lead-reply summary:after{font-size:18px;line-height:1}
+.lead-form--compact .lead-reply[open] summary{margin-bottom:0}
+.lead-form--compact .lead-reply>label{margin-top:8px}
+.lead-form--compact .lead-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.lead-form--compact .consent>span{font-size:12px;line-height:1.55}
+.lead-form--compact .lead-submit{min-height:48px;padding:12px 20px;font-size:15px}
+.lead-form--compact .lead-preview{border:0;background:none;padding:0;color:#6a5a3f;font-size:11px;text-align:center;line-height:1.5}
+.form.strip__form.lead-form--compact{max-width:480px}
+.cta2.section{padding:64px 0}
+.cta2 .cta2__in{max-width:1240px;grid-template-columns:minmax(0,1fr) minmax(320px,420px);gap:clamp(32px,5vw,80px);align-items:center}
+.cta2 .cta2__form.lead-form--compact{width:100%;max-width:420px;padding:28px;margin:0;align-self:center;justify-self:end}
+.cta2 .cta2__t{font-size:clamp(30px,3vw,42px);line-height:1.14;margin-top:0;text-wrap:balance}
+.cta2 .kicker{margin-bottom:18px}
+.cta2 .cta2__lead{font-size:16px;line-height:1.6;margin-top:18px;max-width:540px}
+.cta2 .cta2__acc{margin-top:24px;gap:12px}
+.cta2 .cta2__acc li{font-size:14px;line-height:1.5;padding-left:24px}
+.cta2 .cta2__acc li:before{width:11px;height:6px}
+@media(max-width:900px){.cta2 .cta2__in{grid-template-columns:minmax(0,1fr);gap:28px;max-width:680px}.cta2 .cta2__form.lead-form--compact{max-width:none;justify-self:stretch}.cta2 .cta2__t{font-size:32px}.cta2.section{padding:48px 0}}
+@media(max-width:480px){.cta2 .cta2__form.lead-form--compact{padding:22px 20px}.cta2 .cta2__t{font-size:28px}.lead-form--compact{gap:14px}.lead-form--compact input:not([type=checkbox]),.lead-form--compact select{font-size:16px;min-height:48px}}
