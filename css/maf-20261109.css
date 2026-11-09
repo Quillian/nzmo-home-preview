@@ -36,7 +36,7 @@
 .maf-film .maf-photo img{object-position:50% 25%}
 .maf-film figcaption{margin-top:20px}
 .maf-film b{display:block;font-size:17px;line-height:1.35;color:#1b2d42}
-.maf-film .maf-stage-number{font:500 22px/1 var(--font-display);color:#976b27;display:block;margin-bottom:12px}
+.maf-film .maf-stage-number{font:500 22px/1 var(--font-display);color:#805b20;display:block;margin-bottom:12px}
 .maf-film p{font-size:14px;line-height:1.55;color:#535d67;margin:10px 0 0}
 .maf-materials{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px}
 .maf-material{border-top:2px solid #d1a250;padding-top:22px}
@@ -46,7 +46,7 @@
 .maf-path{display:grid;grid-template-columns:1fr 1fr;gap:70px}
 .maf-path__steps{list-style:none;margin:0;padding:0;counter-reset:maf-step}
 .maf-path__steps li{counter-increment:maf-step;display:grid;grid-template-columns:42px 1fr;gap:18px;padding:23px 0;border-top:1px solid #d6dce1}
-.maf-path__steps li:before{content:'0' counter(maf-step);font:500 23px/1.2 var(--font-display);color:#976b27}
+.maf-path__steps li:before{content:'0' counter(maf-step);font:500 23px/1.2 var(--font-display);color:#805b20}
 .maf-path__steps h3{font-size:21px;line-height:1.3;margin:0 0 9px}
 .maf-path__steps p{font-size:16px;line-height:1.6;color:#535d67;margin:0}
 .maf-install{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:52px}
