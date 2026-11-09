@@ -1,7 +1,38 @@
 const {test,expect}=require('@playwright/test');
 const {AxeBuilder}=require('@axe-core/playwright');
 const {PNG}=require('pngjs');
-const routes=['/','/o-zavode/','/kontakty/','/potolki/reechnye/','/potolki/kassetnye/clip-in/','/spasibo/','/dveri/protivopozharnye/','/potolki/armstrong-t24/'];
+const routes=['/','/o-zavode/','/kontakty/','/potolki/reechnye/','/potolki/kassetnye/clip-in/','/spasibo/','/dveri/protivopozharnye/','/potolki/armstrong-t24/','/maf/'];
+test('home delivery follows partners and workflow uses the single enquiry',async({page})=>{
+  await page.goto('http://127.0.0.1:8765/');
+  await expect(page.locator('.home-partners + #dostavka')).toBeAttached();
+  await expect(page.locator('#cta form')).toHaveCount(1);
+  await expect(page.locator('#cta .cta2__acc li')).toHaveCount(3);
+  await expect(page.locator('#napravleniya a[href="/dveri/"] img')).toHaveAttribute('src',/door-nzmo-catalog/);
+});
+test('MAF photos open in a dialog and return keyboard focus',async({page})=>{
+  await page.goto('http://127.0.0.1:8765/maf/');
+  const trigger=page.locator('#proizvodstvo [data-maf-photo]').first();
+  await trigger.click();
+  const dialog=page.locator('[data-maf-dialog]');
+  await expect(dialog).toBeVisible();
+  await expect.poll(()=>dialog.locator('img').evaluate(i=>i.complete&&i.naturalWidth>0)).toBe(true);
+  await page.keyboard.press('Escape');
+  await expect(dialog).not.toBeVisible();
+  await expect(trigger).toBeFocused();
+});
+test('MAF chosen object supplements rather than replaces the client comment',async({page})=>{
+  await page.goto('http://127.0.0.1:8765/maf/');
+  await page.locator('#cta summary').click();
+  const message=page.locator('#cta textarea[name=message]');
+  await message.fill('Срок — май.');
+  const link=page.locator('[data-maf-idea]').first();
+  await link.click();
+  await expect(message).toHaveValue(/Срок — май\.[\s\S]*Биатлонист/);
+  await expect(page.locator('#cta .lead-preferences')).toHaveAttribute('open','');
+  const value=await message.inputValue();
+  await link.click();
+  await expect(message).toHaveValue(value);
+});
 test('product pages share delivery reviews enquiry FAQ order',async()=>{
   const fs=require('node:fs'),path=require('node:path');
   for(const file of require('./product-routes.json')){
