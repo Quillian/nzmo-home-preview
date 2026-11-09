@@ -53,9 +53,8 @@
   }
   document.querySelectorAll('form[data-lead-v2]').forEach(form=>{
     setupContact(form);
-    const button=form.querySelector('[data-lead-submit]'), notice=form.querySelector('[data-lead-preview]'), output=form.querySelector('[data-lead-status]');
+    const button=form.querySelector('[data-lead-submit]'), output=form.querySelector('[data-lead-status]');
     button.disabled=false;
-    if(transport())notice.hidden=true;
     let busy=false, requestId=uuid(), previousPayload='';
     form.addEventListener('submit',async e=>{
       e.preventDefault();if(busy||!validate(form))return;
