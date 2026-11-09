@@ -5,7 +5,7 @@
   const tabs = [...root.querySelectorAll('[data-mobile-stage]')];
   const panels = [...root.querySelectorAll('[data-stage-panel]')];
   const viewport = root.querySelector('.journey-viewport');
-  const narrow = matchMedia('(max-width: 700px)');
+  const narrow = matchMedia('(max-width: 900px)');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   let current = 0, pointer = null, suppressClick = false;
   function syncAccess() {
@@ -22,7 +22,8 @@
     root.style.setProperty('--journey-index', index);
     frames.forEach((frame, i) => frame.setAttribute('aria-pressed', String(i === index)));
     tabs.forEach((tab, i) => tab.setAttribute('aria-pressed', String(i === index)));
-    panels.forEach((panel, i) => { panel.hidden = i !== index; panel.getAnimations().forEach(a => a.cancel()); });
+    panels.forEach((panel, i) => { panel.hidden = i !== index; panel.setAttribute('aria-hidden', String(i !== index)); panel.getAnimations().forEach(a => a.cancel()); });
+    if (narrow.matches && frames.some((frame, i) => i !== index && frame === document.activeElement)) tabs[index].focus({ preventScroll: true });
     if (animate && changed && !reduced.matches) panels[index].animate(
       [{ opacity: 0, transform: 'translateY(14px)' }, { opacity: 1, transform: 'translateY(0)' }],
       { duration: 420, easing: 'cubic-bezier(.22,1,.36,1)' }
