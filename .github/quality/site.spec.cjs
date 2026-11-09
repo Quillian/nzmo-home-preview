@@ -7,7 +7,7 @@ test('home delivery follows partners and workflow uses the single enquiry',async
   await expect(page.locator('.home-partners + #dostavka')).toBeAttached();
   await expect(page.locator('#cta form')).toHaveCount(1);
   await expect(page.locator('#cta [data-stage]')).toHaveCount(3);
-  await expect(page.locator('#napravleniya a[href="/dveri/"] img')).toHaveAttribute('src',/door-nzmo-catalog/);
+  await expect(page.locator('#napravleniya a[href="/dveri/"] img')).toHaveAttribute('src',/door-nzmo-render/);
 });
 test('MAF photos open in a dialog and return keyboard focus',async({page})=>{
   await page.goto('http://127.0.0.1:8765/maf/');
