@@ -75,7 +75,7 @@
     let files=[],depth=0;
     const allowed=/\.(pdf|jpe?g|png|webp|heic|heif|dwg|dxf|docx?|xlsx?|zip)$/i;
     function render(){
-      list.replaceChildren();count.textContent=files.length?`${files.length} из 5 · ${(files.reduce((n,f)=>n+f.size,0)/1048576).toLocaleString('ru-RU',{maximumFractionDigits:1})} МБ`:'';
+      list.replaceChildren();const total=files.reduce((n,f)=>n+f.size,0),size=total<1048576?Math.max(1,Math.ceil(total/1024))+' КБ':(total/1048576).toLocaleString('ru-RU',{maximumFractionDigits:1})+' МБ';count.textContent=files.length?`${files.length} из 5 · ${size}`:'';
       for(const [index,file] of files.entries()){
         const li=document.createElement('li'),name=document.createElement('span'),button=document.createElement('button');
         name.textContent=file.name+' · '+(file.size<1048576?Math.max(1,Math.ceil(file.size/1024))+' КБ':(file.size/1048576).toLocaleString('ru-RU',{maximumFractionDigits:1})+' МБ');
