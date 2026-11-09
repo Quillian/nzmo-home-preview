@@ -182,3 +182,7 @@
 .strip .lead-preferences{align-self:start}
 .strip .lead-preferences[open]{grid-column:1/-1}
 @media(max-width:480px){.lead-form--result .lead-preferences textarea{font-size:16px}}
+
+/* Keep the offer anchored when the optional fields expand. */
+.cta2 .cta2__in{align-items:start}
+.cta2 .cta2__form.lead-form--result{align-self:start}
