@@ -212,6 +212,7 @@
 .lead-attach .lead-files__list button{min-height:44px}
 .lead-attach .lead-file-error{font:400 12px/1.5 var(--font-text);margin:8px 0 0}
 
-/* One composition for product, home, editorial and specialist enquiry sections. */
-.cta2 .cta2__l>.config{margin-top:24px}
-@media(max-width:900px){.cta2--configured .config{order:3;margin:0}.cta2--configured .cta2__form{order:4}.cta2--configured .cta2__acc{order:5}}
+/* Optional project parameters stay inside the contact card disclosure. */
+.cta2 .lead-preferences .config{margin:0;padding:0;border:0}
+.cta2 .lead-preferences .config__grid{grid-template-columns:1fr 1fr}
+@media(max-width:480px){.cta2 .lead-preferences .config__grid{grid-template-columns:1fr}}

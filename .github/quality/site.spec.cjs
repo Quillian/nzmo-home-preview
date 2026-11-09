@@ -22,6 +22,7 @@ test('every enquiry uses the approved outer layout and preserves its fields',asy
 });
 test('moving the configured enquiry keeps parameters linked to its form',async({page})=>{
   await page.goto('http://127.0.0.1:8765/ograzhdeniya/zabory-zhalyuzi/');
+  await page.locator('#cta .lead-preferences summary').click();
   const field=page.locator('#cta [data-config] input[type=number]').first();
   await field.fill('24');
   await expect(page.locator('#cta form input[name=config]')).toHaveValue(/24/);
