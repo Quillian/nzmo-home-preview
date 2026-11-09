@@ -14,6 +14,16 @@
       "source": "/potolki/perforirovannye/",
       "destination": "/potolki/kassetnye/hook-on/#perforatsiya",
       "permanent": false
+    },
+    {
+      "source": "/obekty/angiofarm/",
+      "destination": "/obekty/",
+      "permanent": false
+    },
+    {
+      "source": "/obekty/ave-vita/",
+      "destination": "/obekty/",
+      "permanent": false
     }
   ],
   "headers": [

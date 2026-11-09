@@ -1,12 +1,12 @@
 const {test,expect}=require('@playwright/test');
 const {AxeBuilder}=require('@axe-core/playwright');
 const {PNG}=require('pngjs');
-const routes=['/','/o-zavode/','/kontakty/','/potolki/reechnye/','/potolki/kassetnye/clip-in/','/spasibo/','/dveri/protivopozharnye/','/potolki/armstrong-t24/','/maf/'];
+const routes=['/','/o-zavode/','/kontakty/','/potolki/reechnye/','/potolki/kassetnye/clip-in/','/spasibo/','/dveri/protivopozharnye/','/potolki/armstrong-t24/','/maf/','/obekty/','/servis/faq/'];
 test('home delivery follows partners and workflow uses the single enquiry',async({page})=>{
   await page.goto('http://127.0.0.1:8765/');
   await expect(page.locator('.home-partners + #dostavka')).toBeAttached();
   await expect(page.locator('#cta form')).toHaveCount(1);
-  await expect(page.locator('#cta .cta2__acc li')).toHaveCount(3);
+  await expect(page.locator('#cta [data-stage]')).toHaveCount(3);
   await expect(page.locator('#napravleniya a[href="/dveri/"] img')).toHaveAttribute('src',/door-nzmo-catalog/);
 });
 test('MAF photos open in a dialog and return keyboard focus',async({page})=>{
@@ -41,7 +41,7 @@ test('product pages share delivery reviews enquiry FAQ order',async()=>{
     const delivery=sections.findIndex(s=>/^<section[^>]*id="dostavka"/.test(s));
     const calc=sections.findIndex(s=>/^<section[^>]*id="kalkulyator"/.test(s));
     expect(delivery,file).toBeGreaterThan(-1);
-    if(calc>=0) expect(delivery,file).toBe(calc+1);
+    if(calc>=0){const numbered=sections.filter(s=>/<span class="n">[0-9]+<\/span>/.test(s));expect(numbered[1],file).toMatch(/^<section[^>]*id="kalkulyator"/);}
     expect(sections[delivery+1],file).toContain('class="revs"');
     expect(sections[delivery+2],file).toMatch(/^<section[^>]*id="cta"/);
     const faq=sections.findIndex(s=>/^<section[^>]*id="faq"/.test(s));
@@ -68,13 +68,13 @@ test('every enquiry uses the approved outer layout and preserves its fields',asy
       if(!section[0].includes('data-lead-v2')) continue;
       count++;
       expect(section[0],file).toMatch(/^<section[^>]*class="[^"]*\bcta2\b/);
-      expect(section[0],file).toContain('cta2__acc');
+      expect(section[0],file).toMatch(/cta2__acc|data-project-path/);
       expect(section[0],file).toContain('cta2__form');
       expect(section[0],file).toContain('data-file-drop');
       expect(section[0],file).not.toContain('Что будет после заявки');
     }
   }
-  expect(count).toBe(218);
+  expect(count).toBe(215);
 });
 test('moving the configured enquiry keeps parameters linked to its form',async({page})=>{
   await page.goto('http://127.0.0.1:8765/ograzhdeniya/zabory-zhalyuzi/');
@@ -254,4 +254,33 @@ test('blocked file storage keeps the user and attachment on the form',async({pag
  await form.locator('[data-lead-files]').setInputFiles({name:'plan.pdf',mimeType:'application/pdf',buffer:Buffer.from('pdf')});
  await form.locator('[name=contact]').fill('files@example.com');await form.locator('[name=agree]').check();await form.locator('[data-lead-submit]').click();
  await expect(page).toHaveURL(/reechnye/);await expect(form.locator('[data-file-list] li')).toHaveCount(1);await expect(form.locator('[data-lead-status]')).toBeVisible();await expect(form.locator('[data-lead-submit]')).toBeEnabled();
+});
+
+for(const width of [390,1440]) test('project timeline supports buttons and keyboard '+width,async({page})=>{
+ await page.setViewportSize({width,height:900});await page.goto('http://127.0.0.1:8765/');
+ const form=page.locator('#cta form');await form.locator('[name=contact]').fill('client@example.com');
+ await page.locator('[data-stage="2"]').click();await expect(page.locator('[data-stage-panel]:visible h3')).toContainText('Доведём');
+ const slider=page.getByRole('slider',{name:'Этап работы'});await slider.focus();await page.keyboard.press('Home');
+ await expect(page.locator('[data-stage="0"]')).toHaveAttribute('aria-pressed','true');
+ await page.keyboard.press('ArrowRight');await expect(slider).toHaveAttribute('aria-valuetext','2 из 3: Решение');
+ await expect(page.locator('[data-stage-panel]:visible h3')).toContainText('Согласуем');await expect(form.locator('[name=contact]')).toHaveValue('client@example.com');
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1)).toBe(false);
+});
+test('portfolio uses real project assets and excludes unpublished cases',async({page})=>{
+ await page.goto('http://127.0.0.1:8765/obekty/');await expect(page.locator('h1')).toHaveText('Наши работы');
+ await expect(page.locator('[data-case]')).toHaveCount(34);await expect(page.locator('[data-case] img')).toHaveCount(34);
+ await expect(page.locator('main a[href*="angiofarm"],main a[href*="ave-vita"]')).toHaveCount(0);
+ await page.locator('[data-filters] button[data-val="urban"]').click();await expect(page.locator('[data-case]:visible').first()).toHaveAttribute('data-sector','urban');
+});
+test('FAQ contacts replace the form and answers use available width',async({page})=>{
+ await page.setViewportSize({width:1440,height:1000});await page.goto('http://127.0.0.1:8765/servis/faq/');
+ await expect(page.locator('main form')).toHaveCount(0);await expect(page.getByRole('link',{name:'Задать вопрос',exact:true}).last()).toHaveAttribute('href',/^mailto:info@nzmo.ru/);
+ const widths=await page.locator('.faq .a').first().evaluate(el=>({answer:el.getBoundingClientRect().width,block:el.closest('details').getBoundingClientRect().width}));expect(widths.answer).toBeGreaterThan(widths.block*.95);
+});
+test('header order is consistent on all shared-layout pages',async()=>{
+ const fs=require('node:fs'),path=require('node:path');const root=path.resolve(__dirname,'../..');
+ const expected=['Наши работы','Доставка и оплата','О заводе','Журнал','Контакты'];let count=0;
+ function walk(d){return fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.name.startsWith('.')||e.name==='node_modules'?[]:e.isDirectory()?walk(path.join(d,e.name)):e.name.endsWith('.html')?[path.join(d,e.name)]:[]);}
+ for(const file of walk(root)){const html=fs.readFileSync(file,'utf8');const nav=html.match(/<ul class="nav">([\s\S]*?)<button class="header__search"/);if(!nav)continue;count++;expect(nav[1],file).toContain('Продукция завода');const tail=nav[1].slice(nav[1].lastIndexOf('</div>'));const labels=[...tail.matchAll(/<a href="[^"]+">([^<]+)<\/a>/g)].map(x=>x[1]);expect(labels,file).toEqual(expected);}
+ expect(count).toBeGreaterThan(180);
 });

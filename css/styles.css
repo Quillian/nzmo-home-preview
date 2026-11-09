@@ -978,3 +978,10 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 .montage-guide .msteps p{font-size:16px;line-height:1.55}
 @media(max-width:900px){.montage-guide{margin-top:48px;padding:28px}.montage-guide .msteps{gap:24px}.montage-guide .msteps li+li{padding-top:24px;border-top:1px solid #d4d9dd}}
 @media(max-width:480px){.montage-guide{margin-top:40px;padding:24px 20px}.montage-guide .msteps__t{font-size:18px}}
+
+/* Owner 09.11.2026: descriptions and FAQ use their available column width. */
+.faq .a,.faq .a p,.jb-faq__a,.jb-faq__a p{max-width:none;width:100%}
+.lead,.cover .lead,.page-head .lead,.section-head .lead{max-width:none}
+.section-head>div{min-width:0;flex:1}.section-head>.btn{flex-shrink:0}
+.faq-contact .lead{margin:18px 0 24px}.faq-contact .small{margin-top:18px}
+.case-photo-gallery{display:block;width:100%;height:auto;max-height:850px;object-fit:contain;background:#f4f3f1}
