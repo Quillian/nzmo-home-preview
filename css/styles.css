@@ -985,3 +985,5 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 .section-head>div{min-width:0;flex:1}.section-head>.btn{flex-shrink:0}
 .faq-contact .lead{margin:18px 0 24px}.faq-contact .small{margin-top:18px}
 .case-photo-gallery{display:block;width:100%;height:auto;max-height:850px;object-fit:contain;background:#f4f3f1}
+
+.card__photo img{object-position:var(--photo-position,50% 50%)}
