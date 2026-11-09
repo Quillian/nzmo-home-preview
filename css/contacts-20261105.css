@@ -40,3 +40,15 @@
 @media(max-width:900px){.contacts-page .cta2__in{grid-template-columns:minmax(0,1fr);gap:32px}.contacts-page .cta2__form{width:100%;min-width:0;margin-top:0}.contacts-page .cta2__t{font-size:36px}.contacts-page .cta2__form input:not([type=checkbox]){min-width:0;width:100%}.contacts-page .cta2__lead{font-size:17px}}
 @media(max-width:1000px){.contacts-sales{gap:36px}.contacts-hours{padding:26px}.contacts-departments{gap:22px}.contacts-departments h2{font-size:19px}.contacts-legal__grid{gap:36px}.contacts-requisites>div{grid-template-columns:120px minmax(0,1fr);gap:16px}}
 @media(max-width:760px){.contacts-intro{padding:18px 0 56px}.contacts-intro h1{margin:30px 0}.contacts-sales{grid-template-columns:1fr;gap:32px}.contacts-phone{font-size:clamp(24px,6.4vw,34px)}.contacts-email{font-size:23px}.contacts-hours{padding:24px}.contacts-departments{grid-template-columns:1fr;gap:28px;margin-top:40px}.contacts-departments h2{font-size:23px;min-height:0;max-width:none}.contacts-departments p{min-height:0}.contacts-dept-email{margin:12px 0 18px}.contacts-legal{padding:56px 0}.contacts-legal__grid{grid-template-columns:1fr;gap:36px}.contacts-legal h2{font-size:30px}.contacts-requisites>div{grid-template-columns:1fr;gap:4px}.contacts-page .av2-section{padding:56px 0}}
+
+/* Compact service contacts, 09.11.2026. */
+.contacts-intro{padding-bottom:56px}
+.contacts-departments{background:#f4f3f1;border:1px solid #e2e4e5;border-radius:4px;padding:26px 30px;gap:30px;margin-top:48px}
+.contacts-departments article{padding:0 0 0 30px;border:0;border-left:1px solid #d5d9dd}
+.contacts-departments article:first-child{padding-left:0;border-left:0}
+.contacts-departments h2{font-size:18px;line-height:1.4;min-height:0;max-width:none;margin:0 0 8px}
+.contacts-departments p{min-height:0;margin:0 0 14px;font-size:14px;line-height:1.5}
+.contacts-dept-email{margin:auto 0 0;color:#05445e;font-size:15px;font-weight:500;text-decoration:underline;text-underline-offset:4px;min-height:32px;display:inline-flex;align-items:center}
+.contacts-company-card{font-size:14px;gap:14px;min-height:48px}
+@media(max-width:1000px){.contacts-departments{padding:24px;gap:20px}.contacts-departments article{padding-left:20px}.contacts-departments h2{font-size:16px}}
+@media(max-width:760px){.contacts-intro{padding-bottom:40px}.contacts-departments{gap:0;margin-top:32px;padding:4px 22px}.contacts-departments article,.contacts-departments article:first-child{padding:20px 0;border:0}.contacts-departments article+article{border-top:1px solid #d5d9dd}.contacts-departments h2{font-size:18px}.contacts-departments p{margin-bottom:8px}.contacts-dept-email{margin:0}}

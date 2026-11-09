@@ -76,7 +76,7 @@ test('every enquiry uses the approved outer layout and preserves its fields',asy
       expect(section[0],file).not.toContain('Что будет после заявки');
     }
   }
-  expect(count).toBe(215);
+  expect(count).toBe(214);
 });
 test('moving the configured enquiry keeps parameters linked to its form',async({page})=>{
   await page.goto('http://127.0.0.1:8765/ograzhdeniya/zabory-zhalyuzi/');
@@ -301,4 +301,54 @@ test('header order is consistent on all shared-layout pages',async()=>{
  function walk(d){return fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.name.startsWith('.')||e.name==='node_modules'?[]:e.isDirectory()?walk(path.join(d,e.name)):e.name.endsWith('.html')?[path.join(d,e.name)]:[]);}
  for(const file of walk(root)){const html=fs.readFileSync(file,'utf8');const nav=html.match(/<ul class="nav">([\s\S]*?)<button class="header__search"/);if(!nav)continue;count++;expect(nav[1],file).toContain('Продукция завода');const tail=nav[1].slice(nav[1].lastIndexOf('</div>'));const labels=[...tail.matchAll(/<a href="[^"]+">([^<]+)<\/a>/g)].map(x=>x[1]);expect(labels,file).toEqual(expected);}
  expect(count).toBeGreaterThan(180);
+});
+
+for(const route of ['/potolki/reechnye/','/potolki/reechnye/kuboobraznye/','/potolki/grilyato/','/potolki/grilyato/yacheyka-50/','/potolki/grilyato/yacheyka-75/','/potolki/grilyato/yacheyka-100/','/potolki/armstrong-t24/']) test('calculator passes fresh parameters into short modal '+route,async({page})=>{
+ await page.setViewportSize({width:320,height:844});await page.goto('http://127.0.0.1:8765'+route);
+ const calc=page.locator('#kalkulyator'),cta=calc.locator('[data-rc-cta],[data-gc-cta]'),dlg=page.locator('dialog.calc-lead');
+ await calc.locator('[name=s]').fill('245');await calc.locator('[name=p]').fill('42');await calc.locator('[name=z]').fill('7');
+ await cta.click();await expect(dlg).toBeVisible();await expect(page).toHaveURL('http://127.0.0.1:8765'+route);
+ await expect(dlg.locator('[name=config]')).toHaveValue(/Площадь: 245 м²[\s\S]*42 м[\s\S]*Запас на подрезку: 7 %[\s\S]*Предварительный расчёт комплектующих/);
+ await expect(dlg.locator('[name=contact]')).toBeFocused();await expect(dlg.locator('[name=agree]')).not.toBeChecked();
+ await dlg.locator('[data-lead-submit]').click();await expect(dlg).toBeVisible();await expect(page).not.toHaveURL(/spasibo/);
+ await dlg.locator('[name=contact]').fill('+79190000000');await dlg.locator('[data-lead-submit]').click();await expect(dlg).toBeVisible();
+ await dlg.press('Escape');await expect(cta).toBeFocused();await calc.locator('[name=s]').fill('310');await cta.click();
+ await expect(dlg.locator('[name=config]')).toHaveValue(/Площадь: 310 м²/);await expect(dlg.locator('[name=contact]')).toHaveValue('+79190000000');
+ await dlg.locator('summary').click();const axe=await new AxeBuilder({page}).include('.calc-lead').analyze();expect(axe.violations).toEqual([]);
+ expect(await dlg.evaluate(el=>el.scrollWidth<=el.clientWidth+1)).toBe(true);
+ await dlg.locator('[name=agree]').check();await dlg.locator('[data-lead-submit]').click();await expect(page).toHaveURL(/\/spasibo\/$/);
+ const draft=await page.evaluate(()=>JSON.parse(sessionStorage.getItem('nzmo_lead_v2')).payload);
+ expect(draft.config).toContain('Площадь: 310 м²');expect(draft.config).toContain('Запас на подрезку: 7 %');expect(draft.contact_method).toBe('phone');expect(draft.quantity).toBe('310 м²');
+ await expect(page.locator('[data-receipt-status]')).toContainText('заявка не отправлена');
+});
+test('calculator rejects invalid inputs and retains draft after adapter failure',async({page})=>{
+ await page.addInitScript(()=>{window.NzmoLeadTransport={ready:true,create:async data=>{window.capturedLead=data;throw new Error('offline');}};});
+ await page.goto('http://127.0.0.1:8765/potolki/reechnye/');const calc=page.locator('[data-railcalc]'),cta=calc.locator('[data-rc-cta]'),dlg=page.locator('.calc-lead');
+ for(const invalid of ['','0','-10']){await calc.locator('[name=s]').fill(invalid);await cta.click();await expect(dlg).not.toBeVisible();}
+ await calc.locator('[name=s]').fill('120');await cta.click();await dlg.locator('[name=contact]').fill('+79190000000');await dlg.locator('[name=agree]').check();await dlg.locator('[data-lead-submit]').click();
+ await expect(dlg.locator('[data-lead-status]')).toContainText('Не удалось отправить');await expect(dlg.locator('[name=contact]')).toHaveValue('+79190000000');
+ expect((await page.evaluate(()=>window.capturedLead)).config).toContain('Площадь: 120 м²');await expect(dlg.locator('[data-lead-submit]')).toBeEnabled();
+});
+test('contacts are compact and company details remain downloadable',async({page,request})=>{
+ await page.goto('http://127.0.0.1:8765/kontakty/');await expect(page.locator('main form')).toHaveCount(0);await expect(page.locator('.contacts-legal')).toHaveCount(0);
+ await expect(page.locator('.contacts-departments article')).toHaveCount(3);await expect(page.locator('.contacts-company-card')).toHaveAttribute('download','');
+ const href=await page.locator('.contacts-company-card').getAttribute('href');const response=await request.get('http://127.0.0.1:8765'+href);expect(response.ok()).toBe(true);expect((await response.body()).subarray(0,4).toString()).toBe('%PDF');
+ await expect(page.locator('.contacts-departments a[href^="mailto:buh@nzmo.ru"]')).toHaveCount(1);await expect(page.locator('.contacts-departments a[href^="mailto:info@nzmo.ru"]')).toHaveCount(2);
+ await expect(page.locator('a[href="#cta"]')).toHaveCount(0);
+});
+
+for(const route of ['/kontakty/','/o-zavode/']) test('2GIS stays unloaded until requested '+route,async({page})=>{
+ let requests=0;await page.route('https://widgets.2gis.com/**',async r=>{requests++;await r.fulfill({status:200,contentType:'text/html',body:'<html lang="ru"><title>Карта для проверки</title><body>2ГИС mock</body></html>'});});
+ await page.goto('http://127.0.0.1:8765'+route);const stage=page.locator('.location-stage'),frame=page.locator('#nzmo-map');
+ await stage.scrollIntoViewIfNeeded();await expect(stage).toHaveAttribute('data-map-state','idle');expect(await frame.getAttribute('src')).toBeNull();expect(requests).toBe(0);
+ await page.locator('[data-map-load]').click();await expect(stage).toHaveAttribute('data-map-state','ready');expect(requests).toBe(1);await expect(frame).toHaveAttribute('src',/widgets\.2gis\.com/);
+ await page.locator('[data-map="office"]').click();await expect(frame).toHaveAttribute('src',/%2255\.03897|55\.03897/);await expect(stage).toHaveAttribute('data-map-state','ready');
+ await page.locator('[data-map="production"]').click();await expect(frame).toHaveAttribute('src',/55\.005844/);
+ await expect(page.locator('.location-card a[href*="directions"]')).toHaveCount(2);await expect(page.locator('.location-fallback a')).toHaveCount(2);
+});
+test('2GIS slow response leaves addresses and retry available',async({page})=>{
+ await page.clock.install();await page.route('https://widgets.2gis.com/**',()=>new Promise(()=>{}));
+ await page.goto('http://127.0.0.1:8765/kontakty/');await page.locator('[data-map-load]').click();await page.clock.fastForward(13000);
+ await expect(page.locator('.location-stage')).toHaveAttribute('data-map-state','waiting');await expect(page.locator('[data-map-load]')).toBeEnabled();await expect(page.locator('[data-map-status]')).toContainText('дольше обычного');
+ await expect(page.locator('.location-card a').first()).toBeVisible();
 });

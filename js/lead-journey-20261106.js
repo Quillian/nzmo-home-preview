@@ -104,12 +104,14 @@
     return {get:()=>[...files],set:next=>{files=next;render();},lock:locked=>{input.disabled=locked;list.querySelectorAll('button').forEach(b=>b.disabled=locked);drop.inert=locked;}};
   }
 
-  document.querySelectorAll('form[data-lead-v2]').forEach(form=>{
+  function initForm(form){
+    if(form.dataset.leadReady)return;
+    form.dataset.leadReady='true';
     setupContact(form);
     const button=form.querySelector('[data-lead-submit]'), output=form.querySelector('[data-lead-status]');
     button.disabled=false;
     let busy=false, requestId=uuid(), previousPayload='', fileKey=uuid();
-    const attachments=setupFiles(form,()=>{requestId=uuid();});
+    const attachments=setupFiles(form,()=>{requestId=uuid();}) || {get:()=>[],lock:()=>{}};
     form.addEventListener('submit',async e=>{
       e.preventDefault();if(busy||!validate(form))return;
       busy=true;button.disabled=true;output.hidden=true;
@@ -142,7 +144,9 @@
         attachments.lock(false);busy=false;button.disabled=false;button.textContent=transport()?'Повторить отправку':button.dataset.leadAction;
       }
     });
-  });
+  }
+  document.querySelectorAll('form[data-lead-v2]').forEach(initForm);
+  document.addEventListener('nzmo:lead-init',e=>{if(e.target.matches('form[data-lead-v2]'))initForm(e.target);});
   const root=document.querySelector('[data-lead-next]');if(!root)return;
   let draft=read() || {mode:'preview',payload:{}};
   const form=root.querySelector('[data-lead-details]'), output=form.querySelector('[data-details-status]');
