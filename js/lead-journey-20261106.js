@@ -1,5 +1,5 @@
 /* UI only until P0-FORMS is completed. CRM adapter must return a verified receipt.
-   NzmoLeadTransport: ready === true, create(payload, {requestId}) -> {id, token},
+   NzmoLeadTransport: ready === true, create(payload, {requestId, files}) -> {id, token, attachmentsAccepted:true when files exist},
    append({id, token}, payload, files, {requestId}) -> {id, accepted:true}.
    No credentials, simulated server responses or real conversion events in preview. */
 (function () {
@@ -51,11 +51,65 @@
     next.agree=!!form.elements.namedItem('agree')?.checked;
     return next;
   }
+  // Local, expiring attachment draft. Binary content never enters sessionStorage.
+  function fileStore(action, key, files) {
+    return new Promise((resolve,reject)=>{
+      let request;try{request=indexedDB.open('nzmo-lead-attachments',1);}catch(_){reject(new Error('file-storage'));return;}
+      request.onupgradeneeded=()=>request.result.createObjectStore('drafts',{keyPath:'key'});
+      request.onerror=()=>reject(new Error('file-storage'));
+      request.onsuccess=()=>{
+        const db=request.result, tx=db.transaction('drafts','readwrite'), store=tx.objectStore('drafts');let result=[];
+        const sweep=store.openCursor();sweep.onsuccess=()=>{const c=sweep.result;if(c){if(Date.now()-c.value.savedAt>TTL)c.delete();c.continue();}};
+        if(action==='put')store.put({key,files,savedAt:Date.now()});
+        if(action==='delete')store.delete(key);
+        if(action==='get'){const get=store.get(key);get.onsuccess=()=>{const d=get.result;if(d&&Date.now()-d.savedAt<=TTL)result=d.files||[];};}
+        tx.oncomplete=()=>{db.close();resolve(result);};
+        tx.onerror=tx.onabort=()=>{db.close();reject(new Error('file-storage'));};
+      };
+    });
+  }
+  function setupFiles(form, changed=()=>{}) {
+    const input=form.querySelector('[data-lead-files]');if(!input)return null;
+    const drop=form.querySelector('[data-file-drop]'),list=form.querySelector('[data-file-list]'),error=form.querySelector('[data-file-error]'),hint=form.querySelector('[data-file-hint]'),count=form.querySelector('[data-file-count]');
+    hint.id='file-hint-'+uuid();input.setAttribute('aria-describedby',hint.id);
+    let files=[],depth=0;
+    const allowed=/\.(pdf|jpe?g|png|webp|heic|heif|dwg|dxf|docx?|xlsx?|zip)$/i;
+    function render(){
+      list.replaceChildren();count.textContent=files.length?`${files.length} из 5 · ${(files.reduce((n,f)=>n+f.size,0)/1048576).toLocaleString('ru-RU',{maximumFractionDigits:1})} МБ`:'';
+      for(const [index,file] of files.entries()){
+        const li=document.createElement('li'),name=document.createElement('span'),button=document.createElement('button');
+        name.textContent=file.name+' · '+(file.size<1048576?Math.max(1,Math.ceil(file.size/1024))+' КБ':(file.size/1048576).toLocaleString('ru-RU',{maximumFractionDigits:1})+' МБ');
+        button.type='button';button.textContent='Убрать';button.setAttribute('aria-label','Убрать файл '+file.name);
+        button.onclick=()=>{files.splice(index,1);error.hidden=true;render();changed();};li.append(name,button);list.append(li);
+      }
+    }
+    function add(incoming){
+      error.hidden=true;const candidate=[...files];
+      for(const file of incoming)if(!candidate.some(f=>f.name===file.name&&f.size===file.size&&f.lastModified===file.lastModified))candidate.push(file);
+      let message='';
+      if(candidate.some(f=>!allowed.test(f.name)||/^(text\/html|image\/svg\+xml|application\/(x-msdownload|x-executable|javascript))$/i.test(f.type)))message='Этот формат не подходит. Выберите PDF, JPG, PNG, WebP, HEIC, DWG, DXF, Word, Excel или ZIP.';
+      else if(candidate.some(f=>!f.size))message='Пустой файл не добавлен. Проверьте его и выберите заново.';
+      else if(candidate.length>5)message='Можно прикрепить до 5 файлов. Уберите лишние и попробуйте снова.';
+      else if(candidate.some(f=>f.size>10*1048576))message='Один файл должен быть не больше 10 МБ. Уменьшите его размер и попробуйте снова.';
+      else if(candidate.reduce((n,f)=>n+f.size,0)>20*1048576)message='Общий размер — не больше 20 МБ. Уберите лишнее или уменьшите файлы.';
+      if(message){error.textContent=message;error.hidden=false;}else{files=candidate;render();changed();}
+      input.value='';
+    }
+    input.addEventListener('change',()=>add([...input.files]));
+    drop.addEventListener('dragenter',e=>{if([...e.dataTransfer.types].includes('Files')){e.preventDefault();depth++;drop.classList.add('is-over');}});
+    drop.addEventListener('dragover',e=>{if([...e.dataTransfer.types].includes('Files')){e.preventDefault();e.dataTransfer.dropEffect='copy';}});
+    drop.addEventListener('dragleave',e=>{e.preventDefault();if(--depth<=0){depth=0;drop.classList.remove('is-over');}});
+    drop.addEventListener('drop',e=>{e.preventDefault();depth=0;drop.classList.remove('is-over');add([...e.dataTransfer.files]);});
+    render();
+    return {get:()=>[...files],set:next=>{files=next;render();},lock:locked=>{input.disabled=locked;list.querySelectorAll('button').forEach(b=>b.disabled=locked);drop.inert=locked;}};
+  }
+
   document.querySelectorAll('form[data-lead-v2]').forEach(form=>{
     setupContact(form);
     const button=form.querySelector('[data-lead-submit]'), output=form.querySelector('[data-lead-status]');
     button.disabled=false;
-    let busy=false, requestId=uuid(), previousPayload='';
+    let busy=false, requestId=uuid(), previousPayload='', fileKey=uuid();
+    const attachments=setupFiles(form,()=>{requestId=uuid();});
     form.addEventListener('submit',async e=>{
       e.preventDefault();if(busy||!validate(form))return;
       busy=true;button.disabled=true;output.hidden=true;
@@ -63,12 +117,17 @@
       data.utm={};const query=new URLSearchParams(location.search);for(const k of ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'])if(query.has(k))data.utm[k]=query.get(k).slice(0,300);
       const serialized=JSON.stringify(data);if(previousPayload && serialized!==previousPayload)requestId=uuid();previousPayload=serialized;
       let draft={payload:data,mode:'preview'};
+      const files=attachments.get();attachments.lock(true);
       try {
+        if(files.length){await fileStore('put',fileKey,files);draft.fileKey=fileKey;}
+        else await fileStore('delete',fileKey,[]).catch(()=>{});
         if(transport()){
           button.textContent='Отправляем…';
-          const receipt=await transport().create(data,{requestId});
+          const receipt=await transport().create(data,{requestId,files});
           if(!receipt || typeof receipt.id!=='string' || !receipt.id || typeof receipt.token!=='string' || !receipt.token)throw new Error('receipt');
-          draft={payload:data,mode:'accepted',receipt:{id:receipt.id,token:receipt.token}};
+          if(files.length && receipt.attachmentsAccepted!==true)throw new Error('attachments');
+          draft={...draft,mode:'accepted',receipt:{id:receipt.id,token:receipt.token}};
+          if(files.length){await fileStore('delete',fileKey).catch(()=>{});delete draft.fileKey;}
         }
         if(!save(draft)){
           status(output,draft.mode==='accepted'?'Заявка принята. Не удалось открыть следующий шаг: браузер ограничил хранение данных. Позвоните нам, если хотите добавить детали.':'Браузер запретил сохранение черновика. Разрешите хранение данных для сайта или свяжитесь с нами напрямую.',draft.mode!=='accepted');
@@ -78,8 +137,9 @@
         event(draft.mode==='accepted'?'accepted':'preview',data.kind);
         location.assign('/spasibo/');
       } catch(error){
-        if(error.message!=='storage')status(output,'Не удалось отправить заявку. Данные остались в форме. Попробуйте ещё раз или свяжитесь с нами напрямую.',true);
-        busy=false;button.disabled=false;button.textContent=transport()?'Повторить отправку':button.dataset.leadAction;
+        if(error.message==='file-storage')status(output,'Не удалось сохранить вложения в браузере. Файлы остались здесь: попробуйте ещё раз или уберите их, чтобы продолжить без вложений.',true);
+        else if(error.message!=='storage')status(output,'Не удалось отправить заявку. Данные остались в форме. Попробуйте ещё раз или свяжитесь с нами напрямую.',true);
+        attachments.lock(false);busy=false;button.disabled=false;button.textContent=transport()?'Повторить отправку':button.dataset.leadAction;
       }
     });
   });
@@ -113,54 +173,37 @@
       form.querySelector('[data-details-hint]').textContent='Дополнение прикрепим к вашей заявке. Повторно отправлять контакт не нужно.';
     }else form.querySelector('[data-details-hint]').textContent='Заявка принята, но отправка дополнений сейчас недоступна. Сохраните текст запроса или свяжитесь с нами напрямую.';
   }else if(draft.payload.contact){root.querySelector('[data-receipt-status]').textContent='Предпросмотр · заявка не отправлена';}
-  let files=[], requestId=uuid(), busy=false;
-  const fileInput=form.querySelector('[data-lead-files]'), list=form.querySelector('[data-file-list]'), fileError=form.querySelector('[data-file-error]');
-  function renderFiles(){
-    list.replaceChildren();
-    files.forEach((file,index)=>{const li=document.createElement('li'), name=document.createElement('span'), button=document.createElement('button');
-      const size=file.size<1048576 ? Math.max(1,Math.ceil(file.size/1024))+' КБ' : (file.size/1048576).toLocaleString('ru-RU',{maximumFractionDigits:1})+' МБ';
-      name.textContent=file.name+' · '+size;
-      button.type='button';button.textContent='Убрать';button.setAttribute('aria-label','Убрать файл '+file.name);button.addEventListener('click',()=>{files.splice(index,1);fileError.hidden=true;renderFiles();requestId=uuid();});
-      li.append(name,button);list.append(li);
-    });
-  }
-  function addFiles(incoming){
-    fileError.hidden=true;
-    const candidate=[...files];for(const file of incoming){if(!candidate.some(f=>f.name===file.name&&f.size===file.size&&f.lastModified===file.lastModified))candidate.push(file);}
-    let error='';
-    if(candidate.some(f=>! /\.(pdf|jpe?g|png|webp|dwg|dxf|docx?|xlsx?|zip)$/i.test(f.name)))error='Этот формат не подходит. Выберите PDF, фото, DWG / DXF, Word, Excel или ZIP.';
-    else if(candidate.length>5)error='Можно прикрепить до 5 файлов. Объедините документы в ZIP или уберите лишние.';
-    else if(candidate.reduce((sum,f)=>sum+f.size,0)>20*1048576)error='Общий размер файлов должен быть не больше 20 МБ.';
-    else if(candidate.some(f=>f.size===0))error='Один из файлов пустой. Проверьте его перед добавлением.';
-    if(error){fileError.textContent=error;fileError.hidden=false;}else{files=candidate;renderFiles();requestId=uuid();}
-    fileInput.value='';
-  }
-  fileInput.addEventListener('change',()=>addFiles([...fileInput.files]));
-  const drop=form.querySelector('[data-file-drop]');
-  ['dragenter','dragover'].forEach(type=>drop.addEventListener(type,e=>{e.preventDefault();drop.classList.add('is-over');}));
-  ['dragleave','drop'].forEach(type=>drop.addEventListener(type,e=>{e.preventDefault();drop.classList.remove('is-over');if(type==='drop')addFiles([...e.dataTransfer.files]);}));
+  let requestId=uuid(), busy=false;
+  const attachments=setupFiles(form,()=>{requestId=uuid();});
+  const restoreFiles=(draft.fileKey?fileStore('get',draft.fileKey).then(files=>attachments.set(files)).catch(()=>status(output,'Не удалось восстановить вложения. Прикрепите файлы заново.',true)):Promise.resolve());
+  attachments.lock(true);restoreFiles.finally(()=>attachments.lock(false));
   form.addEventListener('input',()=>{requestId=uuid();});
   form.addEventListener('submit',async e=>{
     e.preventDefault();if(busy || !validate(form,!!accepted))return;
     const data=payload(form,draft.payload), button=form.querySelector('[data-details-submit]');
     busy=true;button.disabled=true;
+    await restoreFiles;attachments.lock(true);const files=attachments.get();
     try {
       if(accepted && transport() && typeof transport().append==='function'){
         const receipt=await transport().append(draft.receipt,data,files,{requestId});
         if(!receipt || receipt.id!==draft.receipt.id || receipt.accepted!==true)throw new Error('receipt');
-        files=[];renderFiles();status(output,'Детали добавлены к вашей заявке. Спасибо — это поможет подготовить расчёт.');event('details_accepted',data.kind);
-      }else status(output,'Детали сохранены в этой вкладке, но не отправлены. Вы можете скачать текст запроса. Файлы при обновлении страницы нужно выбрать заново.');
+        attachments.set([]);if(draft.fileKey)await fileStore('delete',draft.fileKey).catch(()=>{});delete draft.fileKey;status(output,'Детали добавлены к вашей заявке. Спасибо — это поможет подготовить расчёт.');event('details_accepted',data.kind);
+      }else {
+        if(files.length){draft.fileKey=draft.fileKey||uuid();await fileStore('put',draft.fileKey,files);}
+        else if(draft.fileKey){await fileStore('delete',draft.fileKey);delete draft.fileKey;}
+        status(output,'Детали и вложения сохранены в этом браузере на 2 часа, но не отправлены. Вы можете скачать текст запроса.');
+      }
       draft={...draft,payload:data};const saved=save(draft);
       if(!saved)status(output,accepted?'Дополнение обработано, но браузер не сохранил его в этой вкладке.':'Браузер не сохранил черновик. Скачайте текст запроса до закрытия страницы.',true);
       summary();
     }catch(_){status(output,'Не удалось передать дополнение. Текст и файлы остались здесь. Попробуйте ещё раз.',true);}
-    finally{busy=false;button.disabled=false;}
+    finally{attachments.lock(false);busy=false;button.disabled=false;}
   });
   form.querySelector('[data-download-brief]').addEventListener('click',()=>{
     const data=payload(form,draft.payload), labels={name:'Имя',contact:'Контакт',contact_method:'Способ связи',contact_time:'Удобное время',product:'Продукция',city:'Город',quantity:'Объём',deadline:'Срок',message:'Задача',config:'Параметры расчёта'};
     const lines=['Запрос в НЗМО',accepted?'Дополнительные сведения к заявке':'Черновик — не отправлен в НЗМО',''];
     for(const [key,label]of Object.entries(labels))if(data[key])lines.push(label+': '+(key==='contact_method'?methods[data[key]]||data[key]:data[key]));
-    if(files.length)lines.push('','Файлы (не вложены в этот текст):',...files.map(f=>f.name));
+    const files=attachments.get();if(files.length)lines.push('','Файлы (не вложены в этот текст):',...files.map(f=>f.name));
     const url=URL.createObjectURL(new Blob(['\uFEFF'+lines.join('\r\n')],{type:'text/plain;charset=utf-8'})), a=document.createElement('a');a.href=url;a.download='zapros-nzmo.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
   });
   const page=draft.payload.page||'';

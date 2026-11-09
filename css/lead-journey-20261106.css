@@ -197,3 +197,17 @@
 @media(max-width:900px){.cta2 .cta2__form.lead-form--result{padding:28px;gap:24px}.cta2 .lead-form--result>.consent{margin-top:0}}
 @media(max-width:480px){.cta2 .cta2__form.lead-form--result{padding:24px 20px;gap:22px}}
 
+
+/* Shared attachment area: native picker + drop on the comment, no upload library. */
+.lead-attach{min-width:0;border-radius:4px;outline:2px solid transparent;outline-offset:5px;transition:background .15s,outline-color .15s}
+.lead-attach.is-over{outline-color:#05445E;background:#edf4f7}
+.lead-form .lead-attach__picker,.lead-details .lead-attach__picker{position:relative;display:flex;align-items:center;min-height:44px;width:fit-content;max-width:100%;margin-top:6px;cursor:pointer}
+.lead-attach__picker>span{display:flex;align-items:center;gap:8px;color:#05445E!important;font-size:13px!important}
+.lead-attach__picker svg{flex:none}
+.lead-form .lead-attach__picker input[type=file],.lead-details .lead-attach__picker input[type=file]{position:absolute;inset:0;opacity:0;width:100%;height:100%;min-height:44px;padding:0;cursor:pointer}
+.lead-attach__picker:focus-within{outline:2px solid #D1A250;outline-offset:2px;border-radius:3px}
+.lead-attach__hint,.lead-attach__count{font:400 12px/1.5 var(--font-text);color:#626771;margin:2px 0 0}
+.lead-attach__count:empty,.lead-attach .lead-files__list:empty{display:none}
+.lead-attach .lead-files__list{margin-top:12px}
+.lead-attach .lead-files__list button{min-height:44px}
+.lead-attach .lead-file-error{font:400 12px/1.5 var(--font-text);margin:8px 0 0}

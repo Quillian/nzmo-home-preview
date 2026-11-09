@@ -125,3 +125,49 @@ test('mobile menu remains visible and opens at 320px',async({page})=>{
  await burger.click();
  await expect(page.locator('.nav')).toBeHidden();
 });
+
+
+test('attachments survive the first step and refresh; removal persists',async({page})=>{
+ await page.goto('http://127.0.0.1:8765/potolki/reechnye/');
+ const form=page.locator('#cta form');await form.locator('summary').click();
+ const picker=form.locator('[data-lead-files]');
+ await picker.setInputFiles([{name:'plan.pdf',mimeType:'application/pdf',buffer:Buffer.from('%PDF-1.7 test')},{name:'photo.png',mimeType:'image/png',buffer:Buffer.from([137,80,78,71,13,10,26,10])}]);
+ await expect(form.locator('[data-file-list] li')).toHaveCount(2);
+ await form.locator('textarea').fill('План и фото приложены');
+ await form.locator('summary').click();await form.locator('[name=contact]').fill('files@example.com');await form.locator('[name=agree]').check();await form.locator('[data-lead-submit]').click();
+ await expect(page).toHaveURL(/\/spasibo\/$/);
+ await page.locator('[data-details-panel]>summary').click();
+ await expect(page.locator('[data-file-list] li')).toHaveCount(2);
+ await expect(page.locator('textarea')).toHaveValue('План и фото приложены');
+ await page.reload();await page.locator('[data-details-panel]>summary').click();
+ await expect(page.locator('[data-file-list] li')).toHaveCount(2);
+ await page.getByRole('button',{name:'Убрать файл plan.pdf',exact:true}).click();
+ await page.locator('[data-details-submit]').click();await expect(page.locator('[data-details-status]')).toContainText('но не отправлены');
+ await page.reload();await page.locator('[data-details-panel]>summary').click();
+ await expect(page.locator('[data-file-list] li')).toHaveCount(1);await expect(page.locator('[data-file-list]')).toContainText('photo.png');
+});
+
+test('attachment drop, duplicate and size/type limits preserve existing files',async({page})=>{
+ await page.setViewportSize({width:320,height:900});await page.goto('http://127.0.0.1:8765/potolki/reechnye/');
+ const form=page.locator('#cta form');await form.locator('summary').click();const input=form.locator('[data-lead-files]'),error=form.locator('[data-file-error]');
+ const drop=await page.evaluateHandle(()=>{const d=new DataTransfer();d.items.add(new File(['cad'],'project.dwg',{type:'application/octet-stream',lastModified:1}));return d;});
+ await form.locator('textarea').dispatchEvent('drop',{dataTransfer:drop});
+ await form.locator('textarea').dispatchEvent('drop',{dataTransfer:drop});await expect(form.locator('[data-file-list] li')).toHaveCount(1);
+ for(const [name,mime,body,expected] of [['script.svg','image/svg+xml',Buffer.from('<svg/>'),'формат'],['empty.pdf','application/pdf',Buffer.alloc(0),'Пустой'],['big.pdf','application/pdf',Buffer.alloc(10*1048576+1),'10 МБ']]){
+  await input.setInputFiles({name,mimeType:mime,buffer:body});await expect(error).toContainText(expected);await expect(form.locator('[data-file-list] li')).toHaveCount(1);
+ }
+ await input.setInputFiles(Array.from({length:5},(_,i)=>({name:`doc-${i}.pdf`,mimeType:'application/pdf',buffer:Buffer.from('pdf')})));await expect(error).toContainText('до 5');
+ await input.setInputFiles([{name:'one.pdf',mimeType:'application/pdf',buffer:Buffer.alloc(10*1048576)},{name:'two.pdf',mimeType:'application/pdf',buffer:Buffer.alloc(10*1048576)}]);await expect(error).toContainText('Общий размер');
+ await input.setInputFiles({name:'очень-длинное-название-плана-объекта-для-проверки-мобильной-вёрстки.pdf',mimeType:'application/pdf',buffer:Buffer.from('pdf')});
+ await expect(error).toBeHidden();expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1)).toBe(false);
+ await expect(form.locator('[data-file-list] li')).toHaveCount(2);
+ const axe=await new AxeBuilder({page}).include('#cta').analyze();expect(axe.violations).toEqual([]);
+});
+
+test('blocked file storage keeps the user and attachment on the form',async({page})=>{
+ await page.addInitScript(()=>Object.defineProperty(window,'indexedDB',{value:{open(){throw new Error('blocked')}}}));
+ await page.goto('http://127.0.0.1:8765/potolki/reechnye/');const form=page.locator('#cta form');await form.locator('summary').click();
+ await form.locator('[data-lead-files]').setInputFiles({name:'plan.pdf',mimeType:'application/pdf',buffer:Buffer.from('pdf')});
+ await form.locator('[name=contact]').fill('files@example.com');await form.locator('[name=agree]').check();await form.locator('[data-lead-submit]').click();
+ await expect(page).toHaveURL(/reechnye/);await expect(form.locator('[data-file-list] li')).toHaveCount(1);await expect(form.locator('[data-lead-status]')).toBeVisible();await expect(form.locator('[data-lead-submit]')).toBeEnabled();
+});
