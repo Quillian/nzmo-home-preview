@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="/css/styles.css?v=cdd5e8fb">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://nzmo-home.vercel.app/#org","name":"НЗМО — Новосибирский завод металлообработки","alternateName":"НЗМО","url":"https://nzmo-home.vercel.app/","logo":"https://nzmo-home.vercel.app/img/logo/04_gorizont_gold-navy.svg","telephone":"+7 (383) 234-91-52","email":"zakaz@nzmo.ru","address":{"@type":"PostalAddress","addressLocality":"Новосибирск","streetAddress":"ул. Челюскинцев, 30/2, офис 410","addressCountry":"RU"},"contactPoint":{"@type":"ContactPoint","telephone":"+7 (383) 234-91-52","contactType":"sales","areaServed":"RU","availableLanguage":"ru"},"foundingDate":"2021","taxID":"5406813782","brand":[{"@type":"Brand","name":"AIRWOOD"},{"@type":"Brand","name":"ALFAPANEL"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"\u0413\u043b\u0430\u0432\u043d\u0430\u044f","item":"https://nzmo-home.vercel.app/"},{"@type":"ListItem","position":2,"name":"\u041e\u0431\u044a\u0435\u043a\u0442\u044b","item":"https://nzmo-home.vercel.app/obekty/"},{"@type":"ListItem","position":3,"name":"\u0422\u0426 \u00ab\u041c\u043e\u0439 \u041f\u043e\u0440\u0442\u00bb","item":"https://nzmo-home.vercel.app/obekty/moy-port/"}]}</script>
-<link rel="stylesheet" href="/css/lead-journey-20261106.css?v=3323f168">
+<link rel="stylesheet" href="/css/lead-journey-20261106.css?v=83a91e6b">
 <script src="/js/lead-journey-20261106.js?v=20bd00f1" defer></script>
 </head>
 <body>
@@ -237,7 +237,13 @@
       <form class="form lead-form lead-form--compact lead-form--result " data-lead="quote" data-lead-v2 action="/spasibo/" method="post" novalidate>
   <input type="hidden" name="page" value="/obekty/moy-port/"><input type="hidden" name="config" value="">
   <label><span data-contact-label>Телефон или email</span><input name="contact" data-lead-contact type="text" autocomplete="off" spellcheck="false" autocapitalize="none" maxlength="160" required placeholder="+7 999 123-45-67"></label>
-  <label class="lead-method"><span>Способ ответа <small>по желанию</small></span><select name="contact_method" data-contact-method><option value="">Не выбран</option><option value="phone">Звонок</option><option value="telegram">Telegram</option><option value="max">MAX</option><option value="email">Email</option></select></label>
+  <details class="lead-preferences">
+    <summary><span>Способ связи и комментарий<small>необязательно</small></span></summary>
+    <div class="lead-preferences__fields">
+      <label class="lead-method"><span>Как удобнее ответить</span><select name="contact_method" data-contact-method><option value="">Не выбран</option><option value="phone">Звонок</option><option value="telegram">Telegram</option><option value="max">MAX</option><option value="email">Email</option></select></label>
+      <label><span>Комментарий</span><textarea name="message" rows="3" maxlength="5000" placeholder="Задача, сроки или удобное время"></textarea></label>
+    </div>
+  </details>
   <div class="lead-config" data-config-echo hidden></div>
   <label class="consent"><input type="checkbox" name="agree" required><span>Согласен на <a href="/soglasie-na-obrabotku-dannyh/">обработку персональных данных</a>. <a href="/politika-konfidentsialnosti/">Политика конфиденциальности</a></span></label>
   <p class="lead-status" data-lead-status role="status" hidden></p>

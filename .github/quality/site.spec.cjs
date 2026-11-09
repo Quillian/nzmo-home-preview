@@ -58,6 +58,10 @@ test('preview form validation and optional contact method',async({page})=>{
   await expect(form).toBeVisible();
   const select=form.locator('select').first();
   await expect(select).not.toHaveAttribute('required','');
+  const preferences=form.locator('.lead-preferences');
+  await expect(preferences).not.toHaveAttribute('open','');
+  await expect(select).toBeHidden();
+  await preferences.locator('summary').click();
   await expect(select).toBeVisible();
   await select.selectOption('email');
   await expect(form.locator('[data-lead-contact]')).toHaveAttribute('type','email');
@@ -66,6 +70,10 @@ test('preview form validation and optional contact method',async({page})=>{
   expect(await form.evaluate(f=>f.checkValidity())).toBe(false);
   await expect(form.locator('input[type="checkbox"][required]')).not.toBeChecked();
   await form.locator('[data-lead-contact]').fill('+79190000000');
+  await expect(form.locator('[name="message"]')).not.toHaveAttribute('required','');
+  await form.locator('[name="message"]').fill('Удобно обсудить после 14:00');
+  await preferences.locator('summary').click();
+  await expect(form.locator('[name="message"]')).toBeHidden();
   await form.locator('input[name="agree"]').check();
   await form.getByRole('button',{name:'Получить расчёт',exact:true}).click();
   await expect(page).toHaveURL(/\/spasibo\/$/);
@@ -76,6 +84,17 @@ test('preview form validation and optional contact method',async({page})=>{
   await expect(page.locator('[name="message"]')).toBeHidden();
   await details.locator('summary').first().click();
   await expect(page.locator('[name="message"]')).toBeVisible();
+  await expect(page.locator('[name="message"]')).toHaveValue('Удобно обсудить после 14:00');
+
+  // A quick enquiry must work without opening the optional section at all.
+  await page.goto('http://127.0.0.1:8765/potolki/reechnye/');
+  const quick=page.locator('form[data-lead-v2]').first();
+  await quick.locator('[data-lead-contact]').fill('quick@example.com');
+  await quick.locator('input[name="agree"]').check();
+  await quick.getByRole('button',{name:'Получить расчёт',exact:true}).click();
+  await expect(page).toHaveURL(/\/spasibo\/$/);
+  await expect(page.locator('[data-receipt-contact]')).toHaveText('quick@example.com');
+  await expect(page.locator('[data-receipt-status]')).toContainText('заявка не отправлена');
 
 });
 

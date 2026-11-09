@@ -165,3 +165,20 @@
 .strip .lead-form--result .lead-submit{grid-column:2;min-height:54px}
 .strip .lead-form--result .lead-preview,.strip .lead-form--result .lead-status,.strip .lead-form--result .lead-config{grid-column:1/-1}
 @media(max-width:600px){.strip .form.lead-form--result{grid-template-columns:1fr;gap:16px}.strip .lead-form--result .lead-submit{grid-column:1}.strip .lead-form--result .lead-method select{font-size:16px}}
+
+/* Optional preferences stay behind one keyboard-accessible disclosure. */
+.lead-preferences{min-width:0;border:0;padding:0}
+.lead-preferences>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;list-style:none;cursor:pointer;color:#05445E;font:500 14px/1.45 var(--font-text)}
+.lead-preferences>summary::-webkit-details-marker{display:none}
+.lead-preferences>summary::after{content:'+';flex:none;font-size:20px;font-weight:400;line-height:1}
+.lead-preferences[open]>summary::after{content:'−'}
+.lead-preferences>summary small{display:block;margin:2px 0 0;color:#70727A;font:400 11px/1.4 var(--font-text)}
+.lead-preferences>summary:hover{color:#1B2D42}
+.lead-preferences>summary:focus-visible{outline:2px solid #D1A250;outline-offset:4px;border-radius:2px}
+.lead-preferences__fields{display:grid;gap:16px;margin-top:14px;padding-top:16px;border-top:1px solid #e2e6e9}
+.lead-form--result .lead-preferences .lead-method{grid-template-columns:1fr;gap:8px}
+.lead-form--result .lead-preferences .lead-method>span{font-size:13px;font-weight:500}
+.lead-form--result .lead-preferences textarea{min-height:90px}
+.strip .lead-preferences{align-self:start}
+.strip .lead-preferences[open]{grid-column:1/-1}
+@media(max-width:480px){.lead-form--result .lead-preferences textarea{font-size:16px}}
