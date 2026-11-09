@@ -114,7 +114,7 @@
 
   // Конфигуратор запроса: параметры собираются в скрытое поле config той же формы
   document.querySelectorAll("[data-config]").forEach(function (box) {
-    var form = box.parentNode.querySelector("form[data-lead]"), out = box.querySelector("[data-config-out]"), base = out.textContent;
+    var form = box.closest("section").querySelector("form[data-lead]"), out = box.querySelector("[data-config-out]"), base = out.textContent;
     function upd() {
       var parts = [];
       box.querySelectorAll("select,input").forEach(function (f) { if (f.value) parts.push(f.dataset.label.replace(/,.*$/, "").toLowerCase() + ": " + f.value); });

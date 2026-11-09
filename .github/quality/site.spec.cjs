@@ -2,6 +2,33 @@ const {test,expect}=require('@playwright/test');
 const {AxeBuilder}=require('@axe-core/playwright');
 const {PNG}=require('pngjs');
 const routes=['/','/o-zavode/','/kontakty/','/potolki/reechnye/','/potolki/kassetnye/clip-in/','/spasibo/','/dveri/protivopozharnye/','/potolki/armstrong-t24/'];
+test('every enquiry uses the approved outer layout and preserves its fields',async()=>{
+  const fs=require('node:fs'),path=require('node:path'),root=path.resolve(__dirname,'../..');
+  let count=0;
+  function crawl(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.name.startsWith('.')||e.name==='node_modules'?[]:e.isDirectory()?crawl(path.join(dir,e.name)):e.name==='index.html'?[path.join(dir,e.name)]:[]);}
+  for(const file of crawl(root)){
+    const html=fs.readFileSync(file,'utf8');
+    for(const section of html.matchAll(/<section\b[^>]*>[\s\S]*?<\/section>/g)){
+      if(!section[0].includes('data-lead-v2')) continue;
+      count++;
+      expect(section[0],file).toMatch(/^<section[^>]*class="[^"]*\bcta2\b/);
+      expect(section[0],file).toContain('cta2__acc');
+      expect(section[0],file).toContain('cta2__form');
+      expect(section[0],file).toContain('data-file-drop');
+      expect(section[0],file).not.toContain('Что будет после заявки');
+    }
+  }
+  expect(count).toBe(218);
+});
+test('moving the configured enquiry keeps parameters linked to its form',async({page})=>{
+  await page.goto('http://127.0.0.1:8765/ograzhdeniya/zabory-zhalyuzi/');
+  const field=page.locator('#cta [data-config] input[type=number]').first();
+  await field.fill('24');
+  await expect(page.locator('#cta form input[name=config]')).toHaveValue(/24/);
+  await page.setViewportSize({width:390,height:844});
+  await expect(page.locator('#cta [data-config]')).toBeVisible();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1)).toBe(false);
+});
 if(process.env.FULL_AUDIT==='1'){
   const fs=require('node:fs'),path=require('node:path'),root=path.resolve(__dirname,'../..');
   function crawl(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.name.startsWith('.')||e.name==='node_modules'?[]:e.isDirectory()?crawl(path.join(dir,e.name)):e.name==='index.html'?[path.join(dir,e.name)]:[]);}
