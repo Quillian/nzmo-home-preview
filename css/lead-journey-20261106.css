@@ -216,3 +216,6 @@
 .cta2 .lead-preferences .config{margin:0;padding:0;border:0}
 .cta2 .lead-preferences .config__grid{grid-template-columns:1fr 1fr}
 @media(max-width:480px){.cta2 .lead-preferences .config__grid{grid-template-columns:1fr}}
+
+/* Long product names must fit narrow phones without clipping. */
+.cta2 .cta2__t{overflow-wrap:anywhere;hyphens:auto}
