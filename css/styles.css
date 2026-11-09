@@ -967,3 +967,14 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 /* Keep navigation controls usable on narrow phones, without flex collapse. */
 @media(max-width:480px){.header__in{gap:6px}.lockup img{width:124px}.burger{flex:0 0 44px;width:44px;padding:12px}.header__search{flex:0 0 36px}}
 @media(max-width:380px){.header__in{padding-inline:12px;gap:4px}.lockup img{width:100px}.header__search{flex-basis:32px;width:32px}}
+
+/* Product installation instructions: separated from the technical drawings. */
+.montage-guide{margin-top:64px;padding:36px;background:#f4f3f1;border-top:1px solid #dce1e5;border-radius:4px}
+.montage-guide .cm-sub{margin:0;padding-left:18px;border-left:2px solid #D1A250;font-size:clamp(23px,2.2vw,30px);line-height:1.25}
+.montage-guide .msteps{margin-top:32px;gap:28px}
+.montage-guide .msteps li{padding:0 0 0 20px;border-left:1px solid #d4d9dd}
+.montage-guide .msteps__n{display:block;width:auto;height:auto;background:none;color:#9a6a22;font:500 26px/1.1 var(--font-display)}
+.montage-guide .msteps__t{margin-top:14px;font-size:20px;overflow-wrap:anywhere}
+.montage-guide .msteps p{font-size:16px;line-height:1.55}
+@media(max-width:900px){.montage-guide{margin-top:48px;padding:28px}.montage-guide .msteps{gap:24px}.montage-guide .msteps li+li{padding-top:24px;border-top:1px solid #d4d9dd}}
+@media(max-width:480px){.montage-guide{margin-top:40px;padding:24px 20px}.montage-guide .msteps__t{font-size:18px}}

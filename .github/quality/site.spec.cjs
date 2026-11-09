@@ -2,6 +2,31 @@ const {test,expect}=require('@playwright/test');
 const {AxeBuilder}=require('@axe-core/playwright');
 const {PNG}=require('pngjs');
 const routes=['/','/o-zavode/','/kontakty/','/potolki/reechnye/','/potolki/kassetnye/clip-in/','/spasibo/','/dveri/protivopozharnye/','/potolki/armstrong-t24/'];
+test('product pages share delivery reviews enquiry FAQ order',async()=>{
+  const fs=require('node:fs'),path=require('node:path');
+  for(const file of require('./product-routes.json')){
+    const html=fs.readFileSync(path.resolve(__dirname,'../..',file),'utf8');
+    const sections=[...html.matchAll(/<section\b[^>]*>[\s\S]*?<\/section>/g)].map(m=>m[0]);
+    const delivery=sections.findIndex(s=>/^<section[^>]*id="dostavka"/.test(s));
+    const calc=sections.findIndex(s=>/^<section[^>]*id="kalkulyator"/.test(s));
+    expect(delivery,file).toBeGreaterThan(-1);
+    if(calc>=0) expect(delivery,file).toBe(calc+1);
+    expect(sections[delivery+1],file).toContain('class="revs"');
+    expect(sections[delivery+2],file).toMatch(/^<section[^>]*id="cta"/);
+    const faq=sections.findIndex(s=>/^<section[^>]*id="faq"/.test(s));
+    if(faq>=0){expect(faq,file).toBe(delivery+3);expect(faq,file).toBe(sections.length-1);}
+    expect(html,file).not.toContain('data-reco="complement"');
+    expect(html,file).not.toContain('тому же, по которому менеджеры готовят КП');
+  }
+});
+for(const route of ['/potolki/reechnye/','/potolki/grilyato/','/potolki/armstrong-t24/']) test('moved calculator still recalculates '+route,async({page})=>{
+  await page.goto('http://127.0.0.1:8765'+route);
+  const calc=page.locator('#kalkulyator');
+  const before=await calc.innerText();
+  await calc.locator('input[type=number]').first().fill('200');
+  await expect.poll(()=>calc.innerText()).not.toBe(before);
+  await expect(page.locator('#dostavka')).toBeAttached();
+});
 test('every enquiry uses the approved outer layout and preserves its fields',async()=>{
   const fs=require('node:fs'),path=require('node:path'),root=path.resolve(__dirname,'../..');
   let count=0;
