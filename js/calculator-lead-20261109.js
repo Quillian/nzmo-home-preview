@@ -8,7 +8,7 @@
   dialog.innerHTML = `<button type="button" class="calc-lead__close" aria-label="Закрыть форму">×</button>
     <h2 id="calc-lead-title">Получить точный расчёт</h2>
     <p class="calc-lead__summary" data-calc-summary></p>
-    <details class="calc-lead__details"><summary>Параметры расчёта</summary><pre data-calc-parameters></pre></details>
+    <details class="calc-lead__details"><summary>Параметры расчёта</summary><pre data-calc-parameters tabindex="0" role="region" aria-label="Параметры и комплектующие"></pre></details>
     <form class="form lead-form lead-form--compact calc-lead__form" data-lead="quote" data-lead-v2 action="/spasibo/" method="post" novalidate>
       <input type="hidden" name="config"><input type="hidden" name="product"><input type="hidden" name="quantity"><input type="hidden" name="contact_method" data-contact-method value="phone">
       <label><span data-contact-label>Телефон</span><input name="contact" data-lead-contact type="tel" inputmode="tel" autocomplete="tel" maxlength="40" required placeholder="+7 999 123-45-67"></label>
