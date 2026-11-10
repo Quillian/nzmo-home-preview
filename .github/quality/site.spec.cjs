@@ -112,8 +112,10 @@ test('moving the configured enquiry keeps parameters linked to its form',async({
 if(process.env.FULL_AUDIT==='1'){
   const fs=require('node:fs'),path=require('node:path'),root=path.resolve(__dirname,'../..');
   function crawl(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.name.startsWith('.')||e.name==='node_modules'?[]:e.isDirectory()?crawl(path.join(dir,e.name)):e.name==='index.html'?[path.join(dir,e.name)]:[]);}
+  const redirects = new Set(require('../../vercel.json').redirects.map(rule => rule.source.replace(/\/$/, '')));
   for(const file of crawl(root)){
     const url='/'+path.relative(root,path.dirname(file)).split(path.sep).filter(Boolean).join('/');
+    if (redirects.has(url)) continue;
     test('full audit '+url,async({page},info)=>{
       await page.setViewportSize({width:390,height:844});
       await page.route('**/*',r=>r.request().url().startsWith('http://127.0.0.1:')||r.request().url().startsWith('data:')?r.continue():r.abort());
