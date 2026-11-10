@@ -5,6 +5,7 @@
 .maf-production .card__photo{aspect-ratio:4/3}
 .maf-production .card__photo img{object-fit:contain}
 .maf-install figure{margin:0}
+#raboty .btn-row{margin-top:28px}
 .maf-order .msteps{grid-template-columns:repeat(4,minmax(0,1fr))}
 .maf-dialog{width:min(1060px,calc(100vw - 32px));max-height:calc(100dvh - 32px);border:0;border-radius:var(--radius);padding:24px;background:var(--white);color:var(--text-strong);overflow:auto;overscroll-behavior:contain}
 .maf-dialog::backdrop{background:rgba(8,18,28,.85)}
