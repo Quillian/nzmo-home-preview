@@ -6,7 +6,7 @@ test('home delivery follows projects and workflow uses the single enquiry',async
   await page.goto('http://127.0.0.1:8765/');
   await expect(page.locator('#obekty + #dostavka')).toBeAttached();
   await expect(page.locator('#cta form')).toHaveCount(1);
-  await expect(page.locator('#cta [data-stage]')).toHaveCount(4);
+  await expect(page.locator('#cta .process-step')).toHaveCount(4);
   await expect(page.locator('#napravleniya a[href="/dveri/"] img')).toHaveAttribute('src',/door-nzmo-render/);
 });
 test('MAF photos open in a dialog and return keyboard focus',async({page})=>{
@@ -258,31 +258,21 @@ test('blocked file storage keeps the user and attachment on the form',async({pag
  await expect(page).toHaveURL(/reechnye/);await expect(form.locator('[data-file-list] li')).toHaveCount(1);await expect(form.locator('[data-lead-status]')).toBeVisible();await expect(form.locator('[data-lead-submit]')).toBeEnabled();
 });
 
- for(const width of [320,390,1440]) test('project photo chapters preserve enquiry and support keyboard '+width,async({page})=>{
+for(const width of [320,390,768,1440]) test('process infographic stays readable and enquiry remains functional '+width,async({page})=>{
  await page.setViewportSize({width,height:900});await page.goto('http://127.0.0.1:8765/');
- const form=page.locator('#cta form');await form.locator('[name=contact]').fill('client@example.com');
-  const attr=width<=900?'data-mobile-stage':'data-stage';
-  const positions=[];
-  for(let i=0;i<4;i++){await page.locator(`[${attr}="${i}"]`).click();positions.push(await form.evaluate(el=>el.getBoundingClientRect().top+scrollY));}
-  expect(Math.max(...positions)-Math.min(...positions)).toBeLessThan(2);
- await page.locator(`[${attr}="3"]`).click();await expect(page.locator('[data-stage-panel]:visible h3')).toContainText('Доведём');
- await page.locator(`[${attr}="3"]`).press('Home');await expect(page.locator(`[${attr}="0"]`)).toHaveAttribute('aria-pressed','true');
- await page.locator(`[${attr}="0"]`).press('ArrowRight');await expect(page.locator('[data-stage-panel]:visible h3')).toContainText('Согласуем');
- await expect(form.locator('[name=contact]')).toHaveValue('client@example.com');await expect(page.locator('#cta input[type=range]')).toHaveCount(0);
+ await expect(page.locator('#cta .process-step')).toHaveCount(4);await expect(page.locator('#cta .process-step:visible')).toHaveCount(4);
+ await expect(page.locator('#cta [data-stage],#cta [data-mobile-stage],#cta input[type=range]')).toHaveCount(0);
+ const form=page.locator('#cta form');await form.locator('[name=contact]').fill('client@example.com');await form.locator('summary').click();await form.locator('[name=message]').fill('Нужен расчёт потолка');
+ await expect(form.locator('[data-lead-files]')).toBeAttached();await form.locator('[name=contact_method]').selectOption('email');
+ await form.locator('summary').click();await expect(form.locator('[name=contact]')).toHaveValue('client@example.com');await form.locator('summary').click();await expect(form.locator('[name=message]')).toHaveValue('Нужен расчёт потолка');
  expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1)).toBe(false);
+ const checks=await page.locator('.process-step').evaluateAll(items=>items.map(el=>{const h=el.querySelector('h3').getBoundingClientRect(),p=el.querySelector('p').getBoundingClientRect(),r=el.querySelector('.process-result').getBoundingClientRect();return p.top>=h.bottom-1&&r.top>=p.bottom-1;}));expect(checks.every(Boolean)).toBe(true);
+ const axe=await new AxeBuilder({page}).include('#cta').analyze();expect(axe.violations).toEqual([]);
 });
-test('photo chapters accept a horizontal swipe without changing form',async({page})=>{
- await page.setViewportSize({width:390,height:844});await page.goto('http://127.0.0.1:8765/');
- const panel=page.locator('.journey-viewport');await panel.scrollIntoViewIfNeeded();const box=await panel.boundingBox();
- await page.mouse.move(box.x+box.width*.85,box.y+box.height*.4);await page.mouse.down();await page.mouse.move(box.x+box.width*.15,box.y+box.height*.4,{steps:12});await page.mouse.up();
- await expect(page.locator('[data-mobile-stage="1"]')).toHaveAttribute('aria-pressed','true');await expect(page.locator('[data-stage-panel]:visible h3')).toContainText('Согласуем');
-  expect(await page.evaluate(()=>Boolean(document.activeElement.closest('[aria-hidden="true"]')))).toBe(false);
-});
-test('photo chapters respect reduced motion',async({page})=>{
- await page.emulateMedia({reducedMotion:'reduce'});await page.goto('http://127.0.0.1:8765/');await page.locator('[data-stage="2"]').click();
- await expect(page.locator('[data-stage-panel]:visible h3')).toContainText('Изготовим');
- expect(await page.locator('.journey-frame').first().evaluate(el=>getComputedStyle(el).transitionDuration)).toBe('0s');
- expect(await page.locator('[data-stage-panel]:visible').evaluate(el=>el.getAnimations().length)).toBe(0);
+test('home geography team and footer share an uninterrupted background',async({page})=>{
+ await page.goto('http://127.0.0.1:8765/');
+ const colors=await page.evaluate(()=>['.geo-section','.team','.footer'].map(s=>getComputedStyle(document.querySelector(s)).backgroundColor));expect(new Set(colors).size).toBe(1);
+ const gap=await page.evaluate(()=>document.querySelector('.team').getBoundingClientRect().top-document.querySelector('.geo-section').getBoundingClientRect().bottom);expect(Math.abs(gap)).toBeLessThan(1);
 });
 test('portfolio uses real project assets and excludes unpublished cases',async({page})=>{
  await page.goto('http://127.0.0.1:8765/obekty/');await expect(page.locator('h1')).toHaveText('Наши работы');
