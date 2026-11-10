@@ -337,18 +337,27 @@ test('contacts are compact and company details remain downloadable',async({page,
  await expect(page.locator('a[href="#cta"]')).toHaveCount(0);
 });
 
-for(const route of ['/kontakty/','/o-zavode/']) test('2GIS stays unloaded until requested '+route,async({page})=>{
+for(const route of ['/kontakty/','/o-zavode/']) test('map starts automatically before scrolling '+route,async({page})=>{
  let requests=0;await page.route('https://widgets.2gis.com/**',async r=>{requests++;await r.fulfill({status:200,contentType:'text/html',body:'<html lang="ru"><title>Карта для проверки</title><body>2ГИС mock</body></html>'});});
- await page.goto('http://127.0.0.1:8765'+route);const stage=page.locator('.location-stage'),frame=page.locator('#nzmo-map');
- await stage.scrollIntoViewIfNeeded();await expect(stage).toHaveAttribute('data-map-state','idle');expect(await frame.getAttribute('src')).toBeNull();expect(requests).toBe(0);
- await page.locator('[data-map-load]').click();await expect(stage).toHaveAttribute('data-map-state','ready');expect(requests).toBe(1);await expect(frame).toHaveAttribute('src',/widgets\.2gis\.com/);
- await page.locator('[data-map="office"]').click();await expect(frame).toHaveAttribute('src',/%2255\.03897|55\.03897/);await expect(stage).toHaveAttribute('data-map-state','ready');
+ await page.goto('http://127.0.0.1:8765'+route);const frame=page.locator('#nzmo-map');
+ expect(requests).toBe(1);await expect(frame).toHaveAttribute('src',/widgets\.2gis\.com/);await expect(frame).toHaveAttribute('loading','eager');
+ await expect(page.locator('[data-map-load],.location-intro')).toHaveCount(0);
+ await page.locator('[data-map="office"]').click();await expect(frame).toHaveAttribute('src',/55\.03897/);
  await page.locator('[data-map="production"]').click();await expect(frame).toHaveAttribute('src',/55\.005844/);
+ await page.locator('[data-map="overview"]').click();await expect(frame).toHaveAttribute('src',/70000001090500146%2C70000001053671670/);
  await expect(page.locator('.location-card a[href*="directions"]')).toHaveCount(2);await expect(page.locator('.location-fallback a')).toHaveCount(2);
 });
-test('2GIS slow response leaves addresses and retry available',async({page})=>{
- await page.clock.install();await page.route('https://widgets.2gis.com/**',()=>new Promise(()=>{}));
- await page.goto('http://127.0.0.1:8765/kontakty/');await page.locator('[data-map-load]').click();await page.clock.fastForward(13000);
- await expect(page.locator('.location-stage')).toHaveAttribute('data-map-state','waiting');await expect(page.locator('[data-map-load]')).toBeEnabled();await expect(page.locator('[data-map-status]')).toContainText('дольше обычного');
+test('slow map never hides the frame or blocks address links',async({page})=>{
+ await page.route('https://widgets.2gis.com/**',()=>new Promise(()=>{}));
+ await page.goto('http://127.0.0.1:8765/kontakty/',{waitUntil:'domcontentloaded'});
+ const frame=page.locator('#nzmo-map');await frame.scrollIntoViewIfNeeded();await expect(frame).toBeVisible();
+ expect(await frame.evaluate(el=>getComputedStyle(el).opacity)).toBe('1');
+ await expect(frame).not.toHaveAttribute('aria-hidden','true');await expect(page.locator('.location-intro')).toHaveCount(0);
  await expect(page.locator('.location-card a').first()).toBeVisible();
+});
+test('map works without site JavaScript',async({browser})=>{
+ const context=await browser.newContext({javaScriptEnabled:false});const page=await context.newPage();let requested=false;
+ await page.route('https://widgets.2gis.com/**',async r=>{requested=true;await r.fulfill({body:'Map'});});
+ await page.goto('http://127.0.0.1:8765/kontakty/');expect(requested).toBe(true);await expect(page.locator('#nzmo-map')).toBeVisible();
+ await expect(page.locator('.location-card a[href*="directions"]')).toHaveCount(2);await context.close();
 });
