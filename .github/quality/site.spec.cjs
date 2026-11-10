@@ -266,7 +266,7 @@ for(const width of [320,390,768,1440]) test('process infographic stays readable 
  await expect(form.locator('[data-lead-files]')).toBeAttached();await form.locator('[name=contact_method]').selectOption('email');
  await form.locator('summary').click();await expect(form.locator('[name=contact]')).toHaveValue('client@example.com');await form.locator('summary').click();await expect(form.locator('[name=message]')).toHaveValue('Нужен расчёт потолка');
  expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1)).toBe(false);
- const checks=await page.locator('.process-step').evaluateAll(items=>items.map(el=>{const h=el.querySelector('h3').getBoundingClientRect(),p=el.querySelector('p').getBoundingClientRect(),r=el.querySelector('.process-result').getBoundingClientRect();return p.top>=h.bottom-1&&r.top>=p.bottom-1;}));expect(checks.every(Boolean)).toBe(true);
+ const checks=await page.locator('.process-step').evaluateAll(items=>items.map(el=>{const heading=el.querySelector('h3'),range=document.createRange();range.selectNodeContents(heading);const h=range.getBoundingClientRect(),p=el.querySelector('p').getBoundingClientRect(),r=el.querySelector('.process-result').getBoundingClientRect();return p.top>=h.bottom+6&&r.top>=p.bottom-1;}));expect(checks.every(Boolean)).toBe(true);
  const axe=await new AxeBuilder({page}).include('#cta').analyze();expect(axe.violations).toEqual([]);
 });
 test('home geography team and footer share an uninterrupted background',async({page})=>{
