@@ -1,6 +1,7 @@
 /* Home workflow. Each stage shares a left edge for its number, title and copy. */
 .home-process {
   border-block: 1px solid var(--border-hair);
+  scroll-margin-top: var(--header-h);
 }
 
 .process-flow {
