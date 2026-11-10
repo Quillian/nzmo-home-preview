@@ -70,7 +70,7 @@ test('every enquiry uses the approved outer layout and preserves its fields',asy
       if(!section[0].includes('data-lead-v2')) continue;
       count++;
       expect(section[0],file).toMatch(/^<section[^>]*class="[^"]*\bcta2\b/);
-      expect(section[0],file).toMatch(/cta2__acc|data-project-path/);
+      expect(section[0],file).toMatch(file === path.join(root,'index.html') ? /class="process-flow"/ : /cta2__acc/);
       expect(section[0],file).toContain('cta2__form');
       expect(section[0],file).toContain('data-file-drop');
       expect(section[0],file).not.toContain('Что будет после заявки');
