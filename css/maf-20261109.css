@@ -108,6 +108,7 @@
 .maf-material > p.maf-material__note { font-size: 13px; margin-top: 8px; }
 
 .maf-strengths { border-top: 1px solid var(--border-hair); margin-top: 28px; padding-top: 20px; }
+.maf-strengths .cm-sub { margin: 0; }
 .maf-strengths dl { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px 24px; margin: 12px 0 0; }
 .maf-strengths dl > div { border-left: 2px solid var(--ochre-500); padding-left: 12px; }
 .maf-strengths dt { font-weight: 600; }
