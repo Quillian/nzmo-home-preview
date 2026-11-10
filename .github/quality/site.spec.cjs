@@ -33,6 +33,22 @@ test('MAF chosen object supplements rather than replaces the client comment',asy
   await link.click();
   await expect(message).toHaveValue(value);
 });
+test('MAF gallery submits the selected project and shares the product layout',async({page})=>{
+  await page.goto('http://127.0.0.1:8765/maf/');
+  await expect(page.locator('.cover.cover--page h1')).toBeVisible();
+  await expect(page.locator('#izdeliya .k3__card')).toHaveCount(4);
+  await expect(page.locator('#raboty + #dostavka .dlv')).toHaveCount(2);
+  await expect(page.locator('#dostavka')).toContainText('0 ₽');
+  await page.locator('[data-stage-next]').click();
+  await expect(page.locator('[data-stage-title]')).toHaveText('«Пламя-шар»');
+  await page.locator('[data-maf-stage-photo]').click();
+  await expect(page.locator('[data-maf-dialog]')).toBeVisible();
+  await expect(page.locator('[data-maf-dialog] img')).toHaveAttribute('src',/magn-plamya/);
+  await page.keyboard.press('Escape');
+  await page.locator('[data-maf-idea]').click();
+  await expect(page.locator('#cta textarea[name=message]')).toHaveValue(/Пламя-шар/);
+  await expect(page.locator('#cta textarea[name=message]')).not.toHaveValue(/Биатлонист/);
+});
 test('product pages share delivery reviews enquiry FAQ order',async()=>{
   const fs=require('node:fs'),path=require('node:path');
   for(const file of require('./product-routes.json')){
