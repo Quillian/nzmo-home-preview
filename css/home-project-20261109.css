@@ -1,31 +1,75 @@
-/* Open process infographic. All stages remain visible without JavaScript. */
-.home-process.cta2{background:var(--surface-page);border-top:1px solid var(--border-hair);padding-block:88px;color:var(--text-strong)}
-.home-process .kicker{display:flex!important;margin-bottom:28px}
-.home-process .process-heading{font:500 clamp(30px,3.35vw,52px)/1.2 var(--font-display);letter-spacing:-.035em;margin:0 0 44px;max-width:none;hyphens:none;overflow-wrap:normal}
-.process-flow{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));list-style:none;padding:0;margin:0}
-.process-flow::before{content:"";position:absolute;left:12.5%;right:12.5%;top:158px;height:1px;background:var(--ochre-500)}
-.process-step{display:grid;grid-template-rows:132px 56px 84px 1fr auto;min-width:0;padding:0 24px 0 0;position:relative}
-.process-step+.process-step{padding-left:18px}.process-step:last-child{padding-right:0}
-.process-icon{width:180px;height:130px;justify-self:center;stroke:var(--navy-800);stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}
-.process-icon .process-accent{stroke:var(--ochre-700)}.process-icon .process-guide{stroke:var(--ochre-700);stroke-width:1;stroke-dasharray:3 3}
-.process-number{display:grid;place-items:center;width:44px;height:44px;align-self:center;justify-self:center;position:relative;z-index:1;background:var(--surface-page);border:1.5px solid var(--ochre-500);border-radius:50%;font:500 16px/1 var(--font-display);font-variant-numeric:tabular-nums}
-.process-step h3{font:500 clamp(19px,1.65vw,25px)/1.3 var(--font-display);letter-spacing:-.025em;margin:18px 0 0;hyphens:none;overflow-wrap:normal;max-width:300px}
-.process-step p{font:400 15px/1.65 var(--font-text);color:var(--text-muted);margin:14px 0 24px;max-width:310px}
-.process-result{border-left:2px solid var(--ochre-500);padding-left:12px;font:500 14px/1.5 var(--font-text);align-self:end}
-.home-process .process-enquiry.cta2__in{max-width:none;width:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,480px);gap:clamp(40px,7vw,110px);border-top:1px solid var(--border-hair);padding-top:44px;margin-top:48px;align-items:start}
-.process-invitation{padding-top:26px}.process-invitation h3{font:500 clamp(28px,2.7vw,40px)/1.2 var(--font-display);letter-spacing:-.03em;max-width:600px;hyphens:none;overflow-wrap:normal}.process-invitation p{font:400 17px/1.6 var(--font-text);color:var(--text-muted);margin:20px 0 0;max-width:470px}
-.home-process.cta2 .cta2__form.lead-form--result{align-self:start;margin:0;min-height:0;max-width:none;width:100%}
-@media(max-width:1100px){.process-step{padding-right:14px}.process-step+.process-step{padding-left:10px}.process-step h3{font-size:19px}.process-step p{font-size:14px}.process-result{font-size:13px}}
-@media(max-width:900px){
- .home-process.cta2{padding-block:56px}.home-process .process-heading{font-size:clamp(28px,5.6vw,40px);margin-bottom:32px}
- .process-flow{display:block;max-width:700px}.process-flow::before{left:18px;right:auto;top:18px;bottom:60px;width:1px;height:auto}
- .process-step,.process-step+.process-step,.process-step:last-child{display:grid;grid-template-columns:38px minmax(0,1fr) 84px;grid-template-rows:auto auto auto;column-gap:18px;padding:0 0 34px}
- .process-step:last-child{padding-bottom:0}.process-icon{grid-column:3;grid-row:1;width:84px;height:64px;align-self:center;stroke-width:2.3}
- .process-number{grid-column:1;grid-row:1;width:36px;height:36px;font-size:13px;align-self:start;margin-top:10px}
- .process-step h3{grid-column:2;grid-row:1;align-self:center;font-size:21px;margin:0;max-width:none;min-height:64px;display:flex;align-items:center}
- .process-step p{grid-column:2/4;grid-row:2;font-size:15px;margin:8px 0 14px;max-width:520px}
- .process-result{grid-column:2/4;grid-row:3;font-size:14px;padding-left:10px}
- .home-process .process-enquiry.cta2__in{grid-template-columns:minmax(0,1fr);gap:28px;margin-top:36px;padding-top:32px}
- .process-invitation{padding:0}.process-invitation h3{font-size:28px;max-width:none}.process-invitation p{font-size:16px;max-width:none;margin-top:14px}
+/* Home workflow. Each stage shares a left edge for its number, title and copy. */
+.home-process {
+  border-block: 1px solid var(--border-hair);
 }
-@media(max-width:420px){.process-step,.process-step+.process-step,.process-step:last-child{grid-template-columns:32px minmax(0,1fr) 56px;column-gap:12px}.process-flow::before{left:15px}.process-number{width:30px;height:30px;font-size:11px}.process-icon{width:60px;height:54px}.process-step h3{font-size:17px;min-height:54px}.process-step p{font-size:14px;line-height:1.6}.process-result{font-size:13px}.home-process .process-heading{font-size:28px}.process-invitation h3{font-size:26px}}
+
+.process-flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--ochre-500);
+}
+
+.process-step__marker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.process-number {
+  color: var(--navy-800);
+  font: 500 32px/1 var(--font-display);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.035em;
+}
+
+.process-icon {
+  flex: 0 0 32px;
+  color: var(--navy-800);
+  stroke: currentColor;
+  stroke-width: 1.55;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.process-step h3 {
+  font: 500 clamp(18px, 1.7vw, 24px)/1.25 var(--font-display);
+  margin: 0;
+  hyphens: none;
+}
+
+.process-step p {
+  margin: 10px 0 20px;
+  color: var(--text-muted);
+  font: 400 15px/1.6 var(--font-text);
+  max-width: 32ch;
+}
+
+.process-result {
+  margin-top: auto;
+  font: 500 14px/1.5 var(--font-text);
+  color: var(--text-strong);
+}
+
+@media (max-width: 1100px) {
+  .process-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 580px) {
+  .process-flow { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+  .process-step__marker { margin-bottom: 14px; }
+  .process-number { font-size: 27px; }
+  .process-step p { max-width: none; margin-bottom: 12px; }
+}
