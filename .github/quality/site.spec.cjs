@@ -1,7 +1,7 @@
 const {test,expect}=require('@playwright/test');
 const {AxeBuilder}=require('@axe-core/playwright');
 const {PNG}=require('pngjs');
-const routes=['/','/o-zavode/','/kontakty/','/potolki/reechnye/','/potolki/kassetnye/clip-in/','/spasibo/','/dveri/protivopozharnye/','/potolki/armstrong-t24/','/maf/','/obekty/','/servis/faq/'];
+const routes=['/','/o-zavode/','/kontakty/','/potolki/reechnye/','/potolki/kassetnye/clip-in/','/spasibo/','/dveri/protivopozharnye/','/potolki/armstrong-t24/','/maf/skulptury/','/obekty/','/servis/faq/'];
 test('home delivery follows projects and the hero links to the enquiry page',async({page})=>{
   await page.goto('http://127.0.0.1:8765/');
   await expect(page.locator('#obekty + #dostavka')).toBeAttached();
@@ -12,7 +12,7 @@ test('home delivery follows projects and the hero links to the enquiry page',asy
   await expect(page.locator('#cta form')).toBeVisible();
 });
 test('MAF photos open in a dialog and return keyboard focus',async({page})=>{
-  await page.goto('http://127.0.0.1:8765/maf/');
+  await page.goto('http://127.0.0.1:8765/maf/skulptury/');
   const trigger=page.locator('#proizvodstvo [data-maf-photo]').first();
   await trigger.click();
   const dialog=page.locator('[data-maf-dialog]');
@@ -23,7 +23,7 @@ test('MAF photos open in a dialog and return keyboard focus',async({page})=>{
   await expect(trigger).toBeFocused();
 });
 test('MAF chosen object supplements rather than replaces the client comment',async({page})=>{
-  await page.goto('http://127.0.0.1:8765/maf/');
+  await page.goto('http://127.0.0.1:8765/maf/skulptury/');
   await page.locator('#cta summary').click();
   const message=page.locator('#cta textarea[name=message]');
   await message.fill('Срок — май.');
@@ -37,9 +37,12 @@ test('MAF chosen object supplements rather than replaces the client comment',asy
 });
 test('MAF gallery submits the selected project and shares the product layout',async({page})=>{
   await page.goto('http://127.0.0.1:8765/maf/');
+  await expect(page).toHaveURL(/\/maf\/skulptury\/$/);
   await expect(page.locator('.cover.cover--page h1')).toBeVisible();
   await expect(page.locator('#izdeliya .k3__card')).toHaveCount(4);
-  await expect(page.locator('#raboty + #dostavka .dlv')).toHaveCount(2);
+  await expect(page.locator('#raboty [data-stage-thumb]')).toHaveCount(10);
+  await expect(page.locator('#raboty + #dostavka .maf-delivery__offer')).toBeVisible();
+  await expect(page.locator('#izdeliya a[href="/maf/gorodskaya-mebel/"]')).toBeVisible();
   await expect(page.locator('#dostavka')).toContainText('0 ₽');
   await page.locator('[data-stage-next]').click();
   await expect(page.locator('[data-stage-title]')).toHaveText('«Пламя-шар»');
@@ -94,7 +97,7 @@ test('every enquiry uses the approved outer layout and preserves its fields',asy
       expect(section[0],file).not.toContain('Что будет после заявки');
     }
   }
-  expect(count).toBe(213);
+  expect(count).toBe(211);
 });
 test('moving the configured enquiry keeps parameters linked to its form',async({page})=>{
   await page.goto('http://127.0.0.1:8765/ograzhdeniya/zabory-zhalyuzi/');

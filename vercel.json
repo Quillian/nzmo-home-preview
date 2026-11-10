@@ -24,6 +24,11 @@
       "source": "/obekty/ave-vita/",
       "destination": "/obekty/",
       "permanent": false
+    },
+    {
+      "source": "/maf/",
+      "destination": "/maf/skulptury/",
+      "permanent": true
     }
   ],
   "headers": [
