@@ -23,8 +23,7 @@
 .process-step__marker {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
   margin-bottom: 20px;
 }
 
@@ -54,7 +53,7 @@
   margin: 10px 0 20px;
   color: var(--text-muted);
   font: 400 15px/1.6 var(--font-text);
-  max-width: 32ch;
+  max-width: 40ch;
 }
 
 .process-result {
