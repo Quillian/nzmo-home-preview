@@ -281,18 +281,21 @@ test('blocked file storage keeps the user and attachment on the form',async({pag
  await expect(page).toHaveURL(/reechnye/);await expect(form.locator('[data-file-list] li')).toHaveCount(1);await expect(form.locator('[data-lead-status]')).toBeVisible();await expect(form.locator('[data-lead-submit]')).toBeEnabled();
 });
 
-for (const width of [320, 390, 768, 1440]) test('home process keeps numbers aligned with text at ' + width, async ({page}) => {
+for (const width of [320, 390, 768, 1440]) test('home process keeps illustrations and text aligned at ' + width, async ({page}) => {
   await page.setViewportSize({width, height: 900});
   await page.goto('http://127.0.0.1:8765/');
   const section = page.locator('#poryadok-raboty');
   await expect(section.locator('.process-step:visible')).toHaveCount(4);
   await expect(section.locator('form, input, button')).toHaveCount(0);
   expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1)).toBe(false);
+  await expect(section.locator('.process-step img')).toHaveCount(4);
+  await expect(section.locator('.process-number')).toHaveCount(0);
   const aligned = await section.locator('.process-step').evaluateAll(steps => steps.every(step => {
-    const [number, heading, copy, result] = ['.process-number', 'h3', 'p', '.process-result']
+    const [image, heading, copy, result] = ['img', 'h3', 'p', '.process-result']
       .map(selector => step.querySelector(selector).getBoundingClientRect());
-    return Math.abs(number.left - heading.left) < 1 &&
+    return Math.abs(image.left - heading.left) < 1 &&
       Math.abs(copy.left - heading.left) < 1 &&
+      heading.top >= image.bottom + 10 &&
       copy.top >= heading.bottom + 6 && result.top >= copy.bottom;
   }));
   expect(aligned).toBe(true);
