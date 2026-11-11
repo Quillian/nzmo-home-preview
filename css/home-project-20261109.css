@@ -21,11 +21,10 @@
 .process-visual {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
+  height: clamp(132px, 15vw, 180px);
+  object-fit: contain;
   border-radius: var(--radius);
-  background: var(--steel-200);
+  background: #f0efed;
   margin-bottom: 20px;
 }
 
