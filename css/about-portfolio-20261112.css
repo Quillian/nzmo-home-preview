@@ -74,7 +74,7 @@
   text-decoration: none;
 }
 .project-index__row[aria-current="true"] { border-left-color: #d1a250; background: #ebe8e2; color: var(--text-strong); }
-.project-index__row:hover { background: #ebe8e2; }
+.project-index__row:hover { background: #ebe8e2; color: var(--text-strong); }
 .project-index__row img {
   display: block;
   width: 100%;
