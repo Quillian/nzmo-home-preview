@@ -392,6 +392,23 @@ test('map works without site JavaScript',async({browser})=>{
  await expect(page.locator('.location-card a[href*="directions"]')).toHaveCount(2);await context.close();
 });
 
+test('T24 rectangular module updates the count, profiles and quote',async({page})=>{
+  await page.goto('http://127.0.0.1:8765/potolki/armstrong-t24/');
+  const calc=page.locator('[data-t24calc]');
+  const result=calc.locator('[data-t24-count]');
+  await expect(result).toHaveText('292');
+  await expect(calc.getByText('Т-профиль поперечный 0,6 м')).toBeVisible();
+  await calc.getByRole('button',{name:'600 × 1200',exact:true}).click();
+  await expect(result).toHaveText('146');
+  await expect(calc.locator('[data-t24-diagram="600"]')).toBeHidden();
+  await expect(calc.locator('[data-t24-diagram="1200"]')).toBeVisible();
+  await expect(calc.getByText('Т-профиль поперечный 0,6 м')).toHaveCount(0);
+  await calc.getByRole('button',{name:'Металлическая кассета',exact:true}).click();
+  await expect(calc.getByText('Кассета 600 × 1200',{exact:true})).toBeVisible();
+  await calc.getByRole('link',{name:'Получить точный расчёт'}).click();
+  await expect(page.locator('.calc-lead [data-calc-parameters]')).toContainText('Размер модуля: 600 × 1200 мм');
+});
+
 test('factory gallery reveals views without moving the three photo strips',async({page})=>{
   await page.setViewportSize({width:1440,height:900});
   await page.goto('http://127.0.0.1:8765/o-zavode/');

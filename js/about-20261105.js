@@ -106,7 +106,6 @@
     const image = photo.querySelector('img');
     const title = preview.querySelector('[data-project-title]');
     const info = preview.querySelector('[data-project-info]');
-    const viz = photo.querySelector('[data-project-viz]');
     const plurals = new Intl.PluralRules('ru');
     const forms = {one: 'проект', few: 'проекта', many: 'проектов', other: 'проекта'};
     let selected = list.querySelector('[aria-current="true"]');
@@ -124,7 +123,6 @@
       image.src = link.dataset.projectZoom;
       image.alt = link.dataset.projectCaption;
       image.style.objectPosition = link.querySelector('img').style.objectPosition;
-      viz.hidden = !link.hasAttribute('data-project-is-viz');
       title.textContent = name;
       info.textContent = link.dataset.projectMeta;
     }

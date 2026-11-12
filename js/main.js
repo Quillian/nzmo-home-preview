@@ -246,20 +246,45 @@
     var area = box.querySelector("[data-t24-area]"), count = box.querySelector("[data-t24-count]");
     var material = box.querySelector("[name=t]"), reserve = box.querySelector("[name=z]");
     var materials = box.querySelectorAll("[data-t24-material]"), format = new Intl.NumberFormat("ru-RU");
+    var plural = new Intl.PluralRules("ru-RU");
+    var module = box.querySelector("[name=module]"), moduleLength = 600;
+    var sizes = box.querySelectorAll("[data-t24-size]"), diagrams = box.querySelectorAll("[data-t24-diagram]");
+    var moduleLabel = box.querySelector("[data-t24-label]"), orderNote = box.querySelector("[data-t24-order]");
     function upd() {
       var s = calcNum(box, "s"), p = calcNum(box, "p"), t = material.value, sf = s * (1 + calcNum(box, "z") / 100);
-      var tiles = up(sf * 2.78);
+      var dimensions = "600 × " + moduleLength;
+      var moduleArea = 600 * moduleLength / 1000000;
+      var tiles = up(sf / moduleArea);
+      var part = t === "металлическая кассета" ? "Кассета" : "Плита";
       if (area) area.textContent = s > 0 ? format.format(s) : "—";
       if (count) count.textContent = tiles > 0 ? format.format(tiles) : "—";
-      calcTable(rows, [["Плита 600×600", tiles, 0, 0.0054], ["Т-профиль несущий 3,6 м", up(sf * 0.23), 0.923, 0.0026],
-        ["Т-профиль поперечный 1,2 м", up(sf * 1.4), 0.3, 0.0008], ["Т-профиль поперечный 0,6 м", up(sf * 1.4), 0.147, 0.0004],
-        ["Подвес", up(sf * 1.3)], ["Уголок пристенный 3 м", up(p / 3), 0.156, 0.00054]]);
-      cta.href = "/servis/raschet-proekta/?config=" + encodeURIComponent("потолок Т24, плита " + t + ", площадь " + s + " м², периметр " + p + " м");
+      if (moduleLabel) {
+        var forms = part === "Кассета" ? { one: "кассета", few: "кассеты", many: "кассет" } :
+          { one: "плита", few: "плиты", many: "плит" };
+        moduleLabel.textContent = forms[plural.select(tiles)] + " " + dimensions + " мм";
+      }
+      var parts = [[part + " " + dimensions, tiles, 0, moduleArea * 0.015],
+        ["Т-профиль несущий 3,6 м", up(sf * 0.23), 0.923, 0.0026],
+        ["Т-профиль поперечный 1,2 м", up(sf * 1.4), 0.3, 0.0008]];
+      if (moduleLength === 600) parts.push(["Т-профиль поперечный 0,6 м", up(sf * 1.4), 0.147, 0.0004]);
+      parts.push(["Подвес", up(sf * 1.3)], ["Уголок пристенный 3 м", up(p / 3), 0.156, 0.00054]);
+      calcTable(rows, parts);
+      cta.href = "/servis/raschet-proekta/?config=" + encodeURIComponent("потолок Т24, заполнение: " + t + ", модуль " + dimensions + " мм, площадь " + s + " м², периметр " + p + " м");
     }
     materials.forEach(function (button) {
       button.addEventListener("click", function () {
         material.value = button.dataset.t24Material;
         materials.forEach(function (choice) { choice.setAttribute("aria-pressed", String(choice === button)); });
+        upd();
+      });
+    });
+    sizes.forEach(function (button) {
+      button.addEventListener("click", function () {
+        moduleLength = Number(button.dataset.t24Size);
+        module.value = "600x" + moduleLength;
+        sizes.forEach(function (choice) { choice.setAttribute("aria-pressed", String(choice === button)); });
+        diagrams.forEach(function (diagram) { diagram.hidden = Number(diagram.dataset.t24Diagram) !== moduleLength; });
+        orderNote.hidden = moduleLength !== 1200;
         upd();
       });
     });

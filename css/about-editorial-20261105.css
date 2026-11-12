@@ -34,7 +34,7 @@
 .av2 .av2-story{padding-block:clamp(48px,6vw,92px)}
 .av2-story__grid{
   display:grid;grid-template-columns:minmax(232px,.35fr) minmax(0,1fr);
-  align-items:center;gap:clamp(32px,4.5vw,68px);max-width:1160px;
+  align-items:center;gap:clamp(32px,4.5vw,68px);
 }
 .av2-story .av2-story__founder{margin:0}
 .av2-story__founder .team-person__portrait img{

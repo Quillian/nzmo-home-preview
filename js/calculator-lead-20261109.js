@@ -24,7 +24,7 @@
   function snapshot(box){
     const rail=box.hasAttribute('data-railcalc'), grill=box.hasAttribute('data-gcalc');
     const title=rail?'Реечный потолок':grill?'Потолок Грильято':'Потолок Т24';
-    const fields=rail?[['s','Площадь','м²'],['p','Стены у торцов реек','м'],['sec','Сечение: высота × ширина','мм'],['g','Шаг между рейками','мм'],['l','Длина рейки','мм'],['z','Запас на подрезку','%']]:grill?[['s','Площадь','м²'],['p','Периметр','м'],['c','Ячейка','мм'],['h','Высота профиля','мм'],['z','Запас на подрезку','%']]:[['s','Площадь','м²'],['p','Периметр','м'],['t','Плита',''],['z','Запас на подрезку','%']];
+    const fields=rail?[['s','Площадь','м²'],['p','Стены у торцов реек','м'],['sec','Сечение: высота × ширина','мм'],['g','Шаг между рейками','мм'],['l','Длина рейки','мм'],['z','Запас на подрезку','%']]:grill?[['s','Площадь','м²'],['p','Периметр','м'],['c','Ячейка','мм'],['h','Высота профиля','мм'],['z','Запас на подрезку','%']]:[['s','Площадь','м²'],['p','Периметр','м'],['t','Заполнение',''],['module','Размер модуля','мм'],['z','Запас на подрезку','%']];
     const lines=fields.map(([key,label,unit])=>label+': '+box.querySelector('[name="'+key+'"]').value.replace('x',' × ')+(unit?' '+unit:''));
     const result=rail||grill?[text(box,'.rc__hero'),...Array.from(box.querySelectorAll('.rc__kpi>div,.rc__parts>li'),el=>el.innerText.replace(/\s*\n\s*/g,' — '))].join('\n'):text(box,'.gc-out table');
     const area=box.querySelector('[name=s]').value;
