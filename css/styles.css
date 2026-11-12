@@ -845,7 +845,9 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 [data-t24calc] .t24-table{min-width:0;overflow-x:auto}
 [data-t24calc] .t{width:100%;color:inherit;font-variant-numeric:tabular-nums}
 [data-t24calc] .t :is(th,td){background:transparent;border-color:rgba(255,255,255,.16);padding:10px 6px;font-size:13px}
-[data-t24calc] .t th,[data-t24calc] .gc-total{color:var(--white)}
+[data-t24calc] table.t td{color:var(--on-deep-muted)}
+[data-t24calc] table.t th,[data-t24calc] table.t td:first-child,[data-t24calc] table.t .gc-total td{color:var(--white)}
+@media (max-width:760px){.cover__img--clip-in{object-position:12% 25% !important}}
 [data-t24calc] .t :is(th,td):not(:first-child){text-align:right;white-space:nowrap}
 [data-t24calc] .rc__hero{flex-wrap:wrap}
 [data-t24calc] .rc__num:focus-within{border-color:var(--ochre-600)}
