@@ -444,6 +444,8 @@ test('factory project index scrolls to every case and updates its preview',async
   const rows=list.locator('[data-project-select]');
   await expect(rows).toHaveCount(expected.length);
   expect(await rows.evaluateAll(links=>links.map(link=>link.getAttribute('href')).sort())).toEqual(expected);
+  expect(await rows.evaluateAll(links=>links.every(link=>Boolean(link.dataset.projectWork?.trim())))).toBe(true);
+  await expect(page.locator('[data-project-description]')).toHaveText(await rows.first().getAttribute('data-project-work'));
   expect(await list.evaluate(el=>el.scrollHeight>el.clientHeight)).toBe(true);
   const photo=page.locator('[data-project-preview] [data-photo]');
   const listBox=await list.boundingBox();
@@ -459,12 +461,15 @@ test('factory project index scrolls to every case and updates its preview',async
 
   const last=rows.last();
   const lastPhoto=await last.getAttribute('data-project-zoom');
+  const lastWork=await last.getAttribute('data-project-work');
   await last.click();
   expect(await list.evaluate(el=>el.scrollTop)).toBeGreaterThan(0);
   await expect(last).toHaveAttribute('aria-current','true');
   await expect(photo).toHaveAttribute('href',lastPhoto);
+  await expect(page.locator('[data-project-description]')).toHaveText(lastWork);
   await photo.click();
   await expect(page.locator('.av2-lightbox')).toBeVisible();
+  await expect(page.locator('.av2-lightbox figcaption')).toContainText(lastWork);
   await page.keyboard.press('Escape');
   await expect(page.locator('.av2-lightbox')).toBeHidden();
 

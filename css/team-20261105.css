@@ -14,5 +14,9 @@
 .team-person__role{margin:7px 0 0;font-size:14px;line-height:1.45;color:var(--text-muted)}
 .team-person--leader .team-person__role{font-size:15px}
 .team__group--projects{margin-top:58px;padding-top:36px;border-top:1px solid var(--border-hair)}
+.team__intro{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1fr);align-items:start;gap:20px clamp(24px,4vw,64px);margin-bottom:clamp(28px,3.5vw,48px)}
+.team__intro .team__heading{margin:0;color:var(--text-strong);font-size:clamp(20px,2vw,28px);font-weight:600}
+.team__intro p{margin:0;max-width:66ch;padding-left:20px;border-left:1px solid #d1a250;color:#384a5c;font-size:clamp(15px,1.2vw,17px);line-height:1.6}
+@media(max-width:760px){.team__intro{grid-template-columns:1fr;gap:10px}.team__intro p{border:0;padding-left:0}}
 @media(max-width:900px){.team__grid--projects{grid-template-columns:repeat(3,minmax(0,1fr))}.team__grid{column-gap:20px}.team-person--leader .team-person__name{font-size:20px}}
 @media(max-width:600px){.people-team .t-2{margin-bottom:30px}.team__heading{font-size:16px;margin-bottom:26px}.team__grid--leaders{grid-template-columns:1fr;gap:34px}.team-person--leader .team-person__portrait{width:192px;margin-bottom:18px}.team-person--leader .team-person__name{font-size:22px}.team__grid--projects{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 18px}.team-person__portrait{width:min(100%,142px);margin-bottom:15px}.team-person__name{font-size:17px}.team-person__role{font-size:13px}.team__group--projects{margin-top:38px;padding-top:30px}}

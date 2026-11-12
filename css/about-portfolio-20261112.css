@@ -105,6 +105,14 @@
   letter-spacing: -.025em;
 }
 .project-index__details p { margin: 6px 0 0; color: #555c67; }
+.project-index__details .project-index__work {
+  margin-top: 12px;
+  color: var(--text-strong);
+  font-size: 16px;
+  line-height: 1.55;
+}
+.av2-lightbox img { min-height: 0; }
+.av2-lightbox figcaption { max-width: 72ch; white-space: pre-line; }
 .project-index__row:focus-visible { outline-offset: -4px; }
 @media (min-width: 901px) {
   .project-index__preview { display: contents; }

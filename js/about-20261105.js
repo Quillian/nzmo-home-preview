@@ -14,7 +14,7 @@
       previousOverflow = document.body.style.overflow;
       dialog.querySelector('img').src = trigger.dataset.photo;
       dialog.querySelector('img').alt = trigger.dataset.photoAlt || trigger.querySelector('img')?.alt || trigger.dataset.caption || '';
-      dialog.querySelector('figcaption').textContent = trigger.dataset.caption;
+      dialog.querySelector('figcaption').textContent = [trigger.dataset.caption, trigger.dataset.projectWork].filter(Boolean).join('\n');
       dialog.showModal();
       document.body.style.overflow = 'hidden';
     });
@@ -106,6 +106,7 @@
     const image = photo.querySelector('img');
     const title = preview.querySelector('[data-project-title]');
     const info = preview.querySelector('[data-project-info]');
+    const description = preview.querySelector('[data-project-description]');
     const plurals = new Intl.PluralRules('ru');
     const forms = {one: 'проект', few: 'проекта', many: 'проектов', other: 'проекта'};
     let selected = list.querySelector('[aria-current="true"]');
@@ -119,12 +120,14 @@
       photo.href = link.dataset.projectZoom;
       photo.dataset.photo = link.dataset.projectZoom;
       photo.dataset.caption = link.dataset.projectCaption;
+      photo.dataset.projectWork = link.dataset.projectWork;
       photo.setAttribute('aria-label', 'Увеличить фото — ' + name);
       image.src = link.dataset.projectZoom;
       image.alt = link.dataset.projectCaption;
       image.style.objectPosition = link.querySelector('img').style.objectPosition;
       title.textContent = name;
       info.textContent = link.dataset.projectMeta;
+      description.textContent = link.dataset.projectWork;
     }
 
     list.addEventListener('click', event => {
