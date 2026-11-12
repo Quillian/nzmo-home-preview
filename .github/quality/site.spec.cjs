@@ -289,14 +289,14 @@ for (const width of [320, 390, 768, 1440]) test('home process keeps illustration
   await expect(section.locator('form, input, button')).toHaveCount(0);
   expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1)).toBe(false);
   await expect(section.locator('.process-step img')).toHaveCount(4);
-  await expect(section.locator('.process-number')).toHaveCount(0);
+  await expect(section.locator('.process-number, .process-result')).toHaveCount(0);
   const aligned = await section.locator('.process-step').evaluateAll(steps => steps.every(step => {
-    const [image, heading, copy, result] = ['img', 'h3', 'p', '.process-result']
+    const [image, heading, copy] = ['img', 'h3', 'p']
       .map(selector => step.querySelector(selector).getBoundingClientRect());
     return Math.abs(image.left - heading.left) < 1 &&
       Math.abs(copy.left - heading.left) < 1 &&
       heading.top >= image.bottom + 10 &&
-      copy.top >= heading.bottom + 6 && result.top >= copy.bottom;
+      copy.top >= heading.bottom + 6;
   }));
   expect(aligned).toBe(true);
   const axe = await new AxeBuilder({page}).include('#poryadok-raboty').analyze();
