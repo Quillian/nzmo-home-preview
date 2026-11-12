@@ -33,10 +33,13 @@
 .factory-gallery :is(button,a):focus-visible{outline:2px solid #d1a250;outline-offset:-4px;z-index:2}
 .av2 .av2-story{padding-block:clamp(48px,6vw,92px)}
 .av2-story__grid{
-  display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.25fr);
-  align-items:start;gap:clamp(28px,6vw,112px);
+  display:grid;grid-template-columns:minmax(232px,.35fr) minmax(0,1fr);
+  align-items:center;gap:clamp(32px,4.5vw,68px);max-width:1160px;
 }
-.av2-story h2{margin:0}
+.av2-story .av2-story__founder{margin:0}
+.av2-story__founder .team-person__portrait img{
+  inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%;filter:none;
+}
 .av2-story__copy{border-left:1px solid #d1a250;padding-left:clamp(20px,3vw,46px)}
 .av2-story__copy p{margin:0;color:#384a5c;font-size:clamp(16px,1.28vw,20px);line-height:1.65}
 .av2-story__copy p+p{margin-top:1em}
@@ -50,7 +53,8 @@
     grid-auto-columns:minmax(0,1fr);padding:3px 0 0;min-height:62px;
   }
   .factory-gallery__rail img{object-position:center 54%}
-  .av2-story__grid{grid-template-columns:1fr;gap:22px}
+  .av2-story__grid{grid-template-columns:1fr;gap:28px}
+  .av2-story__copy{border-left:0;padding-left:0}
   .av2 .location-fallback{grid-column:1}
 }
 @media(prefers-reduced-motion:reduce){
