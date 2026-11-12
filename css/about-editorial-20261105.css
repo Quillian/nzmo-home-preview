@@ -44,6 +44,12 @@
 .av2 .location-card{flex:1;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
 .av2 .location-fallback{grid-column:2;margin-top:0}
 @media(max-width:760px){
+  .factory-gallery{grid-template-columns:minmax(0,1fr);min-height:0}
+  .factory-gallery .factory-gallery__stage{min-height:clamp(200px,58vw,340px)}
+  .factory-gallery__rail{
+    grid-auto-columns:minmax(0,1fr);padding:3px 0 0;min-height:62px;
+  }
+  .factory-gallery__rail img{object-position:center 54%}
   .av2-story__grid{grid-template-columns:1fr;gap:22px}
   .av2 .location-fallback{grid-column:1}
 }
