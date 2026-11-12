@@ -97,7 +97,8 @@ test('every enquiry uses the approved outer layout and preserves its fields',asy
       expect(section[0],file).not.toContain('Что будет после заявки');
     }
   }
-  expect(count).toBe(211);
+  // Four retired Grilyato pages and the About page no longer host enquiry forms.
+  expect(count).toBe(206);
 });
 test('moving the configured enquiry keeps parameters linked to its form',async({page})=>{
   await page.goto('http://127.0.0.1:8765/ograzhdeniya/zabory-zhalyuzi/');
