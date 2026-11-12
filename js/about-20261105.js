@@ -106,7 +106,6 @@
     const image = photo.querySelector('img');
     const title = preview.querySelector('[data-project-title]');
     const info = preview.querySelector('[data-project-info]');
-    const projectLink = preview.querySelector('[data-project-open]');
     const viz = photo.querySelector('[data-project-viz]');
     const plurals = new Intl.PluralRules('ru');
     const forms = {one: 'проект', few: 'проекта', many: 'проектов', other: 'проекта'};
@@ -128,7 +127,6 @@
       viz.hidden = !link.hasAttribute('data-project-is-viz');
       title.textContent = name;
       info.textContent = link.dataset.projectMeta;
-      projectLink.href = link.href;
     }
 
     list.addEventListener('click', event => {
@@ -136,7 +134,7 @@
       if (!link || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
       showProject(link);
-      if (window.matchMedia('(max-width: 760px)').matches) {
+      if (window.matchMedia('(max-width: 900px)').matches) {
         preview.scrollIntoView({block: 'nearest'});
       }
     });

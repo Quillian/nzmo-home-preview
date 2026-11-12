@@ -419,6 +419,7 @@ test('factory gallery reveals views without moving the three photo strips',async
 });
 
 test('factory project index scrolls to every case and updates its preview',async({page})=>{
+  await page.setViewportSize({width:1440,height:960});
   await page.goto('http://127.0.0.1:8765/obekty/');
   const expected=await page.locator('main [data-case] .card__title a').evaluateAll(links=>links.map(link=>link.getAttribute('href')).sort());
   await page.goto('http://127.0.0.1:8765/o-zavode/');
@@ -427,14 +428,24 @@ test('factory project index scrolls to every case and updates its preview',async
   await expect(rows).toHaveCount(expected.length);
   expect(await rows.evaluateAll(links=>links.map(link=>link.getAttribute('href')).sort())).toEqual(expected);
   expect(await list.evaluate(el=>el.scrollHeight>el.clientHeight)).toBe(true);
+  const photo=page.locator('[data-project-preview] [data-photo]');
+  const listBox=await list.boundingBox();
+  const photoBox=await photo.boundingBox();
+  const fourthRow=await rows.nth(3).boundingBox();
+  const fifthRow=await rows.nth(4).boundingBox();
+  expect(Math.abs(listBox.y-photoBox.y)).toBeLessThan(1);
+  expect(Math.abs(listBox.height-photoBox.height)).toBeLessThan(1);
+  expect(Math.abs(fourthRow.y+fourthRow.height-listBox.y-listBox.height)).toBeLessThan(1);
+  expect(fifthRow.y).toBeGreaterThanOrEqual(listBox.y+listBox.height-1);
+  await expect(page.locator('#obekty a:not([data-photo]):not([data-project-select])')).toHaveCount(0);
 
   const last=rows.last();
-  const lastProject=await last.getAttribute('href');
+  const lastPhoto=await last.getAttribute('data-project-zoom');
   await last.click();
   expect(await list.evaluate(el=>el.scrollTop)).toBeGreaterThan(0);
   await expect(last).toHaveAttribute('aria-current','true');
-  await expect(page.locator('[data-project-open]')).toHaveAttribute('href',new RegExp(lastProject+'$'));
-  await page.locator('[data-project-preview] [data-photo]').click();
+  await expect(photo).toHaveAttribute('href',lastPhoto);
+  await photo.click();
   await expect(page.locator('.av2-lightbox')).toBeVisible();
   await page.keyboard.press('Escape');
   await expect(page.locator('.av2-lightbox')).toBeHidden();
