@@ -1,6 +1,6 @@
 /* Team portraits: one owner-approved temporary cutout, replace per person later. */
 .people-team{scroll-margin-top:96px}
-.home-partners + .people-team{padding-top:clamp(36px,4vw,64px)}
+.av2 .home-partners + .people-team{padding-top:clamp(36px,4vw,64px)}
 .people-team .t-2{margin-bottom:42px}
 .team__heading{margin:0 0 32px;font-family:var(--font-text);font-size:18px;font-weight:600;line-height:1.4;color:var(--text-strong)}
 .team__grid{display:grid;list-style:none;padding:0;margin:0;gap:40px 28px}
