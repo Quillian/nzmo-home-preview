@@ -243,13 +243,33 @@
   // Т24 (типа армстронг): расход на 1 м² и вес деталей — как у Грильято-Сибирь, система Т-24/30
   document.querySelectorAll("[data-t24calc]").forEach(function (box) {
     var rows = box.querySelector("[data-gc-rows]"), cta = box.querySelector("[data-gc-cta]");
+    var area = box.querySelector("[data-t24-area]"), count = box.querySelector("[data-t24-count]");
+    var material = box.querySelector("[name=t]"), reserve = box.querySelector("[name=z]");
+    var materials = box.querySelectorAll("[data-t24-material]"), format = new Intl.NumberFormat("ru-RU");
     function upd() {
-      var s = calcNum(box, "s"), p = calcNum(box, "p"), t = box.querySelector("[name=t]").value, sf = s * (1 + calcNum(box, "z") / 100);
-      calcTable(rows, [["Плита 600×600, " + t, up(sf * 2.78), 0, 0.0054], ["Т-профиль несущий 3,6 м", up(sf * 0.23), 0.923, 0.0026],
+      var s = calcNum(box, "s"), p = calcNum(box, "p"), t = material.value, sf = s * (1 + calcNum(box, "z") / 100);
+      var tiles = up(sf * 2.78);
+      if (area) area.textContent = s > 0 ? format.format(s) : "—";
+      if (count) count.textContent = tiles > 0 ? format.format(tiles) : "—";
+      calcTable(rows, [["Плита 600×600", tiles, 0, 0.0054], ["Т-профиль несущий 3,6 м", up(sf * 0.23), 0.923, 0.0026],
         ["Т-профиль поперечный 1,2 м", up(sf * 1.4), 0.3, 0.0008], ["Т-профиль поперечный 0,6 м", up(sf * 1.4), 0.147, 0.0004],
         ["Подвес", up(sf * 1.3)], ["Уголок пристенный 3 м", up(p / 3), 0.156, 0.00054]]);
       cta.href = "/servis/raschet-proekta/?config=" + encodeURIComponent("потолок Т24, плита " + t + ", площадь " + s + " м², периметр " + p + " м");
     }
+    materials.forEach(function (button) {
+      button.addEventListener("click", function () {
+        material.value = button.dataset.t24Material;
+        materials.forEach(function (choice) { choice.setAttribute("aria-pressed", String(choice === button)); });
+        upd();
+      });
+    });
+    box.querySelectorAll("[data-t24-step]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        if (+button.dataset.t24Step > 0) reserve.stepUp();
+        else reserve.stepDown();
+        reserve.dispatchEvent(new Event("input", { bubbles: true }));
+      });
+    });
     box.addEventListener("input", upd); box.addEventListener("change", upd); upd();
   });
 

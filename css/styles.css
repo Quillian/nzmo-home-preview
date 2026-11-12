@@ -841,6 +841,14 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 .rc__parts b{color:#fff;font-weight:600;white-space:nowrap}
 .rc__cta{justify-content:center;height:54px;font-size:16px;margin-top:4px}
 .rc__note{margin:0;font-size:13px;line-height:1.5;color:var(--on-deep-faint)}
+[data-t24calc] .rc__viz img{display:block;width:100%;height:auto}
+[data-t24calc] .t24-table{min-width:0;overflow-x:auto}
+[data-t24calc] .t{width:100%;color:inherit;font-variant-numeric:tabular-nums}
+[data-t24calc] .t :is(th,td){background:transparent;border-color:rgba(255,255,255,.16);padding:10px 6px;font-size:13px}
+[data-t24calc] .t th,[data-t24calc] .gc-total{color:var(--white)}
+[data-t24calc] .t :is(th,td):not(:first-child){text-align:right;white-space:nowrap}
+[data-t24calc] .rc__hero{flex-wrap:wrap}
+[data-t24calc] .rc__num:focus-within{border-color:var(--ochre-600)}
 @media (max-width:900px){.rc{grid-template-columns:1fr}.rc__kpi dd{font-size:21px}}
 .rc__kpi dt span{display:block}
 @media (max-width:560px){.rc__two{grid-template-columns:1fr}.rc__hero b{font-size:72px}}
