@@ -386,22 +386,33 @@ test('map works without site JavaScript',async({browser})=>{
  await expect(page.locator('.location-card a[href*="directions"]')).toHaveCount(2);await context.close();
 });
 
-test('about exposes the entire portfolio and retains photo zoom',async({page})=>{
+test('factory project index scrolls to every case and updates its preview',async({page})=>{
   await page.goto('http://127.0.0.1:8765/obekty/');
-  const expected=await page.locator('main [data-case] .card__title a').evaluateAll(links=>links.map(l=>l.getAttribute('href')));
+  const expected=await page.locator('main [data-case] .card__title a').evaluateAll(links=>links.map(link=>link.getAttribute('href')).sort());
   await page.goto('http://127.0.0.1:8765/o-zavode/');
-  const cards=page.locator('[data-about-cards] [data-case]');
-  await expect(cards).toHaveCount(expected.length);
-  expect(await cards.locator('.card__title a').evaluateAll(links=>links.map(l=>l.getAttribute('href')))).toEqual(expected);
-  await expect(page.locator('[data-about-cards] [data-case]:visible')).toHaveCount(6);
-  const more=page.getByRole('button',{name:'Показать ещё'});
-  for(let n=6;n<expected.length;n+=6) await more.click();
-  await expect(more).toBeHidden();
-  await expect(page.locator('[data-about-cards] [data-case]:visible')).toHaveCount(expected.length);
-  await cards.last().locator('[data-photo]').click();
+  const list=page.getByRole('region',{name:'Список проектов'});
+  const rows=list.locator('[data-project-select]');
+  await expect(rows).toHaveCount(expected.length);
+  expect(await rows.evaluateAll(links=>links.map(link=>link.getAttribute('href')).sort())).toEqual(expected);
+  expect(await list.evaluate(el=>el.scrollHeight>el.clientHeight)).toBe(true);
+
+  const last=rows.last();
+  const lastProject=await last.getAttribute('href');
+  await last.click();
+  expect(await list.evaluate(el=>el.scrollTop)).toBeGreaterThan(0);
+  await expect(last).toHaveAttribute('aria-current','true');
+  await expect(page.locator('[data-project-open]')).toHaveAttribute('href',new RegExp(lastProject+'$'));
+  await page.locator('[data-project-preview] [data-photo]').click();
   await expect(page.locator('.av2-lightbox')).toBeVisible();
   await page.keyboard.press('Escape');
   await expect(page.locator('.av2-lightbox')).toBeHidden();
+
+  await page.getByRole('button',{name:'МАФ',exact:true}).click();
+  await expect(page.locator('[data-project-count]')).toHaveText('6 проектов');
+  expect(await list.evaluate(el=>el.scrollTop)).toBe(0);
+  await expect(page.locator('[data-project-title]')).toHaveText('Сквер «Крылья Сибири»');
+  await page.getByRole('button',{name:'Все',exact:true}).click();
+  await expect(page.locator('[data-project-count]')).toHaveText(expected.length+' проекта');
   await expect(page.locator('main #cta')).toHaveCount(0);
   await expect(page.locator('main [data-partner-ribbon]')).toHaveCount(1);
 });
