@@ -326,7 +326,7 @@ test('header order is consistent on all shared-layout pages',async()=>{
  expect(count).toBeGreaterThan(180);
 });
 
-for(const route of ['/potolki/reechnye/','/potolki/reechnye/kuboobraznye/','/potolki/grilyato/','/potolki/grilyato/yacheyka-50/','/potolki/grilyato/yacheyka-75/','/potolki/grilyato/yacheyka-100/','/potolki/armstrong-t24/']) test('calculator passes fresh parameters into short modal '+route,async({page})=>{
+for(const route of ['/potolki/reechnye/','/potolki/reechnye/kuboobraznye/','/potolki/grilyato/','/potolki/armstrong-t24/']) test('calculator passes fresh parameters into short modal '+route,async({page})=>{
  await page.setViewportSize({width:320,height:844});await page.goto('http://127.0.0.1:8765'+route);
  const calc=page.locator('#kalkulyator'),cta=calc.locator('[data-rc-cta],[data-gc-cta]'),dlg=page.locator('dialog.calc-lead');
  await calc.locator('[name=s]').fill('245');await calc.locator('[name=p]').fill('42');await calc.locator('[name=z]').fill('7');
@@ -383,4 +383,24 @@ test('map works without site JavaScript',async({browser})=>{
  await page.route('https://widgets.2gis.com/**',async r=>{requested=true;await r.fulfill({body:'Map'});});
  await page.goto('http://127.0.0.1:8765/kontakty/');expect(requested).toBe(true);await expect(page.locator('#nzmo-map')).toBeVisible();
  await expect(page.locator('.location-card a[href*="directions"]')).toHaveCount(2);await context.close();
+});
+
+test('about exposes the entire portfolio and retains photo zoom',async({page})=>{
+  await page.goto('http://127.0.0.1:8765/obekty/');
+  const expected=await page.locator('main [data-case] .card__title a').evaluateAll(links=>links.map(l=>l.getAttribute('href')));
+  await page.goto('http://127.0.0.1:8765/o-zavode/');
+  const cards=page.locator('[data-about-cards] [data-case]');
+  await expect(cards).toHaveCount(expected.length);
+  expect(await cards.locator('.card__title a').evaluateAll(links=>links.map(l=>l.getAttribute('href')))).toEqual(expected);
+  await expect(page.locator('[data-about-cards] [data-case]:visible')).toHaveCount(6);
+  const more=page.getByRole('button',{name:'Показать ещё'});
+  for(let n=6;n<expected.length;n+=6) await more.click();
+  await expect(more).toBeHidden();
+  await expect(page.locator('[data-about-cards] [data-case]:visible')).toHaveCount(expected.length);
+  await cards.last().locator('[data-photo]').click();
+  await expect(page.locator('.av2-lightbox')).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(page.locator('.av2-lightbox')).toBeHidden();
+  await expect(page.locator('main #cta')).toHaveCount(0);
+  await expect(page.locator('main [data-partner-ribbon]')).toHaveCount(1);
 });

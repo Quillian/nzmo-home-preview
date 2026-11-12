@@ -29,15 +29,53 @@
       "source": "/maf/",
       "destination": "/maf/skulptury/",
       "permanent": true
+    },
+    {
+      "source": "/potolki/grilyato/yacheyka-50/",
+      "destination": "/potolki/grilyato/#tipy",
+      "permanent": false
+    },
+    {
+      "source": "/potolki/grilyato/yacheyka-75/",
+      "destination": "/potolki/grilyato/#tipy",
+      "permanent": false
+    },
+    {
+      "source": "/potolki/grilyato/yacheyka-100/",
+      "destination": "/potolki/grilyato/#tipy",
+      "permanent": false
+    },
+    {
+      "source": "/potolki/grilyato/po-proektu/",
+      "destination": "/potolki/grilyato/#tipy",
+      "permanent": false
     }
   ],
   "headers": [
     {
-      "source": "/(img|fonts|files)/(.*)",
+      "source": "/(img|fonts)/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/files/((?!nzmo-kartochka-predpriyatiya\\.pdf$).*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/files/nzmo-kartochka-predpriyatiya.pdf",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
         }
       ]
     },

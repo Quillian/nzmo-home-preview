@@ -27,6 +27,31 @@
       if (previousFocus) previousFocus.focus({preventScroll: true});
     });
   }
+
+  const portfolio = root.querySelector('[data-about-cards]');
+  const more = root.querySelector('[data-about-more]');
+  if (portfolio && more) {
+    const cards = [...portfolio.children];
+    const button = more.querySelector('button');
+    const status = more.querySelector('[role=status]');
+    const batch = 6;
+    let shown = Math.min(batch, cards.length);
+    function refresh() {
+      cards.forEach((card, i) => { card.hidden = i >= shown; });
+      status.textContent = 'Показано ' + shown + ' из ' + cards.length;
+      button.hidden = shown >= cards.length;
+    }
+    if (shown < cards.length) {
+      more.hidden = false;
+      refresh();
+      button.addEventListener('click', () => {
+        const next = shown;
+        shown = Math.min(shown + batch, cards.length);
+        refresh();
+        cards[next]?.querySelector('a')?.focus();
+      });
+    }
+  }
   root.querySelectorAll('[data-history]').forEach(button => {
     button.addEventListener('click', () => {
       root.querySelectorAll('[data-history]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));

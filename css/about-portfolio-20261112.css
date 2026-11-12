@@ -1,0 +1,10 @@
+/* About uses the shared project cards and homepage partner ribbon. */
+.av2 .about-portfolio__head{display:flex;align-items:baseline;justify-content:space-between;gap:16px 30px;flex-wrap:wrap;margin-bottom:28px}
+.av2 .about-portfolio__head h2{margin:0;max-width:none}
+.av2 .about-portfolio__head .av2-link{margin:0}
+.av2 [data-about-cards]>[hidden],.av2 [data-about-more][hidden],.av2 [data-about-more] button[hidden]{display:none}
+.av2 [data-about-cards] .card__photo{cursor:zoom-in}
+.about-portfolio__more{display:flex;align-items:center;gap:14px 20px;flex-wrap:wrap;margin-top:26px}
+.about-portfolio__more [role=status]{color:var(--text-muted);font-size:14px}
+.av2 .home-partners h2{font-size:clamp(28px,2.3vw,42px);line-height:1.15;letter-spacing:-.02em}
+@media (max-width:600px){.av2 .about-portfolio__head{margin-bottom:20px}.about-portfolio__more{margin-top:20px}}
