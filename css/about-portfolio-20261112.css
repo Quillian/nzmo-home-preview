@@ -1,4 +1,5 @@
 /* About uses the shared project cards and homepage partner ribbon. */
+.av2 .av2-projects{padding-block:clamp(40px,5vw,72px)}
 .av2 .about-portfolio__head{display:flex;align-items:baseline;justify-content:space-between;gap:16px 30px;flex-wrap:wrap;margin-bottom:28px}
 .av2 .about-portfolio__head h2{margin:0;max-width:none}
 .av2 .about-portfolio__head .av2-link{margin:0}
