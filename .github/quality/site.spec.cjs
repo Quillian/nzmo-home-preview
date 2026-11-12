@@ -431,8 +431,9 @@ test('factory project index scrolls to every case and updates its preview',async
   const photo=page.locator('[data-project-preview] [data-photo]');
   const listBox=await list.boundingBox();
   const photoBox=await photo.boundingBox();
-  const fourthRow=await rows.nth(3).boundingBox();
-  const fifthRow=await rows.nth(4).boundingBox();
+  const cards=list.locator('[data-project-row]');
+  const fourthRow=await cards.nth(3).boundingBox();
+  const fifthRow=await cards.nth(4).boundingBox();
   expect(Math.abs(listBox.y-photoBox.y)).toBeLessThan(1);
   expect(Math.abs(listBox.height-photoBox.height)).toBeLessThan(1);
   expect(Math.abs(fourthRow.y+fourthRow.height-listBox.y-listBox.height)).toBeLessThan(1);
