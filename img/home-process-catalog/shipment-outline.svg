@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="112" height="92" viewBox="0 0 112 92" fill="none" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+  <g transform="translate(-41.7 -42.4) scale(.34)">
+    <g stroke="#183149">
+      <path d="M186 160h-31v39h31m18-39h112m0 39H204m130-39h47v39h-47"/>
+      <path d="M186 199h-47v39h47m18-39h112m0 39H204m130-39h31v39h-31"/>
+      <path d="M186 238h-31v39h31m18-39h112m0 39H204m130-39h47v39h-47"/>
+      <path d="M186 277h-39v39h39m18-39h112m0 39H204m130-39h39v39h-39"/>
+      <path d="M186 316h-53v18h254v-18h-53m-18 0H204M133 334v26h30v-26m82 0v26h29v-26m83 0v26h30v-26"/>
+    </g>
+    <g stroke="#A87B33">
+      <path d="M186 160h18v174h-18zM316 160h18v174h-18z"/>
+    </g>
+  </g>
+</svg>
