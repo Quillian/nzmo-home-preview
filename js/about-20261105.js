@@ -13,7 +13,7 @@
       previousFocus = trigger;
       previousOverflow = document.body.style.overflow;
       dialog.querySelector('img').src = trigger.dataset.photo;
-      dialog.querySelector('img').alt = trigger.querySelector('img')?.alt || trigger.dataset.caption || '';
+      dialog.querySelector('img').alt = trigger.dataset.photoAlt || trigger.querySelector('img')?.alt || trigger.dataset.caption || '';
       dialog.querySelector('figcaption').textContent = trigger.dataset.caption;
       dialog.showModal();
       document.body.style.overflow = 'hidden';
@@ -26,6 +26,72 @@
       document.body.style.overflow = previousOverflow || '';
       if (previousFocus) previousFocus.focus({preventScroll: true});
     });
+  }
+
+  const gallery = root.querySelector('[data-factory-gallery]');
+  if (gallery) {
+    const stage = gallery.querySelector('[data-photo]');
+    const rail = gallery.querySelector('.factory-gallery__rail');
+    const views = [...rail.querySelectorAll('[data-factory-view]')];
+    const original = {url: stage.dataset.photo, label: stage.dataset.photoAlt};
+    const images = new Map();
+    let selected = null;
+    let requested = null;
+    let visible = null;
+
+    async function show(view) {
+      requested = view;
+      let next = null;
+      if (view) {
+        if (!images.has(view)) {
+          const image = new Image();
+          image.className = 'factory-gallery__layer';
+          image.alt = '';
+          image.setAttribute('aria-hidden', 'true');
+          image.src = view.dataset.image;
+          images.set(view, image.decode().then(() => {
+            stage.append(image);
+            return image;
+          }).catch(() => {
+            images.delete(view);
+            return null;
+          }));
+        }
+        next = await images.get(view);
+        if (requested !== view || !next) return;
+      }
+      if (visible === next) return;
+      visible?.classList.remove('is-active');
+      visible = next;
+      visible?.classList.add('is-active');
+      stage.href = stage.dataset.photo = view?.dataset.image || original.url;
+      stage.dataset.photoAlt = view?.dataset.label || original.label;
+      stage.setAttribute('aria-label', 'Увеличить фото — ' + stage.dataset.photoAlt);
+    }
+
+    views.forEach(view => {
+      view.addEventListener('pointerenter', event => {
+        if (event.pointerType === 'mouse') show(view);
+      });
+      view.addEventListener('focus', () => {
+        if (view.matches(':focus-visible')) show(view);
+      });
+      view.addEventListener('click', () => {
+        selected = selected === view ? null : view;
+        views.forEach(button => button.setAttribute('aria-pressed', String(button === selected)));
+        show(selected);
+      });
+    });
+    rail.addEventListener('pointerleave', event => {
+      if (event.pointerType === 'mouse' && !stage.contains(event.relatedTarget)) show(selected);
+    });
+    gallery.addEventListener('pointerleave', event => {
+      if (event.pointerType === 'mouse') show(selected);
+    });
+    rail.addEventListener('focusout', event => {
+      if (!gallery.contains(event.relatedTarget)) show(selected);
+    });
+    rail.hidden = false;
   }
 
   const index = root.querySelector('[data-project-index]');

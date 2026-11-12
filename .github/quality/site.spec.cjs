@@ -365,10 +365,16 @@ for(const route of ['/kontakty/','/o-zavode/']) test('map starts automatically b
  let requests=0;await page.route('https://widgets.2gis.com/**',async r=>{requests++;await r.fulfill({status:200,contentType:'text/html',body:'<html lang="ru"><title>Карта для проверки</title><body>2ГИС mock</body></html>'});});
  await page.goto('http://127.0.0.1:8765'+route);const frame=page.locator('#nzmo-map');
  expect(requests).toBe(1);await expect(frame).toHaveAttribute('src',/widgets\.2gis\.com/);await expect(frame).toHaveAttribute('loading','eager');
+ await expect(frame).toHaveAttribute('src',/70000001090500146%2C70000001053671670/);
  await expect(page.locator('[data-map-load],.location-intro')).toHaveCount(0);
  await page.locator('[data-map="office"]').click();await expect(frame).toHaveAttribute('src',/55\.03897/);
  await page.locator('[data-map="production"]').click();await expect(frame).toHaveAttribute('src',/55\.005844/);
- await page.locator('[data-map="overview"]').click();await expect(frame).toHaveAttribute('src',/70000001090500146%2C70000001053671670/);
+ const overview=page.locator('[data-map="overview"]');
+ if(route==='/kontakty/'){
+  await overview.click();await expect(frame).toHaveAttribute('src',/70000001090500146%2C70000001053671670/);
+ }else{
+  await expect(overview).toHaveCount(0);
+ }
  await expect(page.locator('.location-card a[href*="directions"]')).toHaveCount(2);await expect(page.locator('.location-fallback a')).toHaveCount(2);
 });
 test('slow map never hides the frame or blocks address links',async({page})=>{
@@ -384,6 +390,32 @@ test('map works without site JavaScript',async({browser})=>{
  await page.route('https://widgets.2gis.com/**',async r=>{requested=true;await r.fulfill({body:'Map'});});
  await page.goto('http://127.0.0.1:8765/kontakty/');expect(requested).toBe(true);await expect(page.locator('#nzmo-map')).toBeVisible();
  await expect(page.locator('.location-card a[href*="directions"]')).toHaveCount(2);await context.close();
+});
+
+test('factory gallery reveals views without moving the three photo strips',async({page})=>{
+  await page.setViewportSize({width:1440,height:900});
+  await page.goto('http://127.0.0.1:8765/o-zavode/');
+  const views=page.locator('[data-factory-view]');
+  const stage=page.locator('.factory-gallery__stage');
+  await expect(views).toHaveCount(3);
+  const positions=()=>views.evaluateAll(buttons=>buttons.map(button=>{
+    const {x,y,width,height}=button.getBoundingClientRect();
+    return [x,y,width,height];
+  }));
+  const original=await positions();
+  for(const view of await views.all()){
+    const url=await view.getAttribute('data-image');
+    await view.hover();
+    await expect(stage).toHaveAttribute('href',url);
+    expect(await positions()).toEqual(original);
+  }
+  const last=views.last();
+  await last.click();
+  await expect(last).toHaveAttribute('aria-pressed','true');
+  await stage.click();
+  const lightbox=page.getByRole('dialog',{name:'Просмотр фотографии'});
+  await expect(lightbox).toBeVisible();
+  await expect(lightbox.locator('img')).toHaveAttribute('src',await last.getAttribute('data-image'));
 });
 
 test('factory project index scrolls to every case and updates its preview',async({page})=>{
