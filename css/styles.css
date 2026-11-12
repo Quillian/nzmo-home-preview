@@ -844,6 +844,7 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 .rc__note{margin:0;font-size:13px;line-height:1.5;color:var(--on-deep-faint)}
 [data-t24calc] .rc__viz img{display:block;width:100%;height:auto}
 [data-t24calc] .rc__viz img[hidden],[data-t24calc] [data-t24-order][hidden]{display:none}
+[data-t24-order]{color:var(--text-muted);margin-top:-14px}
 .t24-child-links{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px 28px;border-top:1px solid var(--border-hair);margin-top:32px;padding-top:20px}
 .t24-child-links h2{margin:0}
 .t24-child-links>div{display:flex;gap:8px 24px;flex-wrap:wrap}
