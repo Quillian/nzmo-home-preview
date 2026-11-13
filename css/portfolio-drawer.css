@@ -170,6 +170,7 @@
 }
 
 @media (max-width: 600px) {
+  .portfolio-drawer-open { scrollbar-gutter: auto; }
   .portfolio-drawer { width: 100%; --drawer-gutter: 18px; }
   .portfolio-drawer__header { min-height: 62px; padding-block: 8px; }
   .portfolio-drawer__image { aspect-ratio: 1.38; max-height: 46dvh; }
