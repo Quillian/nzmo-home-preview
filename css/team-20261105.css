@@ -42,3 +42,8 @@
   .team__grid--leaders .team-person__name{font-size:15px}
   .team__grid--leaders .team-person__role{font-size:13px}
 }
+@media(max-width:360px){
+  .team__grid--leaders{grid-template-columns:1fr;row-gap:16px}
+  .team__grid--leaders .team-person{display:grid}
+  .team__grid--leaders .team-person__portrait{margin-bottom:0}
+}
