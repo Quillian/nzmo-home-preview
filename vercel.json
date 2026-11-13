@@ -6,8 +6,18 @@
   "cleanUrls": false,
   "redirects": [
     {
+      "source": "/clip-in",
+      "destination": "/potolki/kassetnye/clip-in/",
+      "statusCode": 301
+    },
+    {
       "source": "/clip-in/",
       "destination": "/potolki/kassetnye/clip-in/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gml-panel",
+      "destination": "/chistye-pomeshcheniya/gml-paneli/",
       "statusCode": 301
     },
     {
