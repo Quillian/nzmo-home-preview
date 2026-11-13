@@ -104,6 +104,9 @@ def build_catalogue():
         missing = {source for source, alt, from_img in uses if from_img and alt is None}
         empty = {source for source, alt, from_img in uses if from_img and alt is not None and not alt.strip()}
         data = (ROOT / asset).read_bytes()
+        if asset.suffix.lower() == '.svg':
+            # Git can convert line endings in text assets on checkout.
+            data = data.replace(b'\r\n', b'\n')
         writer.writerow([asset.as_posix(), sha256(data).hexdigest(), len(data), len(locations), ' | '.join(locations[:5]), ' | '.join(descriptions), len(missing), len(empty)])
     return output.getvalue(), len(assets)
 
