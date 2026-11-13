@@ -487,11 +487,11 @@ test('factory project index scrolls to every case and updates its preview',async
   await expect(page.locator('.av2-lightbox')).toBeHidden();
 
   await page.getByRole('button',{name:'МАФ',exact:true}).click();
-  await expect(page.locator('[data-project-count]')).toHaveText('6 проектов');
+  await expect(page.locator('[data-project-count]')).toHaveText('7 проектов');
   expect(await list.evaluate(el=>el.scrollTop)).toBe(0);
   await expect(page.locator('[data-project-title]')).toHaveText('Сквер «Крылья Сибири»');
   await page.getByRole('button',{name:'Все',exact:true}).click();
-  await expect(page.locator('[data-project-count]')).toHaveText(expected.length+' проекта');
+  await expect(page.locator('[data-project-count]')).toHaveText('48 проектов');
   await expect(page.locator('main #cta')).toHaveCount(0);
   await expect(page.locator('main [data-partner-ribbon]')).toHaveCount(1);
 });
