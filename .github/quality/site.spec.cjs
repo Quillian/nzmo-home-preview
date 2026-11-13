@@ -311,7 +311,7 @@ test('home geography team and footer share an uninterrupted background',async({p
 test('portfolio uses real project assets and excludes unpublished cases',async({page})=>{
  await page.goto('http://127.0.0.1:8765/obekty/');await expect(page.locator('h1')).toHaveText('Наши работы');
  const cards=page.locator('[data-case]');
- await expect(cards).toHaveCount(48);await expect(cards.locator('img')).toHaveCount(48);
+ await expect(cards).toHaveCount(51);await expect(cards.locator('img')).toHaveCount(51);
  await expect(page.locator('main a[href*="angiofarm"],main a[href*="ave-vita"],main a[href*="freedom"]')).toHaveCount(0);
  await page.locator('[data-filters] button[data-val="urban"]').click();await expect(page.locator('[data-case]:visible').first()).toHaveAttribute('data-sector','urban');
  await page.goto('http://127.0.0.1:8765/obekty/#project-tolmachevo');
@@ -491,7 +491,7 @@ test('factory project index scrolls to every case and updates its preview',async
   expect(await list.evaluate(el=>el.scrollTop)).toBe(0);
   await expect(page.locator('[data-project-title]')).toHaveText('Сквер «Крылья Сибири»');
   await page.getByRole('button',{name:'Все',exact:true}).click();
-  await expect(page.locator('[data-project-count]')).toHaveText('48 проектов');
+  await expect(page.locator('[data-project-count]')).toHaveText('51 проект');
   await expect(page.locator('main #cta')).toHaveCount(0);
   await expect(page.locator('main [data-partner-ribbon]')).toHaveCount(1);
 });
