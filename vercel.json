@@ -6,6 +6,16 @@
   "cleanUrls": false,
   "redirects": [
     {
+      "source": "/clip-in/",
+      "destination": "/potolki/kassetnye/clip-in/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gml-panel/",
+      "destination": "/chistye-pomeshcheniya/gml-paneli/",
+      "statusCode": 301
+    },
+    {
       "source": "/katalog/",
       "destination": "/files/nzmo-katalog-2026.pdf",
       "permanent": false
@@ -32,22 +42,22 @@
     },
     {
       "source": "/potolki/grilyato/yacheyka-50/",
-      "destination": "/potolki/grilyato/#tipy",
+      "destination": "/potolki/grilyato/#razmery-i-tseny",
       "permanent": false
     },
     {
       "source": "/potolki/grilyato/yacheyka-75/",
-      "destination": "/potolki/grilyato/#tipy",
+      "destination": "/potolki/grilyato/#razmery-i-tseny",
       "permanent": false
     },
     {
       "source": "/potolki/grilyato/yacheyka-100/",
-      "destination": "/potolki/grilyato/#tipy",
+      "destination": "/potolki/grilyato/#razmery-i-tseny",
       "permanent": false
     },
     {
       "source": "/potolki/grilyato/po-proektu/",
-      "destination": "/potolki/grilyato/#tipy",
+      "destination": "/potolki/grilyato/#cta",
       "permanent": false
     }
   ],
