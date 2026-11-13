@@ -8,21 +8,29 @@
   let opener;
   let pressedOutside = false;
 
-  document.addEventListener('click', (event) => {
-    const link = event.target.closest('[data-portfolio-case]');
-    if (!link || event.defaultPrevented || event.button !== 0 ||
-        event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-
-    const project = document.getElementById('portfolio-case-' + link.dataset.portfolioCase);
-    if (!project) return;
-
-    event.preventDefault();
+  function openProject(link) {
+    const project = link && document.getElementById('portfolio-case-' + link.dataset.portfolioCase);
+    if (!project || drawer.open) return false;
     opener = link;
     body.replaceChildren(project.content.cloneNode(true));
     body.querySelector('[data-portfolio-title]').id = 'portfolio-project-title';
     drawer.showModal();
     body.scrollTop = 0;
     document.documentElement.classList.add('portfolio-drawer-open');
+    return true;
+  }
+
+  function openHash() {
+    if (!location.hash.startsWith('#project-')) return;
+    const card = document.getElementById(location.hash.slice(1));
+    openProject(card?.querySelector('.card__title [data-portfolio-case]'));
+  }
+
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest('[data-portfolio-case]');
+    if (!link || event.defaultPrevented || event.button !== 0 ||
+        event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (openProject(link)) event.preventDefault();
   });
 
   body.addEventListener('click', (event) => {
@@ -52,6 +60,11 @@
   drawer.addEventListener('close', () => {
     document.documentElement.classList.remove('portfolio-drawer-open');
     body.replaceChildren();
+    if (location.hash === '#project-' + opener?.dataset.portfolioCase) {
+      history.replaceState(null, '', location.pathname + location.search);
+    }
     opener?.focus({preventScroll: true});
   });
+  window.addEventListener('hashchange', openHash);
+  openHash();
 })();

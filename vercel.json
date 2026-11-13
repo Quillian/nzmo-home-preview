@@ -36,16 +36,6 @@
       "permanent": false
     },
     {
-      "source": "/obekty/angiofarm/",
-      "destination": "/obekty/",
-      "permanent": false
-    },
-    {
-      "source": "/obekty/ave-vita/",
-      "destination": "/obekty/",
-      "permanent": false
-    },
-    {
       "source": "/maf/",
       "destination": "/maf/skulptury/",
       "permanent": true
@@ -69,6 +59,366 @@
       "source": "/potolki/grilyato/po-proektu/",
       "destination": "/potolki/grilyato/#cta",
       "permanent": false
+    },
+    {
+      "source": "/obekty/kvantorium",
+      "destination": "/obekty/#project-kvantorium",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/kvantorium/",
+      "destination": "/obekty/#project-kvantorium",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/maki",
+      "destination": "/obekty/#project-maki",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/maki/",
+      "destination": "/obekty/#project-maki",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/fastar",
+      "destination": "/obekty/#project-fastar",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/fastar/",
+      "destination": "/obekty/#project-fastar",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/moy-port",
+      "destination": "/obekty/#project-moy-port",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/moy-port/",
+      "destination": "/obekty/#project-moy-port",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/nasledie",
+      "destination": "/obekty/#project-nasledie",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/nasledie/",
+      "destination": "/obekty/#project-nasledie",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/novatory",
+      "destination": "/obekty/#project-novatory",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/novatory/",
+      "destination": "/obekty/#project-novatory",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/taiga",
+      "destination": "/obekty/#project-taiga",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/taiga/",
+      "destination": "/obekty/#project-taiga",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/dominant",
+      "destination": "/obekty/#project-dominant",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/dominant/",
+      "destination": "/obekty/#project-dominant",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/edge",
+      "destination": "/obekty/",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/edge/",
+      "destination": "/obekty/",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/pronails",
+      "destination": "/obekty/#project-pronails",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/pronails/",
+      "destination": "/obekty/#project-pronails",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/ngu",
+      "destination": "/obekty/#project-ngu",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/ngu/",
+      "destination": "/obekty/#project-ngu",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/baikal",
+      "destination": "/obekty/#project-baikal",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/baikal/",
+      "destination": "/obekty/#project-baikal",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/tolmachevo",
+      "destination": "/obekty/#project-tolmachevo",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/tolmachevo/",
+      "destination": "/obekty/#project-tolmachevo",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/evromed",
+      "destination": "/obekty/#project-evromed",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/evromed/",
+      "destination": "/obekty/#project-evromed",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/kudymkar",
+      "destination": "/obekty/#project-kudymkar",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/kudymkar/",
+      "destination": "/obekty/#project-kudymkar",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/novokuznetsk",
+      "destination": "/obekty/#project-novokuznetsk",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/novokuznetsk/",
+      "destination": "/obekty/#project-novokuznetsk",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/svobodny",
+      "destination": "/obekty/#project-svobodny",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/svobodny/",
+      "destination": "/obekty/#project-svobodny",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/fedya-dich",
+      "destination": "/obekty/#project-fedya-dich",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/fedya-dich/",
+      "destination": "/obekty/#project-fedya-dich",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/krylya-sibiri",
+      "destination": "/obekty/#project-krylya-sibiri",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/krylya-sibiri/",
+      "destination": "/obekty/#project-krylya-sibiri",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/ogni-magnitki",
+      "destination": "/obekty/#project-ogni-magnitki",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/ogni-magnitki/",
+      "destination": "/obekty/#project-ogni-magnitki",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/hanty-mansiysk",
+      "destination": "/obekty/#project-hanty-mansiysk",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/hanty-mansiysk/",
+      "destination": "/obekty/#project-hanty-mansiysk",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/tomsk-airport",
+      "destination": "/obekty/#project-tomsk-airport",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/tomsk-airport/",
+      "destination": "/obekty/#project-tomsk-airport",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/admiral",
+      "destination": "/obekty/#project-admiral",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/admiral/",
+      "destination": "/obekty/#project-admiral",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/ecco",
+      "destination": "/obekty/#project-ecco",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/ecco/",
+      "destination": "/obekty/#project-ecco",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/dns",
+      "destination": "/obekty/#project-dns",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/dns/",
+      "destination": "/obekty/#project-dns",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/freedom",
+      "destination": "/obekty/",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/freedom/",
+      "destination": "/obekty/",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/orenburg",
+      "destination": "/obekty/#project-orenburg",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/orenburg/",
+      "destination": "/obekty/#project-orenburg",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/bering",
+      "destination": "/obekty/#project-bering",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/bering/",
+      "destination": "/obekty/#project-bering",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/lukoil",
+      "destination": "/obekty/#project-lukoil",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/lukoil/",
+      "destination": "/obekty/#project-lukoil",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/laplandiya",
+      "destination": "/obekty/#project-laplandiya",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/laplandiya/",
+      "destination": "/obekty/#project-laplandiya",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/kramz",
+      "destination": "/obekty/#project-kramz",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/kramz/",
+      "destination": "/obekty/#project-kramz",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/montazhny-kolledzh",
+      "destination": "/obekty/#project-montazhny-kolledzh",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/montazhny-kolledzh/",
+      "destination": "/obekty/#project-montazhny-kolledzh",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/angiofarm",
+      "destination": "/obekty/",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/angiofarm/",
+      "destination": "/obekty/",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/ave-vita",
+      "destination": "/obekty/",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/ave-vita/",
+      "destination": "/obekty/",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/syzran",
+      "destination": "/obekty/#project-syzran",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/syzran/",
+      "destination": "/obekty/#project-syzran",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/himki",
+      "destination": "/obekty/#project-himki",
+      "permanent": true
+    },
+    {
+      "source": "/obekty/himki/",
+      "destination": "/obekty/#project-himki",
+      "permanent": true
     }
   ],
   "headers": [

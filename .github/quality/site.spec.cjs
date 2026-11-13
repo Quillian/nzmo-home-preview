@@ -97,8 +97,8 @@ test('every enquiry uses the approved outer layout and preserves its fields',asy
       expect(section[0],file).not.toContain('Что будет после заявки');
     }
   }
-  // Four retired Grilyato pages and the About page no longer host enquiry forms.
-  expect(count).toBe(206);
+  // The 34 retired project pages no longer host their own enquiry forms.
+  expect(count).toBe(172);
 });
 test('moving the configured enquiry keeps parameters linked to its form',async({page})=>{
   await page.goto('http://127.0.0.1:8765/ograzhdeniya/zabory-zhalyuzi/');
@@ -310,9 +310,22 @@ test('home geography team and footer share an uninterrupted background',async({p
 });
 test('portfolio uses real project assets and excludes unpublished cases',async({page})=>{
  await page.goto('http://127.0.0.1:8765/obekty/');await expect(page.locator('h1')).toHaveText('Наши работы');
- await expect(page.locator('[data-case]')).toHaveCount(34);await expect(page.locator('[data-case] img')).toHaveCount(34);
- await expect(page.locator('main a[href*="angiofarm"],main a[href*="ave-vita"]')).toHaveCount(0);
+ const cards=page.locator('[data-case]');
+ await expect(cards).toHaveCount(48);await expect(cards.locator('img')).toHaveCount(48);
+ await expect(page.locator('main a[href*="angiofarm"],main a[href*="ave-vita"],main a[href*="freedom"]')).toHaveCount(0);
  await page.locator('[data-filters] button[data-val="urban"]').click();await expect(page.locator('[data-case]:visible').first()).toHaveAttribute('data-sector','urban');
+ await page.goto('http://127.0.0.1:8765/obekty/#project-tolmachevo');
+ const dialog=page.getByRole('dialog',{name:/Проекты НЗМО/});
+ await expect(dialog).toBeVisible();
+ await expect(dialog.locator('.portfolio-drawer__city')).toHaveText('г. Новосибирск');
+ await expect(dialog.locator('a')).toHaveCount(0);
+ const second=dialog.locator('[data-portfolio-image]').nth(1);
+ await second.click();
+ await expect(second).toHaveAttribute('aria-pressed','true');
+ await expect(dialog.locator('figcaption')).toHaveText(await second.getAttribute('data-portfolio-caption'));
+ await page.keyboard.press('Escape');
+ await expect(dialog).toBeHidden();
+ await expect(page).toHaveURL(/\/obekty\/$/);
 });
 test('FAQ contacts replace the form and answers use available width',async({page})=>{
  await page.setViewportSize({width:1440,height:1000});await page.goto('http://127.0.0.1:8765/servis/faq/');
@@ -324,7 +337,7 @@ test('header order is consistent on all shared-layout pages',async()=>{
  const expected=['Наши работы','Доставка и оплата','О заводе','Журнал','Контакты'];let count=0;
  function walk(d){return fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.name.startsWith('.')||e.name==='node_modules'?[]:e.isDirectory()?walk(path.join(d,e.name)):e.name.endsWith('.html')?[path.join(d,e.name)]:[]);}
  for(const file of walk(root)){const html=fs.readFileSync(file,'utf8');const nav=html.match(/<ul class="nav">([\s\S]*?)<button class="header__search"/);if(!nav)continue;count++;expect(nav[1],file).toContain('Продукция завода');const tail=nav[1].slice(nav[1].lastIndexOf('</div>'));const labels=[...tail.matchAll(/<a href="[^"]+">([^<]+)<\/a>/g)].map(x=>x[1]);expect(labels,file).toEqual(expected);}
- expect(count).toBeGreaterThan(180);
+ expect(count).toBeGreaterThan(150);
 });
 
 for(const route of ['/potolki/reechnye/','/potolki/reechnye/kuboobraznye/','/potolki/grilyato/','/potolki/armstrong-t24/']) test('calculator passes fresh parameters into short modal '+route,async({page})=>{
