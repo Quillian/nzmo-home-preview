@@ -10,11 +10,11 @@
 
   function openProject(link) {
     const project = link && document.getElementById('portfolio-case-' + link.dataset.portfolioCase);
-    if (!project || drawer.open) return false;
+    if (!project) return false;
     opener = link;
     body.replaceChildren(project.content.cloneNode(true));
     body.querySelector('[data-portfolio-title]').id = 'portfolio-project-title';
-    drawer.showModal();
+    if (!drawer.open) drawer.showModal();
     body.scrollTop = 0;
     document.documentElement.classList.add('portfolio-drawer-open');
     return true;
