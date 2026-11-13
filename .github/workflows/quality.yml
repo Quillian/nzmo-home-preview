@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7.0.1
+      - run: python3 .github/quality/image_catalog.py --check
       - run: python3 .github/quality/static.py
       - uses: actions/upload-artifact@v7.0.2
         if: always()
