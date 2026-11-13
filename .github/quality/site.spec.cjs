@@ -209,6 +209,7 @@ test('preview form validation and optional contact method',async({page})=>{
 });
 
 test('factory photo opens and closes without navigation',async({page})=>{
+ await page.route('https://widgets.2gis.com/**',route=>route.abort());
  await page.goto('http://127.0.0.1:8765/o-zavode/');
  await page.locator('[data-photo]').first().click();
  const dialog=page.locator('dialog.av2-lightbox');
@@ -367,6 +368,7 @@ test('calculator rejects invalid inputs and retains draft after adapter failure'
  expect((await page.evaluate(()=>window.capturedLead)).config).toContain('Площадь: 120 м²');await expect(dlg.locator('[data-lead-submit]')).toBeEnabled();
 });
 test('contacts are compact and company details remain downloadable',async({page,request})=>{
+ await page.route('https://widgets.2gis.com/**',route=>route.abort());
  await page.goto('http://127.0.0.1:8765/kontakty/');await expect(page.locator('main form')).toHaveCount(0);await expect(page.locator('.contacts-legal')).toHaveCount(0);
  await expect(page.locator('.contacts-departments article')).toHaveCount(3);await expect(page.locator('.contacts-company-card')).toHaveAttribute('download','');
  const href=await page.locator('.contacts-company-card').getAttribute('href');const response=await request.get('http://127.0.0.1:8765'+href);expect(response.ok()).toBe(true);expect((await response.body()).subarray(0,4).toString()).toBe('%PDF');
@@ -424,6 +426,7 @@ test('T24 rectangular module updates the count, profiles and quote',async({page}
 
 test('factory gallery reveals views without moving the three photo strips',async({page})=>{
   await page.setViewportSize({width:1440,height:900});
+  await page.route('https://widgets.2gis.com/**',route=>route.abort());
   await page.goto('http://127.0.0.1:8765/o-zavode/');
   const views=page.locator('[data-factory-view]');
   const stage=page.locator('.factory-gallery__stage');
@@ -450,6 +453,7 @@ test('factory gallery reveals views without moving the three photo strips',async
 
 test('factory project index scrolls to every case and updates its preview',async({page})=>{
   await page.setViewportSize({width:1440,height:960});
+  await page.route('https://widgets.2gis.com/**',route=>route.abort());
   await page.goto('http://127.0.0.1:8765/obekty/');
   const expected=await page.locator('main [data-case] .card__title a').evaluateAll(links=>links.map(link=>link.getAttribute('href')).sort());
   await page.goto('http://127.0.0.1:8765/o-zavode/');
