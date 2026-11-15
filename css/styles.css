@@ -531,7 +531,10 @@ a.kinds__i:hover .kinds__ph img{transform:scale(1.04)}
 .k3.kinds--4{grid-template-columns:repeat(4,minmax(0,1fr))}
 .k3.kinds--2{grid-template-columns:repeat(2,minmax(0,1fr))}
 .k3.kinds--2 .k3__ph{aspect-ratio:2 / 1;background:#fafaf9}
-.k3.kinds--2 .k3__ph img{object-fit:contain}
+.clean-air-visual{container-type:size;display:grid;place-items:center}
+.k3.kinds--2 .clean-air-visual img,.kd__fig.clean-air-visual img{width:min(100cqw,133.333cqh);height:auto;aspect-ratio:4/3;object-fit:contain}
+.clean-air-visual--supply img{clip-path:polygon(13.9% 64%,24% 43%,25.5% 32%,55% 7%,76% 14%,81% 36%,78% 53%,85.5% 64%,50% 93%)}
+.clean-air-visual--extract img{clip-path:polygon(26% 83%,31% 58%,34% 38%,38% 11%,78% 11%,79.7% 41%,80.3% 84%)}
 .k3__card{display:flex;flex-direction:column;gap:8px;color:var(--text-body)}
 .k3__card:hover{color:var(--text-body)}
 .k3__ph{position:relative;display:block;aspect-ratio:4/3;overflow:hidden;border-radius:10px;background:#24272C}
@@ -763,7 +766,7 @@ path.kd-sec{fill:none;stroke-width:3}
   .kd__badges{left:12px;top:12px;right:60px;gap:6px}.kd__badges li{height:26px;font-size:12px;padding:0 10px}
   .kd__nav{width:40px;height:40px;margin-top:-20px}
 }
-.kd__fig{background:#1F2226}.kd__fig--light,.kd__fig.kd__fig--svg{background:#F3F2EF}
+.kd__fig{background:#1F2226}.kd__fig--light,.kd__fig.kd__fig--svg{background:#F3F2EF}.kd__fig.clean-air-visual{background:#fafaf9}
 
 /* Заявка (21.10.2026): тёмный фон на всю ширину экрана, сливается с подвалом; форма начинается на уровне заголовка */
 .cta2{width:100%;max-width:none;border-radius:0;margin:0}
