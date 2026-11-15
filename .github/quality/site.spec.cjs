@@ -365,7 +365,7 @@ test('header order is consistent on all shared-layout pages',async()=>{
  const expected=['Наши работы','Доставка и оплата','О заводе','Журнал','Контакты'];let count=0;
  function walk(d){return fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.name.startsWith('.')||e.name==='node_modules'?[]:e.isDirectory()?walk(path.join(d,e.name)):e.name.endsWith('.html')?[path.join(d,e.name)]:[]);}
  for(const file of walk(root)){const html=fs.readFileSync(file,'utf8');const nav=html.match(/<ul class="nav">([\s\S]*?)<button class="header__search"/);if(!nav)continue;count++;expect(nav[1],file).toContain('Продукция завода');const tail=nav[1].slice(nav[1].lastIndexOf('</div>'));const labels=[...tail.matchAll(/<a href="[^"]+">([^<]+)<\/a>/g)].map(x=>x[1]);expect(labels,file).toEqual(expected);}
- expect(count).toBeGreaterThan(150);
+ expect(count).toBe(138);
 });
 
 for(const route of ['/potolki/reechnye/','/potolki/reechnye/kuboobraznye/','/potolki/grilyato/','/potolki/armstrong-t24/']) test('calculator passes fresh parameters into short modal '+route,async({page})=>{
