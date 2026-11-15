@@ -4,36 +4,28 @@
 
 .home-offer__layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(28px, 6vw, 92px);
-  align-items: center;
+  justify-items: center;
+  gap: clamp(24px, 3vw, 42px);
+}
+
+.home-offer__copy {
+  text-align: center;
 }
 
 .home-offer__copy .t-2 {
-  max-width: 15ch;
   text-wrap: balance;
+  hyphens: none;
+  overflow-wrap: normal;
 }
 
 .home-offer__copy .lead {
-  max-width: 43ch;
-  margin: 18px 0 0;
-}
-
-.home-offer__contact {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  margin-top: 13px;
-  color: var(--navy-800);
-  font-weight: 600;
-  text-decoration: underline;
-  text-decoration-color: var(--ochre-500);
-  text-underline-offset: 5px;
+  max-width: 52ch;
+  margin: 12px auto 0;
+  text-wrap: pretty;
 }
 
 .promo-card {
   width: min(100%, 560px);
-  justify-self: end;
   padding: clamp(24px, 3vw, 40px);
   border: 1px solid #42566d;
   border-radius: 12px;
@@ -102,16 +94,18 @@
 }
 
 .promo-card__foil[hidden],
-.promo-card__actions[hidden] {
+.promo-card__action[hidden],
+.promo-card__request[hidden] {
   display: none;
 }
 
 .promo-card__actions {
-  display: flex;
-  flex-wrap: wrap;
+  position: relative;
+  display: grid;
+  justify-items: start;
   align-items: center;
-  column-gap: 15px;
-  margin-top: 8px;
+  min-height: 54px;
+  margin-top: 14px;
 }
 
 .promo-card__action {
@@ -133,22 +127,23 @@
   text-decoration-thickness: 2px;
 }
 
-.promo-card__action:focus-visible {
+.promo-card__action:focus-visible,
+.promo-card__request:focus-visible {
   outline: 2px solid var(--ochre-500);
   outline-offset: 4px;
 }
 
 .promo-card__status {
-  color: #ead5af;
-  font-size: 13px;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
-@media (max-width: 760px) {
-  .home-offer__layout {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .promo-card {
-    justify-self: start;
+@media (max-width: 480px) {
+  .home-offer__copy .t-2 {
+    font-size: clamp(24px, 7vw, 28px);
   }
 }

@@ -5,13 +5,15 @@
   const foil = card.querySelector('canvas');
   const panel = foil.parentElement;
   const code = card.querySelector('code');
-  const actions = card.querySelector('[data-scratch-actions]');
-  const action = card.querySelector('button');
+  const revealButton = card.querySelector('[data-scratch-reveal]');
+  const requestLink = card.querySelector('[data-scratch-request]');
   const status = card.querySelector('[role="status"]');
   const context = foil.getContext('2d', { willReadFrequently: true });
   const { width, height } = foil;
 
-  let revealed = !context;
+  if (!context) return;
+
+  let revealed = false;
   let activePointer = null;
   let previousPoint = null;
   let hasScratched = false;
@@ -56,22 +58,11 @@
     panel.removeAttribute('data-scratching');
     foil.hidden = true;
     code.removeAttribute('aria-hidden');
-    action.textContent = 'Скопировать код';
+    const moveFocus = document.activeElement === revealButton;
+    revealButton.hidden = true;
+    requestLink.hidden = false;
+    if (moveFocus) requestLink.focus({ preventScroll: true });
     status.textContent = 'Ваш код: ' + code.textContent;
-  }
-
-  async function copyCode() {
-    try {
-      await navigator.clipboard.writeText(code.textContent);
-      status.textContent = 'Код скопирован';
-    } catch {
-      const range = document.createRange();
-      range.selectNodeContents(code);
-      const selection = window.getSelection();
-      selection.removeAllRanges();
-      selection.addRange(range);
-      status.textContent = 'Код выделен. Скопируйте его вручную.';
-    }
   }
 
   function checkCoverage() {
@@ -118,19 +109,9 @@
     checkCoverage();
   }
 
-  action.addEventListener('click', () => {
-    if (revealed) {
-      copyCode();
-    } else {
-      revealCode();
-    }
-  });
-  actions.hidden = false;
-
-  if (!context) {
-    action.textContent = 'Скопировать код';
-    return;
-  }
+  revealButton.addEventListener('click', revealCode);
+  revealButton.hidden = false;
+  requestLink.hidden = true;
 
   paintFoil();
   code.setAttribute('aria-hidden', 'true');
