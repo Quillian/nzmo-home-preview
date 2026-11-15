@@ -583,7 +583,9 @@ test('the home offer carries the revealed code into the enquiry', async ({ brows
     await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
     await expect(foil).toBeHidden();
     await expect(request).toBeVisible();
-    await expect(offer.getByRole('status')).toHaveText('Ваш код: NZMO-START');
+    const scratchedCode = await code.innerText();
+    expect(scratchedCode).toMatch(/^[0-9]{5}$/);
+    await expect(offer.getByRole('status')).toHaveText('Ваш код: ' + scratchedCode);
 
     await page.reload();
     await expect(show).toBeVisible();
@@ -591,18 +593,20 @@ test('the home offer carries the revealed code into the enquiry', async ({ brows
     await page.keyboard.press('Enter');
     await expect(request).toBeFocused();
     await expect(code).not.toHaveAttribute('aria-hidden', 'true');
+    const enquiryCode = await code.innerText();
+    expect(enquiryCode).toMatch(/^[0-9]{5}$/);
 
     await request.press('Enter');
     await expect(page).toHaveURL(/\/servis\/kak-my-rabotaem\/\?config=.*#cta$/);
     const form = page.locator('#cta form');
-    await expect(form.locator('[data-config-echo]')).toHaveText('Считаем проект с кодом NZMO-START.');
+    await expect(form.locator('[data-config-echo]')).toHaveText('Считаем проект с кодом ' + enquiryCode + '.');
     await form.locator('[data-lead-contact]').fill('offer@example.com');
     await form.locator('[name=agree]').check();
     await form.locator('[data-lead-submit]').click();
     await expect(page).toHaveURL(/\/spasibo\/$/);
     const draft = await page.evaluate(() => JSON.parse(sessionStorage.getItem('nzmo_lead_v2')));
     expect(draft.mode).toBe('preview');
-    expect(draft.payload.config).toBe('проект с кодом NZMO-START');
+    expect(draft.payload.config).toBe('проект с кодом ' + enquiryCode);
   } finally {
     await context.close();
   }

@@ -11,7 +11,16 @@
   const context = foil.getContext('2d', { willReadFrequently: true });
   const { width, height } = foil;
 
-  if (!context) return;
+  const offerCode = String(Math.floor(Math.random() * 100_000)).padStart(5, '0');
+  const requestUrl = new URL(requestLink.href);
+  requestUrl.searchParams.set('config', 'проект с кодом ' + offerCode);
+  code.textContent = offerCode;
+  requestLink.href = requestUrl.href;
+
+  if (!context) {
+    requestLink.hidden = false;
+    return;
+  }
 
   let revealed = false;
   let activePointer = null;
@@ -62,7 +71,7 @@
     revealButton.hidden = true;
     requestLink.hidden = false;
     if (moveFocus) requestLink.focus({ preventScroll: true });
-    status.textContent = 'Ваш код: ' + code.textContent;
+    status.textContent = 'Ваш код: ' + offerCode;
   }
 
   function checkCoverage() {
@@ -111,7 +120,6 @@
 
   revealButton.addEventListener('click', revealCode);
   revealButton.hidden = false;
-  requestLink.hidden = true;
 
   paintFoil();
   code.setAttribute('aria-hidden', 'true');
