@@ -458,33 +458,33 @@
     },
     {
       "source": "/o-zavode/proizvodstvo/",
-      "destination": "/o-zavode/#proizvodstvo",
-      "permanent": true
+      "destination": "/o-zavode/",
+      "permanent": false
     },
     {
       "source": "/o-zavode/proizvodstvo/lazernaya-rezka/",
-      "destination": "/o-zavode/#proizvodstvo",
-      "permanent": true
+      "destination": "/o-zavode/",
+      "permanent": false
     },
     {
       "source": "/o-zavode/proizvodstvo/gibka-metalla/",
-      "destination": "/o-zavode/#proizvodstvo",
-      "permanent": true
+      "destination": "/o-zavode/",
+      "permanent": false
     },
     {
       "source": "/o-zavode/proizvodstvo/svarka/",
-      "destination": "/o-zavode/#proizvodstvo",
-      "permanent": true
+      "destination": "/o-zavode/",
+      "permanent": false
     },
     {
       "source": "/o-zavode/proizvodstvo/poroshkovaya-okraska/",
-      "destination": "/o-zavode/#proizvodstvo",
-      "permanent": true
+      "destination": "/o-zavode/",
+      "permanent": false
     },
     {
       "source": "/o-zavode/konstruktorskiy-otdel/",
-      "destination": "/o-zavode/#konstruktorskiy-otdel",
-      "permanent": true
+      "destination": "/o-zavode/",
+      "permanent": false
     },
     {
       "source": "/o-zavode/novosti/",
