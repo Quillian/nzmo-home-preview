@@ -542,3 +542,54 @@ test('factory project index scrolls to every case and updates its preview',async
   await expect(page.locator('main #cta')).toHaveCount(0);
   await expect(page.locator('main [data-partner-ribbon]')).toHaveCount(1);
 });
+
+test('the home offer can be scratched by touch and opened by keyboard', async ({ browser }) => {
+  const context = await browser.newContext({
+    hasTouch: true,
+    isMobile: true,
+    viewport: { width: 390, height: 844 },
+    reducedMotion: 'reduce',
+  });
+
+  try {
+    const page = await context.newPage();
+    await page.goto('http://127.0.0.1:8765/#osobye-usloviya');
+    const offer = page.getByRole('region', { name: 'Особые условия для проекта' });
+    const foil = offer.locator('canvas');
+    const code = offer.locator('code');
+    const show = offer.getByRole('button', { name: 'Показать код' });
+    const copy = offer.getByRole('button', { name: 'Скопировать код' });
+
+    const cookies = page.getByRole('button', { name: 'Отклонить', exact: true });
+    if (await cookies.isVisible()) await cookies.click();
+
+    await expect(code).toHaveAttribute('aria-hidden', 'true');
+    await foil.scrollIntoViewIfNeeded();
+    const bounds = await foil.boundingBox();
+    const y = bounds.y + bounds.height / 2;
+    const cdp = await context.newCDPSession(page);
+    await cdp.send('Input.dispatchTouchEvent', {
+      type: 'touchStart',
+      touchPoints: [{ x: bounds.x + 6, y }],
+    });
+    await expect(foil).toBeVisible();
+    for (const share of [.25, .5, .75, .94]) {
+      await cdp.send('Input.dispatchTouchEvent', {
+        type: 'touchMove',
+        touchPoints: [{ x: bounds.x + bounds.width * share, y }],
+      });
+    }
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+    await expect(foil).toBeHidden();
+    await expect(offer.getByRole('status')).toHaveText('Ваш код: NZMO-START');
+
+    await page.reload();
+    await expect(show).toBeVisible();
+    await show.focus();
+    await page.keyboard.press('Enter');
+    await expect(copy).toBeFocused();
+    await expect(code).not.toHaveAttribute('aria-hidden', 'true');
+  } finally {
+    await context.close();
+  }
+});
