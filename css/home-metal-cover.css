@@ -1,0 +1,26 @@
+.home-metal-cover { background: #0a1018; }
+.home-metal-cover .cover__img { opacity: 1; }
+.home-metal-cover__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .22s ease-out;
+}
+.home-metal-cover__canvas.is-rendered { opacity: 1; }
+.home-metal-cover .cover__scrim {
+  background: linear-gradient(0deg, #0a1018 0%, rgba(10,16,24,.89) 21%, rgba(10,16,24,.48) 53%, transparent 84%),
+              linear-gradient(90deg, rgba(10,16,24,.91) 0%, rgba(10,16,24,.67) 35%, transparent 79%);
+}
+.home-metal-cover .lead { color: rgba(255,255,255,.85); }
+@media (max-width: 767px) {
+  .home-metal-cover .cover__scrim {
+    background: linear-gradient(0deg, #0a1018 0%, rgba(10,16,24,.92) 48%, rgba(10,16,24,.49) 100%),
+                linear-gradient(90deg, rgba(10,16,24,.84), rgba(10,16,24,.28));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-metal-cover .home-metal-cover__canvas { opacity: 0; transition: none; }
+}

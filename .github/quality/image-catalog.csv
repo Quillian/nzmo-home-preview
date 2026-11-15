@@ -260,7 +260,7 @@ img/evromed-cleanroom-800.webp,a00b7a5e7906485b1a23051dac9106dc5a5e62f819159b85e
 img/evromed-operatsionnaya-1440.webp,e08d3b93bebe6144f1230738bc459cdad0c409bf29b02108bc6f12b7e9f37c0a,235878,2,chistye-pomeshcheniya/gml-paneli/index.html | chistye-pomeshcheniya/index.html,"Клиника «Евромед», г. Новосибирск: операционная: гладкое потолочное поле с встроенными инженерными элементами",0,0
 img/evromed-operatsionnaya-400.webp,41a95512ad683e6f4ae56fb3d93e55976653451d6d3819fae1abd4f34060dbc1,15692,2,chistye-pomeshcheniya/gml-paneli/index.html | chistye-pomeshcheniya/index.html,"Клиника «Евромед», г. Новосибирск: операционная: гладкое потолочное поле с встроенными инженерными элементами",0,2
 img/evromed-operatsionnaya-800.webp,cef193770d6de6bc35e809e6acc2fb1a25474a601ae02c9444a495fd258c0fcb,53108,2,chistye-pomeshcheniya/gml-paneli/index.html | chistye-pomeshcheniya/index.html,"Клиника «Евромед», г. Новосибирск: операционная: гладкое потолочное поле с встроенными инженерными элементами",0,0
-img/facade-nzmo-entrance-1920.webp,45a856251eda87450f1536aae5bf6c16f4ab1f2fba658bc8e2777d19f76f761f,48016,1,index.html,"Вход на завод НЗМО в Новосибирске, вечерняя съёмка",0,0
+img/facade-nzmo-entrance-1920.webp,45a856251eda87450f1536aae5bf6c16f4ab1f2fba658bc8e2777d19f76f761f,48016,0,,,0,0
 img/facade_cassette-1000-clean.png,28993059e83f3ae3b4cc274ced6947cd5f93b38ac854fe3339b9830f8d1f584d,477012,0,,,0,0
 img/facade_profile-1000-clean.png,2526e8b47ef80c2ab91a943582c91f05ada0d2f55c920b86a060b30951bafee8,551456,0,,,0,0
 img/facade_profile-800-clean.png,58401669e372614bf504ffcb17c778fddd11a59df966b64b326aea2da6bccbca,357454,0,,,0,0
@@ -384,6 +384,8 @@ img/hk-zhk-prityazhenie-koridor-800.webp,81a3852accfef326e6efe81f725eb585aaf491f
 img/hk-zhk-prityazhenie-liftovoy-holl-1920.webp,fbc03e8aa3a637ef74cf73e625fc8a6d8af6df898d808b343247f812b3b47561,273128,1,potolki/kassetnye/hook-on/index.html,"ЖК «Притяжение», Новосибирск",0,0
 img/hk-zhk-prityazhenie-liftovoy-holl-2560.webp,7ac800ca47e7b533882702110eb91cf813ed67dad51a1b9e078b57db5f9dd350,509732,1,potolki/kassetnye/hook-on/index.html,"ЖК «Притяжение», Новосибирск",0,0
 img/hk-zhk-prityazhenie-liftovoy-holl-800.webp,0988435b63096e834860e6942fa49a23d697a3fae36ace52a2a7e5444790082e,40080,1,potolki/kassetnye/hook-on/index.html,,0,1
+img/home-metal-cover-narrow.webp,2cf2e447b02223db162b84282bddb8083cac55c3af7213622cff207e13a383df,10912,1,index.html,,0,0
+img/home-metal-cover-wide.webp,3a11183f3617fc7de13fe335f7f6e6d77528660a9a237709abea4f8a0d05176c,22420,1,index.html,,0,1
 img/home-process-20261111/brief-360.webp,b7954986e05ce58f3ebf521b23da504880f42f23f0829aee35cce9194e598fb1,8628,0,,,0,0
 img/home-process-20261111/brief-720.webp,16943307761367f8c2950b6f07a364f50d9feae01770128b564482ea3e78c575,27484,0,,,0,0
 img/home-process-20261111/manufacture-360.webp,d9632a626dba3cb00ddde9b7c4aab2d1f4f552a75bc91f84626fe017340b0419,7852,0,,,0,0

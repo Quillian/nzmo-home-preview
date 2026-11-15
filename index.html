@@ -33,6 +33,8 @@
 <link rel="stylesheet" href="/css/home-project-20261109.css?v=eeec8fe4">
 <link rel="stylesheet" href="/css/home-offer.css?v=c3cda72c">
 <script src="/js/home-offer.js?v=213ed33c" defer></script>
+<link rel="stylesheet" href="/css/home-metal-cover.css?v=20261116">
+<script src="/js/home-metal-cover.js?v=20261116" defer></script>
 </head>
 <body>
 <header class="header">
@@ -170,8 +172,12 @@
     </div>
   </div>
 </header><main id="work-area">
-<section class="cover">
-  <img class="cover__img" src="/img/facade-nzmo-entrance-1920.webp" alt="Вход на завод НЗМО в Новосибирске, вечерняя съёмка" fetchpriority="high">
+<section class="cover home-metal-cover">
+  <picture>
+    <source media="(max-width: 767px)" srcset="/img/home-metal-cover-narrow.webp">
+    <img class="cover__img" src="/img/home-metal-cover-wide.webp" alt="" fetchpriority="high">
+  </picture>
+  <canvas class="home-metal-cover__canvas" aria-hidden="true"></canvas>
   <span class="cover__scrim" aria-hidden="true"></span>
   <div class="cover__in">
     <div class="kicker kicker--ochre on-deep" style="margin-bottom:0"><span class="l">Новосибирский завод металлообработки</span></div>
