@@ -2,6 +2,7 @@
 .lead-form,.lead-details{color:#1B2D42;min-width:0}
 .cta2 .cta2__in>*{min-width:0}
 .lead-fields,.lead-details{display:grid;gap:20px}
+.lead-details[hidden]{display:none}
 .lead-form{display:grid;gap:18px}
 .lead-form label,.lead-details label{display:grid;gap:8px;min-width:0;margin:0}
 .lead-form label>span,.lead-details label>span{font:500 13px/1.5 var(--font-text);color:#1B2D42;letter-spacing:0;text-transform:none}

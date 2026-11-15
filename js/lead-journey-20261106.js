@@ -216,4 +216,8 @@
   if(page.startsWith('/chistye-pomeshcheniya/'))chosen=[['/stati/chem-otdelyvayut-operatsionnuyu/','Подготовка проекта','Отделка операционной','Вопросы, которые стоит решить до закупки.'],['/chistye-pomeshcheniya/','Комплектация','Изделия для чистых помещений','Панели, потолки и другие элементы системы.']];
   else if(page && !page.startsWith('/potolki/') && page!=='/' && !page.startsWith('/servis/') && !page.startsWith('/kontakty/') && !page.startsWith('/stati/'))chosen=[['/stati/','Журнал НЗМО','Разобраться перед заказом','Материалы о продукции, проектировании и выборе комплектующих.'],['/servis/dostavka-i-oplata/','Поставка','Доставка и упаковка','Как подготовить получение изделий на объекте.']];
   if(chosen)chosen.forEach(([href,tag,title,text],i)=>{const a=resources.children[i];a.href=href;a.querySelector('span').textContent=tag;a.querySelector('h3').textContent=title;a.querySelector('p').textContent=text;});
+  root.querySelector('[data-details-fallback]')?.setAttribute('hidden', '');
+  form.hidden = false;
+  form.inert = false;
+  form.querySelector('[data-details-submit]').disabled = false;
 })();

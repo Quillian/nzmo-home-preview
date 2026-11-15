@@ -208,6 +208,18 @@ test('preview form validation and optional contact method',async({page})=>{
 
 });
 
+test('lead details cannot submit when the script does not load', async ({page}) => {
+  await page.route('**/js/lead-journey-20261106.js*', route => route.abort());
+  await page.goto('http://127.0.0.1:8765/spasibo/');
+  await page.locator('[data-details-panel] > summary').click();
+  await expect(page.locator('[data-details-fallback]')).toBeVisible();
+  const form = page.locator('[data-lead-details]');
+  await expect(form).toHaveAttribute('method', 'post');
+  await expect(form).toBeHidden();
+  await expect(form.locator('[data-details-submit]')).toBeDisabled();
+  await expect(page).toHaveURL(/\/spasibo\/$/);
+});
+
 test('factory photo opens and closes without navigation',async({page})=>{
  await page.route('https://widgets.2gis.com/**',route=>route.abort());
  await page.goto('http://127.0.0.1:8765/o-zavode/');

@@ -1,7 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "outputDirectory": ".",
+  "buildCommand": "node .vercel-build.cjs",
+  "outputDirectory": "public-site",
   "trailingSlash": true,
   "cleanUrls": false,
   "redirects": [
@@ -461,6 +462,18 @@
     {
       "source": "/(.*)",
       "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
         {
           "key": "X-Robots-Tag",
           "value": "noindex, nofollow"
