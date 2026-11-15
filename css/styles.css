@@ -534,7 +534,7 @@ a.kinds__i:hover .kinds__ph img{transform:scale(1.04)}
 .clean-air-visual{container-type:size;display:grid;place-items:center}
 .k3.kinds--2 .clean-air-visual img,.kd__fig.clean-air-visual img{width:min(100cqw,133.333cqh);height:auto;aspect-ratio:4/3;object-fit:contain}
 .clean-air-visual--supply img{clip-path:polygon(13.9% 64%,24% 43%,25.5% 32%,55% 7%,76% 14%,81% 36%,78% 53%,85.5% 64%,50% 93%)}
-.clean-air-visual--extract img{clip-path:polygon(26% 83%,31% 58%,34% 38%,38% 11%,78% 11%,79.7% 41%,80.3% 84%)}
+.clean-air-visual--extract img{clip-path:polygon(26% 83%,31% 58%,34% 38%,38% 11%,71% 11%,79.7% 18%,79.7% 41%,80.3% 84%)}
 .k3__card{display:flex;flex-direction:column;gap:8px;color:var(--text-body)}
 .k3__card:hover{color:var(--text-body)}
 .k3__ph{position:relative;display:block;aspect-ratio:4/3;overflow:hidden;border-radius:10px;background:#24272C}
