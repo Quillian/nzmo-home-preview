@@ -543,7 +543,7 @@ test('factory project index scrolls to every case and updates its preview',async
   await expect(page.locator('main [data-partner-ribbon]')).toHaveCount(1);
 });
 
-test('the home offer can be scratched by touch and opened by keyboard', async ({ browser }) => {
+test('the home offer carries the revealed code into the enquiry', async ({ browser }) => {
   const context = await browser.newContext({
     hasTouch: true,
     isMobile: true,
@@ -554,16 +554,17 @@ test('the home offer can be scratched by touch and opened by keyboard', async ({
   try {
     const page = await context.newPage();
     await page.goto('http://127.0.0.1:8765/#osobye-usloviya');
-    const offer = page.getByRole('region', { name: 'Особые условия для проекта' });
+    const offer = page.getByRole('region', { name: 'Получите специальные условия' });
     const foil = offer.locator('canvas');
     const code = offer.locator('code');
     const show = offer.getByRole('button', { name: 'Показать код' });
-    const copy = offer.getByRole('button', { name: 'Скопировать код' });
+    const request = offer.getByRole('link', { name: 'Добавить код в заявку' });
 
     const cookies = page.getByRole('button', { name: 'Отклонить', exact: true });
     if (await cookies.isVisible()) await cookies.click();
 
     await expect(code).toHaveAttribute('aria-hidden', 'true');
+    await expect(request).toBeHidden();
     await foil.scrollIntoViewIfNeeded();
     const bounds = await foil.boundingBox();
     const y = bounds.y + bounds.height / 2;
@@ -581,14 +582,27 @@ test('the home offer can be scratched by touch and opened by keyboard', async ({
     }
     await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
     await expect(foil).toBeHidden();
+    await expect(request).toBeVisible();
     await expect(offer.getByRole('status')).toHaveText('Ваш код: NZMO-START');
 
     await page.reload();
     await expect(show).toBeVisible();
     await show.focus();
     await page.keyboard.press('Enter');
-    await expect(copy).toBeFocused();
+    await expect(request).toBeFocused();
     await expect(code).not.toHaveAttribute('aria-hidden', 'true');
+
+    await request.press('Enter');
+    await expect(page).toHaveURL(/\/servis\/kak-my-rabotaem\/\?config=.*#cta$/);
+    const form = page.locator('#cta form');
+    await expect(form.locator('[data-config-echo]')).toHaveText('Считаем проект с кодом NZMO-START.');
+    await form.locator('[data-lead-contact]').fill('offer@example.com');
+    await form.locator('[name=agree]').check();
+    await form.locator('[data-lead-submit]').click();
+    await expect(page).toHaveURL(/\/spasibo\/$/);
+    const draft = await page.evaluate(() => JSON.parse(sessionStorage.getItem('nzmo_lead_v2')));
+    expect(draft.mode).toBe('preview');
+    expect(draft.payload.config).toBe('проект с кодом NZMO-START');
   } finally {
     await context.close();
   }
