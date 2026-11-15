@@ -1010,3 +1010,5 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 .case-photo-gallery{display:block;width:100%;height:auto;max-height:850px;object-fit:contain;background:#f4f3f1}
 
 .card__photo img{object-position:var(--photo-position,50% 50%)}
+
+@media (max-width:640px){#proekty.objects .stage__scrim{background:linear-gradient(to top,rgba(12,19,28,.89),rgba(12,19,28,.77) 33%,rgba(12,19,28,.64) 49%,transparent 72%)}}
