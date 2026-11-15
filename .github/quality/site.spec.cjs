@@ -80,6 +80,9 @@ test('product pages share delivery reviews enquiry FAQ order',async()=>{
     expect(delivery,file).toBeGreaterThan(-1);
     if(calc>=0){const numbered=sections.filter(s=>/<span class="n">[0-9]+<\/span>/.test(s));expect(numbered[1],file).toMatch(/^<section[^>]*id="kalkulyator"/);}
     const projects=sections.map((s,i)=>({s,i})).filter(({s})=>/class="[^"]*\bobjects\b/.test(s.split('>')[0]) || /^<section[^>]*id="raboty"/.test(s) || s.includes('data-case') || (/class="photos"/.test(s) && /(?:На объектах|Объекты|Наши проекты)/.test(s))).map(x=>x.i);
+    expect(projects.length,file).toBeLessThanOrEqual(1);
+    expect(html,file).not.toMatch(/<h2[^>]*>Объекты с этой системой<\/h2>/);
+    expect(html,file).not.toMatch(/<span class="l">(?:Состав|Характеристики)<\/span>/);
     if(projects.length) expect(delivery,file).toBe(projects.at(-1)+1);
     const rev=sections.findIndex(s=>s.includes('class="revs"'));
     expect(sections[rev+1],file).toMatch(/^<section[^>]*id="cta"/);
