@@ -8,7 +8,7 @@ test('home delivery follows projects and the hero links to the enquiry page',asy
   await expect(page.locator('#poryadok-raboty form')).toHaveCount(0);
   await expect(page.locator('#napravleniya a[href="/dveri/"] img')).toHaveAttribute('src',/door-nzmo-render/);
   await page.locator('main .cover').getByRole('link', { name: 'Посчитать проект', exact: true }).click();
-  await expect(page).toHaveURL(/\/#cta$/);
+  await expect(page).toHaveURL(/\/servis\/kak-my-rabotaem\/#cta$/);
   await expect(page.locator('#cta form')).toBeVisible();
 });
 test('partner role opens in a dialog and follows the enquiry', async ({page}) => {
@@ -113,7 +113,7 @@ test('every enquiry uses the approved outer layout and preserves its fields',asy
       expect(section[0],file).not.toContain('Что будет после заявки');
     }
   }
-  expect(count).toBe(159);
+  expect(count).toBe(158);
 });
 test('moving the configured enquiry keeps parameters linked to its form',async({page})=>{
   await page.goto('http://127.0.0.1:8765/ograzhdeniya/zabory-zhalyuzi/');

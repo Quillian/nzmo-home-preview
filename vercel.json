@@ -428,7 +428,7 @@
     },
     {
       "source": "/servis/raschet-proekta/",
-      "destination": "/#cta",
+      "destination": "/servis/kak-my-rabotaem/#cta",
       "permanent": true
     },
     {
@@ -453,7 +453,7 @@
     },
     {
       "source": "/dokumenty/tipovye-formy/",
-      "destination": "/#chto-prislat",
+      "destination": "/servis/kak-my-rabotaem/#chto-prislat",
       "permanent": true
     },
     {
