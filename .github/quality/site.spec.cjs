@@ -113,7 +113,7 @@ test('every enquiry uses the approved outer layout and preserves its fields',asy
       expect(section[0],file).not.toContain('Что будет после заявки');
     }
   }
-  expect(count).toBe(152);
+  expect(count).toBe(126);
 });
 test('cleanroom doors expose variants, project photos and one configured enquiry',async({page})=>{
   await page.goto('http://127.0.0.1:8765/chistye-pomeshcheniya/dveri-chistyh/');

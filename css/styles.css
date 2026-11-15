@@ -1012,3 +1012,19 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 .card__photo img{object-position:var(--photo-position,50% 50%)}
 
 @media (max-width:640px){#proekty.objects .stage__scrim{background:linear-gradient(to top,rgba(12,19,28,.89),rgba(12,19,28,.77) 33%,rgba(12,19,28,.64) 49%,transparent 72%)}}
+
+/* Selection cards for documented configurations with no comparable product photographs. */
+.k3--spec .k3__card{padding:18px;border:1px solid var(--border-soft);border-radius:10px;background:var(--white)}
+.k3--spec .k3__card:hover,.k3--spec .k3__card:focus-visible{border-color:var(--navy-900)}
+.k3--spec .k3__t{margin-top:0}
+.k3--spec .k3__f{font-size:14px}
+.kd.kd--spec{width:min(620px,calc(100vw - 32px));height:auto}
+.kd--spec .kd__in{grid-template-columns:minmax(0,1fr);height:auto}
+.kd--spec .kd__info{height:auto;max-height:min(720px,calc(100dvh - 32px));padding-right:54px}
+.kd__tabs{flex-wrap:wrap}
+.kd__kit li{margin:0 0 .5em}
+.kd__diagram{margin:16px 0}
+.kd__diagram img{display:block;width:100%;height:auto;background:#fafaf9}
+.kd__diagram figcaption{font-size:14px;margin-top:6px}
+.product-card-anchor{display:block;scroll-margin-top:88px}
+@media (max-width:640px){.kd.kd--spec{width:calc(100vw - 24px);max-height:calc(100dvh - 24px);margin:auto;border-radius:12px}.kd--spec .kd__info{max-height:calc(100dvh - 24px);padding:22px 48px 28px 18px}}
