@@ -8,8 +8,24 @@ test('home delivery follows projects and the hero links to the enquiry page',asy
   await expect(page.locator('#poryadok-raboty form')).toHaveCount(0);
   await expect(page.locator('#napravleniya a[href="/dveri/"] img')).toHaveAttribute('src',/door-nzmo-render/);
   await page.locator('main .cover').getByRole('link', { name: 'Посчитать проект', exact: true }).click();
-  await expect(page).toHaveURL(/\/servis\/raschet-proekta\/$/);
+  await expect(page).toHaveURL(/\/#cta$/);
   await expect(page.locator('#cta form')).toBeVisible();
+});
+test('partner role opens in a dialog and follows the enquiry', async ({page}) => {
+  await page.goto('http://127.0.0.1:8765/partneram/');
+  const trigger = page.locator('[data-partner-open="partner-engineer"]');
+  const dialog = page.locator('#partner-engineer');
+  await trigger.click();
+  await expect(dialog).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(dialog).not.toBeVisible();
+  await expect(trigger).toBeFocused();
+  await trigger.click();
+  await dialog.getByRole('link', {name: 'Отправить заявку', exact: true}).click();
+  await expect(page).toHaveURL(/\/partneram\/#cta$/);
+  await expect(dialog).not.toBeVisible();
+  await expect(page.locator('#cta input[name=config]')).toHaveValue('Сотрудничество — Проектным организациям');
+  await expect(page.locator('#cta [data-lead-contact]')).toBeFocused();
 });
 test('MAF photos open in a dialog and return keyboard focus',async({page})=>{
   await page.goto('http://127.0.0.1:8765/maf/skulptury/');
@@ -97,8 +113,7 @@ test('every enquiry uses the approved outer layout and preserves its fields',asy
       expect(section[0],file).not.toContain('Что будет после заявки');
     }
   }
-  // The 34 retired project pages no longer host their own enquiry forms.
-  expect(count).toBe(172);
+  expect(count).toBe(159);
 });
 test('moving the configured enquiry keeps parameters linked to its form',async({page})=>{
   await page.goto('http://127.0.0.1:8765/ograzhdeniya/zabory-zhalyuzi/');

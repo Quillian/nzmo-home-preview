@@ -420,6 +420,76 @@
       "source": "/obekty/himki/",
       "destination": "/obekty/#project-himki",
       "permanent": true
+    },
+    {
+      "source": "/servis/obraztsy/",
+      "destination": "/servis/kak-my-rabotaem/#obraztsy",
+      "permanent": true
+    },
+    {
+      "source": "/servis/raschet-proekta/",
+      "destination": "/#cta",
+      "permanent": true
+    },
+    {
+      "source": "/dokumenty/",
+      "destination": "/servis/garantiya-i-kachestvo/#dokumenty",
+      "permanent": true
+    },
+    {
+      "source": "/dokumenty/sertifikaty/",
+      "destination": "/servis/garantiya-i-kachestvo/#dokumenty",
+      "permanent": true
+    },
+    {
+      "source": "/dokumenty/katalogi/",
+      "destination": "/files/nzmo-katalog-2026.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/dokumenty/instruktsii/",
+      "destination": "/servis/montazh/",
+      "permanent": true
+    },
+    {
+      "source": "/dokumenty/tipovye-formy/",
+      "destination": "/#chto-prislat",
+      "permanent": true
+    },
+    {
+      "source": "/o-zavode/proizvodstvo/",
+      "destination": "/o-zavode/#proizvodstvo",
+      "permanent": true
+    },
+    {
+      "source": "/o-zavode/konstruktorskiy-otdel/",
+      "destination": "/o-zavode/#konstruktorskiy-otdel",
+      "permanent": true
+    },
+    {
+      "source": "/o-zavode/novosti/",
+      "destination": "/stati/",
+      "permanent": true
+    },
+    {
+      "source": "/o-zavode/rekvizity/",
+      "destination": "/kontakty/#rekvizity",
+      "permanent": true
+    },
+    {
+      "source": "/partneram/dileram/",
+      "destination": "/partneram/#partner-dealer",
+      "permanent": true
+    },
+    {
+      "source": "/partneram/montazhnikam/",
+      "destination": "/partneram/#partner-installer",
+      "permanent": true
+    },
+    {
+      "source": "/partneram/proektnym-organizatsiyam/",
+      "destination": "/partneram/#partner-engineer",
+      "permanent": true
     }
   ],
   "headers": [
