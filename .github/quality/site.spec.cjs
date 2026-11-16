@@ -28,6 +28,27 @@ for (const viewport of [{width: 1280, height: 720}, {width: 320, height: 568}]) 
   });
 }
 
+test('home factory cards switch by click and keyboard on desktop and mobile', async ({page}) => {
+  await page.setViewportSize({width: 1440, height: 900});
+  await page.addInitScript(() => sessionStorage.setItem('nzmo-cookie-no', '1'));
+  await page.goto('http://127.0.0.1:8765/#zavod');
+  const factory = page.locator('#zavod');
+  const tabs = factory.getByRole('tab');
+  await expect(tabs).toHaveCount(5);
+  await expect(factory.getByRole('tabpanel')).toContainText('Производственный цех');
+  await factory.getByRole('tab', {name: 'Гибка'}).click();
+  await expect(factory.getByRole('tabpanel')).toContainText('Гибка металла');
+  await factory.getByRole('tab', {name: 'Гибка'}).press('ArrowRight');
+  await expect(factory.getByRole('tab', {name: 'Сварка'})).toBeFocused();
+  await expect(factory.getByRole('tabpanel')).toContainText('Сварка и сборка');
+  await page.setViewportSize({width: 390, height: 844});
+  await factory.getByRole('tab', {name: 'Окраска'}).click();
+  const current = factory.getByRole('tabpanel');
+  await expect(current).toHaveCount(1);
+  await expect(current).toContainText('Порошковая окраска');
+  await expect.poll(() => current.locator('img').evaluate(img => img.complete && img.naturalWidth > 0)).toBe(true);
+});
+
 test('partner role opens in a dialog and follows the enquiry', async ({page}) => {
   await page.goto('http://127.0.0.1:8765/partneram/');
   const trigger = page.locator('[data-partner-open="partner-engineer"]');

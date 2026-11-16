@@ -1,3 +1,28 @@
+#dostavka .dlv__foot {
+  max-width: none;
+}
+
+.geo-section .geo-list {
+  margin-top: 8px;
+}
+
+.geo-section .geo-list summary {
+  width: fit-content;
+  margin-inline: auto;
+  padding-block: 12px;
+  font: 500 14px/20px var(--font-text);
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.geo-section .geo-list p {
+  margin-inline: auto;
+}
+
+.home-footer .footer__bottom {
+  background: var(--navy-900);
+}
+
 .home-process {
   border-block: 1px solid var(--border-hair);
   scroll-margin-top: var(--header-h);
