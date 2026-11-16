@@ -43,7 +43,13 @@
 
 .factory-selector__panel > img {
   object-fit: cover;
+  object-position: var(--factory-photo-focus, center);
 }
+
+#factory-panel-rezka { --factory-photo-focus: 54% center; }
+#factory-panel-gibka { --factory-photo-focus: 39% center; }
+#factory-panel-svarka { --factory-photo-focus: 61% center; }
+#factory-panel-okraska { --factory-photo-focus: 44% center; }
 
 .factory-selector__panel::after {
   content: "";
