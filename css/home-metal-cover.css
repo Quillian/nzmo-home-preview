@@ -1,6 +1,10 @@
 :root { --home-cover-color: #0a1018; }
 .home-metal-cover { background: var(--home-cover-color); }
 .home-metal-cover .cover__img { opacity: 1; }
+.home-metal-cover :is(.cover__img, .home-metal-cover__canvas) {
+  /* Fade the artwork before its composited edge meets the product strip. */
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 32px), transparent calc(100% - 8px));
+}
 .home-metal-cover__canvas {
   position: absolute;
   inset: 0;
