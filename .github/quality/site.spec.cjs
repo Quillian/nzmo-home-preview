@@ -11,6 +11,23 @@ test('home delivery follows projects and the hero links to the enquiry page',asy
   await expect(page).toHaveURL(/\/servis\/kak-my-rabotaem\/#cta$/);
   await expect(page.locator('#cta form')).toBeVisible();
 });
+
+for (const viewport of [{width: 1280, height: 720}, {width: 320, height: 568}]) {
+  test(`all eight home category icons fit the first screen at ${viewport.width}×${viewport.height}`, async ({page}) => {
+    await page.setViewportSize(viewport);
+    await page.addInitScript(() => sessionStorage.setItem('nzmo-cookie-no', '1'));
+    await page.goto('http://127.0.0.1:8765/');
+    const categories = page.getByRole('navigation', {name: 'Категории продукции НЗМО'});
+    const icons = categories.locator('img');
+    await expect(icons).toHaveCount(8);
+    await expect.poll(() => icons.evaluateAll(images => images.every(image => {
+      const rect = image.getBoundingClientRect();
+      return image.complete && image.naturalWidth > 0 && rect.top >= 0 && rect.bottom <= innerHeight;
+    }))).toBe(true);
+    await expect(page.locator('.home-intro + #obekty')).toBeAttached();
+  });
+}
+
 test('partner role opens in a dialog and follows the enquiry', async ({page}) => {
   await page.goto('http://127.0.0.1:8765/partneram/');
   const trigger = page.locator('[data-partner-open="partner-engineer"]');
