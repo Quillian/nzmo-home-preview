@@ -5,7 +5,7 @@
   --sample-width: calc(var(--cell-size) * var(--product-scale));
   --sample-height: calc(var(--sample-width) * .93);
   background: var(--white);
-  padding-block: clamp(22px, 2vw, 48px) clamp(21px, 1.7vw, 42px);
+  padding-block: clamp(22px, 2vw, 48px) 0;
 }
 
 .home-category-strip__scroll {
@@ -21,7 +21,7 @@
   min-width: calc(8 * var(--link-min-width));
   list-style: none;
   margin: 0;
-  padding: 0 0 9px;
+  padding: 0 0 clamp(39px, 2.8vw, 48px);
 }
 
 .home-category-strip__links li {
@@ -30,8 +30,6 @@
 }
 
 .home-category-strip__link {
-  --sample-saturation: 0;
-  --sample-brightness: .84;
   position: relative;
   display: block;
   height: 100%;
@@ -51,14 +49,26 @@
   height: var(--object-height, 96%);
   object-fit: contain;
   translate: -50% -50%;
-  transition: filter .24s ease-out;
-  filter: saturate(var(--sample-saturation)) brightness(var(--sample-brightness))
-    drop-shadow(0 2px 2px rgb(21 35 49 / 20%));
+  filter: drop-shadow(0 2px 2px rgb(21 35 49 / 20%));
 }
 
-.home-category-strip__link:is(:focus-visible, :active) {
-  --sample-saturation: 1;
-  --sample-brightness: 1;
+.home-category-strip__label {
+  position: absolute;
+  inset-block-start: calc(100% + 4px);
+  left: 50%;
+  translate: -50%;
+  inline-size: max-content;
+  max-inline-size: 126px;
+  color: var(--steel-500);
+  font: 500 clamp(12px, 1.02vw, 16px)/1.18 var(--font-text);
+  text-align: center;
+  opacity: 0;
+  transition: opacity .18s ease-out;
+  pointer-events: none;
+}
+
+.home-category-strip__link:is(:focus-visible, :active) .home-category-strip__label {
+  opacity: 1;
 }
 
 .home-category-strip__link:focus-visible {
@@ -69,9 +79,8 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .home-category-strip__link:hover {
-    --sample-saturation: 1;
-    --sample-brightness: 1;
+  .home-category-strip__link:hover .home-category-strip__label {
+    opacity: 1;
   }
 }
 
@@ -103,7 +112,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .home-category-strip__sample img {
+  .home-category-strip__label {
     transition: none;
   }
 }
