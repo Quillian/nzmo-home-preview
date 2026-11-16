@@ -23,6 +23,11 @@
   background: var(--navy-900);
 }
 
+.home-footer .footer__addr a[href^="mailto:"] {
+  text-decoration: underline;
+  text-underline-offset: .18em;
+}
+
 .home-process {
   border-block: 1px solid var(--border-hair);
   scroll-margin-top: var(--header-h);
