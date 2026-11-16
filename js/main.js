@@ -149,8 +149,10 @@
         var engineer = a.dataset.ctaKind === "engineer";
         var action = engineer ? "Запросить консультацию" : "Получить расчёт";
         var submit = form.querySelector("[data-lead-submit]");
+        var lead = c.querySelector("[data-cta-lead]");
         form.dataset.lead = engineer ? "engineer" : "quote";
         heading.textContent = engineer ? "Обсудите задачу с инженером" : heading.dataset.quoteHeading;
+        lead.textContent = engineer ? "Можно приложить план или спецификацию. Инженер подскажет, какие данные нужны для подбора комплекта." : lead.dataset.quoteLead;
         submit.textContent = submit.dataset.leadAction = action;
         if (a.hasAttribute("data-cta-details")) form.querySelector(".lead-preferences").open = true;
         if (a.hasAttribute("data-cta-kind")) heading.focus({ preventScroll: true });
