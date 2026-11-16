@@ -5,9 +5,11 @@
   const tablist = selector.querySelector('[role="tablist"]');
   const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
   const panels = tabs.map(tab => document.getElementById(tab.getAttribute('aria-controls')));
-  let active = 0;
+  const wideLayout = window.matchMedia('(min-width: 901px)');
+  let active = -1;
 
   function select(index) {
+    if (active === index) return;
     active = index;
     tabs.forEach((tab, position) => {
       const selected = position === index;
@@ -21,11 +23,22 @@
   }
 
   tabs.forEach((tab, index) => tab.addEventListener('click', () => select(index)));
+
+  // Follow the mouse itself as the photo columns resize beneath it.
+  tablist.addEventListener('pointermove', event => {
+    if (event.pointerType !== 'mouse' || event.buttons || !wideLayout.matches) return;
+    if (panels[active].contains(document.activeElement)) return;
+    const index = tabs.indexOf(event.target.closest('[role="tab"]'));
+    if (index !== -1) select(index);
+  });
+
   tablist.addEventListener('keydown', event => {
+    const index = tabs.indexOf(event.target);
+    if (index === -1) return;
     let next;
     switch (event.key) {
-      case 'ArrowRight': next = (active + 1) % tabs.length; break;
-      case 'ArrowLeft': next = (active + tabs.length - 1) % tabs.length; break;
+      case 'ArrowRight': next = (index + 1) % tabs.length; break;
+      case 'ArrowLeft': next = (index + tabs.length - 1) % tabs.length; break;
       case 'Home': next = 0; break;
       case 'End': next = tabs.length - 1; break;
       default: return;
@@ -35,7 +48,7 @@
     tabs[next].focus();
   });
 
-  select(active);
+  select(0);
   selector.dataset.ready = '';
   tablist.hidden = false;
 })();
