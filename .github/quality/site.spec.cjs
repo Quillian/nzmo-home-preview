@@ -122,14 +122,16 @@ test('cleanroom doors expose variants, project photos and one configured enquiry
   await page.goto('http://127.0.0.1:8765/chistye-pomeshcheniya/dveri-chistyh/');
   await expect(page.locator('main form[data-lead-v2]')).toHaveCount(1);
   await expect(page.locator('#tipy .k3__card')).toHaveCount(3);
+  await expect(page.locator('[data-kd="kd-dver-odna"] img')).toHaveAttribute('src', '/img/ngu-cleanroom-dver-s-oknom-800.webp');
   await expect(page.locator('#proekty + #dostavka')).toBeAttached();
   await page.locator('[data-stage-next]').click();
   await expect(page.locator('[data-stage-count]')).toHaveText('2 / 3');
+  await expect(page.locator('[data-stage-spec]')).toHaveText('Распашная дверь с прямоугольным окном');
   await page.locator('[data-kd="kd-dver-otkat"]').click();
   const detail=page.locator('dialog[open]');
-  await expect(detail.getByRole('heading')).toHaveText('Откатная герметичная');
+  await expect(detail.getByRole('heading')).toHaveText('Раздвижная');
   await detail.locator('[data-kd-cta]').click();
-  await expect(page.locator('#cta [name=config]')).toHaveValue('откатная герметичная');
+  await expect(page.locator('#cta [name=config]')).toHaveValue('раздвижная');
 });
 test('moving the configured enquiry keeps parameters linked to its form',async({page})=>{
   await page.goto('http://127.0.0.1:8765/ograzhdeniya/zabory-zhalyuzi/');
