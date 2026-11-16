@@ -170,7 +170,7 @@
   if(accepted){
     root.classList.add('is-confirmed');root.querySelector('[data-receipt-title]').textContent='Спасибо, заявку получили';
     root.querySelector('[data-receipt-status]').textContent='Заявка принята';
-    root.querySelector('[data-receipt-description]').textContent='Свяжемся с вами в течение рабочего дня'+(draft.payload.contact_method?'. Выбранный способ: '+methods[draft.payload.contact_method].toLowerCase()+'.':'.');
+    root.querySelector('[data-receipt-description]').textContent='Свяжемся с вами в течение 30 минут'+(draft.payload.contact_method?'. Выбранный способ: '+methods[draft.payload.contact_method].toLowerCase()+'.':'.');
     root.querySelector('[data-receipt-notice]').hidden=true;
     if(transport() && typeof transport().append==='function'){
       form.querySelector('[data-details-submit]').textContent='Дополнить заявку';

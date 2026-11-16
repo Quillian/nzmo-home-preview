@@ -156,7 +156,7 @@ img/case-hanty-mansiysk-20261109-360.webp,3c29c36db040e62371ce670fb86ec16ab65a67
 img/case-hanty-mansiysk-20261109-800.webp,820ced3aac0f89baabfd2e64c46861f911df82382469b7b6f2b5534956114a1c,106574,1,index.html,Скульптура «Биатлонист» производства НЗМО,0,0
 img/case-himki-20261109-1600.webp,2477d715f110b43b770ff9c4f7fadec050c72a1eea8d3ab4a617ecaa6daddd1a,418204,0,,,0,0
 img/case-himki-20261109-360.webp,42d118d105524ff19f0916f3e48caa1bb8398905d943fb52cc5623dd40510206,44384,0,,,0,0
-img/case-himki-20261109-800.webp,d7bf4dc4db955ff5b367f5401af75fd0d0f529aae2a214f2e760f36f4bc359b6,247246,1,nestandart/index.html,Парк имени Льва Толстого,0,0
+img/case-himki-20261109-800.webp,d7bf4dc4db955ff5b367f5401af75fd0d0f529aae2a214f2e760f36f4bc359b6,247246,0,,,0,0
 img/case-kramz-20261109-1600.webp,f9e3744f5195edcf18a01d669ef86344c7326bd3280a8dde19a38906b18b76d2,103638,0,,,0,0
 img/case-kramz-20261109-360.webp,c24acb163acc480973413f696da6e2aabfcc54a1bc678844613f65e43719516a,16570,0,,,0,0
 img/case-kramz-20261109-800.webp,537a5fa2a8136bc611c1faa27b36ad9ed4a4aebbff4fa26deba5d21925964d26,69782,1,resheniya/promyshlennye-obekty/index.html,КРАМЗ — Красноярский металлургический завод,0,0
@@ -291,8 +291,8 @@ img/factory-selector/poroshkovaya-okraska-kassety-768.webp,862d75c3d976ef1aba1f2
 img/factory-selector/svarka-stalnyh-profiley-1440.webp,9216f207976edd5d2f67fc819da81cad69af4fc6173c0fcc214e9103c58ecf7f,79808,1,index.html,Сварка стальных профилей под прямым углом,0,0
 img/factory-selector/svarka-stalnyh-profiley-768.webp,4fe1bff0394adb3f666480ac85fb9538004da8714e927aa05039ea23f08b749c,33394,1,index.html,Сварка стальных профилей под прямым углом,0,0
 img/factory_a-1200.webp,f1332f52ac6423bfb6ed93d30acd633d2208bf12ee9de54be1b29c7c024716fe,125346,0,,,0,0
-img/factory_a-1600.webp,ef309be10518d273a9c377c4b0dbbe33e6f7c1fc8cc6959cf80d7e0b9962f6fb,143376,0,,,0,0
-img/factory_a-800.webp,93ab27a66a0159d71bed8cb3b3f45bab583d581aeae51c495be75e17cbfb2941,63202,0,,,0,0
+img/factory_a-1600.webp,ef309be10518d273a9c377c4b0dbbe33e6f7c1fc8cc6959cf80d7e0b9962f6fb,143376,1,nestandart/index.html,Участок раскроя и гибки в цехе НЗМО,0,0
+img/factory_a-800.webp,93ab27a66a0159d71bed8cb3b3f45bab583d581aeae51c495be75e17cbfb2941,63202,1,nestandart/index.html,Участок раскроя и гибки в цехе НЗМО,0,0
 img/factory_b-800.webp,54c1be61c1ad78545be92011b437491fd69fb1ef595128d44ed928428a5800c5,58060,0,,,0,0
 img/fence-1000-clean.png,27e1c6696920449c6fc1d0b22b58bf87f2ef1f76fe0e5950108542382ca9bff2,523925,1,ograzhdeniya/zabory-zhalyuzi/index.html,"Забор-жалюзи — состав системы, схема",0,0
 img/fence-800-clean.png,ab27ead872f49da82f020d96421127b47e3c09110c58b0f60c859ba6fec7f23b,341214,0,,,0,0
@@ -5461,8 +5461,8 @@ img/portfolio-project-hanty-mansiysk-3-1600.webp,0decde5e7da46af26d47aeb81a4c0e9
 img/portfolio-project-hanty-mansiysk-3-360.webp,5467ea784c06e8ef7cc5145ef1b1378a011de1ec4456cb3b9a9e869b5b217eb4,9700,1,obekty/index.html,,0,1
 img/portfolio-project-hanty-mansiysk-3-800.webp,a663a155e337dd5e81c22da44e821bf90080799dba0697bac22e91c7b62d64be,30294,1,obekty/index.html,Монтаж скульптуры,0,0
 img/portfolio-project-himki-1-1600.webp,2477d715f110b43b770ff9c4f7fadec050c72a1eea8d3ab4a617ecaa6daddd1a,418204,2,o-zavode/index.html | obekty/index.html,Металлическое панно в парке | Парк имени Льва Толстого · Химки,0,0
-img/portfolio-project-himki-1-360.webp,d091ce97d274107f807241e12bdbe0b9f8237c264de31fd179872241b1f63a15,40870,2,o-zavode/index.html | obekty/index.html,,0,2
-img/portfolio-project-himki-1-800.webp,293bb4cb22b35bc0595fde55a6ecacd0a43c8b6bb6f883c3110d5097aede2b21,182434,1,obekty/index.html,"Металлическое панно в парке | Парк имени Льва Толстого, Химки",0,0
+img/portfolio-project-himki-1-360.webp,d091ce97d274107f807241e12bdbe0b9f8237c264de31fd179872241b1f63a15,40870,3,nestandart/index.html | o-zavode/index.html | obekty/index.html,Портрет Льва Толстого на стене входной группы парка,0,2
+img/portfolio-project-himki-1-800.webp,293bb4cb22b35bc0595fde55a6ecacd0a43c8b6bb6f883c3110d5097aede2b21,182434,2,nestandart/index.html | obekty/index.html,"Металлическое панно в парке | Парк имени Льва Толстого, Химки | Портрет Льва Толстого на стене входной группы парка",0,0
 img/portfolio-project-himki-2-1600.webp,b6e678d122ed191a21c4f3dc82432dc0c4d9575bbec118a0e1e4f989f16083a9,217472,1,obekty/index.html,Перфорация и портрет на панно,0,0
 img/portfolio-project-himki-2-360.webp,ccaa4ed1e6ae3554ea4543fb627ceb0e31cc42513464e712511fe859befc1dda,14970,1,obekty/index.html,,0,1
 img/portfolio-project-himki-2-800.webp,b4e76425c2de385c8a201b2a0417178379a7d5347288b3dad6d888aa7e07e58b,60214,1,obekty/index.html,Перфорация и портрет на панно,0,0
@@ -5491,8 +5491,8 @@ img/portfolio-project-krizht-3-1600.webp,1f44533f10bc0552ea78ab582d51107acae423b
 img/portfolio-project-krizht-3-360.webp,e6a5b37c1682267a17c5e2e6f7461f597769e7b4b1d051edf6d59aa7f6711925,9798,1,obekty/index.html,,0,1
 img/portfolio-project-krizht-3-800.webp,16b128c01f5ffd14e79e2ec68e27f77b0c899b2c9005c2cece757523d93ed375,29546,1,obekty/index.html,Линейный свет в поле рейки,0,0
 img/portfolio-project-krylya-sibiri-1-1600.webp,2d3430673fdf06a8bb0a52f6ff120aa7ffecf37e974dfc1578a30d17a02a0cd5,361016,2,o-zavode/index.html | obekty/index.html,Зеркальная «Геометка» на чаше фонтана | Сквер «Крылья Сибири» · Новосибирск,0,0
-img/portfolio-project-krylya-sibiri-1-360.webp,5cdd2f54650b3d24926ff63a22d70475497a9d3ca5a407d9a39db5b2e475f703,23358,2,o-zavode/index.html | obekty/index.html,,0,2
-img/portfolio-project-krylya-sibiri-1-800.webp,784d025c7993447e3dadbfed0fbcffe52fe35c496a76c0546b945568d129b43b,98158,1,obekty/index.html,"Зеркальная «Геометка» на чаше фонтана | Сквер «Крылья Сибири», Новосибирск",0,0
+img/portfolio-project-krylya-sibiri-1-360.webp,5cdd2f54650b3d24926ff63a22d70475497a9d3ca5a407d9a39db5b2e475f703,23358,3,nestandart/index.html | o-zavode/index.html | obekty/index.html,Зеркальная скульптура «Геометка» в чаше фонтана,0,2
+img/portfolio-project-krylya-sibiri-1-800.webp,784d025c7993447e3dadbfed0fbcffe52fe35c496a76c0546b945568d129b43b,98158,2,nestandart/index.html | obekty/index.html,"Зеркальная «Геометка» на чаше фонтана | Зеркальная скульптура «Геометка» в чаше фонтана | Сквер «Крылья Сибири», Новосибирск",0,0
 img/portfolio-project-krylya-sibiri-2-1600.webp,cb9563765b9eb630f401dee41d9c3200bd57f8c4f565dee40aa5723190ccc297,506454,1,obekty/index.html,Зеркальная сфера в сквере,0,0
 img/portfolio-project-krylya-sibiri-2-360.webp,fe03e117be5aca38cc59d2f4bcaf5813b1ba8b749d27e73e9567a2cb087f0059,22066,1,obekty/index.html,,0,1
 img/portfolio-project-krylya-sibiri-2-800.webp,970d3583f7b3a8a674f43f9b56e7cdfd66792f63287b9079ed7c3c68a89d8dc6,103244,1,obekty/index.html,Зеркальная сфера в сквере,0,0
@@ -5542,8 +5542,8 @@ img/portfolio-project-montazhny-kolledzh-1-1600.webp,2282f7c820ad3e5ef81db8e1af9
 img/portfolio-project-montazhny-kolledzh-1-360.webp,05784046c4140d1bc89b5126bc3b4ad6b92c60cb17c1dc567ba1bdbf5c29fdac,27216,1,o-zavode/index.html,,0,1
 img/portfolio-project-montazhny-kolledzh-1-800.webp,6777071d4a541a0bce03e16a5e51ed039ecb71bad6db3c3eea83a034a957a039,95244,1,obekty/index.html,"Монтажный колледж, Новосибирск | Перфорация металлических кассет колледжа",0,0
 img/portfolio-project-moy-port-1-1600.webp,2ed1bdc0e17f7ebd9d72c8ffbcb2ad1bdffb46d67e2073c096dad60b43e7338c,141656,2,o-zavode/index.html | obekty/index.html,Волнообразные рейки вокруг круглого фонаря | ТЦ «Мой Порт» · Ижевск,0,0
-img/portfolio-project-moy-port-1-360.webp,0c84e45028a63b5c624e02058edc851178ae690e7573ef37fd09f51a2f1627d3,12936,2,o-zavode/index.html | obekty/index.html,,0,2
-img/portfolio-project-moy-port-1-800.webp,60c98ad372275cb4c0842e013822ca701e4919f07d87d0f3526d2ff478642528,38790,1,obekty/index.html,"Волнообразные рейки вокруг круглого фонаря | ТЦ «Мой Порт», Ижевск",0,0
+img/portfolio-project-moy-port-1-360.webp,0c84e45028a63b5c624e02058edc851178ae690e7573ef37fd09f51a2f1627d3,12936,3,nestandart/index.html | o-zavode/index.html | obekty/index.html,Волнообразный потолок из металлических реек в атриуме,0,2
+img/portfolio-project-moy-port-1-800.webp,60c98ad372275cb4c0842e013822ca701e4919f07d87d0f3526d2ff478642528,38790,2,nestandart/index.html | obekty/index.html,"Волнообразные рейки вокруг круглого фонаря | Волнообразный потолок из металлических реек в атриуме | ТЦ «Мой Порт», Ижевск",0,0
 img/portfolio-project-moy-port-2-1600.webp,6a7ba48eec65a13c3e45a9ba2af55bc995b303fc35a169eb7bb377736f9038b5,48512,1,obekty/index.html,Белые рейки в переходе,0,0
 img/portfolio-project-moy-port-2-360.webp,216bf624ee599d3d24ecfed4b4f8ac59a23cae658342c075be257f80cdc03b9d,5522,1,obekty/index.html,,0,1
 img/portfolio-project-moy-port-2-800.webp,1fdc57030c2afb5f9c70bbaae038bdd4cf32b59702198c23a83a94e28d50f5b0,14718,1,obekty/index.html,Белые рейки в переходе,0,0
@@ -5635,8 +5635,8 @@ img/portfolio-project-pronails-2-1600.webp,389b9b768a254aa2f59a0edc99e096392a63c
 img/portfolio-project-pronails-2-360.webp,8d544862fc2b932db573b7958a6fa88572ee5b71c59599ac8a81f5f0716efa8a,15750,1,obekty/index.html,,0,1
 img/portfolio-project-pronails-2-800.webp,a5e9739fa358e383d8a6cb5c877870dbce92d98b4f3e9fb26937a96a2cf31344,56188,1,obekty/index.html,Потолок со стороны входа,0,0
 img/portfolio-project-sportivnaya-1-1600.webp,b0180c74879e57b96d8ae00b0826eadd5fac3d883f6ab3d26e7becde4a840234,274344,2,o-zavode/index.html | obekty/index.html,Декоративный металлический элемент на колонне станции | Станция метро «Спортивная» · Новосибирск,0,0
-img/portfolio-project-sportivnaya-1-360.webp,0055655be142197afc4aecb18c93f32adfc8348b8694d0053fd77d3562f9d082,22780,2,o-zavode/index.html | obekty/index.html,,0,2
-img/portfolio-project-sportivnaya-1-800.webp,aac40ab61038ca4011c6f2f1555aaf47ce8091033f0ec521c02a16db22f14406,85920,1,obekty/index.html,"Декоративный металлический элемент на колонне станции | Станция метро «Спортивная», Новосибирск",0,0
+img/portfolio-project-sportivnaya-1-360.webp,0055655be142197afc4aecb18c93f32adfc8348b8694d0053fd77d3562f9d082,22780,3,nestandart/index.html | o-zavode/index.html | obekty/index.html,Фигура хоккеиста на колонне станции метро «Спортивная»,0,2
+img/portfolio-project-sportivnaya-1-800.webp,aac40ab61038ca4011c6f2f1555aaf47ce8091033f0ec521c02a16db22f14406,85920,2,nestandart/index.html | obekty/index.html,"Декоративный металлический элемент на колонне станции | Станция метро «Спортивная», Новосибирск | Фигура хоккеиста на колонне станции метро «Спортивная»",0,0
 img/portfolio-project-sportivnaya-2-1600.webp,738a0efb1bf389956c89be68ef39095b1c7d55291b9deddd5170286277bc2a1a,145472,1,obekty/index.html,Силуэт спортсмена в облицовке,0,0
 img/portfolio-project-sportivnaya-2-360.webp,138a41e67e5270a454621ca5cb2ad1b1fc4b5e9887b5b148fa1cc1a3e79f2cf1,15070,1,obekty/index.html,,0,1
 img/portfolio-project-sportivnaya-2-800.webp,1bddd9da9a4ba102d7129aef7f99461521dc4842656d664676b3e00e99036d37,46018,1,obekty/index.html,Силуэт спортсмена в облицовке,0,0
@@ -5668,8 +5668,8 @@ img/portfolio-project-taiga-3-1600.webp,c5eb80d7628ba7ab6470b3cc5d74682f7f3e5e57
 img/portfolio-project-taiga-3-360.webp,c4fc21a0a5fb40b6be91418d6ee8f4b6564e334edce8b58f784f6d07820f292c,15288,1,obekty/index.html,,0,1
 img/portfolio-project-taiga-3-800.webp,626e27711c4cfcd3220ec9bb9558d78a1d334bc212369eafb3868a5db309d511,73550,1,obekty/index.html,Рейка в коридоре,0,0
 img/portfolio-project-tolmachevo-1-1600.webp,8304d7aa6e181a33a27a6b3af9351df30be8399942cdea4a97c7dee38674a5a1,270540,2,o-zavode/index.html | obekty/index.html,Аэропорт «Толмачёво» · Новосибирск | Облицованная металлом колонна в зале терминала,0,0
-img/portfolio-project-tolmachevo-1-360.webp,2f025de0fb5e3f70c113e16bfbc1b5d005122b28145b1690f39c8a0ce6cb27b2,20334,2,o-zavode/index.html | obekty/index.html,,0,2
-img/portfolio-project-tolmachevo-1-800.webp,70d3f65eeab193a3cd7abe06ed91caa5dfa7d716c5fa063b9d05fc3b6a827a52,69208,2,obekty/index.html | partneram/index.html,"Аэропорт «Толмачёво», Новосибирск | Металлическая облицовка колонны в терминале Толмачёво | Облицованная металлом колонна в зале терминала",0,0
+img/portfolio-project-tolmachevo-1-360.webp,2f025de0fb5e3f70c113e16bfbc1b5d005122b28145b1690f39c8a0ce6cb27b2,20334,3,nestandart/index.html | o-zavode/index.html | obekty/index.html,Металлическая облицовка колонн в новом терминале Толмачёво,0,2
+img/portfolio-project-tolmachevo-1-800.webp,70d3f65eeab193a3cd7abe06ed91caa5dfa7d716c5fa063b9d05fc3b6a827a52,69208,3,nestandart/index.html | obekty/index.html | partneram/index.html,"Аэропорт «Толмачёво», Новосибирск | Металлическая облицовка колонн в новом терминале Толмачёво | Металлическая облицовка колонны в терминале Толмачёво | Облицованная металлом колонна в зале терминала",0,0
 img/portfolio-project-tolmachevo-2-1600.webp,93612744976fce98ab749c0775baaa0e6e114803043a64bdada71b0848181242,564518,1,obekty/index.html,Облицовка колонны со стороны зала,0,0
 img/portfolio-project-tolmachevo-2-360.webp,e1a1dae5813690ebfd9c91698d5bf0ee648e4b2893c215c580b6994774558fb4,29284,1,obekty/index.html,,0,1
 img/portfolio-project-tolmachevo-2-800.webp,3a5912282602e07361973bffe5486427a3155cac3de1d9269ffdd3406b62e5e7,123592,1,obekty/index.html,Облицовка колонны со стороны зала,0,0
@@ -5680,8 +5680,8 @@ img/portfolio-project-tolmachevo-4-1600.webp,12a95cdc84da3b316ecf5b21c4ce6eb615c
 img/portfolio-project-tolmachevo-4-360.webp,852fde1dba968b2c24d0a4959a7c0d88ed952d0282b597d8bfcd219aa4f44661,5284,1,obekty/index.html,,0,1
 img/portfolio-project-tolmachevo-4-800.webp,0b8ce2d6b2afd2622627a92a888cec7d5b6f1cf39555bbbdf6c0d1f03f0d8a6e,19450,1,obekty/index.html,Стык панелей из нержавеющей стали,0,0
 img/portfolio-project-tomsk-airport-1-1600.webp,309e70f9fef7ffe12b6d5c9747b71ca3d33f0c22c0d1b0bf38ae4ed37e8c46d7,225394,2,o-zavode/index.html | obekty/index.html,Аэропорт имени Камова · Томск | Мебель по проекту в зоне ожидания,0,0
-img/portfolio-project-tomsk-airport-1-360.webp,31e404bc2fd2366170a00a1aeea9e8673e9b7811681221e117131cf0e475dbb5,19888,2,o-zavode/index.html | obekty/index.html,,0,2
-img/portfolio-project-tomsk-airport-1-800.webp,9721913200fac59eeea038e52527583ce2c54c7adf16c5bd7817124685515da1,73190,1,obekty/index.html,"Аэропорт имени Камова, Томск | Мебель по проекту в зоне ожидания",0,0
+img/portfolio-project-tomsk-airport-1-360.webp,31e404bc2fd2366170a00a1aeea9e8673e9b7811681221e117131cf0e475dbb5,19888,3,nestandart/index.html | o-zavode/index.html | obekty/index.html,Мебель по индивидуальному проекту в зале ожидания аэропорта Томска,0,2
+img/portfolio-project-tomsk-airport-1-800.webp,9721913200fac59eeea038e52527583ce2c54c7adf16c5bd7817124685515da1,73190,2,nestandart/index.html | obekty/index.html,"Аэропорт имени Камова, Томск | Мебель по индивидуальному проекту в зале ожидания аэропорта Томска | Мебель по проекту в зоне ожидания",0,0
 img/portfolio-project-tomsk-airport-2-1600.webp,3eedabb4093799823d93f5397897d53c16afd234877d0b9200326d9ecad1f80e,187318,1,obekty/index.html,Мягкие группы и столы в терминале,0,0
 img/portfolio-project-tomsk-airport-2-360.webp,82c2b6ec22c4e31d673bb6607a89966af2bcbfed6113808f36234583a8ef3fe9,13606,1,obekty/index.html,,0,1
 img/portfolio-project-tomsk-airport-2-800.webp,55712578fcdad6e7d6bfe29936f7b20cf10b861e271056ce6245593f3b111771,59116,1,obekty/index.html,Мягкие группы и столы в терминале,0,0

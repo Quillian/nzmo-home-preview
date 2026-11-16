@@ -66,6 +66,28 @@ test('cleanroom consultation prepares the engineer draft and opens optional atta
   await expect(form.locator('[name=config]')).toHaveValue('');
 });
 
+test('the sample request opens a separate form with the sample topic', async ({page}) => {
+  await page.setViewportSize({width: 390, height: 844});
+  await page.addInitScript(() => sessionStorage.setItem('nzmo-cookie-no', '1'));
+  await page.goto('http://127.0.0.1:8765/servis/kak-my-rabotaem/');
+  const opener = page.locator('#obraztsy').getByRole('button', {name: 'Запросить образцы'});
+  await opener.click();
+  const dialog = page.getByRole('dialog', {name: 'Запросить образцы'});
+  await expect(dialog).toBeVisible();
+  await expect(dialog.getByRole('textbox', {name: 'Телефон или email'})).toBeFocused();
+  await expect(dialog.locator('[name=config]')).toHaveValue('Образцы продукции');
+  await page.keyboard.press('Escape');
+  await expect(dialog).toBeHidden();
+  await expect(opener).toBeFocused();
+  await opener.click();
+  await dialog.locator('[name=contact]').fill('samples@example.com');
+  await dialog.locator('[name=agree]').check();
+  await dialog.getByRole('button', {name: 'Запросить образцы'}).click();
+  await expect(page).toHaveURL(/\/spasibo\/$/);
+  const draft = await page.evaluate(() => JSON.parse(sessionStorage.getItem('nzmo_lead_v2')));
+  expect(draft.payload).toMatchObject({kind: 'sample', config: 'Образцы продукции'});
+});
+
 test('home factory cards switch by mouse hover, keyboard and mobile tap', async ({page, browser}) => {
   await page.setViewportSize({width: 1440, height: 900});
   await page.addInitScript(() => sessionStorage.setItem('nzmo-cookie-no', '1'));

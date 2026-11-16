@@ -577,7 +577,7 @@
   if (thanks) {
     try {
       var d = JSON.parse(sessionStorage.getItem("nzmo_lead") || "null");
-      if (d && d.name) thanks.textContent = d.name + ", спасибо! Менеджер перезвонит в течение рабочего дня.";
+      if (d && d.name) thanks.textContent = d.name + ", спасибо! Менеджер перезвонит в течение 30 минут.";
     } catch (err) {}
   }
 })();

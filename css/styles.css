@@ -963,7 +963,7 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 .pack__f div{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;line-height:1.35}
 .pack__f dt{flex:none;color:var(--text-muted)}
 .pack__f dd{margin:0;text-align:right;font-weight:600;color:var(--text-strong)}
-.dlv__foot{margin:20px 0 0;font-size:15px;line-height:1.5;color:var(--text-muted);max-width:60em}
+.dlv__foot{margin:20px 0 0;font-size:15px;line-height:1.5;color:var(--text-muted)}
 .dlv--3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .dlv__h{margin:clamp(40px,4vw,64px) 0 18px;font-family:var(--font-display);font-weight:500;font-size:clamp(24px,2vw,32px);line-height:1.15;color:var(--text-strong)}
 .dlv__h+.dlv{margin-bottom:0}
