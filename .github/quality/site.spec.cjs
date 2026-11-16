@@ -28,6 +28,44 @@ for (const viewport of [{width: 1280, height: 720}, {width: 320, height: 568}]) 
   });
 }
 
+test('scrolling under a stationary mouse does not raise homepage category icons', async ({page}) => {
+  await page.setViewportSize({width: 1280, height: 720});
+  await page.emulateMedia({reducedMotion: 'no-preference'});
+  await page.addInitScript(() => sessionStorage.setItem('nzmo-cookie-no', '1'));
+  await page.goto('http://127.0.0.1:8765/');
+  await page.evaluate(() => document.fonts.ready);
+  const link = page.getByRole('navigation', {name: 'Категории продукции НЗМО'}).getByRole('link', {name: 'МАФ'});
+  const icon = link.locator('img');
+  const position = () => link.evaluate(node => node.getBoundingClientRect().top + window.scrollY);
+  const initialTop = await position();
+  const box = await link.boundingBox();
+  await page.mouse.move(box.x + box.width / 2, box.y - 8);
+  await page.mouse.wheel(0, 40);
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(40);
+  await expect(icon).toHaveCSS('transform', 'none');
+  expect(await position()).toBeCloseTo(initialTop, 0);
+
+  await link.hover();
+  await expect(icon).toHaveCSS('transform', 'matrix(1, 0, 0, 1, 0, -3)');
+  await page.mouse.wheel(0, 24);
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(64);
+  await expect(icon).toHaveCSS('transform', 'none');
+  expect(await position()).toBeCloseTo(initialTop, 0);
+});
+
+test('cleanroom consultation prepares the engineer draft and opens optional attachments', async ({page}) => {
+  await page.addInitScript(() => sessionStorage.setItem('nzmo-cookie-no', '1'));
+  await page.goto('http://127.0.0.1:8765/chistye-pomeshcheniya/proektirovanie-i-montazh/');
+  await page.getByRole('link', {name: 'Обсудить и приложить план'}).click();
+  const form = page.locator('#cta form');
+  await expect(form).toHaveAttribute('data-lead', 'engineer');
+  await expect(form.locator('details')).toHaveAttribute('open', '');
+  await expect(form.locator('[name=config]')).toHaveValue('Консультация инженера по чистым помещениям');
+  await page.locator('main .cover').getByRole('link', {name: 'Посчитать проект', exact: true}).click();
+  await expect(form).toHaveAttribute('data-lead', 'quote');
+  await expect(form.locator('[name=config]')).toHaveValue('');
+});
+
 test('home factory cards switch by mouse hover, keyboard and mobile tap', async ({page, browser}) => {
   await page.setViewportSize({width: 1440, height: 900});
   await page.addInitScript(() => sessionStorage.setItem('nzmo-cookie-no', '1'));

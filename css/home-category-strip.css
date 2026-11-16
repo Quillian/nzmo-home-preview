@@ -100,11 +100,11 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .hero-products__link:hover .hero-products__sample img {
+  .hero-products__link.is-pointer-hovered .hero-products__sample img {
     transform: translateY(-3px);
   }
 
-  .hero-products__link:hover .hero-products__label {
+  .hero-products__link.is-pointer-hovered .hero-products__label {
     opacity: 1;
   }
 }
@@ -195,7 +195,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-products__link:hover .hero-products__sample img,
+  .hero-products__link.is-pointer-hovered .hero-products__sample img,
   .hero-products__sample img,
   .hero-products__label {
     transition: none;

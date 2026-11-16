@@ -140,8 +140,22 @@
       var form = document.querySelector("#cta form[data-lead]"); if (!form) return;
       e.preventDefault();
       var i = form.querySelector("[name=config]"), ec = form.querySelector("[data-config-echo]");
-      if (i) i.value = a.dataset.ctaCfg; if (ec) { ec.textContent = "Запрос: " + a.dataset.ctaCfg.toLowerCase() + "."; ec.hidden = false; }
-      var c = document.getElementById("cta"); c.scrollIntoView({ behavior: "smooth" });
+      var config = a.dataset.ctaCfg;
+      if (i) i.value = config;
+      if (ec) { ec.textContent = config ? "Запрос: " + config.toLowerCase() + "." : ""; ec.hidden = !config; }
+      var c = document.getElementById("cta");
+      var heading = c.querySelector("[data-cta-heading]");
+      if (heading) {
+        var engineer = a.dataset.ctaKind === "engineer";
+        var action = engineer ? "Запросить консультацию" : "Получить расчёт";
+        var submit = form.querySelector("[data-lead-submit]");
+        form.dataset.lead = engineer ? "engineer" : "quote";
+        heading.textContent = engineer ? "Обсудите задачу с инженером" : heading.dataset.quoteHeading;
+        submit.textContent = submit.dataset.leadAction = action;
+        if (a.hasAttribute("data-cta-details")) form.querySelector(".lead-preferences").open = true;
+        if (a.hasAttribute("data-cta-kind")) heading.focus({ preventScroll: true });
+      }
+      c.scrollIntoView({ behavior: "smooth" });
       var n = c.querySelector("[name=name]"); if (n) setTimeout(function () { n.focus({ preventScroll: true }); }, 500);
     });
   });
