@@ -4899,6 +4899,22 @@ img/k3d/v10-reechnye-wood-1-w_moren-m-1200.webp,f83216689989d7f4a232dedbb7389c8c
 img/k3d/v10-reechnye-wood-1-w_moren-m-640.webp,fc64adafa8d4285c3f9bbf253c477c3b69f861075b5e964e1527c56d979e6c16,11880,0,,,0,0
 img/k3d/v10-reechnye-wood-1-w_sosna-m-1200.webp,f70a1a5329e71aaa778d3547e61bc152898bb4faeadda9fe4e1d08389c081997,51262,0,,,0,0
 img/k3d/v10-reechnye-wood-1-w_sosna-m-640.webp,85a04dc2c761f4e165ba61a5f4179bfcacd193e1cd33927c2b02ef0a88d430d6,17222,0,,,0,0
+img/kategorii-glavnaya/armstrong-l.webp,45ac675882ba4470fcff02a2371b15c2ce5c2c2ae25567187968a895544407a1,46632,1,index.html,,0,1
+img/kategorii-glavnaya/armstrong-s.webp,c353929e0ae6cb9ea431c20077f5215075d2199294c74533e70628f306a45036,14020,1,index.html,,0,1
+img/kategorii-glavnaya/chistye-pomeshcheniya-l.webp,dacbd3a561d6e465e5c8feaa8ac350acdf815cd86eda569a99dfda816d835907,24694,1,index.html,,0,1
+img/kategorii-glavnaya/chistye-pomeshcheniya-s.webp,4d227053435b08d1ab4ffad168e02fb9e952eeaf1c9c9003f95a32a826270da7,9120,1,index.html,,0,1
+img/kategorii-glavnaya/fasady-l.webp,1b6a75040a2bfd939f1b274bcd5b7010a6987884c28c205affb48b0eafc2fe0c,38960,1,index.html,,0,1
+img/kategorii-glavnaya/fasady-s.webp,fea8a358c23b57dd2efe86902506acec3956a6248d1d1c53ef67adfeb31caece,20174,1,index.html,,0,1
+img/kategorii-glavnaya/grilyato-l.webp,ebd543d6b0ba3b4b7b2625148e940123a81441c1a6915d8c98fde416f3d33164,52948,1,index.html,,0,1
+img/kategorii-glavnaya/grilyato-s.webp,c317f74d7c36dd00607ef4226ed227f883c8ef457eda556761ba3d6318d0fc6d,20076,1,index.html,,0,1
+img/kategorii-glavnaya/kolonny-l.webp,3b2524d79cb9811502b211b574715ed1f6745c67c4211fdffd87805e2ec648d2,18704,1,index.html,,0,1
+img/kategorii-glavnaya/kolonny-s.webp,2825bc8304c28f9cb15a8addf43ca06eeea19e6e8eed1e9297160f9d34b83651,6996,1,index.html,,0,1
+img/kategorii-glavnaya/maf-plamya-l.webp,0752da32b31831b35df337f59cabe1de10325faeee5836f7264e2064e2952ebe,66964,1,index.html,,0,1
+img/kategorii-glavnaya/maf-plamya-s.webp,987d7568cc37c859d1c00af7f860d7ebb4050eb00a304569a03e3558f5534ee3,25490,1,index.html,,0,1
+img/kategorii-glavnaya/osveshchenie-l.webp,d421f1c1127481c6fb1acaff86b337c859c771ac51315183e510ff1fcc4d7226,17190,1,index.html,,0,1
+img/kategorii-glavnaya/osveshchenie-s.webp,8b41bbf710f0b730115275fba084d0fd4ff8b198493d3366405ecc80fbc20c7a,7694,1,index.html,,0,1
+img/kategorii-glavnaya/reika-l.webp,be76dd0e6f296595412e2fed18d25cfb4d814f155d5118c60290d4c498e05200,24944,1,index.html,,0,1
+img/kategorii-glavnaya/reika-s.webp,2f1a81053755742e1e5b1376c09ae2fd4656edd8bee33ed8bfd2c684df7cd4ae,11288,1,index.html,,0,1
 img/kramz-320.png,9da923df688ae7c08db9d82e0f1d62efd6d81ca31c10b5e6adb0e83fe5b9e8fb,3057,0,,,0,0
 img/kudymkar-operatsionnaya-1440.webp,491cb4721f2229a77694a9e8821e4f53b7579cd8ee67a9ec4b4002db91512764,111792,2,chistye-pomeshcheniya/index.html | chistye-pomeshcheniya/proektirovanie-i-montazh/index.html,"Хирургический корпус областной больницы, г. Кудымкар: потолок Clip-in, светильники заподлицо с кассетами",0,0
 img/kudymkar-operatsionnaya-400.webp,f27320291ea985f714fdb2e323980d1f3a44f19693485ced79aedece0fe950c6,11332,2,chistye-pomeshcheniya/index.html | chistye-pomeshcheniya/proektirovanie-i-montazh/index.html,"Хирургический корпус областной больницы, г. Кудымкар: потолок Clip-in, светильники заподлицо с кассетами",0,2
@@ -5090,7 +5106,6 @@ img/ngu-cleanroom-steny-800.webp,19c5d0e3354a8a878a76896ea7d16c92795905b5033b25b
 img/ngu-cleanroom-ventilyatsiya-1440.webp,3ce42205a518b13b35a30e48a50fb42f15f295ba39566ff93b246c4a705c8929,101546,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,"Исследовательский центр НГУ, г. Новосибирск: потолочные вентиляционные решётки в чистой зоне",0,0
 img/ngu-cleanroom-ventilyatsiya-400.webp,5b0ee13ba48a414726a8bfcfcbe6dd7b6909743cc45e50e0091f7b3b8146eadd,8314,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,"Исследовательский центр НГУ, г. Новосибирск: потолочные вентиляционные решётки в чистой зоне",0,1
 img/ngu-cleanroom-ventilyatsiya-800.webp,80da2799e00fd011887896257a9722f6f71d41d3e0df8a12c825d8ab0dc5f4a2,32686,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,"Исследовательский центр НГУ, г. Новосибирск: потолочные вентиляционные решётки в чистой зоне",0,0
-img/nzmo-kategorii-produktsii.webp,09dab3f3a305f06d632a0d0c7f6789fd86817141c72813ed4cfc4aa30be47ccf,32296,1,index.html,,0,1
 img/pack_1-600-clean.png,fac928aaf05e3c554d797b3401e293c80e6f7f9412e563770f8248176ea85be6,230125,0,,,0,0
 img/pack_1-900-clean.png,dffd7656cbdee4942416efa95c8bb0c6a2fc8339521c267410f70150b26f1762,540471,56,chistye-pomeshcheniya/dveri-chistyh/index.html | chistye-pomeshcheniya/gml-paneli/index.html | chistye-pomeshcheniya/index.html | chistye-pomeshcheniya/peredatochnye-boksy/index.html | chistye-pomeshcheniya/proektirovanie-i-montazh/index.html,"Поддон в стретч-плёнке, упаковка Тип 1.1",0,0
 img/pack_2-600-clean.png,56bb0e9acd041603933ef7904d0d2ea7f328cea9ff2967e9558bfab76509dec6,297214,0,,,0,0
