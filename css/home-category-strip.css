@@ -1,0 +1,82 @@
+.home-category-strip {
+  background: #f2eeeb;
+  padding: clamp(34px, 4.8vw, 76px) var(--gutter) clamp(25px, 3.5vw, 57px);
+}
+
+.home-category-strip__scroll {
+  max-width: 1472px;
+  margin-inline: auto;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: #7d8997 transparent;
+}
+
+.home-category-strip__row {
+  position: relative;
+  min-width: 70rem;
+}
+
+.home-category-strip__art {
+  position: absolute;
+  inset: 0 0 auto;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  mask-image: linear-gradient(transparent, #000 10px, #000 calc(100% - 10px), transparent);
+}
+
+.home-category-strip__links {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0 1.3% 9px 2%;
+  text-align: center;
+  font: 600 clamp(16px, 1.55vw, 25px)/1.13 "Golos Text", sans-serif;
+}
+
+.home-category-strip__links li {
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.home-category-strip__links a {
+  display: block;
+  height: 100%;
+  padding-bottom: 6px;
+  color: #1b2d42;
+  text-decoration: none;
+}
+
+/* The artwork spans all eight links, so each link reserves its share of its height. */
+.home-category-strip__links a::before {
+  display: block;
+  aspect-ratio: 178 / 222;
+  margin-bottom: 7px;
+  content: "";
+}
+
+.home-category-strip__links a:hover,
+.home-category-strip__links a:focus-visible {
+  color: #05445e;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.home-category-strip__links a:focus-visible {
+  outline: 2px solid #05445e;
+  outline-offset: -3px;
+}
+
+@media (max-width: 767px) {
+  .home-category-strip {
+    padding-right: 0;
+  }
+
+  .home-category-strip__scroll {
+    padding-right: var(--gutter);
+  }
+}
