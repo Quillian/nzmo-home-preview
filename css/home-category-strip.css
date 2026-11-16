@@ -17,56 +17,40 @@
 }
 
 .home-metal-cover .cover__meta {
-  margin-top: 20px;
+  margin-top: clamp(44px, 9vh, 82px);
 }
 
 .hero-products {
-  --link-width: 78px;
-  --icon-height: 54px;
-  --icon-width: 57px;
-  --card-height: 64px;
-  --column-gap: 12px;
-  --reflection: drop-shadow(0 0 6px rgb(167 196 226 / 32%)) drop-shadow(0 3px 6px rgb(0 0 0 / 35%));
-  margin-top: calc(clamp(32px, 6vw, 66px) + 20px);
+  --icon-width: 97px;
+  --icon-height: 84px;
+  --card-height: 98px;
+  --row-padding: clamp(28px, 3.25vw, 52px);
+  background: var(--home-cover-color);
 }
 
-.hero-products__scroll {
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x proximity;
-  scrollbar-width: thin;
-  scrollbar-color: #617083 transparent;
-  padding-bottom: 34px;
+.hero-products__inner {
+  padding-block: var(--row-padding) calc(var(--row-padding) + 24px);
 }
 
 .hero-products__links {
   display: grid;
-  grid-template-columns: repeat(8, minmax(var(--link-width), 1fr));
-  gap: var(--column-gap);
-  width: max-content;
-  max-width: 100%;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.hero-products__links li {
-  min-width: 0;
-  scroll-snap-align: start;
-}
-
 .hero-products__link {
   position: relative;
   display: grid;
-  min-width: var(--link-width);
   height: var(--card-height);
   place-items: center;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 .hero-products__sample {
   display: block;
-  width: var(--icon-width);
+  width: min(100%, var(--icon-width));
   height: var(--icon-height);
 }
 
@@ -75,23 +59,23 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 3px 6px rgb(0 0 0 / 35%));
-  transition: transform .25s cubic-bezier(.22, 1, .36, 1), filter .22s ease-out;
+  filter: drop-shadow(0 2px 3px rgb(27 45 66 / 24%));
+  transition: transform .24s cubic-bezier(.22, 1, .36, 1);
 }
 
 .hero-products__label {
   position: absolute;
-  inset-block-start: calc(100% + 1px);
+  inset-block-start: calc(100% + 2px);
   left: 50%;
   translate: -50%;
   width: max-content;
-  max-width: 116px;
-  font: 500 13px/1.22 var(--font-text);
-  color: #b8bdc8;
+  max-width: min(112px, 100%);
+  font: 500 14px/1.18 var(--font-text);
+  color: var(--steel-150);
   text-align: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .17s ease-out;
+  transition: opacity .16s ease-out;
 }
 
 .hero-products__link:is(:focus-visible, :active) .hero-products__label {
@@ -104,14 +88,9 @@
   box-shadow: none;
 }
 
-.hero-products__link:focus-visible .hero-products__sample img {
-  filter: var(--reflection);
-}
-
 @media (hover: hover) and (pointer: fine) {
   .hero-products__link:hover .hero-products__sample img {
     transform: translateY(-3px);
-    filter: var(--reflection);
   }
 
   .hero-products__link:hover .hero-products__label {
@@ -120,13 +99,17 @@
 }
 
 @media (min-width: 1000px) {
+  .home-metal-cover {
+    --cover-trim: clamp(0px, calc(45vh - 297px), 108px);
+    min-height: calc(100vh - var(--header-h) - var(--cover-trim));
+  }
+
   .home-metal-cover .cover__in {
     padding-top: clamp(24px, calc(100vh - 710px), 88px);
   }
 
-  /* Reserve the lower part of the cover for the products and benefits. */
-  .hero-products {
-    margin-top: calc(74px + clamp(22px, 2vw, 34px) + clamp(16px, calc(28vh - 170px), 82px));
+  .home-metal-cover .cover__meta {
+    margin-top: calc(192px + clamp(22px, 2vw, 34px) + clamp(16px, calc(28vh - 170px), 82px) - var(--cover-trim));
   }
 }
 
@@ -136,20 +119,23 @@
   }
 
   .home-metal-cover .cover__meta {
-    margin-top: 16px;
+    margin-top: 44px;
   }
 
   .hero-products {
-    --link-width: 62px;
-    --icon-height: 45px;
-    --icon-width: 47px;
-    --card-height: 52px;
-    --column-gap: 9px;
+    --icon-width: 60px;
+    --icon-height: 51px;
+    --card-height: 58px;
+    --row-padding: 22px;
+  }
+
+  .hero-products__links {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    row-gap: 29px;
   }
 
   .hero-products__label {
     font-size: 12px;
-    max-width: 104px;
   }
 }
 
