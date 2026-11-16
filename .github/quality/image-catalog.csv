@@ -266,7 +266,7 @@ img/facade_profile-1000-clean.png,2526e8b47ef80c2ab91a943582c91f05ada0d2f55c920b
 img/facade_profile-800-clean.png,58401669e372614bf504ffcb17c778fddd11a59df966b64b326aea2da6bccbca,357454,0,,,0,0
 img/factory-1200.webp,fb66202c5e3ffc3ddbc9d699a1c4f131ea100ee79c29c257f9b8a5b15a188873,127680,0,,,0,0
 img/factory-1400.webp,d66bd25b1f7fb4f37fc6e2739dcfec60f77b00e974489f0c71a3497ade507aa7,146806,0,,,0,0
-img/factory-1600.webp,d66bd25b1f7fb4f37fc6e2739dcfec60f77b00e974489f0c71a3497ade507aa7,146806,1,index.html,Оборудование и заготовки в производственном цехе НЗМО,0,0
+img/factory-1600.webp,d66bd25b1f7fb4f37fc6e2739dcfec60f77b00e974489f0c71a3497ade507aa7,146806,0,,,0,0
 img/factory-1920.webp,d66bd25b1f7fb4f37fc6e2739dcfec60f77b00e974489f0c71a3497ade507aa7,146806,0,,,0,0
 img/factory-floor-20261112-1280.webp,461e08b1836b61176028e3f06a7314ae7b474a2971470b70daf9fd011b850973,155398,0,,,0,0
 img/factory-floor-20261112-320.webp,a125ebcf14b7715d962f5561c4979993855b6ce4739247e2c8cbb51e9a4a8a13,11502,1,o-zavode/index.html,,0,1
@@ -280,8 +280,18 @@ img/factory-owner-20261110-1600.webp,bf57fcfc932c349b969d3fb42d1105ebf47af33dc1f
 img/factory-owner-20261110-640.webp,12fd79ad589a2102ad2de082f3047a895f02a229653a5ebe5b831ffea6134e75,53322,2,o-zavode/index.html | partneram/index.html,Производственный цех НЗМО в Новосибирске | Цех НЗМО,0,0
 img/factory-sculpture-20261112-1280.webp,040c13722f0628735f87996f2d8d3a78fb584a325e0a671369e9bd745bdef2c8,313508,0,,,0,0
 img/factory-sculpture-20261112-320.webp,7bae6073ca947ab800216127b9ab3313a1973dfe1e6a83b64cc82546fdfa5814,15620,1,o-zavode/index.html,,0,1
+img/factory-selector/ceh-metalloobrabotki-1440.webp,e451c468433e539eb9c0cbb1e5511b0a8a82417724c5b09369c92ebdd1aaa91e,168444,1,index.html,Оборудование и заготовки в металлообрабатывающем цехе,0,0
+img/factory-selector/ceh-metalloobrabotki-768.webp,b37a266891c7f1cac649d70ccda6e79f955e05e5fa813023d1144a4e8fd8aafc,60668,1,index.html,Оборудование и заготовки в металлообрабатывающем цехе,0,0
+img/factory-selector/gibka-listovogo-metalla-1440.webp,c51319d4dbc736bbe7c5960ab8492ab711cd67d81b4b84f82e6f57c75cb98212,75478,1,index.html,Гибка листового металла на листогибочном прессе,0,0
+img/factory-selector/gibka-listovogo-metalla-768.webp,97890d407aa135e671647321dcc134fe1f222834aabd93676221e911f1e3cddd,28472,1,index.html,Гибка листового металла на листогибочном прессе,0,0
+img/factory-selector/lazernaya-rezka-lista-1440.webp,13436e928b5853ee966c8bb9e613e71ea3b8550de5bb70550e160926cc40b4cb,77074,1,index.html,Лазерная резка листового металла на станке с ЧПУ,0,0
+img/factory-selector/lazernaya-rezka-lista-768.webp,7819887fe26cb046cce8778bed4998511034520d13e12108eab7718e25eec1cd,27952,1,index.html,Лазерная резка листового металла на станке с ЧПУ,0,0
+img/factory-selector/poroshkovaya-okraska-kassety-1440.webp,5f82dc9e5c0a26738a7bc9c4fda3609057fba8fadf4ba9d72dfdda64c4e2d288,97024,1,index.html,Порошковая окраска подвешенной металлической кассеты,0,0
+img/factory-selector/poroshkovaya-okraska-kassety-768.webp,862d75c3d976ef1aba1f2a470a3f1284795dff97d0d43593a9638a8e0b37771c,38038,1,index.html,Порошковая окраска подвешенной металлической кассеты,0,0
+img/factory-selector/svarka-stalnyh-profiley-1440.webp,9216f207976edd5d2f67fc819da81cad69af4fc6173c0fcc214e9103c58ecf7f,79808,1,index.html,Сварка стальных профилей под прямым углом,0,0
+img/factory-selector/svarka-stalnyh-profiley-768.webp,4fe1bff0394adb3f666480ac85fb9538004da8714e927aa05039ea23f08b749c,33394,1,index.html,Сварка стальных профилей под прямым углом,0,0
 img/factory_a-1200.webp,f1332f52ac6423bfb6ed93d30acd633d2208bf12ee9de54be1b29c7c024716fe,125346,0,,,0,0
-img/factory_a-1600.webp,ef309be10518d273a9c377c4b0dbbe33e6f7c1fc8cc6959cf80d7e0b9962f6fb,143376,1,index.html,Партии металлических изделий на производственном участке НЗМО,0,0
+img/factory_a-1600.webp,ef309be10518d273a9c377c4b0dbbe33e6f7c1fc8cc6959cf80d7e0b9962f6fb,143376,0,,,0,0
 img/factory_a-800.webp,93ab27a66a0159d71bed8cb3b3f45bab583d581aeae51c495be75e17cbfb2941,63202,0,,,0,0
 img/factory_b-800.webp,54c1be61c1ad78545be92011b437491fd69fb1ef595128d44ed928428a5800c5,58060,0,,,0,0
 img/fence-1000-clean.png,27e1c6696920449c6fc1d0b22b58bf87f2ef1f76fe0e5950108542382ca9bff2,523925,1,ograzhdeniya/zabory-zhalyuzi/index.html,"Забор-жалюзи — состав системы, схема",0,0
@@ -4959,7 +4969,7 @@ img/maf-20261109/nzmaf-biatlon-install-1200.webp,41b10a01c27283488ee24dcf0687914
 img/maf-20261109/nzmaf-biatlon-install-600.webp,6ca490440274285544ad0fccdc256207e9a66e29d148a6c45c7244d6cf1abfd2,44912,1,maf/skulptury/index.html,Установка «Биатлониста» краном,0,0
 img/maf-20261109/nzmaf-biatlon-lift-1200.webp,53893f77fc85fe65cd4925fc2381949d5acb7c9af506271c58f47809a3df4dde,67246,1,maf/skulptury/index.html,Доводка на месте · Ханты-Мансийск,0,0
 img/maf-20261109/nzmaf-biatlon-lift-600.webp,ebfcb8a8a8bbd70a05817e92e7740608d09d5886b1fd89dfdb56b3591059f9e3,25496,1,maf/skulptury/index.html,Доводка «Биатлониста» с автовышки на месте установки,0,0
-img/maf-20261109/nzmaf-biatlon-weld-1200.webp,8e6e6d907f7f3006ebc9cbeb6d2ce0a69793b9c34a3165c3d62e6c6ba2f313f9,101908,2,index.html | maf/skulptury/index.html,Сварка металлической конструкции в цехе НЗМО | Сварка на месте · Ханты-Мансийск,0,0
+img/maf-20261109/nzmaf-biatlon-weld-1200.webp,8e6e6d907f7f3006ebc9cbeb6d2ce0a69793b9c34a3165c3d62e6c6ba2f313f9,101908,1,maf/skulptury/index.html,Сварка на месте · Ханты-Мансийск,0,0
 img/maf-20261109/nzmaf-biatlon-weld-600.webp,f0dcd732012a6a140eeb24a78f18aa8a51b880e36fc0adac6143e399dee0d3c1,36734,1,maf/skulptury/index.html,Сварка «Биатлониста» на месте установки,0,0
 img/maf-20261109/nzmaf-bronze-3d-1200.webp,3cdb647c35d84ddf60a7c187f8f42594c368d360c83ddc0b75b49b342860fe8f,32006,1,maf/skulptury/index.html,3D-модель,0,0
 img/maf-20261109/nzmaf-bronze-3d-600.webp,3cdb647c35d84ddf60a7c187f8f42594c368d360c83ddc0b75b49b342860fe8f,32006,1,maf/skulptury/index.html,3D-модель фигуры солдата,0,0
@@ -5050,7 +5060,7 @@ img/mn-oblicovka-kolonn-1400.webp,97daa75d80c6af8936398faf98baef58b5c48ecbbfc849
 img/mn-oblicovka-kolonn-720.webp,a76d596d1c6bb509f6ce3fb35c337721362df444b57fb0bf090ac1fc6952a6d9,12334,134,404.html | 404/index.html | chistye-pomeshcheniya/dveri-chistyh/index.html | chistye-pomeshcheniya/gml-paneli/index.html | chistye-pomeshcheniya/index.html,,0,134
 img/mn-peredatochnye-boksy-1400.webp,7637794aaae1755d66e3c15470cf2776f1a4e4cdab3715ba59edea3097cb63a1,57890,134,404.html | 404/index.html | chistye-pomeshcheniya/dveri-chistyh/index.html | chistye-pomeshcheniya/gml-paneli/index.html | chistye-pomeshcheniya/index.html,,0,134
 img/mn-peredatochnye-boksy-720.webp,60008dbb254fea21c39741663a55d512a79ff061da5b932edc917d69103b1b62,22054,134,404.html | 404/index.html | chistye-pomeshcheniya/dveri-chistyh/index.html | chistye-pomeshcheniya/gml-paneli/index.html | chistye-pomeshcheniya/index.html,,0,134
-img/mn-perforirovannye-paneli-1400.webp,96b739726b219ddedba51c67377119122ad6451e4551379566784a492f7856b7,127768,134,404.html | 404/index.html | chistye-pomeshcheniya/dveri-chistyh/index.html | chistye-pomeshcheniya/gml-paneli/index.html | chistye-pomeshcheniya/index.html,Перфорированные металлические панели крупным планом,0,134
+img/mn-perforirovannye-paneli-1400.webp,96b739726b219ddedba51c67377119122ad6451e4551379566784a492f7856b7,127768,134,404.html | 404/index.html | chistye-pomeshcheniya/dveri-chistyh/index.html | chistye-pomeshcheniya/gml-paneli/index.html | chistye-pomeshcheniya/index.html,,0,134
 img/mn-perforirovannye-paneli-720.webp,063af0860ce3a5b5be31477a464b1673654ae71abba54d75cf2cc6a01ad7c03e,63772,134,404.html | 404/index.html | chistye-pomeshcheniya/dveri-chistyh/index.html | chistye-pomeshcheniya/gml-paneli/index.html | chistye-pomeshcheniya/index.html,,0,134
 img/mn-proektirovanie-i-montazh-1400.webp,9ac53566b56c5d9f69d37b953606c75eda13ce38df7958f5ba4b6413083b7ec7,69188,134,404.html | 404/index.html | chistye-pomeshcheniya/dveri-chistyh/index.html | chistye-pomeshcheniya/gml-paneli/index.html | chistye-pomeshcheniya/index.html,,0,134
 img/mn-proektirovanie-i-montazh-720.webp,0b7b58ebe4fc9314115d444047ef623c6bda630fb025168284e66f172d55c8af,22398,134,404.html | 404/index.html | chistye-pomeshcheniya/dveri-chistyh/index.html | chistye-pomeshcheniya/gml-paneli/index.html | chistye-pomeshcheniya/index.html,,0,134
@@ -5208,7 +5218,7 @@ img/ph_hookon_edge-1600.webp,724d0be247e88b2da20b3bd1e3ccde1dcc52fec924ea4e052a1
 img/ph_hookon_edge-1920.webp,c1e6cba53625e2fe43280f61a4bb89071dfd184c0c771f82b02d5cb2fa91279a,284360,0,,,0,0
 img/ph_hookon_edge-360.webp,f788a17db5d76a3eb70412fc4860921839199f2216992bf80439fe45ad53d568,17332,0,,,0,0
 img/ph_hookon_edge-800.webp,1d75ba5b62c43c6f487cd939fd543f36401d05e7c05633205af67b697a4e7210,69564,0,,,0,0
-img/ph_hookon_kvant-1200.webp,2336c602488a66a5b6ee64a9402bb064d86324dfc6e143a20afd49168a300828,80396,1,index.html,Синие металлические кассеты на потолке технопарка «Кванториум»,0,0
+img/ph_hookon_kvant-1200.webp,2336c602488a66a5b6ee64a9402bb064d86324dfc6e143a20afd49168a300828,80396,0,,,0,0
 img/ph_hookon_kvant-1400.webp,dc3f270eac95bfe4517f9a75dc247cac1d2cfa3521b4293431e2251934dfce22,105264,3,k3d/hookon-smooth.html | stati/akustika-v-shkole/index.html | stati/montazh-kassetnogo-potolka-hook-on/index.html,"Гладкая — Технопарк «Кванториум», Ноябрьск | Лекторий «Кванториума» в Ноябрьске: Hook-on в синем и графитовом цветах, свет и диффузоры в кассете | Лекторий технопарка «Кванториум»: Hook-on в синем и графитовом цветах, свет и диффузоры в кассете",0,0
 img/ph_hookon_kvant-1600.webp,5f27e5ab32943868e0f9c0e7a219f6dcd1dc10b71d02184f6c7be6d6d0e45a07,134976,2,stati/baffly-reyki-i-oblaka/index.html | stati/pochemu-v-otkrytom-ofise-shumno/index.html,,0,0
 img/ph_hookon_kvant-1920.webp,6f84c1021f2acca2aae11a103fa9bf38975b8c904d1157d87b502c5ba13fc317,195018,2,stati/baffly-reyki-i-oblaka/index.html | stati/pochemu-v-otkrytom-ofise-shumno/index.html,"Баффли, рейка и «облака»: чем открыть потолок и не получить гулкий зал | Почему в открытом офисе шумно: прикидка на цифрах и что может потолок",0,0
