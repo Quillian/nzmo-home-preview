@@ -574,31 +574,34 @@ test('T24 rectangular module updates the count, profiles and quote',async({page}
   await expect(page.locator('.calc-lead [data-calc-parameters]')).toContainText('Размер модуля: 600 × 1200 мм');
 });
 
-test('factory gallery reveals views without moving the three photo strips',async({page})=>{
+test('factory photos expand on hover, support keyboard and mobile controls, and open full-size',async({page})=>{
   await page.setViewportSize({width:1440,height:900});
   await page.route('https://widgets.2gis.com/**',route=>route.abort());
   await page.goto('http://127.0.0.1:8765/o-zavode/');
-  const views=page.locator('[data-factory-view]');
-  const stage=page.locator('.factory-gallery__stage');
-  await expect(views).toHaveCount(3);
-  const positions=()=>views.evaluateAll(buttons=>buttons.map(button=>{
-    const {x,y,width,height}=button.getBoundingClientRect();
-    return [x,y,width,height];
-  }));
-  const original=await positions();
-  for(const view of await views.all()){
-    const url=await view.getAttribute('data-image');
-    await view.hover();
-    await expect(stage).toHaveAttribute('href',url);
-    expect(await positions()).toEqual(original);
-  }
-  const last=views.last();
-  await last.click();
-  await expect(last).toHaveAttribute('aria-pressed','true');
-  await stage.click();
+  const gallery=page.getByRole('tablist',{name:'Фотографии производства'});
+  const views=gallery.getByRole('tab');
+  await expect(views).toHaveCount(4);
+  await expect(views.first()).toHaveAttribute('aria-selected','true');
+  const warehouse=gallery.getByRole('tab',{name:'Склад'});
+  const collapsed=await warehouse.boundingBox();
+  await page.mouse.move(collapsed.x+collapsed.width/2,collapsed.y+collapsed.height/2);
+  await expect(warehouse).toHaveAttribute('aria-selected','true');
+  await expect.poll(async()=> (await warehouse.boundingBox()).width).toBeGreaterThan(collapsed.width*2);
+  const warehousePhoto=page.getByRole('link',{name:'Увеличить фото — Склад рулонного металла'});
+  await warehousePhoto.click();
   const lightbox=page.getByRole('dialog',{name:'Просмотр фотографии'});
   await expect(lightbox).toBeVisible();
-  await expect(lightbox.locator('img')).toHaveAttribute('src',await last.getAttribute('data-image'));
+  await expect(lightbox.locator('img')).toHaveAttribute('src','/img/factory-metal-coil-storage-1280.webp');
+  await page.keyboard.press('Escape');
+  await expect(warehousePhoto).toBeFocused();
+  await warehouse.press('ArrowLeft');
+  await expect(gallery.getByRole('tab',{name:'Рейка'})).toHaveAttribute('aria-selected','true');
+
+  await page.setViewportSize({width:390,height:844});
+  await page.reload();
+  await gallery.getByRole('tab',{name:'Конвейер'}).click();
+  await expect(page.getByRole('tabpanel',{name:'Конвейер'})).toBeVisible();
+  await expect(page.locator('#about-factory-panel-razmotka')).toBeHidden();
 });
 
 test('factory project index scrolls to every case and updates its preview',async({page})=>{
