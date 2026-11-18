@@ -48,7 +48,7 @@
 
 #factory-panel-rezka { --factory-photo-focus: 43% bottom; }
 #factory-panel-gibka { --factory-photo-focus: 61% top; }
-#factory-panel-svarka { --factory-photo-focus: 57% bottom; }
+#factory-panel-svarka { --factory-photo-focus: 57% 67%; }
 #factory-panel-okraska { --factory-photo-focus: 55% center; }
 
 .factory-selector__panel::after {
