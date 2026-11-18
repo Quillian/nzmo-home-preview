@@ -268,18 +268,27 @@ img/factory-1200.webp,fb66202c5e3ffc3ddbc9d699a1c4f131ea100ee79c29c257f9b8a5b15a
 img/factory-1400.webp,d66bd25b1f7fb4f37fc6e2739dcfec60f77b00e974489f0c71a3497ade507aa7,146806,0,,,0,0
 img/factory-1600.webp,d66bd25b1f7fb4f37fc6e2739dcfec60f77b00e974489f0c71a3497ade507aa7,146806,0,,,0,0
 img/factory-1920.webp,d66bd25b1f7fb4f37fc6e2739dcfec60f77b00e974489f0c71a3497ade507aa7,146806,0,,,0,0
+img/factory-conveyor-operator-1280.webp,09698eb4cd6a3949a49f1a6ff502d92bdb8bd1f819277eccb59c7960214cc558,82648,0,,,0,0
+img/factory-conveyor-operator-320.webp,91eb2e7484f6551708edd4d2102e1ee41fe4a2eaa8bf13c3b7accc1c2b14d782,11796,1,o-zavode/index.html,,0,1
 img/factory-floor-20261112-1280.webp,461e08b1836b61176028e3f06a7314ae7b474a2971470b70daf9fd011b850973,155398,0,,,0,0
-img/factory-floor-20261112-320.webp,a125ebcf14b7715d962f5561c4979993855b6ce4739247e2c8cbb51e9a4a8a13,11502,1,o-zavode/index.html,,0,1
+img/factory-floor-20261112-320.webp,a125ebcf14b7715d962f5561c4979993855b6ce4739247e2c8cbb51e9a4a8a13,11502,0,,,0,0
 img/factory-hall-20261112-1280.webp,dd6c31d7e6dd63ac160172d7e5d647c2c9c46ce855e0f44843aa27ccc540d56b,156196,0,,,0,0
-img/factory-hall-20261112-320.webp,68a63a637e257893c37bcec748871d9c1c01fe2dcd661eb7280b0a26e10fad6d,10156,1,o-zavode/index.html,,0,1
+img/factory-hall-20261112-320.webp,68a63a637e257893c37bcec748871d9c1c01fe2dcd661eb7280b0a26e10fad6d,10156,0,,,0,0
+img/factory-metal-coil-1280.webp,40ce4ef5b4577e3d1b32906b2135f2a9c6439a6610ecfb035ce61d66be7d575e,112846,0,,,0,0
+img/factory-metal-coil-320.webp,0174c1045df88878ed1c58414aed140ec1cf9384d34837bcf3816c4f324dcec0,12966,1,o-zavode/index.html,,0,1
+img/factory-metal-slat-forming-1280.webp,301970ec22e8d6d09383a849278835bee4b1863a2278a088b57a70ca69327524,129272,0,,,0,0
+img/factory-metal-slat-forming-320.webp,77c0554e084a89d68292044ec2f456a3c0e08f0ce565900a19066b860af8de38,15810,1,o-zavode/index.html,,0,1
+img/factory-operator-console-1280.webp,f735cf29a8c382f8f725aa76f7039c79ec088480f46dac438de90cdbc6b38fd5,61786,1,o-zavode/index.html,Специалист НЗМО у пульта управления станком,0,0
+img/factory-operator-console-1600.webp,95d8fee0cfff69dd3091885aef8b553fc87f55c5cfb0e8a9c0fb9b586a99eb34,81940,1,o-zavode/index.html,Специалист НЗМО у пульта управления станком,0,0
+img/factory-operator-console-640.webp,ab3f5849fabab0c45664acd90863b3604c551bb4f4b10670d64ab9ccf22013e7,23814,1,o-zavode/index.html,Специалист НЗМО у пульта управления станком,0,0
 img/factory-owner-20261105-1400.webp,ce78dac3982c525680c66b0d28e01640ecfc1dffd75b3bd97683744d7e55e671,188378,0,,,0,0
 img/factory-owner-20261105-1600.png,114330cd68b19c8d6163903b48bae65c727351099094ff57215023f50f2b0f48,3271160,0,,,0,0
 img/factory-owner-20261105-2400.webp,64332b8b76dbf1fedb9a0ecec7f54e325e3e1835090d7b9ccdaa6c51d700effd,460482,0,,,0,0
-img/factory-owner-20261110-1280.webp,bf57fcfc932c349b969d3fb42d1105ebf47af33dc1f24c71684a7d26a02808d8,121704,2,o-zavode/index.html | partneram/index.html,Производственный цех НЗМО | Производственный цех НЗМО в Новосибирске | Цех НЗМО,0,0
-img/factory-owner-20261110-1600.webp,bf57fcfc932c349b969d3fb42d1105ebf47af33dc1f24c71684a7d26a02808d8,121704,2,o-zavode/index.html | partneram/index.html,Производственный цех НЗМО в Новосибирске,0,0
-img/factory-owner-20261110-640.webp,12fd79ad589a2102ad2de082f3047a895f02a229653a5ebe5b831ffea6134e75,53322,2,o-zavode/index.html | partneram/index.html,Производственный цех НЗМО в Новосибирске | Цех НЗМО,0,0
+img/factory-owner-20261110-1280.webp,bf57fcfc932c349b969d3fb42d1105ebf47af33dc1f24c71684a7d26a02808d8,121704,1,partneram/index.html,Производственный цех НЗМО | Производственный цех НЗМО в Новосибирске,0,0
+img/factory-owner-20261110-1600.webp,bf57fcfc932c349b969d3fb42d1105ebf47af33dc1f24c71684a7d26a02808d8,121704,1,partneram/index.html,Производственный цех НЗМО в Новосибирске,0,0
+img/factory-owner-20261110-640.webp,12fd79ad589a2102ad2de082f3047a895f02a229653a5ebe5b831ffea6134e75,53322,1,partneram/index.html,Производственный цех НЗМО в Новосибирске,0,0
 img/factory-sculpture-20261112-1280.webp,040c13722f0628735f87996f2d8d3a78fb584a325e0a671369e9bd745bdef2c8,313508,0,,,0,0
-img/factory-sculpture-20261112-320.webp,7bae6073ca947ab800216127b9ab3313a1973dfe1e6a83b64cc82546fdfa5814,15620,1,o-zavode/index.html,,0,1
+img/factory-sculpture-20261112-320.webp,7bae6073ca947ab800216127b9ab3313a1973dfe1e6a83b64cc82546fdfa5814,15620,0,,,0,0
 img/factory-selector/ceh-nzmo-1440.webp,4c1528ea50fd531b49a5202768de9bfbefea94dddb985be7ea03e567479ba08d,171666,1,index.html,Оборудование и металлические заготовки в цехе НЗМО,0,0
 img/factory-selector/ceh-nzmo-768.webp,4fe79d8f0f5adbe25dfa82b0c601f95cc9758a0a75fdb3ef3b17ee7bb59103ab,63946,1,index.html,Оборудование и металлические заготовки в цехе НЗМО,0,0
 img/factory-selector/gibka-metalla-nzmo-1440.webp,40ece57c47353a587fc2b866e537bd631baa053f3deaee25f71b567c262538a5,100006,1,index.html,Рабочий подаёт лист металла на листогибочный пресс,0,0
