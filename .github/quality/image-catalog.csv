@@ -274,13 +274,17 @@ img/factory-floor-20261112-1280.webp,461e08b1836b61176028e3f06a7314ae7b474a29714
 img/factory-floor-20261112-320.webp,a125ebcf14b7715d962f5561c4979993855b6ce4739247e2c8cbb51e9a4a8a13,11502,0,,,0,0
 img/factory-hall-20261112-1280.webp,dd6c31d7e6dd63ac160172d7e5d647c2c9c46ce855e0f44843aa27ccc540d56b,156196,0,,,0,0
 img/factory-hall-20261112-320.webp,68a63a637e257893c37bcec748871d9c1c01fe2dcd661eb7280b0a26e10fad6d,10156,0,,,0,0
-img/factory-metal-coil-1280.webp,40ce4ef5b4577e3d1b32906b2135f2a9c6439a6610ecfb035ce61d66be7d575e,112846,0,,,0,0
-img/factory-metal-coil-320.webp,0174c1045df88878ed1c58414aed140ec1cf9384d34837bcf3816c4f324dcec0,12966,1,o-zavode/index.html,,0,1
+img/factory-metal-coil-1280.webp,40ce4ef5b4577e3d1b32906b2135f2a9c6439a6610ecfb035ce61d66be7d575e,112846,1,o-zavode/index.html,Размотка рулона листового металла на станке,0,0
+img/factory-metal-coil-1600.webp,8987dd302b28aa4cc9f1a5677184242542fb6a326b08a3d58c1a0fc2142bf828,159622,1,o-zavode/index.html,Размотка рулона листового металла на станке,0,0
+img/factory-metal-coil-320.webp,0174c1045df88878ed1c58414aed140ec1cf9384d34837bcf3816c4f324dcec0,12966,0,,,0,0
+img/factory-metal-coil-640.webp,05484fb21c4654f3d6d7e841e12bdc78af46ed77d405942d1e483331fc40f0d8,39252,1,o-zavode/index.html,Размотка рулона листового металла на станке,0,0
+img/factory-metal-coil-storage-1280.webp,4e88e82dd7a77e7801bcb0b99418eb6412a625c4364f61c0fc97e704c42a8b7d,130334,0,,,0,0
+img/factory-metal-coil-storage-320.webp,f93ca901fbd8e6ab3ae841d30aa1906be430eb35c8923350c794c7b17ae869c3,11298,1,o-zavode/index.html,,0,1
 img/factory-metal-slat-forming-1280.webp,301970ec22e8d6d09383a849278835bee4b1863a2278a088b57a70ca69327524,129272,0,,,0,0
 img/factory-metal-slat-forming-320.webp,77c0554e084a89d68292044ec2f456a3c0e08f0ce565900a19066b860af8de38,15810,1,o-zavode/index.html,,0,1
-img/factory-operator-console-1280.webp,f735cf29a8c382f8f725aa76f7039c79ec088480f46dac438de90cdbc6b38fd5,61786,1,o-zavode/index.html,Специалист НЗМО у пульта управления станком,0,0
-img/factory-operator-console-1600.webp,95d8fee0cfff69dd3091885aef8b553fc87f55c5cfb0e8a9c0fb9b586a99eb34,81940,1,o-zavode/index.html,Специалист НЗМО у пульта управления станком,0,0
-img/factory-operator-console-640.webp,ab3f5849fabab0c45664acd90863b3604c551bb4f4b10670d64ab9ccf22013e7,23814,1,o-zavode/index.html,Специалист НЗМО у пульта управления станком,0,0
+img/factory-operator-console-1280.webp,f735cf29a8c382f8f725aa76f7039c79ec088480f46dac438de90cdbc6b38fd5,61786,0,,,0,0
+img/factory-operator-console-1600.webp,95d8fee0cfff69dd3091885aef8b553fc87f55c5cfb0e8a9c0fb9b586a99eb34,81940,0,,,0,0
+img/factory-operator-console-640.webp,ab3f5849fabab0c45664acd90863b3604c551bb4f4b10670d64ab9ccf22013e7,23814,0,,,0,0
 img/factory-owner-20261105-1400.webp,ce78dac3982c525680c66b0d28e01640ecfc1dffd75b3bd97683744d7e55e671,188378,0,,,0,0
 img/factory-owner-20261105-1600.png,114330cd68b19c8d6163903b48bae65c727351099094ff57215023f50f2b0f48,3271160,0,,,0,0
 img/factory-owner-20261105-2400.webp,64332b8b76dbf1fedb9a0ecec7f54e325e3e1835090d7b9ccdaa6c51d700effd,460482,0,,,0,0
