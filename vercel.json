@@ -42,21 +42,6 @@
       "permanent": true
     },
     {
-      "source": "/potolki/grilyato/yacheyka-50/",
-      "destination": "/potolki/grilyato/#razmery-i-tseny",
-      "permanent": false
-    },
-    {
-      "source": "/potolki/grilyato/yacheyka-75/",
-      "destination": "/potolki/grilyato/#razmery-i-tseny",
-      "permanent": false
-    },
-    {
-      "source": "/potolki/grilyato/yacheyka-100/",
-      "destination": "/potolki/grilyato/#razmery-i-tseny",
-      "permanent": false
-    },
-    {
       "source": "/potolki/grilyato/po-proektu/",
       "destination": "/potolki/grilyato/#cta",
       "permanent": false

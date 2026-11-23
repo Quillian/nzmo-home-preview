@@ -1,0 +1,21 @@
+.gs-intro { padding-top:32px; padding-bottom:clamp(36px,5vw,80px) }
+.gs-intro h1 { margin:0 0 clamp(24px,3vw,48px); line-height:1.12 }
+.gs-grid { display:grid; grid-template-columns:1.1fr 1fr; gap:clamp(24px,5vw,80px); align-items:center }
+.gs-grid figure { margin:0 }
+.gs-grid img { width:100%; height:auto; display:block }
+.gs-summary { max-width:58ch }
+.gs-summary p,.gs-light { margin:0 0 24px }
+.gs-price { display:block; font-size:clamp(24px,3vw,40px); margin-bottom:6px }
+.gs-summary .btn { margin-bottom:18px }
+.gs-link,.dlv__i a.dlv__k,.gs-share { text-decoration:underline; text-underline-offset:.2em }
+.gs-variants { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); margin:28px 0; gap:12px }
+.gs-variants a { display:grid; gap:14px; padding:20px; background:white; border:1px solid #ccd2d8; color:#1b2d42 }
+.gs-variants a:hover,.gs-variants a:focus-visible { border-color:currentColor }
+.gs-cons { max-width:800px; margin:20px 0 30px }
+.gs-area { margin-top:24px }
+.gs-share { display:inline-block; color:#1b2d42; cursor:pointer; margin:0 0 14px; font:inherit }
+.gs-alert { display:block; padding:16px; background:#fff4dc; color:#1b2d42 }
+@media(max-width:760px) { .gs-grid { grid-template-columns:1fr } .gs-cons td,.gs-cons th { padding:8px 5px } }
+
+.gs-selection-note { margin:12px 0 }
+[data-custom-cell] .kd__stage .kd__fig, [data-custom-cell] .kd__tabs, [data-custom-cell] .kd__panes { visibility:hidden }

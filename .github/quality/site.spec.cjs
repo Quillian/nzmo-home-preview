@@ -721,3 +721,20 @@ test('the home offer carries the revealed code into the enquiry', async ({ brows
     await context.close();
   }
 });
+
+test('shared Grilyato selection keeps its size, shade, price and enquiry', async ({page}) => {
+  const base = 'http://127.0.0.1:8765';
+  await page.goto(base + '/potolki/grilyato/#kd-grilyato-wood');
+  const dialog = page.locator('#kd-grilyato-wood');
+  await dialog.getByRole('button', {name:'75 × 75', exact:true}).click();
+  await dialog.locator('button[data-c=w_moren]').click();
+  const link = dialog.getByRole('link', {name:'Скопировать ссылку'});
+  await expect(link).toHaveAttribute('href', base + '/potolki/grilyato/yacheyka-75/?finish=wood&shade=w_moren');
+  await page.goto(await link.getAttribute('href'));
+  await page.reload();
+  await expect(dialog.locator('.kd__chips [aria-pressed=true]')).toHaveText('75 × 75');
+  await expect(dialog.locator('.kd__price:visible b')).toHaveText(/2\s850/);
+  await expect(dialog.locator('.kd__fig:visible img').first()).toHaveAttribute('src', /wood-1-w_moren/);
+  await dialog.locator('[data-kd-cta]').first().click();
+  await expect(page.locator('#cta [name=config]')).toHaveValue(/под дерево.*75 × 75.*Морёный дуб/);
+});
