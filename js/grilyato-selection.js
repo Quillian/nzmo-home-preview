@@ -138,26 +138,10 @@ document.addEventListener("DOMContentLoaded", () => {
   restore();
 
   if (!pageSize) return;
-  const area = document.querySelector("[data-gs-area]");
   const form = document.querySelector("#cta form[data-lead]");
-  function configureForm(withArea) {
-    if (!form) return;
-    const value = "Грильято классический, ячейка " + pageSize + " × " + pageSize + " мм" + (withArea && area.valueAsNumber > 0 ? ", площадь " + area.value + " м²" : "");
-    form.elements.config.value = value;
-    const echo = form.querySelector("[data-config-echo]");
-    if (echo) { echo.textContent = "Считаем: " + value + "."; echo.hidden = false; }
+  const echo = form?.querySelector("[data-config-echo]");
+  if (echo && form.elements.config.value) {
+    echo.textContent = "Считаем: " + form.elements.config.value + ".";
+    echo.hidden = false;
   }
-  configureForm(false);
-  document.querySelector("[data-gs-calc]").addEventListener("click", () => configureForm(true));
-  function updateArea() {
-    const value = area.valueAsNumber;
-    const valid = Number.isFinite(value) && value > 0;
-    document.querySelector("[data-gs-total]").textContent = valid ? value.toLocaleString("ru-RU") : "—";
-    for (const el of document.querySelectorAll("[data-gs-rate]")) {
-      const amount = Number(el.dataset.gsRate) * value;
-      el.textContent = valid ? (el.dataset.unit === "шт" ? Math.ceil(amount) : Math.round(amount*10)/10).toLocaleString("ru-RU") + " " + el.dataset.unit : "—";
-    }
-  }
-  area.addEventListener("input", updateArea);
-  updateArea();
 });
