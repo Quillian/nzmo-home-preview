@@ -12,10 +12,5 @@
 .product-guide-links--pair{grid-template-columns:repeat(2,minmax(0,1fr))}
 .product-guide-links--pair .product-guide-link{grid-template-columns:100px 1fr auto;grid-template-rows:1fr;align-items:center}
 .product-guide-links--pair img{grid-column:auto;aspect-ratio:4 / 3}
-.asm--clipin .asm__ph{overflow:hidden;isolation:isolate}
-.asm--clipin .asm__ph img{padding:0;border-radius:0;transform:scale(1.43);transform-origin:51% 36%}
-.asm--clipin .asm__p:nth-child(2) img{transform:scale(1.52);transform-origin:47% 52%}
-.asm--clipin .asm__l{top:12%;left:16%}
-.asm--clipin .asm__p{width:100%}
 @media(max-width:900px){.product-guide-links{grid-template-columns:1fr}.product-guide-link,.product-guide-links--pair .product-guide-link{grid-template-columns:clamp(72px,14vw,125px) 1fr auto;grid-template-rows:1fr;align-items:center}.product-guide-link img{grid-column:auto;aspect-ratio:4 / 3}}
-@media(max-width:520px){.product-guide-link,.product-guide-links--pair .product-guide-link{padding:12px;gap:10px;grid-template-columns:68px minmax(0,1fr) auto}.product-guide-link__copy>span{font-size:14px}.product-guide-link__arrow{font-size:18px}.product-guide-links{gap:10px}.asm--clipin .asm__parts{gap:16px}}
+@media(max-width:520px){.product-guide-link,.product-guide-links--pair .product-guide-link{padding:12px;gap:10px;grid-template-columns:68px minmax(0,1fr) auto}.product-guide-link__copy>span{font-size:14px}.product-guide-link__arrow{font-size:18px}.product-guide-links{gap:10px}}
