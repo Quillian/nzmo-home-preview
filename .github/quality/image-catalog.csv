@@ -226,6 +226,22 @@ img/ci-ngu-lab-20261112-2560.webp,cac43c1a15ba3d4d3342edb3d32b77a8f0bcb0f811d3d5
 img/ci-ngu-lab-20261112-800.webp,3c22f9f5cb5d1ddd27b9ff27239afd8cd35b960d6e426bfa60fed9159b86bbd3,50940,1,potolki/kassetnye/clip-in/index.html,,0,1
 img/cleanroom-1000-clean.png,a8cbe7401eb0926a240f941c67658b2fb5efda74ce67c182f3a2ff4f84abbbc4,489532,0,,,0,0
 img/cleanroom-800-clean.png,ddb93c6f0e388c9fe7da83ebacb8d033eee7bd46b96ad88f33a9745344085799,322066,0,,,0,0
+img/clipin-equipment/active-box-1152.webp,87138c1385f89b44d8403bcea6bf5f939020148e4be9d792152ee8e55649e499,39768,1,potolki/kassetnye/clip-in/index.html,Активный бокс,0,0
+img/clipin-equipment/active-box-640.webp,0e9337c243d59750a54217be53dacdb55599888b6d75485714cdc1499f83e7cd,17400,1,potolki/kassetnye/clip-in/index.html,Активный бокс,0,0
+img/clipin-equipment/ceiling-hatch-1152.webp,8580100e045d8b6fca20f0d80478a6c10f337d0e4bd35507af0ab49bc320c4f1,20158,1,potolki/kassetnye/clip-in/index.html,Потолочный люк,0,0
+img/clipin-equipment/ceiling-hatch-640.webp,b7a097940ea59ec0d030cc118321c7603bbf94f18474eb1879eb203db4927fd4,9738,1,potolki/kassetnye/clip-in/index.html,Потолочный люк,0,0
+img/clipin-equipment/cove-1152.webp,942276ce2aa0e8bd7fd9bf24fae2b22728527be375494f3e9ecc59d8e0c5b7ab,15608,1,potolki/kassetnye/clip-in/index.html,Радиусный профиль,0,0
+img/clipin-equipment/cove-640.webp,46df2fd4ab25215688a552cd29dd73ace8b973374c92d061815e3aa9aae2196d,7184,1,potolki/kassetnye/clip-in/index.html,Радиусный профиль,0,0
+img/clipin-equipment/extract-1152.webp,397b535d821f2f27b1f339eebce124db8031c4ac9b8715679acdb81ee2ec6514,93686,1,potolki/kassetnye/clip-in/index.html,Вытяжной модуль,0,0
+img/clipin-equipment/extract-640.webp,ff499c92a8ba2151e75c030d7bee447b69f89df990638d6ee215c58726c20c53,33340,1,potolki/kassetnye/clip-in/index.html,Вытяжной модуль,0,0
+img/clipin-equipment/light-1152.webp,ca752b9312be8864650b03102015c5d7589ececa5da3ed71d5cc4040b462e921,58028,1,potolki/kassetnye/clip-in/index.html,Светильник Clip-in,0,0
+img/clipin-equipment/light-640.webp,874a6f375cc33dc4a11c2e496aede9fa257a2348c21b5944a3084201a94d6ba4,19828,1,potolki/kassetnye/clip-in/index.html,Светильник Clip-in,0,0
+img/clipin-equipment/passive-box-1152.webp,c7807414c0f5aaf55b45c1295f660abf3db91bc42be2f1348c9be28d3bf392c1,25002,1,potolki/kassetnye/clip-in/index.html,Пассивный бокс,0,0
+img/clipin-equipment/passive-box-640.webp,3a2d0516be17cdd0e0ecd17e8c3e7a5fe71601713033de2466588967a0b9adb9,12294,1,potolki/kassetnye/clip-in/index.html,Пассивный бокс,0,0
+img/clipin-equipment/supply-1152.webp,c3feb820cd05b857ea09a632e23a4086285fc387805186af82889157a696b6aa,103424,1,potolki/kassetnye/clip-in/index.html,Приточный модуль,0,0
+img/clipin-equipment/supply-640.webp,24d4cce07fda3862b1980ec9994bed82329a020625e509cca8310c79604a2972,38582,1,potolki/kassetnye/clip-in/index.html,Приточный модуль,0,0
+img/clipin-equipment/wall-hatch-1152.webp,decc460eaa113a85377f3cb28ad284b2112d7e5a39eb6e362317548942c02b8f,18768,1,potolki/kassetnye/clip-in/index.html,Стеновой люк,0,0
+img/clipin-equipment/wall-hatch-640.webp,f675dff3577da112c87104bdd209fe212bcaaeea971e424e3c03effa0ba0c8fa,9116,1,potolki/kassetnye/clip-in/index.html,Стеновой люк,0,0
 img/custom-1000-clean.png,898663521b214eb5a6a8740fbf709e2c9ab9bb976c7c9e9a08a48ece024e079f,527405,0,,,0,0
 img/custom-800-clean.png,12cc28bf4c54cc74264b5abc3ebe8a6dc70a518ad1ce92d3c227afb26cfe4a11,341996,0,,,0,0
 img/d_fastar_camera-1200.webp,0556c54fa2275e71f0f40671eb572a18b44cda2c719c5c2277b64ef699867881,52696,0,,,0,0
@@ -3908,7 +3924,7 @@ img/k3d/st3-lclean-prism-0-ral9002-m-2400.webp,9190aada68e609388785ad03bce43acec
 img/k3d/st3-lclean-prism-0-ral9002-m-640.webp,f0d98e98231a62df42c937aae476e9b28a48b8e3a2795a800abb72163f0b1b6c,9228,0,,,0,0
 img/k3d/st3-lclean-prism-0-ral9003-m-1200.webp,e2d86a52f67d0a75b0b0b208d10330af73942fcf472a4c263f4850628f8d85da,28758,2,k3d/lclean-prism.html | osveshchenie/dlya-chistyh-pomeshcheniy/index.html,"С микропризмой, RAL 9003 белый | С микропризмой, RAL 9003 белый — в поле clip-in",0,0
 img/k3d/st3-lclean-prism-0-ral9003-m-2400.webp,0e0e1e36a269ea38a4ce23d48ea1ba6f975b89cafe63f2eb4e0574d34a1446bc,81630,2,k3d/lclean-prism.html | osveshchenie/dlya-chistyh-pomeshcheniy/index.html,"С микропризмой, RAL 9003 белый | С микропризмой, RAL 9003 белый — в поле clip-in",0,0
-img/k3d/st3-lclean-prism-0-ral9003-m-640.webp,6890e9e913897b7ee484875d8865ba86ec3ff32986af0870abd568d5dc8decdb,8944,2,osveshchenie/dlya-chistyh-pomeshcheniy/index.html | potolki/kassetnye/clip-in/index.html,"С микропризмой, RAL 9003 белый",0,1
+img/k3d/st3-lclean-prism-0-ral9003-m-640.webp,6890e9e913897b7ee484875d8865ba86ec3ff32986af0870abd568d5dc8decdb,8944,1,osveshchenie/dlya-chistyh-pomeshcheniy/index.html,"С микропризмой, RAL 9003 белый",0,0
 img/k3d/st3-lgrill-c100-0-ral9003-m-1200.webp,41faa33581cbca3611508a3fa681114b8720fc15ad6302639ef9800611eba6e2,32016,2,k3d/lgrill-c100.html | osveshchenie/dlya-grilyato/index.html,"В ячейку 100 × 100, RAL 9003 белый | В ячейку 100 × 100, RAL 9003 белый — в решётке",0,0
 img/k3d/st3-lgrill-c100-0-ral9003-m-2400.webp,7279f13bdce16b807201893700f204bacf317bd459bc4e00740c6317930cd9fa,65344,2,k3d/lgrill-c100.html | osveshchenie/dlya-grilyato/index.html,"В ячейку 100 × 100, RAL 9003 белый | В ячейку 100 × 100, RAL 9003 белый — в решётке",0,0
 img/k3d/st3-lgrill-c100-0-ral9003-m-640.webp,6eb2cc7dc3788ed01ad1fdb4884bb6b1762f394f23e437e3eb11bb79034466a6,14464,1,osveshchenie/dlya-grilyato/index.html,"В ячейку 100 × 100, RAL 9003 белый",0,0
@@ -4014,7 +4030,7 @@ img/k3d/st3-nerzhst-r8-0-steel_silver-m-640.webp,0ae05da9a40f85634aaafa377dbfb23
 img/k3d/st3-ph-boxes-aktivnyy-box_active_viz-m-1200.webp,369132f0def3e3a34422961e5038f49e09d8364c08940dc3c53d17ef2fba1213,72256,2,chistye-pomeshcheniya/peredatochnye-boksy/index.html | k3d/boxes-aktivnyy.html,"Активный бокс с HEPA, Нержавейка, серебро | Активный бокс с HEPA, Нержавейка, серебро — визуализация · изделие",0,0
 img/k3d/st3-ph-boxes-aktivnyy-box_active_viz-m-640.webp,08cec06f814b84091001ff0dd8976610df99d7c8168b622624b9fdef58826c27,24582,1,chistye-pomeshcheniya/peredatochnye-boksy/index.html,"Активный бокс с HEPA, Нержавейка, серебро",0,0
 img/k3d/st3-ph-boxes-lyuk-v-potolke-boxes_hatch_viz-m-1200.webp,fae76096f093a4a44098e38ce49b3bf318c3d5dcd84be91d3bb5b4a869481d20,20476,2,chistye-pomeshcheniya/peredatochnye-boksy/index.html | k3d/boxes-lyuk-v-potolke.html,"Ревизионный люк в потолке Clip-in, RAL 9003 белый | Ревизионный люк в потолке Clip-in, RAL 9003 белый — визуализация · изделие",0,0
-img/k3d/st3-ph-boxes-lyuk-v-potolke-boxes_hatch_viz-m-640.webp,928da7323c022d2b0690d1dcee4bdea137b576f420fa257df16f30be0c5e5e0b,7116,2,chistye-pomeshcheniya/peredatochnye-boksy/index.html | potolki/kassetnye/clip-in/index.html,"Ревизионный люк в потолке Clip-in, RAL 9003 белый",0,1
+img/k3d/st3-ph-boxes-lyuk-v-potolke-boxes_hatch_viz-m-640.webp,928da7323c022d2b0690d1dcee4bdea137b576f420fa257df16f30be0c5e5e0b,7116,1,chistye-pomeshcheniya/peredatochnye-boksy/index.html,"Ревизионный люк в потолке Clip-in, RAL 9003 белый",0,0
 img/k3d/st3-ph-boxes-passivnyy-box_passive_viz-m-1200.webp,806748b9e9c0689b98ba6f161a04af38fd1298300817618268da814696b48e01,36098,2,chistye-pomeshcheniya/peredatochnye-boksy/index.html | k3d/boxes-passivnyy.html,"Пассивный бокс, Нержавейка, серебро | Пассивный бокс, Нержавейка, серебро — визуализация · изделие",0,0
 img/k3d/st3-ph-boxes-passivnyy-box_passive_viz-m-640.webp,9e01756b2b33a0ff8db453a14c7265a63aeee3a1114301dc37d79710e331464a,11716,1,chistye-pomeshcheniya/peredatochnye-boksy/index.html,"Пассивный бокс, Нержавейка, серебро",0,0
 img/k3d/st3-ph-dizayn-ds-multilevel-ds_multi_viz-m-1200.webp,b89a21ebc946738ffd4e4139786e33b9aaba72cd34b8eff887f75d978805d169,52748,2,k3d/dizayn-ds-multilevel.html | potolki/dizaynerskie/index.html,"Многоуровневые поля, RAL 9003 белый | Многоуровневые поля, RAL 9003 белый — визуализация · фрагмент потолка",0,0
@@ -6009,7 +6025,7 @@ img/viz_clean-1600.webp,83aa5d2836f5c11e709f2aa5754b51f44a8694459468157cc281a33e
 img/viz_clean-1920.webp,6253a33e85860c7bcd24ebdbe9010eb0c78a23341fb86223bcf08c81ef0c6e4f,134638,0,,,0,0
 img/viz_clean-800.webp,29f301f4e550359976f418810c828e96a859f60849a954c579a6a2ee88eb8ce3,22140,0,,,0,0
 img/vozduhoraspredelitel-pritochnyy-1200.webp,0744ef7f90a816f5caf1dbaf66be716ed98eb15d4a8c847bd8a7d513e3d32cb6,23414,2,chistye-pomeshcheniya/index.html | chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Приточный воздухораспределитель | Приточный воздухораспределитель для чистых помещений,0,0
-img/vozduhoraspredelitel-pritochnyy-640.webp,2b78d8e64772a82985e8beb8d7ba5908e889202d025bf0f75c4ca3db61bae08c,10308,3,chistye-pomeshcheniya/index.html | chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html | potolki/kassetnye/clip-in/index.html,Приточный воздухораспределитель | Приточный воздухораспределитель для чистых помещений,0,1
+img/vozduhoraspredelitel-pritochnyy-640.webp,2b78d8e64772a82985e8beb8d7ba5908e889202d025bf0f75c4ca3db61bae08c,10308,2,chistye-pomeshcheniya/index.html | chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Приточный воздухораспределитель | Приточный воздухораспределитель для чистых помещений,0,0
 img/vozduhoraspredeliteli-ngu-1440.webp,1af8c73d980c53c92c6de3c0e7ab8e9c18df598498aa3ea55d8991e8bd5abcf8,79844,0,,,0,0
 img/vozduhoraspredeliteli-ngu-1920.webp,1af8c73d980c53c92c6de3c0e7ab8e9c18df598498aa3ea55d8991e8bd5abcf8,79844,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Потолочные вентиляционные решётки в чистом помещении НГУ,0,0
 img/vozduhoraspredeliteli-ngu-400.webp,8075dd99aac651c0e4fe3250590421bceb5f6c50aaf3b4d68535f5597c40e7f3,7122,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Потолочные вентиляционные решётки в чистом помещении НГУ,0,0
