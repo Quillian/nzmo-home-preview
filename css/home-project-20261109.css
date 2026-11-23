@@ -15,10 +15,6 @@
   margin-inline: auto;
 }
 
-.home-footer .footer__bottom {
-  background: var(--navy-900);
-}
-
 .home-footer .footer__addr a[href^="mailto:"] {
   text-decoration: underline;
   text-underline-offset: .18em;

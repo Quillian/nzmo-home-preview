@@ -509,7 +509,7 @@ table.t a:hover{color:var(--ochre-800)}
 .footer__grid ul{list-style:none;display:flex;flex-direction:column;gap:12px}
 .footer__grid li a{font-size:14px;line-height:1.4}
 .footer__addr{display:flex;flex-direction:column;gap:14px;font-size:14px;line-height:1.5;color:rgba(255,255,255,.7)}
-.footer__bottom{position:relative;background:var(--navy-800)}
+.footer__bottom{position:relative}
 .footer__bottom .container{padding-top:22px;padding-bottom:24px;display:flex;align-items:center;justify-content:space-between;gap:18px 40px;flex-wrap:wrap}
 .footer__addrline{flex:1 1 100%;display:flex;flex-wrap:wrap;gap:6px 32px;font-size:13px;color:rgba(255,255,255,.62);padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.1)}
 .footer__legal{display:flex;align-items:center;gap:20px;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.72)}
