@@ -235,14 +235,18 @@ img/clipin-equipment/ceiling-hatch-1152.webp,8580100e045d8b6fca20f0d80478a6c10f3
 img/clipin-equipment/ceiling-hatch-640.webp,b7a097940ea59ec0d030cc118321c7603bbf94f18474eb1879eb203db4927fd4,9738,1,potolki/kassetnye/clip-in/index.html,Потолочный люк,0,0
 img/clipin-equipment/cove-r50-1152.webp,a3cce02dc492bd383dbc6906a6e78192a47d69a3177787d9615795b2520ad422,19914,1,potolki/kassetnye/clip-in/index.html,Радиусный профиль,0,0
 img/clipin-equipment/cove-r50-640.webp,2f6bbad04f21b3378139a2d0c7d1f5de28e54ec25892f5e441c597a98ba637ad,9370,1,potolki/kassetnye/clip-in/index.html,Радиусный профиль,0,0
-img/clipin-equipment/extract-catalog-side-1152.webp,5425f5db629e9d246b8d735632a355d3d25f4563921fee13c731c0c25269310e,19114,1,potolki/kassetnye/clip-in/index.html,Вытяжной модуль,0,0
-img/clipin-equipment/extract-catalog-side-640.webp,08763849a605b7e132af68342bfc1109f3bd3d2a7b299b679cf00b4cabe0ce07,9216,1,potolki/kassetnye/clip-in/index.html,Вытяжной модуль,0,0
+img/clipin-equipment/extract-catalog-side-1152.webp,5425f5db629e9d246b8d735632a355d3d25f4563921fee13c731c0c25269310e,19114,0,,,0,0
+img/clipin-equipment/extract-catalog-side-640.webp,08763849a605b7e132af68342bfc1109f3bd3d2a7b299b679cf00b4cabe0ce07,9216,0,,,0,0
 img/clipin-equipment/light-1152.webp,ca752b9312be8864650b03102015c5d7589ececa5da3ed71d5cc4040b462e921,58028,1,potolki/kassetnye/clip-in/index.html,Светильник Clip-in,0,0
 img/clipin-equipment/light-640.webp,874a6f375cc33dc4a11c2e496aede9fa257a2348c21b5944a3084201a94d6ba4,19828,1,potolki/kassetnye/clip-in/index.html,Светильник Clip-in,0,0
 img/clipin-equipment/passive-box-open-1152.webp,4513941c97829261eb271c2829c821dd784c201e12fbe8daa338a0ad866ab4e2,29674,1,potolki/kassetnye/clip-in/index.html,Пассивный бокс,0,0
 img/clipin-equipment/passive-box-open-640.webp,dddf3ca8d2ae691dcc29ec43a0a9c2478cf57add4c85272710bc6dc935bc7ac7,12548,1,potolki/kassetnye/clip-in/index.html,Пассивный бокс,0,0
-img/clipin-equipment/supply-v2-1152.webp,f26923757c466dd31c913c37f7b9c7554b5cc8e34bd19579f006507db7c8b1a3,54954,1,potolki/kassetnye/clip-in/index.html,Приточный модуль,0,0
-img/clipin-equipment/supply-v2-640.webp,bc2418b84c52359a240d278988f6c6de7369632dd96643a0b83805bb7db88191,27700,1,potolki/kassetnye/clip-in/index.html,Приточный модуль,0,0
+img/clipin-equipment/pritochnyy-modul-1152.webp,ac9925775624bff59fd93c126e82d1c1e6a248e2066abdd9beac20729ad1a32f,62706,1,potolki/kassetnye/clip-in/index.html,Приточный модуль,0,0
+img/clipin-equipment/pritochnyy-modul-640.webp,244081a9caf85cb3729dc1a02b5a648df28789364beada6fe17cf035b13030dd,28452,1,potolki/kassetnye/clip-in/index.html,Приточный модуль,0,0
+img/clipin-equipment/supply-v2-1152.webp,f26923757c466dd31c913c37f7b9c7554b5cc8e34bd19579f006507db7c8b1a3,54954,0,,,0,0
+img/clipin-equipment/supply-v2-640.webp,bc2418b84c52359a240d278988f6c6de7369632dd96643a0b83805bb7db88191,27700,0,,,0,0
+img/clipin-equipment/vytyazhnoy-modul-1152.webp,5992ac9d990e9e14b9f8d21695839d798c43a2c9cb624d6cdd409b33301c8cc8,149380,1,potolki/kassetnye/clip-in/index.html,Вытяжной модуль,0,0
+img/clipin-equipment/vytyazhnoy-modul-640.webp,2d27222b71a276be976774f50707294286cceab31ac91eb27583975030bc3c05,61186,1,potolki/kassetnye/clip-in/index.html,Вытяжной модуль,0,0
 img/clipin-equipment/wall-hatch-catalog-1152.webp,a939c77b57a44782a7dca89a686210caad92d2478845136d0af6a627cef0e3de,21026,1,potolki/kassetnye/clip-in/index.html,Стеновой люк,0,0
 img/clipin-equipment/wall-hatch-catalog-640.webp,4584eb9637321aa43e5244d9398b8b81f65ab4cb06d8c1da806443b5b78be006,9540,1,potolki/kassetnye/clip-in/index.html,Стеновой люк,0,0
 img/custom-1000-clean.png,898663521b214eb5a6a8740fbf709e2c9ab9bb976c7c9e9a08a48ece024e079f,527405,0,,,0,0
@@ -5759,6 +5763,14 @@ img/portfolio-tomsk-seating-1200.webp,0a8d5beebf523a86c45a1ed9c2f14038590bb7cfca
 img/portfolio-tomsk-seating-1600.webp,246b290f9dd08868a82c69f27b3929f73802fbbd0984e8d84ab6b13c59b9d3a8,101050,0,,,0,0
 img/portfolio-tomsk-seating-360.webp,6d2aa02c3bf1b0d7268da81c1d0ecf1e703a81870d6ce4680342d5b5e2b1be17,13540,0,,,0,0
 img/portfolio-tomsk-seating-800.webp,4af0c11f874f7b8e49cb754db7aa9c9418283b8ef69a7f76135bd4051184eea8,46370,0,,,0,0
+img/pritochnyy-modul-card-1200.webp,d235575bec013c86b8f9465469ff11088cce10071d0ad6a4eedc30b8917e1e57,39056,2,chistye-pomeshcheniya/index.html | chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Приточный воздухораспределитель для чистых помещений | Ячеистая решётка приточного модуля в углублённой рамке,0,0
+img/pritochnyy-modul-card-640.webp,483358c9f645132cbff77b49f2f3bb12769b858b39b45f71932b0aef2287a5fb,16108,2,chistye-pomeshcheniya/index.html | chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Приточный воздухораспределитель для чистых помещений | Ячеистая решётка приточного модуля в углублённой рамке,0,0
+img/pritochnyy-modul-duct-1200.webp,59989385717ebfe74c34a538245f481f15b2cdbcbee30144f4a7216463a0146e,28412,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Боковой патрубок с фланцем и монтажные ушки на корпусе,0,0
+img/pritochnyy-modul-duct-640.webp,8859bc64073aae693156a1f1f05800a331cba7699d0b3a4cd2095f8b59cd2b7d,13430,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Боковой патрубок с фланцем и монтажные ушки на корпусе,0,0
+img/pritochnyy-modul-front-1200.webp,2400500827073b63a69b500267aba6ea4d443b4751c3eb7dd26cb396dda3dca7,64588,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Ячеистая решётка приточного модуля в углублённой рамке,0,0
+img/pritochnyy-modul-front-640.webp,e03ab6b3d7cb3f648824f2443b2206209bc216a0fe041f8e3ad7d1d7f7112143,27642,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Ячеистая решётка приточного модуля в углублённой рамке,0,0
+img/pritochnyy-modul-grille-1200.webp,7761e7a21a5949839c15b84a7fbba03ae22145efd3611d44123880db9f0357c0,156662,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Пересекающиеся ламели решётки и наклонная кромка рамки,0,0
+img/pritochnyy-modul-grille-640.webp,328b53c6a14813fddedb3c6a3a6b9840d5ad02c575d65d33700a243b5a217a54,71662,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Пересекающиеся ламели решётки и наклонная кромка рамки,0,0
 img/proektirovanie-chistyh-pomeshcheniy-ngu-1440.webp,c6299e972271babee0e16e5c74f035ab255f8faf8bdea236a31a0bf01afae2b1,108800,1,chistye-pomeshcheniya/proektirovanie-i-montazh/index.html,"Чистое помещение исследовательского центра НГУ, Новосибирск",0,0
 img/proektirovanie-chistyh-pomeshcheniy-ngu-1920.webp,b707263c2de78767f54dda984f7be953bb24a4fbb08fbe5371269281b74ac65b,109196,1,chistye-pomeshcheniya/proektirovanie-i-montazh/index.html,"Чистое помещение исследовательского центра НГУ, Новосибирск",0,0
 img/proektirovanie-chistyh-pomeshcheniy-ngu-400.webp,b8a4005270cf3d54f4495742719e4dcf8f07d6d34fb7318200f94d9c2cc988c1,8362,1,chistye-pomeshcheniya/proektirovanie-i-montazh/index.html,"Чистое помещение исследовательского центра НГУ, Новосибирск",0,0
@@ -6029,13 +6041,21 @@ img/v12_t3-1200.webp,fef0f2e38afd000d980a28483fd2ac1aab6327e0b141cd6d953c08f5635
 img/viz_clean-1600.webp,83aa5d2836f5c11e709f2aa5754b51f44a8694459468157cc281a33ebc82ebc0,97762,0,,,0,0
 img/viz_clean-1920.webp,6253a33e85860c7bcd24ebdbe9010eb0c78a23341fb86223bcf08c81ef0c6e4f,134638,0,,,0,0
 img/viz_clean-800.webp,29f301f4e550359976f418810c828e96a859f60849a954c579a6a2ee88eb8ce3,22140,0,,,0,0
-img/vozduhoraspredelitel-pritochnyy-catalog-1200.webp,24ae0334a829a809ca72ebbc1e9399d892d2437436f64344cb6f156420ade434,32456,2,chistye-pomeshcheniya/index.html | chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Приточный воздухораспределитель | Приточный воздухораспределитель для чистых помещений,0,0
-img/vozduhoraspredelitel-pritochnyy-catalog-640.webp,54e560ad2afb9c422303287ef581452d5b681e67c52c936860ca60d1b8e58496,16140,2,chistye-pomeshcheniya/index.html | chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Приточный воздухораспределитель | Приточный воздухораспределитель для чистых помещений,0,0
+img/vozduhoraspredelitel-pritochnyy-catalog-1200.webp,24ae0334a829a809ca72ebbc1e9399d892d2437436f64344cb6f156420ade434,32456,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Приточный воздухораспределитель с ячеистой решёткой из альбома НЗМО,0,0
+img/vozduhoraspredelitel-pritochnyy-catalog-640.webp,54e560ad2afb9c422303287ef581452d5b681e67c52c936860ca60d1b8e58496,16140,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Приточный воздухораспределитель с ячеистой решёткой из альбома НЗМО,0,0
 img/vozduhoraspredeliteli-ngu-1440.webp,1af8c73d980c53c92c6de3c0e7ab8e9c18df598498aa3ea55d8991e8bd5abcf8,79844,0,,,0,0
 img/vozduhoraspredeliteli-ngu-1920.webp,1af8c73d980c53c92c6de3c0e7ab8e9c18df598498aa3ea55d8991e8bd5abcf8,79844,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Потолочные вентиляционные решётки в чистом помещении НГУ,0,0
 img/vozduhoraspredeliteli-ngu-400.webp,8075dd99aac651c0e4fe3250590421bceb5f6c50aaf3b4d68535f5597c40e7f3,7122,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Потолочные вентиляционные решётки в чистом помещении НГУ,0,0
 img/vozduhoraspredeliteli-ngu-800.webp,94a65b73d23609b19f274a3dd2ba64296a42afdf015ba1383211e9406df52fb4,32122,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Потолочные вентиляционные решётки в чистом помещении НГУ,0,0
-img/vozduhozabornik-korpus-katalog-1200.webp,0b316cff498dace8cd03d52434f517dc63d2f645f92462b3687ead40679f7b5a,12788,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,"Корпус вентиляционного элемента НЗМО, ракурс со стороны патрубка",0,0
-img/vozduhozabornik-korpus-katalog-640.webp,4395a103eebac00acd5992e5c5cf9e2f4c5e358718107a79d48c5b95f4c1c410,5852,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,"Корпус вентиляционного элемента НЗМО, ракурс со стороны патрубка",0,0
+img/vozduhozabornik-korpus-katalog-1200.webp,0b316cff498dace8cd03d52434f517dc63d2f645f92462b3687ead40679f7b5a,12788,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Вид сбоку на корпус с прямоугольным патрубком из альбома НЗМО,0,0
+img/vozduhozabornik-korpus-katalog-640.webp,4395a103eebac00acd5992e5c5cf9e2f4c5e358718107a79d48c5b95f4c1c410,5852,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Вид сбоку на корпус с прямоугольным патрубком из альбома НЗМО,0,0
+img/vytyazhnoy-modul-card-1200.webp,ee459d6efdf4e6e2a9d1ea401b05e0fecc76ea2334cc75b2717c052d9e1a4c53,84160,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Перфорированная лицевая панель потолочного воздухозаборника,0,0
+img/vytyazhnoy-modul-card-640.webp,3bec30a7a8f7046436347e4754afb46c2481691654d6ff543bf22562a38a4396,29116,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Перфорированная лицевая панель потолочного воздухозаборника,0,0
+img/vytyazhnoy-modul-detail-1200.webp,e37e8ee90d9b2e70f3f8740fa794d76a0f5edc31fff3d93087ea086d744699fb,204810,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Круглые отверстия и гладкая рамка вытяжной панели крупным планом,0,0
+img/vytyazhnoy-modul-detail-640.webp,b372085b0199160ae8fed95882dda7dfce4aeacca08218e99373fcf7b95d076a,109692,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Круглые отверстия и гладкая рамка вытяжной панели крупным планом,0,0
+img/vytyazhnoy-modul-front-1200.webp,cd8c204344707240b589ad6b6a38a005b3f482d30a748c508f4a73fd7852a32e,154368,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Перфорированная лицевая панель потолочного воздухозаборника,0,0
+img/vytyazhnoy-modul-front-640.webp,fc5909253b2578918afc41ef1777d96af6d0d19e91b21a0cb53603f7949902c2,59950,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Перфорированная лицевая панель потолочного воздухозаборника,0,0
+img/vytyazhnoy-modul-installed-1200.webp,2ea0e55d65843e08ee2c5c96a67581587af8e7b20d0e56678f41e596a5d7fc51,96750,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Вытяжная панель заподлицо с соседними кассетами,0,0
+img/vytyazhnoy-modul-installed-640.webp,6bde936135769056460fd473ae94087f892a00b29ecccd0436c1d16f46b82029,34220,1,chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,Вытяжная панель заподлицо с соседними кассетами,0,0
 img/wall-1000-clean.png,1d0a3f9559897c3b77534415751f579c2de352608488860cd0a5ccabd73e7c6f,419927,0,,,0,0
 mail/nzmo-logo.png,380f58cb7b0381b3417c8a7018c3bdd1608b0f6cb03dd2dfa37ee959c86c44c8,15044,0,,,0,0
