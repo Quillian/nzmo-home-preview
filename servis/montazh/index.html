@@ -25,7 +25,13 @@
 <script src="/js/lead-journey-20261106.js?v=61b869cf" defer></script>
 <link rel="stylesheet" href="/css/calculator-lead-20261109.css?v=2e5483b3">
 <script defer src="/js/project-enquiry.js?v=a6070932"></script>
-</head>
+<style>
+.installation-photos { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(16px,2vw,32px); margin:32px 0 clamp(36px,4vw,64px); }
+.installation-photos figure { margin:0; }
+.installation-photos img { display:block; width:100%; height:auto; }
+.installation-photos figcaption { margin-top:10px; color:var(--text-strong); line-height:1.4; }
+@media(max-width:700px) { .installation-photos { grid-template-columns:1fr; gap:24px; } }
+</style></head>
 <body>
 <header class="header">
   <div class="header__in">
@@ -170,7 +176,13 @@
 <li>Менеджер уточняет объект, сроки и условия, называет цену монтажа в КП</li>
 <li>Монтируем по схеме раскладки, сдаём работу по акту</li>
 </ul>
-<h2 id="r2">Что входит в комплект</h2>
+</div>
+  <div class="installation-photos">
+    <figure><img src="/img/montazh-razmetka-perimetra-560.webp" srcset="/img/montazh-razmetka-perimetra-560.webp 560w, /img/montazh-razmetka-perimetra-1100.webp 1100w" sizes="(max-width:700px) 100vw, 33vw" width="1100" height="738" loading="lazy" alt="Монтажник отмечает на стене уровень потолка по лазерной линии"><figcaption>Разметка уровня потолка</figcaption></figure>
+    <figure><img src="/img/montazh-styk-profiley-grilyato-560.webp" srcset="/img/montazh-styk-profiley-grilyato-560.webp 560w, /img/montazh-styk-profiley-grilyato-1100.webp 1100w" sizes="(max-width:700px) 100vw, 33vw" width="1100" height="738" loading="lazy" alt="Проверка соединения двух профилей решётки Грильято на монтажном столе"><figcaption>Проверка стыка профилей Грильято</figcaption></figure>
+    <figure><img src="/img/montazh-posadka-kassety-clip-in-560.webp" srcset="/img/montazh-posadka-kassety-clip-in-560.webp 560w, /img/montazh-posadka-kassety-clip-in-1100.webp 1100w" sizes="(max-width:700px) 100vw, 33vw" width="1100" height="738" loading="lazy" alt="Монтажник проверяет посадку перфорированной кассеты Clip-in в плоскости потолка"><figcaption>Проверка посадки кассеты Clip-in</figcaption></figure>
+  </div>
+  <div class="content"><h2 id="r2">Что входит в комплект</h2>
 <ul>
 <li>Инструкция по монтажу и схема раскладки под объект</li>
 <li>Крепёж, подвесы, доборные и периметральные элементы</li>
