@@ -1,11 +1,11 @@
  .home-partners.section{padding:48px 0}.home-partners .section-head{margin-bottom:20px}
-.partner-ribbon{position:relative;padding-bottom:0}
+.partner-ribbon{position:relative;padding-bottom:0;--logo-gap:48px;font-size:16px}
 .partner-ribbon__viewport{overflow:hidden;padding:12px 0;mask-image:linear-gradient(to right,transparent,#000 32px,#000 calc(100% - 32px),transparent)}
 .partner-ribbon__track{display:flex;width:max-content;animation:partner-ribbon-scroll 105s linear infinite;animation-play-state:paused}
 .partner-ribbon.is-ready .partner-ribbon__track{animation-play-state:running}
-.partner-ribbon__group{display:flex;align-items:center;flex:none;gap:48px;margin:0;padding:0 48px 0 0;list-style:none}
-.partner-ribbon__group li{display:flex;align-items:center;justify-content:center;width:160px;height:72px;flex:none}
-.partner-ribbon__group img{display:block;width:160px;height:64px;object-fit:contain;filter:grayscale(1);opacity:1;transition:filter .2s,opacity .2s}
+.partner-ribbon__group{display:flex;align-items:center;flex:none;gap:var(--logo-gap);margin:0;padding:0 var(--logo-gap) 0 0;list-style:none}
+.partner-ribbon__group li{display:flex;align-items:center;justify-content:center;height:72px;flex:none}
+.partner-ribbon__group img{display:block;width:auto;height:var(--logo-height,2.5em);max-width:none;object-fit:contain;filter:grayscale(1);opacity:1;transition:filter .2s,opacity .2s}
 .partner-ribbon__group img:hover{filter:none;opacity:1}
 .geo-legend--center{justify-content:center;text-align:center;gap:16px 32px}
 .geo-legend--center>span{justify-content:center}
@@ -13,9 +13,8 @@
 .geo-legend--center .geo-legend__note{flex-basis:100%;margin-top:2px}
 @keyframes partner-ribbon-scroll{to{transform:translateX(-50%)}}
 @media(max-width:600px){
- .partner-ribbon__group{gap:28px;padding-right:28px}
- .partner-ribbon__group li{width:136px;height:64px}
- .partner-ribbon__group img{width:136px;height:54px}
+ .partner-ribbon{--logo-gap:30px;font-size:14px}
+ .partner-ribbon__group li{height:64px}
  .partner-ribbon__track{animation-duration:90s}
  .geo-legend--center{flex-direction:column;gap:16px;font-size:10px;letter-spacing:.05em}
  .geo-legend--center .geo-legend__note{flex-basis:auto;font-size:12px}
@@ -28,4 +27,9 @@
 }
 @media(max-width:600px){.home-partners.section{padding:36px 0}}
 
-.partner-ribbon__group img[src$="renaissance.png"]{object-fit:cover}
+/* Size the visible artwork; the gap is measured between marks of different widths. */
+.partner-ribbon__group :is([src$="gazprom.svg"], [src$="aeroport-tolmachyovo-320.png"]) { --logo-height: 3.5em; }
+.partner-ribbon__group :is([src$="lemana-pro-320.png"], [src$="gruppa-vis.svg"]) { --logo-height: 3.25em; }
+.partner-ribbon__group :is([src$="sds-stroy-320.png"], [src$="ekviti-plyus-320.png"], [src$="soyuz-ribbon.svg"]) { --logo-height: 2.875em; }
+.partner-ribbon__group :is([src$="ant-yapi.svg"], [src$="kramz.svg"], [src$="aeroport-novokuzneck-ribbon.svg"]) { --logo-height: 2.125em; }
+.partner-ribbon__group :is([src$="lukoil.svg"], [src$="renaissance-ribbon.png"], [src$="brusnika-320.png"], [src$="euromed.svg"]) { --logo-height: 1.875em; }

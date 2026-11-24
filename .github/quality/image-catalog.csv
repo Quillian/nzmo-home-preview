@@ -191,10 +191,10 @@ img/case-tomsk-airport-20261109-800.webp,81a39f8cf08299c565fda08bd966dc59532eab6
 img/cert_km1-600.webp,e990ba70bb027c50f8e3df01d6d4a4d3a0d12390e4b9b87cb5bfe5b735579418,19352,0,,,0,0
 img/cert_ng-600.webp,e21cf6491f1e92c72c3e8ac599ac4b9e7f2de96d66c476791ccec232bb312e10,25636,0,,,0,0
 img/cert_san-600.webp,4e0883e3d5920ff42a2d7fb6403c8a9547e695f0044f441cf15b6737e843fab1,20320,0,,,0,0
-img/chistye-pomeshcheniya-ngu-1440.webp,262181c9d2c99f52b51af7341fba1c1033ee0c9018692c99e05c70deaf861465,75816,1,chistye-pomeshcheniya/index.html,"Исследовательский центр НГУ, Новосибирск — чистое помещение",0,0
-img/chistye-pomeshcheniya-ngu-1920.webp,a0bd6943563c54a0dd0bbe4b3040b4d4bae3ad07dc14485129444bf054445801,75946,1,chistye-pomeshcheniya/index.html,"Исследовательский центр НГУ, Новосибирск — чистое помещение",0,0
-img/chistye-pomeshcheniya-ngu-400.webp,96eb9f9319d1516f21f73947dcac9618dc000017c08ef48bd891ada8a38d73e0,9034,1,chistye-pomeshcheniya/index.html,"Исследовательский центр НГУ, Новосибирск — чистое помещение",0,0
-img/chistye-pomeshcheniya-ngu-800.webp,1ed8448c8cbada5a59c1f82ec583fe58a3a4edd995820a9fba23351332d74d2f,32142,1,chistye-pomeshcheniya/index.html,"Исследовательский центр НГУ, Новосибирск — чистое помещение",0,0
+img/chistye-pomeshcheniya-ngu-1440.webp,262181c9d2c99f52b51af7341fba1c1033ee0c9018692c99e05c70deaf861465,75816,0,,,0,0
+img/chistye-pomeshcheniya-ngu-1920.webp,a0bd6943563c54a0dd0bbe4b3040b4d4bae3ad07dc14485129444bf054445801,75946,0,,,0,0
+img/chistye-pomeshcheniya-ngu-400.webp,96eb9f9319d1516f21f73947dcac9618dc000017c08ef48bd891ada8a38d73e0,9034,0,,,0,0
+img/chistye-pomeshcheniya-ngu-800.webp,1ed8448c8cbada5a59c1f82ec583fe58a3a4edd995820a9fba23351332d74d2f,32142,0,,,0,0
 img/ci-bol-nica-operacionnaya-1920.webp,257cbeb5a66fc0c4a5841e8ab1360671089a9385043133907a144935393c602d,86014,0,,,0,0
 img/ci-bol-nica-operacionnaya-2-1920.webp,3b167589742a195322e4617ed9dddef798e0ba1dac830a5e7368b11aaa5d0b89,117494,0,,,0,0
 img/ci-bol-nica-operacionnaya-2-2560.webp,3b167589742a195322e4617ed9dddef798e0ba1dac830a5e7368b11aaa5d0b89,117494,0,,,0,0
@@ -5173,6 +5173,9 @@ img/mn-zabory-zhalyuzi-720.webp,a745ab69050eed5eff9f7713399b0e86fcc13f65955d2b54
 img/mn-zony-ozhidaniya-1400.webp,4b0f34c2b6952a8120e9e13fedf5105370adeaa80e7c4f3390e6fd8c4bbbfca9,294918,136,404.html | 404/index.html | chistye-pomeshcheniya/dveri-chistyh/index.html | chistye-pomeshcheniya/gml-paneli/index.html | chistye-pomeshcheniya/index.html,,0,136
 img/mn-zony-ozhidaniya-720.webp,804a3b7e49df4e769b44bce2015385c36bab79896829b0e1094a3db4e6b97f89,89374,136,404.html | 404/index.html | chistye-pomeshcheniya/dveri-chistyh/index.html | chistye-pomeshcheniya/gml-paneli/index.html | chistye-pomeshcheniya/index.html,,0,136
 img/monotek-stroy-320.png,517d33f40c8cef7db49c05911655b56b3a61949170e5a68b8c478f3ca422a4f2,20305,2,index.html | o-zavode/index.html,Монотек-Строй,0,2
+img/ngu-chistoe-pomeshchenie-koridor-1086.webp,f7058d45b0ae1e828476be3d941fc93692138cae3da512a262974203d9334bad,134902,1,chistye-pomeshcheniya/index.html,Коридор чистых помещений НГУ с передаточным боксом в стеновой панели,0,0
+img/ngu-chistoe-pomeshchenie-koridor-480.webp,3c01aab382fa48d2b9e92334c3b4f425fce6929ebbbc11654eb6a7984bd1de95,23362,1,chistye-pomeshcheniya/index.html,Коридор чистых помещений НГУ с передаточным боксом в стеновой панели,0,0
+img/ngu-chistoe-pomeshchenie-koridor-800.webp,ac68da265a2799d7b4d41fa92abc8477b71be1d14f095479b5b0760cc45f3a8b,73018,1,chistye-pomeshcheniya/index.html,Коридор чистых помещений НГУ с передаточным боксом в стеновой панели,0,0
 img/ngu-cleanroom-1440.webp,d31e9e2a922794e9c078b64d7b289d958109efd2b41e11b21938846cf5448f26,104598,3,chistye-pomeshcheniya/index.html | chistye-pomeshcheniya/proektirovanie-i-montazh/index.html | chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,"Исследовательский центр НГУ, г. Новосибирск: помещение со стеновыми панелями и потолочными вентиляционными решётками",0,0
 img/ngu-cleanroom-400.webp,55492c2cfaa742c2189cd2b1f660906403c5bf5bf15afc4c08906b1fb6afb500,8650,3,chistye-pomeshcheniya/index.html | chistye-pomeshcheniya/proektirovanie-i-montazh/index.html | chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,"Исследовательский центр НГУ, г. Новосибирск: помещение со стеновыми панелями и потолочными вентиляционными решётками",0,3
 img/ngu-cleanroom-800.webp,be762e64f4b356a5edca781e10e3fb6ba502215356f14741fe7e6cf7852507df,30080,3,chistye-pomeshcheniya/index.html | chistye-pomeshcheniya/proektirovanie-i-montazh/index.html | chistye-pomeshcheniya/ventilyatsiya-chistyh/index.html,"Исследовательский центр НГУ, г. Новосибирск: помещение со стеновыми панелями и потолочными вентиляционными решётками",0,0
@@ -5208,7 +5211,8 @@ img/pack_3-600-clean.png,9d315354bbf512ea21856412703d9b67996cd67dbe9efe14556fa8e
 img/pack_3-900-clean.png,ca704b245259b0bbc4ef6b213c97f9bfbe5055c625d668b8bdaf34381dba12e4,668141,58,chistye-pomeshcheniya/dveri-chistyh/index.html | chistye-pomeshcheniya/gml-paneli/index.html | chistye-pomeshcheniya/index.html | chistye-pomeshcheniya/peredatochnye-boksy/index.html | chistye-pomeshcheniya/proektirovanie-i-montazh/index.html,"Обрешётка повышенной высоты, упаковка Тип 1.3",0,0
 img/pack_4-600-clean.png,7fe0f80ea3905e8a368552ea360315173025e24b3f510a2ceb9b7468b1991a3c,268536,0,,,0,0
 img/pack_4-900-clean.png,628afff960d3cbd8bd58de21a89da22f33c33686b1f4f98842412ffdbda61f73,649556,58,chistye-pomeshcheniya/dveri-chistyh/index.html | chistye-pomeshcheniya/gml-paneli/index.html | chistye-pomeshcheniya/index.html | chistye-pomeshcheniya/peredatochnye-boksy/index.html | chistye-pomeshcheniya/proektirovanie-i-montazh/index.html,"Обрешётка на узкую партию, упаковка Тип 1.4",0,0
-img/partners/aeroport-novokuzneck.svg,940024d3381c0413a736a5e4164c7271c644f7b51c8dd512e0ef158ffea6418d,19110,2,index.html | o-zavode/index.html,Аэропорт Новокузнецк,0,2
+img/partners/aeroport-novokuzneck-ribbon.svg,93d8c03d6216b4be82438fa1f94b7ab4292bb39a30b8467f95173f74ec40e4f5,19110,2,index.html | o-zavode/index.html,Аэропорт Новокузнецк,0,2
+img/partners/aeroport-novokuzneck.svg,940024d3381c0413a736a5e4164c7271c644f7b51c8dd512e0ef158ffea6418d,19110,0,,,0,0
 img/partners/ant-yapi.svg,10038a58c2959880367d482c6d7124f0d963231e2239bd2ccb902ff79266ad46,3584,2,index.html | o-zavode/index.html,Ant Yapi,0,2
 img/partners/euromed.svg,64c213970a9cfbbe1e8a4f80f8e6071715facbe9919069f87b3e449be772a0e4,10831,2,index.html | o-zavode/index.html,Евромед,0,2
 img/partners/gazprom.svg,8b182c8d07d7220da1623e3373f1c8f7e9195cd1405031f13c23e8a79de6595b,3080,2,index.html | o-zavode/index.html,Газпром,0,2
@@ -5216,8 +5220,10 @@ img/partners/gruppa-vis.svg,6af37dbcabd15d993aa7489b6c9ce77b68d8a8e8e0e381594c7b
 img/partners/kramz.svg,333ac54c0adde8128f291aef7f2a033bb0a634d9b5a62a2cddffe53910993608,15021,2,index.html | o-zavode/index.html,КРАМЗ,0,2
 img/partners/lukoil.svg,9c2b4d526a65c672f8d8b8955cd79d6d78bce0fa4bf79178f5bc5f8a3af4622a,76461,2,index.html | o-zavode/index.html,Лукойл,0,2
 img/partners/lukse.svg,c43a12921eda73d113aff78fe3fc105d267894e07a0d5bc734efbe1cd44dac0f,6003,2,index.html | o-zavode/index.html,Lukse,0,2
-img/partners/renaissance.png,9be980094fc5febb2b2aa86d05253ab32735f41bad996545e8880870f663690f,12113,2,index.html | o-zavode/index.html,Renaissance,0,2
-img/partners/soyuz.svg,866fa114fe9899467dd1800749356a2e3190d0e3d65a7b83680fea7197e21d82,19492,2,index.html | o-zavode/index.html,Союз,0,2
+img/partners/renaissance-ribbon.png,2b758883d8e5f0195a547f6b98485bf113544d03176d531102c31f055f5e73de,15436,2,index.html | o-zavode/index.html,Renaissance,0,2
+img/partners/renaissance.png,9be980094fc5febb2b2aa86d05253ab32735f41bad996545e8880870f663690f,12113,0,,,0,0
+img/partners/soyuz-ribbon.svg,6a83554e0cc93fba0358492cb916e313656079bf705f1157f066151afd56d07b,19493,2,index.html | o-zavode/index.html,Союз,0,2
+img/partners/soyuz.svg,866fa114fe9899467dd1800749356a2e3190d0e3d65a7b83680fea7197e21d82,19492,0,,,0,0
 img/patterns/perforation.svg,988d327ee33154682502651290e066434a12071996650121f7e77e8d2d44789b,140,1,css/template_styles.css,,0,0
 img/patterns/zigzag-outline-tile.svg,b5a2d403de67b85ad2cb3212d83e3cf52bb92933056c7b33acd01cfcbee549c6,1448,1,css/template_styles.css,,0,0
 img/peredatochnye-boksy-ngu-1440.webp,5056bac376a169014e17b532a5dd0964f68694a9628e483c2daca29a86ebac53,18672,0,,,0,0
