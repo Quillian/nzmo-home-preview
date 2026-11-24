@@ -37,6 +37,25 @@
   .cover--ngu .t-display, .cover--ngu .lead { max-width: none; }
   .cover--ngu .t-display { font-size: clamp(22px, 7.2vw, 35px); overflow-wrap: normal; hyphens: none; }
 }
+
+.kit-parts { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(16px,2vw,32px); }
+.kit-part { display:flex; flex-direction:column; border:1px solid var(--border-default,#d6dde3); }
+.kit-part > img { display:block; width:100%; height:clamp(155px,15vw,250px); object-fit:cover; }
+.kit-part__body { flex:1; display:flex; flex-direction:column; padding:clamp(20px,2.2vw,36px); }
+.kit-part__body p,.kit-project p { margin:12px 0 20px; max-width:58ch; }
+.kit-links { list-style:none; padding:0; margin:auto 0 0; }
+.kit-links li { border-top:1px solid var(--border-default,#d6dde3); }
+.kit-links a { display:flex; justify-content:space-between; align-items:center; gap:12px; min-height:46px; padding:8px 0; color:var(--navy-800); text-decoration:none; }
+.kit-links a::after { content:""; flex:none; width:8px; height:8px; border:solid currentColor; border-width:1.5px 1.5px 0 0; transform:rotate(45deg); margin-right:4px; }
+.kit-links a:hover,.kit-links a:focus-visible { text-decoration:underline; text-underline-offset:4px; color:var(--text-link-hover); }
+.kit-project { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px 28px; margin-top:clamp(16px,2vw,32px); padding:clamp(20px,2.2vw,36px); background:var(--navy-800); color:white; }
+.kit-project .t-4,.kit-project p { color:inherit; }
+.kit-project p { margin-bottom:0; }
+.kit-project .btn-row { margin:0; }
+@media (max-width:700px) {
+  .kit-parts { grid-template-columns:1fr; }
+  .kit-project .btn-row { display:grid; width:100%; }
+}
 </style>
 </head>
 <body>
@@ -198,7 +217,7 @@
 <div class="card__spec">ГМЛ · оцинк. сталь 08пс · до 1200 × 3000</div> </div>
 </article>
 <article class="card">
-<a class="card__photo" href="/chistye-pomeshcheniya/sendvich-paneli/"><img alt="Пример стенового ограждения чистого помещения с остеклением" loading="lazy" sizes="(max-width: 700px) 100vw, 33vw" src="/img/sendvich-paneli-chistyh-pomeshcheniy-800.webp" srcset="/img/sendvich-paneli-chistyh-pomeshcheniy-400.webp 400w, /img/sendvich-paneli-chistyh-pomeshcheniy-800.webp 800w, /img/sendvich-paneli-chistyh-pomeshcheniy-1440.webp 1440w"/></a>
+<a class="card__photo" href="/chistye-pomeshcheniya/sendvich-paneli/"><img alt="Каркасная сэндвич-панель в разрезе: стальные облицовки, каркас и минераловатное заполнение" loading="lazy" sizes="(max-width: 700px) 100vw, 33vw" src="/img/karkasnaya-sendvich-panel-razrez-card-800.webp" srcset="/img/karkasnaya-sendvich-panel-razrez-card-400.webp 400w, /img/karkasnaya-sendvich-panel-razrez-card-800.webp 800w, /img/karkasnaya-sendvich-panel-razrez-card-1440.webp 1440w"/></a>
 <div class="card__body">
 <div class="card__title"><a href="/chistye-pomeshcheniya/sendvich-paneli/">Сэндвич-панели для чистых помещений</a></div>
 <p>Перегородки: глухие и светопрозрачные панели толщиной 50 и 60 мм.</p>
@@ -283,7 +302,33 @@
 <h3 class="dlv__h">Оплата</h3>
 <div class="dlv"><div class="dlv__i"><span class="dlv__k">Стандарт</span><b>100 % предоплата</b><p>Оплачиваете счёт — запускаем производство. Срок изготовления считаем со дня оплаты</p></div><div class="dlv__i"><span class="dlv__k">Частями</span><b>Аванс и доплата</b><p>50/50 или 70/30 — для дилеров и по договору</p></div><div class="dlv__i"><span class="dlv__k">Ключевым клиентам</span><b>Отсрочка</b><p>Постоянным партнёрам отсрочку платежа согласуем и пропишем в договоре</p></div><div class="dlv__i"><span class="dlv__k">Как платить</span><b>По счёту</b><p>Безналичный расчёт. В комплекте договор, счёт, УПД, паспорт изделия и сертификаты</p></div></div>
 </div>
-</section><section class="section section--white" id="komplekt"><div class="container"><div class="kicker"><span class="n">4</span><span class="l">Комплектация</span></div><div class="section-head"><div><h2 class="t-2">Комплект под класс чистоты и режим работы</h2><p class="lead">Стены, потолок, двери и инженерные элементы увязываем в одном проекте. Класс чистоты определяют по применимому стандарту и заданию на объект.</p></div></div><div class="grid g3"><div><h3 class="t-4">Ограждения</h3><p>ГМЛ и каркасные сэндвич-панели 50 и 60 мм. В проект закладываем смотровые окна, скругляющие угловые элементы и примыкания к полу. Радиус профиля подбираем по узлу.</p></div><div><h3 class="t-4">Потолок и инженерия</h3><p>Герметичный <a style="text-decoration:underline;text-underline-offset:3px" href="/potolki/kassetnye/clip-in/">Clip-in</a> или панели по проекту. Согласуем раскладку с <a style="text-decoration:underline;text-underline-offset:3px" href="/osveshchenie/dlya-chistyh-pomeshcheniy/">встраиваемыми светильниками</a> и <a style="text-decoration:underline;text-underline-offset:3px" href="/chistye-pomeshcheniya/ventilyatsiya-chistyh/">воздухораспределителями</a>.</p></div><div><h3 class="t-4">Проект и монтаж</h3><p>Подключаемся по вашему заданию или спецификации. <a style="text-decoration:underline;text-underline-offset:3px" href="/chistye-pomeshcheniya/proektirovanie-i-montazh/">Что входит в проект и монтаж</a>. <a style="text-decoration:underline;text-underline-offset:3px" href="/chistye-pomeshcheniya/proektirovanie-i-montazh/#chto-prislat">Что прислать для расчёта</a>.</p></div></div></div></section>
+</section><section class="section section--white" id="komplekt"><div class="container"><div class="kicker"><span class="n">4</span><span class="l">Комплектация</span></div><div class="section-head"><div><h2 class="t-2">Комплект под класс чистоты и режим работы</h2><p class="lead">Стены, потолок, двери и инженерные элементы увязываем в одном проекте. Класс чистоты определяют по применимому стандарту и заданию на объект.</p></div></div><div class="kit-parts">
+  <article class="kit-part">
+    <img src="/img/ngu-cleanroom-steny-800.webp" alt="Примыкание стеновых панелей в чистом помещении НГУ" loading="lazy" width="800" height="400">
+    <div class="kit-part__body"><h3 class="t-4">Стены и проёмы</h3>
+      <p>Подбираем облицовку или перегородку, размещаем двери и смотровые окна. По чертежу узла выбираем радиус скругления и примыкание к полу.</p>
+      <ul class="kit-links">
+        <li><a href="/chistye-pomeshcheniya/gml-paneli/">Облицовка из ГМЛ</a></li>
+        <li><a href="/chistye-pomeshcheniya/sendvich-paneli/">Сэндвич-панели 50 и 60 мм</a></li>
+        <li><a href="/chistye-pomeshcheniya/dveri-chistyh/">Двери для чистых помещений</a></li>
+      </ul>
+    </div>
+  </article>
+  <article class="kit-part">
+    <img src="/img/ngu-cleanroom-ventilyatsiya-800.webp" alt="Инженерное оборудование в чистом помещении НГУ" loading="lazy" width="800" height="400">
+    <div class="kit-part__body"><h3 class="t-4">Потолок и инженерия</h3>
+      <p>Увязываем раскладку герметичного потолка Clip-in или панелей по проекту с местами установки светильников и вентиляционных модулей.</p>
+      <ul class="kit-links">
+        <li><a href="/potolki/kassetnye/clip-in/">Кассетный потолок Clip-in</a></li>
+        <li><a href="/osveshchenie/dlya-chistyh-pomeshcheniy/">Встраиваемые светильники</a></li>
+        <li><a href="/chistye-pomeshcheniya/ventilyatsiya-chistyh/">Воздухораспределители</a></li>
+      </ul>
+    </div>
+  </article>
+</div>
+<div class="kit-project on-deep"><div><h3 class="t-4">Проект и монтаж</h3><p>Подключаемся по вашему техническому заданию или готовой спецификации.</p></div>
+  <div class="btn-row"><a class="btn btn--white" href="/chistye-pomeshcheniya/proektirovanie-i-montazh/">Состав работ</a><a class="btn btn--outline" href="/chistye-pomeshcheniya/proektirovanie-i-montazh/#chto-prislat">Что прислать для расчёта</a></div>
+</div></div></section>
 
 <section class="section section--tight section--white">
 <div class="container">
