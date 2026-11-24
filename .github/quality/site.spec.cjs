@@ -530,10 +530,17 @@ test('contacts are compact and company details remain downloadable',async({page,
  await expect(page.locator('a[href="#cta"]')).toHaveCount(0);
 });
 
-for(const route of ['/kontakty/','/o-zavode/']) test('map starts automatically before scrolling '+route,async({page})=>{
+for(const route of ['/kontakty/','/o-zavode/']) test('map loads automatically and switches locations '+route,async({page})=>{
  let requests=0;await page.route('https://widgets.2gis.com/**',async r=>{requests++;await r.fulfill({status:200,contentType:'text/html',body:'<html lang="ru"><title>Карта для проверки</title><body>2ГИС mock</body></html>'});});
  await page.goto('http://127.0.0.1:8765'+route);const frame=page.locator('#nzmo-map');
- expect(requests).toBe(1);await expect(frame).toHaveAttribute('src',/widgets\.2gis\.com/);await expect(frame).toHaveAttribute('loading','eager');
+ if(route==='/o-zavode/'){
+  await expect(frame).toHaveAttribute('loading','lazy');
+  await frame.scrollIntoViewIfNeeded();
+ }else{
+  await expect(frame).toHaveAttribute('loading','eager');
+ }
+ await expect.poll(()=>requests).toBe(1);
+ await expect(frame).toHaveAttribute('src',/widgets\.2gis\.com/);
  await expect(frame).toHaveAttribute('src',/70000001090500146%2C70000001053671670/);
  await expect(page.locator('[data-map-load],.location-intro')).toHaveCount(0);
  await page.locator('[data-map="office"]').click();await expect(frame).toHaveAttribute('src',/55\.03897/);
