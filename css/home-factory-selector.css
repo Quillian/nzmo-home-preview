@@ -216,3 +216,11 @@
     transition: none;
   }
 }
+
+.home-factory__facts {gap:0;border-block:1px solid var(--on-deep-hair)}
+.home-factory__facts > div {border-top:0;padding:16px 8px;align-items:center;text-align:center}
+.home-factory__facts > div + div {border-inline-start:1px solid var(--on-deep-hair)}
+@media (max-width:600px) {
+ .home-factory__facts > div:nth-child(odd) {border-inline-start:0}
+ .home-factory__facts > div:nth-child(n+3) {border-top:1px solid var(--on-deep-hair)}
+}

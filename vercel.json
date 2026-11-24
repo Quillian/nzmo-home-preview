@@ -6,6 +6,7 @@
   "trailingSlash": true,
   "cleanUrls": false,
   "redirects": [
+    {"source":"/maf/gorodskaya-mebel/","destination":"/maf/skulptury/","statusCode":301},
     {
       "source": "/clip-in",
       "destination": "/potolki/kassetnye/clip-in/",

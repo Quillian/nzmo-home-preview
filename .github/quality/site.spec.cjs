@@ -2,14 +2,17 @@ const {test,expect}=require('@playwright/test');
 const {AxeBuilder}=require('@axe-core/playwright');
 const {PNG}=require('pngjs');
 const routes=['/','/o-zavode/','/kontakty/','/potolki/reechnye/','/potolki/kassetnye/clip-in/','/spasibo/','/dveri/protivopozharnye/','/potolki/armstrong-t24/','/maf/skulptury/','/obekty/','/servis/faq/'];
-test('home delivery follows projects and the hero links to the enquiry page',async({page})=>{
+test('home delivery follows projects and the hero opens the enquiry dialog',async({page})=>{
   await page.goto('http://127.0.0.1:8765/');
   await expect(page.locator('#obekty + #dostavka')).toBeAttached();
   await expect(page.locator('#poryadok-raboty form')).toHaveCount(0);
   await expect(page.locator('#napravleniya a[href="/dveri/"] img')).toHaveAttribute('src',/door-nzmo-render/);
   await page.locator('main .cover').getByRole('link', { name: 'Посчитать проект', exact: true }).click();
-  await expect(page).toHaveURL(/\/servis\/kak-my-rabotaem\/#cta$/);
-  await expect(page.locator('#cta form')).toBeVisible();
+  const modal = page.getByRole('dialog', {name:'Посчитать проект'});
+  await expect(modal.locator('[data-lead-contact]')).toBeVisible();
+  await expect(page).toHaveURL('http://127.0.0.1:8765/');
+  await page.keyboard.press('Escape');
+  await expect(page.locator('main .cover [data-project-enquiry]')).toBeFocused();
 });
 
 for (const viewport of [{width: 1280, height: 720}, {width: 320, height: 568}]) {
@@ -163,7 +166,7 @@ test('MAF gallery submits the selected project and shares the product layout',as
   await expect(page.locator('#izdeliya .k3__card')).toHaveCount(4);
   await expect(page.locator('#raboty [data-stage-thumb]')).toHaveCount(10);
   await expect(page.locator('#raboty + #dostavka .maf-delivery__offer')).toBeVisible();
-  await expect(page.locator('#izdeliya a[href="/maf/gorodskaya-mebel/"]')).toBeVisible();
+  await expect(page.locator('a[href="/maf/gorodskaya-mebel/"]')).toHaveCount(0);
   await expect(page.locator('#dostavka')).toContainText('0 ₽');
   await page.locator('[data-stage-next]').click();
   await expect(page.locator('[data-stage-title]')).toHaveText('«Пламя-шар»');

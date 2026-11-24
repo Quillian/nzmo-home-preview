@@ -147,3 +147,16 @@
   .maf-photo img { transition: none; }
   .maf-photo:hover img { transform: none; }
 }
+
+.sculpture-cover {background:#142639;isolation:isolate}
+.sculpture-cover .cover__img {left:auto;right:0;width:59%;object-position:50% 46%}
+.sculpture-cover .cover__scrim {background:linear-gradient(90deg,#142639 38%,rgba(20,38,57,.96) 41%,rgba(20,38,57,.5) 52%,rgba(20,38,57,.02) 70%),linear-gradient(0deg,rgba(12,25,39,.42),transparent 55%)}
+@media (max-width:700px) {
+ .sculpture-cover .cover__img {width:100%;height:clamp(220px,65vw,320px);object-position:50% 40%}
+ .sculpture-cover .cover__scrim {background:linear-gradient(180deg,transparent 0,transparent calc(clamp(220px,65vw,320px) - 55px),#142639 clamp(220px,65vw,320px))}
+ .sculpture-cover .cover__in {padding-top:clamp(215px,63vw,310px)}
+}
+
+@media (min-width:701px) {
+ .sculpture-cover :is(.t-display,.lead) {max-width:54%}
+}
