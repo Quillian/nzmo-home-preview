@@ -2,8 +2,8 @@
 .av2-intro__top{display:block;margin:0 0 34px}.av2-intro h1{margin:0}.av2-intro .crumbs{margin-bottom:34px}
 .av2-label::before{display:none}.av2-label{letter-spacing:.07em}
 .factory-selector--about {
-  --factory-tab-count: 4;
-  --factory-columns: minmax(0, 6.3fr) repeat(3, minmax(0, 1fr));
+  --factory-tab-count: 6;
+  --factory-columns: minmax(0, 6.3fr) repeat(5, minmax(0, 1fr));
   background: var(--navy-950);
 }
 .factory-selector--about .factory-selector__panel { min-height: 420px; }
@@ -86,3 +86,7 @@
 @media(prefers-reduced-motion:reduce){.growth-tabs button{transition:none}}
 
 .growth-data{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+
+@media (max-width: 560px) {
+  .factory-selector--about .factory-selector__tabs {grid-template-columns:repeat(3,minmax(0,1fr))}
+}

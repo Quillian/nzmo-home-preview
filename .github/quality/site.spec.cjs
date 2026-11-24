@@ -594,7 +594,7 @@ test('factory photos expand on hover, support keyboard and mobile controls, and 
   await page.goto('http://127.0.0.1:8765/o-zavode/');
   const gallery=page.getByRole('tablist',{name:'Фотографии производства'});
   const views=gallery.getByRole('tab');
-  await expect(views).toHaveCount(4);
+  await expect(views).toHaveCount(6);
   await expect(views.first()).toHaveAttribute('aria-selected','true');
   const warehouse=gallery.getByRole('tab',{name:'Склад'});
   const collapsed=await warehouse.boundingBox();
@@ -609,7 +609,7 @@ test('factory photos expand on hover, support keyboard and mobile controls, and 
   await page.keyboard.press('Escape');
   await expect(warehousePhoto).toBeFocused();
   await warehouse.press('ArrowLeft');
-  await expect(gallery.getByRole('tab',{name:'Рейка'})).toHaveAttribute('aria-selected','true');
+  await expect(gallery.getByRole('tab',{name:'Окраска'})).toHaveAttribute('aria-selected','true');
 
   await page.setViewportSize({width:390,height:844});
   await page.reload();
