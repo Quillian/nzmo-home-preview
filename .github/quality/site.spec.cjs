@@ -478,9 +478,13 @@ test('portfolio uses real project assets and excludes unpublished cases',async({
  await expect(dialog).toBeHidden();
  await expect(page).toHaveURL(/\/obekty\/$/);
 });
-test('FAQ contacts replace the form and answers use available width',async({page})=>{
+test('FAQ accepts written questions and answers use available width',async({page})=>{
  await page.setViewportSize({width:1440,height:1000});await page.goto('http://127.0.0.1:8765/servis/faq/');
- await expect(page.locator('main form')).toHaveCount(0);await expect(page.getByRole('link',{name:'Задать вопрос',exact:true}).last()).toHaveAttribute('href',/^mailto:info@nzmo.ru/);
+ const form=page.locator('main form[data-lead="question"]');
+ await expect(form.getByRole('textbox',{name:'Ваш вопрос'})).toBeVisible();
+ await expect(form.locator('textarea')).toHaveAttribute('required','');
+ await expect(form.getByRole('button',{name:'Задать вопрос'})).toBeEnabled();
+ await expect(page.locator('#cta a[href="mailto:info@nzmo.ru"]')).toBeVisible();
  const widths=await page.locator('.faq .a').first().evaluate(el=>({answer:el.getBoundingClientRect().width,block:el.closest('details').getBoundingClientRect().width}));expect(widths.answer).toBeGreaterThan(widths.block*.95);
 });
 test('header order is consistent on all shared-layout pages',async()=>{

@@ -1028,3 +1028,44 @@ button.msgr__a{padding:0;border:0;background:none;cursor:pointer}
 .kd__diagram figcaption{font-size:14px;margin-top:6px}
 .product-card-anchor{display:block;scroll-margin-top:88px}
 @media (max-width:640px){.kd.kd--spec{width:calc(100vw - 24px);max-height:calc(100dvh - 24px);margin:auto;border-radius:12px}.kd--spec .kd__info{max-height:calc(100dvh - 24px);padding:22px 48px 28px 18px}}
+
+/* Catalog navigation stays within the viewport on compact laptops. */
+@media (min-width:1280px) {
+  .header .mega.mega2 {
+    max-height:calc(100dvh - var(--header-h) - 12px);
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    scrollbar-gutter:stable;
+  }
+}
+.bento__i .kinds__tag { inset:auto 14px 16px auto; }
+.bento__systems { color:white; font-weight:500; }
+.objects .stage__scrim,
+#proekty.objects .stage__scrim {
+  background:linear-gradient(to top,rgba(9,17,27,.95),rgba(9,17,27,.76) 20%,rgba(9,17,27,.38) 38%,transparent 65%);
+}
+.objects .stage__spec, .objects .stage__bar .tech { color:#fff; }
+.page-head--portfolio .crumbs { padding-top:20px; }
+.cover--readable .cover__scrim {
+  background:linear-gradient(90deg,rgba(9,17,27,.78),rgba(9,17,27,.36) 70%,transparent),linear-gradient(0deg,rgba(9,17,27,.8),rgba(9,17,27,.24));
+}
+.cover--readable .crumbs :is(ol,a,span), .cover--readable .lead { color:#fff; }
+.project-contact {display:flex;align-items:center;gap:16px;margin:24px 0 0}
+.project-contact img {width:72px;height:72px;object-fit:cover;border-radius:50%;object-position:50% 20%}
+.project-contact div {display:grid;gap:2px}
+.project-contact span {font-size:14px}
+#certificate-request:not(:target):not(:focus-within) {display:none}
+@media (min-width:901px) {
+  .split.article-layout {grid-template-columns:minmax(0,1fr) minmax(240px,320px);gap:clamp(32px,5vw,72px)}
+  .article-layout > :first-child {max-width:80ch}
+}
+
+.cover-price {margin:12px 0 0}
+.cover-price .price--hero {padding:0;border:0;background:transparent;color:white}
+.rc__num input[type="number"] {border-bottom:1px solid currentColor}
+.rc__num input[type="number"]:focus-visible {outline:2px solid var(--ochre-500);outline-offset:2px}
+#certificate-request {scroll-margin-top:var(--header-h)}
+
+@media (max-width:480px) {
+  .cover--readable .t-display {font-size:clamp(26px,7.3vw,35px);overflow-wrap:normal;hyphens:manual}
+}

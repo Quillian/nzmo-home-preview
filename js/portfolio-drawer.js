@@ -8,14 +8,44 @@
   let opener;
   let pressedOutside = false;
 
+  let selection = 0;
+  const ready = new Map();
+
+  function loadFrame(button) {
+    const src = button.dataset.portfolioImage;
+    if (!ready.has(src)) {
+      const image = new Image();
+      image.className = 'portfolio-drawer__image';
+      image.alt = button.dataset.portfolioAlt;
+      image.sizes = body.querySelector('.portfolio-drawer__image').sizes;
+      image.srcset = button.dataset.portfolioMedium + ' 800w, ' + src + ' 1600w';
+      image.src = src;
+      ready.set(src, image.decode().then(() => image).catch(error => {
+        ready.delete(src);
+        throw error;
+      }));
+    }
+    return ready.get(src);
+  }
+
+  function warmNext(button) {
+    const buttons = [...body.querySelectorAll('[data-portfolio-image]')];
+    const next = buttons[buttons.indexOf(button) + 1];
+    if (next) loadFrame(next).catch(() => {});
+  }
+
   function openProject(link) {
     const project = link && document.getElementById('portfolio-case-' + link.dataset.portfolioCase);
     if (!project) return false;
+    selection++;
+    ready.clear();
     opener = link;
     body.replaceChildren(project.content.cloneNode(true));
     body.querySelector('[data-portfolio-title]').id = 'portfolio-project-title';
     if (!drawer.open) drawer.showModal();
     body.scrollTop = 0;
+    const current = body.querySelector('[data-portfolio-image][aria-pressed="true"]');
+    if (current) warmNext(current);
     document.documentElement.classList.add('portfolio-drawer-open');
     return true;
   }
@@ -33,21 +63,25 @@
     if (openProject(link)) event.preventDefault();
   });
 
-  body.addEventListener('click', (event) => {
+  body.addEventListener('click', async event => {
     const button = event.target.closest('[data-portfolio-image]');
-    if (!button || button.getAttribute('aria-pressed') === 'true') return;
-
-    const selected = body.querySelector('[aria-pressed="true"]');
-    const image = body.querySelector('.portfolio-drawer__image');
-    const caption = body.querySelector('figcaption');
-
-    selected.setAttribute('aria-pressed', 'false');
+    if (!button) return;
+    const version = ++selection;
+    if (button.getAttribute('aria-pressed') === 'true') return;
+    let image;
+    try {
+      image = await loadFrame(button);
+    } catch {
+      return;
+    }
+    if (version !== selection || !drawer.open || !button.isConnected) return;
+    body.querySelector('[aria-pressed="true"]').setAttribute('aria-pressed', 'false');
     button.setAttribute('aria-pressed', 'true');
-    image.srcset = `${button.dataset.portfolioMedium} 800w, ${button.dataset.portfolioImage} 1600w`;
-    image.src = button.dataset.portfolioImage;
-    image.alt = button.dataset.portfolioAlt;
+    body.querySelector('.portfolio-drawer__image').replaceWith(image);
+    const caption = body.querySelector('figcaption');
     caption.textContent = button.dataset.portfolioCaption;
     caption.hidden = !button.dataset.portfolioCaption;
+    warmNext(button);
   });
 
   drawer.addEventListener('pointerdown', (event) => {

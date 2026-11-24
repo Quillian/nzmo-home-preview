@@ -40,7 +40,7 @@
 }
 
 .hero-products__inner {
-  padding-block: clamp(14px, 3svh, 43px) clamp(28px, 4svh, 64px);
+  padding-block: clamp(14px, 3svh, 43px) clamp(40px, 5svh, 64px);
 }
 
 .hero-products__links {
@@ -153,12 +153,12 @@
   }
 
   .hero-products__inner {
-    padding-block: 12px 28px;
+    padding-block: 12px 34px;
   }
 
   .hero-products__links {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    row-gap: 24px;
+    row-gap: 32px;
   }
 
   .hero-products__label {

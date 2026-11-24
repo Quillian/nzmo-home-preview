@@ -114,6 +114,7 @@
 }
 
 .factory-selector__tab[aria-selected="true"] {
+  cursor: default;
   box-shadow: inset 0 -2px var(--ochre-400);
 }
 
