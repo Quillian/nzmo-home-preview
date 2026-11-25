@@ -227,9 +227,9 @@
 #certificate-request { scroll-margin-top: 100px; }
 #priemka { scroll-margin-top: var(--header-h); }
 .quality-page .svc-receive { align-items: stretch; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
-.svc-receive__photo { position: relative; min-height: clamp(290px, 28vw, 460px); }
+.svc-receive__photo { position: relative; min-height: clamp(265px, 25.6vw, 412px); }
 .svc-receive__photo img { position: absolute; inset: 0; height: 100%; max-height: none; }
-.receipt-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; justify-content: space-between; gap: clamp(20px, 2.4vw, 38px); }
+.receipt-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; justify-content: space-between; gap: clamp(16px, 1.8vw, 30px); }
 .receipt-list li { position: relative; padding-inline-start: 40px; }
 .receipt-list li::before {
   content: counter(list-item);
