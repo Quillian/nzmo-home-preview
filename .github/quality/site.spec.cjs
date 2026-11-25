@@ -457,10 +457,18 @@ for (const width of [320, 390, 768, 1440]) test('home process keeps illustration
   const axe = await new AxeBuilder({page}).include('#poryadok-raboty').analyze();
   expect(axe.violations).toEqual([]);
 });
-test('home geography team and footer share an uninterrupted background',async({page})=>{
+test('home team portrait meets the footer with a matching fade',async({page})=>{
  await page.goto('http://127.0.0.1:8765/');
- const colors=await page.evaluate(()=>['.geo-section','.team','.footer'].map(s=>getComputedStyle(document.querySelector(s)).backgroundColor));expect(new Set(colors).size).toBe(1);
- const gap=await page.evaluate(()=>document.querySelector('.team').getBoundingClientRect().top-document.querySelector('.geo-section').getBoundingClientRect().bottom);expect(Math.abs(gap)).toBeLessThan(1);
+ const photo=page.locator('.team__photo img');
+ await photo.scrollIntoViewIfNeeded();
+ expect(await photo.evaluate(async img=>{await img.decode();return img.naturalWidth;})).toBeGreaterThan(0);
+ const seam=await page.evaluate(()=>{
+   const photo=document.querySelector('.team__photo'),footer=document.querySelector('.footer');
+   return {gap:footer.getBoundingClientRect().top-photo.getBoundingClientRect().bottom,
+     fade:getComputedStyle(photo,'::after').backgroundImage,background:getComputedStyle(footer).backgroundColor};
+ });
+ expect(Math.abs(seam.gap)).toBeLessThan(1);
+ expect(seam.fade).toContain(seam.background);
 });
 test('portfolio uses real project assets and excludes unpublished cases',async({page})=>{
  await page.goto('http://127.0.0.1:8765/obekty/');await expect(page.locator('h1')).toHaveText('Наши работы');
