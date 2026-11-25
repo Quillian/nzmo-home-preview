@@ -489,7 +489,7 @@ table.t a:hover{color:var(--ochre-800)}
   position:relative;
   isolation:isolate;
   margin-top:clamp(24px,2.5vw,44px);
-  padding:clamp(6px,1vw,16px) var(--gutter) 0;
+  padding:clamp(6px,1vw,16px) 0 0;
 }
 .team__photo img{
   position:relative;
