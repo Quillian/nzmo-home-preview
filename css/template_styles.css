@@ -483,20 +483,13 @@ table.t a:hover{color:var(--ochre-800)}
 .geo-legend__home{width:12px;height:12px;border-radius:50%;background:var(--white);box-shadow:0 0 0 2px var(--ochre-500)}
 .geo-legend__country{width:14px;height:10px;background:rgba(209,162,80,.2);border:1px solid rgba(209,162,80,.6)}
 .geo-legend__note{text-transform:none;letter-spacing:.02em;font-family:var(--font-text);font-size:13px}
-.section.team{padding-bottom:0;background:var(--white)}
+.section.team{padding-bottom:0;background:#d2cdc3}
 .team .section-head{margin-bottom:0}
 .team__photo{
   position:relative;
   isolation:isolate;
   margin-top:clamp(24px,2.5vw,44px);
   padding:clamp(6px,1vw,16px) var(--gutter) 0;
-}
-.team__photo::before{
-  content:"";
-  position:absolute;
-  inset:0 var(--gutter);
-  border-radius:8px 8px 0 0;
-  background:radial-gradient(ellipse 76% 125% at 37% 22%,#e4e0d8 0%,#d2cdc3 46%,#bcb8af 80%,#adaaa3 100%);
 }
 .team__photo img{
   position:relative;
