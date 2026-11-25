@@ -266,6 +266,11 @@ if(process.env.FULL_AUDIT==='1'){
       const axe=await new AxeBuilder({page}).analyze();
       const geometry=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth+1,broken:[...document.images].filter(i=>!(i.closest('dialog:not([open])')&&!i.getAttribute('src'))&&!i.naturalWidth).map(i=>i.getAttribute('src'))}));
       await info.attach('full-audit',{body:Buffer.from(JSON.stringify({url,errors,...geometry,violations:axe.violations},null,2)),contentType:'application/json'});
+      const crumbs = page.locator('main .page-head .crumbs li').first();
+      if (await crumbs.count()) {
+        const gap = await crumbs.evaluate(item => item.getBoundingClientRect().top - document.querySelector('header.header').getBoundingClientRect().bottom);
+        expect.soft(gap, 'space between header and breadcrumbs').toBeGreaterThanOrEqual(18);
+      }
       expect.soft(geometry.overflow, 'horizontal overflow').toBe(false);
       expect.soft(geometry.broken, 'broken images').toEqual([]);
       expect.soft(errors, 'JS runtime errors').toEqual([]);
