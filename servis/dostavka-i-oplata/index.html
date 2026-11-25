@@ -28,6 +28,7 @@
 <script defer src="/js/shipment-gallery.js?v=loop2"></script>
 <link rel="stylesheet" href="/css/calculator-lead-20261109.css?v=2e5483b3">
 <script defer src="/js/project-enquiry.js?v=38a2ef70"></script>
+<link rel="stylesheet" href="/css/delivery-geography.css?v=53a64cd4">
 </head>
 <body>
 <header class="header">
@@ -171,7 +172,7 @@
 <section class="section section--white" id="dostavka">
   <div class="container">
     <div class="section-head"><div><h2 class="t-2">Упаковка и отгрузка</h2></div></div>
-    <div class="dlv dlv--3"><div class="dlv__i"><span class="dlv__k">Доставка</span><b>РФ и СНГ</b><p>Включая Крым и Абхазию. Везём сами или через транспортную компанию. Чаще всего — в Сибирь, на Дальний Восток и Урал</p></div><div class="dlv__i"><span class="dlv__k">Отгрузка</span><b>Партиями</b><p>Под график монтажа, чтобы на объекте не копились лишние материалы</p></div><div class="dlv__i"><span class="dlv__k">Маркировка</span><b>По объекту</b><p>В каждой партии упаковочный лист: видно, что пришло и куда это ставить</p></div></div>
+    <div class="dlv dlv--3"><div class="dlv__i"><span class="dlv__k">Доставка</span><b>РФ и СНГ</b><p>Включая Крым и Абхазию. Везём сами или через транспортную компанию. Чаще всего — в Сибирь, на Дальний Восток и Урал</p></div><div class="dlv__i"><span class="dlv__k">Отгрузка</span><b>Партиями</b><p>Под график монтажа. Для дальних регионов согласуем даты отгрузок до подписания договора.</p></div><div class="dlv__i"><span class="dlv__k">Маркировка</span><b>По объекту</b><p>В каждой партии упаковочный лист: видно, что пришло и куда это ставить</p></div></div>
     <div class="packs" tabindex="0" role="region" aria-label="Варианты упаковки">
       <article class="pack">
         <div class="pack__ph"><img src="/img/pack_1-900-clean.png" alt="Поддон в стретч-плёнке, упаковка Тип 1.1" loading="lazy"></div>
@@ -246,11 +247,23 @@
         <img src="/img/otgruzki/korobki-nzmo-u-kabiny.webp?v=eb1ce3e2" width="1280" height="720" alt="Коробки НЗМО под плёнкой в кузове машины" loading="lazy" decoding="async">
       </div>
     </section>
-    <h2 class="dlv__h">Доставка с завода в Новосибирске</h2>
-    <p class="dlv__foot">Поставляли продукцию в Москву, Санкт-Петербург, Екатеринбург, Красноярск и Владивосток. Примеры поставок с указанием города и изделия есть в разделе <a href="/obekty/" style="text-decoration:underline;text-underline-offset:3px">«Наши работы»</a>.</p>
-    <p class="dlv__foot">Укажите город, адрес объекта и дату, к которой нужна партия. Срок и стоимость доставки рассчитаем по маршруту, весу и габаритам груза. Для дальних регионов согласуем график отгрузок до договора. КП действует 3 рабочих дня.</p>
+    <section class="delivery-geo" id="geografiya-postavok" aria-labelledby="delivery-geo-heading">
+      <div class="delivery-geo__head">
+        <div>
+          <p class="delivery-geo__origin">Поставки с завода в Новосибирске</p>
+          <h2 id="delivery-geo-heading" class="dlv__h">От Подмосковья до Приморья</h2>
+        </div>
+        <a class="delivery-geo__all" href="/obekty/">Все объекты <span aria-hidden="true">→</span></a>
+      </div>
+      <ul class="delivery-geo__places">
+        <li><h3>Химки</h3><a href="/obekty/#project-himki">Парк имени Льва Толстого</a><p>Портрет писателя для входа в парк. Вырезали его лазером в стальном листе.</p></li>
+        <li><h3>Красноярск</h3><a href="/obekty/#project-kramz">Красноярский металлургический завод</a><p>Потолочные кассеты Hook-on и многослойный потолок Clip-in из нержавеющей стали.</p></li>
+        <li><h3>Владивосток</h3><a href="/obekty/#project-bering">ЖК «Беринг»</a><p>Кассеты Hook-on длиной 1,5 и 2 метра для потолков жилого комплекса.</p></li>
+      </ul>
+    </section>
     <h2 class="dlv__h">Оплата</h2>
     <div class="dlv"><div class="dlv__i"><span class="dlv__k">Стандарт</span><b>100 % предоплата</b><p>Оплачиваете счёт — запускаем производство. Срок изготовления считаем со дня оплаты</p></div><div class="dlv__i"><span class="dlv__k">Частями</span><b>Аванс и доплата</b><p>50/50 или 70/30 — для дилеров и по договору</p></div><div class="dlv__i"><span class="dlv__k">Ключевым клиентам</span><b>Отсрочка</b><p>Постоянным партнёрам отсрочку платежа согласуем и пропишем в договоре</p></div><div class="dlv__i"><span class="dlv__k">Как платить</span><b>По счёту</b><p>Безналичный расчёт. В комплекте договор, счёт, УПД, паспорт изделия и сертификаты</p></div></div>
+    <p class="dlv__foot">Коммерческое предложение действует 3 рабочих дня.</p>
   </div>
 </section>
 <section class="section cta2" id="cta">
