@@ -8,10 +8,7 @@
 .gs-price { display:block; font-size:clamp(24px,3vw,40px); margin-bottom:6px }
 .gs-summary .btn { margin-bottom:18px }
 .gs-link,.dlv__i a.dlv__k,.gs-share { text-decoration:underline; text-underline-offset:.2em }
-.gs-variants { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); margin:28px 0; gap:12px }
-.gs-variants a { display:grid; gap:14px; padding:20px; background:white; border:1px solid #ccd2d8; color:#1b2d42 }
-.gs-variants a:hover,.gs-variants a:focus-visible { border-color:currentColor }
-.gs-variants img { width:100%; height:auto; display:block }
+.gs-variants { margin:28px 0 }
 .gs-share { display:inline-block; color:#1b2d42; cursor:pointer; margin:0 0 14px; font:inherit }
 .gs-alert { display:block; padding:16px; background:#fff4dc; color:#1b2d42 }
 @media(max-width:760px) { .gs-grid { grid-template-columns:1fr } }

@@ -21,7 +21,8 @@
       event.preventDefault();
       opener = link;
       if (!dialog.isConnected) document.body.append(dialog);
-      beforeOpen?.(body);
+      heading.textContent = link.dataset.enquiryForm ? link.textContent.trim() : title;
+      beforeOpen?.(body, link);
       dialog.showModal();
       document.documentElement.classList.add('calc-lead-open');
       onOpen(body);
@@ -42,6 +43,20 @@
     });
   }
 
+  function setTopic(form, topic) {
+    if (!topic || !form.elements.config) return;
+    form.elements.config.value = topic;
+    let echo = form.querySelector('[data-config-echo]');
+    if (!echo) {
+      echo = document.createElement('div');
+      echo.className = 'lead-config';
+      echo.dataset.configEcho = '';
+      form.prepend(echo);
+    }
+    echo.textContent = 'Тема заявки · ' + topic;
+    echo.hidden = false;
+  }
+
   if (document.querySelector(linkSelector)) {
     let formPromise;
     async function prepareForm(body) {
@@ -52,11 +67,12 @@
       template.innerHTML = await response.text();
       const form = template.content.querySelector('#cta form[data-lead="quote"]');
       if (!form) throw new Error('Form unavailable');
+      form.removeAttribute('id');
       form.classList.remove('cta2__form');
       form.classList.add('calc-lead__form');
       form.elements.page.value = location.pathname;
       if (location.pathname !== '/' && location.pathname !== source) {
-        form.elements.config.value = document.querySelector('main h1')?.textContent.trim() || '';
+        setTopic(form, document.querySelector('#cta [name=config]')?.value || document.querySelector('main h1')?.textContent.trim());
       }
       body.replaceChildren(form);
       form.dispatchEvent(new CustomEvent('nzmo:lead-init', {bubbles: true}));
@@ -82,17 +98,30 @@
     });
   }
 
+  const registered = new Set();
   for (const trigger of document.querySelectorAll('[data-enquiry-form]')) {
     const form = document.getElementById(trigger.dataset.enquiryForm);
-    if (!form) continue;
+    if (!form || registered.has(form)) continue;
+    registered.add(form);
     // Keep the contact, selected files and validation state when switching views.
     const marker = document.createComment('inline enquiry form');
     form.before(marker);
+    const submit = form.querySelector('[data-lead-submit]');
+    const echo = form.querySelector('[data-config-echo]');
+    let previous;
     registerDialog({
       selector: '[data-enquiry-form="' + CSS.escape(form.id) + '"]',
       titleId: form.id + '-title',
       title: trigger.textContent.trim(),
-      beforeOpen(body) {
+      beforeOpen(body, link) {
+        previous = {topic: form.elements.config?.value, content: echo ? [...echo.childNodes] : [], hidden: echo?.hidden,
+          kind: form.dataset.lead, action: submit?.dataset.leadAction, label: submit?.textContent};
+        setTopic(form, link.dataset.enquiryTopic || previous.topic);
+        if (link.dataset.enquiryKind && submit) {
+          form.dataset.lead = link.dataset.enquiryKind;
+          submit.textContent = submit.dataset.leadAction = form.dataset.lead === 'engineer'
+            ? 'Запросить консультацию' : 'Получить расчёт';
+        }
         form.classList.replace('cta2__form', 'calc-lead__form');
         body.replaceChildren(form);
       },
@@ -100,6 +129,14 @@
       afterClose() {
         form.classList.replace('calc-lead__form', 'cta2__form');
         marker.after(form);
+        if (form.elements.config) form.elements.config.value = previous.topic || '';
+        if (echo) { echo.replaceChildren(...previous.content); echo.hidden = previous.hidden; }
+        else form.querySelector('[data-config-echo]')?.remove();
+        form.dataset.lead = previous.kind;
+        if (submit && previous.action) {
+          submit.dataset.leadAction = previous.action;
+          submit.textContent = previous.label;
+        }
       }
     });
     if (trigger.id) {
