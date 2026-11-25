@@ -1,0 +1,103 @@
+.svc-top .crumbs ol { padding: 20px 0; }
+.svc-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  background: var(--navy-800);
+  color: white;
+}
+.svc-hero__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+  padding: clamp(28px, 4vw, 72px);
+  min-height: clamp(320px, 29vw, 480px);
+}
+.svc-hero__copy h1 { font-size: clamp(36px, 3.6vw, 64px); color: inherit; margin: 0; }
+.svc-hero__copy p { font-size: clamp(16px, 1.3vw, 21px); line-height: 1.5; max-width: 38ch; margin: 0; }
+.svc-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
+.svc-inverse, .svc-link { font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+.svc-inverse { color: white; padding: 8px 0; }
+.svc-inverse:hover { color: var(--ochre-400); }
+.svc-hero figure { margin: 0; position: relative; min-width: 0; }
+.svc-hero figure img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.svc-hero figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 40px 24px 16px;
+  background: linear-gradient(transparent, rgb(7 17 30 / 85%));
+  color: white;
+  font-size: 14px;
+}
+.svc-hero figcaption a { color: inherit; text-underline-offset: 3px; }
+.svc-hero figcaption a:hover { text-decoration: underline; }
+.svc-section { padding-block: clamp(40px, 5vw, 84px); }
+.svc-section h2 { margin: 0 0 clamp(22px, 2.6vw, 38px); }
+.svc-section h3 { font-size: clamp(20px, 1.65vw, 28px); margin: 0 0 12px; }
+.svc-section p { margin: 0; line-height: 1.55; }
+.svc-section .svc-intro { max-width: 66ch; margin: -8px 0 24px; }
+.svc-section .svc-note { margin-top: 20px; color: var(--text-muted); }
+.svc-guides, .svc-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.svc-pair article, .svc-doc {
+  padding: clamp(20px, 2.4vw, 36px);
+  border: 1px solid var(--border-hair);
+  border-top: 3px solid var(--ochre-500);
+}
+.svc-guides a {
+  display: grid;
+  grid-template-columns: clamp(82px, 9vw, 145px) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(10px, 1.6vw, 24px);
+  background: white;
+  padding: 18px;
+  border: 1px solid var(--border-hair);
+  color: var(--text-strong);
+}
+.svc-guides a:hover, .svc-guides a:focus-visible { border-color: var(--navy-800); }
+.svc-guides img { width: 100%; height: 90px; object-fit: contain; }
+.svc-guides h3 { margin-bottom: 6px; }
+.svc-guides a span { font-size: 22px; }
+.svc-docs, .svc-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.svc-steps { list-style: none; padding: 0; margin: 0; counter-reset: steps; }
+.svc-steps li { border-top: 1px solid var(--border-strong); counter-increment: steps; }
+.svc-steps li::before { content: counter(steps); display: block; color: var(--ochre-800); font: 600 18px var(--font-tech); margin: 16px 0; }
+.svc-doc { display: flex; flex-direction: column; align-items: flex-start; }
+.svc-doc small { color: var(--text-muted); }
+.svc-doc p { margin: 14px 0 20px; }
+.svc-doc a { margin-top: auto; }
+.svc-warranty, .svc-receive { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: clamp(24px, 4vw, 64px); }
+.svc-term {
+  padding: clamp(24px, 3.5vw, 56px);
+  display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+  background: var(--navy-800); color: white;
+}
+.svc-term strong { font: 500 clamp(54px, 6vw, 96px)/1.1 var(--font-display); color: var(--ochre-400); }
+.svc-term p { font-size: 19px; margin: 16px 0 12px; max-width: 30ch; }
+.svc-term small { color: #dce2e8; max-width: 34ch; }
+.svc-rows { margin: 0; }
+.svc-rows > div { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; border-top: 1px solid var(--border-hair); padding: 15px 0; }
+.svc-rows dt { font-weight: 600; }
+.svc-rows dd { margin: 0; }
+.svc-warranty dd { flex: 0 0 24%; }
+.svc-receive img { width: 100%; height: 100%; max-height: 420px; object-fit: cover; }
+.svc-receive .svc-rows > div { display: block; }
+.svc-receive dd { margin-top: 6px; }
+.svc-document-request { background: var(--surface-page); }
+@media (max-width: 900px) {
+  .svc-docs { grid-template-columns: 1fr; }
+  .svc-doc p { margin-block: 8px 14px; }
+}
+@media (max-width: 740px) {
+  .svc-hero, .svc-warranty, .svc-receive, .svc-guides, .svc-pair, .svc-steps { grid-template-columns: 1fr; }
+  .svc-hero__copy { min-height: auto; padding: 28px 20px; gap: 16px; }
+  .svc-hero figure { aspect-ratio: 2 / 1; }
+  .svc-hero figcaption { padding: 30px 14px 10px; font-size: 12px; }
+  .svc-hero__copy h1 { font-size: clamp(29px, 7.5vw, 42px); }
+  .svc-guides a { grid-template-columns: 68px minmax(0, 1fr) auto; padding: 12px; }
+  .svc-guides img { height: 66px; }
+  .svc-guides p { font-size: 14px; }
+  .svc-receive img { height: 260px; object-position: 50% 58%; }
+  .svc-rows > div { gap: 12px; }
+  .svc-steps li::before { margin-block: 10px; }
+}
