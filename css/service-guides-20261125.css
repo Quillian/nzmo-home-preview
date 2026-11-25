@@ -106,10 +106,11 @@
 .mount-hero .svc-hero__copy { padding-right: clamp(20px, 2.5vw, 48px); }
 .mount-hero figure { overflow: hidden; }
 .mount-hero figure img { object-position: 50% 9%; filter: saturate(.87) contrast(1.025); }
-.mount-hero figure::after {
+.svc-hero figure::after {
   content: "";
   position: absolute;
   inset: 0;
+  pointer-events: none;
   background: linear-gradient(90deg, var(--navy-800), transparent 32%);
 }
 .mount-page .svc-intro { width: 100%; }
@@ -169,7 +170,7 @@
   .mount-hero, .mount-options, .mount-downloads, .mount-process { grid-template-columns: 1fr; }
   .mount-hero figure { aspect-ratio: 1.7; }
   .mount-hero figure img { object-position: 50% 4%; }
-  .mount-hero figure::after { background: linear-gradient(180deg, var(--navy-800), transparent 21%); }
+  .svc-hero figure::after { background: linear-gradient(180deg, var(--navy-800), transparent 21%); }
   .mount-options article > img { aspect-ratio: 2.4; }
   .scheme-group a { grid-template-columns: 52px 1fr 18px; gap: 3px 10px; }
   .scheme-group img { width: 52px; height: 42px; grid-row: 1 / 3; }
@@ -180,4 +181,50 @@
   .mount-process .process-icon { position: absolute; left: 0; top: 0; width: 44px; height: 44px; }
   .mount-process .process-icon svg { width: 27px; height: 27px; }
   .mount-process li:not(:last-child)::after { left: 22px; top: 51px; bottom: -17px; width: 1px; height: auto; }
+}
+
+.quality-page .svc-section .svc-intro,
+.quality-page .cta2 .cta2__lead { width: 100%; max-width: none; }
+.quality-checks { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.quality-checks h3 { font-size: clamp(20px, 1.5vw, 26px); }
+.cert-families { border-bottom: 1px solid var(--border-hair); }
+.cert-family { border-top: 1px solid var(--border-hair); }
+.cert-family summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  padding: 20px 0; list-style: none; cursor: pointer;
+  font: 500 clamp(18px, 1.5vw, 24px)/1.3 var(--font-display);
+  color: var(--text-strong);
+}
+.cert-family summary::-webkit-details-marker { display: none; }
+.cert-family summary::after {
+  content: ""; width: 9px; height: 9px; flex-shrink: 0; margin: 0 6px;
+  border: solid currentColor; border-width: 0 2px 2px 0; transform: rotate(45deg);
+}
+.cert-family[open] summary::after { transform: rotate(225deg); }
+.cert-family summary:hover, .cert-file:hover { color: var(--ochre-800); }
+.cert-family ul { list-style: none; padding: 0 clamp(14px, 2vw, 30px); margin: 0 0 16px; background: var(--surface-page); }
+.cert-family li { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 16px; padding: 16px 0; }
+.cert-family li + li { border-top: 1px solid var(--border-hair); }
+.cert-family h4, .receipt-list h3 { font: 600 18px/1.3 var(--font-text); margin: 0; }
+.cert-family p { margin: 4px 0; font-size: 15px; }
+.cert-family small { color: var(--text-muted); overflow-wrap: anywhere; }
+.cert-file { font-weight: 600; text-decoration: underline; text-underline-offset: 4px; padding-block: 10px; }
+.cert-request { margin-top: 20px; }
+.quality-page .svc-receive { align-items: stretch; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.quality-page .svc-receive img { min-height: 230px; max-height: 400px; object-position: center; }
+.receipt-list { list-style: none; margin: 0; padding: 0; display: grid; align-content: center; }
+.receipt-list li { position: relative; padding: 16px 0 16px 26px; border-top: 1px solid var(--border-hair); }
+.receipt-list li::before {
+  content: ""; position: absolute; top: 22px; left: 2px; width: 7px; height: 12px;
+  border: solid var(--ochre-800); border-width: 0 2px 2px 0; transform: rotate(45deg);
+}
+.receipt-list h3 { margin-bottom: 5px; }
+@media (max-width: 1000px) {
+  .quality-checks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 740px) {
+  .quality-page .svc-receive, .quality-checks { grid-template-columns: 1fr; }
+  .quality-page .svc-receive img { height: auto; aspect-ratio: 1.75; min-height: 0; }
+  .cert-family li { grid-template-columns: 1fr; gap: 4px; }
+  .cert-file, .cert-availability { justify-self: start; }
 }

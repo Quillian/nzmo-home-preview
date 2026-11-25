@@ -2,8 +2,8 @@
 .av2-intro__top{display:block;margin:0 0 34px}.av2-intro h1{margin:0}.av2-intro .crumbs{margin-bottom:34px}
 .av2-label::before{display:none}.av2-label{letter-spacing:.07em}
 .factory-selector--about {
-  --factory-tab-count: 6;
-  --factory-columns: minmax(0, 6.3fr) repeat(5, minmax(0, 1fr));
+  --factory-tab-count: 5;
+  --factory-columns: minmax(0, 6.3fr) repeat(4, minmax(0, 1fr));
   background: var(--navy-950);
 }
 .factory-selector--about .factory-selector__panel { min-height: 420px; }
