@@ -483,11 +483,36 @@ table.t a:hover{color:var(--ochre-800)}
 .geo-legend__home{width:12px;height:12px;border-radius:50%;background:var(--white);box-shadow:0 0 0 2px var(--ochre-500)}
 .geo-legend__country{width:14px;height:10px;background:rgba(209,162,80,.2);border:1px solid rgba(209,162,80,.6)}
 .geo-legend__note{text-transform:none;letter-spacing:.02em;font-family:var(--font-text);font-size:13px}
-.section.team{padding-bottom:0;background:radial-gradient(ellipse at 43% 28%,#fbfaf8 0%,#f2f1ed 58%,#e7e6e1 100%)}
+.section.team{padding-bottom:0;background:var(--white)}
 .team .section-head{margin-bottom:0}
-.team__photo{position:relative;margin-top:clamp(12px,2vw,32px)}
-.team__photo img{display:block;width:100%;height:auto}
-.team__photo::after{content:"";position:absolute;inset:auto 0 0;height:36%;pointer-events:none;background:linear-gradient(to bottom,rgba(16,28,42,0) 0%,rgba(16,28,42,.08) 18%,rgba(16,28,42,.35) 43%,rgba(16,28,42,.74) 73%,var(--navy-900) 100%)}
+.team__photo{
+  position:relative;
+  isolation:isolate;
+  margin-top:clamp(24px,2.5vw,44px);
+  padding:clamp(6px,1vw,16px) var(--gutter) 0;
+}
+.team__photo::before{
+  content:"";
+  position:absolute;
+  inset:0 var(--gutter);
+  border-radius:8px 8px 0 0;
+  background:radial-gradient(ellipse 76% 125% at 37% 22%,#e4e0d8 0%,#d2cdc3 46%,#bcb8af 80%,#adaaa3 100%);
+}
+.team__photo img{
+  position:relative;
+  display:block;
+  width:100%;
+  height:auto;
+  filter:saturate(.89) contrast(.97) brightness(1.015) drop-shadow(2px 4px 6px rgb(51 45 39 / .17));
+}
+.team__photo::after{
+  content:"";
+  position:absolute;
+  inset:auto 0 0;
+  height:34%;
+  pointer-events:none;
+  background:linear-gradient(to bottom,rgba(16,28,42,0),rgba(16,28,42,.10) 22%,rgba(16,28,42,.45) 51%,rgba(16,28,42,.87) 82%,var(--navy-900));
+}
 .bleed{display:block;width:100%;max-height:min(72vh,780px);object-fit:cover}
 .bleed--fit{width:auto;max-width:calc(100% - 2 * var(--gutter));max-height:min(64vh,700px);object-fit:contain;margin:0 auto;border:1px solid rgba(255,255,255,.14);border-radius:var(--radius)}
 .map{aspect-ratio:16/9;background:var(--steel-100);border:1px solid var(--border-hair);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-family:var(--font-tech);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted)}
