@@ -430,7 +430,7 @@ img/hk-zhk-prityazhenie-liftovoy-holl-800.webp,0988435b63096e834860e6942fa49a23d
 img/home-metal-cover-narrow.webp,2cf2e447b02223db162b84282bddb8083cac55c3af7213622cff207e13a383df,10912,1,index.html,,0,0
 img/home-metal-cover-wide.webp,3a11183f3617fc7de13fe335f7f6e6d77528660a9a237709abea4f8a0d05176c,22420,1,index.html,,0,1
 img/home-process-20261111/brief-360.webp,b7954986e05ce58f3ebf521b23da504880f42f23f0829aee35cce9194e598fb1,8628,0,,,0,0
-img/home-process-20261111/brief-720.webp,16943307761367f8c2950b6f07a364f50d9feae01770128b564482ea3e78c575,27484,1,servis/montazh/index.html,Схема сборки и сечения профилей для монтажной бригады,0,0
+img/home-process-20261111/brief-720.webp,16943307761367f8c2950b6f07a364f50d9feae01770128b564482ea3e78c575,27484,0,,,0,0
 img/home-process-20261111/manufacture-360.webp,d9632a626dba3cb00ddde9b7c4aab2d1f4f552a75bc91f84626fe017340b0419,7852,0,,,0,0
 img/home-process-20261111/manufacture-720.webp,64b34fab738ed3cc63921d0a5def5928a22fc52be31c02c13f53c22ec1a09dd3,22510,0,,,0,0
 img/home-process-20261111/proposal-360.webp,b374f832bcd4c9bdbc67f48b95adbb3d1e2daca4b47a5e198cb9797f33a805c0,6022,0,,,0,0
@@ -5185,6 +5185,8 @@ img/montazh/grilyato-800.webp,7d2ba92eb40a6590ad68d62ee1170a243d80eed87ebd3d8d75
 img/montazh/ngu-reyka-1280.webp,ab635608aafd786bbfc06ef280e296662577e37919434010a7b15325baf10b9a,219408,6,o-zavode/index.html | obekty/index.html | potolki/index.html | potolki/reechnye/airwood/index.html | potolki/reechnye/index.html,"Кубообразная рейка и линейный свет | НГУ, Новосибирск | Новосибирский государственный университет · Новосибирск",0,0
 img/montazh/ngu-reyka-360.webp,43f2464730d155cfdf5396639ba1d70cff7b6708111a49642fe649d770290db6,34166,2,o-zavode/index.html | obekty/index.html,,0,2
 img/montazh/ngu-reyka-800.webp,077d0d4a4b41e2f6db2a2099622056ec934a50ea6354d16aaa564e3fe7a0a64d,122608,6,obekty/index.html | partneram/index.html | potolki/index.html | potolki/reechnye/airwood/index.html | potolki/reechnye/index.html,"Кубообразная рейка и линейный свет | НГУ, Новосибирск | Новосибирский государственный университет, Новосибирск | Реечный потолок со световыми линиями в холле НГУ",0,4
+img/montazh/posadka-kassety-clip-in.webp,b54f9c08a3a114c51ab7a77ea5d1792a7a23727fd3329c562c083c243f3bebcd,192706,1,servis/montazh/index.html,Монтажник НЗМО проверяет посадку перфорированной кассеты Clip-in,0,0
+img/montazh/proverka-styka-grilyato.webp,57954ccd025ce2c88d098fd4c3c0bb4a17e32bd45af458ec78af9218aae07778,63566,1,servis/montazh/index.html,Проверка соединения профилей решётки Грильято,0,0
 img/montazh/schemes/bafl-gorizontal.webp,c69fce17f8e732935fd0201ea46ce546857aef2ecdf8d51700af09877f386467,1730,1,servis/montazh/index.html,,0,1
 img/montazh/schemes/bafl-krug.webp,310cfe51b235f951678f693d1282b4b93b5debc6da72a4452ba9ec26ca93d081,1766,1,servis/montazh/index.html,,0,1
 img/montazh/schemes/bafl-vertikal.webp,f1218b41e17889adfd9699b398d2ccb88633a96e30a1c65d59340ae4b173357f,1226,1,servis/montazh/index.html,,0,1
@@ -5201,7 +5203,7 @@ img/montazh/schemes/reyka-kub.webp,ad74cbdd9658ac10fd1b0a8c288aa394a074c778a44f1
 img/montazh/schemes/reyka-plastina.webp,d2731a5d8a75374895a2f88286cd0999fb1c04c4f528b2239b4d94856aed586a,3372,1,servis/montazh/index.html,,0,1
 img/montazh/schemes/reyka-volna.webp,481804995a20c0bc6863d3ece4847cde3223d6652276555aae29c8201120c48d,2218,1,servis/montazh/index.html,,0,1
 img/montazh/schemes/t24.webp,1bb8f8ea657e9fca355b66bd0daf23afb64425e5439aa4fd00e9bde8ccaeacac,1896,1,servis/montazh/index.html,,0,1
-img/montazh/ustanovka-plity-t24.webp,060782da378fc7a41f66ad6b5fd7869fef9b0d9cda0cab8ca2692edabf8a383b,134226,1,servis/montazh/index.html,Рука монтажника поднимает плиту в ячейке потолка Т24,0,0
+img/montazh/ustanovka-plity-t24.webp,060782da378fc7a41f66ad6b5fd7869fef9b0d9cda0cab8ca2692edabf8a383b,134226,0,,,0,0
 img/ngu-chistoe-pomeshchenie-koridor-1086.webp,f7058d45b0ae1e828476be3d941fc93692138cae3da512a262974203d9334bad,134902,1,chistye-pomeshcheniya/index.html,Коридор чистых помещений НГУ с передаточным боксом в стеновой панели,0,0
 img/ngu-chistoe-pomeshchenie-koridor-480.webp,3c01aab382fa48d2b9e92334c3b4f425fce6929ebbbc11654eb6a7984bd1de95,23362,1,chistye-pomeshcheniya/index.html,Коридор чистых помещений НГУ с передаточным боксом в стеновой панели,0,0
 img/ngu-chistoe-pomeshchenie-koridor-800.webp,ac68da265a2799d7b4d41fa92abc8477b71be1d14f095479b5b0760cc45f3a8b,73018,1,chistye-pomeshcheniya/index.html,Коридор чистых помещений НГУ с передаточным боксом в стеновой панели,0,0
