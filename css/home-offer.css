@@ -9,6 +9,7 @@
 }
 
 .home-offer__copy {
+  justify-self: stretch;
   text-align: center;
 }
 
@@ -19,7 +20,6 @@
 }
 
 .home-offer__copy .lead {
-  max-width: 52ch;
   margin: 12px auto 0;
   text-wrap: pretty;
 }

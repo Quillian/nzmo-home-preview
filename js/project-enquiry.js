@@ -82,15 +82,15 @@
     });
   }
 
-  const trigger = document.querySelector('[data-enquiry-form]');
-  const form = trigger && document.getElementById(trigger.dataset.enquiryForm);
-  if (form) {
+  for (const trigger of document.querySelectorAll('[data-enquiry-form]')) {
+    const form = document.getElementById(trigger.dataset.enquiryForm);
+    if (!form) continue;
     // Keep the contact, selected files and validation state when switching views.
     const marker = document.createComment('inline enquiry form');
     form.before(marker);
     registerDialog({
-      selector: '[data-enquiry-form]',
-      titleId: 'mount-enquiry-title',
+      selector: '[data-enquiry-form="' + CSS.escape(form.id) + '"]',
+      titleId: form.id + '-title',
       title: trigger.textContent.trim(),
       beforeOpen(body) {
         form.classList.replace('cta2__form', 'calc-lead__form');
@@ -102,5 +102,12 @@
         marker.after(form);
       }
     });
+    if (trigger.id) {
+      const openLinkedForm = () => {
+        if (location.hash === '#' + trigger.id && !document.querySelector('dialog[open]')) trigger.click();
+      };
+      window.addEventListener('hashchange', openLinkedForm);
+      openLinkedForm();
+    }
   }
 })();

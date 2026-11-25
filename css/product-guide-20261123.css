@@ -1,5 +1,5 @@
 .ceiling-equipment{margin-top:clamp(32px,5vw,72px);padding-top:clamp(24px,3vw,40px);border-top:1px solid var(--border-hair)}
-.ceiling-equipment .lead{max-width:76ch;margin:14px 0 0}
+.ceiling-equipment .lead{margin:14px 0 0}
 .product-guide-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}
 .product-guide-link{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto 1fr;gap:16px 12px;align-items:start;background:var(--white,#fff);border:1px solid var(--border-hair);padding:16px;color:var(--navy-800,#1b2d42);text-decoration:none}
 .product-guide-link img{width:100%;height:auto;aspect-ratio:2 / 1;object-fit:cover;grid-column:1/-1}

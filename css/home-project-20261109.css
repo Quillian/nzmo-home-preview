@@ -57,7 +57,6 @@
   margin: 8px 0 0;
   color: var(--text-muted);
   font: 400 15px/1.6 var(--font-text);
-  max-width: 40ch;
 }
 
 @media (max-width: 1100px) {
@@ -66,5 +65,4 @@
 
 @media (max-width: 580px) {
   .process-flow { grid-template-columns: minmax(0, 1fr); row-gap: 28px; }
-  .process-step p { max-width: none; }
 }
