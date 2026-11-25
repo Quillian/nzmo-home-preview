@@ -50,6 +50,12 @@
   height: min(46cqw, 340px);
   scroll-snap-align: start;
 }
+.shipment-gallery__strip.is-looping {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+  scrollbar-width: none;
+}
+.shipment-gallery__strip.is-looping::-webkit-scrollbar { display: none; }
 @media (max-width: 540px) {
   .shipment-gallery__head { gap: 6px; }
   .shipment-gallery__controls { gap: 3px; }
