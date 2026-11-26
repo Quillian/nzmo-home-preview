@@ -1,0 +1,98 @@
+.journal-cover-wrap {
+  margin-top: clamp(12px, 1.6vw, 24px);
+}
+
+.cover.cover--journal-illustrated {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) min(63%, 1040px);
+  align-items: center;
+  min-height: 0;
+}
+
+.cover--journal-illustrated .cover__img {
+  position: static;
+  grid-area: 1 / 2;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 3;
+  object-fit: contain;
+  opacity: 1;
+  mask-image: linear-gradient(90deg, transparent,
+    rgb(0 0 0 / .035) 4%, rgb(0 0 0 / .14) 8%,
+    rgb(0 0 0 / .36) 12%, rgb(0 0 0 / .65) 16%,
+    rgb(0 0 0 / .90) 21%, #000 26%);
+}
+
+.cover.cover--journal-illustrated .cover__in {
+  grid-area: 1 / 1;
+  max-width: none;
+  margin: 0;
+  padding: clamp(24px, 3vw, 56px) 0 clamp(24px, 3vw, 56px) clamp(24px, 3vw, 60px);
+}
+
+.cover--journal-illustrated h1 {
+  max-width: 20ch;
+  margin: 0;
+  font-size: clamp(28px, 2.75vw, 54px);
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+.section.journal-article-body {
+  padding-top: clamp(24px, 3vw, 46px);
+}
+
+.journal-article-intro {
+  margin-bottom: clamp(25px, 3vw, 44px);
+}
+
+.journal-article-intro__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 20px;
+  color: var(--text-muted);
+}
+
+.journal-article-intro__meta .crumbs ol {
+  padding: 0;
+}
+
+.journal-article-intro__details {
+  margin: 0;
+  font-size: 13px;
+}
+
+.journal-article-intro__lead {
+  max-width: 70ch;
+  margin: 12px 0 0;
+  font-size: clamp(16px, 1.35vw, 21px);
+  line-height: 1.55;
+}
+
+.content .jnext__c img[src^="/img/journal-"] {
+  aspect-ratio: 5 / 3;
+}
+
+@media (max-width: 940px) {
+  .cover.cover--journal-illustrated {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cover--journal-illustrated .cover__img {
+    grid-area: 1 / 1;
+    mask-image: linear-gradient(180deg, #000 81%,
+      rgb(0 0 0 / .95) 85%, rgb(0 0 0 / .72) 90%,
+      rgb(0 0 0 / .25) 96%, transparent);
+  }
+
+  .cover.cover--journal-illustrated .cover__in {
+    grid-area: 2 / 1;
+    padding: 3px clamp(16px, 4vw, 34px) clamp(21px, 4vw, 36px);
+  }
+
+  .cover--journal-illustrated h1 {
+    font-size: clamp(25px, 4.5vw, 42px);
+  }
+}
