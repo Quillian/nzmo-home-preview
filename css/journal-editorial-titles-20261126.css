@@ -1,0 +1,77 @@
+.cover.cover--journal-illustrated .cover__in {
+  padding-right: clamp(8px, 1.4vw, 24px);
+}
+
+.cover--journal-illustrated h1 {
+  font-size: clamp(30px, 3vw, 58px);
+}
+
+.journal-cover__subtitle {
+  max-width: 27ch;
+  margin: 12px 0 0;
+  color: #E0E7EE;
+  font-family: var(--font-text);
+  font-size: clamp(17px, 1.6vw, 24px);
+  font-weight: 400;
+  line-height: 1.3;
+  text-wrap: pretty;
+}
+
+.journal-card__link {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  color: var(--text-strong);
+}
+
+.journal-card .card__body {
+  padding: 17px clamp(16px, 1.6vw, 24px) 20px;
+}
+
+.journal-card .journal-card__title {
+  min-height: 0;
+  margin: 0;
+  font-size: clamp(19px, 1.45vw, 24px);
+  line-height: 1.23;
+  text-wrap: pretty;
+}
+
+.journal-card__heading {
+  display: block;
+}
+
+.journal-card__subtitle {
+  display: block;
+  margin-top: 5px;
+  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.journal-card__link:hover .journal-card__heading {
+  color: var(--ochre-800);
+}
+
+.journal-card__link:focus-visible {
+  outline: 2px solid var(--navy-700);
+  outline-offset: -2px;
+}
+
+.jnext__b .journal-card__subtitle {
+  font-size: 14px;
+}
+
+@media (max-width: 940px) {
+  .cover.cover--journal-illustrated .cover__in {
+    padding-right: clamp(16px, 4vw, 34px);
+  }
+
+  .cover--journal-illustrated h1 {
+    font-size: clamp(28px, 4.8vw, 45px);
+  }
+
+  .journal-cover__subtitle {
+    margin-top: 7px;
+  }
+}
