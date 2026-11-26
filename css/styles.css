@@ -713,7 +713,7 @@ path.kd-sec{fill:none;stroke-width:3}
 .minst__ph{margin:0;min-height:420px}
 .minst__ph img{display:block;width:100%;height:100%;object-fit:cover}
 .minst__in .minst__ph--full{align-self:center;min-height:0;aspect-ratio:auto}
-.minst__ph--full img{height:auto;object-fit:contain}
+.minst__ph--full img{height:auto;aspect-ratio:1600/1073;object-fit:cover;object-position:50% 54%}
 .minst__tx{padding:clamp(40px,6vw,112px) clamp(24px,5vw,96px);display:flex;flex-direction:column;justify-content:center;}
 .minst__t{margin:14px 0 0;font-family:var(--font-display);font-size:clamp(32px,3.4vw,52px);line-height:1.08;letter-spacing:-.02em;color:#fff;hyphens:manual}
 .minst__lead{margin:20px 0 0;font-size:clamp(17px,1.3vw,20px);line-height:1.55;color:var(--on-deep-muted);}
