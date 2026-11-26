@@ -1,0 +1,47 @@
+.cover.cover--journal-illustrated {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(26px, 4vw, 72px);
+  min-height: 0;
+  padding: clamp(32px, 4vw, 70px) max(var(--gutter), calc((100% - var(--container)) / 2 + var(--gutter)));
+}
+
+.cover--journal-illustrated .cover__in {
+  grid-area: 1 / 1;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.cover--journal-illustrated .cover__img {
+  grid-area: 1 / 2;
+  position: static;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 3;
+  object-fit: contain;
+  opacity: 1;
+}
+
+.cover--journal-illustrated h1 {
+  font-size: clamp(30px, 3.18vw, 58px);
+  overflow-wrap: anywhere;
+}
+
+.content .jnext__c img[src^="/img/journal-"] {
+  aspect-ratio: 5 / 3;
+}
+
+@media (max-width: 760px) {
+  .cover.cover--journal-illustrated {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+    padding-block: 28px;
+  }
+
+  .cover--journal-illustrated .cover__img {
+    grid-area: 2 / 1;
+  }
+}
