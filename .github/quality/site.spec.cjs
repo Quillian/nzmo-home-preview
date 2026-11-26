@@ -72,7 +72,7 @@ test('cleanroom consultation prepares the engineer draft and opens optional atta
 test('the sample request opens a separate form with the sample topic', async ({page}) => {
   await page.setViewportSize({width: 390, height: 844});
   await page.addInitScript(() => sessionStorage.setItem('nzmo-cookie-no', '1'));
-  await page.goto('http://127.0.0.1:8765/servis/kak-my-rabotaem/');
+  await page.goto('http://127.0.0.1:8765/o-zavode/materialy-i-pokrytiya/');
   const opener = page.locator('#obraztsy').getByRole('button', {name: 'Запросить образцы'});
   await opener.click();
   const dialog = page.getByRole('dialog', {name: 'Запросить образцы'});
@@ -734,7 +734,7 @@ test('the home offer carries the revealed code into the enquiry', async ({ brows
     expect(enquiryCode).toMatch(/^[0-9]{5}$/);
 
     await request.press('Enter');
-    await expect(page).toHaveURL(/\/servis\/kak-my-rabotaem\/\?config=.*#cta$/);
+    await expect(page).toHaveURL(/\/produktsiya\/\?config=.*#cta$/);
     const form = page.locator('#cta form');
     await expect(form.locator('[data-config-echo]')).toHaveText('Считаем проект с кодом ' + enquiryCode + '.');
     await form.locator('[data-lead-contact]').fill('offer@example.com');

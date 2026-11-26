@@ -6,6 +6,8 @@
   "trailingSlash": true,
   "cleanUrls": false,
   "redirects": [
+    {"source":"/servis/","destination":"/#poryadok-raboty","statusCode":301},
+    {"source":"/servis/kak-my-rabotaem/","destination":"/#poryadok-raboty","statusCode":301},
     {"source":"/maf/gorodskaya-mebel/","destination":"/maf/skulptury/","statusCode":301},
     {
       "source": "/clip-in",
@@ -409,12 +411,12 @@
     },
     {
       "source": "/servis/obraztsy/",
-      "destination": "/servis/kak-my-rabotaem/#obraztsy",
+      "destination": "/o-zavode/materialy-i-pokrytiya/#obraztsy",
       "permanent": true
     },
     {
       "source": "/servis/raschet-proekta/",
-      "destination": "/servis/kak-my-rabotaem/#cta",
+      "destination": "/produktsiya/#cta",
       "permanent": true
     },
     {
@@ -439,7 +441,7 @@
     },
     {
       "source": "/dokumenty/tipovye-formy/",
-      "destination": "/servis/kak-my-rabotaem/#chto-prislat",
+      "destination": "/stati/chto-nuzhno-chtoby-poschitat-potolok/",
       "permanent": true
     },
     {

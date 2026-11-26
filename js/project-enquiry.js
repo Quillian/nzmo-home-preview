@@ -1,6 +1,6 @@
 (() => {
   if (!window.HTMLDialogElement) return;
-  const source = '/servis/kak-my-rabotaem/';
+  const source = '/produktsiya/';
   const linkSelector = 'a[data-project-enquiry]';
 
   function registerDialog({selector, titleId, title, beforeOpen, onOpen, afterClose}) {
@@ -88,7 +88,7 @@
       onOpen(body) {
         if (!formPromise) {
           formPromise = prepareForm(body).catch(() => {
-            body.innerHTML = '<p>Не удалось загрузить форму.</p><a class="btn btn--navy" href="/servis/kak-my-rabotaem/#cta">Перейти к расчёту</a>';
+            body.innerHTML = '<p>Не удалось загрузить форму.</p><a class="btn btn--navy" href="/produktsiya/#cta">Перейти к расчёту</a>';
             formPromise = null;
           });
         } else {

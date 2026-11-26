@@ -238,7 +238,7 @@
       q("[data-gc-kg]").innerHTML = f(kg) + " <small>кг</small>";
       q("[data-gc-parts]").innerHTML = P.slice(2).map(function (x) { return "<li><span>" + x[0] + "</span><b>" + (x[1] ? f(x[1]) + " шт" : "—") + "</b></li>"; }).join("");
       cta.dataset.cfg = "грильято " + c + "×" + c + ", h" + h + ", площадь " + f(s) + " м², периметр " + f(p) + " м";
-      cta.href = "/servis/kak-my-rabotaem/?config=" + encodeURIComponent(cta.dataset.cfg) + "#cta";
+      cta.href = "/produktsiya/?config=" + encodeURIComponent(cta.dataset.cfg) + "#cta";
     }
     box.addEventListener("click", function (e) {
       var b = e.target.closest("[data-rc-set] button");
@@ -285,7 +285,7 @@
       if (moduleLength === 600) parts.push(["Т-профиль поперечный 0,6 м", up(sf * 1.4), 0.147, 0.0004]);
       parts.push(["Подвес", up(sf * 1.3)], ["Уголок пристенный 3 м", up(p / 3), 0.156, 0.00054]);
       calcTable(rows, parts);
-      cta.href = "/servis/kak-my-rabotaem/?config=" + encodeURIComponent("потолок Т24, заполнение: " + t + ", модуль " + dimensions + " мм, площадь " + s + " м², периметр " + p + " м") + "#cta";
+      cta.href = "/produktsiya/?config=" + encodeURIComponent("потолок Т24, заполнение: " + t + ", модуль " + dimensions + " мм, площадь " + s + " м², периметр " + p + " м") + "#cta";
     }
     materials.forEach(function (button) {
       button.addEventListener("click", function () {
