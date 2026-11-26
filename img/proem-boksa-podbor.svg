@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 218" role="img" aria-labelledby="title"><title id="title">Три размера для подбора передаточного бокса</title>
+<rect width="600" height="218" fill="#f4f6f7"/>
+<defs><pattern id="h" width="9" height="9" patternUnits="userSpaceOnUse"><path d="M0 9 9 0" stroke="#bdc7cc"/></pattern></defs>
+<g stroke="#1b2d42" stroke-width="2"><path d="M30 32H164V152H30Z M51 57V132H143V57Z" fill="#c3ccd1" fill-rule="evenodd"/>
+<path d="M233 32H367V152H233Z M254 57V132H346V57Z" fill="#c3ccd1" fill-rule="evenodd"/>
+<path d="M419 23H586V160H419Z M435 38V145H570V38Z" fill="url(#h)" fill-rule="evenodd"/></g>
+<g fill="none" stroke="#05445e" stroke-width="3"><path d="M52 94H142M52 87V101M142 87V101M233 166H367M233 159V173M367 159V173M435 94H570M435 87V101M570 87V101"/></g>
+<g text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#1b2d42"><text x="97" y="197">Камера</text><text x="300" y="197">Корпус</text><text x="503" y="197">Проём в стене</text></g></svg>

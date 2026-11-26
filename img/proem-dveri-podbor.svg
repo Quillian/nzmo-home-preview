@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" role="img" aria-labelledby="title">
+<title id="title">Строительный проём и проход в свету при подборе двери</title>
+<defs><pattern id="wall" width="9" height="9" patternUnits="userSpaceOnUse"><path d="M0 9 9 0" stroke="#bdc7cc"/></pattern></defs>
+<rect width="600" height="260" fill="#f4f6f7"/>
+<path d="M45 54H270V212H232V86H83V212H45Z" fill="url(#wall)" stroke="#1b2d42" stroke-width="2"/>
+<path d="M83 69H232M83 60V76M232 60V76" stroke="#05445e" stroke-width="3"/>
+<path d="M330 54H555V212H517V86H368V212H330Z" fill="url(#wall)" stroke="#1b2d42" stroke-width="2"/>
+<path d="M368 86H517V212H505V98H380V212H368Z" fill="#b7c4cd" stroke="#1b2d42" stroke-width="2"/>
+<path d="M380 210V99H388V210Z" fill="#d1a250" stroke="#1b2d42"/>
+<path d="M389 156H505M389 148V164M505 148V164" stroke="#05445e" stroke-width="3"/>
+<g text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#1b2d42"><text x="158" y="244">Строительный проём</text><text x="443" y="244">Проход в свету</text></g></svg>
