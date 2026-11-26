@@ -46,8 +46,9 @@
 }
 
 .cover--journal-illustrated h1 {
-  font-size: clamp(30px, 3.05vw, 53px);
-  overflow-wrap: anywhere;
+  font-size: clamp(28px, 2.8vw, 50px);
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 .cover.cover--journal-illustrated .lead {
@@ -114,6 +115,10 @@
     grid-area: 2 / 1;
     width: 100%;
     padding: 12px var(--gutter) 30px;
+  }
+
+  .cover--journal-illustrated h1 {
+    font-size: clamp(29px, 4.1vw, 42px);
   }
 }
 
