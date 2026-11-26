@@ -215,7 +215,7 @@ img/ci-klinika-evromed-operacionnaya-1600.webp,139eb54ba53ec2d977b00b05e6c5030c1
 img/ci-klinika-evromed-operacionnaya-1920.webp,c1fc5a4a0837d8c6790052aafbb59552fb18d45c74d92d89e259ca7aae5dfe4a,110454,0,,,0,0
 img/ci-klinika-evromed-operacionnaya-2560.webp,c1fc5a4a0837d8c6790052aafbb59552fb18d45c74d92d89e259ca7aae5dfe4a,110454,0,,,0,0
 img/ci-klinika-evromed-operacionnaya-800.webp,d75abe1e7f46ce1d3fff83cbfc68730290a61513ab6c2c2c4f7f175039eb42f3,37788,2,potolki/kassetnye/index.html | stati/index.html,"Отделка стен и потолка операционной | Потолок Clip-in — г. Новосибирск · клиника «Евромед» · Clip-in 600×600, операционная",0,0
-img/ci-klinika-evromed-palata-1400.webp,9b7c6fdf61ecdb7d0ba2266f86b1b244d359dea8cb89641d37ebee761c64d949,47030,1,potolki/kassetnye/clip-in/index.html,"Потолок Clip-in в палате — клиника «Евромед», Новосибирск",0,0
+img/ci-klinika-evromed-palata-1400.webp,9b7c6fdf61ecdb7d0ba2266f86b1b244d359dea8cb89641d37ebee761c64d949,47030,0,,,0,0
 img/ci-klinika-evromed-palata-1920.webp,5b15b82f6a05a28220431752b42621401217c8e0243e75493998dcbd9f2bf40c,66242,0,,,0,0
 img/ci-klinika-evromed-palata-2560.webp,5b15b82f6a05a28220431752b42621401217c8e0243e75493998dcbd9f2bf40c,66242,0,,,0,0
 img/ci-klinika-evromed-palata-800.webp,9446d8be6db6ff4404a876f0782ed73fd13dde60746a83ed77c4f71be7d4c8a4,22488,0,,,0,0
@@ -5186,6 +5186,8 @@ img/montazh-dizaynerskogo-potolka-relefnyy-modul-1600.webp,52c7a7e5a58de51ac03b3
 img/montazh-dizaynerskogo-potolka-relefnyy-modul-800.webp,eab1e7941dec7ccadd230ebab0a09ca10263f1641ef3c5f3b05aaf7bdbd41c96,41948,1,potolki/dizaynerskie/index.html,Монтажник устанавливает рельефный модуль дизайнерского потолка,0,0
 img/montazh-grilyato-yacheistyy-potolok-1600.webp,555f75b4a9385e72e0b027b092aedc880b183fffa1509f0babc2910696b98c76,171692,1,potolki/grilyato/index.html,Монтажник поднимает решётку Грильято к ячеистому потолку,0,0
 img/montazh-grilyato-yacheistyy-potolok-800.webp,79ebf1fd7ba3c3f55f07a3c568078528032ce66573abfd4d4c6c76cefca92da0,68046,1,potolki/grilyato/index.html,Монтажник поднимает решётку Грильято к ячеистому потолку,0,0
+img/montazh-kassetnogo-potolka-clip-in-1448.webp,12f9076da92b2c3a2344c20cc71d0827d7c3f834dbbc12d15a48ec7152ddb4d5,84766,1,potolki/kassetnye/clip-in/index.html,Монтажник устанавливает кассету Clip-in в подвесной потолок,0,0
+img/montazh-kassetnogo-potolka-clip-in-800.webp,07e1832cc0e77db405256bcc86ebf81c62ef960b29616085890a13ecdcf53300,31646,1,potolki/kassetnye/clip-in/index.html,Монтажник устанавливает кассету Clip-in в подвесной потолок,0,0
 img/montazh/grilyato-1440.webp,b07bf798ac32a7167bad1d7f08234965bb8e186929d28f38a1e699c0a015ef3d,267128,1,servis/montazh/index.html,Монтажник устанавливает светильник в ячейку потолка Грильято,0,0
 img/montazh/grilyato-2048.webp,7e1cfb885030e870b52ed936986ff9faf9417830d0f76803260f63bd16ec6cdc,564490,1,servis/montazh/index.html,Монтажник устанавливает светильник в ячейку потолка Грильято,0,0
 img/montazh/grilyato-800.webp,7d2ba92eb40a6590ad68d62ee1170a243d80eed87ebd3d8d756b4b58665af125,113120,1,servis/montazh/index.html,Монтажник устанавливает светильник в ячейку потолка Грильято,0,0
