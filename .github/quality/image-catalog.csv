@@ -469,7 +469,7 @@ img/ind-bc-admiral-lobbi-800.webp,a906d0350d64b37c43b3535caa4dbea37be5b31e916203
 img/ind-individual-nyy-potolok-holl-s-kruglym-sv-1920.webp,5ad55f6c83ba852beba4c5efbc92f7516275a18bc4fe04b76e0bd712cf20ce25,132370,1,potolki/dizaynerskie/index.html,"Индивидуальный потолок,",0,0
 img/ind-individual-nyy-potolok-holl-s-kruglym-sv-2560.webp,5ad55f6c83ba852beba4c5efbc92f7516275a18bc4fe04b76e0bd712cf20ce25,132370,1,potolki/dizaynerskie/index.html,"Индивидуальный потолок,",0,0
 img/ind-individual-nyy-potolok-holl-s-kruglym-sv-800.webp,cfef472ddd40e33568ba7e633ea2620d1a6e87ce5b0b3246a6d4a7ac2212edb3,45438,1,potolki/dizaynerskie/index.html,,0,1
-img/ind-ofis-chastnoy-kompanii-peregovornaya-1400.webp,58dbdc74679ef9d9201d9dd0f113127ca91279d37a0d7f9aa75eeedcd1cd18bb,57646,1,potolki/dizaynerskie/index.html,"Модульный потолок из треугольных панелей в переговорной, Новосибирск",0,0
+img/ind-ofis-chastnoy-kompanii-peregovornaya-1400.webp,58dbdc74679ef9d9201d9dd0f113127ca91279d37a0d7f9aa75eeedcd1cd18bb,57646,0,,,0,0
 img/ind-ofis-chastnoy-kompanii-peregovornaya-1920.webp,dce1a93d5ad8d2900a98c10149ead9e5ddd4d65d410a50c2a3ea0b87f79edd76,91868,2,potolki/dizaynerskie/index.html | potolki/index.html,"Офис частной компании, Новосибирск",0,0
 img/ind-ofis-chastnoy-kompanii-peregovornaya-2560.webp,dce1a93d5ad8d2900a98c10149ead9e5ddd4d65d410a50c2a3ea0b87f79edd76,91868,2,potolki/dizaynerskie/index.html | potolki/index.html,"Офис частной компании, Новосибирск",0,0
 img/ind-ofis-chastnoy-kompanii-peregovornaya-800.webp,d52de4d0353167dd59c56c10984f638553de4130027a503895272eb64b357681,26174,3,potolki/dizaynerskie/index.html | potolki/index.html | stati/index.html,Потолок в офисной переговорной,0,2
@@ -5180,6 +5180,10 @@ img/mn-zabory-zhalyuzi-720.webp,a745ab69050eed5eff9f7713399b0e86fcc13f65955d2b54
 img/mn-zony-ozhidaniya-1400.webp,4b0f34c2b6952a8120e9e13fedf5105370adeaa80e7c4f3390e6fd8c4bbbfca9,294918,136,404.html | 404/index.html | chistye-pomeshcheniya/dveri-chistyh/index.html | chistye-pomeshcheniya/gml-paneli/index.html | chistye-pomeshcheniya/index.html,,0,136
 img/mn-zony-ozhidaniya-720.webp,804a3b7e49df4e769b44bce2015385c36bab79896829b0e1094a3db4e6b97f89,89374,136,404.html | 404/index.html | chistye-pomeshcheniya/dveri-chistyh/index.html | chistye-pomeshcheniya/gml-paneli/index.html | chistye-pomeshcheniya/index.html,,0,136
 img/monotek-stroy-320.png,517d33f40c8cef7db49c05911655b56b3a61949170e5a68b8c478f3ca422a4f2,20305,2,index.html | o-zavode/index.html,Монотек-Строй,0,2
+img/montazh-armstrong-t24-mineralnaya-plita-1600.webp,0c694642089fa2491eecfa36eea0902c1e5d18a4d3e56fcebb7258981260c9b5,439176,1,potolki/armstrong-t24/index.html,Монтажник устанавливает минеральную плиту в каркас Т24,0,0
+img/montazh-armstrong-t24-mineralnaya-plita-800.webp,8a59485e8e468cd43c243eea1125adbce9f278747b558e7eab168627ac9a2ea5,117790,1,potolki/armstrong-t24/index.html,Монтажник устанавливает минеральную плиту в каркас Т24,0,0
+img/montazh-dizaynerskogo-potolka-relefnyy-modul-1600.webp,52c7a7e5a58de51ac03b3e349c826c50b29b8af1c34d02b0aca88405b58263a5,105150,1,potolki/dizaynerskie/index.html,Монтажник устанавливает рельефный модуль дизайнерского потолка,0,0
+img/montazh-dizaynerskogo-potolka-relefnyy-modul-800.webp,eab1e7941dec7ccadd230ebab0a09ca10263f1641ef3c5f3b05aaf7bdbd41c96,41948,1,potolki/dizaynerskie/index.html,Монтажник устанавливает рельефный модуль дизайнерского потолка,0,0
 img/montazh/grilyato-1440.webp,b07bf798ac32a7167bad1d7f08234965bb8e186929d28f38a1e699c0a015ef3d,267128,1,servis/montazh/index.html,Монтажник устанавливает светильник в ячейку потолка Грильято,0,0
 img/montazh/grilyato-2048.webp,7e1cfb885030e870b52ed936986ff9faf9417830d0f76803260f63bd16ec6cdc,564490,1,servis/montazh/index.html,Монтажник устанавливает светильник в ячейку потолка Грильято,0,0
 img/montazh/grilyato-800.webp,7d2ba92eb40a6590ad68d62ee1170a243d80eed87ebd3d8d756b4b58665af125,113120,1,servis/montazh/index.html,Монтажник устанавливает светильник в ячейку потолка Грильято,0,0
@@ -6029,7 +6033,7 @@ img/t24-1000-clean.png,7768c63f7ee55a758714b1c815abe7b8cda4b85ce88e963b491677b7a
 img/t24-800-clean.png,3f0af76619d3740524942d19b2e81d0cc05647155811f1165662a73abbcd66b2,258220,0,,,0,0
 img/t24-module-20261112.svg,c136574f843914d4db1fe6de4786f780589353bc54a2fad4f3da2a6d371cebdf,487,1,potolki/armstrong-t24/index.html,Схема модуля Т24 600 на 600 мм,0,0
 img/t24-module-600x1200.svg,33890b95a4d736c0f9fa0f74a8825f6676f6248761bde60e37376a5add186dd4,483,1,potolki/armstrong-t24/index.html,Схема модуля Т24 600 на 1200 мм,0,0
-img/t24-t24-dostup-v-zapotolochnoe-prostranstvo-1400.webp,f2d9ee0c737485a737760565e32f0850710866129e141a75a512a6b4599e92ef,91774,3,potolki/armstrong-t24/index.html | potolki/armstrong-t24/mineralnaya-plita/index.html | potolki/armstrong-t24/t24-profil/index.html,Минеральная плита в каркасе Т24 снимается рукой — доступ в запотолочное пространство,0,0
+img/t24-t24-dostup-v-zapotolochnoe-prostranstvo-1400.webp,f2d9ee0c737485a737760565e32f0850710866129e141a75a512a6b4599e92ef,91774,2,potolki/armstrong-t24/mineralnaya-plita/index.html | potolki/armstrong-t24/t24-profil/index.html,Минеральная плита в каркасе Т24 снимается рукой — доступ в запотолочное пространство,0,0
 img/t24_fiber-1600.webp,ce836f4f179b5c435df906f8e76d32c923ba948f38987c10b9e68c575d132ed8,59786,1,potolki/armstrong-t24/mineralnaya-plita/index.html,,0,0
 img/t24_fiber-1920.webp,3b9abb2953cf761e2d3baff7d24ad2149e384d37f1dcd2b2bf47a444840a24e1,77512,1,potolki/armstrong-t24/mineralnaya-plita/index.html,Минеральная плита для потолка типа армстронг — минераловолоконная плита · тиснение · кромка Board,0,0
 img/t24_fiber-800.webp,3a0129ac4286b80fa116f607083ecd2e36e22b9dd5b2fb69c59dfe1808e45470,22270,0,,,0,0
