@@ -154,7 +154,7 @@
   const accepted=draft.mode==='accepted' && draft.receipt && typeof draft.receipt.id==='string' && typeof draft.receipt.token==='string';
   form.elements.namedItem('contact').required=!!accepted;
   for(const name of ['name','contact','contact_method','message','city','deadline','product','quantity','contact_time'])if(typeof draft.payload[name]==='string' && form.elements.namedItem(name))form.elements.namedItem(name).value=draft.payload[name];
-  if(!value(form,'product') && /^\/(potolki|steny-i-kolonny|fasady|ograzhdeniya|chistye-pomeshcheniya|mebel|dveri|maf|osveshchenie|nestandart)\//.test(draft.payload.page||''))form.elements.namedItem('product').value=(draft.payload.pageTitle||'').slice(0,240);
+  if(!value(form,'product') && /^\/(potolki|steny-i-kolonny|fasady|ograzhdeniya|chistye-pomeshcheniya|mebel|dveri|maf|osveshchenie|izdeliya-iz-metalla-po-chertezham)\//.test(draft.payload.page||''))form.elements.namedItem('product').value=(draft.payload.pageTitle||'').slice(0,240);
   if(!value(form,'message') && draft.payload.config)form.elements.namedItem('message').value=draft.payload.config.slice(0,5000);
   consent.checked=!!draft.payload.agree;consent.required=!!accepted;
   if(consent.checked)form.querySelector('[data-details-consent]').hidden=true;

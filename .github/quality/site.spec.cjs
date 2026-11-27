@@ -227,7 +227,7 @@ test('every enquiry uses the approved outer layout and preserves its fields',asy
   expect(count).toBe(122);
 });
 test('cleanroom doors expose variants, project photos and one configured enquiry',async({page})=>{
-  await page.goto('http://127.0.0.1:8765/chistye-pomeshcheniya/dveri-chistyh/');
+  await page.goto('http://127.0.0.1:8765/chistye-pomeshcheniya/dveri/');
   await expect(page.locator('main form[data-lead-v2]')).toHaveCount(1);
   await expect(page.locator('#tipy .k3__card')).toHaveCount(3);
   await expect(page.locator('[data-kd="kd-dver-odna"] img')).toHaveAttribute('src', '/img/ngu-cleanroom-dver-s-oknom-800.webp');
