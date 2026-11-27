@@ -3,7 +3,6 @@
   "framework": null,
   "buildCommand": "node .vercel-build.cjs",
   "outputDirectory": "public-site",
-  "trailingSlash": true,
   "cleanUrls": false,
   "redirects": [
     {"source":"/chistye-pomeshcheniya/dveri-chistyh","destination":"/chistye-pomeshcheniya/dveri/","statusCode":301},
@@ -508,7 +507,8 @@
       "source": "/partneram/proektnym-organizatsiyam/",
       "destination": "/partneram/#partner-engineer",
       "permanent": true
-    }
+    },
+    {"source":"/:path((?:[^/]+/)*[^/.]+$)","destination":"/:path/","statusCode":308}
   ],
   "headers": [
     {
