@@ -1943,15 +1943,15 @@ img/k3d/st3-clipin-d-0-ral9003-c4-640.webp,5fce48ee314121182de922de19ba6be79b4a6
 img/k3d/st3-clipin-d-0-ral9003-m-1200.webp,e9ed25228f952d0cb43b0db3d7f8c1198f207591a46a5a01e7b9c0eb465659f4,25074,0,,,0,0
 img/k3d/st3-clipin-d-0-ral9003-m-2400.webp,b6b6cf277a680482bea1cdd007e6d02525dd47ccf856764f19f8202ba0754c8b,62008,0,,,0,0
 img/k3d/st3-clipin-d-0-ral9003-m-640.webp,473e152edb0b8d18a8d5c8483e4b1ee1ee8e8e622a0fe352bcad2780016e5de9,9350,0,,,0,0
-img/k3d/st3-clipin-light-0-ral6019-m-1200.webp,0cd22da09829cc81aa5b1bfbdd07b37a06c4a30406ade059a8fb20ebc43b3630,19108,1,k3d/clipin-light.html,"Со светильником, RAL 6019 пастельно-зелёный — фрагмент потолка",0,0
-img/k3d/st3-clipin-light-0-ral6019-m-2400.webp,d6b4c82ab9474134d88fe436f21364e409abe66cb1ee97d4a9faf8953e34a9b6,43348,1,k3d/clipin-light.html,"Со светильником, RAL 6019 пастельно-зелёный — фрагмент потолка",0,0
+img/k3d/st3-clipin-light-0-ral6019-m-1200.webp,0cd22da09829cc81aa5b1bfbdd07b37a06c4a30406ade059a8fb20ebc43b3630,19108,0,,,0,0
+img/k3d/st3-clipin-light-0-ral6019-m-2400.webp,d6b4c82ab9474134d88fe436f21364e409abe66cb1ee97d4a9faf8953e34a9b6,43348,0,,,0,0
 img/k3d/st3-clipin-light-0-ral6019-m-640.webp,c19497917f6b6bc9a40ebda0f9f1610535ff1cfda677278a33bac6927d89016b,7038,0,,,0,0
-img/k3d/st3-clipin-light-0-ral9002-m-1200.webp,b4d1c66eb7e805e65c019b71b5ae3d35673cd6bdd642cd3ac364f968c6dda3ce,18126,1,k3d/clipin-light.html,"Со светильником, RAL 9002 серо-белый — фрагмент потолка",0,0
-img/k3d/st3-clipin-light-0-ral9002-m-2400.webp,4cf5a8868f99c08b4d6d89f06d966fda83b79141174f72a56efb6b6a0cafba8c,41450,1,k3d/clipin-light.html,"Со светильником, RAL 9002 серо-белый — фрагмент потолка",0,0
+img/k3d/st3-clipin-light-0-ral9002-m-1200.webp,b4d1c66eb7e805e65c019b71b5ae3d35673cd6bdd642cd3ac364f968c6dda3ce,18126,0,,,0,0
+img/k3d/st3-clipin-light-0-ral9002-m-2400.webp,4cf5a8868f99c08b4d6d89f06d966fda83b79141174f72a56efb6b6a0cafba8c,41450,0,,,0,0
 img/k3d/st3-clipin-light-0-ral9002-m-640.webp,9f1a67a80b5e6a730d471dde34d52697973b0b672018760467868c679d6b1449,6652,0,,,0,0
-img/k3d/st3-clipin-light-0-ral9003-m-1200.webp,6ad42e365baac4b50749d375d67266de9a5b7da74ef34f453a0aa94ce6c9ca6b,17738,2,k3d/clipin-light.html | potolki/kassetnye/clip-in/index.html,"Со светильником, RAL 9003 белый | Со светильником, RAL 9003 белый — фрагмент потолка",0,0
-img/k3d/st3-clipin-light-0-ral9003-m-2400.webp,b960af2df920d41fc5325a441852a866d8911d56408fd7fa6174d5510361ccd1,41038,2,k3d/clipin-light.html | potolki/kassetnye/clip-in/index.html,"Со светильником, RAL 9003 белый | Со светильником, RAL 9003 белый — фрагмент потолка",0,0
-img/k3d/st3-clipin-light-0-ral9003-m-640.webp,4ef22e42ffedd2bbb49e8dd287309843490c8de5d6b42490335dc196cba35c59,6522,1,potolki/kassetnye/clip-in/index.html,"Со светильником, RAL 9003 белый",0,0
+img/k3d/st3-clipin-light-0-ral9003-m-1200.webp,6ad42e365baac4b50749d375d67266de9a5b7da74ef34f453a0aa94ce6c9ca6b,17738,0,,,0,0
+img/k3d/st3-clipin-light-0-ral9003-m-2400.webp,b960af2df920d41fc5325a441852a866d8911d56408fd7fa6174d5510361ccd1,41038,0,,,0,0
+img/k3d/st3-clipin-light-0-ral9003-m-640.webp,4ef22e42ffedd2bbb49e8dd287309843490c8de5d6b42490335dc196cba35c59,6522,0,,,0,0
 img/k3d/st3-clipin-radius-0-ral6019-m-1200.webp,11ae1444cbe281a7df9cc36c6c8046fc882ff57959162aa0b57d2d7f94c9c8cc,19148,1,k3d/clipin-radius.html,"Со скруглениями, RAL 6019 пастельно-зелёный — фрагмент потолка",0,0
 img/k3d/st3-clipin-radius-0-ral6019-m-2400.webp,b04e8d4bde870d6548261980571cc3c7ea405a52f4c10b5d66413cbfe453940c,44592,1,k3d/clipin-radius.html,"Со скруглениями, RAL 6019 пастельно-зелёный — фрагмент потолка",0,0
 img/k3d/st3-clipin-radius-0-ral6019-m-640.webp,38b9404e7114409f6430028b300f5f3fc22633ca94b6913c43a56e87a4ba9037,7098,0,,,0,0
@@ -4001,59 +4001,59 @@ img/k3d/st3-korz-slots-0-ral9006-m-640.webp,2d2d64cb12fc2d2419f072a4008be486ab08
 img/k3d/st3-korz-slots-0-ral9010-m-1200.webp,5fab1c2177b9a6ec5de66397d10bd9f95a457d0d60a3906411ce7c6595ed75d4,56096,1,k3d/korz-slots.html,"Со щелевой перфорацией, RAL 9010 чисто-белый — изделие",0,0
 img/k3d/st3-korz-slots-0-ral9010-m-2400.webp,130739483975fcb90bc80e0dac9bb9f44b87c449b370494c15e1a1149b1c5767,115198,1,k3d/korz-slots.html,"Со щелевой перфорацией, RAL 9010 чисто-белый — изделие",0,0
 img/k3d/st3-korz-slots-0-ral9010-m-640.webp,7e7be6d7e172a82ee7231118cea23dc78d0cead65c3a7b72da5546c9169d3de8,27878,0,,,0,0
-img/k3d/st3-lclean-opal-0-ral6019-m-1200.webp,d020879e64b8287dcdf4b942449f36858696b0617bf2ef132609ced1970b44e3,23156,1,k3d/lclean-opal.html,"С опалом, RAL 6019 пастельно-зелёный — в поле clip-in",0,0
-img/k3d/st3-lclean-opal-0-ral6019-m-2400.webp,7a64ce8ce2fc05c9cfb6e8f7a76cca9783f9d231de643a7fe18ba0e4bff97a2b,50634,1,k3d/lclean-opal.html,"С опалом, RAL 6019 пастельно-зелёный — в поле clip-in",0,0
+img/k3d/st3-lclean-opal-0-ral6019-m-1200.webp,d020879e64b8287dcdf4b942449f36858696b0617bf2ef132609ced1970b44e3,23156,0,,,0,0
+img/k3d/st3-lclean-opal-0-ral6019-m-2400.webp,7a64ce8ce2fc05c9cfb6e8f7a76cca9783f9d231de643a7fe18ba0e4bff97a2b,50634,0,,,0,0
 img/k3d/st3-lclean-opal-0-ral6019-m-640.webp,4f378098b5b90800e872cd2a6841cb2293999461a14ca81c706dda5bdfca1dfa,9044,0,,,0,0
-img/k3d/st3-lclean-opal-0-ral9002-m-1200.webp,e39b602781498b9f51feb4e6f877b0d396745e4dfba8e94d7915dcf80d61d2e0,21842,1,k3d/lclean-opal.html,"С опалом, RAL 9002 серо-белый — в поле clip-in",0,0
-img/k3d/st3-lclean-opal-0-ral9002-m-2400.webp,bdd767bcce2dbbf74d17406ff54cafa43a5b61f1c1cb97a4b457fc836b4e2cb0,47996,1,k3d/lclean-opal.html,"С опалом, RAL 9002 серо-белый — в поле clip-in",0,0
+img/k3d/st3-lclean-opal-0-ral9002-m-1200.webp,e39b602781498b9f51feb4e6f877b0d396745e4dfba8e94d7915dcf80d61d2e0,21842,0,,,0,0
+img/k3d/st3-lclean-opal-0-ral9002-m-2400.webp,bdd767bcce2dbbf74d17406ff54cafa43a5b61f1c1cb97a4b457fc836b4e2cb0,47996,0,,,0,0
 img/k3d/st3-lclean-opal-0-ral9002-m-640.webp,08da842589ae5445a0f5e9c560fd40e857ccaa694f6d23d3ff7e4b5a01fd67b0,8476,0,,,0,0
-img/k3d/st3-lclean-opal-0-ral9003-m-1200.webp,6b8bb0ec1596bbf95aabd61a2fdce0b7b3cf79633a5d39186a5c000c1cdf10bf,21368,2,k3d/lclean-opal.html | osveshchenie/dlya-chistyh-pomeshcheniy/index.html,"С опалом, RAL 9003 белый | С опалом, RAL 9003 белый — в поле clip-in",0,0
-img/k3d/st3-lclean-opal-0-ral9003-m-2400.webp,c17006de70fcf983f915c7a54033ef5d23f670b8edbfb23e4fe67f95af5c2316,46408,2,k3d/lclean-opal.html | osveshchenie/dlya-chistyh-pomeshcheniy/index.html,"С опалом, RAL 9003 белый | С опалом, RAL 9003 белый — в поле clip-in",0,0
-img/k3d/st3-lclean-opal-0-ral9003-m-640.webp,6ad5335bccfa581dff3b3dcf46135e16784983b01a71a71e06792fcf07ea4c4a,8222,1,osveshchenie/dlya-chistyh-pomeshcheniy/index.html,"С опалом, RAL 9003 белый",0,0
-img/k3d/st3-lclean-prism-0-ral6019-m-1200.webp,eee984d81fc4788d32cdb0c538d7a29df722df264b9fa7198669a400a3c6ce47,30640,1,k3d/lclean-prism.html,"С микропризмой, RAL 6019 пастельно-зелёный — в поле clip-in",0,0
-img/k3d/st3-lclean-prism-0-ral6019-m-2400.webp,d9f6d0d3c57e597327bd4a89a35ee87796dee3e02fd66b5e1d3f4d56ae7db096,86890,1,k3d/lclean-prism.html,"С микропризмой, RAL 6019 пастельно-зелёный — в поле clip-in",0,0
+img/k3d/st3-lclean-opal-0-ral9003-m-1200.webp,6b8bb0ec1596bbf95aabd61a2fdce0b7b3cf79633a5d39186a5c000c1cdf10bf,21368,0,,,0,0
+img/k3d/st3-lclean-opal-0-ral9003-m-2400.webp,c17006de70fcf983f915c7a54033ef5d23f670b8edbfb23e4fe67f95af5c2316,46408,0,,,0,0
+img/k3d/st3-lclean-opal-0-ral9003-m-640.webp,6ad5335bccfa581dff3b3dcf46135e16784983b01a71a71e06792fcf07ea4c4a,8222,0,,,0,0
+img/k3d/st3-lclean-prism-0-ral6019-m-1200.webp,eee984d81fc4788d32cdb0c538d7a29df722df264b9fa7198669a400a3c6ce47,30640,0,,,0,0
+img/k3d/st3-lclean-prism-0-ral6019-m-2400.webp,d9f6d0d3c57e597327bd4a89a35ee87796dee3e02fd66b5e1d3f4d56ae7db096,86890,0,,,0,0
 img/k3d/st3-lclean-prism-0-ral6019-m-640.webp,f96a90a1282fe92c03ba8d696e82b97e615822cb69ca6c3f89a70fd820384827,9678,0,,,0,0
-img/k3d/st3-lclean-prism-0-ral9002-m-1200.webp,9f48fb9fe1e530b5b8f2a96119ec17e40a4112fffc0653fcaf7bcd1e7f2e12ce,29448,1,k3d/lclean-prism.html,"С микропризмой, RAL 9002 серо-белый — в поле clip-in",0,0
-img/k3d/st3-lclean-prism-0-ral9002-m-2400.webp,9190aada68e609388785ad03bce43acec9ab0a0a7475f0fbdc560febaadf15c2,83668,1,k3d/lclean-prism.html,"С микропризмой, RAL 9002 серо-белый — в поле clip-in",0,0
+img/k3d/st3-lclean-prism-0-ral9002-m-1200.webp,9f48fb9fe1e530b5b8f2a96119ec17e40a4112fffc0653fcaf7bcd1e7f2e12ce,29448,0,,,0,0
+img/k3d/st3-lclean-prism-0-ral9002-m-2400.webp,9190aada68e609388785ad03bce43acec9ab0a0a7475f0fbdc560febaadf15c2,83668,0,,,0,0
 img/k3d/st3-lclean-prism-0-ral9002-m-640.webp,f0d98e98231a62df42c937aae476e9b28a48b8e3a2795a800abb72163f0b1b6c,9228,0,,,0,0
-img/k3d/st3-lclean-prism-0-ral9003-m-1200.webp,e2d86a52f67d0a75b0b0b208d10330af73942fcf472a4c263f4850628f8d85da,28758,2,k3d/lclean-prism.html | osveshchenie/dlya-chistyh-pomeshcheniy/index.html,"С микропризмой, RAL 9003 белый | С микропризмой, RAL 9003 белый — в поле clip-in",0,0
-img/k3d/st3-lclean-prism-0-ral9003-m-2400.webp,0e0e1e36a269ea38a4ce23d48ea1ba6f975b89cafe63f2eb4e0574d34a1446bc,81630,2,k3d/lclean-prism.html | osveshchenie/dlya-chistyh-pomeshcheniy/index.html,"С микропризмой, RAL 9003 белый | С микропризмой, RAL 9003 белый — в поле clip-in",0,0
-img/k3d/st3-lclean-prism-0-ral9003-m-640.webp,6890e9e913897b7ee484875d8865ba86ec3ff32986af0870abd568d5dc8decdb,8944,1,osveshchenie/dlya-chistyh-pomeshcheniy/index.html,"С микропризмой, RAL 9003 белый",0,0
-img/k3d/st3-lgrill-c100-0-ral9003-m-1200.webp,41faa33581cbca3611508a3fa681114b8720fc15ad6302639ef9800611eba6e2,32016,2,k3d/lgrill-c100.html | osveshchenie/dlya-grilyato/index.html,"В ячейку 100 × 100, RAL 9003 белый | В ячейку 100 × 100, RAL 9003 белый — в решётке",0,0
-img/k3d/st3-lgrill-c100-0-ral9003-m-2400.webp,7279f13bdce16b807201893700f204bacf317bd459bc4e00740c6317930cd9fa,65344,2,k3d/lgrill-c100.html | osveshchenie/dlya-grilyato/index.html,"В ячейку 100 × 100, RAL 9003 белый | В ячейку 100 × 100, RAL 9003 белый — в решётке",0,0
-img/k3d/st3-lgrill-c100-0-ral9003-m-640.webp,6eb2cc7dc3788ed01ad1fdb4884bb6b1762f394f23e437e3eb11bb79034466a6,14464,1,osveshchenie/dlya-grilyato/index.html,"В ячейку 100 × 100, RAL 9003 белый",0,0
-img/k3d/st3-lgrill-c100-0-ral9005-m-1200.webp,21d21f7844b212cfd6bb7427d607c44c8741545b1fcd1b9951a64785c5a7f2d8,31626,1,k3d/lgrill-c100.html,"В ячейку 100 × 100, RAL 9005 чёрный — в решётке",0,0
-img/k3d/st3-lgrill-c100-0-ral9005-m-2400.webp,45477a488a0f3b21a14a5094122049b770bcc615b64cb191042d333687078f11,68522,1,k3d/lgrill-c100.html,"В ячейку 100 × 100, RAL 9005 чёрный — в решётке",0,0
+img/k3d/st3-lclean-prism-0-ral9003-m-1200.webp,e2d86a52f67d0a75b0b0b208d10330af73942fcf472a4c263f4850628f8d85da,28758,0,,,0,0
+img/k3d/st3-lclean-prism-0-ral9003-m-2400.webp,0e0e1e36a269ea38a4ce23d48ea1ba6f975b89cafe63f2eb4e0574d34a1446bc,81630,0,,,0,0
+img/k3d/st3-lclean-prism-0-ral9003-m-640.webp,6890e9e913897b7ee484875d8865ba86ec3ff32986af0870abd568d5dc8decdb,8944,0,,,0,0
+img/k3d/st3-lgrill-c100-0-ral9003-m-1200.webp,41faa33581cbca3611508a3fa681114b8720fc15ad6302639ef9800611eba6e2,32016,0,,,0,0
+img/k3d/st3-lgrill-c100-0-ral9003-m-2400.webp,7279f13bdce16b807201893700f204bacf317bd459bc4e00740c6317930cd9fa,65344,0,,,0,0
+img/k3d/st3-lgrill-c100-0-ral9003-m-640.webp,6eb2cc7dc3788ed01ad1fdb4884bb6b1762f394f23e437e3eb11bb79034466a6,14464,0,,,0,0
+img/k3d/st3-lgrill-c100-0-ral9005-m-1200.webp,21d21f7844b212cfd6bb7427d607c44c8741545b1fcd1b9951a64785c5a7f2d8,31626,0,,,0,0
+img/k3d/st3-lgrill-c100-0-ral9005-m-2400.webp,45477a488a0f3b21a14a5094122049b770bcc615b64cb191042d333687078f11,68522,0,,,0,0
 img/k3d/st3-lgrill-c100-0-ral9005-m-640.webp,72dc5a0fe774518a82fdc15bd1c559408ab7542cd2fa5f5d4debc32204833edf,13550,0,,,0,0
-img/k3d/st3-lgrill-c100-0-ral9006-m-1200.webp,7bf0316771b15e1cc36a4ae7a881d27883aeedca65be1a7e67b54642b8a76987,25484,1,k3d/lgrill-c100.html,"В ячейку 100 × 100, RAL 9006 металлик — в решётке",0,0
-img/k3d/st3-lgrill-c100-0-ral9006-m-2400.webp,6aee53666322f0a4824aafd5ea67b22cc6850a1dae8fbf913d19c1e3fd97d06d,55146,1,k3d/lgrill-c100.html,"В ячейку 100 × 100, RAL 9006 металлик — в решётке",0,0
+img/k3d/st3-lgrill-c100-0-ral9006-m-1200.webp,7bf0316771b15e1cc36a4ae7a881d27883aeedca65be1a7e67b54642b8a76987,25484,0,,,0,0
+img/k3d/st3-lgrill-c100-0-ral9006-m-2400.webp,6aee53666322f0a4824aafd5ea67b22cc6850a1dae8fbf913d19c1e3fd97d06d,55146,0,,,0,0
 img/k3d/st3-lgrill-c100-0-ral9006-m-640.webp,1bf89b4da2a5c4a9ae183fbe9434f8ff25731e6899292085bad6f36fcaffc1fd,10700,0,,,0,0
-img/k3d/st3-lgrill-c50-0-ral9003-m-1200.webp,ffe048cf2051f67a03e84e661d2c37b2f1c7d2e796c334f4e928779ded649a2d,45344,2,k3d/lgrill-c50.html | osveshchenie/dlya-grilyato/index.html,"В ячейку 50 × 50, RAL 9003 белый | В ячейку 50 × 50, RAL 9003 белый — в решётке",0,0
-img/k3d/st3-lgrill-c50-0-ral9003-m-2400.webp,d50d747412d4883e2b5571cd0b275478af02491789e96626cbf057a5eed6a52c,100110,2,k3d/lgrill-c50.html | osveshchenie/dlya-grilyato/index.html,"В ячейку 50 × 50, RAL 9003 белый | В ячейку 50 × 50, RAL 9003 белый — в решётке",0,0
-img/k3d/st3-lgrill-c50-0-ral9003-m-640.webp,6a31b0d2409851ef480b0cb09ca0d7404b6055aeded1291782c41cc690412a2d,19764,1,osveshchenie/dlya-grilyato/index.html,"В ячейку 50 × 50, RAL 9003 белый",0,0
-img/k3d/st3-lgrill-c50-0-ral9005-m-1200.webp,e1787ead41122a8106cbdc1fa9f0a2ad12c16e5a2ba810d4616fbbf636c31bea,38452,1,k3d/lgrill-c50.html,"В ячейку 50 × 50, RAL 9005 чёрный — в решётке",0,0
-img/k3d/st3-lgrill-c50-0-ral9005-m-2400.webp,6a0be1a12099a87608f1542df2bb43e01a26621542c9920758edd65cfc2c71ee,85672,1,k3d/lgrill-c50.html,"В ячейку 50 × 50, RAL 9005 чёрный — в решётке",0,0
+img/k3d/st3-lgrill-c50-0-ral9003-m-1200.webp,ffe048cf2051f67a03e84e661d2c37b2f1c7d2e796c334f4e928779ded649a2d,45344,0,,,0,0
+img/k3d/st3-lgrill-c50-0-ral9003-m-2400.webp,d50d747412d4883e2b5571cd0b275478af02491789e96626cbf057a5eed6a52c,100110,0,,,0,0
+img/k3d/st3-lgrill-c50-0-ral9003-m-640.webp,6a31b0d2409851ef480b0cb09ca0d7404b6055aeded1291782c41cc690412a2d,19764,0,,,0,0
+img/k3d/st3-lgrill-c50-0-ral9005-m-1200.webp,e1787ead41122a8106cbdc1fa9f0a2ad12c16e5a2ba810d4616fbbf636c31bea,38452,0,,,0,0
+img/k3d/st3-lgrill-c50-0-ral9005-m-2400.webp,6a0be1a12099a87608f1542df2bb43e01a26621542c9920758edd65cfc2c71ee,85672,0,,,0,0
 img/k3d/st3-lgrill-c50-0-ral9005-m-640.webp,865cd6d405b0c1e3c7cc95130d18f8b7f57d593fc30e2b4615f9276427957911,15768,0,,,0,0
-img/k3d/st3-lgrill-c50-0-ral9006-m-1200.webp,e2539e7cee1a9ceb0c60c138f0ec6caa32ec5b6118c1e94634a095958031cd5c,40658,1,k3d/lgrill-c50.html,"В ячейку 50 × 50, RAL 9006 металлик — в решётке",0,0
-img/k3d/st3-lgrill-c50-0-ral9006-m-2400.webp,cc4ca79f1a184ae6539fecb8aa334de5e5b2ff3db33844dbd035d6cb34687213,90968,1,k3d/lgrill-c50.html,"В ячейку 50 × 50, RAL 9006 металлик — в решётке",0,0
+img/k3d/st3-lgrill-c50-0-ral9006-m-1200.webp,e2539e7cee1a9ceb0c60c138f0ec6caa32ec5b6118c1e94634a095958031cd5c,40658,0,,,0,0
+img/k3d/st3-lgrill-c50-0-ral9006-m-2400.webp,cc4ca79f1a184ae6539fecb8aa334de5e5b2ff3db33844dbd035d6cb34687213,90968,0,,,0,0
 img/k3d/st3-lgrill-c50-0-ral9006-m-640.webp,480a432245e71778a4f9428f7b1f6653b2b4ce7e618d91246c43699e4395e91b,17106,0,,,0,0
-img/k3d/st3-lgrill-c75-0-ral9003-m-1200.webp,6eddd7c88965cec999fb4f2bd2a7726bac48a67edd1c4fa35e6d9b2d59eabe99,39002,2,k3d/lgrill-c75.html | osveshchenie/dlya-grilyato/index.html,"В ячейку 75 × 75, RAL 9003 белый | В ячейку 75 × 75, RAL 9003 белый — в решётке",0,0
-img/k3d/st3-lgrill-c75-0-ral9003-m-2400.webp,2a3edcbf894fc812b53642cf85dd23ec05f6b5288c42883876f18e5f8811f080,81048,2,k3d/lgrill-c75.html | osveshchenie/dlya-grilyato/index.html,"В ячейку 75 × 75, RAL 9003 белый | В ячейку 75 × 75, RAL 9003 белый — в решётке",0,0
-img/k3d/st3-lgrill-c75-0-ral9003-m-640.webp,d04ac0d0e7fc5e20b15568c45c090d39023ffbc0c5c323c995b692f8663d4239,17608,1,osveshchenie/dlya-grilyato/index.html,"В ячейку 75 × 75, RAL 9003 белый",0,0
-img/k3d/st3-lgrill-c75-0-ral9005-m-1200.webp,3deb54295e457c779f0de9ca475f3fc23d9de7e213f274fa6500fcd213d50d09,35980,1,k3d/lgrill-c75.html,"В ячейку 75 × 75, RAL 9005 чёрный — в решётке",0,0
-img/k3d/st3-lgrill-c75-0-ral9005-m-2400.webp,24f92ad40b6f17fdf5a46592bea8f21f4c5e0801504abe3bb942f174d2908c3e,77600,1,k3d/lgrill-c75.html,"В ячейку 75 × 75, RAL 9005 чёрный — в решётке",0,0
+img/k3d/st3-lgrill-c75-0-ral9003-m-1200.webp,6eddd7c88965cec999fb4f2bd2a7726bac48a67edd1c4fa35e6d9b2d59eabe99,39002,0,,,0,0
+img/k3d/st3-lgrill-c75-0-ral9003-m-2400.webp,2a3edcbf894fc812b53642cf85dd23ec05f6b5288c42883876f18e5f8811f080,81048,0,,,0,0
+img/k3d/st3-lgrill-c75-0-ral9003-m-640.webp,d04ac0d0e7fc5e20b15568c45c090d39023ffbc0c5c323c995b692f8663d4239,17608,0,,,0,0
+img/k3d/st3-lgrill-c75-0-ral9005-m-1200.webp,3deb54295e457c779f0de9ca475f3fc23d9de7e213f274fa6500fcd213d50d09,35980,0,,,0,0
+img/k3d/st3-lgrill-c75-0-ral9005-m-2400.webp,24f92ad40b6f17fdf5a46592bea8f21f4c5e0801504abe3bb942f174d2908c3e,77600,0,,,0,0
 img/k3d/st3-lgrill-c75-0-ral9005-m-640.webp,b41bfa86892a830978fcc311de94f9638b43766ba4b350658d8da598d0314ef9,15280,0,,,0,0
-img/k3d/st3-lgrill-c75-0-ral9006-m-1200.webp,71af9c3581ab7e91555bfaf785026970230ec29542cafea26a6f74456032f5f6,31696,1,k3d/lgrill-c75.html,"В ячейку 75 × 75, RAL 9006 металлик — в решётке",0,0
-img/k3d/st3-lgrill-c75-0-ral9006-m-2400.webp,80d62fd38f7551a3fb7e84377e91d5e46b22da9c6fefc869d0e5f818c14383a9,68454,1,k3d/lgrill-c75.html,"В ячейку 75 × 75, RAL 9006 металлик — в решётке",0,0
+img/k3d/st3-lgrill-c75-0-ral9006-m-1200.webp,71af9c3581ab7e91555bfaf785026970230ec29542cafea26a6f74456032f5f6,31696,0,,,0,0
+img/k3d/st3-lgrill-c75-0-ral9006-m-2400.webp,80d62fd38f7551a3fb7e84377e91d5e46b22da9c6fefc869d0e5f818c14383a9,68454,0,,,0,0
 img/k3d/st3-lgrill-c75-0-ral9006-m-640.webp,f42ca83b32434ba6077c6087f961ff416fd6677bc37ecc3f211be29cfcac36f1,13244,0,,,0,0
-img/k3d/st3-lgrill-panel-0-ral9003-m-1200.webp,e230c0d7e0bb7549cced15cbdbe71ccac09675d7b5d04d67c72ea2564a3137ab,83720,2,k3d/lgrill-panel.html | osveshchenie/dlya-grilyato/index.html,"Панель на модуль 600 × 600, RAL 9003 белый | Панель на модуль 600 × 600, RAL 9003 белый — в решётке",0,0
-img/k3d/st3-lgrill-panel-0-ral9003-m-2400.webp,4f2d85d5b1de51fd7362efb2a7d76f22f0f3e398526738867b8a972427cfaf05,173684,2,k3d/lgrill-panel.html | osveshchenie/dlya-grilyato/index.html,"Панель на модуль 600 × 600, RAL 9003 белый | Панель на модуль 600 × 600, RAL 9003 белый — в решётке",0,0
-img/k3d/st3-lgrill-panel-0-ral9003-m-640.webp,84f254306ed49b4e43bc204221047f4b0de43a048851de65b196eece11beb47f,34564,1,osveshchenie/dlya-grilyato/index.html,"Панель на модуль 600 × 600, RAL 9003 белый",0,0
-img/k3d/st3-lgrill-panel-0-ral9005-m-1200.webp,ec7bde9c7d27ff1ff7405f7618920d392c1ddc1396d3dc01c68a38eb88f8a074,65714,1,k3d/lgrill-panel.html,"Панель на модуль 600 × 600, RAL 9005 чёрный — в решётке",0,0
-img/k3d/st3-lgrill-panel-0-ral9005-m-2400.webp,282938f757123ac7ea94bd9062eea24d4173063ccf78d9eb60473b7ca5f995fc,140890,1,k3d/lgrill-panel.html,"Панель на модуль 600 × 600, RAL 9005 чёрный — в решётке",0,0
+img/k3d/st3-lgrill-panel-0-ral9003-m-1200.webp,e230c0d7e0bb7549cced15cbdbe71ccac09675d7b5d04d67c72ea2564a3137ab,83720,0,,,0,0
+img/k3d/st3-lgrill-panel-0-ral9003-m-2400.webp,4f2d85d5b1de51fd7362efb2a7d76f22f0f3e398526738867b8a972427cfaf05,173684,0,,,0,0
+img/k3d/st3-lgrill-panel-0-ral9003-m-640.webp,84f254306ed49b4e43bc204221047f4b0de43a048851de65b196eece11beb47f,34564,0,,,0,0
+img/k3d/st3-lgrill-panel-0-ral9005-m-1200.webp,ec7bde9c7d27ff1ff7405f7618920d392c1ddc1396d3dc01c68a38eb88f8a074,65714,0,,,0,0
+img/k3d/st3-lgrill-panel-0-ral9005-m-2400.webp,282938f757123ac7ea94bd9062eea24d4173063ccf78d9eb60473b7ca5f995fc,140890,0,,,0,0
 img/k3d/st3-lgrill-panel-0-ral9005-m-640.webp,8ae5753c653e3d85d7c9c1e9100bb046772d95485de5cc578f2e09546de30d52,28062,0,,,0,0
-img/k3d/st3-lgrill-panel-0-ral9006-m-1200.webp,573fe8d5397857355c8f1aa21f8a4173f22a8775208c7426dcab13b9e03eaeb4,63094,1,k3d/lgrill-panel.html,"Панель на модуль 600 × 600, RAL 9006 металлик — в решётке",0,0
-img/k3d/st3-lgrill-panel-0-ral9006-m-2400.webp,da60f2a58e5f7a4053d8f59faf7e8da66413d54a1a5915875ab89e673a8cccc0,137478,1,k3d/lgrill-panel.html,"Панель на модуль 600 × 600, RAL 9006 металлик — в решётке",0,0
+img/k3d/st3-lgrill-panel-0-ral9006-m-1200.webp,573fe8d5397857355c8f1aa21f8a4173f22a8775208c7426dcab13b9e03eaeb4,63094,0,,,0,0
+img/k3d/st3-lgrill-panel-0-ral9006-m-2400.webp,da60f2a58e5f7a4053d8f59faf7e8da66413d54a1a5915875ab89e673a8cccc0,137478,0,,,0,0
 img/k3d/st3-lgrill-panel-0-ral9006-m-640.webp,3047fcaa7577fed12ded03a25d96594d6d1577ca0021f170205a94357960ba72,25406,0,,,0,0
 img/k3d/st3-lin-s3030-0-blk-m-1200.webp,d7f56de89e9546831d0b789916aaade1fb29033524931385a688c8e7b463cfab,14940,0,,,0,0
 img/k3d/st3-lin-s3030-0-blk-m-2400.webp,1c8ef836955f1d31db381fbc27fb644869b14ccc6f6dda2237eec961f41e2037,37298,0,,,0,0
@@ -5094,113 +5094,113 @@ img/light-1000-clean.png,c454f4bcb8e9d3d15ebde9118aead91a2723f3b219174860f391976
 img/light_in_rail-900.png,bc7f98ec226d61e22034fd6d51cb9a8353d37b2ed1bee2a03e1d2843050c60a2,146360,1,osveshchenie/lineynye/index.html,Линейные светильники для потолка: встроенный в рейку,0,0
 img/light_mount_bracket-900.png,26135515dc433e513bfebacbe01952dc079420ac38b7b4d628de5be188314c74,213439,1,osveshchenie/lineynye/index.html,Линейные светильники для потолка: опорная пластина на две рейки,0,0
 img/light_mount_cable-900.png,469f03cad7f6feffad4833948cf6fcbf8c07fe4dd4e986c66593cbce0f5beaa3,267385,1,osveshchenie/lineynye/index.html,Линейные светильники для потолка: на тросе,0,0
-img/linear-light/mount-cable.webp,0fb93efc60ae2a4464fe66e2ce7ee3e27900324ce4bb12b65a1a512d43cc396a,34028,1,osveshchenie/lineynye/index.html,СЛ 3570 под реечным потолком AIRWOOD на двух регулируемых стальных тросах,0,0
-img/linear-light/mount-plate.webp,e7b3174f1eb80ba5d158ad522d88a4904a0d104992752c0e0489db79073a6640,50232,1,osveshchenie/lineynye/index.html,СЛ 5055 между двумя рейками AIRWOOD на регулируемых опорных пластинах,0,0
-img/linear-light/rail-1000-85-black-1200.webp,42ee41192931710bf258e932e0f58416b495dc1039811cd742efcc69f8c30fb2,31280,1,k3d/spektr-rail-85.html,"1000 × 85 мм 1000 мм, Чёрный — общий вид",0,0
-img/linear-light/rail-1000-85-black-2400.webp,93a44f359233bcdf1b51204f4367b42ae02e447568586b086029a2acbc15fa46,99310,1,k3d/spektr-rail-85.html,"1000 × 85 мм 1000 мм, Чёрный — общий вид",0,0
+img/linear-light/mount-cable.webp,0fb93efc60ae2a4464fe66e2ce7ee3e27900324ce4bb12b65a1a512d43cc396a,34028,0,,,0,0
+img/linear-light/mount-plate.webp,e7b3174f1eb80ba5d158ad522d88a4904a0d104992752c0e0489db79073a6640,50232,0,,,0,0
+img/linear-light/rail-1000-85-black-1200.webp,42ee41192931710bf258e932e0f58416b495dc1039811cd742efcc69f8c30fb2,31280,0,,,0,0
+img/linear-light/rail-1000-85-black-2400.webp,93a44f359233bcdf1b51204f4367b42ae02e447568586b086029a2acbc15fa46,99310,0,,,0,0
 img/linear-light/rail-1000-85-black-640.webp,7e8db46f6eaddab0b4cd0f4442787884eb6098e8e452c41bcca08e34bc06c363,9928,0,,,0,0
-img/linear-light/rail-1000-85-white-1200.webp,bb0a27efc4a545dc556254f38cc18c001e0b0ae45f84c455a70737af31a3d2d1,23526,4,k3d/spektr-rail-85.html | osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"1000 × 85 мм 1000 мм, Белый — общий вид | Линейный светильник 1000 × 85 мм, белый корпус",0,0
-img/linear-light/rail-1000-85-white-2400.webp,3ec5eaec14983601ab2a8bc2919e6368d71d83d44de0065d86891e28fcc823a0,57680,4,k3d/spektr-rail-85.html | osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"1000 × 85 мм 1000 мм, Белый — общий вид | Линейный светильник 1000 × 85 мм, белый корпус",0,0
-img/linear-light/rail-1000-85-white-640.webp,1fca381c449de8bb15d4e892ad2ddb172dea6450255d70fd402f68c87c32a10c,7544,3,osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"Линейный светильник 1000 × 85 мм, белый корпус",0,0
-img/linear-light/rail-1180-48-black-1200.webp,71f72d5fa7c82be1ea7e974ae483fb95e60b4a820b1954562f39965230600bc6,29666,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1180 мм, Чёрный — общий вид",0,0
-img/linear-light/rail-1180-48-black-2400.webp,4c5e3c39ba0d318f06bfa93b63e1506ca35b00e8f4d1dc8683be7584d1535100,70318,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1180 мм, Чёрный — общий вид",0,0
+img/linear-light/rail-1000-85-white-1200.webp,bb0a27efc4a545dc556254f38cc18c001e0b0ae45f84c455a70737af31a3d2d1,23526,0,,,0,0
+img/linear-light/rail-1000-85-white-2400.webp,3ec5eaec14983601ab2a8bc2919e6368d71d83d44de0065d86891e28fcc823a0,57680,0,,,0,0
+img/linear-light/rail-1000-85-white-640.webp,1fca381c449de8bb15d4e892ad2ddb172dea6450255d70fd402f68c87c32a10c,7544,0,,,0,0
+img/linear-light/rail-1180-48-black-1200.webp,71f72d5fa7c82be1ea7e974ae483fb95e60b4a820b1954562f39965230600bc6,29666,0,,,0,0
+img/linear-light/rail-1180-48-black-2400.webp,4c5e3c39ba0d318f06bfa93b63e1506ca35b00e8f4d1dc8683be7584d1535100,70318,0,,,0,0
 img/linear-light/rail-1180-48-black-640.webp,7c7433d61eebe4a06c09fe98c84299801c8a79209ec08947f8f4b88ddef12c04,9996,0,,,0,0
-img/linear-light/rail-1180-48-white-1200.webp,ffe8c18e6d0de9981549bb46b2eb85307168695f8d9d5652844f27b36e31507c,26408,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1180 мм, Белый — общий вид",0,0
-img/linear-light/rail-1180-48-white-2400.webp,0a09da451549d5ba1fb2e4761ed772007c72a387eb948bde74fa49b1768ee621,76674,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1180 мм, Белый — общий вид",0,0
+img/linear-light/rail-1180-48-white-1200.webp,ffe8c18e6d0de9981549bb46b2eb85307168695f8d9d5652844f27b36e31507c,26408,0,,,0,0
+img/linear-light/rail-1180-48-white-2400.webp,0a09da451549d5ba1fb2e4761ed772007c72a387eb948bde74fa49b1768ee621,76674,0,,,0,0
 img/linear-light/rail-1180-48-white-640.webp,e5f68bd15c49f6f09255e940869048590f434d74d9a0624e71edb6e2676d4875,9626,0,,,0,0
-img/linear-light/rail-1200-48-black-1200.webp,3fe6a5f3aecf6817916e8e573b28b9b534c09a4b28f508c5ae9d17406695c07d,27890,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1200 мм, Чёрный — общий вид",0,0
-img/linear-light/rail-1200-48-black-2400.webp,9e09ff96864476584a60432f9956c103f4c7618e2cbeba09d080379f8a554aaf,77082,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1200 мм, Чёрный — общий вид",0,0
+img/linear-light/rail-1200-48-black-1200.webp,3fe6a5f3aecf6817916e8e573b28b9b534c09a4b28f508c5ae9d17406695c07d,27890,0,,,0,0
+img/linear-light/rail-1200-48-black-2400.webp,9e09ff96864476584a60432f9956c103f4c7618e2cbeba09d080379f8a554aaf,77082,0,,,0,0
 img/linear-light/rail-1200-48-black-640.webp,8fb461748253ce42a1f625823e0c4e65099b738ad964909acfd6099f230502a5,9806,0,,,0,0
-img/linear-light/rail-1200-48-white-1200.webp,ee720bf048ddab56fb84bb34da3a43f25b935165bf27dacedcc436cb57793c51,28624,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1200 мм, Белый — общий вид",0,0
-img/linear-light/rail-1200-48-white-2400.webp,7027c88644da460c929b37455fb4dcd1bcef3e9af68544132e407ead5a0b7a77,73632,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1200 мм, Белый — общий вид",0,0
+img/linear-light/rail-1200-48-white-1200.webp,ee720bf048ddab56fb84bb34da3a43f25b935165bf27dacedcc436cb57793c51,28624,0,,,0,0
+img/linear-light/rail-1200-48-white-2400.webp,7027c88644da460c929b37455fb4dcd1bcef3e9af68544132e407ead5a0b7a77,73632,0,,,0,0
 img/linear-light/rail-1200-48-white-640.webp,67c960847a330dc76bb0c9deb8915fd4d173c244113f789f550f6a1a88fac8f4,10016,0,,,0,0
-img/linear-light/rail-1350-48-black-1200.webp,ca0def47c440ded01bbb76a5e6ae49c68f3f133a93b2fcb45e6f855127f0ad2f,31090,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1350 мм, Чёрный — общий вид",0,0
-img/linear-light/rail-1350-48-black-2400.webp,ae51ace1cb6cf7f0f2b4bfcee4eeb7408799698e98034393adeb73cc6c826da7,85052,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1350 мм, Чёрный — общий вид",0,0
+img/linear-light/rail-1350-48-black-1200.webp,ca0def47c440ded01bbb76a5e6ae49c68f3f133a93b2fcb45e6f855127f0ad2f,31090,0,,,0,0
+img/linear-light/rail-1350-48-black-2400.webp,ae51ace1cb6cf7f0f2b4bfcee4eeb7408799698e98034393adeb73cc6c826da7,85052,0,,,0,0
 img/linear-light/rail-1350-48-black-640.webp,922284ab71fb99f3fc4f618390dc15b3d4413a7c42dda3898a87598b219cf766,11920,0,,,0,0
-img/linear-light/rail-1350-48-white-1200.webp,7f61bc7b6f3835019aaae72f82762dd6d3a1383aeecac524acea7a4a4c5eb44f,26390,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1350 мм, Белый — общий вид",0,0
-img/linear-light/rail-1350-48-white-2400.webp,f42165716bb58bf1074108e8b389c0f014f1ccd7e3b236c6993dd2880569e295,76276,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1350 мм, Белый — общий вид",0,0
+img/linear-light/rail-1350-48-white-1200.webp,7f61bc7b6f3835019aaae72f82762dd6d3a1383aeecac524acea7a4a4c5eb44f,26390,0,,,0,0
+img/linear-light/rail-1350-48-white-2400.webp,f42165716bb58bf1074108e8b389c0f014f1ccd7e3b236c6993dd2880569e295,76276,0,,,0,0
 img/linear-light/rail-1350-48-white-640.webp,c53fa7f1232f9766c8e7b077e3cffd5eb97172b2ca18078d3daacff0cd140cfd,9338,0,,,0,0
-img/linear-light/rail-2400-48-black-1200.webp,4e60397d5d8196c6a9b5a9801f703b485851b1e4d4cb3fbc3ded5fd8536c3bae,27670,4,k3d/spektr-rail-long.html | osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"2400–4500 × 48 мм 2400 мм, Чёрный — общий вид | Линейный светильник 2400–4500 × 48 мм, чёрный корпус, 4000 К",0,0
-img/linear-light/rail-2400-48-black-2400.webp,0e002de8adb9eb4223b088562e5410511432e93f0366f5deba1927e22a8f1ce8,80572,4,k3d/spektr-rail-long.html | osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"2400–4500 × 48 мм 2400 мм, Чёрный — общий вид | Линейный светильник 2400–4500 × 48 мм, чёрный корпус, 4000 К",0,0
-img/linear-light/rail-2400-48-black-640.webp,8dc954a4e8a7e1e7725309c4b98a18e8c37ae4c327b241784c192b7a4b5d56ee,10122,3,osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"Линейный светильник 2400–4500 × 48 мм, чёрный корпус, 4000 К",0,0
-img/linear-light/rail-2400-48-white-1200.webp,86734e0bd9ee97e2204b67d17add342fc5bb2b5945683ef5a21deb1184d24b48,23832,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 2400 мм, Белый — общий вид",0,0
-img/linear-light/rail-2400-48-white-2400.webp,a788e884e23f6ca1e358be54aeaa3beac44226cd5ecdd1d5833e710120a3ef6e,68940,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 2400 мм, Белый — общий вид",0,0
+img/linear-light/rail-2400-48-black-1200.webp,4e60397d5d8196c6a9b5a9801f703b485851b1e4d4cb3fbc3ded5fd8536c3bae,27670,0,,,0,0
+img/linear-light/rail-2400-48-black-2400.webp,0e002de8adb9eb4223b088562e5410511432e93f0366f5deba1927e22a8f1ce8,80572,0,,,0,0
+img/linear-light/rail-2400-48-black-640.webp,8dc954a4e8a7e1e7725309c4b98a18e8c37ae4c327b241784c192b7a4b5d56ee,10122,0,,,0,0
+img/linear-light/rail-2400-48-white-1200.webp,86734e0bd9ee97e2204b67d17add342fc5bb2b5945683ef5a21deb1184d24b48,23832,0,,,0,0
+img/linear-light/rail-2400-48-white-2400.webp,a788e884e23f6ca1e358be54aeaa3beac44226cd5ecdd1d5833e710120a3ef6e,68940,0,,,0,0
 img/linear-light/rail-2400-48-white-640.webp,53f9540ce8201f8b91fdb7cc285eac78bfb094b1269cc6e36820fa7c800da0c4,7428,0,,,0,0
-img/linear-light/rail-2600-48-black-1200.webp,7ddde7defd8f63ab3c73e85db0f0d1176bf549eb655f46035e6aa96d68a7caf0,28410,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 2600 мм, Чёрный — общий вид",0,0
-img/linear-light/rail-2600-48-black-2400.webp,b2f54b385047c255d418ee39525b8a92d418ba5c7ea135b3ba4e925ecc0a52e5,84010,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 2600 мм, Чёрный — общий вид",0,0
+img/linear-light/rail-2600-48-black-1200.webp,7ddde7defd8f63ab3c73e85db0f0d1176bf549eb655f46035e6aa96d68a7caf0,28410,0,,,0,0
+img/linear-light/rail-2600-48-black-2400.webp,b2f54b385047c255d418ee39525b8a92d418ba5c7ea135b3ba4e925ecc0a52e5,84010,0,,,0,0
 img/linear-light/rail-2600-48-black-640.webp,a627392b3d9162c50339e78df38d1a2f98404a9bcbc3398a6e9be00327d95bd3,9718,0,,,0,0
-img/linear-light/rail-2600-48-white-1200.webp,2cca42fadaf10b9155989c8af863bc98a82cf6a1cce5df49518063dc4dfde717,23372,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 2600 мм, Белый — общий вид",0,0
-img/linear-light/rail-2600-48-white-2400.webp,b8748fb16522b9eb1a21a027bbb45361597d8109738ff9ed7b06e07a80da70e4,62298,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 2600 мм, Белый — общий вид",0,0
+img/linear-light/rail-2600-48-white-1200.webp,2cca42fadaf10b9155989c8af863bc98a82cf6a1cce5df49518063dc4dfde717,23372,0,,,0,0
+img/linear-light/rail-2600-48-white-2400.webp,b8748fb16522b9eb1a21a027bbb45361597d8109738ff9ed7b06e07a80da70e4,62298,0,,,0,0
 img/linear-light/rail-2600-48-white-640.webp,cdb668a201571ec31e76c1e87effa589edba9b3185c9046633dcc0107db8f82e,7548,0,,,0,0
-img/linear-light/rail-3530-48-black-1200.webp,ab1a21c4f06bee1f7cee25dd5a899c93f44e0c7d45ac0215e26432d98182d78d,29980,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3530 мм, Чёрный — общий вид",0,0
-img/linear-light/rail-3530-48-black-2400.webp,df3620d668f85ee449b4a1b6cb28b7d240ee01acabfd1ddf46ff01903206e189,79780,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3530 мм, Чёрный — общий вид",0,0
+img/linear-light/rail-3530-48-black-1200.webp,ab1a21c4f06bee1f7cee25dd5a899c93f44e0c7d45ac0215e26432d98182d78d,29980,0,,,0,0
+img/linear-light/rail-3530-48-black-2400.webp,df3620d668f85ee449b4a1b6cb28b7d240ee01acabfd1ddf46ff01903206e189,79780,0,,,0,0
 img/linear-light/rail-3530-48-black-640.webp,bcb961e697c3845bc9b853b92613e1b8b6c8e837f0df103ec03175617975a762,11610,0,,,0,0
-img/linear-light/rail-3530-48-white-1200.webp,65dceb5e241c7bcc711793d725f1a9a542538fb507f9722910b6087cd5035562,27636,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3530 мм, Белый — общий вид",0,0
-img/linear-light/rail-3530-48-white-2400.webp,0bd35885fbcf28c60bf66d4ee60fddb463f6cdd7cb6e350deb5d257648122f08,69458,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3530 мм, Белый — общий вид",0,0
+img/linear-light/rail-3530-48-white-1200.webp,65dceb5e241c7bcc711793d725f1a9a542538fb507f9722910b6087cd5035562,27636,0,,,0,0
+img/linear-light/rail-3530-48-white-2400.webp,0bd35885fbcf28c60bf66d4ee60fddb463f6cdd7cb6e350deb5d257648122f08,69458,0,,,0,0
 img/linear-light/rail-3530-48-white-640.webp,a6e7ded7d4de17ba6114616c79fabfeb350fec53328f488490c075558fef36a9,9778,0,,,0,0
-img/linear-light/rail-3630-48-black-1200.webp,948c7439b2ee6939cf367dfd542a204b191110044b515359469bc2564e70953f,30264,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3630 мм, Чёрный — общий вид",0,0
-img/linear-light/rail-3630-48-black-2400.webp,1f74176a523785145782d1118fafe21e6bac72591a1243dbd28cbc9b26d6a51d,71396,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3630 мм, Чёрный — общий вид",0,0
+img/linear-light/rail-3630-48-black-1200.webp,948c7439b2ee6939cf367dfd542a204b191110044b515359469bc2564e70953f,30264,0,,,0,0
+img/linear-light/rail-3630-48-black-2400.webp,1f74176a523785145782d1118fafe21e6bac72591a1243dbd28cbc9b26d6a51d,71396,0,,,0,0
 img/linear-light/rail-3630-48-black-640.webp,0f9d214a22952f3a740f6ed5c7971e761ae5f56892452867f63d5edc6b4a0366,10858,0,,,0,0
-img/linear-light/rail-3630-48-white-1200.webp,4709733f3d9acdae4236670db59c3e348aab4825dc84caa93c22774a119beaef,26228,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3630 мм, Белый — общий вид",0,0
-img/linear-light/rail-3630-48-white-2400.webp,84d6103b7db051062de250e9e4d71a576e45b69507b2857c05389f7ab367c1ec,75328,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3630 мм, Белый — общий вид",0,0
+img/linear-light/rail-3630-48-white-1200.webp,4709733f3d9acdae4236670db59c3e348aab4825dc84caa93c22774a119beaef,26228,0,,,0,0
+img/linear-light/rail-3630-48-white-2400.webp,84d6103b7db051062de250e9e4d71a576e45b69507b2857c05389f7ab367c1ec,75328,0,,,0,0
 img/linear-light/rail-3630-48-white-640.webp,3f17fbab66522166b7e84a2ecac9a1d062d70d221f9a3bb9c73ca4cd27b7989f,9178,0,,,0,0
-img/linear-light/rail-3980-48-black-1200.webp,268427b6ff45b322772632c3ec1b14048b575d3c33d9b252ee03fbf8522bbd97,27160,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3980 мм, Чёрный — общий вид",0,0
-img/linear-light/rail-3980-48-black-2400.webp,c9953feb3844a0189946ae344b13982d23e465f4a37b4412642bece51712febd,66152,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3980 мм, Чёрный — общий вид",0,0
+img/linear-light/rail-3980-48-black-1200.webp,268427b6ff45b322772632c3ec1b14048b575d3c33d9b252ee03fbf8522bbd97,27160,0,,,0,0
+img/linear-light/rail-3980-48-black-2400.webp,c9953feb3844a0189946ae344b13982d23e465f4a37b4412642bece51712febd,66152,0,,,0,0
 img/linear-light/rail-3980-48-black-640.webp,2d613d3b1ab78c09d8f7855a300eacccc4eb481b623d272cc1ad7ba104751d7e,8914,0,,,0,0
-img/linear-light/rail-3980-48-white-1200.webp,4e373b0240d1f6d7b9c7214238d2670abb2d039ec11247b414bf0b0d3139fb9c,27532,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3980 мм, Белый — общий вид",0,0
-img/linear-light/rail-3980-48-white-2400.webp,a505e7c305c313023628fe02c96172cf69b2e647a28fa30f84ff1de65ce39e2e,68094,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3980 мм, Белый — общий вид",0,0
+img/linear-light/rail-3980-48-white-1200.webp,4e373b0240d1f6d7b9c7214238d2670abb2d039ec11247b414bf0b0d3139fb9c,27532,0,,,0,0
+img/linear-light/rail-3980-48-white-2400.webp,a505e7c305c313023628fe02c96172cf69b2e647a28fa30f84ff1de65ce39e2e,68094,0,,,0,0
 img/linear-light/rail-3980-48-white-640.webp,434966cac526b60ac65cc8da360bd306935e3e6f7a741c1b366a6c1661554b2f,9552,0,,,0,0
-img/linear-light/rail-4500-48-black-1200.webp,5bdfc705d58f79c8e9f9edec4e9d678203f9084b6ebed1b213a08df042f0c470,28092,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 4500 мм, Чёрный — общий вид",0,0
-img/linear-light/rail-4500-48-black-2400.webp,105c0b2bb87f238c5e8716ce4dd9a23917dcda7ee47084f120c4374679da18bf,66286,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 4500 мм, Чёрный — общий вид",0,0
+img/linear-light/rail-4500-48-black-1200.webp,5bdfc705d58f79c8e9f9edec4e9d678203f9084b6ebed1b213a08df042f0c470,28092,0,,,0,0
+img/linear-light/rail-4500-48-black-2400.webp,105c0b2bb87f238c5e8716ce4dd9a23917dcda7ee47084f120c4374679da18bf,66286,0,,,0,0
 img/linear-light/rail-4500-48-black-640.webp,8acef62ca8971d6bdc4e5032a5a4997f6e52a01b540c6a788af5b8e17b0d35e4,9660,0,,,0,0
-img/linear-light/rail-4500-48-white-1200.webp,4f508c53a8e5696a793f6b985bba29c91e10c642b250964c54f8d85065bab8e8,28172,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 4500 мм, Белый — общий вид",0,0
-img/linear-light/rail-4500-48-white-2400.webp,0c49d1fb5565601af12185d537ca8d22ef9a2c5adde5a2f41d254b82f0c74339,70370,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 4500 мм, Белый — общий вид",0,0
+img/linear-light/rail-4500-48-white-1200.webp,4f508c53a8e5696a793f6b985bba29c91e10c642b250964c54f8d85065bab8e8,28172,0,,,0,0
+img/linear-light/rail-4500-48-white-2400.webp,0c49d1fb5565601af12185d537ca8d22ef9a2c5adde5a2f41d254b82f0c74339,70370,0,,,0,0
 img/linear-light/rail-4500-48-white-640.webp,3f02ee1fec0b9002112cf11b0b39c4eb6a45e60ae307949a4ddfabfaae4fc4e8,9562,0,,,0,0
-img/linear-light/rail-510-38-black-1200.webp,f110f24e026b8228aede77369ad915d0b177e4e71528ec70dd1674c334585ec2,30692,1,k3d/spektr-rail-38.html,"510 × 38 мм 510 мм, Чёрный — общий вид",0,0
-img/linear-light/rail-510-38-black-2400.webp,e4487c3fa7cdd103642a869cc4e4928dacf6e149e5650bad9fe468a8460f3d1e,90924,1,k3d/spektr-rail-38.html,"510 × 38 мм 510 мм, Чёрный — общий вид",0,0
+img/linear-light/rail-510-38-black-1200.webp,f110f24e026b8228aede77369ad915d0b177e4e71528ec70dd1674c334585ec2,30692,0,,,0,0
+img/linear-light/rail-510-38-black-2400.webp,e4487c3fa7cdd103642a869cc4e4928dacf6e149e5650bad9fe468a8460f3d1e,90924,0,,,0,0
 img/linear-light/rail-510-38-black-640.webp,4ed41082ccdc5fc23eaec0a93041ee570f8e772abb3e66f1f952e7c8aac32d94,10806,0,,,0,0
-img/linear-light/rail-510-38-white-1200.webp,63571406a5a6b3f570be83c40c76c1f7a432a9f0ae9e94d763f19f3e4ac47784,24014,4,k3d/spektr-rail-38.html | osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"510 × 38 мм 510 мм, Белый — общий вид | Линейный светильник 510 × 38 мм, белый корпус, 5000 К",0,0
-img/linear-light/rail-510-38-white-2400.webp,8f664111f795e8994b15cc044cf3018f528126eeb69681a0a6f7e496a38b461b,69634,4,k3d/spektr-rail-38.html | osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"510 × 38 мм 510 мм, Белый — общий вид | Линейный светильник 510 × 38 мм, белый корпус, 5000 К",0,0
-img/linear-light/rail-510-38-white-640.webp,ae2f7e78a9d5fb30654ddb381a8ba72089320ad4ad6261f7b7852e5dcef90167,8368,3,osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"Линейный светильник 510 × 38 мм, белый корпус, 5000 К",0,0
-img/linear-light/rail-800-48-black-1200.webp,155815b6cea03065765c7bef808909f9344b9b5c8849e76f5257c9979d8d849a,28626,4,k3d/spektr-rail-48.html | osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"800–1350 × 48 мм 800 мм, Чёрный — общий вид | Линейный светильник 800–1350 × 48 мм, чёрный корпус, 4000 К",0,0
-img/linear-light/rail-800-48-black-2400.webp,9729f85255397dad7edffae8da7e4b803572a1ff65d901b247cb2baa5df4ddfd,81552,4,k3d/spektr-rail-48.html | osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"800–1350 × 48 мм 800 мм, Чёрный — общий вид | Линейный светильник 800–1350 × 48 мм, чёрный корпус, 4000 К",0,0
-img/linear-light/rail-800-48-black-640.webp,27bc75fdf274f45f13d0611c1952f1a97fc7977a8d04198910cb3a7dd7b3e895,9700,3,osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"Линейный светильник 800–1350 × 48 мм, чёрный корпус, 4000 К",0,0
-img/linear-light/rail-800-48-white-1200.webp,2450c78cc6f4b83ec8750795ebbdfd1e002e84a5a18e387738c51c40f3b97025,28380,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 800 мм, Белый — общий вид",0,0
-img/linear-light/rail-800-48-white-2400.webp,af8a42cc6d9ab2f6fc2230e055f75156cf14b8b4e06ac0e7997b399649954aaa,80280,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 800 мм, Белый — общий вид",0,0
+img/linear-light/rail-510-38-white-1200.webp,63571406a5a6b3f570be83c40c76c1f7a432a9f0ae9e94d763f19f3e4ac47784,24014,0,,,0,0
+img/linear-light/rail-510-38-white-2400.webp,8f664111f795e8994b15cc044cf3018f528126eeb69681a0a6f7e496a38b461b,69634,0,,,0,0
+img/linear-light/rail-510-38-white-640.webp,ae2f7e78a9d5fb30654ddb381a8ba72089320ad4ad6261f7b7852e5dcef90167,8368,0,,,0,0
+img/linear-light/rail-800-48-black-1200.webp,155815b6cea03065765c7bef808909f9344b9b5c8849e76f5257c9979d8d849a,28626,0,,,0,0
+img/linear-light/rail-800-48-black-2400.webp,9729f85255397dad7edffae8da7e4b803572a1ff65d901b247cb2baa5df4ddfd,81552,0,,,0,0
+img/linear-light/rail-800-48-black-640.webp,27bc75fdf274f45f13d0611c1952f1a97fc7977a8d04198910cb3a7dd7b3e895,9700,0,,,0,0
+img/linear-light/rail-800-48-white-1200.webp,2450c78cc6f4b83ec8750795ebbdfd1e002e84a5a18e387738c51c40f3b97025,28380,0,,,0,0
+img/linear-light/rail-800-48-white-2400.webp,af8a42cc6d9ab2f6fc2230e055f75156cf14b8b4e06ac0e7997b399649954aaa,80280,0,,,0,0
 img/linear-light/rail-800-48-white-640.webp,939c3289502bafc04c8040f73919f9351cc187144cb030368e6851d6c83e46bd,10176,0,,,0,0
-img/linear-light/rail-900-48-black-1200.webp,129378d0c0e282b6365e57eb55cd486be9a33c16018cf5580e8d7d715a19208a,30028,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 900 мм, Чёрный — общий вид",0,0
-img/linear-light/rail-900-48-black-2400.webp,5f30e34afb7d28a0da3251856280f530742a59ce9aa8e67cc254c89bda3cb5e4,87304,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 900 мм, Чёрный — общий вид",0,0
+img/linear-light/rail-900-48-black-1200.webp,129378d0c0e282b6365e57eb55cd486be9a33c16018cf5580e8d7d715a19208a,30028,0,,,0,0
+img/linear-light/rail-900-48-black-2400.webp,5f30e34afb7d28a0da3251856280f530742a59ce9aa8e67cc254c89bda3cb5e4,87304,0,,,0,0
 img/linear-light/rail-900-48-black-640.webp,3b097649ad42537733ebb4773f9079dc68b37e7b1cb972ab0a5460ac376d491f,12028,0,,,0,0
-img/linear-light/rail-900-48-white-1200.webp,a87ea97b9010cf0107733e702260de68a334151b5c44eef0a152b25996db0afa,28304,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 900 мм, Белый — общий вид",0,0
-img/linear-light/rail-900-48-white-2400.webp,4137a12fdfa5128baf88f58e080996c19c060d7045ab6e924795981c920624fd,77436,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 900 мм, Белый — общий вид",0,0
+img/linear-light/rail-900-48-white-1200.webp,a87ea97b9010cf0107733e702260de68a334151b5c44eef0a152b25996db0afa,28304,0,,,0,0
+img/linear-light/rail-900-48-white-2400.webp,4137a12fdfa5128baf88f58e080996c19c060d7045ab6e924795981c920624fd,77436,0,,,0,0
 img/linear-light/rail-900-48-white-640.webp,85d10e9e86699443ec7e848f73dfab6a9658967d71ae15fc60b061f2322547f6,10152,0,,,0,0
-img/linear-light/rail-detail-38-black-1200.webp,b80c745662e7d140f03d95897bc983f4e9c4376c38d1fe90c8a3a3e10090b868,30576,1,k3d/spektr-rail-38.html,"510 × 38 мм 510 мм, Чёрный — торец и рассеиватель",0,0
-img/linear-light/rail-detail-38-black-2400.webp,7f17d52e9ba1cf778de4326883b640a1e877662b295d0bcf38f06cdc685f2a7e,95404,1,k3d/spektr-rail-38.html,"510 × 38 мм 510 мм, Чёрный — торец и рассеиватель",0,0
+img/linear-light/rail-detail-38-black-1200.webp,b80c745662e7d140f03d95897bc983f4e9c4376c38d1fe90c8a3a3e10090b868,30576,0,,,0,0
+img/linear-light/rail-detail-38-black-2400.webp,7f17d52e9ba1cf778de4326883b640a1e877662b295d0bcf38f06cdc685f2a7e,95404,0,,,0,0
 img/linear-light/rail-detail-38-black-640.webp,536b46562d21b13c7b3d4feac592011502f3baf5363a4bf93c8c2ef4fac902be,10590,0,,,0,0
-img/linear-light/rail-detail-38-white-1200.webp,3daa006c655da5be3ab04de0544dc35e45db26da2b1d3c75ad89526f7056e489,24266,1,k3d/spektr-rail-38.html,"510 × 38 мм 510 мм, Белый — торец и рассеиватель",0,0
-img/linear-light/rail-detail-38-white-2400.webp,e2b9aa2d06197c5c9ed23d77e3d43f429c1a177ce5749dc61656ff161e1d12bf,72036,1,k3d/spektr-rail-38.html,"510 × 38 мм 510 мм, Белый — торец и рассеиватель",0,0
+img/linear-light/rail-detail-38-white-1200.webp,3daa006c655da5be3ab04de0544dc35e45db26da2b1d3c75ad89526f7056e489,24266,0,,,0,0
+img/linear-light/rail-detail-38-white-2400.webp,e2b9aa2d06197c5c9ed23d77e3d43f429c1a177ce5749dc61656ff161e1d12bf,72036,0,,,0,0
 img/linear-light/rail-detail-38-white-640.webp,ba14267dab876a73e6e5f4ed210e74f741625f2e17b5c12332eaf8c9f9819887,7878,0,,,0,0
-img/linear-light/rail-detail-48-black-1200.webp,36a0f700a06472d59978d8788dfc9a83a5b3ca62a36a3426a6714c232a8c8253,32140,2,k3d/spektr-rail-48.html | k3d/spektr-rail-long.html,"2400–4500 × 48 мм 2400 мм, Чёрный — торец и рассеиватель | 2400–4500 × 48 мм 2600 мм, Чёрный — торец и рассеиватель | 2400–4500 × 48 мм 3530 мм, Чёрный — торец и рассеиватель | 2400–4500 × 48 мм 3630 мм, Чёрный — торец и рассеиватель | 2400–4500 × 48 мм 3980 мм, Чёрный — торец и рассеиватель | 2400–4500 × 48 мм 4500 мм, Чёрный — торец и рассеиватель | 800–1350 × 48 мм 1180 мм, Чёрный — торец и рассеиватель | 800–1350 × 48 мм 1200 мм, Чёрный — торец и рассеиватель | 800–1350 × 48 мм 1350 мм, Чёрный — торец и рассеиватель | 800–1350 × 48 мм 800 мм, Чёрный — торец и рассеиватель | 800–1350 × 48 мм 900 мм, Чёрный — торец и рассеиватель",0,0
-img/linear-light/rail-detail-48-black-2400.webp,1b999053516d082f584edc558ec7165681cf5cc04d185624993f392918d307b6,104454,2,k3d/spektr-rail-48.html | k3d/spektr-rail-long.html,"2400–4500 × 48 мм 2400 мм, Чёрный — торец и рассеиватель | 2400–4500 × 48 мм 2600 мм, Чёрный — торец и рассеиватель | 2400–4500 × 48 мм 3530 мм, Чёрный — торец и рассеиватель | 2400–4500 × 48 мм 3630 мм, Чёрный — торец и рассеиватель | 2400–4500 × 48 мм 3980 мм, Чёрный — торец и рассеиватель | 2400–4500 × 48 мм 4500 мм, Чёрный — торец и рассеиватель | 800–1350 × 48 мм 1180 мм, Чёрный — торец и рассеиватель | 800–1350 × 48 мм 1200 мм, Чёрный — торец и рассеиватель | 800–1350 × 48 мм 1350 мм, Чёрный — торец и рассеиватель | 800–1350 × 48 мм 800 мм, Чёрный — торец и рассеиватель | 800–1350 × 48 мм 900 мм, Чёрный — торец и рассеиватель",0,0
+img/linear-light/rail-detail-48-black-1200.webp,36a0f700a06472d59978d8788dfc9a83a5b3ca62a36a3426a6714c232a8c8253,32140,0,,,0,0
+img/linear-light/rail-detail-48-black-2400.webp,1b999053516d082f584edc558ec7165681cf5cc04d185624993f392918d307b6,104454,0,,,0,0
 img/linear-light/rail-detail-48-black-640.webp,63eb6185b55036a6591c08c3cffe101bb5af5e4b58dfd3c008d8b60d94dbaca2,12174,0,,,0,0
-img/linear-light/rail-detail-48-white-1200.webp,83c01269226d560cef2390896d1c0101c937753bff054573b1e7245ec191053f,24426,2,k3d/spektr-rail-48.html | k3d/spektr-rail-long.html,"2400–4500 × 48 мм 2400 мм, Белый — торец и рассеиватель | 2400–4500 × 48 мм 2600 мм, Белый — торец и рассеиватель | 2400–4500 × 48 мм 3530 мм, Белый — торец и рассеиватель | 2400–4500 × 48 мм 3630 мм, Белый — торец и рассеиватель | 2400–4500 × 48 мм 3980 мм, Белый — торец и рассеиватель | 2400–4500 × 48 мм 4500 мм, Белый — торец и рассеиватель | 800–1350 × 48 мм 1180 мм, Белый — торец и рассеиватель | 800–1350 × 48 мм 1200 мм, Белый — торец и рассеиватель | 800–1350 × 48 мм 1350 мм, Белый — торец и рассеиватель | 800–1350 × 48 мм 800 мм, Белый — торец и рассеиватель | 800–1350 × 48 мм 900 мм, Белый — торец и рассеиватель",0,0
-img/linear-light/rail-detail-48-white-2400.webp,11b64a905ab80ff6d8b504479241fbe4ac829a8058753be27f874750b3ec9917,73576,2,k3d/spektr-rail-48.html | k3d/spektr-rail-long.html,"2400–4500 × 48 мм 2400 мм, Белый — торец и рассеиватель | 2400–4500 × 48 мм 2600 мм, Белый — торец и рассеиватель | 2400–4500 × 48 мм 3530 мм, Белый — торец и рассеиватель | 2400–4500 × 48 мм 3630 мм, Белый — торец и рассеиватель | 2400–4500 × 48 мм 3980 мм, Белый — торец и рассеиватель | 2400–4500 × 48 мм 4500 мм, Белый — торец и рассеиватель | 800–1350 × 48 мм 1180 мм, Белый — торец и рассеиватель | 800–1350 × 48 мм 1200 мм, Белый — торец и рассеиватель | 800–1350 × 48 мм 1350 мм, Белый — торец и рассеиватель | 800–1350 × 48 мм 800 мм, Белый — торец и рассеиватель | 800–1350 × 48 мм 900 мм, Белый — торец и рассеиватель",0,0
+img/linear-light/rail-detail-48-white-1200.webp,83c01269226d560cef2390896d1c0101c937753bff054573b1e7245ec191053f,24426,0,,,0,0
+img/linear-light/rail-detail-48-white-2400.webp,11b64a905ab80ff6d8b504479241fbe4ac829a8058753be27f874750b3ec9917,73576,0,,,0,0
 img/linear-light/rail-detail-48-white-640.webp,83107ef856cea5ed25903b7c9dd0387e449bc8e6f778aeec39438331016a00bf,8448,0,,,0,0
-img/linear-light/rail-detail-85-black-1200.webp,1ce5024f6f78fe996c69aa9bd63f4bdd0cfad5cdda240c84f85e7a5913d52570,26530,1,k3d/spektr-rail-85.html,"1000 × 85 мм 1000 мм, Чёрный — торец и рассеиватель",0,0
-img/linear-light/rail-detail-85-black-2400.webp,325dc231466e6f53d7b41254595ff15a63b9e658d55f9c03555023e8c1e56852,59244,1,k3d/spektr-rail-85.html,"1000 × 85 мм 1000 мм, Чёрный — торец и рассеиватель",0,0
+img/linear-light/rail-detail-85-black-1200.webp,1ce5024f6f78fe996c69aa9bd63f4bdd0cfad5cdda240c84f85e7a5913d52570,26530,0,,,0,0
+img/linear-light/rail-detail-85-black-2400.webp,325dc231466e6f53d7b41254595ff15a63b9e658d55f9c03555023e8c1e56852,59244,0,,,0,0
 img/linear-light/rail-detail-85-black-640.webp,2d1ebb7eb01c6429dec5a0e4f3a6345b944499fc26ea51c07bd072bcde1e974f,9588,0,,,0,0
-img/linear-light/rail-detail-85-white-1200.webp,5c50d6536b3336fc403f2f0b87f0a44911d27d8af10306fecfad79d6c783c3f5,21284,1,k3d/spektr-rail-85.html,"1000 × 85 мм 1000 мм, Белый — торец и рассеиватель",0,0
-img/linear-light/rail-detail-85-white-2400.webp,478b21ad39bf914074df9d9f4ce13533cad136298421eb2776993dac4cf455f2,61414,1,k3d/spektr-rail-85.html,"1000 × 85 мм 1000 мм, Белый — торец и рассеиватель",0,0
+img/linear-light/rail-detail-85-white-1200.webp,5c50d6536b3336fc403f2f0b87f0a44911d27d8af10306fecfad79d6c783c3f5,21284,0,,,0,0
+img/linear-light/rail-detail-85-white-2400.webp,478b21ad39bf914074df9d9f4ce13533cad136298421eb2776993dac4cf455f2,61414,0,,,0,0
 img/linear-light/rail-detail-85-white-640.webp,3fdb657042f6d95b068e5c08c13bfec3a73cc31cd465468e929e60de57726913,8044,0,,,0,0
-img/linear-light/sl3030-1200-30-black-1200.webp,73e8bf767d2f0106c1bcff7b9d84da3b9fed860a5204f9518d7d327d84d5b855,27452,2,k3d/lin-s3030.html | osveshchenie/lineynye/index.html,"Линейный светильник СЛ 3030, чёрный корпус, 5000 К | СЛ 3030, чёрный корпус, 5000 К",0,0
-img/linear-light/sl3030-1200-30-black-2400.webp,90fa2f2f49234632df79606cb58490c8f65f7bd45768114b25c88df3f69f0dc7,80768,2,k3d/lin-s3030.html | osveshchenie/lineynye/index.html,"Линейный светильник СЛ 3030, чёрный корпус, 5000 К | СЛ 3030, чёрный корпус, 5000 К",0,0
-img/linear-light/sl3030-1200-30-black-640.webp,f1271f5ce39d7cb304c72826a9459d6d84322429cd05fa91f2619cd51f6213d0,9268,1,osveshchenie/lineynye/index.html,"Линейный светильник СЛ 3030, чёрный корпус, 5000 К",0,0
-img/linear-light/sl3570-1200-35-black-1200.webp,f5ff535785f93009b8dc30c63d7ee03b8fabce24e849c4dc72da9d61f1940ec1,27798,2,k3d/lin-s3570.html | osveshchenie/lineynye/index.html,"Линейный светильник СЛ 3570, чёрный корпус, 5000 К | СЛ 3570, чёрный корпус, 5000 К",0,0
-img/linear-light/sl3570-1200-35-black-2400.webp,ece2b8cac9497949e66ccfa40ea2a9e7cba7b4d9280bfe1c9258f58a7fea621d,66152,2,k3d/lin-s3570.html | osveshchenie/lineynye/index.html,"Линейный светильник СЛ 3570, чёрный корпус, 5000 К | СЛ 3570, чёрный корпус, 5000 К",0,0
-img/linear-light/sl3570-1200-35-black-640.webp,fc45e505b5f3af851f516dc8271dff383bef30d415f7f3e2e962e2468afd91ec,8896,1,osveshchenie/lineynye/index.html,"Линейный светильник СЛ 3570, чёрный корпус, 5000 К",0,0
-img/linear-light/sl5055-1200-50-black-1200.webp,7fc75d3094d5a68d077837afaf80f1e0aba23d87cf04541e4b81de9691a7262b,28828,2,k3d/lin-ln-5055.html | osveshchenie/lineynye/index.html,"Линейный светильник СЛ 5055, чёрный корпус, 5000 К | СЛ 5055, чёрный корпус, 5000 К",0,0
-img/linear-light/sl5055-1200-50-black-2400.webp,ba3c34431f48a28c43cf153afa07ea9b6161745bbd8bbe3ce569674d2583cc29,89136,2,k3d/lin-ln-5055.html | osveshchenie/lineynye/index.html,"Линейный светильник СЛ 5055, чёрный корпус, 5000 К | СЛ 5055, чёрный корпус, 5000 К",0,0
-img/linear-light/sl5055-1200-50-black-640.webp,f1c7a669e25db6f60bb4a83d56c12b392f5679e7d689e1086178167ecaa030ce,11510,1,osveshchenie/lineynye/index.html,"Линейный светильник СЛ 5055, чёрный корпус, 5000 К",0,0
+img/linear-light/sl3030-1200-30-black-1200.webp,73e8bf767d2f0106c1bcff7b9d84da3b9fed860a5204f9518d7d327d84d5b855,27452,0,,,0,0
+img/linear-light/sl3030-1200-30-black-2400.webp,90fa2f2f49234632df79606cb58490c8f65f7bd45768114b25c88df3f69f0dc7,80768,0,,,0,0
+img/linear-light/sl3030-1200-30-black-640.webp,f1271f5ce39d7cb304c72826a9459d6d84322429cd05fa91f2619cd51f6213d0,9268,0,,,0,0
+img/linear-light/sl3570-1200-35-black-1200.webp,f5ff535785f93009b8dc30c63d7ee03b8fabce24e849c4dc72da9d61f1940ec1,27798,0,,,0,0
+img/linear-light/sl3570-1200-35-black-2400.webp,ece2b8cac9497949e66ccfa40ea2a9e7cba7b4d9280bfe1c9258f58a7fea621d,66152,0,,,0,0
+img/linear-light/sl3570-1200-35-black-640.webp,fc45e505b5f3af851f516dc8271dff383bef30d415f7f3e2e962e2468afd91ec,8896,0,,,0,0
+img/linear-light/sl5055-1200-50-black-1200.webp,7fc75d3094d5a68d077837afaf80f1e0aba23d87cf04541e4b81de9691a7262b,28828,0,,,0,0
+img/linear-light/sl5055-1200-50-black-2400.webp,ba3c34431f48a28c43cf153afa07ea9b6161745bbd8bbe3ce569674d2583cc29,89136,0,,,0,0
+img/linear-light/sl5055-1200-50-black-640.webp,f1c7a669e25db6f60bb4a83d56c12b392f5679e7d689e1086178167ecaa030ce,11510,0,,,0,0
 img/lineynye-svetilniki-cdek-it-1015.webp,939c05927937e9c89f93b29fb63cc22574c1a06450d92e1898913d72d05ee2ef,69962,1,osveshchenie/lineynye/index.html,"Офис CDEK IT, Новосибирск. Длинные светильники проходят между белыми баффлами над рабочими столами.",0,0
 img/lineynye-svetilniki-cdek-it-800.webp,aac82d0bff7f8541f92f9a266d117a7bad513ebe6a72c10c09168d8a27e2fe39,51492,1,osveshchenie/lineynye/index.html,"Офис CDEK IT, Новосибирск. Длинные светильники проходят между белыми баффлами над рабочими столами.",0,0
 img/lineynye-svetilniki-dns-tomsk-1536.webp,b25c3343fb94a9f10b539d4f91cbfac5a0493004fa6d7b7716a603f6e17d2d6d,247794,1,osveshchenie/lineynye/index.html,"Магазин ДНС, Томск. Над торговым залом прямые световые модули соединяются в шестиугольники.",0,0
@@ -5218,6 +5218,194 @@ img/logo/07_slogan_bounded_white.svg,4608ba3eef6ae4757d6b7e40f729edc6caa93b4f07a
 img/logo/07_wordmark_deskriptor_navy.svg,bb91339bc9dd4bb7cd3f178188020b56567d34523e1107619a769f83aad8e682,12808,0,,,0,0
 img/lukoyl-320.png,7d1240477fd4c249a45334f059489f6a76a64c66f3c0c48febdbcc69b7ed0694,5122,0,,,0,0
 img/lukse-320.png,931bf1a6b9e5bff916680f39b0e7997f7e2f3251fb6099e1a403c3b1e7d18a55,6307,0,,,0,0
+img/luminaires/clean-opal-595-595-ral6019-1200.webp,2a7103e362d711c9ec6cb260ba819d823def7d14b7f56fdba7c7c320f29898bf,25132,2,k3d/clipin-light.html | k3d/lclean-opal.html,"С опалом, RAL 6019 пастельно-зелёный — в поле clip-in | Со светильником, RAL 6019 пастельно-зелёный — фрагмент потолка",0,0
+img/luminaires/clean-opal-595-595-ral6019-2400.webp,bf8310b033351a974fab7baa2c831e826505dcb07b6e17adb32cd9d1dae47ef4,84176,2,k3d/clipin-light.html | k3d/lclean-opal.html,"С опалом, RAL 6019 пастельно-зелёный — в поле clip-in | Со светильником, RAL 6019 пастельно-зелёный — фрагмент потолка",0,0
+img/luminaires/clean-opal-595-595-ral6019-640.webp,bb0e432c79153348946d5456785fb3d4ddb324cbf318d724b85a2ac43bfe3d62,10874,0,,,0,0
+img/luminaires/clean-opal-595-595-ral9002-1200.webp,d24b0ebe2298da72427b843932021849e4fe349ca81975cae636a73db0d8c3a0,22592,2,k3d/clipin-light.html | k3d/lclean-opal.html,"С опалом, RAL 9002 серо-белый — в поле clip-in | Со светильником, RAL 9002 серо-белый — фрагмент потолка",0,0
+img/luminaires/clean-opal-595-595-ral9002-2400.webp,29c4b2e8ea28cec442f4a27127197137a3b261745d793ad437e5bb7aeea1cb9a,79372,2,k3d/clipin-light.html | k3d/lclean-opal.html,"С опалом, RAL 9002 серо-белый — в поле clip-in | Со светильником, RAL 9002 серо-белый — фрагмент потолка",0,0
+img/luminaires/clean-opal-595-595-ral9002-640.webp,cb79edaed3cc22810c93e1c8ac6f72685abc132c069e7053141c62e1d894d12f,9550,0,,,0,0
+img/luminaires/clean-opal-595-595-ral9003-1200.webp,4de690db41f91de75ccc2516c624f91c0975829d079f882e5a37a6a51b9a6014,20432,4,k3d/clipin-light.html | k3d/lclean-opal.html | osveshchenie/dlya-chistyh-pomeshcheniy/index.html | potolki/kassetnye/clip-in/index.html,"С опалом, RAL 9003 белый | С опалом, RAL 9003 белый — в поле clip-in | Со светильником, RAL 9003 белый | Со светильником, RAL 9003 белый — фрагмент потолка",0,0
+img/luminaires/clean-opal-595-595-ral9003-2400.webp,437f6e920a38be781ae5861a69d71d3c57e9d6596bedc05135bac1dae6d840a4,71082,4,k3d/clipin-light.html | k3d/lclean-opal.html | osveshchenie/dlya-chistyh-pomeshcheniy/index.html | potolki/kassetnye/clip-in/index.html,"С опалом, RAL 9003 белый | С опалом, RAL 9003 белый — в поле clip-in | Со светильником, RAL 9003 белый | Со светильником, RAL 9003 белый — фрагмент потолка",0,0
+img/luminaires/clean-opal-595-595-ral9003-640.webp,ce57e8e4f315c7e10d5a0a5fe9e7be9ac4bb80940b8d1796710565f02456c86b,8718,2,osveshchenie/dlya-chistyh-pomeshcheniy/index.html | potolki/kassetnye/clip-in/index.html,"С опалом, RAL 9003 белый | Со светильником, RAL 9003 белый",0,0
+img/luminaires/clean-prism-595-595-ral6019-1200.webp,3cdbd0e47850f97a14b0c8b4d07f7bf047b2821654c2e797aa1ad01512f03c3b,30244,1,k3d/lclean-prism.html,"С микропризмой, RAL 6019 пастельно-зелёный — в поле clip-in",0,0
+img/luminaires/clean-prism-595-595-ral6019-2400.webp,a7604fa49a9e65f0280b09e90cda79e9cf07068308b3f0617384da2ab304481e,117818,1,k3d/lclean-prism.html,"С микропризмой, RAL 6019 пастельно-зелёный — в поле clip-in",0,0
+img/luminaires/clean-prism-595-595-ral6019-640.webp,3c42841ced918dab66a5679c872fd581a8ba9ba6cc74ea46bc6c81c9f8d1c7f5,10878,0,,,0,0
+img/luminaires/clean-prism-595-595-ral9002-1200.webp,f9f18f6400a39b0d1895899a6f11a992804f1ffe987bee72978d6a4d161226f9,27482,1,k3d/lclean-prism.html,"С микропризмой, RAL 9002 серо-белый — в поле clip-in",0,0
+img/luminaires/clean-prism-595-595-ral9002-2400.webp,de00594faeb066a3a209a3a0c99df3d659ec5b1a247e688e02dcbe67559d055b,109250,1,k3d/lclean-prism.html,"С микропризмой, RAL 9002 серо-белый — в поле clip-in",0,0
+img/luminaires/clean-prism-595-595-ral9002-640.webp,565012956ca9cd1c6aeddd52794da93023a063cbf91d5d30549efac469046c00,9190,0,,,0,0
+img/luminaires/clean-prism-595-595-ral9003-1200.webp,9e55d91ca34a0feecb090bb9ef115a86a40392ac197c6d3862b72abe1e35936a,25708,2,k3d/lclean-prism.html | osveshchenie/dlya-chistyh-pomeshcheniy/index.html,"С микропризмой, RAL 9003 белый | С микропризмой, RAL 9003 белый — в поле clip-in",0,0
+img/luminaires/clean-prism-595-595-ral9003-2400.webp,c58f7c136575bdfc456be42330b762e4f3cca517cb36579d00e999b9f3d7267b,103508,2,k3d/lclean-prism.html | osveshchenie/dlya-chistyh-pomeshcheniy/index.html,"С микропризмой, RAL 9003 белый | С микропризмой, RAL 9003 белый — в поле clip-in",0,0
+img/luminaires/clean-prism-595-595-ral9003-640.webp,9483a2b7d5e8c0ab4c74189936aebf433a68218bea133df797d1d18fbd8b1b3c,8700,1,osveshchenie/dlya-chistyh-pomeshcheniy/index.html,"С микропризмой, RAL 9003 белый",0,0
+img/luminaires/grid-30-30-white-1200.webp,8bb6e8808fdbda9142a992c14766ba9ef02d085e462fb247bc452f4190fd7ac1,16156,1,k3d/spektr-grid-50.html,"Ячейка 50 × 50 мм 30 × 30 мм, Белый — общий вид",0,0
+img/luminaires/grid-30-30-white-2400.webp,befbb691110c50cb3d89b9a0692797d74e38eb3ed75af6b6c4c520d57f658ef2,59588,1,k3d/spektr-grid-50.html,"Ячейка 50 × 50 мм 30 × 30 мм, Белый — общий вид",0,0
+img/luminaires/grid-30-30-white-640.webp,78a7644b7b04667e8e4bd48091ca67719653abe99420e7598a049b23eea0fe99,7142,0,,,0,0
+img/luminaires/grid-39-39-white-1200.webp,78ef4d8a1aac7111496b97122058f574206c7f9adcaac72ae671240d61a4118d,17424,1,k3d/spektr-grid-50.html,"Ячейка 50 × 50 мм 39 × 39 мм, Белый — общий вид",0,0
+img/luminaires/grid-39-39-white-2400.webp,06dcb48470becd1a019cb728331ece654a0dd1474c853205b76ab2d9f326e421,57280,1,k3d/spektr-grid-50.html,"Ячейка 50 × 50 мм 39 × 39 мм, Белый — общий вид",0,0
+img/luminaires/grid-39-39-white-640.webp,6c4df5cec6300a0657b9c003e2c5ef29188aaef2e59c21e8202d07a011a7ce05,7250,0,,,0,0
+img/luminaires/grid-64-64-white-1200.webp,fc4d61a45120e80fcf3596135b4545e9ad8c07f72f32f19bd54be2572a297d2f,18636,1,k3d/spektr-grid-75.html,"Ячейка 75 × 75 мм 64 × 64 мм, Белый — общий вид",0,0
+img/luminaires/grid-64-64-white-2400.webp,f445825355616549d61f2b3d537a545cceb4935b85dda2941cbccb9b2c37bba6,60660,1,k3d/spektr-grid-75.html,"Ячейка 75 × 75 мм 64 × 64 мм, Белый — общий вид",0,0
+img/luminaires/grid-64-64-white-640.webp,19c6469e53187e19525ed0e992ad9b6272901e0f046883686da788b5f132fdb2,7572,0,,,0,0
+img/luminaires/grid-89-89-white-1200.webp,daec6cedb82a5d7c59e2031bc9cc140c8da27e49af61d35f3e5c10cf0a93552b,18754,1,k3d/spektr-grid-100.html,"Ячейка 100 × 100 мм 89 × 89 мм, Белый — общий вид",0,0
+img/luminaires/grid-89-89-white-2400.webp,0f8b83e40b4695c75ec5125de2415cb59f9e75fa140c22cb8e755da06d2e355b,65438,1,k3d/spektr-grid-100.html,"Ячейка 100 × 100 мм 89 × 89 мм, Белый — общий вид",0,0
+img/luminaires/grid-89-89-white-640.webp,d949945dc5e58fc57c7f8a8addda25f744e95f3ef81d73ad532998399739f010,7634,0,,,0,0
+img/luminaires/grid-field-39-39-ral9003-1200.webp,60abf63da100e40b02e5688b2d898505f46cc0aa883bc89b95e5131d4943898e,38328,2,k3d/lgrill-c50.html | osveshchenie/dlya-grilyato/index.html,"В ячейку 50 × 50, RAL 9003 белый | В ячейку 50 × 50, RAL 9003 белый — в решётке",0,0
+img/luminaires/grid-field-39-39-ral9003-2400.webp,b35b6fe9be3fbf83a5503bf212ce4c81c2da747085df4cd8b36495ad361623ac,108654,2,k3d/lgrill-c50.html | osveshchenie/dlya-grilyato/index.html,"В ячейку 50 × 50, RAL 9003 белый | В ячейку 50 × 50, RAL 9003 белый — в решётке",0,0
+img/luminaires/grid-field-39-39-ral9003-640.webp,18621a0f22b4bb446349b44a65b354e3f6134686ccf647328fb12af8cd312881,18252,1,osveshchenie/dlya-grilyato/index.html,"В ячейку 50 × 50, RAL 9003 белый",0,0
+img/luminaires/grid-field-39-39-ral9005-1200.webp,c81b6de6e5f12a6c62b038595316f29328d334cce8cc713ba2ed0295473ab149,34846,1,k3d/lgrill-c50.html,"В ячейку 50 × 50, RAL 9005 чёрный — в решётке",0,0
+img/luminaires/grid-field-39-39-ral9005-2400.webp,78c20cd91b324213db868598aed8a83250196b4dde8d32d44e1b84fe431c7c2d,100720,1,k3d/lgrill-c50.html,"В ячейку 50 × 50, RAL 9005 чёрный — в решётке",0,0
+img/luminaires/grid-field-39-39-ral9005-640.webp,279e63060eb12bbcf3aa63d9e8d1f9e6ba80fb4b3411a5d86b25a423d1bddf28,15980,0,,,0,0
+img/luminaires/grid-field-39-39-ral9006-1200.webp,fc84a356beb433461c4eb7f0dd4ee0a22bc7c8ed1e242394341f151a45200e67,39314,1,k3d/lgrill-c50.html,"В ячейку 50 × 50, RAL 9006 металлик — в решётке",0,0
+img/luminaires/grid-field-39-39-ral9006-2400.webp,7264b8895369f76514fcd1545c60d95717c89044a52b71e7fccb17bb206e2679,96516,1,k3d/lgrill-c50.html,"В ячейку 50 × 50, RAL 9006 металлик — в решётке",0,0
+img/luminaires/grid-field-39-39-ral9006-640.webp,bb73e424d66ee1bee896fce006ddc25969942a8c3efa80bb0439f9a103cc8d23,18176,0,,,0,0
+img/luminaires/grid-field-64-64-ral9003-1200.webp,78b9a2eb8aa00c549b7da4506ee4adf4ed071f9b43de560acc4e3a2c3f0f5934,41506,2,k3d/lgrill-c75.html | osveshchenie/dlya-grilyato/index.html,"В ячейку 75 × 75, RAL 9003 белый | В ячейку 75 × 75, RAL 9003 белый — в решётке",0,0
+img/luminaires/grid-field-64-64-ral9003-2400.webp,a2048d8ff94c6db54041b64e6897d7bcb94ebdecdd54c001c0783980d60f2ee7,108742,2,k3d/lgrill-c75.html | osveshchenie/dlya-grilyato/index.html,"В ячейку 75 × 75, RAL 9003 белый | В ячейку 75 × 75, RAL 9003 белый — в решётке",0,0
+img/luminaires/grid-field-64-64-ral9003-640.webp,f778ead45e1f4929c604e1b9b637200fee168074ae47aa1c0ff6f01580ab991d,18962,1,osveshchenie/dlya-grilyato/index.html,"В ячейку 75 × 75, RAL 9003 белый",0,0
+img/luminaires/grid-field-64-64-ral9005-1200.webp,b8f7b7af5b586631f99cccf6ade10f29a3171dd3b2fb0b84d354b1da99097360,43488,1,k3d/lgrill-c75.html,"В ячейку 75 × 75, RAL 9005 чёрный — в решётке",0,0
+img/luminaires/grid-field-64-64-ral9005-2400.webp,48175c0569daa26099510d348724a0fc777172436dca9dc17765e88b20db1084,129166,1,k3d/lgrill-c75.html,"В ячейку 75 × 75, RAL 9005 чёрный — в решётке",0,0
+img/luminaires/grid-field-64-64-ral9005-640.webp,9267a5bc5ee499b076be5fc3e057dafd5ed291353ee7ecd8f5822b6d68d58adb,21092,0,,,0,0
+img/luminaires/grid-field-64-64-ral9006-1200.webp,0a9ed84706fdedecb434f517c32af1874e148fc6d47321b7153247f36bb09e27,44350,1,k3d/lgrill-c75.html,"В ячейку 75 × 75, RAL 9006 металлик — в решётке",0,0
+img/luminaires/grid-field-64-64-ral9006-2400.webp,a880bfbacd314872977784bb5f68395aeca801bac2c2e9446186a4ab239eaffb,110356,1,k3d/lgrill-c75.html,"В ячейку 75 × 75, RAL 9006 металлик — в решётке",0,0
+img/luminaires/grid-field-64-64-ral9006-640.webp,6b67566cfa8e80ce2ca38d71a81321dd07658416eaa002a730e5db319e831afe,21084,0,,,0,0
+img/luminaires/grid-field-89-89-ral9003-1200.webp,bc08c685ead128883790d8f20b1ee23c33f059bc55d968c84fb1cace5b0fb6b7,40272,2,k3d/lgrill-c100.html | osveshchenie/dlya-grilyato/index.html,"В ячейку 100 × 100, RAL 9003 белый | В ячейку 100 × 100, RAL 9003 белый — в решётке",0,0
+img/luminaires/grid-field-89-89-ral9003-2400.webp,88d361085008c128d98b1508a28c71b2dcef19670ac53499b3172e2f2d307b6b,101418,2,k3d/lgrill-c100.html | osveshchenie/dlya-grilyato/index.html,"В ячейку 100 × 100, RAL 9003 белый | В ячейку 100 × 100, RAL 9003 белый — в решётке",0,0
+img/luminaires/grid-field-89-89-ral9003-640.webp,ce5b5b0621d7a940280e1674c2d01046e80ea5e64ba53d96fa3934d3bc09a7e6,18740,1,osveshchenie/dlya-grilyato/index.html,"В ячейку 100 × 100, RAL 9003 белый",0,0
+img/luminaires/grid-field-89-89-ral9005-1200.webp,cb82f29c11eaec7885264e5352f4b67543341c809fa838bb5500e1a8f51642c4,47210,1,k3d/lgrill-c100.html,"В ячейку 100 × 100, RAL 9005 чёрный — в решётке",0,0
+img/luminaires/grid-field-89-89-ral9005-2400.webp,2b84037fa55ded2d4ba89572ffcfe6671bbf6dc9857b2ca7f73e454637bc45dd,124018,1,k3d/lgrill-c100.html,"В ячейку 100 × 100, RAL 9005 чёрный — в решётке",0,0
+img/luminaires/grid-field-89-89-ral9005-640.webp,ec69c539e62bb4261e610bead741c0971cfbe49744bd273a6bc2f22aa5cb80c3,21988,0,,,0,0
+img/luminaires/grid-field-89-89-ral9006-1200.webp,ea1412234dd83a0e236e1d50e6fbe84c732b4073327cd3a8a4be1ef98536e4bf,46180,1,k3d/lgrill-c100.html,"В ячейку 100 × 100, RAL 9006 металлик — в решётке",0,0
+img/luminaires/grid-field-89-89-ral9006-2400.webp,511b12413c5e2798dee68f1f9a1eb9bafc6d1f035393d8903347579908c695a9,123924,1,k3d/lgrill-c100.html,"В ячейку 100 × 100, RAL 9006 металлик — в решётке",0,0
+img/luminaires/grid-field-89-89-ral9006-640.webp,e7af5444a74b5a3c928bd4478b6751b7de238322a753e4d240a7aa26071b894f,22434,0,,,0,0
+img/luminaires/grid-panel-590-590-ral9003-1200.webp,e4073a2e72004883947c9d5993ca9006d5d423c682e58366c1eb8925448f42e9,78394,2,k3d/lgrill-panel.html | osveshchenie/dlya-grilyato/index.html,"Панель на модуль 600 × 600, RAL 9003 белый | Панель на модуль 600 × 600, RAL 9003 белый — в решётке",0,0
+img/luminaires/grid-panel-590-590-ral9003-2400.webp,90f077c0d252f83231cb79bd94b7c06cf8c629fd94371c47e1cafda9bd28d318,194152,2,k3d/lgrill-panel.html | osveshchenie/dlya-grilyato/index.html,"Панель на модуль 600 × 600, RAL 9003 белый | Панель на модуль 600 × 600, RAL 9003 белый — в решётке",0,0
+img/luminaires/grid-panel-590-590-ral9003-640.webp,f00f1e0bc40c1d9bc0b24604d88d8ce974e32baa0dab01c8db2303bac7266daf,34428,1,osveshchenie/dlya-grilyato/index.html,"Панель на модуль 600 × 600, RAL 9003 белый",0,0
+img/luminaires/grid-panel-590-590-ral9005-1200.webp,d3115ed3cd6e6c76c24bf4db3f61defb5fca15496d9184ce0e5d87f6291a5d56,91042,1,k3d/lgrill-panel.html,"Панель на модуль 600 × 600, RAL 9005 чёрный — в решётке",0,0
+img/luminaires/grid-panel-590-590-ral9005-2400.webp,37bd714fb44b8696afb15415a05807686db5504101d28e111044e9214397bf15,234692,1,k3d/lgrill-panel.html,"Панель на модуль 600 × 600, RAL 9005 чёрный — в решётке",0,0
+img/luminaires/grid-panel-590-590-ral9005-640.webp,f0e2cdda5df5bd8f012b830569f5c403f404e961bf3abe632661a9a6eace5fa9,41512,0,,,0,0
+img/luminaires/grid-panel-590-590-ral9006-1200.webp,6de77f17c130b762b9c80ada5e068658ba199182a04a8c58f0c71fe342983047,89152,1,k3d/lgrill-panel.html,"Панель на модуль 600 × 600, RAL 9006 металлик — в решётке",0,0
+img/luminaires/grid-panel-590-590-ral9006-2400.webp,bd0894a6d326d1540e6af328fb2237a149ce5c8b1c289f9b081833f54e427947,214456,1,k3d/lgrill-panel.html,"Панель на модуль 600 × 600, RAL 9006 металлик — в решётке",0,0
+img/luminaires/grid-panel-590-590-ral9006-640.webp,6c4e7170f539fb80dfb7cc8fea35abe9c255585fabd9d5700ad8b51388d655ff,38030,0,,,0,0
+img/luminaires/mount-cable.webp,ca29c8e8452d0ad8344cb63035ac99ae3c1c6f1c0841a27d3e097e6122cf0eac,38424,1,osveshchenie/lineynye/index.html,СЛ 3570 под реечным потолком AIRWOOD на двух регулируемых стальных тросах,0,0
+img/luminaires/mount-plate.webp,d0a1c0f1f93bef774b66e6913d3011ad2fdddc44abf91a9bf4f2b488bb768f91,57550,1,osveshchenie/lineynye/index.html,СЛ 5055 между двумя рейками AIRWOOD на регулируемых опорных пластинах,0,0
+img/luminaires/office-1195-595-white-1200.webp,6e4f37230da1291432bc9c668e87ba93938ac299f347351bbeeb26acc9bdacd7,11838,3,k3d/spektr-office-1195-595.html | osveshchenie/index.html | potolki/armstrong-t24/index.html,"1195 × 595 мм Офис 35, Белый — общий вид | 1195 × 595 мм Офис 40, Белый — общий вид | 1195 × 595 мм Офис 45, Белый — общий вид | 1195 × 595 мм Офис 50, Белый — общий вид | Офисная панель 1195 × 595 мм · 5000 К, белый корпус",0,0
+img/luminaires/office-1195-595-white-2400.webp,9514dd7126685865089f8e23202e8534fc3db1053529294967652290179b1988,44658,3,k3d/spektr-office-1195-595.html | osveshchenie/index.html | potolki/armstrong-t24/index.html,"1195 × 595 мм Офис 35, Белый — общий вид | 1195 × 595 мм Офис 40, Белый — общий вид | 1195 × 595 мм Офис 45, Белый — общий вид | 1195 × 595 мм Офис 50, Белый — общий вид | Офисная панель 1195 × 595 мм · 5000 К, белый корпус",0,0
+img/luminaires/office-1195-595-white-640.webp,ac4fd942dd85f5fcf167beec3a4743c386dc0c2024bd1d3f0d881f6b61bc6a5d,4578,2,osveshchenie/index.html | potolki/armstrong-t24/index.html,"Офисная панель 1195 × 595 мм · 5000 К, белый корпус",0,0
+img/luminaires/office-1200-150-white-1200.webp,3b0d1312cd72f2e239dbd2dff6ac5613ca113393d9f5b9a64ad871cfdeade4a4,10506,3,k3d/spektr-office-1200-150.html | osveshchenie/index.html | potolki/armstrong-t24/index.html,"1200 × 100–199 мм Офис 35, Белый — общий вид | 1200 × 100–199 мм Офис 40, Белый — общий вид | 1200 × 100–199 мм Офис 45, Белый — общий вид | 1200 × 100–199 мм Офис 50, Белый — общий вид | Офисная панель 1200 × 100–199 мм · 5000 К, белый корпус",0,0
+img/luminaires/office-1200-150-white-2400.webp,bdf3db51058c988a27cc17d6a457c459de203dff1f5a92c1c2fc097aba2fea5f,38362,3,k3d/spektr-office-1200-150.html | osveshchenie/index.html | potolki/armstrong-t24/index.html,"1200 × 100–199 мм Офис 35, Белый — общий вид | 1200 × 100–199 мм Офис 40, Белый — общий вид | 1200 × 100–199 мм Офис 45, Белый — общий вид | 1200 × 100–199 мм Офис 50, Белый — общий вид | Офисная панель 1200 × 100–199 мм · 5000 К, белый корпус",0,0
+img/luminaires/office-1200-150-white-640.webp,6937eb3c149bdbd1135c90c5c0981777b2fef85b85504d41c5e908f854b9136b,3890,2,osveshchenie/index.html | potolki/armstrong-t24/index.html,"Офисная панель 1200 × 100–199 мм · 5000 К, белый корпус",0,0
+img/luminaires/office-1200-250-white-1200.webp,2b650da97635bb1fe9cd83d77aca3bbe19a5b8cfa8423c52bcdb793077dcdf4b,10896,3,k3d/spektr-office-1200-250.html | osveshchenie/index.html | potolki/armstrong-t24/index.html,"1200 × 200–300 мм Офис 35, Белый — общий вид | 1200 × 200–300 мм Офис 40, Белый — общий вид | 1200 × 200–300 мм Офис 45, Белый — общий вид | 1200 × 200–300 мм Офис 50, Белый — общий вид | Офисная панель 1200 × 200–300 мм · 5000 К, белый корпус",0,0
+img/luminaires/office-1200-250-white-2400.webp,9c9289c76dcf3987b7c34b23b64a8357269cf7b4231b1c2bc247d3202639f885,51212,3,k3d/spektr-office-1200-250.html | osveshchenie/index.html | potolki/armstrong-t24/index.html,"1200 × 200–300 мм Офис 35, Белый — общий вид | 1200 × 200–300 мм Офис 40, Белый — общий вид | 1200 × 200–300 мм Офис 45, Белый — общий вид | 1200 × 200–300 мм Офис 50, Белый — общий вид | Офисная панель 1200 × 200–300 мм · 5000 К, белый корпус",0,0
+img/luminaires/office-1200-250-white-640.webp,3a30e91460cbe7973d8ff5cb612336885f080d601fea8ed78935362d9d0a4492,4078,2,osveshchenie/index.html | potolki/armstrong-t24/index.html,"Офисная панель 1200 × 200–300 мм · 5000 К, белый корпус",0,0
+img/luminaires/office-595-300-white-1200.webp,d214369b917fc534b6f4f3f69bc5860c7bde718cd0b1676b366d1dd2ff169fc6,12922,3,k3d/spektr-office-595-300.html | osveshchenie/index.html | potolki/armstrong-t24/index.html,"300 × 595 мм Офис 18, Белый — общий вид | 300 × 595 мм Офис 20, Белый — общий вид | 300 × 595 мм Офис 22, Белый — общий вид | 300 × 595 мм Офис 25, Белый — общий вид | Офисная панель 300 × 595 мм · 5000 К, белый корпус",0,0
+img/luminaires/office-595-300-white-2400.webp,65b951937cf645cd30399d810f36dd97c6c1d1a8f02e3ed3ac70593df66154af,47500,3,k3d/spektr-office-595-300.html | osveshchenie/index.html | potolki/armstrong-t24/index.html,"300 × 595 мм Офис 18, Белый — общий вид | 300 × 595 мм Офис 20, Белый — общий вид | 300 × 595 мм Офис 22, Белый — общий вид | 300 × 595 мм Офис 25, Белый — общий вид | Офисная панель 300 × 595 мм · 5000 К, белый корпус",0,0
+img/luminaires/office-595-300-white-640.webp,c80e2ae897d73e854400afc9c3fb48f5f67e159c69d52811624e94a658011f26,5174,2,osveshchenie/index.html | potolki/armstrong-t24/index.html,"Офисная панель 300 × 595 мм · 5000 К, белый корпус",0,0
+img/luminaires/office-595-595-white-1200.webp,c49cb7016bb20fe2d8ccfa646e54f927936ed646897364795faced05619bd1d8,13566,3,k3d/spektr-office-595-595.html | osveshchenie/index.html | potolki/armstrong-t24/index.html,"595 × 595 мм Офис 35, Белый — общий вид | 595 × 595 мм Офис 40, Белый — общий вид | 595 × 595 мм Офис 45, Белый — общий вид | 595 × 595 мм Офис 50, Белый — общий вид | Офисная панель 595 × 595 мм · 5000 К, белый корпус",0,0
+img/luminaires/office-595-595-white-2400.webp,54f75996dee481a7bb943beb0f92091ac7af36800759f65ac6ee5d76f6ccaefe,52222,3,k3d/spektr-office-595-595.html | osveshchenie/index.html | potolki/armstrong-t24/index.html,"595 × 595 мм Офис 35, Белый — общий вид | 595 × 595 мм Офис 40, Белый — общий вид | 595 × 595 мм Офис 45, Белый — общий вид | 595 × 595 мм Офис 50, Белый — общий вид | Офисная панель 595 × 595 мм · 5000 К, белый корпус",0,0
+img/luminaires/office-595-595-white-640.webp,b6e8e90228f0ae9d4337ee0ec92d980cc92e49699648774a6e469633bdd9457f,5578,2,osveshchenie/index.html | potolki/armstrong-t24/index.html,"Офисная панель 595 × 595 мм · 5000 К, белый корпус",0,0
+img/luminaires/rail-1000-85-black-1200.webp,0998a73ab79c46f1316d657a1f5f06e70960bce0db0a21d5b01e8709271a1fc9,16136,1,k3d/spektr-rail-85.html,"1000 × 85 мм 1000 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-1000-85-black-2400.webp,1147beef44cd8b43800b0696e78f88120511ee35edafc68d82667762dadf4c5d,54600,1,k3d/spektr-rail-85.html,"1000 × 85 мм 1000 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-1000-85-black-640.webp,c7f30a2b2fac7caa6d75c368992878766012b35bb08d59274c301b61fd99159e,6552,0,,,0,0
+img/luminaires/rail-1000-85-white-1200.webp,24713684e1f07d4e2f9f55a4765ace9dc9f019fb37950989dcc5d91f962a5722,11094,4,k3d/spektr-rail-85.html | osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"1000 × 85 мм 1000 мм, Белый — общий вид | Линейный светильник 1000 × 85 мм, белый корпус",0,0
+img/luminaires/rail-1000-85-white-2400.webp,13e7ec47a7db02180e7c9c933a691635f2e257dbd1904f32c3b894aae6d7d380,40868,4,k3d/spektr-rail-85.html | osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"1000 × 85 мм 1000 мм, Белый — общий вид | Линейный светильник 1000 × 85 мм, белый корпус",0,0
+img/luminaires/rail-1000-85-white-640.webp,20432d701aea1c46ee2ddb15e568a91e7b91add2827d88752dec4cadf273ff95,4232,3,osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"Линейный светильник 1000 × 85 мм, белый корпус",0,0
+img/luminaires/rail-1180-48-black-1200.webp,47768c68c841d5c8d146441c60c20d7700011e7b1a331a3ae33ab191e3ab5f8e,15574,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1180 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-1180-48-black-2400.webp,6d5d22faeb765b8d512b792f2883c8365d31f55568a519e2efa1330dd2287bf5,57946,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1180 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-1180-48-black-640.webp,b55b603a079a4e2b933809a0076b5451c98381c29860edcd4c1addb753f20620,6394,0,,,0,0
+img/luminaires/rail-1180-48-white-1200.webp,e1a38bab058bff3063bf9062eb80530640364258502f1260299ba6b700fe6596,11098,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1180 мм, Белый — общий вид",0,0
+img/luminaires/rail-1180-48-white-2400.webp,54dd7a4e686afb4c8cce76fbe54ba8b232d7789f8815e4ee4d725f00137534ac,55470,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1180 мм, Белый — общий вид",0,0
+img/luminaires/rail-1180-48-white-640.webp,32c56cee91940698d17b2750c74c8a9b7bf5c4f6d85c035ffb281e49ffa9bd5e,4182,0,,,0,0
+img/luminaires/rail-1200-48-black-1200.webp,5b23fca7e493688eb6631d7941dacec5835863cc941abb8fbfb18bae389a948a,15466,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1200 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-1200-48-black-2400.webp,824af3e8ea0e6628d453310a5dabc9eba31be86b71334e24d5d9695fb999d7cb,56002,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1200 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-1200-48-black-640.webp,e1fab978ca9006b68b60f890ae1b1233c0d5143b3707ef06a44cef67a1ab32e0,6376,0,,,0,0
+img/luminaires/rail-1200-48-white-1200.webp,fe2096b3387fa1101851ecfac29f923108c1c00d83731eb43999251cf8ada36f,10636,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1200 мм, Белый — общий вид",0,0
+img/luminaires/rail-1200-48-white-2400.webp,b8c83d80fded0cc3b057ae36cb12cf5d145de059b28fda16cf28b432233fd85d,50250,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1200 мм, Белый — общий вид",0,0
+img/luminaires/rail-1200-48-white-640.webp,0c4e7df29cac14bc20af49642ff3da0d428f6f63c5cecd9dced21dc91b3118f7,3998,0,,,0,0
+img/luminaires/rail-1350-48-black-1200.webp,35f761fd920e03c270f370c6bdca12cbf8cce6762a368b54a5a8168ca6a05434,15562,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1350 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-1350-48-black-2400.webp,3fb54a343954c8b8353509081f07b83299a508535c7e93b12054d20b83811e5f,70370,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1350 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-1350-48-black-640.webp,529808f172bf206f9d71ba1f9d5d70628ba4d5ee91a35c51c396913a6bab3ea4,6414,0,,,0,0
+img/luminaires/rail-1350-48-white-1200.webp,e314939f0f9aba887300eca859e403a4ee4f09564370c28860fa1b34f7531433,10992,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1350 мм, Белый — общий вид",0,0
+img/luminaires/rail-1350-48-white-2400.webp,70c4d011ef53546f105ac4e6b36a12a685476b3ee1637caf15bf101b451b4c10,54312,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 1350 мм, Белый — общий вид",0,0
+img/luminaires/rail-1350-48-white-640.webp,1c77466a39059fd53c05fb04b82a8eccdd104529c7812a779e8fea07b0a6fb17,4018,0,,,0,0
+img/luminaires/rail-2400-48-black-1200.webp,fe478c342f28a69ebbd1b94a2c94fb6cc9bdc5471327f3de44d80d374c3c70b7,15966,4,k3d/spektr-rail-long.html | osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"2400–4500 × 48 мм 2400 мм, Чёрный — общий вид | Линейный светильник 2400–4500 × 48 мм, чёрный корпус, 4000 К",0,0
+img/luminaires/rail-2400-48-black-2400.webp,5fff5ff4cd160906cee082aa1c0340d9453d6c61e84ec6aeefa901a606804a75,58244,4,k3d/spektr-rail-long.html | osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"2400–4500 × 48 мм 2400 мм, Чёрный — общий вид | Линейный светильник 2400–4500 × 48 мм, чёрный корпус, 4000 К",0,0
+img/luminaires/rail-2400-48-black-640.webp,5d352db7643d5cd00b1d67ee583dcecb20c1d5a1c3879f25701d056af0cab524,6400,3,osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"Линейный светильник 2400–4500 × 48 мм, чёрный корпус, 4000 К",0,0
+img/luminaires/rail-2400-48-white-1200.webp,af99ad556246323d153aaaf6b98a163b99a54dab1c44138533c5ec6ea6bc256f,10662,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 2400 мм, Белый — общий вид",0,0
+img/luminaires/rail-2400-48-white-2400.webp,b8435d5c4c379a6f904be4248f403d2fd85ba6ae4d8e1ea5d56048c70c0cfb82,54526,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 2400 мм, Белый — общий вид",0,0
+img/luminaires/rail-2400-48-white-640.webp,942c542af2c1d71ef126649727283225a23e2387c601d6bb742967bbc1490fce,4012,0,,,0,0
+img/luminaires/rail-2600-48-black-1200.webp,4252a30c687ad968d0814d1a33056540e4ce4cb0890bed5dcd5bca69d7e44601,15722,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 2600 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-2600-48-black-2400.webp,f309407247832ece222cf9b6a941165aa4990789836a4858b1f97849df4763f3,67414,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 2600 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-2600-48-black-640.webp,2c7bf0d0775b2613381bb54928a750386bb2389e6836c25c332dca4b28119bc0,6442,0,,,0,0
+img/luminaires/rail-2600-48-white-1200.webp,787131238b0db1f581293260430ac9ce2dd85b4b4b81cad8c3c1815209b72f44,10798,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 2600 мм, Белый — общий вид",0,0
+img/luminaires/rail-2600-48-white-2400.webp,f9281a19be84485c04a19ab8b035b1d4e94bbea5efc0ee762cbe27dbbfd7a5d8,50672,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 2600 мм, Белый — общий вид",0,0
+img/luminaires/rail-2600-48-white-640.webp,53e255d3d2b2ae4fdccd333943e4727cc3e8c550444e19e8c42a76ea0f18520b,3986,0,,,0,0
+img/luminaires/rail-3530-48-black-1200.webp,6ac0725b70d8367216e55d02a59bdada4f3b0cf057f56b1c675ed9e845bbef2e,15374,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3530 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-3530-48-black-2400.webp,1373b8605431a38aed4aca441566f2e03fca92dbf49fd42e0f409e15767ad845,61442,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3530 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-3530-48-black-640.webp,8ba29d8cf45868b21a335a15bf3d90e8ec92f514529cb0e3078552d5a6fb878c,6430,0,,,0,0
+img/luminaires/rail-3530-48-white-1200.webp,990e198e2de0daade9b0cbbe9c1827277866bb80092ba17da462f1473f514fa6,10832,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3530 мм, Белый — общий вид",0,0
+img/luminaires/rail-3530-48-white-2400.webp,7a950e8408d15e5a175d0fadc624a9d63489ee5cb01945088633b7c64e8d654e,55222,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3530 мм, Белый — общий вид",0,0
+img/luminaires/rail-3530-48-white-640.webp,08e06dfd2ef2bec4a0e3d7085db88203f1f8e41ab0b660b291b1d8a6da6f0daf,3836,0,,,0,0
+img/luminaires/rail-3630-48-black-1200.webp,1b42f84af2d7f6ecde46e0275ad73c6edbb4518926d6c912feb4d6298a24c940,15666,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3630 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-3630-48-black-2400.webp,73569a0fb39b0ed64d43a1eb39713485453104d5eb5ec89f8bf9977a2060071a,68986,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3630 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-3630-48-black-640.webp,b2fcc6b9fbb7fb9682218c386a77d9791ea558fd8e20e2100e70d20cfe92764d,6532,0,,,0,0
+img/luminaires/rail-3630-48-white-1200.webp,00eb0bca9d0949364a22f459bcfbabd07375df33e06fe4961a7c536a67e0b205,10576,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3630 мм, Белый — общий вид",0,0
+img/luminaires/rail-3630-48-white-2400.webp,11078dbdb4c9c7d84d9368540d1e06556b027fc0489be03ee5e9193bfb26a3a3,52888,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3630 мм, Белый — общий вид",0,0
+img/luminaires/rail-3630-48-white-640.webp,a67e1beed60e01b2b20184ee9d403b65631b435910215cfdbf012d1266c9a8f6,3826,0,,,0,0
+img/luminaires/rail-3980-48-black-1200.webp,ee73480cabd63b740fbc81d048b315b59fd14ba6fd835b2df7d4a11e07f0174e,15886,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3980 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-3980-48-black-2400.webp,718b6aea82d309cff0515b1820a0e2a68da25b3ec11c8ad90547e19ca1b26c4b,68590,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3980 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-3980-48-black-640.webp,26389d826bd6213288a7c7bcaea9ae869aaaa300ec059a420339edd9d6468a18,6680,0,,,0,0
+img/luminaires/rail-3980-48-white-1200.webp,c19bd695036d105efd299d59db57ddd518e27421da17d937afaa1e741921aa5d,11346,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3980 мм, Белый — общий вид",0,0
+img/luminaires/rail-3980-48-white-2400.webp,032ed817497bff8493cd150f652dccce59882f8289ee0eaa9b7a570badc5b23b,57142,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 3980 мм, Белый — общий вид",0,0
+img/luminaires/rail-3980-48-white-640.webp,78d4608a764fe0127da7f0c8b719ce68af0ab0630abdf41ce862f023bea7d1dd,4016,0,,,0,0
+img/luminaires/rail-4500-48-black-1200.webp,87199a499ee558e93d62d010d1ad78e1185d16b7289c3bc1c6f950ff26029084,15402,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 4500 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-4500-48-black-2400.webp,3f65086e221c11438e9c4d3ba667d99e15cfa6d1134834a93449596dcb217e3f,67404,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 4500 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-4500-48-black-640.webp,4101ab1147a346ce67c6f7e33f5bceb444fc748221132343fc329ce5fa06d207,6316,0,,,0,0
+img/luminaires/rail-4500-48-white-1200.webp,e7b8746acd24a7b8aa4fdc1f58b40772ff85a8eab4bc5cd5e222d5af3dea7863,10692,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 4500 мм, Белый — общий вид",0,0
+img/luminaires/rail-4500-48-white-2400.webp,f38beed3ee6ec4005fe85136f302de7eb05343fc8bad2960a366879b4972a4f9,56730,1,k3d/spektr-rail-long.html,"2400–4500 × 48 мм 4500 мм, Белый — общий вид",0,0
+img/luminaires/rail-4500-48-white-640.webp,1ed7a4bcb23fcf7b14ac838e8ab2eba06c797169129902d01a6e834b2a5376aa,3778,0,,,0,0
+img/luminaires/rail-510-38-black-1200.webp,5a7468ea2cfb4ce9b08e7e8417c773a2839d21e8b96f5541306185bda9e9c570,17218,1,k3d/spektr-rail-38.html,"510 × 38 мм 510 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-510-38-black-2400.webp,264e923ba70e3af29a17943d0356cae5443e46f46861f0971e6fd0ebb3f9c820,72184,1,k3d/spektr-rail-38.html,"510 × 38 мм 510 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-510-38-black-640.webp,0501f7c3562dc8cf98f74269cf5b3d109ad4a611ba00676339261ed1996e6841,7204,0,,,0,0
+img/luminaires/rail-510-38-white-1200.webp,4329f16bffac40349a609b4ac1ee05654858e229e7914c1595123dd76b607bda,12222,4,k3d/spektr-rail-38.html | osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"510 × 38 мм 510 мм, Белый — общий вид | Линейный светильник 510 × 38 мм, белый корпус, 5000 К",0,0
+img/luminaires/rail-510-38-white-2400.webp,18af7a2b9cd8387e1d5fe892ff7462c655d4afe31d6ed1a618475d8cb88c9ae2,55036,4,k3d/spektr-rail-38.html | osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"510 × 38 мм 510 мм, Белый — общий вид | Линейный светильник 510 × 38 мм, белый корпус, 5000 К",0,0
+img/luminaires/rail-510-38-white-640.webp,9134427b310309a216361230ce1baa48edda896a02f9dbf19362c8395ed340e5,4858,3,osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"Линейный светильник 510 × 38 мм, белый корпус, 5000 К",0,0
+img/luminaires/rail-800-48-black-1200.webp,f582201282cc8b4f9eb23e40e66d953480808423522bca1e2a5ad72ae6aef328,16344,4,k3d/spektr-rail-48.html | osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"800–1350 × 48 мм 800 мм, Чёрный — общий вид | Линейный светильник 800–1350 × 48 мм, чёрный корпус, 4000 К",0,0
+img/luminaires/rail-800-48-black-2400.webp,af91ab142915f89d9573e4ee519d072e646960e4df61028fc4245f8374c11fa8,66200,4,k3d/spektr-rail-48.html | osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"800–1350 × 48 мм 800 мм, Чёрный — общий вид | Линейный светильник 800–1350 × 48 мм, чёрный корпус, 4000 К",0,0
+img/luminaires/rail-800-48-black-640.webp,dcd1be67461bdb03945e47273e608940db405d158b037472ed090e649de6771e,6508,3,osveshchenie/lineynye/index.html | potolki/reechnye/index.html | potolki/reechnye/kuboobraznye/index.html,"Линейный светильник 800–1350 × 48 мм, чёрный корпус, 4000 К",0,0
+img/luminaires/rail-800-48-white-1200.webp,f00ecccb43b33af91c4180c3cc602e3736bbad916d124be742fe1422bca3d966,11394,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 800 мм, Белый — общий вид",0,0
+img/luminaires/rail-800-48-white-2400.webp,7b63561a611d16b74d8d80fcf9d24de36969fa9156b8b46478dd23c1e0f6c625,56260,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 800 мм, Белый — общий вид",0,0
+img/luminaires/rail-800-48-white-640.webp,7fac48c3d5a03a142212f991c711c89d6bf87ecb3ce7598ccab73e8178cb5253,4544,0,,,0,0
+img/luminaires/rail-900-48-black-1200.webp,c5d96517d750d2db98b2c40effe293c61508c023447e4d30588374f83dbed266,16296,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 900 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-900-48-black-2400.webp,4a9c51e98edc8728f760f028a56f3649ab770085be17192f6ad73c078a0022ea,70760,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 900 мм, Чёрный — общий вид",0,0
+img/luminaires/rail-900-48-black-640.webp,403d8158215c97dcff56516e535f330f97aaccfc1678c4c81f310cdb9658832f,6520,0,,,0,0
+img/luminaires/rail-900-48-white-1200.webp,21dcfe48f613a8254f7aaaba94f5b438816eed5b061d8eade2b928fff8c85a1e,10894,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 900 мм, Белый — общий вид",0,0
+img/luminaires/rail-900-48-white-2400.webp,0d4ab6817c1a8554ddefaee6ddf17024236eac550e2419c1475a4e5359872837,54530,1,k3d/spektr-rail-48.html,"800–1350 × 48 мм 900 мм, Белый — общий вид",0,0
+img/luminaires/rail-900-48-white-640.webp,7c0e600ce39251a6b4906fded9ff7acacdf3971ba84376ee4b7310bf7d00f0e4,4166,0,,,0,0
+img/luminaires/rail-detail-38-black-1200.webp,de7d8e9bdba1011e434bdb959e54d4eecb856738bfe18ec24f02fb177ab31f56,16392,1,k3d/spektr-rail-38.html,"510 × 38 мм 510 мм, Чёрный — торец и рассеиватель",0,0
+img/luminaires/rail-detail-38-black-2400.webp,af0fc3c4a9252343ead069a33b6b766ca3b15bcde562ad0a788f65a482b3e8ac,62470,1,k3d/spektr-rail-38.html,"510 × 38 мм 510 мм, Чёрный — торец и рассеиватель",0,0
+img/luminaires/rail-detail-38-black-640.webp,6327ff53a6cfb5d160f6ef7d9fd4656c2c645c0c1377d97e8316adb72982182a,6772,0,,,0,0
+img/luminaires/rail-detail-38-white-1200.webp,18f71b4753fb9bb781bdaaea40905779c908d1ab9c9c2c164f747d50a415db10,12044,1,k3d/spektr-rail-38.html,"510 × 38 мм 510 мм, Белый — торец и рассеиватель",0,0
+img/luminaires/rail-detail-38-white-2400.webp,eb92a543a62b56dc27e016a35ef93394c198052ca14ed216e34c9a79bd216454,57962,1,k3d/spektr-rail-38.html,"510 × 38 мм 510 мм, Белый — торец и рассеиватель",0,0
+img/luminaires/rail-detail-38-white-640.webp,9aff6acd00cd9885fa8b87129ad2c0f489b8eaa657b1a13feb3e852e1ab52646,4712,0,,,0,0
+img/luminaires/rail-detail-48-black-1200.webp,a2b66c9123c1869ae0a09dc6180fb838fa55dd96b2afcf195eb848b06d54e712,15600,2,k3d/spektr-rail-48.html | k3d/spektr-rail-long.html,"2400–4500 × 48 мм 2400 мм, Чёрный — торец и рассеиватель | 2400–4500 × 48 мм 2600 мм, Чёрный — торец и рассеиватель | 2400–4500 × 48 мм 3530 мм, Чёрный — торец и рассеиватель | 2400–4500 × 48 мм 3630 мм, Чёрный — торец и рассеиватель | 2400–4500 × 48 мм 3980 мм, Чёрный — торец и рассеиватель | 2400–4500 × 48 мм 4500 мм, Чёрный — торец и рассеиватель | 800–1350 × 48 мм 1180 мм, Чёрный — торец и рассеиватель | 800–1350 × 48 мм 1200 мм, Чёрный — торец и рассеиватель | 800–1350 × 48 мм 1350 мм, Чёрный — торец и рассеиватель | 800–1350 × 48 мм 800 мм, Чёрный — торец и рассеиватель | 800–1350 × 48 мм 900 мм, Чёрный — торец и рассеиватель",0,0
+img/luminaires/rail-detail-48-black-2400.webp,938c4db7816b5669a59d0a07cf03c33380a21e36c272def6bae30771efefaee7,53348,2,k3d/spektr-rail-48.html | k3d/spektr-rail-long.html,"2400–4500 × 48 мм 2400 мм, Чёрный — торец и рассеиватель | 2400–4500 × 48 мм 2600 мм, Чёрный — торец и рассеиватель | 2400–4500 × 48 мм 3530 мм, Чёрный — торец и рассеиватель | 2400–4500 × 48 мм 3630 мм, Чёрный — торец и рассеиватель | 2400–4500 × 48 мм 3980 мм, Чёрный — торец и рассеиватель | 2400–4500 × 48 мм 4500 мм, Чёрный — торец и рассеиватель | 800–1350 × 48 мм 1180 мм, Чёрный — торец и рассеиватель | 800–1350 × 48 мм 1200 мм, Чёрный — торец и рассеиватель | 800–1350 × 48 мм 1350 мм, Чёрный — торец и рассеиватель | 800–1350 × 48 мм 800 мм, Чёрный — торец и рассеиватель | 800–1350 × 48 мм 900 мм, Чёрный — торец и рассеиватель",0,0
+img/luminaires/rail-detail-48-black-640.webp,f5b39d969b8da52c51f0b512e23b715710f1f511e8a8e728be2ddcbbd866f644,6488,0,,,0,0
+img/luminaires/rail-detail-48-white-1200.webp,57d3a0cfb1d77767aca01cac56c0d707874441c072e5c182def1f36fc79dc079,11858,2,k3d/spektr-rail-48.html | k3d/spektr-rail-long.html,"2400–4500 × 48 мм 2400 мм, Белый — торец и рассеиватель | 2400–4500 × 48 мм 2600 мм, Белый — торец и рассеиватель | 2400–4500 × 48 мм 3530 мм, Белый — торец и рассеиватель | 2400–4500 × 48 мм 3630 мм, Белый — торец и рассеиватель | 2400–4500 × 48 мм 3980 мм, Белый — торец и рассеиватель | 2400–4500 × 48 мм 4500 мм, Белый — торец и рассеиватель | 800–1350 × 48 мм 1180 мм, Белый — торец и рассеиватель | 800–1350 × 48 мм 1200 мм, Белый — торец и рассеиватель | 800–1350 × 48 мм 1350 мм, Белый — торец и рассеиватель | 800–1350 × 48 мм 800 мм, Белый — торец и рассеиватель | 800–1350 × 48 мм 900 мм, Белый — торец и рассеиватель",0,0
+img/luminaires/rail-detail-48-white-2400.webp,b9d0fa48385694021fd142684a7448c2d7fe8bbd756d9657a2ea6cbd1e5a24ca,42626,2,k3d/spektr-rail-48.html | k3d/spektr-rail-long.html,"2400–4500 × 48 мм 2400 мм, Белый — торец и рассеиватель | 2400–4500 × 48 мм 2600 мм, Белый — торец и рассеиватель | 2400–4500 × 48 мм 3530 мм, Белый — торец и рассеиватель | 2400–4500 × 48 мм 3630 мм, Белый — торец и рассеиватель | 2400–4500 × 48 мм 3980 мм, Белый — торец и рассеиватель | 2400–4500 × 48 мм 4500 мм, Белый — торец и рассеиватель | 800–1350 × 48 мм 1180 мм, Белый — торец и рассеиватель | 800–1350 × 48 мм 1200 мм, Белый — торец и рассеиватель | 800–1350 × 48 мм 1350 мм, Белый — торец и рассеиватель | 800–1350 × 48 мм 800 мм, Белый — торец и рассеиватель | 800–1350 × 48 мм 900 мм, Белый — торец и рассеиватель",0,0
+img/luminaires/rail-detail-48-white-640.webp,26fa75440e7108b9f9290b084a822abe6806ccc4a14f37217be622117d0731e6,4442,0,,,0,0
+img/luminaires/rail-detail-85-black-1200.webp,93b1f53e419599e166dc01b18e843023d3c765aac5e051a6dff419f58ea9fe27,15028,1,k3d/spektr-rail-85.html,"1000 × 85 мм 1000 мм, Чёрный — торец и рассеиватель",0,0
+img/luminaires/rail-detail-85-black-2400.webp,f510253fc1b38e193b4939ef3cb42f96d3d48b031d5bbb7771ac95ec59d0ef8f,51614,1,k3d/spektr-rail-85.html,"1000 × 85 мм 1000 мм, Чёрный — торец и рассеиватель",0,0
+img/luminaires/rail-detail-85-black-640.webp,c5b95d92d54b8723c4b888c1085643b60dd32722d8a78b6c6b7eab69d4d127bd,6408,0,,,0,0
+img/luminaires/rail-detail-85-white-1200.webp,77e5f49b7b61321317d434b2a365d75aa2e5e551193df8271b7bb8186f449982,11694,1,k3d/spektr-rail-85.html,"1000 × 85 мм 1000 мм, Белый — торец и рассеиватель",0,0
+img/luminaires/rail-detail-85-white-2400.webp,f2096a684701194356eed37da52a2ba14a96b665c2358fbc6f55bb5bc53ba621,57322,1,k3d/spektr-rail-85.html,"1000 × 85 мм 1000 мм, Белый — торец и рассеиватель",0,0
+img/luminaires/rail-detail-85-white-640.webp,f65e93ff1383817789b37c35f0382d1c1d6354d1081d8db8a808ab62009238ec,4592,0,,,0,0
+img/luminaires/sl3030-1200-30-black-1200.webp,00b62fbfcc5a37fb6c9ef1f3759919665950087bc74db84643e88f90ddd45b05,16010,2,k3d/lin-s3030.html | osveshchenie/lineynye/index.html,"Линейный светильник СЛ 3030, чёрный корпус, 5000 К | СЛ 3030, чёрный корпус, 5000 К",0,0
+img/luminaires/sl3030-1200-30-black-2400.webp,272dfbca250413824e4280c9746bf2b2f6b8fc39c46f3e38316314dd84c49755,71278,2,k3d/lin-s3030.html | osveshchenie/lineynye/index.html,"Линейный светильник СЛ 3030, чёрный корпус, 5000 К | СЛ 3030, чёрный корпус, 5000 К",0,0
+img/luminaires/sl3030-1200-30-black-640.webp,be21b542c9bb4895e526de6b6083adaab4693cc3f8da83069f928502b164dd08,6648,1,osveshchenie/lineynye/index.html,"Линейный светильник СЛ 3030, чёрный корпус, 5000 К",0,0
+img/luminaires/sl3570-1200-35-black-1200.webp,9d26b6e85cbb03339a034513aea534a0abdfdbd4d1d0f09007883ea1091e7a2c,18022,2,k3d/lin-s3570.html | osveshchenie/lineynye/index.html,"Линейный светильник СЛ 3570, чёрный корпус, 5000 К | СЛ 3570, чёрный корпус, 5000 К",0,0
+img/luminaires/sl3570-1200-35-black-2400.webp,2808bccd10211575e99f49a73defc9fc970267af22931631203acc5ae896e30d,73532,2,k3d/lin-s3570.html | osveshchenie/lineynye/index.html,"Линейный светильник СЛ 3570, чёрный корпус, 5000 К | СЛ 3570, чёрный корпус, 5000 К",0,0
+img/luminaires/sl3570-1200-35-black-640.webp,e6f00ad277f5349e8b677e9eeb390da3f86cf890f783e72090d4b7a8c82e2027,7340,1,osveshchenie/lineynye/index.html,"Линейный светильник СЛ 3570, чёрный корпус, 5000 К",0,0
+img/luminaires/sl5055-1200-50-black-1200.webp,e8cd4dba234dc63f046931bbd1b374c7758fc5e79af1da8b57af3be78a429864,16022,2,k3d/lin-ln-5055.html | osveshchenie/lineynye/index.html,"Линейный светильник СЛ 5055, чёрный корпус, 5000 К | СЛ 5055, чёрный корпус, 5000 К",0,0
+img/luminaires/sl5055-1200-50-black-2400.webp,43da9206db284c4cf2694e2f0fec02b388ebf6e1644110aa7a0ffa78d1682f5c,69282,2,k3d/lin-ln-5055.html | osveshchenie/lineynye/index.html,"Линейный светильник СЛ 5055, чёрный корпус, 5000 К | СЛ 5055, чёрный корпус, 5000 К",0,0
+img/luminaires/sl5055-1200-50-black-640.webp,8a56105c61f179a96123eff41657c311acb170b17da319043c06a3062b5fd8d4,6690,1,osveshchenie/lineynye/index.html,"Линейный светильник СЛ 5055, чёрный корпус, 5000 К",0,0
 img/maf-1000-clean.png,4e4c7b831111b49e6f6c8dc7570102d68a25371b5c5bc58178a63a79c39edef9,819585,0,,,0,0
 img/maf-20261109/nzmaf-ai-essentuki-koltsa-1200.webp,ceb089cfa4f5eec2139c59e98dcef85faf1613d32c65d6422742b346b387aeab,195718,0,,,0,0
 img/maf-20261109/nzmaf-ai-essentuki-koltsa-600.webp,082050322917421d4c36fa20d6284a2e4d8648537078267a4c779645aa71f9c8,93118,0,,,0,0
@@ -6312,33 +6500,33 @@ img/spektr/rail-detail-85-black-1200.webp,2ac62f38cf91cf09eb9f1814706ed1b5357a5f
 img/spektr/rail-detail-85-black-640.webp,0ed805f6881fbb39ac5933083ed981557da5bfb45ef3e862ba5e81124c4888ad,9236,0,,,0,0
 img/spektr/rail-detail-85-white-1200.webp,8d77e13267e2f9c2b283e03c263da7213c520d21f486e0f4701bd0de492d1635,21030,0,,,0,0
 img/spektr/rail-detail-85-white-640.webp,b01041202337e20de2839f19d20110be083e229ceb9ddfbac3405ee7bc792a97,7844,0,,,0,0
-img/spektr/studio-v2-grid-30-30-white-1200.webp,c773485f13baf6c250c18ddb3bcbdca2675bde3778ceb0b37c430236ee218ea6,24724,1,k3d/spektr-grid-50.html,"Ячейка 50 × 50 мм · 3000 / 4000 / 5000 К 30 × 30 мм, Белый — общий вид",0,0
-img/spektr/studio-v2-grid-30-30-white-2400.webp,2c57a185859f765f36591b979d47ebd4282de52dd185b5fa06aa5ae2a3f2e735,60732,1,k3d/spektr-grid-50.html,"Ячейка 50 × 50 мм · 3000 / 4000 / 5000 К 30 × 30 мм, Белый — общий вид",0,0
+img/spektr/studio-v2-grid-30-30-white-1200.webp,c773485f13baf6c250c18ddb3bcbdca2675bde3778ceb0b37c430236ee218ea6,24724,0,,,0,0
+img/spektr/studio-v2-grid-30-30-white-2400.webp,2c57a185859f765f36591b979d47ebd4282de52dd185b5fa06aa5ae2a3f2e735,60732,0,,,0,0
 img/spektr/studio-v2-grid-30-30-white-640.webp,d85c103b312e3f369c5b463b448b7692e5a44eb0f86c8d578c233b370ff6f4c3,10622,0,,,0,0
-img/spektr/studio-v2-grid-39-39-white-1200.webp,45e92c8e7180403e046f7de5b713a215082368fee1783ab1a33c6fac033c6bba,26144,3,k3d/spektr-grid-50.html | osveshchenie/dlya-grilyato/index.html | potolki/grilyato/index.html,"Светильник для Грильято Ячейка 50 × 50 мм · 3000 / 4000 / 5000 К, белый корпус | Ячейка 50 × 50 мм · 3000 / 4000 / 5000 К 39 × 39 мм, Белый — общий вид",0,0
-img/spektr/studio-v2-grid-39-39-white-2400.webp,cbb27b7c12b095349903f22258b1bc0f61a2bf6c3ebd1cc374f0570e5d331eaf,63794,3,k3d/spektr-grid-50.html | osveshchenie/dlya-grilyato/index.html | potolki/grilyato/index.html,"Светильник для Грильято Ячейка 50 × 50 мм · 3000 / 4000 / 5000 К, белый корпус | Ячейка 50 × 50 мм · 3000 / 4000 / 5000 К 39 × 39 мм, Белый — общий вид",0,0
-img/spektr/studio-v2-grid-39-39-white-640.webp,8e23e91199d79ce629e81cbeae81bc11ac8b2bffd72e30f2c80655645c84cff9,11098,2,osveshchenie/dlya-grilyato/index.html | potolki/grilyato/index.html,"Светильник для Грильято Ячейка 50 × 50 мм · 3000 / 4000 / 5000 К, белый корпус",0,0
-img/spektr/studio-v2-grid-64-64-white-1200.webp,53a144a8907a3e0e94888991e5613e452654d812ff8464c3c6bed7a43a6bd624,27064,3,k3d/spektr-grid-75.html | osveshchenie/dlya-grilyato/index.html | potolki/grilyato/index.html,"Светильник для Грильято Ячейка 75 × 75 мм · 3000 / 4000 / 5000 К, белый корпус | Ячейка 75 × 75 мм · 3000 / 4000 / 5000 К 64 × 64 мм, Белый — общий вид",0,0
-img/spektr/studio-v2-grid-64-64-white-2400.webp,f5f5280c46f4259b9e7a10b893770a39d13250058bea4200a41ebd1b5cdd55b3,63624,3,k3d/spektr-grid-75.html | osveshchenie/dlya-grilyato/index.html | potolki/grilyato/index.html,"Светильник для Грильято Ячейка 75 × 75 мм · 3000 / 4000 / 5000 К, белый корпус | Ячейка 75 × 75 мм · 3000 / 4000 / 5000 К 64 × 64 мм, Белый — общий вид",0,0
-img/spektr/studio-v2-grid-64-64-white-640.webp,fc726c70536cd3d2620ecf3bc4346b72247614458266600c95e6395c1feb21d7,11550,2,osveshchenie/dlya-grilyato/index.html | potolki/grilyato/index.html,"Светильник для Грильято Ячейка 75 × 75 мм · 3000 / 4000 / 5000 К, белый корпус",0,0
-img/spektr/studio-v2-grid-89-89-white-1200.webp,3f856a1928694ecc99e124b52c9b606e096b09998d737d199ca333bf1ca4266f,27198,3,k3d/spektr-grid-100.html | osveshchenie/dlya-grilyato/index.html | potolki/grilyato/index.html,"Светильник для Грильято Ячейка 100 × 100 мм · 3000 / 4000 / 5000 К, белый корпус | Ячейка 100 × 100 мм · 3000 / 4000 / 5000 К 89 × 89 мм, Белый — общий вид",0,0
-img/spektr/studio-v2-grid-89-89-white-2400.webp,0d6fd445d20fb4e11cd17b11606c88b5d3bd28d020eef62cad5db0bb9f9dffc2,65374,3,k3d/spektr-grid-100.html | osveshchenie/dlya-grilyato/index.html | potolki/grilyato/index.html,"Светильник для Грильято Ячейка 100 × 100 мм · 3000 / 4000 / 5000 К, белый корпус | Ячейка 100 × 100 мм · 3000 / 4000 / 5000 К 89 × 89 мм, Белый — общий вид",0,0
-img/spektr/studio-v2-grid-89-89-white-640.webp,eee6a94a2163576ea0d2bbbff7481b979a24e88367037d04ee042ec25ce436aa,11686,2,osveshchenie/dlya-grilyato/index.html | potolki/grilyato/index.html,"Светильник для Грильято Ячейка 100 × 100 мм · 3000 / 4000 / 5000 К, белый корпус",0,0
-img/spektr/studio-v2-office-1195-595-white-1200.webp,c37c6bc9dee2f0bca25da97b9b0928e22c29c5a867e1d1fd5dc2ad8e730130e3,18120,3,k3d/spektr-office-1195-595.html | osveshchenie/index.html | potolki/armstrong-t24/index.html,"1195 × 595 мм · 5000 К Офис 35, Белый — общий вид | 1195 × 595 мм · 5000 К Офис 40, Белый — общий вид | 1195 × 595 мм · 5000 К Офис 45, Белый — общий вид | 1195 × 595 мм · 5000 К Офис 50, Белый — общий вид | Офисная панель 1195 × 595 мм · 5000 К, белый корпус",0,0
-img/spektr/studio-v2-office-1195-595-white-2400.webp,0b277bfc69323b698682e6776e7dc98edbce597a02dc6dced9aa2280eabb7459,47426,3,k3d/spektr-office-1195-595.html | osveshchenie/index.html | potolki/armstrong-t24/index.html,"1195 × 595 мм · 5000 К Офис 35, Белый — общий вид | 1195 × 595 мм · 5000 К Офис 40, Белый — общий вид | 1195 × 595 мм · 5000 К Офис 45, Белый — общий вид | 1195 × 595 мм · 5000 К Офис 50, Белый — общий вид | Офисная панель 1195 × 595 мм · 5000 К, белый корпус",0,0
-img/spektr/studio-v2-office-1195-595-white-640.webp,40b12b0d16b534a0287f5159439d6bf4bc40bdf6cbab6ba0fde924c97d5ee97b,7362,2,osveshchenie/index.html | potolki/armstrong-t24/index.html,"Офисная панель 1195 × 595 мм · 5000 К, белый корпус",0,0
-img/spektr/studio-v2-office-1200-150-white-1200.webp,b56cbe730f6a6dc185ebb87522ddf8ddd43dc91ec7bdccfd94cffd3a4a18dbdb,16072,3,k3d/spektr-office-1200-150.html | osveshchenie/index.html | potolki/armstrong-t24/index.html,"1200 × 100–199 мм · 5000 К Офис 35, Белый — общий вид | 1200 × 100–199 мм · 5000 К Офис 40, Белый — общий вид | 1200 × 100–199 мм · 5000 К Офис 45, Белый — общий вид | 1200 × 100–199 мм · 5000 К Офис 50, Белый — общий вид | Офисная панель 1200 × 100–199 мм · 5000 К, белый корпус",0,0
-img/spektr/studio-v2-office-1200-150-white-2400.webp,f250a4250142a85873391d6f71ab37359c805796a709ad5ec1cf8c4372b97a29,41730,3,k3d/spektr-office-1200-150.html | osveshchenie/index.html | potolki/armstrong-t24/index.html,"1200 × 100–199 мм · 5000 К Офис 35, Белый — общий вид | 1200 × 100–199 мм · 5000 К Офис 40, Белый — общий вид | 1200 × 100–199 мм · 5000 К Офис 45, Белый — общий вид | 1200 × 100–199 мм · 5000 К Офис 50, Белый — общий вид | Офисная панель 1200 × 100–199 мм · 5000 К, белый корпус",0,0
-img/spektr/studio-v2-office-1200-150-white-640.webp,5aec6803c954e11b44fe2bc243813c7fc16a8e87619869bd7d066ad7169f5dfb,6400,2,osveshchenie/index.html | potolki/armstrong-t24/index.html,"Офисная панель 1200 × 100–199 мм · 5000 К, белый корпус",0,0
-img/spektr/studio-v2-office-1200-250-white-1200.webp,15f13a02a4fd16e836589a6ee9a5d51c435787f20dbcc3105c9b06c6a7e9a98b,16700,3,k3d/spektr-office-1200-250.html | osveshchenie/index.html | potolki/armstrong-t24/index.html,"1200 × 200–300 мм · 5000 К Офис 35, Белый — общий вид | 1200 × 200–300 мм · 5000 К Офис 40, Белый — общий вид | 1200 × 200–300 мм · 5000 К Офис 45, Белый — общий вид | 1200 × 200–300 мм · 5000 К Офис 50, Белый — общий вид | Офисная панель 1200 × 200–300 мм · 5000 К, белый корпус",0,0
-img/spektr/studio-v2-office-1200-250-white-2400.webp,13b9b51bd9d2afc9d2111dc1f64d65f87e8a09a8842f945243315e8062031b95,43730,3,k3d/spektr-office-1200-250.html | osveshchenie/index.html | potolki/armstrong-t24/index.html,"1200 × 200–300 мм · 5000 К Офис 35, Белый — общий вид | 1200 × 200–300 мм · 5000 К Офис 40, Белый — общий вид | 1200 × 200–300 мм · 5000 К Офис 45, Белый — общий вид | 1200 × 200–300 мм · 5000 К Офис 50, Белый — общий вид | Офисная панель 1200 × 200–300 мм · 5000 К, белый корпус",0,0
-img/spektr/studio-v2-office-1200-250-white-640.webp,a0c8089fdae70ea251df6473dc34b881ddc93277f0acd118924cdf3e8d8ceb95,6692,2,osveshchenie/index.html | potolki/armstrong-t24/index.html,"Офисная панель 1200 × 200–300 мм · 5000 К, белый корпус",0,0
-img/spektr/studio-v2-office-595-300-white-1200.webp,285952c8912f265b7fbccf46e7c5cff74a4af487c5a606f5062c2e9eff2cff44,19950,3,k3d/spektr-office-595-300.html | osveshchenie/index.html | potolki/armstrong-t24/index.html,"300 × 595 мм · 5000 К Офис 18, Белый — общий вид | 300 × 595 мм · 5000 К Офис 20, Белый — общий вид | 300 × 595 мм · 5000 К Офис 22, Белый — общий вид | 300 × 595 мм · 5000 К Офис 25, Белый — общий вид | Офисная панель 300 × 595 мм · 5000 К, белый корпус",0,0
-img/spektr/studio-v2-office-595-300-white-2400.webp,44747aa0e7a6d5a9beaa3781e055601351488a493cdda20f827a531578dfa2fd,50380,3,k3d/spektr-office-595-300.html | osveshchenie/index.html | potolki/armstrong-t24/index.html,"300 × 595 мм · 5000 К Офис 18, Белый — общий вид | 300 × 595 мм · 5000 К Офис 20, Белый — общий вид | 300 × 595 мм · 5000 К Офис 22, Белый — общий вид | 300 × 595 мм · 5000 К Офис 25, Белый — общий вид | Офисная панель 300 × 595 мм · 5000 К, белый корпус",0,0
-img/spektr/studio-v2-office-595-300-white-640.webp,512832727d7b211b2f8358ec579ecce4e1111ad9e97283e104e214ea037ca6e9,8094,2,osveshchenie/index.html | potolki/armstrong-t24/index.html,"Офисная панель 300 × 595 мм · 5000 К, белый корпус",0,0
-img/spektr/studio-v2-office-595-595-white-1200.webp,f2ca53479882f63315a804656d40a5b8bd193a01fea4e171e58f7d36c30d573a,21288,3,k3d/spektr-office-595-595.html | osveshchenie/index.html | potolki/armstrong-t24/index.html,"595 × 595 мм · 5000 К Офис 35, Белый — общий вид | 595 × 595 мм · 5000 К Офис 40, Белый — общий вид | 595 × 595 мм · 5000 К Офис 45, Белый — общий вид | 595 × 595 мм · 5000 К Офис 50, Белый — общий вид | Офисная панель 595 × 595 мм · 5000 К, белый корпус",0,0
-img/spektr/studio-v2-office-595-595-white-2400.webp,c0f52c0f15c73af19003cdfb2d719d2f569989477cd6ce3884e487f18cc0a1c2,51690,3,k3d/spektr-office-595-595.html | osveshchenie/index.html | potolki/armstrong-t24/index.html,"595 × 595 мм · 5000 К Офис 35, Белый — общий вид | 595 × 595 мм · 5000 К Офис 40, Белый — общий вид | 595 × 595 мм · 5000 К Офис 45, Белый — общий вид | 595 × 595 мм · 5000 К Офис 50, Белый — общий вид | Офисная панель 595 × 595 мм · 5000 К, белый корпус",0,0
-img/spektr/studio-v2-office-595-595-white-640.webp,8d2af040c333221abf130cc0a9d797b9be487174a0b22fb64abff68a5b341494,8652,2,osveshchenie/index.html | potolki/armstrong-t24/index.html,"Офисная панель 595 × 595 мм · 5000 К, белый корпус",0,0
+img/spektr/studio-v2-grid-39-39-white-1200.webp,45e92c8e7180403e046f7de5b713a215082368fee1783ab1a33c6fac033c6bba,26144,0,,,0,0
+img/spektr/studio-v2-grid-39-39-white-2400.webp,cbb27b7c12b095349903f22258b1bc0f61a2bf6c3ebd1cc374f0570e5d331eaf,63794,0,,,0,0
+img/spektr/studio-v2-grid-39-39-white-640.webp,8e23e91199d79ce629e81cbeae81bc11ac8b2bffd72e30f2c80655645c84cff9,11098,0,,,0,0
+img/spektr/studio-v2-grid-64-64-white-1200.webp,53a144a8907a3e0e94888991e5613e452654d812ff8464c3c6bed7a43a6bd624,27064,0,,,0,0
+img/spektr/studio-v2-grid-64-64-white-2400.webp,f5f5280c46f4259b9e7a10b893770a39d13250058bea4200a41ebd1b5cdd55b3,63624,0,,,0,0
+img/spektr/studio-v2-grid-64-64-white-640.webp,fc726c70536cd3d2620ecf3bc4346b72247614458266600c95e6395c1feb21d7,11550,0,,,0,0
+img/spektr/studio-v2-grid-89-89-white-1200.webp,3f856a1928694ecc99e124b52c9b606e096b09998d737d199ca333bf1ca4266f,27198,0,,,0,0
+img/spektr/studio-v2-grid-89-89-white-2400.webp,0d6fd445d20fb4e11cd17b11606c88b5d3bd28d020eef62cad5db0bb9f9dffc2,65374,0,,,0,0
+img/spektr/studio-v2-grid-89-89-white-640.webp,eee6a94a2163576ea0d2bbbff7481b979a24e88367037d04ee042ec25ce436aa,11686,0,,,0,0
+img/spektr/studio-v2-office-1195-595-white-1200.webp,c37c6bc9dee2f0bca25da97b9b0928e22c29c5a867e1d1fd5dc2ad8e730130e3,18120,0,,,0,0
+img/spektr/studio-v2-office-1195-595-white-2400.webp,0b277bfc69323b698682e6776e7dc98edbce597a02dc6dced9aa2280eabb7459,47426,0,,,0,0
+img/spektr/studio-v2-office-1195-595-white-640.webp,40b12b0d16b534a0287f5159439d6bf4bc40bdf6cbab6ba0fde924c97d5ee97b,7362,0,,,0,0
+img/spektr/studio-v2-office-1200-150-white-1200.webp,b56cbe730f6a6dc185ebb87522ddf8ddd43dc91ec7bdccfd94cffd3a4a18dbdb,16072,0,,,0,0
+img/spektr/studio-v2-office-1200-150-white-2400.webp,f250a4250142a85873391d6f71ab37359c805796a709ad5ec1cf8c4372b97a29,41730,0,,,0,0
+img/spektr/studio-v2-office-1200-150-white-640.webp,5aec6803c954e11b44fe2bc243813c7fc16a8e87619869bd7d066ad7169f5dfb,6400,0,,,0,0
+img/spektr/studio-v2-office-1200-250-white-1200.webp,15f13a02a4fd16e836589a6ee9a5d51c435787f20dbcc3105c9b06c6a7e9a98b,16700,0,,,0,0
+img/spektr/studio-v2-office-1200-250-white-2400.webp,13b9b51bd9d2afc9d2111dc1f64d65f87e8a09a8842f945243315e8062031b95,43730,0,,,0,0
+img/spektr/studio-v2-office-1200-250-white-640.webp,a0c8089fdae70ea251df6473dc34b881ddc93277f0acd118924cdf3e8d8ceb95,6692,0,,,0,0
+img/spektr/studio-v2-office-595-300-white-1200.webp,285952c8912f265b7fbccf46e7c5cff74a4af487c5a606f5062c2e9eff2cff44,19950,0,,,0,0
+img/spektr/studio-v2-office-595-300-white-2400.webp,44747aa0e7a6d5a9beaa3781e055601351488a493cdda20f827a531578dfa2fd,50380,0,,,0,0
+img/spektr/studio-v2-office-595-300-white-640.webp,512832727d7b211b2f8358ec579ecce4e1111ad9e97283e104e214ea037ca6e9,8094,0,,,0,0
+img/spektr/studio-v2-office-595-595-white-1200.webp,f2ca53479882f63315a804656d40a5b8bd193a01fea4e171e58f7d36c30d573a,21288,0,,,0,0
+img/spektr/studio-v2-office-595-595-white-2400.webp,c0f52c0f15c73af19003cdfb2d719d2f569989477cd6ce3884e487f18cc0a1c2,51690,0,,,0,0
+img/spektr/studio-v2-office-595-595-white-640.webp,8d2af040c333221abf130cc0a9d797b9be487174a0b22fb64abff68a5b341494,8652,0,,,0,0
 img/spektr/studio-v2-rail-1000-85-black-1200.webp,bfe7d973356a8950d0e9ea1891d10647293783230201f739a31fb7164d27093a,24288,0,,,0,0
 img/spektr/studio-v2-rail-1000-85-black-2400.webp,930130b97af8d1fc712c30ca72f30dd27bfdd1955a599f75049b4f8b2bc3ac9f,60184,0,,,0,0
 img/spektr/studio-v2-rail-1000-85-black-640.webp,f49aa8b1289b774383243cb91bcf92740995fb7d91548dcbcb0b1ffdcb8f3919,10060,0,,,0,0

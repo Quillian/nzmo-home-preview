@@ -488,7 +488,7 @@
         .catch(function () { kst.dataset.kdSrc = url; });   // повторим при следующем открытии
     };
   });
-  function openKd(id) { var d = document.getElementById(id); if (d && d._open) { d._open(); if (location.hash !== "#" + id) history.replaceState(null, "", "#" + id); } }
+  function openKd(id) { var d = document.getElementById(id); if (d && d._open) { var active = document.querySelector("dialog.kd[open]"); if (active && active !== d) active.close(); d._open(); if (location.hash !== "#" + id) history.replaceState(null, "", "#" + id); } }
   document.querySelectorAll("[data-kd]").forEach(function (a) { a.addEventListener("click", function (e) { e.preventDefault(); openKd(a.dataset.kd); }); });
   if (/^#kd-/.test(location.hash)) openKd(location.hash.slice(1));
 
