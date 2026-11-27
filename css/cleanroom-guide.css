@@ -1,16 +1,8 @@
 .room-guide .section-head { margin-bottom: clamp(20px,3vw,42px) }
 .room-guide .section-head .lead { max-width: none }
-.room-heading { width:100% }
-.room-heading-row { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px 24px }
 .room-catalog { flex:none; gap:8px; scroll-margin-top:100px }
 .room-catalog small { font:inherit; font-size:12px; font-weight:400 }
 .svc__d a.room-service-link { color:inherit; text-decoration:underline; text-underline-offset:3px }
-@media(max-width:850px) {
-  .room-heading { display:flex; flex-direction:column; align-items:flex-start }
-  .room-heading-row { display:contents }
-  .room-heading .lead { order:1 }
-  .room-catalog { order:2; margin-top:14px }
-}
 .room-layout { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); align-items:start; gap:clamp(20px,4vw,64px); color:#1b2d42 }
 .room-model { position:relative; overflow:clip; width:100%; max-width:650px; aspect-ratio:500/480; margin:0 auto }
 .room-canvas { position:absolute; width:128%; height:100%; left:-14%; top:0; pointer-events:none }
